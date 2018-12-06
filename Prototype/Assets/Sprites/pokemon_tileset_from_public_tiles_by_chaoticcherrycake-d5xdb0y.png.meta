@@ -1,0 +1,6853 @@
+fileFormatVersion: 2
+guid: 96a08656ce425f44da30858f0e66dc60
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_0
+    21300002: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_1
+    21300004: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_2
+    21300006: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_3
+    21300008: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_4
+    21300010: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_5
+    21300012: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_6
+    21300014: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_7
+    21300016: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_8
+    21300018: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_9
+    21300020: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_10
+    21300022: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_11
+    21300024: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_12
+    21300026: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_13
+    21300028: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_14
+    21300030: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_15
+    21300032: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_16
+    21300034: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_17
+    21300036: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_18
+    21300038: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_19
+    21300040: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_20
+    21300042: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_21
+    21300044: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_22
+    21300046: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_23
+    21300048: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_24
+    21300050: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_25
+    21300052: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_26
+    21300054: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_27
+    21300056: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_28
+    21300058: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_29
+    21300060: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_30
+    21300062: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_31
+    21300064: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_32
+    21300066: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_33
+    21300068: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_34
+    21300070: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_35
+    21300072: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_36
+    21300074: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_37
+    21300076: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_38
+    21300078: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_39
+    21300080: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_40
+    21300082: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_41
+    21300084: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_42
+    21300086: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_43
+    21300088: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_44
+    21300090: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_45
+    21300092: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_46
+    21300094: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_47
+    21300096: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_48
+    21300098: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_49
+    21300100: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_50
+    21300102: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_51
+    21300104: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_52
+    21300106: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_53
+    21300108: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_54
+    21300110: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_55
+    21300112: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_56
+    21300114: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_57
+    21300116: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_58
+    21300118: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_59
+    21300120: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_60
+    21300122: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_61
+    21300124: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_62
+    21300126: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_63
+    21300128: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_64
+    21300130: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_65
+    21300132: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_66
+    21300134: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_67
+    21300136: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_68
+    21300138: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_69
+    21300140: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_70
+    21300142: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_71
+    21300144: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_72
+    21300146: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_73
+    21300148: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_74
+    21300150: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_75
+    21300152: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_76
+    21300154: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_77
+    21300156: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_78
+    21300158: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_79
+    21300160: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_80
+    21300162: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_81
+    21300164: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_82
+    21300166: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_83
+    21300168: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_84
+    21300170: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_85
+    21300172: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_86
+    21300174: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_87
+    21300176: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_88
+    21300178: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_89
+    21300180: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_90
+    21300182: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_91
+    21300184: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_92
+    21300186: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_93
+    21300188: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_94
+    21300190: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_95
+    21300192: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_96
+    21300194: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_97
+    21300196: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_98
+    21300198: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_99
+    21300200: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_100
+    21300202: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_101
+    21300204: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_102
+    21300206: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_103
+    21300208: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_104
+    21300210: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_105
+    21300212: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_106
+    21300214: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_107
+    21300216: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_108
+    21300218: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_109
+    21300220: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_110
+    21300222: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_111
+    21300224: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_112
+    21300226: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_113
+    21300228: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_114
+    21300230: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_115
+    21300232: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_116
+    21300234: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_117
+    21300236: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_118
+    21300238: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_119
+    21300240: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_120
+    21300242: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_121
+    21300244: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_122
+    21300246: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_123
+    21300248: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_124
+    21300250: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_125
+    21300252: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_126
+    21300254: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_127
+    21300256: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_128
+    21300258: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_129
+    21300260: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_130
+    21300262: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_131
+    21300264: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_132
+    21300266: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_133
+    21300268: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_134
+    21300270: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_135
+    21300272: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_136
+    21300274: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_137
+    21300276: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_138
+    21300278: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_139
+    21300280: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_140
+    21300282: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_141
+    21300284: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_142
+    21300286: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_143
+    21300288: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_144
+    21300290: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_145
+    21300292: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_146
+    21300294: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_147
+    21300296: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_148
+    21300298: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_149
+    21300300: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_150
+    21300302: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_151
+    21300304: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_152
+    21300306: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_153
+    21300308: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_154
+    21300310: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_155
+    21300312: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_156
+    21300314: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_157
+    21300316: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_158
+    21300318: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_159
+    21300320: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_160
+    21300322: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_161
+    21300324: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_162
+    21300326: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_163
+    21300328: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_164
+    21300330: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_165
+    21300332: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_166
+    21300334: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_167
+    21300336: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_168
+    21300338: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_169
+    21300340: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_170
+    21300342: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_171
+    21300344: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_172
+    21300346: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_173
+    21300348: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_174
+    21300350: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_175
+    21300352: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_176
+    21300354: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_177
+    21300356: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_178
+    21300358: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_179
+    21300360: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_180
+    21300362: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_181
+    21300364: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_182
+    21300366: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_183
+    21300368: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_184
+    21300370: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_185
+    21300372: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_186
+    21300374: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_187
+    21300376: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_188
+    21300378: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_189
+    21300380: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_190
+    21300382: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_191
+    21300384: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_192
+    21300386: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_193
+    21300388: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_194
+    21300390: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_195
+    21300392: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_196
+    21300394: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_197
+    21300396: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_198
+    21300398: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_199
+    21300400: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_200
+    21300402: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_201
+    21300404: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_202
+    21300406: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_203
+    21300408: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_204
+    21300410: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_205
+    21300412: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_206
+    21300414: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_207
+    21300416: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_208
+    21300418: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_209
+    21300420: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_210
+    21300422: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_211
+    21300424: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_212
+    21300426: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_213
+    21300428: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_214
+    21300430: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_215
+    21300432: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_216
+    21300434: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_217
+    21300436: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_218
+    21300438: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_219
+    21300440: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_220
+    21300442: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_221
+    21300444: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_222
+    21300446: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_223
+    21300448: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_224
+    21300450: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_225
+    21300452: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_226
+    21300454: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_227
+    21300456: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_228
+    21300458: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_229
+    21300460: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_230
+    21300462: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_231
+    21300464: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_232
+    21300466: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_233
+    21300468: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_234
+    21300470: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_235
+    21300472: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_236
+    21300474: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_237
+    21300476: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_238
+    21300478: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_239
+    21300480: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_240
+    21300482: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_241
+    21300484: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_242
+    21300486: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_243
+    21300488: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_244
+    21300490: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_245
+    21300492: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_246
+    21300494: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_247
+    21300496: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_248
+    21300498: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_249
+    21300500: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_250
+    21300502: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_251
+    21300504: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_252
+    21300506: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_253
+    21300508: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_254
+    21300510: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_255
+    21300512: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_256
+    21300514: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_257
+    21300516: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_258
+    21300518: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_259
+    21300520: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_260
+    21300522: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_261
+    21300524: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_262
+    21300526: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_263
+    21300528: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_264
+    21300530: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_265
+    21300532: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_266
+    21300534: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_267
+    21300536: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_268
+    21300538: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_269
+    21300540: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_270
+    21300542: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_271
+    21300544: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_272
+    21300546: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_273
+    21300548: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_274
+    21300550: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_275
+    21300552: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_276
+    21300554: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_277
+    21300556: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_278
+    21300558: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_279
+    21300560: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_280
+    21300562: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_281
+    21300564: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_282
+    21300566: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_283
+    21300568: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_284
+    21300570: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_285
+    21300572: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_286
+    21300574: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_287
+    21300576: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_288
+    21300578: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_289
+    21300580: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_290
+    21300582: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_291
+    21300584: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_292
+    21300586: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_293
+    21300588: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_294
+    21300590: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_295
+    21300592: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_296
+    21300594: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_297
+    21300596: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_298
+    21300598: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_299
+    21300600: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_300
+    21300602: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_301
+    21300604: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_302
+    21300606: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_303
+    21300608: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_304
+    21300610: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_305
+    21300612: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_306
+    21300614: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_307
+    21300616: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_308
+    21300618: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_309
+    21300620: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_310
+    21300622: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_311
+    21300624: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_312
+    21300626: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_313
+    21300628: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_314
+    21300630: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_315
+    21300632: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_316
+    21300634: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_317
+    21300636: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_318
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2350
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28ce125ca41d7142864bf64df917ea9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 2350
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9893f1dd91b048747a427421bc510b44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 2350
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4db65353936c3440aef66d056139972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 2350
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3be27e37ee6ac54db7799764bb7b7ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 2360
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790804c81cb7dea45af38520ba6c98c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_5
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 2358
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fee9ed65ab9b64387c88944eb68fb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 2350
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389787e042cf6054f92bbdb29f4cb920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_7
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2350
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e8cbacc19923948bd14b5a3ade0871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_8
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2350
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8c0dc8f5c790a488a92059f419ad7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_9
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 2350
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c4f934c6772044dbe004faae772ee3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_10
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 2361
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336a2f2e9b1cbf54db8ef59b1bbc5817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_11
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 2358
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7ce57f8a1d9444fb4f0d73046b02b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 2348
+        width: 290
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9fd63d2ada6f843b7a25ed27301009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_13
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 2348
+        width: 43
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514d92fadaeaa8c4ca58064ab93423ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_14
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 2348
+        width: 43
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ebd6488e2d60e4a8e8b294a14f5abc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_15
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2348
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea57451a265630245b4a709fb9eb92f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_16
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 2348
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369de04378d4dc44781d21b3c4ff930b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_17
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 2361
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d5d148b9a8a1841abcd5ca418df502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_18
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 2355
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6575687907f534788fbc12f945b018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_19
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 2343
+        width: 434
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7182b9db57954ac44b88a8d4c32e26eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_20
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 2302
+        width: 70
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d6162daef8bb645a1f9c8d78890d14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_21
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 2302
+        width: 74
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39a87ecb89a0e3408a383bc91d2372f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_22
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2266
+        width: 57
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b1b16d98a65f34090bc32af53dbf78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_23
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2266
+        width: 55
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad99a970c5b7b04da435b0a834a28e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_24
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2266
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff4ae13e6ff2ec46ace118227da9ffc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_25
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2266
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6a76b5539a316458a76c2368072b98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_26
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 2279
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7456e3b73728994f86f05505fe6c04a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_27
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2280
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d770f358180d1fe44bcf3584c03d20cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_28
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 2261
+        width: 56
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f715c21086ba715408f53ae6e2f70ad6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_29
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2261
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a18178502e3f1d47a5e41cea1ab64c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_30
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2261
+        width: 56
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1f3ed224bfd9a4b9587fee5f41ed55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_31
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 2261
+        width: 56
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a379b2c4b3841b747ab8610c2605b4df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_32
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 2280
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de388a10eb96b62478c29ae83a6bd0fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_33
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 2281
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f32b4cf589bfbb48a9ee105cbebd383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_34
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 2261
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5ba1d81120f71408aa698b8b9bdf5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_35
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 2261
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586c8606cfb6357439465abab2633fd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_36
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 2261
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c45cbf398232341ae9cf726b35f015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_37
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 2261
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f89f6cb92886247bc69a75a9088a90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_38
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 2285
+        width: 61
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e76930263c45c74aa4de82571a0bf73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_39
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 2286
+        width: 60
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddee7257252fb140b73b647ba2ef000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_40
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2267
+        width: 59
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b635a9826c325874c95dd0756211f47d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_41
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 2267
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f97598a8404ed45b4cf9269e15079f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_42
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 2267
+        width: 60
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9261c54fe083e4d9250b8b8237b6a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_43
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 2267
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a3d9ab92c3a2346b70609bc4065c47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_44
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 2279
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f330e4d134911045acdf7dfedaa997d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_45
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 2279
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04078cc1622eb3a4eb2b1138d228354d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_46
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 2239
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf30ee46339017a48ab3d5f38f9e4366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_47
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 2239
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a087c604ef2ac46b66bdb9fd506461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2172
+        width: 242
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0babc8ace0ec15f4e8eeaf19edee7605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_49
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2207
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d67454c7750b84f965107d998a9073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_50
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2207
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17227adf76d5304c88de044ba3295b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_51
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2207
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf8655c903b3b8449b173ddf78d0b21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_52
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2207
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fc5719fdfab604294ce51b52b40951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_53
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2207
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac732eb4fa03ba4f88e0df35708055b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_54
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 2207
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651fcf7ae63e5ae478c3b764509a18ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_55
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 2204
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1561a852eb5eb04c85a8f71216a4fae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_56
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 2205
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d145defb6be5c4c8a7edc03fae722c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_57
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 2207
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841237548e3914446b8bd76a36a9e22f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_58
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 2199
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3d292f2b11f5c41bacebc0eeb14a29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_59
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 2183
+        width: 56
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 39}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734559c241a85ee4aa4f8e73b88402fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_60
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 2204
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265cbdab37969cb43abe8fb0f6d5bec4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_61
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 2189
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00917399729992c46ba84e9ad8c79977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_62
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 2192
+        width: 82
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9221d9c93fb6c47ab4b0da238e2b21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_63
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2207
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5826ee346ee3bd24dac45407ec95d69f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_64
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 2204
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47cb75f11924a7c4587008f5f125a8e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_65
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 2190
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7980566f7cbd814390fd8cd37463bc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_66
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 2124
+        width: 87
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ff70eec41c0a442bff8e68dfcd65cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_67
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 2124
+        width: 87
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658ae9b260cafa44386ae80557086a62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_68
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 2124
+        width: 86
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e44225a7efdfdc408947e8f6344ed2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_69
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 2124
+        width: 85
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523693038953db440976e05952df59d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_70
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 2207
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55cf97d1b0a7a144b4379ce38860f2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_71
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2234
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0c2850e364d5848a83113238ab9d0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_72
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 2239
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39909ea44d1d7e8458d8ef2d7d5fbdd9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_73
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 2225
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdbc60e5b5a72f4b92b589203695326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_74
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 2226
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bd22a48601617448a5c892cf4a6f42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_75
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 2222
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42644616b53df1049b8d8a3d101ae496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_76
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2219
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92317c9f543cc714296271bf24a6a4f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_77
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 2214
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a58e74127bd364dbae8734667cdb91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_78
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 2172
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603136c45ad99224a9abf6a7203920d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_80
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2203
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e96e8d9684cd344b9fee70cea3f9094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_81
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 2191
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e919c3124e4a19f4db12a52e018811e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_82
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 2193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f99e9ce919e87249aa51b404c46f14d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_83
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 2193
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb74cf74fc8f048449c861ea171f8639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_84
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2030
+        width: 608
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e19d9d68be4d9949b0442ec7bbddbec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_85
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2186
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7473d6e0760997d488daaaa7ead9c093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_86
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 2183
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779392f1e8ad91949845a8b5865d975e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_87
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2015
+        width: 479
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa653bd55014b8943895e246b4179b0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_88
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 2095
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576bbfd71f960c4458be2d136f19ebc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_89
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 2063
+        width: 242
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4818ca8d577474d40a0ab90a965d965d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_90
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 1951
+        width: 282
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3618b4ebe78a20408d5e00b9b002f78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_91
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 2133
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e676bd2b3f9515b4ba3ce3d332704785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_92
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 2015
+        width: 76
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af13a302b8e78a48979c2e8d551383b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_93
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1980
+        width: 86
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b249153c1f80c7144881b2ff0429b70c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_94
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 1979
+        width: 85
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 53}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de09642fbd7d0f46b4915a35e90c00a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_95
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2077
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0beb372fc751c3f44b8d246fef4687a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_96
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 2010
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc47daa63d2bd547a184a95eddd0b45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_97
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2015
+        width: 58
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca3c2b40f20d32418a3aa1829ed0f23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_98
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 2020
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6051d4386c2c0bb45bdbcbebdb5fc795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_99
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1903
+        width: 607
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95a441f0c24f1b4f87578e524d3894f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_100
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1903
+        width: 243
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe1775d9fc140942add18cf199a4054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_101
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1934
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0fad7b709934a429dcf8c764a4f50c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_102
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1925
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ff8971168713941839341764f84e1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_103
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1903
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb88a21644793043bd812e8ec2211a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_104
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1903
+        width: 52
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4e80c9e1308eb47b0193db9f9bc092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_105
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1919
+        width: 49
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2db971b4142124e907ff276b98c5c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_106
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1925
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e92d454cde5394b89cacbab0796328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_107
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1855
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f958b99739868ab4ea04843dbe69141c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_108
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1918
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121ffa8edc437b445ad3600ebd89dc3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_109
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1871
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901fb507099513a4d9954b41d6bd6425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_110
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1871
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e167c9d95fc1144bbf69c983d479ff8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_111
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 1871
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fee21d83bf60ec4086f4afbbea64ca1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_112
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1871
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8278fb873f8b5fc4b8f42106bf9917c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_113
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1680
+        width: 1171
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629fedce66ad0064f80cf8aa8c612788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_114
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1886
+        width: 98
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11297d8dd7a8f79449b424d94c4090f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_115
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1856
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc1db071fc7c454db8a91f9e658e9d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_116
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1790
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a7d3a2707867c499d4cbfd584f03e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_117
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 1824
+        width: 52
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d33ccf64cfef84382493962fdbd652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_118
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 1824
+        width: 131
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376de366af14253448726660e1fc1185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_119
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 1828
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a8ff33ab5dd574ca86a3804e337552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_120
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 1791
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40990bfe9568244e9078835d4d410e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_121
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1791
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fe478be2a89fb4b881de38723f681d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_122
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1805
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b04bb671b4383842ab98b0277f0d318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_123
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 1805
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016f484941d857646b3936ac22f393c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_124
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1758
+        width: 51
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e7e9da9670e8145948c3580ad654d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_125
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 1790
+        width: 67
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3968efc013e309d4c83397a967136784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_126
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 1727
+        width: 50
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5024186d1d7bcb4496ce227cbc5ca57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_127
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 1774
+        width: 67
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8306f816767f6e459dbafd45643cfcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_128
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1774
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436d1764fcacc8d44a20c826cfea36c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_129
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1728
+        width: 35
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6022f0ba49274419c0961b4286e9a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_130
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 1728
+        width: 39
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc131e55453ca04a9b1bb43b9098b53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_131
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1728
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93c56a640b5522449fb2d974ab541b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_132
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 1727
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bfff6b626642249999e91a711c19d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_133
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 1728
+        width: 67
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9589bb5b2f93ada44bdacbeaecbdedf5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_134
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1728
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7667c2bbbf075a146b3e9c3595d7732c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_135
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 1742
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8dcd5816ddf8664089f22a4d9e948e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_136
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1742
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd9dd0d45be0cb46ac48b0f3e5a9f95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_137
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1526
+        width: 338
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b40b6006172beb4391950bf2df3b25d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_138
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1551
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08686d7a2be2eaf4c9f9032bfbb555ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_139
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1535
+        width: 256
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b1173311980924d8c22341fe59a5f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_140
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1402
+        width: 692
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b2860b83f6b7e418a05458e2ab6147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_141
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1567
+        width: 116
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66486a8c40863641a5c0715569ed45f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_142
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1535
+        width: 223
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fa9974f5002914fbd20789af608b92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_143
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1583
+        width: 243
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249fc097f2c5d1049a88b76cc2e468cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_144
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 1560
+        width: 130
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef67e4de625de1943b9f00d84174ae6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_145
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1612
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbe11486f274de40bb1972d048ce5f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_146
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 1603
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a978a05794bbb1e409c7ba2ce0f931e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_147
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 1572
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f3267f7243aea46beb20b9ef34dee7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_148
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1590
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caacf68e73c23c84183f405eda7ab386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_149
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1572
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f85cc2f6e1c3a45a15ec7281df56bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_150
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1570
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52295f42f0c6f8418c6e576aae4d558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_151
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1438
+        width: 114
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d42b0a2eb6c60e40929723d9e13db88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_152
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1470
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2805d3a85ef13a43be1c1159fef0e7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_153
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1490
+        width: 61
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08b15ae4bf42a745891d39cb123fe10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_154
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1455
+        width: 193
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970da81076c5b4c4da228d2f6e6b4467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_155
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1374
+        width: 51
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67742bbb1af9387408e2baebeef2533b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_156
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1390
+        width: 42
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b37131a52e285040bd44408a4095d3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_157
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1344
+        width: 56
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824f459feec11b443825fe1a5dcb69ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_158
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 1408
+        width: 156
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2645603e8df44540b0c22905cf55d89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_159
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 1409
+        width: 27
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7a9d9e20055144bae6dbb50a96d322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_160
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1359
+        width: 330
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb922f4119c527548b1aa571f85be4aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_161
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1422
+        width: 164
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9a6c227c48f6346b0ca98b490564a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_162
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1423
+        width: 64
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb96207ce29b94f42abce5844d9e3cf7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_163
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 1361
+        width: 191
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00dc8ba3cdb54847aae259aec64f409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_164
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1438
+        width: 140
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f364205f8ebcda4da08e45ea3fa321c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_165
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1470
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb210ec259728dc468caaaf4a0265318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_166
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1388
+        width: 30
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d2ac31d2afc4b42b7cb12ec553dada
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_167
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1388
+        width: 28
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8294d735b47595746a494f36bde55d45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_168
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1401
+        width: 25
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef96030a2896b1443b833ea95f26fb28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_169
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1446
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1e2f8435b965c438f5414d519d48d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_170
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1381
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e13f08cf688070449130cde87ff3c41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_171
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1429
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119e9be2498c6a645b794643b19cadc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_172
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1375
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e677eaa3db1985949942e2fe6f4ba075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_173
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1390
+        width: 18
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e454b9491371348bd06f3f26949c06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_174
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1390
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0205c13b3e328d946bef81bfb271d8ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_175
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1390
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0843b845cfff60429ad5e2c6d48cc97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_176
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1390
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401be2581d94b0b41afd1c25dab953b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_177
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1390
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97dd3286819a6a4298e1aa1d2797584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_178
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1423
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6caa7ee5f2bdbc44ab670fc17a27572b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_179
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1405
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16df7be7b69955b479a3f6f51475e09f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_180
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1388
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694c3cb1d8d6b9748ac9b326379acaa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_181
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1312
+        width: 99
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a64310bf4a69e043b9d8acba75fd679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_182
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1342
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a73c77458f9e24aa292db1a1bb9ef7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_183
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1327
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db4a57d74899ad408b37f698853f100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_184
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1246
+        width: 259
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d26d54d49eedee4094b4f814f84b7c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_185
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1355
+        width: 34
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e441ff9c3e57da845b26369ee61373ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_186
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1340
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb39c176ba91dc4c8d650dc79696069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_187
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1327
+        width: 97
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e74dab255bd51409cf85699d446806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_188
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1342
+        width: 130
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5483e984a61f3c543aaa9e927eb1e811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_189
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1327
+        width: 113
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d4f114f38740249a707bda7fde6b5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_190
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1342
+        width: 91
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab41745e906eaa45992a0184bac7b11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_191
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1344
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b63bf197dc491043ae46bfa41907df0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_192
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1032
+        width: 514
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217a8155e340f544e970a590b1866122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_193
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1191
+        width: 90
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92292ca8e9f50c743a51ab7a84d630ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_194
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1198
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbd0f8a050ff244386a08d188653152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_195
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1191
+        width: 99
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120365cf5b53c4540bf2cef5132a4463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_196
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1196
+        width: 167
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5204b0bd2ff55004d8d77e20b442eb58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_197
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1196
+        width: 76
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744e3e0fca704574898a9d4e77097a87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_198
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1196
+        width: 90
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d1885fb0e825645905344ad696588d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_199
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1196
+        width: 76
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a126c6aa6aed6943b0ed6b1960a8264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_200
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 1181
+        width: 93
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51976c3d9270ec541bd2e2de44949968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_201
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1194
+        width: 71
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c1f813f21dbda4281667ee20b4811f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_202
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1181
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d64b2ef10c6db34ea99a85c1619b1ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_203
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1194
+        width: 72
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ca51dd79965c54a869791b85db95cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_204
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1042
+        width: 84
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc7b98426771e444a833c6a3ccb017f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_205
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1047
+        width: 109
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38200372a969fd1498dae3d8351b5196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_206
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 1046
+        width: 82
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4dffd477a8ec554c8833573158de325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_207
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1046
+        width: 99
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494ae96a6f5266c46a3a731e956fba25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_208
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1051
+        width: 73
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e7ed4c70691da4cbab633c273216c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_209
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1051
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfa30094df92c0458c8ab269f104a2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_210
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1038
+        width: 75
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c67b91c57c6df4297c3db6ec1b4e1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_211
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 1046
+        width: 76
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52b1b7987ee7784cb330e06b80f3f06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_212
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1046
+        width: 75
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5d00ba260671b4ab1af11c4c6ab6ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_213
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1048
+        width: 75
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92461ffb0a8122a4e9cea12089249a58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_214
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1031
+        width: 96
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebdd1160193c694396b1e98802a5dac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_215
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1031
+        width: 96
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389fcdd94d7e239479138ef5c2efff4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_216
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 1024
+        width: 99
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c229a0bd2973840b6c16fa1abc9fdc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_217
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1019
+        width: 114
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530d5269bfe1f7f449d0a65e36bccb81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_218
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 1011
+        width: 122
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db72843d3523d0c4aa31d8180a726faa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_219
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 783
+        width: 514
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df9d5bb3120bf74cbfe513b3e7b5d71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_220
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 898
+        width: 84
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d5154658527034a813365696ff2d89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_221
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 904
+        width: 109
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3185a94bc2d8f264fae34de422bbd9e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_222
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 902
+        width: 82
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf177bd300faaa4399010d7e847b3f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_223
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 902
+        width: 99
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5baba6aebff0b94c8a78c5cb82b64e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_224
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 906
+        width: 73
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d52269deec576041850fec47173a60c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_225
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 906
+        width: 92
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f652dac099d1fd645a039a18b5a19976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_226
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 894
+        width: 75
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90de5f1eef3990b4896d655b88794b2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_227
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 902
+        width: 76
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7af7db3ea8006e43b52a6cf9ad5d114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_228
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 902
+        width: 75
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3a4d88f64128a49943fac93296fa28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_229
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 904
+        width: 75
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74cd668e31f136498ea3c4000e04b0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_230
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 884
+        width: 94
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1254819442d68834fa0f874e6d565546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_231
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 877
+        width: 75
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a0938a3613e314696237e218cd5e18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_232
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 895
+        width: 93
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d3a51ec7a7698409d2e3cbfd8bbf19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_233
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 896
+        width: 76
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371c35885350c92428095c6ba60c44f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_234
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 896
+        width: 76
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523b3c07d99cdf34b82e0ca9a6408b88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_235
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 896
+        width: 78
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872a97459789fc647ba8937387493c2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_236
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 896
+        width: 76
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7c42a1fc205684a811fc437c85314e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_237
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 891
+        width: 88
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1ee0165dcc1314395564bbb44a999f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_238
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 727
+        width: 82
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfdb710029fc5f4386f85bb6d0c9a7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_239
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 727
+        width: 81
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6783f859d48b2340b1e57f2ecff5704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_240
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 734
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5c0149a3f847548ba4d415327409e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_241
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 732
+        width: 89
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d65f9d3b7e9930479f780d2dd5abe49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_242
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 741
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a09007dc189ca48a1e2de4eadd2465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_243
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 741
+        width: 74
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1035754edc52e41bc4b01805b08bd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_244
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 761
+        width: 85
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8553f1f8917ef4b8db5cfce788f2ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_245
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 754
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff33df487104444cb2d2ac97fbb91ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_246
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 754
+        width: 74
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e41b2f1c2c0bf4cb2affc40ff3a1fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_247
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 734
+        width: 159
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddfcc50d0e86ee498d0963bb8ba7fa5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_248
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 623
+        width: 73
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5554a336aefa41a4f8750f51a0e3595b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_249
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 609
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c548fe62b1912d74b9582cc28fbac13c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_250
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 623
+        width: 74
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038ee30852fa1c24d893f096ef43bc6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_251
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 609
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2a3f2728eb4164ea8274559c0be9df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_252
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 636
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af86137ef91c3f469ea470a60ff5bde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_253
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 638
+        width: 91
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a8b538cfa161f49a6c85dd7cfaed06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_254
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 623
+        width: 75
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae068773d06ccc43936b783b778c256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_255
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 623
+        width: 89
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d449bab61c87e548abdae1e046b3d06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_256
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 637
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6550d0cd3137b414b92bde96c446f341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_257
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 623
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a5f1d370bc21247a031e37bde995e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_258
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 623
+        width: 66
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853146e5a7aa686498e32147145f5253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_259
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 623
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010c85836cd63e14292d86697bc1dfbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_260
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 640
+        width: 67
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed50a89f97f901843bab1923badc5db5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_261
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 638
+        width: 67
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31910dfd32e2cfc42819b89b70626984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_262
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 649
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0eab1c05094a704a99c9cb9521a4ce6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_263
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 639
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2a0be2c1ee2fa40839f53822e5536d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_264
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 631
+        width: 83
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e946ba47f0ebbf645b8247213566955b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_265
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 628
+        width: 67
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd49289aed2042409b4539f1b232d64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_266
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 638
+        width: 82
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a234ea5c0c8b6747ac5f188bb499db1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_267
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 638
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f850658b137525e45917639ca01bde9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_268
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 638
+        width: 67
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda2a6ed170ea62458c16cbaa2edea99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_269
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 638
+        width: 82
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e67e6733665b5f45890690de47635fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_270
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 623
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d974a424a0a2b6459dc0bd61538198d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_271
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 623
+        width: 35
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045f9a87cca37b54a845ec7cf924e8ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_272
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 623
+        width: 62
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc68eeee6da7a2f4d9d0d3296af90ab3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_273
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 623
+        width: 64
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5831edd8ea6519742bd99b14bac4dd9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_274
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 623
+        width: 63
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b281a75865ec546b3d4023604a22f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_275
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 623
+        width: 62
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f3d9cc94950c24aab5f7c02d1ddf2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_276
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 623
+        width: 62
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f129c7a06a0a5b418612573b27b77e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_277
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 622
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85532bf4a45a4145b6dfe18059e6eec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_278
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 622
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93279184588645d42a77d7b096d9b05e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_279
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 622
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8710ec4775156346a482beb215d7bf6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_280
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 622
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d28d5874108754881003dd0f3407b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_281
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 622
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb71c80ab04d6a448b119110b2c2ba7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_282
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 622
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c40a26fc73ed948b7b7212d8b9a842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_283
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 619
+        width: 75
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2cb0cbacbdc824583c566953cd41aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_284
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 619
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f590d0df9dc3fbd45bab64bc7c7b8e37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_285
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 619
+        width: 75
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1650fc11291c334d9c0ecc175b9c74f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_286
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 427
+        width: 104
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048cb681c2dfcbe45a907c71d9137340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_287
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 446
+        width: 121
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223c6bb31cd96fb459964aa38a33f68a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_288
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 439
+        width: 110
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56db2ef2215ac884ebfcba80261c8a64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_289
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 428
+        width: 163
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdd22cecce17cf4d9b532bc8524b2d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_290
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 441
+        width: 133
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74cee23214311541adfecb1296dbc81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_291
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 446
+        width: 98
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e21a4206f3a1e42be19e28920166c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_292
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 460
+        width: 121
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c21c2362d54e840993543319caa965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_293
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 440
+        width: 118
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574f274c2e35f4c4086ebbafd4d889b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_294
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 447
+        width: 134
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37493674228bd7146b70ac2a47babb2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_295
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 441
+        width: 144
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e0da56afb69da4c8aef80071a20990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_296
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 347
+        width: 31
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8051f534e035fb42bc00e193fccb5a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_297
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 309
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b095a9b69bd4e4f82c5a0050d18cbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_298
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 84
+        width: 119
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baa2e7f528b66648882893065d6ba47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_299
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 333
+        width: 50
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d42116856c58ef42a935e60ac013e12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_300
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 115
+        width: 95
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adda1d8aba3901459f1dd59f03989d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_301
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 304
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996173b5c25958944bae6fdf588eeb72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_302
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 120
+        width: 154
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ac64fed90a903428619701f5360347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_303
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 188
+        width: 222
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e3994628edd744b8682d7e91954199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_304
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 0
+        width: 471
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4028774c49c4544fba97ffea575e6a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_305
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 112
+        width: 120
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f8e7e45c3f43b4eb720817fd733a17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_306
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 110
+        width: 194
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15083e41286b2a849aabbf777feddbb4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_307
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 146
+        width: 107
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cadab713fabac4ab66fc06110f6fc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_308
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 149
+        width: 179
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7557e90a4bd4f04c816ea1014e68aee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_309
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 176
+        width: 109
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724d5cd36cae6e046bc83a4b88cb246c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_310
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 190
+        width: 59
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81524cece07d1734fb94a0bbf893491c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_311
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 155
+        width: 132
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbdc8c3d1470574a8da05ea391d74d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_312
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 179
+        width: 121
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3fe507a68eeba49bb943cb1a167769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_313
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 2209
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aed910e61e77ba498890dd7180e5d30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_314
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 2055
+        width: 85
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda7905c32bb5e346be9f5a5a6dee9fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_315
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 2222
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bd7408015c1514ab61efb157d8cd00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_79
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 2176
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42307fe929906804984bb3e49d6c9d1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_316
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2184
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dbfd3620bb02f4b8b9cd60476ca90c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_317
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2184
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bb0d915db222f4ebb859f29e338a62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake-d5xdb0y_318
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2176
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9095194da9e34fb47ac3ae4f69b96e1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 68ec47a9208022248b392a8bebeb90cd
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
