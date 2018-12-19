@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator anim;
     public AudioClip hit, died;
     public AudioSource playerAudio;
-    public GameObject particles, gun, shootPoint, rageSprite,countDownSprite;
+    public int activatedAbility=0;
+    public GameObject particles, gun, shootPoint, rageSprite,countDownSprite,ability1Meter, ability2Meter, ability3Meter;
     public bool isDead, toPunch, isInRage;
     public float moveHor, moveVer, vel, maxVel, health, angle, attackRange, damage, rageDamage,rageTimer,rageVel,curTime,slowDownFactor,slowDownLast;
     public Text countDown;
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
         health = 0;
@@ -27,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        anim.SetInteger("activatedAbility", activatedAbility);
         move();
         if (Input.GetButtonDown("Jump"))
         {
@@ -47,16 +51,7 @@ public class PlayerMovement : MonoBehaviour
             StopCoroutine(Punch());
             gun.SetActive(false);
         }
-        if (health>=30&&health<60)
-        {
-            Time.timeScale = slowDownFactor;
-            Time.fixedDeltaTime = Time.timeScale * 0.02f;
-        }
-        else if (health>=60&&health<100)
-        {
-            Time.timeScale = 1;
-        }
-        else if (health >= 100 && !isDead)
+        if (health >= 100 && !isDead)
         {
             isInRage = true;
         }
@@ -70,7 +65,76 @@ public class PlayerMovement : MonoBehaviour
             else
                 death();
         }
+        checkForAbilityState();
     }
+
+    void checkForAbilityState()
+    {
+        if (health >= 0 && health < 25)
+        {
+            ability1Meter.SetActive(false);
+            ability2Meter.SetActive(false);
+            ability3Meter.SetActive(false);
+            /**/
+        }
+        else if (health >= 25 && health < 50)
+        {
+            ability1Meter.SetActive(true);
+            ability2Meter.SetActive(false);
+            ability3Meter.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                activatedAbility = 1;
+            }
+        }
+        else if (health >= 50 && health < 75)
+        {
+            ability1Meter.SetActive(true);
+            ability2Meter.SetActive(true);
+            ability3Meter.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                activatedAbility = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                activatedAbility = 2;
+            }
+        }
+        else if (health >= 75 && health < 100)
+        {
+            ability1Meter.SetActive(true);
+            ability2Meter.SetActive(true);
+            ability3Meter.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                activatedAbility = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                activatedAbility = 2;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                activatedAbility = 3;
+            }
+        }
+    }
+
+    void cooldownUI()
+    {
+        switch (activatedAbility)
+        {
+            /*case 1:
+                {
+                    if ()
+                    { }
+                    ability1Meter.GetComponent<Image>().fillAmount-=
+                }
+                break;*/
+        }
+    }
+
 
 
     void death()
