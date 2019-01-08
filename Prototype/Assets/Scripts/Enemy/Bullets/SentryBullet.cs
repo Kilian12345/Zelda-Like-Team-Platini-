@@ -13,7 +13,7 @@ public class SentryBullet : MonoBehaviour
         pl = GameObject.FindGameObjectWithTag("Player");
 		rb = GetComponent<Rigidbody2D> ();
 		rb.velocity = new Vector2 (-transform.position.x + pl.transform.position.x, -transform.position.y + pl.transform.position.y).normalized*speed;
-        //Destroy(rb.gameObject, 5f);
+        Destroy(rb.gameObject, 5f);
 
     }
 	// Update is called once per frame

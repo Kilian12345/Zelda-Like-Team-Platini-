@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public int activatedAbility=0;
     public GameObject particles, gun, shootPoint, rageSprite,countDownSprite,ability1Meter, ability2Meter, ability3Meter;
     public bool isDead, toPunch, isInRage;
-    public float moveHor, moveVer, vel, maxVel, health, angle, attackRange, damage, rageDamage,rageTimer,rageVel,curTime,slowDownFactor,slowDownLast;
+    public float moveHor, moveVer, vel, maxVel, health, angle, attackRange, damage, rageDamage,rageTimer,rageVel,curTime,slowDownFactor,slowDownLast,curcooldownTime;
+    public float[] cooldownTime;
     public Text countDown;
     public float lastHor, lastVer;
     Rigidbody2D player;
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 death();
         }
         checkForAbilityState();
+        cooldownUI();
     }
 
     void checkForAbilityState()
@@ -85,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 activatedAbility = 1;
+                curcooldownTime = cooldownTime[0];
             }
         }
         else if (health >= 50 && health < 75)
@@ -95,10 +98,12 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 activatedAbility = 1;
+                curcooldownTime = cooldownTime[0];
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 activatedAbility = 2;
+                curcooldownTime = cooldownTime[1];
             }
         }
         else if (health >= 75 && health < 100)
@@ -109,14 +114,17 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 activatedAbility = 1;
+                curcooldownTime = cooldownTime[0];
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 activatedAbility = 2;
+                curcooldownTime = cooldownTime[1];
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 activatedAbility = 3;
+                curcooldownTime = cooldownTime[2];
             }
         }
     }
@@ -125,13 +133,19 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (activatedAbility)
         {
-            /*case 1:
+            case 1:
                 {
-                    if ()
-                    { }
-                    ability1Meter.GetComponent<Image>().fillAmount-=
+                    if (curcooldownTime < 0)
+                    {
+                        activatedAbility = 0;
+                    }
+                    else
+                    {
+                        curcooldownTime -= Time.deltaTime;
+                    }
+                    ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime / cooldownTime[0];
                 }
-                break;*/
+                break;
         }
     }
 
