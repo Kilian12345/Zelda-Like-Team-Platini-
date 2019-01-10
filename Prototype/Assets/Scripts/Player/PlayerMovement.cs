@@ -10,11 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public AudioClip hit, died;
     public AudioSource playerAudio;
-    public int activatedAbility=0;
-    public GameObject particles, gun, shootPoint, rageSprite,countDownSprite,ability1Meter, ability2Meter, ability3Meter;
+    public int activatedAbility = 0;
+    public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
     public bool isDead, toPunch, isInRage;
-    public float moveHor, moveVer, vel, maxVel, health, angle, attackRange, damage, rageDamage,rageTimer,rageVel,curTime,slowDownFactor,slowDownLast,curcooldownTime;
-    public float[] cooldownTime;
+    public float moveHor, moveVer, vel, sprintVelocity, maxVel, health, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast,abilityIsToCooldown;
+    public float[] cooldownTime, curcooldownTime;
     public Text countDown;
     public float lastHor, lastVer;
     Rigidbody2D player;
@@ -68,6 +68,9 @@ public class PlayerMovement : MonoBehaviour
         }
         checkForAbilityState();
         cooldownUI();
+        ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
+        ability2Meter.GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
+
     }
 
     void checkForAbilityState()
@@ -77,17 +80,16 @@ public class PlayerMovement : MonoBehaviour
             ability1Meter.SetActive(false);
             ability2Meter.SetActive(false);
             ability3Meter.SetActive(false);
-            /**/
         }
         else if (health >= 25 && health < 50)
         {
             ability1Meter.SetActive(true);
             ability2Meter.SetActive(false);
             ability3Meter.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
             {
                 activatedAbility = 1;
-                curcooldownTime = cooldownTime[0];
+                curcooldownTime[0] = cooldownTime[0];
             }
         }
         else if (health >= 50 && health < 75)
@@ -95,36 +97,36 @@ public class PlayerMovement : MonoBehaviour
             ability1Meter.SetActive(true);
             ability2Meter.SetActive(true);
             ability3Meter.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
             {
                 activatedAbility = 1;
-                curcooldownTime = cooldownTime[0];
+                curcooldownTime[0] = cooldownTime[0];
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
             {
                 activatedAbility = 2;
-                curcooldownTime = cooldownTime[1];
+                curcooldownTime[1] = cooldownTime[1];
             }
         }
-        else if (health >= 75 && health < 100)
+        else if (health >= 75 /*&& health < 100*/)
         {
             ability1Meter.SetActive(true);
             ability2Meter.SetActive(true);
             ability3Meter.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
             {
                 activatedAbility = 1;
-                curcooldownTime = cooldownTime[0];
+                curcooldownTime[0] = cooldownTime[0];
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
             {
                 activatedAbility = 2;
-                curcooldownTime = cooldownTime[1];
+                curcooldownTime[1] = cooldownTime[1];
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 activatedAbility = 3;
-                curcooldownTime = cooldownTime[2];
+                curcooldownTime[2] = cooldownTime[2];
             }
         }
     }
@@ -133,17 +135,80 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (activatedAbility)
         {
+            case 0:
+                {
+                    if (curcooldownTime[0] < cooldownTime[0])
+                    {
+                        curcooldownTime[0] += Time.deltaTime;
+                    }
+                    if (curcooldownTime[1] < cooldownTime[1])
+                    {
+                        curcooldownTime[1] += Time.deltaTime;
+                    }
+                    if (curcooldownTime[2] < cooldownTime[2])
+                    {
+                        curcooldownTime[2] += Time.deltaTime;
+                    }
+                }
+                break;
             case 1:
                 {
-                    if (curcooldownTime < 0)
+                    if (curcooldownTime[0] < 0)
                     {
                         activatedAbility = 0;
                     }
                     else
                     {
-                        curcooldownTime -= Time.deltaTime;
+                        curcooldownTime[0] -= (Time.deltaTime*abilityIsToCooldown);
                     }
-                    ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime / cooldownTime[0];
+                    if (curcooldownTime[1] < cooldownTime[1])
+                    {
+                        curcooldownTime[1] += Time.deltaTime;
+                    }
+                    if (curcooldownTime[2] < cooldownTime[2])
+                    {
+                        curcooldownTime[2] += Time.deltaTime;
+                    }
+                }
+                break;
+            case 2:
+                {
+                    if (curcooldownTime[1] < 0)
+                    {
+                        activatedAbility = 0;
+                    }
+                    else
+                    {
+                        curcooldownTime[1] -= (Time.deltaTime/slowDownFactor*abilityIsToCooldown);
+                    }
+                    if (curcooldownTime[0] < cooldownTime[0])
+                    {
+                        curcooldownTime[0] += Time.deltaTime;
+                    }
+                    if (curcooldownTime[2] < cooldownTime[2])
+                    {
+                        curcooldownTime[2] += Time.deltaTime;
+                    }
+                }
+                break;
+            case 3:
+                {
+                    if (curcooldownTime[1] < 0)
+                    {
+                        activatedAbility = 0;
+                    }
+                    else
+                    {
+                        curcooldownTime[1] -= (Time.deltaTime*abilityIsToCooldown);
+                    }
+                    if (curcooldownTime[0] < cooldownTime[0])
+                    {
+                        curcooldownTime[0] += Time.deltaTime;
+                    }
+                    if (curcooldownTime[1] < cooldownTime[1])
+                    {
+                        curcooldownTime[1] += Time.deltaTime;
+                    }
                 }
                 break;
         }
@@ -172,16 +237,7 @@ public class PlayerMovement : MonoBehaviour
         }
         angle = Mathf.Atan2(lastHor, lastVer) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
-
-        if (Input.GetKey(KeyCode.LeftShift)) // Player is sprinting
-        {
-            transform.position = new Vector2(transform.position.x + (moveHor * (vel + 6) * Time.deltaTime), transform.position.y + (moveVer * (vel + 6) * Time.deltaTime));
-        }
-        else
-        {
-            transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
-        }
-
+        transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
 
         // These if statements prevent velocity to exceed a given value
 
