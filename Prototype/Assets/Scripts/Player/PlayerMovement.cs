@@ -33,13 +33,18 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetInteger("activatedAbility", activatedAbility);
         move();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")) 
         {
             toPunch = true;
             Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
-            for (int i = 0; i < enemiestoDamage.Length; i++)
+            //Debug.Log(enemiestoDamage.Length);
+            if (enemiestoDamage.Length > 0)
             {
-                enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                for (int i = 0; i < enemiestoDamage.Length; i++)
+                {
+                    if(enemiestoDamage[i].GetComponent<EnemyHealth>()!=null)
+                    enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                }
             }
         }
         if (toPunch)
