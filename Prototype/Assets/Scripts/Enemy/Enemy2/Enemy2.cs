@@ -9,7 +9,7 @@ public class Enemy2 : MonoBehaviour
     public GameObject gun,particles;
     PlayerMovement pm;
     public bool isInRange;
-    public float range;
+    public float range,enemyDamage;
     public bool isRunning;
     public Animator anim;
     Transform target;
@@ -141,7 +141,7 @@ public class Enemy2 : MonoBehaviour
         enemy2Audio.clip = punch;
         enemy2Audio.Play();
         isRunning = true;
-        pm.health += 5f;
+        pm.health += enemyDamage;
         yield return new WaitForSeconds(1);
         isRunning = false;
     }

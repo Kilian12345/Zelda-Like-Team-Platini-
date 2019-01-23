@@ -7,24 +7,32 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Animator anim;
+    Animator anim;
+    AudioSource playerAudio;
+    CinemachineImpulseSource source;
+
     public AudioClip hit, died;
-    public AudioSource playerAudio;
-    public int activatedAbility = 0;
-    public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
-    public bool isDead, toPunch, isInRage;
-    public float moveHor, moveVer, vel, sprintVelocity, maxVel, health, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast,abilityIsToCooldown;
+    public float vel,sprintVelocity;
     public float[] cooldownTime, curcooldownTime;
+    public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
+
+    [HideInInspector]
+    public float moveHor, moveVer;
+    
     public Text countDown;
-    public float lastHor, lastVer;
+    int activatedAbility = 0;
+    bool isDead, toPunch, isInRage;
+    public float health,maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast,abilityIsToCooldown;
+    float lastHor, lastVer;
     Rigidbody2D player;
-    public CinemachineImpulseSource source;
+    
     // Use this for initialization
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
+        source = gameObject.GetComponent<CinemachineImpulseSource>();
         health = 0;
         curTime = rageTimer;
     }
@@ -33,13 +41,18 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetInteger("activatedAbility", activatedAbility);
         move();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")) 
         {
             toPunch = true;
             Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
-            for (int i = 0; i < enemiestoDamage.Length; i++)
+            //Debug.Log(enemiestoDamage.Length);
+            if (enemiestoDamage.Length > 0)
             {
-                enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                for (int i = 0; i < enemiestoDamage.Length; i++)
+                {
+                    if(enemiestoDamage[i].GetComponent<EnemyHealth>()!=null)
+                    enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                }
             }
         }
         if (toPunch)
