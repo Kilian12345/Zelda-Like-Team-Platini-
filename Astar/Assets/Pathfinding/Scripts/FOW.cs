@@ -27,8 +27,6 @@ public class FOW : MonoBehaviour
         playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask("Player"));
 
         visiblePlayer.Clear();
-        PlayerDetected = false;
-        viewRadius = 1;
 
         for (int i = 0; i < playerInRadius.Length; i++)
         {
@@ -47,14 +45,15 @@ public class FOW : MonoBehaviour
 
                     visiblePlayer.Add(player);
                     PlayerDetected = true;
-                    viewRadius = 10;
-                    
 
                 }  
 
                 
             }
-
+            else
+            {
+                PlayerDetected = false;
+            }
          
         }
 
