@@ -7,12 +7,21 @@ public class SentryBullet : MonoBehaviour
 	public GameObject pl;
     public float speed;
 	Rigidbody2D rb;
-	// Use this for initialization
+    // Use this for initialization
+
+    [SerializeField]
+    Transform canon;
+
 	void Start ()
 	{
         pl = GameObject.FindGameObjectWithTag("Player");
 		rb = GetComponent<Rigidbody2D> ();
 		rb.velocity = new Vector2 (-transform.position.x + pl.transform.position.x, -transform.position.y + pl.transform.position.y).normalized*speed;
+
+        canon = GetComponent<Transform>();
+
+        canon.transform.rotation = gameObject.transform.rotation;
+
         Destroy(rb.gameObject, 5f);
 
     }
@@ -34,5 +43,7 @@ public class SentryBullet : MonoBehaviour
             Destroy(rb.gameObject, 0f);
         }*/
     }
+
+
 }
 	

@@ -2576,6 +2576,17 @@ PrefabInstance:
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 8300000, guid: 92a33c8aa5224584bb3c2c58a663a395, type: 3}
+    - target: {fileID: 114957007250083758, guid: 609726d30c3f82e4aa8af7096a3d824c,
+        type: 3}
+      propertyPath: bull
+      value: 
+      objectReference: {fileID: 6620391157573399382, guid: f973c1e699ba4fc4aafd8ea42804ddec,
+        type: 3}
+    - target: {fileID: 114957007250083758, guid: 609726d30c3f82e4aa8af7096a3d824c,
+        type: 3}
+      propertyPath: FireRate
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609726d30c3f82e4aa8af7096a3d824c, type: 3}
 --- !u!1 &1823937257
