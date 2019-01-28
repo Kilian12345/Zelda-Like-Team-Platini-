@@ -26,6 +26,7 @@ public class Sentry : MonoBehaviour
         sentryAudio.clip = shootSound;
         st = hitbox.GetComponent<SentryHitBox>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
@@ -60,6 +61,11 @@ public class Sentry : MonoBehaviour
     void shoot()
     {
         sentryAudio.Play();
-        Instantiate(bull, shootPoint.position, Quaternion.identity);
+        Instantiate(bull, shootPoint.position, gameObject.transform.rotation);
+    }
+
+    void particleEffect()
+    {
+
     }
 }

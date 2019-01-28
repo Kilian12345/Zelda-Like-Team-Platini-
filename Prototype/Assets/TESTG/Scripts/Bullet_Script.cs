@@ -4,33 +4,21 @@ using UnityEngine;
 
 public class Bullet_Script : MonoBehaviour
 {
-    [SerializeField]
-    float speed = 7;
-
-
+    ParticleSystem shadow;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        shadow = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Bullet();
+#pragma warning disable CS0618 // Type or member is obsolete
+        shadow.startRotation = -transform.rotation.eulerAngles.z / (180.0f / Mathf.PI);
+#pragma warning restore CS0618 // Type or member is obsolete
     }
 
-    void Bullet()
-    {
-        if (speed != 0)
-        {
-            transform.position += transform.up * (speed * Time.deltaTime);
-
-        }
-
-
-
-    }
 
     }
