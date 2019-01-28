@@ -4733,7 +4733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3111414817340716077}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.018, y: -0.009697451, z: 0.008706269}
+  m_LocalPosition: {x: 0.037, y: 0.016, z: 0.008706269}
   m_LocalScale: {x: 1.228675, y: 1.228675, z: 1.228675}
   m_Children: []
   m_Father: {fileID: 6620391157573399383}
@@ -5374,7 +5374,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.5, y: 0.5, z: 0.5}
+    m_Scale: {x: 0.2, y: 0.4, z: 0.5}
     placementMode: 1
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -9530,7 +9530,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 920e464691ebac44680e4286fe047e79, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 0.69411767}
   m_FlipX: 0
@@ -14323,7 +14323,7 @@ GameObject:
   - component: {fileID: 2577738283340598944}
   m_Layer: 0
   m_Name: VFX_Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

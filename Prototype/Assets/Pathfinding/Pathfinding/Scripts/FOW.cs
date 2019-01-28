@@ -48,13 +48,10 @@ public class FOW : MonoBehaviour
 
                 }  
 
+
                 
             }
-            else
-            {
-                PlayerDetected = false;
-            }
-         
+
         }
 
 

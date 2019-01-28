@@ -294,7 +294,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 health += 10;
             }
-            Destroy(col.gameObject, 0f);
+            //Destroy(col.gameObject, 0f);
         }
     }
     IEnumerator Punch()
