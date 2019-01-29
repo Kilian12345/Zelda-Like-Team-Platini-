@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     CinemachineImpulseSource source;
 
     public AudioClip hit, died;
+    public float PlayerScore;
     public float vel,sprintVelocity;
     public float[] cooldownTime, curcooldownTime;
     public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
@@ -21,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     
     public Text countDown;
     int activatedAbility = 0;
-    bool isDead, toPunch, isInRage;
+    public bool isDead, toPunch, isInRage;
     public float health,maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast,abilityIsToCooldown;
     float lastHor, lastVer;
     Rigidbody2D player;
@@ -41,19 +42,9 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetInteger("activatedAbility", activatedAbility);
         move();
-        if (Input.GetButtonDown("Jump")) 
+        if (Input.GetButtonDown("Jump"))
         {
             toPunch = true;
-            Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
-            //Debug.Log(enemiestoDamage.Length);
-            if (enemiestoDamage.Length > 0)
-            {
-                for (int i = 0; i < enemiestoDamage.Length; i++)
-                {
-                    if(enemiestoDamage[i].GetComponent<EnemyHealth>()!=null)
-                    enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
-                }
-            }
         }
         if (toPunch)
         {
@@ -85,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         ability2Meter.GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
 
     }
+    
 
     void checkForAbilityState()
     {
@@ -241,12 +233,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void move()
     {
-        moveHor = Input.GetAxisRaw("Horizontal");
-        moveVer = Input.GetAxisRaw("Vertical");
+        moveHor = Input.GetAxis("Horizontal");
+        moveVer = Input.GetAxis("Vertical");
         if (moveVer != 0 || moveHor != 0)
         {
-            lastVer = Mathf.Round(moveVer);
-            lastHor = Mathf.Round(moveHor);
+            lastVer = moveVer;
+            lastHor = moveHor;
         }
         angle = Mathf.Atan2(lastHor, lastVer) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
@@ -299,8 +291,23 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator Punch()
     {
-        yield return new WaitForSeconds(0.25f);
-        toPunch = false;
+        Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
+        //Debug.Log(enemiestoDamage.Length);
+        if (enemiestoDamage.Length > 0)
+        {
+            for (int i = 0; i < enemiestoDamage.Length; i++)
+            {
+                if (enemiestoDamage[i].GetComponent<EnemyHealth>() != null)
+                {
+                    enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                    toPunch = false;
+                    break;
+                }
+            }
+            toPunch = false;
+        }
+        yield return new WaitForSeconds(0.0001f);
+        
     }
 
     private void OnDrawGizmosSelected()

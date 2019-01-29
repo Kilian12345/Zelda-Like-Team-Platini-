@@ -9,9 +9,15 @@ public class EnemyHealth : MonoBehaviour
     public GameObject particles;
     public float health;
 
+    [SerializeField]
+    private int scorePerHit;
+
+    PlayerMovement pm;
+
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
+        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -26,10 +32,18 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+
     public void TakeDamage(float dam)
     {
         enemy2Audio.clip = punch;
         enemy2Audio.Play();
         health -= dam;
+        if (health > 0)
+        {
+            pm.PlayerScore += ((100 - pm.health) / 100) * (scorePerHit);
+            Debug.Log("Punch " + (100 - pm.health) / 100);
+        }
+        
     }
+
 }

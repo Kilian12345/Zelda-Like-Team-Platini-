@@ -53,12 +53,9 @@ public class Enemy2 : MonoBehaviour
 
     void look()
     {
-        if (isInRange)
-        {
             Vector3 dir = (pl.position - transform.position);
             angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
     }
 
     /// <NotWorking>

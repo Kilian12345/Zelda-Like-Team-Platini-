@@ -16,11 +16,8 @@ public class Dash : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Input.GetKey(KeyCode.LeftShift)) // Player is sprinting
-        {
-            Debug.Log("Sprinting");
-            player.transform.position = new Vector2(player.transform.position.x + (pm.moveHor * pm.sprintVelocity * Time.deltaTime), player.transform.position.y + (pm.moveVer * pm.sprintVelocity * Time.deltaTime));
-        }
+        Debug.Log("Sprinting");
+        player.transform.position = new Vector2(player.transform.position.x + (pm.moveHor * pm.sprintVelocity * Time.deltaTime), player.transform.position.y + (pm.moveVer * pm.sprintVelocity * Time.deltaTime));
     }
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
