@@ -34,7 +34,8 @@ public class EnemyAI : MonoBehaviour {
 	// The waypoint we are currently moving towards
 	private int currentWaypoint = 0;
 	
-	void Start () {
+	void Start ()
+    {
 		seeker = GetComponent<Seeker>();
 		rb = GetComponent<Rigidbody2D>();
         fow = GetComponent<FOW>();
@@ -49,17 +50,19 @@ public class EnemyAI : MonoBehaviour {
 		StartCoroutine (UpdatePath ());
 	}
 	
-	IEnumerator UpdatePath () {
-		if (target == null) {
-			//TODO: Insert a player search here.
-			//return false;
-		}
-		
-		// Start a new path to the target position, return the result to the OnPathComplete method
-		seeker.StartPath (transform.position, target.position, OnPathComplete);
-		
-		yield return new WaitForSeconds ( 1f/updateRate );
-		StartCoroutine (UpdatePath());
+	IEnumerator UpdatePath ()
+    {
+            if (target == null)
+            {
+                //TODO: Insert a player search here.
+                //return false;
+            }
+
+            // Start a new path to the target position, return the result to the OnPathComplete method
+            seeker.StartPath(transform.position, target.position, OnPathComplete);
+
+            yield return new WaitForSeconds(1f / updateRate);
+            StartCoroutine(UpdatePath());        
 	}
 	
 	public void OnPathComplete (Path p) {
@@ -70,16 +73,16 @@ public class EnemyAI : MonoBehaviour {
        
     }
 	
-	void FixedUpdate ()
+	/*void FixedUpdate ()
     {
         if ( fow.PlayerDetected == true)
         {
             MovePath();
         }
 
-	}
+	}*/
 
-    void MovePath()
+    public void MovePath()
     {
         if (target == null)
         {

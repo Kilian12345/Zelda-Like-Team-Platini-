@@ -5,12 +5,21 @@ using UnityEngine;
 public class SentryHitBox : MonoBehaviour 
 {
 	public bool isInside;
+    [SerializeField]
+    EnemyAiRange path;
 
-	void OnTriggerEnter2D(Collider2D col)
+    void Start()
+    {
+        path = GetComponentInParent<EnemyAiRange>();
+        path.enabled = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player") 
 		{
 			isInside=true;
+            path.enabled = true;
 		}
 	}
 	void OnTriggerStay2D(Collider2D col)
@@ -18,7 +27,9 @@ public class SentryHitBox : MonoBehaviour
 		if (col.gameObject.tag == "Player") 
 		{
 			isInside=true;
-		}
+            path.enabled = true;
+            Debug.Log("yyet");
+        }
 	}
 	void OnTriggerExit2D(Collider2D col)
 	{

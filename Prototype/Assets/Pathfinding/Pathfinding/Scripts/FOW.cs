@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FOW : MonoBehaviour
 {
-
+    EnemyAI Ai;
 
     public float viewRadius = 5;
     public float viewAngle = 135;
@@ -13,7 +13,12 @@ public class FOW : MonoBehaviour
     public List<Transform> visiblePlayer = new List<Transform>();
     public bool PlayerDetected = false;
 
-    
+    void Start()
+    {
+        Ai = GetComponent<EnemyAI>();
+        Ai.enabled = false;
+    }
+
     void FixedUpdate()
     {
 
@@ -45,13 +50,18 @@ public class FOW : MonoBehaviour
 
                     visiblePlayer.Add(player);
                     PlayerDetected = true;
-
+                    Ai.enabled = true;
                 }  
 
 
                 
             }
 
+        }
+
+        if (PlayerDetected == true)
+        {
+            Ai.MovePath();
         }
 
 
