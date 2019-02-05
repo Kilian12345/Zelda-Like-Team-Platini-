@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FOW : MonoBehaviour
+public class FOW_Player : MonoBehaviour
 {
     EnemyAI Ai;
 
@@ -27,7 +27,7 @@ public class FOW : MonoBehaviour
     void FindVisiblePlayer()
     {
 
-        playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask("Player"));
+        playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask());
 
         visiblePlayer.Clear();
 
@@ -43,16 +43,16 @@ public class FOW : MonoBehaviour
             {
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
 
-                if(!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
+                if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
                 {
 
                     visiblePlayer.Add(player);
                     PlayerDetected = true;
                     Ai.enabled = true;
-                }  
+                }
 
 
-                
+
             }
 
         }
@@ -67,9 +67,9 @@ public class FOW : MonoBehaviour
 
 
 
-    public Vector2 DirFromAngle (float angleDeg, bool global)
+    public Vector2 DirFromAngle(float angleDeg, bool global)
     {
-        if(!global)
+        if (!global)
         {
             angleDeg += transform.eulerAngles.z;
 
