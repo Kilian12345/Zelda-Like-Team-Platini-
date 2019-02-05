@@ -19,7 +19,7 @@ public class SentryHitBox : MonoBehaviour
 		if (col.gameObject.tag == "Player") 
 		{
 			isInside=true;
-            path.enabled = true;
+           // path.enabled = true;
 		}
 	}
 	void OnTriggerStay2D(Collider2D col)
@@ -27,7 +27,7 @@ public class SentryHitBox : MonoBehaviour
 		if (col.gameObject.tag == "Player") 
 		{
 			isInside=true;
-            path.enabled = true;
+           // path.enabled = true;
             Debug.Log("yyet");
         }
 	}
