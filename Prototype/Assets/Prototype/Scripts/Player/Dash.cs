@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Dash : StateMachineBehaviour
 {
-    PlayerMovement pm;
+    Player ps;
     GameObject player;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -17,7 +17,7 @@ public class Dash : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Debug.Log("Sprinting");
-        player.transform.position = new Vector2(player.transform.position.x + (pm.moveHor * pm.sprintVelocity * Time.deltaTime), player.transform.position.y + (pm.moveVer * pm.sprintVelocity * Time.deltaTime));
+        player.transform.position = new Vector2(player.transform.position.x + (ps.moveHor * ps.sprintVelocity * Time.deltaTime), player.transform.position.y + (ps.moveVer * ps.sprintVelocity * Time.deltaTime));
     }
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

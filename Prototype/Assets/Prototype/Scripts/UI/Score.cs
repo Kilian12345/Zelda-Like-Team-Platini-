@@ -5,16 +5,16 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text scoreDisplay;
-    PlayerMovement pm;
+    Player ps;
 
     void Start()
     {
         scoreDisplay = gameObject.GetComponent<Text>();
-        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     void Update()
     {
-        scoreDisplay.text = ((int)pm.PlayerScore).ToString();    
+        scoreDisplay.text = ((int)ps.PlayerScore).ToString();    
     }
 }

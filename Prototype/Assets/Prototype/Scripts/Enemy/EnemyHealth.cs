@@ -12,12 +12,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private int scorePerHit;
 
-    PlayerMovement pm;
+    Player ps;
 
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
-        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -40,8 +40,8 @@ public class EnemyHealth : MonoBehaviour
         health -= dam;
         if (health > 0)
         {
-            pm.PlayerScore += ((100 - pm.health) / 100) * (scorePerHit);
-            Debug.Log("Punch " + (100 - pm.health) / 100);
+            ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);
+            Debug.Log("Punch " + (100 - ps.health) / 100);
         }
         
     }

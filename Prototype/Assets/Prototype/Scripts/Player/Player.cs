@@ -5,28 +5,30 @@ using Cinemachine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     Animator anim;
     AudioSource playerAudio;
     CinemachineImpulseSource source;
 
     public AudioClip hit, died;
-    public float PlayerScore;
-    public float vel,sprintVelocity;
+    public float PlayerScore, CalciumAmount, CalciumCapacity;
+    public float vel, sprintVelocity;
     public float[] cooldownTime, curcooldownTime;
     public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
 
     [HideInInspector]
     public float moveHor, moveVer;
-    
+
     public Text countDown;
     int activatedAbility = 0;
     public bool isDead, toPunch, isInRage;
-    public float health,maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast,abilityIsToCooldown;
+    public float health, maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast, abilityIsToCooldown;
     float lastHor, lastVer;
     Rigidbody2D player;
-    
+
+    CalciumBones cb;
+
     // Use this for initialization
     void Start()
     {
@@ -70,13 +72,27 @@ public class PlayerMovement : MonoBehaviour
             else
                 death();
         }
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            StartCoroutine(refill());
+        }
         checkForAbilityState();
         cooldownUI();
         ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
         ability2Meter.GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
 
     }
-    
+
+    IEnumerator refill()
+    {
+        if (CalciumAmount > 0 && health > 0)
+        {
+            CalciumAmount--;
+            health--;
+        }
+        yield return new WaitForSeconds(0.0001f);
+    }
+
 
     void checkForAbilityState()
     {
@@ -164,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[0] -= (Time.deltaTime*abilityIsToCooldown);
+                        curcooldownTime[0] -= (Time.deltaTime * abilityIsToCooldown);
                     }
                     if (curcooldownTime[1] < cooldownTime[1])
                     {
@@ -184,7 +200,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[1] -= (Time.deltaTime/slowDownFactor*abilityIsToCooldown);
+                        curcooldownTime[1] -= (Time.deltaTime / slowDownFactor * abilityIsToCooldown);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
@@ -204,7 +220,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[1] -= (Time.deltaTime*abilityIsToCooldown);
+                        curcooldownTime[1] -= (Time.deltaTime * abilityIsToCooldown);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
@@ -288,6 +304,18 @@ public class PlayerMovement : MonoBehaviour
             }
             //Destroy(col.gameObject, 0f);
         }
+        if (col.gameObject.tag == "Calcium")
+        {
+            cb = col.gameObject.GetComponent<CalciumBones>();
+            Destroy(col.gameObject, 0f);
+            for (int i = 0; i <cb.CalciumRefill; i++)
+            {
+                if (CalciumAmount < CalciumCapacity)
+                    CalciumAmount++;
+                else
+                    break;
+            }
+        }
     }
     IEnumerator Punch()
     {
@@ -307,7 +335,7 @@ public class PlayerMovement : MonoBehaviour
             toPunch = false;
         }
         yield return new WaitForSeconds(0.0001f);
-        
+
     }
 
     private void OnDrawGizmosSelected()
