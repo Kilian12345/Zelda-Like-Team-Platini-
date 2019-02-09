@@ -134,4 +134,8 @@ public class Enemy3 : MonoBehaviour
             isInRange = false;
         }
     }
+    void OnDestroy()
+    {
+        Destroy(transform.parent.gameObject); 
+    }
 }

@@ -127,6 +127,10 @@ public class Enemy4 : MonoBehaviour
             isInRange = true;
         }
     }
+    void OnDestroy()
+    {
+        Destroy(transform.parent.gameObject);
+    }
     /*void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")

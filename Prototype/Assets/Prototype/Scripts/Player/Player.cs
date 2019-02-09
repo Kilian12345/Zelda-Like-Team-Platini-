@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     CinemachineImpulseSource source;
 
     public AudioClip hit, died;
-    public float PlayerScore, CalciumAmount, CalciumCapacity;
+    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate;
     public float vel, sprintVelocity;
     public float[] cooldownTime, curcooldownTime;
     public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         source = gameObject.GetComponent<CinemachineImpulseSource>();
         health = 0;
         curTime = rageTimer;
+        curDropChanceRate = DropChanceRate;
     }
 
     void FixedUpdate()
