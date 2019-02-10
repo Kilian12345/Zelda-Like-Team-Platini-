@@ -8,7 +8,7 @@ public class FOW : MonoBehaviour
 
     public float viewRadius = 5;
     public float viewAngle = 135;
-    public LayerMask obstacleMask, playerMask;
+    public LayerMask obstacleMask;
     Collider2D[] playerInRadius;
     public List<Transform> visiblePlayer = new List<Transform>();
     public bool PlayerDetected = false;

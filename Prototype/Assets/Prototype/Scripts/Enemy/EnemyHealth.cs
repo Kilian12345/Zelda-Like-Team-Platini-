@@ -9,9 +9,14 @@ public class EnemyHealth : MonoBehaviour
     public GameObject particles;
     public float health;
 
+    ThirdAbility ThAb;
+    EnemyAI AI;
+
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
+        ThAb = FindObjectOfType<ThirdAbility>();
+        AI = FindObjectOfType<EnemyAI>();
     }
 
     // Update is called once per frame
@@ -24,6 +29,10 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(particles, transform.position, Quaternion.identity);
             Destroy(gameObject, 0.5f);
         }
+
+        ZoneDamage();
+
+        Debug.Log(health);
     }
 
     public void TakeDamage(float dam)
@@ -32,4 +41,24 @@ public class EnemyHealth : MonoBehaviour
         enemy2Audio.Play();
         health -= dam;
     }
+
+    public void ZoneDamage()
+    {
+        if ( ThAb.player == gameObject.transform)
+        {
+            StartCoroutine(Damage());
+        }
+        else
+        {
+            AI.speed = 100;
+        }
+    }
+
+    IEnumerator Damage()
+    {
+        AI.speed = 0;
+        yield return new WaitForSeconds(1);
+        health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);      
+    }
+
 }

@@ -2,38 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FOW_Player : MonoBehaviour
+public class ThirdAbility : MonoBehaviour
 {
-    EnemyAI Ai;
+    
 
     public float viewRadius = 5;
     public float viewAngle = 135;
-    public LayerMask obstacleMask, playerMask;
+    public LayerMask obstacleMask;
     Collider2D[] playerInRadius;
     public List<Transform> visiblePlayer = new List<Transform>();
     public bool PlayerDetected = false;
+    public Transform player;
+
+    public float DamageDeal = 1;
 
     void Start()
     {
-        Ai = GetComponent<EnemyAI>();
-        Ai.enabled = false;
+        viewRadius = 0;
     }
 
     void FixedUpdate()
     {
         FindVisiblePlayer();
+        ZoneIncrease();
     }
 
     void FindVisiblePlayer()
     {
 
-        playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask());
+        playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask("Ennemy"));
 
         visiblePlayer.Clear();
 
         for (int i = 0; i < playerInRadius.Length; i++)
         {
-            Transform player = playerInRadius[i].transform;
+            player = playerInRadius[i].transform;
             //Transform tagObjectif = GameObject.FindWithTag("Player").transform;
             Vector2 dirPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
 
@@ -43,23 +46,22 @@ public class FOW_Player : MonoBehaviour
             {
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
 
-                if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
+                if (Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
                 {
 
                     visiblePlayer.Add(player);
                     PlayerDetected = true;
-                    Ai.enabled = true;
+                    
+                }
+                else
+                {
+                    visiblePlayer.Clear();
                 }
 
 
 
             }
 
-        }
-
-        if (PlayerDetected == true)
-        {
-            Ai.MovePath();
         }
 
 
@@ -75,10 +77,18 @@ public class FOW_Player : MonoBehaviour
 
         }
         return new Vector2(Mathf.Cos(angleDeg * Mathf.Deg2Rad), Mathf.Sin(angleDeg * Mathf.Deg2Rad));
+    }
 
-
-
-
+    void ZoneIncrease()
+    {
+        if(Input.GetKey(KeyCode.F3))
+        {
+            viewRadius = 5;
+        }
+        else
+        {
+            viewRadius = 0;
+        }
     }
 
 

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 82004872805990916}
   - component: {fileID: 114664178312538286}
   - component: {fileID: 82935269521626892}
+  - component: {fileID: 7243009624054846091}
   - component: {fileID: 1199763254}
   m_Layer: 0
   m_Name: PC
@@ -121,11 +122,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0485b26a94a32458ad87265a1e2238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   hit: {fileID: 8300000, guid: b384c80250d32b1478004f5f0ca63322, type: 3}
   died: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
-  playerAudio: {fileID: 0}
-  activatedAbility: 0
+  vel: 3
+  sprintVelocity: 6
+  cooldownTime:
+  - 5
+  - 10
+  - 0
+  curcooldownTime:
+  - 0
+  - 0
+  - 0
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   gun: {fileID: 1875459423507234}
   shootPoint: {fileID: 1489773366458406}
@@ -134,15 +142,11 @@ MonoBehaviour:
   ability1Meter: {fileID: 0}
   ability2Meter: {fileID: 0}
   ability3Meter: {fileID: 0}
-  isDead: 0
-  toPunch: 0
-  isInRage: 0
   moveHor: 0
   moveVer: 0
-  vel: 3
-  sprintVelocity: 6
-  maxVel: 5
+  countDown: {fileID: 0}
   health: 0
+  maxVel: 5
   angle: 0
   attackRange: 0.4
   damage: 10
@@ -153,18 +157,6 @@ MonoBehaviour:
   slowDownFactor: 0.5
   slowDownLast: 0
   abilityIsToCooldown: 3
-  cooldownTime:
-  - 5
-  - 10
-  - 0
-  curcooldownTime:
-  - 0
-  - 0
-  - 0
-  countDown: {fileID: 0}
-  lastHor: 0
-  lastVer: 0
-  source: {fileID: 114591289209089068, guid: fb3af06246630184b8c80238784844a3, type: 3}
 --- !u!61 &61875175492136778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -449,6 +441,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7243009624054846091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426647519986904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d680a9e826bf684cbb5bcc83676f46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 5
+  viewAngle: 360
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1536
+  visiblePlayer: []
+  PlayerDetected: 0
 --- !u!95 &1199763254
 Animator:
   serializedVersion: 3

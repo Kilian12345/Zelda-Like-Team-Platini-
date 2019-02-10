@@ -28,7 +28,6 @@ public class SentryHitBox : MonoBehaviour
 		{
 			isInside=true;
            // path.enabled = true;
-            Debug.Log("yyet");
         }
 	}
 	void OnTriggerExit2D(Collider2D col)
