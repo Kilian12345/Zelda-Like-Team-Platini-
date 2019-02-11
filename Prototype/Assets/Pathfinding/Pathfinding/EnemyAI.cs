@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour {
     public FOW fow;
 	
 	//The AI's speed per second
-	public float speed = 300f;
+	public float speed = 100;
 	public ForceMode2D fMode;
 	
 	[HideInInspector]
@@ -73,14 +73,11 @@ public class EnemyAI : MonoBehaviour {
        
     }
 	
-	/*void FixedUpdate ()
+	void FixedUpdate ()
     {
-        if ( fow.PlayerDetected == true)
-        {
-            MovePath();
-        }
+        Debug.Log(speed);
 
-	}*/
+    }
 
     public void MovePath()
     {

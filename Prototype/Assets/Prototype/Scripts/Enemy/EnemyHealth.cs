@@ -32,7 +32,6 @@ public class EnemyHealth : MonoBehaviour
 
         ZoneDamage();
 
-        Debug.Log(health);
     }
 
     public void TakeDamage(float dam)
@@ -44,9 +43,10 @@ public class EnemyHealth : MonoBehaviour
 
     public void ZoneDamage()
     {
-        if ( ThAb.player == gameObject.transform)
+        if ( ThAb.visiblePlayer.Contains(this.transform))
         {
             StartCoroutine(Damage());
+
         }
         else
         {
@@ -56,9 +56,10 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator Damage()
     {
-        AI.speed = 0;
-        yield return new WaitForSeconds(1);
-        health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);      
+        AI.speed = 20;
+        //yield return new WaitForSeconds(1);
+        health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
+        yield return health;
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,6 @@ public class ThirdAbility : MonoBehaviour
     Collider2D[] playerInRadius;
     public List<Transform> visiblePlayer = new List<Transform>();
     public bool PlayerDetected = false;
-    public Transform player;
 
     public float DamageDeal = 1;
 
@@ -29,14 +29,14 @@ public class ThirdAbility : MonoBehaviour
 
     void FindVisiblePlayer()
     {
-
+       
         playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask("Ennemy"));
 
         visiblePlayer.Clear();
 
         for (int i = 0; i < playerInRadius.Length; i++)
         {
-            player = playerInRadius[i].transform;
+            Transform player = playerInRadius[i].transform;
             //Transform tagObjectif = GameObject.FindWithTag("Player").transform;
             Vector2 dirPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
 
@@ -53,21 +53,21 @@ public class ThirdAbility : MonoBehaviour
                     PlayerDetected = true;
                     
                 }
-                else
-                {
-                    visiblePlayer.Clear();
-                }
 
 
 
-            }
+
+            }        
 
         }
 
 
     }
 
-
+    private void Clear(Transform player)
+    {
+        throw new NotImplementedException();
+    }
 
     public Vector2 DirFromAngle(float angleDeg, bool global)
     {
@@ -83,9 +83,10 @@ public class ThirdAbility : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.F3))
         {
-            viewRadius = 5;
+            float puissance = (float)1.00001 ;
+            viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, 5);  
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.F3))
         {
             viewRadius = 0;
         }
