@@ -130,8 +130,9 @@ GameObject:
   - component: {fileID: 854474797}
   - component: {fileID: 854474804}
   - component: {fileID: 854474805}
-  m_Layer: 0
-  m_Name: Enemy2 (3)
+  - component: {fileID: 9170165169077225091}
+  m_Layer: 10
+  m_Name: Enemy CAK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +145,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854474796}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.71, y: 0.11, z: -6.2939844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -404,6 +405,7 @@ MonoBehaviour:
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   health: 100
+  scorePerHit: 5
 --- !u!114 &854474797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,9 +423,6 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   visiblePlayer: []
   PlayerDetected: 0
 --- !u!114 &854474804
@@ -473,6 +472,20 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &9170165169077225091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854474796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151fcf68dd87bb641b3a2e2b5a9f5341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
+    type: 3}
 --- !u!1 &1327374361
 GameObject:
   m_ObjectHideFlags: 0
