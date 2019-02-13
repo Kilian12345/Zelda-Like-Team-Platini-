@@ -64,6 +64,7 @@ public class Sentry : MonoBehaviour
         Instantiate(bull, shootPoint.position, gameObject.transform.rotation);
     }
 
+
     void particleEffect()
     {
 

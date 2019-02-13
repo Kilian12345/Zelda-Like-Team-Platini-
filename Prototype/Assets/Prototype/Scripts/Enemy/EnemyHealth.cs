@@ -9,14 +9,9 @@ public class EnemyHealth : MonoBehaviour
     public GameObject particles;
     public float health;
 
-    ThirdAbility ThAb;
-    EnemyAI AI;
-
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
-        ThAb = FindObjectOfType<ThirdAbility>();
-        AI = FindObjectOfType<EnemyAI>();
     }
 
     // Update is called once per frame
@@ -34,12 +29,33 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
+
     public void TakeDamage(float dam)
     {
         enemy2Audio.clip = punch;
         enemy2Audio.Play();
         health -= dam;
+        if (health > 0)
+        {
+            ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);
+            Debug.Log("Punch " + (100 - ps.health) / 100);
+        }
+        
     }
+}
+
+    [SerializeField]
+    private int scorePerHit;
+
+    Player ps;
+
+    ThirdAbility ThAb;
+    EnemyAI AI;
+
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        ThAb = FindObjectOfType<ThirdAbility>();
+        AI = FindObjectOfType<EnemyAI>();
+
 
     public void ZoneDamage()
     {
@@ -61,5 +77,3 @@ public class EnemyHealth : MonoBehaviour
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
         yield return health;
     }
-
-}

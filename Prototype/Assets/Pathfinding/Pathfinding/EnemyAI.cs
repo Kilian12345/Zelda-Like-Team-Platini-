@@ -115,6 +115,10 @@ public class EnemyAI : MonoBehaviour {
         if (dist < nextWaypointDistance * 5)
         {
             currentWaypoint++;
+<<<<<<< HEAD
+=======
+            //Debug.Log("p.error");
+>>>>>>> Development
             return;
         }
     }

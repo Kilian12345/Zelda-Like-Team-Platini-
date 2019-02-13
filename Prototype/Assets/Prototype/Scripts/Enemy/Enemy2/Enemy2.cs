@@ -7,7 +7,7 @@ public class Enemy2 : MonoBehaviour
     public AudioSource enemy2Audio;
     public AudioClip dead, punch;
     public GameObject gun,particles;
-    PlayerMovement pm;
+    Player pm;
     public bool isInRange;
     public float range,enemyDamage;
     public bool isRunning;
@@ -19,7 +19,7 @@ public class Enemy2 : MonoBehaviour
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
-        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         anim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -53,12 +53,9 @@ public class Enemy2 : MonoBehaviour
 
     void look()
     {
-        if (isInRange)
-        {
             Vector3 dir = (pl.position - transform.position);
             angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
     }
 
     /// <NotWorking>

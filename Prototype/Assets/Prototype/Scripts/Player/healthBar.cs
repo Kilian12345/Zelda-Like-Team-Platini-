@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class healthBar : MonoBehaviour
 {
-    PlayerMovement pm;
+    Player ps;
     Image HealthBar;
     float maxHealth = 100;
     // Use this for initialization
     void Start()
     {
         HealthBar = GetComponent<Image>();
-        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        HealthBar.fillAmount = pm.health / maxHealth;
+        HealthBar.fillAmount = ps.health / maxHealth;
     }
 }

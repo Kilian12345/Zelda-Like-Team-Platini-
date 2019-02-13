@@ -5,27 +5,30 @@ using Cinemachine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     Animator anim;
     AudioSource playerAudio;
     CinemachineImpulseSource source;
 
     public AudioClip hit, died;
-    public float vel,sprintVelocity;
+    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate;
+    public float vel, sprintVelocity;
     public float[] cooldownTime, curcooldownTime;
     public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
 
     [HideInInspector]
     public float moveHor, moveVer;
-    
+
     public Text countDown;
     int activatedAbility = 0;
-    bool isDead, toPunch, isInRage;
-    public float health,maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast,abilityIsToCooldown;
+    public bool isDead, toPunch, isInRage;
+    public float health, maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast, abilityIsToCooldown;
     float lastHor, lastVer;
     Rigidbody2D player;
-    
+
+    CalciumBones cb;
+
     // Use this for initialization
     void Start()
     {
@@ -35,25 +38,16 @@ public class PlayerMovement : MonoBehaviour
         source = gameObject.GetComponent<CinemachineImpulseSource>();
         health = 0;
         curTime = rageTimer;
+        curDropChanceRate = DropChanceRate;
     }
 
     void FixedUpdate()
     {
         anim.SetInteger("activatedAbility", activatedAbility);
         move();
-        if (Input.GetButtonDown("Jump")) 
+        if (Input.GetButtonDown("Jump"))
         {
             toPunch = true;
-            Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
-            //Debug.Log(enemiestoDamage.Length);
-            if (enemiestoDamage.Length > 0)
-            {
-                for (int i = 0; i < enemiestoDamage.Length; i++)
-                {
-                    if(enemiestoDamage[i].GetComponent<EnemyHealth>()!=null)
-                    enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
-                }
-            }
         }
         if (toPunch)
         {
@@ -79,12 +73,27 @@ public class PlayerMovement : MonoBehaviour
             else
                 death();
         }
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            StartCoroutine(refill());
+        }
         checkForAbilityState();
         cooldownUI();
         ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
         ability2Meter.GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
 
     }
+
+    IEnumerator refill()
+    {
+        if (CalciumAmount > 0 && health > 0)
+        {
+            CalciumAmount--;
+            health--;
+        }
+        yield return new WaitForSeconds(0.0001f);
+    }
+
 
     void checkForAbilityState()
     {
@@ -172,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[0] -= (Time.deltaTime*abilityIsToCooldown);
+                        curcooldownTime[0] -= (Time.deltaTime * abilityIsToCooldown);
                     }
                     if (curcooldownTime[1] < cooldownTime[1])
                     {
@@ -192,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[1] -= (Time.deltaTime/slowDownFactor*abilityIsToCooldown);
+                        curcooldownTime[1] -= (Time.deltaTime / slowDownFactor * abilityIsToCooldown);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
@@ -212,7 +221,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[1] -= (Time.deltaTime*abilityIsToCooldown);
+                        curcooldownTime[1] -= (Time.deltaTime * abilityIsToCooldown);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
@@ -241,12 +250,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void move()
     {
-        moveHor = Input.GetAxisRaw("Horizontal");
-        moveVer = Input.GetAxisRaw("Vertical");
+        moveHor = Input.GetAxis("Horizontal");
+        moveVer = Input.GetAxis("Vertical");
         if (moveVer != 0 || moveHor != 0)
         {
-            lastVer = Mathf.Round(moveVer);
-            lastHor = Mathf.Round(moveHor);
+            lastVer = moveVer;
+            lastHor = moveHor;
         }
         angle = Mathf.Atan2(lastHor, lastVer) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
@@ -296,11 +305,38 @@ public class PlayerMovement : MonoBehaviour
             }
             //Destroy(col.gameObject, 0f);
         }
+        if (col.gameObject.tag == "Calcium")
+        {
+            cb = col.gameObject.GetComponent<CalciumBones>();
+            Destroy(col.gameObject, 0f);
+            for (int i = 0; i <cb.CalciumRefill; i++)
+            {
+                if (CalciumAmount < CalciumCapacity)
+                    CalciumAmount++;
+                else
+                    break;
+            }
+        }
     }
     IEnumerator Punch()
     {
-        yield return new WaitForSeconds(0.25f);
-        toPunch = false;
+        Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
+        //Debug.Log(enemiestoDamage.Length);
+        if (enemiestoDamage.Length > 0)
+        {
+            for (int i = 0; i < enemiestoDamage.Length; i++)
+            {
+                if (enemiestoDamage[i].GetComponent<EnemyHealth>() != null)
+                {
+                    enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                    toPunch = false;
+                    break;
+                }
+            }
+            toPunch = false;
+        }
+        yield return new WaitForSeconds(0.0001f);
+
     }
 
     private void OnDrawGizmosSelected()
