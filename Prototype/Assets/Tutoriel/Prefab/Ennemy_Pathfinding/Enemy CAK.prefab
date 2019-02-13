@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86900408}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.006000042, z: 0.55}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0027351074, w: 0.99999624}
+  m_LocalPosition: {x: -0.026, y: 0.039, z: -0.045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 115212377}
   m_Father: {fileID: 1403226668}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.31300002}
 --- !u!1 &115212376
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115212377}
   - component: {fileID: 115212378}
+  - component: {fileID: 971606371}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -55,14 +56,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115212376}
-  m_LocalRotation: {x: -0, y: -0, z: -0.23424128, w: 0.9721785}
-  m_LocalPosition: {x: 0.054, y: 0.132, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.225, y: 0.088, z: 0}
+  m_LocalScale: {x: -0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1327374362}
   m_Father: {fileID: 86900409}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27.094002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &115212378
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -111,6 +112,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &971606371
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115212376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab8446706f76c2d4faa56a017aaf7446, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &854474796
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +245,7 @@ MonoBehaviour:
   isRunning: 0
   pl: {fileID: 0}
   angle: 0
+  anim: {fileID: 0}
 --- !u!95 &854474802
 Animator:
   serializedVersion: 3
@@ -510,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327374361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49, y: 0, z: 0}
+  m_LocalPosition: {x: -0.114, y: -0.077, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 115212377}

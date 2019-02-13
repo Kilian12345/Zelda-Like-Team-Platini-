@@ -15,6 +15,8 @@ public class Enemy2 : MonoBehaviour
     public Transform pl;
     public float angle;
     private float LocalX;
+    public Animator anim;
+
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class Enemy2 : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         LocalX = transform.localScale.x;
+        anim = gun.GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
@@ -44,7 +47,7 @@ public class Enemy2 : MonoBehaviour
             }
             else
             {
-                gun.SetActive(false);
+                gun.SetActive(true);
             }
         }
         
@@ -111,6 +114,7 @@ public class Enemy2 : MonoBehaviour
             {
                 StartCoroutine(Damage());
             }
+            anim.SetBool("Hit", true);
         }
         if (col.gameObject.tag == "Bullet")
         {
@@ -128,6 +132,7 @@ public class Enemy2 : MonoBehaviour
             {
                 StartCoroutine(Damage());
             }
+            anim.SetBool("Hit", true);
         }
         if (col.gameObject.tag !="Player")
         {
@@ -140,6 +145,7 @@ public class Enemy2 : MonoBehaviour
         {
             StopCoroutine(Damage());
             isRunning = false;
+            anim.SetBool("Hit", false);
         }
     }
     IEnumerator Damage()
@@ -148,7 +154,7 @@ public class Enemy2 : MonoBehaviour
         enemy2Audio.Play();
         isRunning = true;
         pm.health += enemyDamage;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         isRunning = false;
     }
 }
