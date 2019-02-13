@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public float moveHor, moveVer;
 
     public Text countDown;
-    int activatedAbility = 0;
+    public int activatedAbility = 0;
     public bool isDead, toPunch, isInRage;
     public float health, maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast, abilityIsToCooldown;
     float lastHor, lastVer;
@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
         cooldownUI();
         ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
         ability2Meter.GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
+        ability3Meter.GetComponent<Image>().fillAmount = curcooldownTime[2] / cooldownTime[2];
 
     }
 
@@ -215,13 +216,13 @@ public class Player : MonoBehaviour
                 break;
             case 3:
                 {
-                    if (curcooldownTime[1] < 0)
+                    if (curcooldownTime[2] < 0)
                     {
                         activatedAbility = 0;
                     }
                     else
                     {
-                        curcooldownTime[1] -= (Time.deltaTime * abilityIsToCooldown);
+                        curcooldownTime[2] -= (Time.deltaTime * abilityIsToCooldown);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
                     {

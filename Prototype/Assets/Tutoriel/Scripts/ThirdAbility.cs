@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ThirdAbility : MonoBehaviour
 {
-    
 
+    Player ps;
     public float viewRadius = 5;
     public float viewAngle = 135;
     public LayerMask obstacleMask;
@@ -18,6 +18,7 @@ public class ThirdAbility : MonoBehaviour
 
     void Start()
     {
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         viewRadius = 0;
     }
 
@@ -81,12 +82,12 @@ public class ThirdAbility : MonoBehaviour
 
     void ZoneIncrease()
     {
-        if(Input.GetKey(KeyCode.F3))
+        if(ps.activatedAbility==3)
         {
             float puissance = (float)1.00001 ;
             viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, 5);  
         }
-        else if (Input.GetKeyUp(KeyCode.F3))
+        else if (ps.activatedAbility == 0)
         {
             viewRadius = 0;
         }
