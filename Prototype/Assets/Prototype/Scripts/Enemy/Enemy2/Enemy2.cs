@@ -11,25 +11,24 @@ public class Enemy2 : MonoBehaviour
     public bool isInRange;
     public float range,enemyDamage;
     public bool isRunning;
-    public Animator anim;
     Transform target;
     public Transform pl;
     public float angle;
+    private float LocalX;
 
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
         pm = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        anim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        LocalX = transform.localScale.x;
     }
 
     void FixedUpdate()
     {
         if (target != null)
         {
-            anim.SetBool("isSeen", isInRange);
             if (Vector2.Distance(transform.position, target.position) < range)
             {
                 isInRange = true;
@@ -55,7 +54,17 @@ public class Enemy2 : MonoBehaviour
     {
             Vector3 dir = (pl.position - transform.position);
             angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            
+        if (pl.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
+            gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
+            gun.transform.rotation = Quaternion.AngleAxis(angle-120, Vector3.forward);
+        }
     }
 
     /// <NotWorking>

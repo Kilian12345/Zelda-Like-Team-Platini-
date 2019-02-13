@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86900408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0029997826, y: 0.006000042, z: 0.55}
+  m_LocalPosition: {x: 0, y: 0.006000042, z: 0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 115212377}
@@ -55,14 +55,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115212376}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.23424128, w: 0.9721785}
+  m_LocalPosition: {x: 0.054, y: 0.132, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1327374362}
   m_Father: {fileID: 86900409}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27.094002}
 --- !u!212 &115212378
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ef69281d60482974eb42c8af7d85ed4f, type: 3}
+  m_Sprite: {fileID: 21300010, guid: 1705903fdaa532f419434725bb9086f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 854474796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.71, y: 0.11, z: -6.2939844}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 86900409}
   - {fileID: 1763593106}
@@ -191,7 +191,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 35ca33c7b5f70394dbf369e472263293, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59ebfeb26a560d4419176f40483de44e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -223,7 +223,6 @@ MonoBehaviour:
   range: 0
   enemyDamage: 1
   isRunning: 0
-  anim: {fileID: 0}
   pl: {fileID: 0}
   angle: 0
 --- !u!95 &854474802
@@ -279,18 +278,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.026842117, y: -0.036367178}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4976852, y: 0.43699187}
-    oldSize: {x: 1, y: 1.1388888}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.68, y: 0.68}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.1655407, y: 0.60412455}
   m_EdgeRadius: 0
 --- !u!82 &854474799
 AudioSource:
@@ -425,6 +424,7 @@ MonoBehaviour:
     m_Bits: 512
   visiblePlayer: []
   PlayerDetected: 0
+  anim: {fileID: 0}
 --- !u!114 &854474804
 MonoBehaviour:
   m_ObjectHideFlags: 0
