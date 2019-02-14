@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate;
     public float vel, sprintVelocity;
     public float[] cooldownTime, curcooldownTime;
-    public GameObject particles, gun, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
+    public GameObject particles, gun,gunSprite, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
 
     [HideInInspector]
     public float moveHor, moveVer;
@@ -24,8 +24,9 @@ public class Player : MonoBehaviour
     public int activatedAbility = 0;
     public bool isDead, toPunch, isInRage;
     public float health, maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast, abilityIsToCooldown;
-    float lastHor, lastVer;
+    public float lastHor, lastVer;
     Rigidbody2D player;
+    private float LocalX;
 
     CalciumBones cb;
 
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
         source = gameObject.GetComponent<CinemachineImpulseSource>();
+        LocalX = transform.localScale.x;
         health = 0;
         curTime = rageTimer;
         curDropChanceRate = DropChanceRate;
@@ -44,6 +46,9 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         anim.SetInteger("activatedAbility", activatedAbility);
+        anim.SetFloat("HorAxis", Mathf.Abs(moveHor));
+        anim.SetFloat("VerAxis", moveVer);
+        anim.SetBool("death", isDead);
         move();
         if (Input.GetButtonDown("Jump"))
         {
@@ -52,12 +57,12 @@ public class Player : MonoBehaviour
         if (toPunch)
         {
             StartCoroutine(Punch());
-            gun.SetActive(true);
+            gunSprite.SetActive(true);
         }
         else
         {
             StopCoroutine(Punch());
-            gun.SetActive(false);
+            gunSprite.SetActive(false);
         }
         if (health >= 100 && !isDead)
         {
@@ -258,8 +263,17 @@ public class Player : MonoBehaviour
             lastVer = moveVer;
             lastHor = moveHor;
         }
-        angle = Mathf.Atan2(lastHor, lastVer) * Mathf.Rad2Deg;
-        gun.transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
+        angle = Mathf.Atan2(lastVer, lastHor) * Mathf.Rad2Deg;
+        if (moveHor >= 0f)
+        {
+            transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
+            gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        else if(moveHor < 0f)
+        {
+            transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
+            gun.transform.rotation = Quaternion.AngleAxis(angle-180, Vector3.forward);
+        }
         transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
 
         // These if statements prevent velocity to exceed a given value

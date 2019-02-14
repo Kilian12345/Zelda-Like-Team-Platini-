@@ -105,11 +105,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182412264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.016738994, y: 0, z: -4.590002}
-  m_LocalScale: {x: 0.45474985, y: 0.45474985, z: 0.45474985}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 49457919}
-  m_Father: {fileID: 4523656586312702}
+  m_Father: {fileID: 4553618846385858}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &182412266
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182412264}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e661165e12778c40a061bab4edd2894, type: 3}
   m_Name: 
@@ -197,7 +197,6 @@ Transform:
   m_LocalScale: {x: 1.663, y: 1.663, z: 1.663}
   m_Children:
   - {fileID: 4553618846385858}
-  - {fileID: 182412265}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -301,6 +300,7 @@ MonoBehaviour:
   - 0
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   gun: {fileID: 1875459423507234}
+  gunSprite: {fileID: 0}
   shootPoint: {fileID: 1489773366458406}
   rageSprite: {fileID: 0}
   countDownSprite: {fileID: 0}
@@ -310,6 +310,7 @@ MonoBehaviour:
   moveHor: 0
   moveVer: 0
   countDown: {fileID: 0}
+  activatedAbility: 0
   isDead: 0
   toPunch: 0
   isInRage: 0
@@ -325,6 +326,8 @@ MonoBehaviour:
   slowDownFactor: 0.5
   slowDownLast: 0
   abilityIsToCooldown: 3
+  lastHor: 0
+  lastVer: 0
 --- !u!114 &114393622717491364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +779,7 @@ Transform:
   m_LocalScale: {x: 0.45474985, y: 0.45474985, z: 0.45474985}
   m_Children:
   - {fileID: 4520309532650990}
+  - {fileID: 182412265}
   m_Father: {fileID: 4523656586312702}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

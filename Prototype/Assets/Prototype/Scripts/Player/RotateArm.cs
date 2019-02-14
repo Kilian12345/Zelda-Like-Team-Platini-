@@ -22,15 +22,27 @@ public class RotateArm : MonoBehaviour
             lastVer = moveVer;
             lastHor = moveHor;
         }
+        angle = Mathf.Atan2(lastHor, lastVer) * Mathf.Rad2Deg;
         if (moveVer > 0)
         {
-            sr.sortingOrder = -1;
+            sr.sortingOrder = 0;
         }
         else
         {
             sr.sortingOrder = 0;
         }
-        angle = Mathf.Atan2(lastHor, lastVer) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
+        if (moveHor > 0.2f)
+        {
+            transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        }
+        else if (moveHor < -0.2f)
+        {
+            transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        }
+        else
+        {
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        
     }
 }

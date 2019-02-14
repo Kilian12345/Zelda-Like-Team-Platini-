@@ -28,17 +28,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Br: 12
-    - _Contrast: 1.7
+    - _Br: 41
+    - _Contrast: 0.6
     - _Density: 3
     - _Distort: 0
     - _OnOff: 1
     - _ScanDensity: 1
     - _ScanPoint: 1080
     - _ScanThikness: 100
-    - _Strength: 0
+    - _Strength: -0
     - _Tiles: 1
-    - _VertsColor: 0.82
-    - _VertsColor2: 0.81
+    - _VertsColor: 0.537
+    - _VertsColor2: 0.547
     m_Colors:
-    - _ScansColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ScansColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
