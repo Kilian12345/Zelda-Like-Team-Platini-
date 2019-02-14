@@ -19,6 +19,8 @@ public class Sentry : MonoBehaviour
 
     SentryHitBox st;
 
+    public float LocalX;
+
     // Use this for initialization
     void Start()
     {
@@ -26,6 +28,7 @@ public class Sentry : MonoBehaviour
         sentryAudio.clip = shootSound;
         st = hitbox.GetComponent<SentryHitBox>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        LocalX = body.transform.localScale.x;
 
     }
 
@@ -54,7 +57,17 @@ public class Sentry : MonoBehaviour
                 Vector3 dir = (pl.position - transform.position);
                 angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 //transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
-                body.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                //body.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                if (pl.position.x > transform.position.x)
+                {
+                    body.transform.localScale = new Vector3(LocalX, body.transform.localScale.y, body.transform.localScale.z);
+                    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                }
+                else
+                {
+                    body.transform.localScale = new Vector3(-LocalX, body.transform.localScale.y, body.transform.localScale.z);
+                    transform.rotation = Quaternion.AngleAxis(angle-180, Vector3.forward);
+                }
             }
         }
     }
