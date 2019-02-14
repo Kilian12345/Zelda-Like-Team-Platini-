@@ -30,7 +30,7 @@ Material:
     m_Floats:
     - _Br: 41
     - _Contrast: 0.6
-    - _Density: 3
+    - _Density: 4
     - _Distort: 0
     - _OnOff: 1
     - _ScanDensity: 1
@@ -38,7 +38,7 @@ Material:
     - _ScanThikness: 100
     - _Strength: -0
     - _Tiles: 1
-    - _VertsColor: 0.537
-    - _VertsColor2: 0.547
+    - _VertsColor: 0
+    - _VertsColor2: 0
     m_Colors:
-    - _ScansColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+    - _ScansColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
