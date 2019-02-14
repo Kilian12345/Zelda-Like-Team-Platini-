@@ -5,16 +5,10 @@ using UnityEngine;
 public class Catch : MonoBehaviour
 {
     public bool isStuck;
-    public float throwForce,moveHor, moveVer, sprintMultiplier;
+    public float throwForce, moveHor, moveVer, sprintMultiplier;
     public GameObject coll;
 
-    // Use this for initialization
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         moveHor = Input.GetAxis("Horizontal");
@@ -24,25 +18,16 @@ public class Catch : MonoBehaviour
             if (Vector2.Distance(transform.position, coll.transform.position) < 2)
             {
                 if (Input.GetButtonDown("Jump"))
-                {    
+                {
                     coll.gameObject.transform.parent = gameObject.transform;
-                    isStuck=true;
+                    isStuck = true;
                 }
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    if (Input.GetKey(KeyCode.LeftShift))
-                    {
-                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveHor, moveVer)* sprintMultiplier * throwForce);
-                    }
-                    else
-                    {
-                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveHor, moveVer) * throwForce);
-                    }
-
-                        
+                    coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveHor, moveVer) * throwForce);
                     coll.gameObject.transform.parent = null;
                     Invoke("isNotStuck", 0.05f);
-                    
+
                 }
             }
             else
@@ -59,7 +44,7 @@ public class Catch : MonoBehaviour
                 coll.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             }
         }
-        
+
     }
 
     void isNotStuck()
