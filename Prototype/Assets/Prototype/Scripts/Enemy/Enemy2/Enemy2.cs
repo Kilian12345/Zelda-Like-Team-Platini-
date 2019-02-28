@@ -16,6 +16,8 @@ public class Enemy2 : MonoBehaviour
     public float angle;
     private float LocalX;
     public Animator anim;
+    public float attackSpeed;
+    private float timeToAttack;
 
 
     void Start()
@@ -110,11 +112,16 @@ public class Enemy2 : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (!isRunning)
+            /*if (!isRunning)
             {
                 StartCoroutine(Damage());
+            }*/
+            if (Time.time > timeToAttack)
+            {
+                timeToAttack = Time.time + 1 / attackSpeed;
+                Attack();
             }
-            anim.SetBool("Hit", true);
+
         }
         if (col.gameObject.tag == "Bullet")
         {
@@ -128,24 +135,29 @@ public class Enemy2 : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (!isRunning)
+            if (Time.time > timeToAttack)
+            {
+                timeToAttack = Time.time + 1 / attackSpeed;
+                Attack();  
+            }
+            /*if (!isRunning)
             {
                 StartCoroutine(Damage());
-            }
-            anim.SetBool("Hit", true);
+            }*/
+
         }
-        if (col.gameObject.tag !="Player")
+        /*if (col.gameObject.tag !="Player")
         {
             StopCoroutine(Damage());
-        }
+        }*/
     }
     void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            StopCoroutine(Damage());
+            //StopCoroutine(Damage());
             isRunning = false;
-            anim.SetBool("Hit", false);
+            //anim.SetBool("Hit", false);
         }
     }
     IEnumerator Damage()
@@ -156,6 +168,14 @@ public class Enemy2 : MonoBehaviour
         pm.health += enemyDamage;
         yield return new WaitForSeconds(3);
         isRunning = false;
+    }
+
+    void Attack()
+    {
+        anim.SetBool("Hit", true);
+        enemy2Audio.clip = punch;
+        enemy2Audio.Play();
+        pm.health += enemyDamage;
     }
 }
 

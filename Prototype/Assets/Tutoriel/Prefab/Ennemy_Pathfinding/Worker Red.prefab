@@ -115,6 +115,7 @@ MonoBehaviour:
   pl: {fileID: 0}
   angle: 0
   anim: {fileID: 0}
+  attackSpeed: 0.5
 --- !u!95 &375765678
 Animator:
   serializedVersion: 3

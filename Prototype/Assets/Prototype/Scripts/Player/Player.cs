@@ -13,9 +13,9 @@ public class Player : MonoBehaviour
 
     public AudioClip hit, died;
     public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate;
-    public float vel, sprintVelocity;
+    public float vel, thrust;
     public float[] cooldownTime, curcooldownTime;
-    public GameObject particles, gun,gunSprite, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
+    public GameObject particles, gun, gunSprite, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
 
     [HideInInspector]
     public float moveHor, moveVer;
@@ -57,12 +57,30 @@ public class Player : MonoBehaviour
         if (toPunch)
         {
             StartCoroutine(Punch());
-            gunSprite.SetActive(true);
+            if (lastHor >= 0f)
+            {
+                Vector3 to = new Vector3(0, 0, -1500);
+                if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
+                {
+                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
+                }
+            }
+            else if (lastHor < 0f)
+            {
+                Vector3 to = new Vector3(0, 0, 1500);
+                if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
+                {
+                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
+                }
+            }
+
+            //gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
+            //gunSprite.SetActive(true);
         }
         else
         {
             StopCoroutine(Punch());
-            gunSprite.SetActive(false);
+            //gunSprite.SetActive(false);
         }
         if (health >= 100 && !isDead)
         {
@@ -73,10 +91,20 @@ public class Player : MonoBehaviour
             damage = rageDamage;
             vel = rageVel;
             rageSprite.SetActive(true);
-            if (curTime > 0)
+            if (curTime > 0 && health >= 100)
+            {
                 curTime -= Time.deltaTime;
-            else
+            }
+            else if (curTime > 0 && health < 100)
+            {
+                curTime = rageTimer;
+                isInRage = false;
+                rageSprite.SetActive(false);
+            }
+            else if (curTime < 0 && health >= 100)
+            {
                 death();
+            }
         }
         if (Input.GetKey(KeyCode.LeftAlt))
         {
@@ -87,7 +115,10 @@ public class Player : MonoBehaviour
         ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
         ability2Meter.GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
         ability3Meter.GetComponent<Image>().fillAmount = curcooldownTime[2] / cooldownTime[2];
-
+        if (health > 100)
+        {
+            health = 100;
+        }
     }
 
     IEnumerator refill()
@@ -151,7 +182,7 @@ public class Player : MonoBehaviour
                 activatedAbility = 2;
                 curcooldownTime[1] = cooldownTime[1];
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && curcooldownTime[2] >= cooldownTime[2])
             {
                 activatedAbility = 3;
                 curcooldownTime[2] = cooldownTime[2];
@@ -264,15 +295,15 @@ public class Player : MonoBehaviour
             lastHor = moveHor;
         }
         angle = Mathf.Atan2(lastVer, lastHor) * Mathf.Rad2Deg;
-        if (moveHor >= 0f)
+        if (lastHor >= 0f)
         {
             transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
             gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        else if(moveHor < 0f)
+        else if (lastHor < 0f)
         {
             transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
-            gun.transform.rotation = Quaternion.AngleAxis(angle-180, Vector3.forward);
+            gun.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
         }
         transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
 
@@ -323,14 +354,14 @@ public class Player : MonoBehaviour
         if (col.gameObject.tag == "Calcium")
         {
             cb = col.gameObject.GetComponent<CalciumBones>();
-            Destroy(col.gameObject, 0f);
-            for (int i = 0; i <cb.CalciumRefill; i++)
+            for (int i = 0; i < cb.CalciumRefill; i++)
             {
                 if (CalciumAmount < CalciumCapacity)
                     CalciumAmount++;
                 else
                     break;
             }
+            Destroy(col.gameObject, 0f);
         }
     }
     IEnumerator Punch()
@@ -344,13 +375,15 @@ public class Player : MonoBehaviour
                 if (enemiestoDamage[i].GetComponent<EnemyHealth>() != null)
                 {
                     enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                    //enemiestoDamage[i].GetComponent<Rigidbody2D>.Add
                     toPunch = false;
                     break;
                 }
             }
             toPunch = false;
         }
-        yield return new WaitForSeconds(0.0001f);
+        yield return new WaitForSeconds(0.2f);
+        gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
 
     }
 

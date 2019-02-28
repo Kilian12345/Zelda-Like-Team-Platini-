@@ -167,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 854474796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.71, y: 0.11, z: -6.2939844}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 4.4736195, y: 4.4736195, z: 4.4736195}
   m_Children:
   - {fileID: 86900409}
   - {fileID: 1763593106}
@@ -246,6 +246,7 @@ MonoBehaviour:
   pl: {fileID: 0}
   angle: 0
   anim: {fileID: 0}
+  attackSpeed: 0.5
 --- !u!95 &854474802
 Animator:
   serializedVersion: 3
