@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Br: 48
-    - _Contrast: 4.2
+    - _Contrast: 3.9
     - _Density: 2
     - _Distort: 0
     - _OnOff: 1
