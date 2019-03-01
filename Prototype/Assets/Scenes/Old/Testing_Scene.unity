@@ -176,8 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curShader: {fileID: 4800000, guid: 0e5e970d71dfd124e8a2e5ecd4fa4b2e, type: 3}
   brightnessAmount: 1
-  saturationAmount: 0
+  saturationAmount: 1
   contrastAmount: 1
+  strength: 0
 --- !u!114 &41316330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +672,7 @@ MonoBehaviour:
   brightnessAmount: 1
   saturationAmount: 0
   contrastAmount: 1
+  strength: 0
 --- !u!114 &1811079103
 MonoBehaviour:
   m_ObjectHideFlags: 0

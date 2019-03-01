@@ -13,19 +13,21 @@ public class Ripple : MonoBehaviour
     private float Amount = 0f;
     public Vector3 pos;
 
+    private void Start()
+    {
+        camera = GetComponent<Camera>();
+    }
+
     void Update()
     {
-        //pos.x = player.position.x;
-       // pos.y = player.position.y ;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             this.Amount = this.MaxAmount;
-            Vector3 pos = Camera.main.WorldToScreenPoint(player.position); /////////////////////////////////////////// WARNING
+            Vector3 pos = camera.WorldToScreenPoint(player.position); /////////////////////////////////////////// WARNING
             this.RippleMaterial.SetFloat("_CenterX", pos.x);
             this.RippleMaterial.SetFloat("_CenterY", pos.y);
-            Debug.Log (pos.x);
-            Debug.Log (pos.y);
+
         }
 
         this.RippleMaterial.SetFloat("_Amount", this.Amount);

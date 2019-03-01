@@ -11,7 +11,9 @@ public Shader curShader;
 public float brightnessAmount = 1.0f;
 public float saturationAmount = 1.0f;
 public float contrastAmount = 1.0f;
+public float strength = 0;
 private Material curMaterial;
+bool grayActive = true;
 #endregion
 
 #region Properties
@@ -45,6 +47,7 @@ void OnRenderImage(RenderTexture sourceTexture, RenderTexture destTexture)
         material.SetFloat("_BrightnessAmount", brightnessAmount);
         material.SetFloat("_SaturationAmount", saturationAmount);
         material.SetFloat("_ContrastAmount", contrastAmount);
+        material.SetFloat("_Strength", strength);
         Graphics.Blit(sourceTexture, destTexture, material);
     }
     else
@@ -58,10 +61,24 @@ void OnRenderImage(RenderTexture sourceTexture, RenderTexture destTexture)
 // Update is called once per frame
 void Update()
 {
-    brightnessAmount = Mathf.Clamp(brightnessAmount, 0.0f, 1.5f);
-    saturationAmount = Mathf.Clamp(saturationAmount, 0.0f, 2.0f);
-    contrastAmount = Mathf.Clamp(contrastAmount, 0.0f, 3.0f);
-}
+    brightnessAmount = Mathf.Clamp(brightnessAmount, -30f, 30f);
+    saturationAmount = Mathf.Clamp(saturationAmount, -30f, 30f);
+    contrastAmount = Mathf.Clamp(contrastAmount, -30f, 30f);
+    strength = Mathf.Clamp(strength, -1f, 1f);
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////// MOVE
+        if (Input.GetKeyDown(KeyCode.Space) && grayActive == false)
+        {
+            grayActive = true;
+            saturationAmount = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && grayActive == true)
+        {
+            grayActive = false;
+            saturationAmount = 1;
+        }
+        /////////////////////////////////////////////////////////////////////////////////////////////
+    }
 
 void OnDisable()
 {

@@ -4,9 +4,12 @@
 Properties
 {
 	_MainTex("Base (RGB)", 2D) = "white" {}
-	_SaturationAmount("Saturation Amount", Range(0.0, 1.0)) = 1.0
-	_BrightnessAmount("Brightness Amount", Range(0.0, 1.0)) = 1.0
-	_ContrastAmount("Contrast Amount", Range(0.0,1.0)) = 1.0
+	_SaturationAmount("Saturation Amount", Range(-30, 30)) = 1.0
+	_BrightnessAmount("Brightness Amount", Range(-30, 30)) = 1.0
+	_ContrastAmount("Contrast Amount", Range(-30,30)) = 1.0
+	//////////////////////////////////////////////////////////////// DISTORTION
+	_DisplacementTex("Pixel Displace", 2D) = "white" {}
+	_Strength("Distortion Strength",  Range(-1, 1)) = 0
 }
 SubShader
 {
@@ -49,11 +52,20 @@ float3 ContrastSaturationBrightness(float3 color, float brt, float sat, float co
 
 }
 
+sampler2D _DisplacementTex;
+float _Strength;
+
 
 float4 frag(v2f_img i) : COLOR
 {
-	float4 renderTex = tex2D(_MainTex, i.uv);
+	// DISTORTION
+	half2 n = tex2D(_DisplacementTex, i.uv);
+	half2 d = n * 2 - 1;
+	i.uv += d * _Strength;
+	i.uv = saturate(i.uv);
+	// DISTORTION
 
+	float4 renderTex = tex2D(_MainTex, i.uv);
 
 	renderTex.rgb = ContrastSaturationBrightness(renderTex.rgb, _BrightnessAmount, _SaturationAmount, _ContrastAmount);
 
