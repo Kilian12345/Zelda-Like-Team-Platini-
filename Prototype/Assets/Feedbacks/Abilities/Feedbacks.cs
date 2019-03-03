@@ -11,5 +11,6 @@ public class Feedbacks : ScriptableObject
 
     public float R_friction;
     public float R_maxAmount;
+    public bool R_ripple;
 
 }

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   G_saturation: 1
-  G_contrast: 1
-  G_brightness: 1
-  G_strength: 0.7
+  G_contrast: -1
+  G_brightness: 0.5
+  G_strength: 0
   R_friction: 0.8
-  R_maxAmount: 40
+  R_maxAmount: 80
+  R_ripple: 1

@@ -18,3 +18,4 @@ MonoBehaviour:
   G_strength: 0
   R_friction: 0.8
   R_maxAmount: 40
+  R_ripple: 1

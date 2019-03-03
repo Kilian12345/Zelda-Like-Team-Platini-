@@ -9,13 +9,14 @@ public class FeedbacksOrder : MonoBehaviour
     public int valueList;
 
 
-    [System.NonSerialized] public float saturation;
-    [System.NonSerialized] public float contrast;
-    [System.NonSerialized] public float brightness;
-    [System.NonSerialized] public float strength;
+    public float saturation;
+    public float contrast;
+    public float brightness;
+    public float strength;
 
-    [System.NonSerialized] public float friction;
-    [System.NonSerialized] public float maxAmount;
+    public float friction;
+    public float maxAmount;
+    public bool ripple;
 
 
 
@@ -33,8 +34,8 @@ public class FeedbacksOrder : MonoBehaviour
 
         friction = currentFeedback.R_friction;
         maxAmount = currentFeedback.R_maxAmount;
-
+        ripple = currentFeedback.R_ripple;
 }
 
-
+    
 }

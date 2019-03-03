@@ -169,15 +169,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41316326}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 805ad45c46d529145bf9c928b7333751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   curShader: {fileID: 4800000, guid: 0e5e970d71dfd124e8a2e5ecd4fa4b2e, type: 3}
-  brightnessAmount: 1
-  saturationAmount: 1
-  contrastAmount: 1
+  brightnessAmount: 0
+  saturationAmount: 0
+  contrastAmount: 0
   strength: 0
 --- !u!114 &41316330
 MonoBehaviour:
@@ -705,6 +705,8 @@ MonoBehaviour:
   player: {fileID: 2065472574}
   RippleMaterial: {fileID: 2100000, guid: 9f00670a7687fee4c8a9fd548dd8d0fe, type: 2}
   MaxAmount: 40
+  canripple: 1
+  secondsToWait: 0.2
   Friction: 0.8
   pos: {x: 0, y: 0, z: 0}
 --- !u!114 &1811079105
@@ -725,6 +727,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 058fbfb2e2820544483a01c63a82e61e, type: 2}
   currentFeedback: {fileID: 11400000, guid: 92d37d262e2dc4d4085e9ebc8d8e810c, type: 2}
   valueList: 0
+  saturation: 0
+  contrast: 0
+  brightness: 0
+  strength: 0
+  friction: 0
+  maxAmount: 0
+  ripple: 0
 --- !u!4 &2065472574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2007903138, guid: 803d905fd2fb4bb468361ea2eacdc28e,
