@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 41316330}
   - component: {fileID: 41316329}
   - component: {fileID: 41316328}
+  - component: {fileID: 41316331}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -192,6 +193,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: d8e054692864ace469dd76ce6bcaeba1, type: 2}
+--- !u!114 &41316331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41316326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cd246d238dd1f4abe03fc2039ebd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2065472574}
+  RippleMaterial: {fileID: 2100000, guid: 9f00670a7687fee4c8a9fd548dd8d0fe, type: 2}
+  MaxAmount: 40
+  canripple: 1
+  secondsToWait: 0.2
+  Friction: 0.8
+  pos: {x: 0, y: 0, z: 0}
 --- !u!20 &41316332
 Camera:
   m_ObjectHideFlags: 0
@@ -459,6 +479,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &654985513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1478626716, guid: 803d905fd2fb4bb468361ea2eacdc28e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2133114318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &654985524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654985513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120e9248c06ac28468a3735c6b3f5e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnRate: 10
+  _trailLength: 1
+  _sortingLayer: 10
+  _desiredAlpha: 0.8
+  _effectDuration: 1
+  _desiredColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &654985525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654985513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5705791840ddea84199399499dab60e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _desiredColor: {r: 0.8113208, g: 0, b: 0, a: 1}
 --- !u!1001 &960076239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,7 +628,6 @@ GameObject:
   - component: {fileID: 1811079101}
   - component: {fileID: 1811079102}
   - component: {fileID: 1811079103}
-  - component: {fileID: 1811079104}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -690,25 +746,6 @@ MonoBehaviour:
   smoothRefresh: 0
   smoothDistort: 0
   interval: 0
---- !u!114 &1811079104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811079097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cd246d238dd1f4abe03fc2039ebd57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2065472574}
-  RippleMaterial: {fileID: 2100000, guid: 9f00670a7687fee4c8a9fd548dd8d0fe, type: 2}
-  MaxAmount: 40
-  canripple: 1
-  secondsToWait: 0.2
-  Friction: 0.8
-  pos: {x: 0, y: 0, z: 0}
 --- !u!114 &1811079105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,5 +937,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1478626726, guid: 803d905fd2fb4bb468361ea2eacdc28e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b3f86480c2c3705469c1c3b9c545a95b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803d905fd2fb4bb468361ea2eacdc28e, type: 3}
