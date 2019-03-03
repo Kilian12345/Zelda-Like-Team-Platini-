@@ -17,10 +17,7 @@ public class FeedbacksOrder : MonoBehaviour
     [System.NonSerialized] public float friction;
     [System.NonSerialized] public float maxAmount;
 
-    private void Start()
-    {
-        currentFeedback = feedbacks[0];
-    }
+
 
 
     private void Update()

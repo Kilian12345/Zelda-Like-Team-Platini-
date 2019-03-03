@@ -7,6 +7,7 @@ public class Ripple : MonoBehaviour
     Camera camera;
     public Material RippleMaterial;
     public float MaxAmount = 50f;
+    public bool ripple = false;
 
     [Range(0, 1)]
     public float Friction = .9f;
@@ -22,7 +23,7 @@ public class Ripple : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (ripple == true)
         {
             this.Amount = this.MaxAmount;
             Vector3 pos = camera.WorldToScreenPoint(player.position); 

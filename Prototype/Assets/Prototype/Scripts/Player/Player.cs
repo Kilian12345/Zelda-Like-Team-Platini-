@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    FeedbacksOrder Fb_Order;
     Animator anim;
     AudioSource playerAudio;
     CinemachineImpulseSource source;
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
         source = gameObject.GetComponent<CinemachineImpulseSource>();
+        Fb_Order = FindObjectOfType<FeedbacksOrder>();
         LocalX = transform.localScale.x;
         health = 0;
         curTime = rageTimer;
@@ -45,6 +47,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+
         anim.SetInteger("activatedAbility", activatedAbility);
         anim.SetFloat("HorAxis", Mathf.Abs(moveHor));
         anim.SetFloat("VerAxis", moveVer);
@@ -134,6 +137,10 @@ public class Player : MonoBehaviour
             {
                 activatedAbility = 2;
                 curcooldownTime[1] = cooldownTime[1];
+
+                ////////////////////////////////////////////////////////// Feedback
+                Fb_Order.valueList = 1;
+
             }
         }
         else if (health >= 75 /*&& health < 100*/)
@@ -150,6 +157,9 @@ public class Player : MonoBehaviour
             {
                 activatedAbility = 2;
                 curcooldownTime[1] = cooldownTime[1];
+
+                ////////////////////////////////////////////////////////// Feedback
+                Fb_Order.valueList = 1;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {

@@ -15,7 +15,6 @@ public float brightnessAmount;
 public float contrastAmount;
 public float strength;
 private Material curMaterial;
-bool grayActive = false;
 
     #endregion
 
@@ -43,7 +42,7 @@ bool grayActive = false;
 
         }
 
-        Fb_Order = GetComponent<FeedbacksOrder>();
+        Fb_Order = FindObjectOfType<FeedbacksOrder>();
 
     }
 
@@ -77,19 +76,7 @@ void OnRenderImage(RenderTexture sourceTexture, RenderTexture destTexture)
         contrastAmount = Fb_Order.contrast;
         strength = Fb_Order.strength;
 
-        //////////////////////////////////////////////////////////////////////////////////////////////////////// MOVE
-        if (Input.GetKeyDown(KeyCode.Space) && grayActive == false)
-        {
-            grayActive = true;
-            //saturationAmount = 0;
 
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && grayActive == true)
-        {
-            grayActive = false;
-            //saturationAmount = 1;
-        }
-        /////////////////////////////////////////////////////////////////////////////////////////////
     }
 
 void OnDisable()
