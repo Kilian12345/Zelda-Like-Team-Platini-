@@ -169,7 +169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41316326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 805ad45c46d529145bf9c928b7333751, type: 3}
   m_Name: 
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dff152b51f0e641b5e8b2a0afa6305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 0}
 --- !u!58 &185596013
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 1811079100}
   - component: {fileID: 1811079099}
   - component: {fileID: 1811079098}
+  - component: {fileID: 1811079105}
   - component: {fileID: 1811079101}
   - component: {fileID: 1811079102}
   - component: {fileID: 1811079103}
@@ -663,15 +664,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811079097}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 805ad45c46d529145bf9c928b7333751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   curShader: {fileID: 4800000, guid: 0e5e970d71dfd124e8a2e5ecd4fa4b2e, type: 3}
-  brightnessAmount: 1
+  brightnessAmount: 0
   saturationAmount: 0
-  contrastAmount: 1
+  contrastAmount: 0
   strength: 0
 --- !u!114 &1811079103
 MonoBehaviour:
@@ -706,6 +707,24 @@ MonoBehaviour:
   MaxAmount: 40
   Friction: 0.8
   pos: {x: 0, y: 0, z: 0}
+--- !u!114 &1811079105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811079097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497dcd89c109872409c861091b638a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feedbacks:
+  - {fileID: 11400000, guid: 92d37d262e2dc4d4085e9ebc8d8e810c, type: 2}
+  - {fileID: 11400000, guid: 2eefa8612b14c1a42b6233899b8fff57, type: 2}
+  - {fileID: 11400000, guid: 058fbfb2e2820544483a01c63a82e61e, type: 2}
+  currentFeedback: {fileID: 11400000, guid: 92d37d262e2dc4d4085e9ebc8d8e810c, type: 2}
+  valueList: 0
 --- !u!4 &2065472574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2007903138, guid: 803d905fd2fb4bb468361ea2eacdc28e,

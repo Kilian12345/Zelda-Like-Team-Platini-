@@ -4,6 +4,7 @@ using System.Collections;
 [ExecuteInEditMode]
 public class VHS : MonoBehaviour
 {
+    FeedbacksOrder Fb_Order;
     public Material _material;
  
     void Awake()

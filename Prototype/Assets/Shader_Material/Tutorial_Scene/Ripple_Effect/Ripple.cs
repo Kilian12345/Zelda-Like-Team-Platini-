@@ -2,6 +2,7 @@
 
 public class Ripple : MonoBehaviour
 {
+    FeedbacksOrder Fb_Order;
     public Transform player;
     Camera camera;
     public Material RippleMaterial;
@@ -24,7 +25,7 @@ public class Ripple : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             this.Amount = this.MaxAmount;
-            Vector3 pos = camera.WorldToScreenPoint(player.position); /////////////////////////////////////////// WARNING
+            Vector3 pos = camera.WorldToScreenPoint(player.position); 
             this.RippleMaterial.SetFloat("_CenterX", pos.x);
             this.RippleMaterial.SetFloat("_CenterY", pos.y);
 
