@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
     public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate;
     public float vel, thrust;
     public float[] cooldownTime, curcooldownTime;
-    public GameObject particles, gun, gunSprite, shootPoint, rageSprite, countDownSprite, ability1Meter, ability2Meter, ability3Meter;
+    public GameObject particles, gun, gunSprite, shootPoint, rageSprite, countDownSprite, selector;
+    public GameObject[] abilityMeters;
 
     [HideInInspector]
     public float moveHor, moveVer;
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
     public float lastHor, lastVer;
     Rigidbody2D player;
     private float LocalX;
+    private Vector2[] abPos;
+    private int selectedAbility;
 
     CalciumBones cb;
 
@@ -41,10 +44,15 @@ public class Player : MonoBehaviour
         health = 0;
         curTime = rageTimer;
         curDropChanceRate = DropChanceRate;
+        selectedAbility = 0;
     }
 
     void FixedUpdate()
     {
+        Debug.Log(Input.GetAxis("SwitchLeft"));
+
+
+
         anim.SetInteger("activatedAbility", activatedAbility);
         anim.SetFloat("HorAxis", Mathf.Abs(moveHor));
         anim.SetFloat("VerAxis", moveVer);
@@ -106,19 +114,24 @@ public class Player : MonoBehaviour
                 death();
             }
         }
-        if (Input.GetKey(KeyCode.LeftAlt))
+        if (Input.GetButton("Refill"))
         {
             StartCoroutine(refill());
         }
-        checkForAbilityState();
-        cooldownUI();
-        ability1Meter.GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
-        ability2Meter.GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
-        ability3Meter.GetComponent<Image>().fillAmount = curcooldownTime[2] / cooldownTime[2];
+        abilityMeters[0].GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
+        abilityMeters[1].GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
+        abilityMeters[2].GetComponent<Image>().fillAmount = curcooldownTime[2] / cooldownTime[2];
         if (health > 100)
         {
             health = 100;
         }
+        if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad6) || Input.GetButtonDown("SwitchLeft") || Input.GetButtonDown("SwitchRight"))
+        {
+            switchAbilities();
+        }
+        selectAbility();
+        checkForAbilityState();
+        cooldownUI();
     }
 
     IEnumerator refill()
@@ -131,62 +144,62 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.0001f);
     }
 
+    void switchAbilities()
+    {
+        if (selectedAbility >= 0 && selectedAbility <= (abilityMeters.Length - 1))
+        {
+            if ((Input.GetKeyDown(KeyCode.Keypad4) || Input.GetButtonDown("SwitchLeft")) && selectedAbility > 0)
+            {
+                selectedAbility--;
+            }
+            if ((Input.GetKeyDown(KeyCode.Keypad6) || Input.GetButtonDown("SwitchRight")) && selectedAbility < (abilityMeters.Length - 1))
+            {
+                selectedAbility++;
+            }
+        }
+        selector.transform.position = abilityMeters[selectedAbility].GetComponent<RectTransform>().position;
+    }
+
+    void selectAbility()
+    {
+        if (Input.GetButtonDown("AbilitySelect"))
+        {
+            if (abilityMeters[selectedAbility].activeSelf)
+            {
+                if (curcooldownTime[selectedAbility] >= cooldownTime[selectedAbility])
+                {
+                    activatedAbility = (selectedAbility + 1);
+                    curcooldownTime[selectedAbility] = cooldownTime[selectedAbility];
+                }
+            }
+        }
+    }
 
     void checkForAbilityState()
     {
         if (health >= 0 && health < 25)
         {
-            ability1Meter.SetActive(false);
-            ability2Meter.SetActive(false);
-            ability3Meter.SetActive(false);
+            abilityMeters[0].SetActive(false);
+            abilityMeters[1].SetActive(false);
+            abilityMeters[2].SetActive(false);
         }
         else if (health >= 25 && health < 50)
         {
-            ability1Meter.SetActive(true);
-            ability2Meter.SetActive(false);
-            ability3Meter.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
-            {
-                activatedAbility = 1;
-                curcooldownTime[0] = cooldownTime[0];
-            }
+            abilityMeters[0].SetActive(true);
+            abilityMeters[1].SetActive(false);
+            abilityMeters[2].SetActive(false);
         }
         else if (health >= 50 && health < 75)
         {
-            ability1Meter.SetActive(true);
-            ability2Meter.SetActive(true);
-            ability3Meter.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
-            {
-                activatedAbility = 1;
-                curcooldownTime[0] = cooldownTime[0];
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
-            {
-                activatedAbility = 2;
-                curcooldownTime[1] = cooldownTime[1];
-            }
+            abilityMeters[0].SetActive(true);
+            abilityMeters[1].SetActive(true);
+            abilityMeters[2].SetActive(false);
         }
-        else if (health >= 75 /*&& health < 100*/)
+        else if (health >= 75 && health <= 100)
         {
-            ability1Meter.SetActive(true);
-            ability2Meter.SetActive(true);
-            ability3Meter.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
-            {
-                activatedAbility = 1;
-                curcooldownTime[0] = cooldownTime[0];
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
-            {
-                activatedAbility = 2;
-                curcooldownTime[1] = cooldownTime[1];
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3) && curcooldownTime[2] >= cooldownTime[2])
-            {
-                activatedAbility = 3;
-                curcooldownTime[2] = cooldownTime[2];
-            }
+            abilityMeters[0].SetActive(true);
+            abilityMeters[1].SetActive(true);
+            abilityMeters[2].SetActive(true);
         }
     }
 

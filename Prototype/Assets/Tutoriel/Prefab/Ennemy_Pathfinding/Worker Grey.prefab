@@ -28,6 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 115212377}
+  - {fileID: 1327374362}
   m_Father: {fileID: 1403226668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.31300002}
@@ -59,8 +60,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.225, y: 0.088, z: 0}
   m_LocalScale: {x: -0.5, y: 0.5, z: 0.5}
-  m_Children:
-  - {fileID: 1327374362}
+  m_Children: []
   m_Father: {fileID: 86900409}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -238,15 +238,17 @@ MonoBehaviour:
   dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
   gun: {fileID: 86900408}
+  shootPoint: {fileID: 1327374361}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   isInRange: 0
-  range: 0
+  range: 3
   enemyDamage: 1
-  isRunning: 0
+  isAttacking: 0
   pl: {fileID: 0}
   angle: 0
   anim: {fileID: 0}
-  attackSpeed: 0.5
+  attackSpeed: 0.2
+  attackRange: 0.4
 --- !u!95 &854474802
 Animator:
   serializedVersion: 3
@@ -274,12 +276,12 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854474796}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.01
-  m_LinearDrag: 25
+  m_Mass: 1
+  m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -531,12 +533,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327374361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.114, y: -0.077, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.233, y: 0, z: 0}
+  m_LocalScale: {x: -0.5000001, y: 0.5000001, z: 0.50000006}
   m_Children: []
-  m_Father: {fileID: 115212377}
-  m_RootOrder: 0
+  m_Father: {fileID: 86900409}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763593105
 GameObject:

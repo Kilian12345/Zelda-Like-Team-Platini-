@@ -6,18 +6,20 @@ public class Enemy2 : MonoBehaviour
 {
     public AudioSource enemy2Audio;
     public AudioClip dead, punch;
-    public GameObject gun,particles;
+    public GameObject gun, shootPoint, particles;
     Player pm;
     public bool isInRange;
-    public float range,enemyDamage;
-    public bool isRunning;
+    public float range, enemyDamage;
+    public bool isAttacking;
     Transform target;
     public Transform pl;
     public float angle;
     private float LocalX;
     public Animator anim;
-    public float attackSpeed;
+    public float attackSpeed,attackRange;
     private float timeToAttack;
+    Vector2 dir;
+    Rigidbody2D rb;
 
 
     void Start()
@@ -28,6 +30,7 @@ public class Enemy2 : MonoBehaviour
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         LocalX = transform.localScale.x;
         anim = gun.GetComponentInChildren<Animator>();
+        rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -37,29 +40,29 @@ public class Enemy2 : MonoBehaviour
             if (Vector2.Distance(transform.position, target.position) < range)
             {
                 isInRange = true;
+                if (Time.time > timeToAttack)
+                {
+                    timeToAttack = Time.time + 1 / attackSpeed;
+                    StartCoroutine(Attack());
+                    anim.SetBool("Hit", true);
+                    Debug.Log("Attack");
+                }
             }
             else
             {
                 isInRange = false;
+                anim.SetBool("Hit", false);
             }
             look();
-            if (isRunning)
-            {
-                gun.SetActive(true);
-            }
-            else
-            {
-                gun.SetActive(true);
-            }
         }
-        
+
     }
 
     void look()
     {
-            Vector3 dir = (pl.position - transform.position);
-            angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            
+        dir = (pl.position - transform.position);
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
         if (pl.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
@@ -68,61 +71,14 @@ public class Enemy2 : MonoBehaviour
         else
         {
             transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
-            gun.transform.rotation = Quaternion.AngleAxis(angle-120, Vector3.forward);
+            gun.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
         }
     }
 
-    /// <NotWorking>
-    ///void OnCollisionEnter2D(Collision2D col)
-    ///   {
-    ///    if (col.gameObject.tag == "Player")
-    ///    {
-    ///        isRunning = true;
-    ///     }
-    ///    if (col.gameObject.tag == "Bullet")
-    ///    {
-    ///        Destroy(gameObject, 0f);
-    ///     }
-    ///   }
-    ///    void OnCollisionStay2D(Collision2D col)
-    ///{
-    ///   if (col.gameObject.tag == "Player")
-    ///   {
-    ///isRunning = true;
-    ///}
-    ///}
-    ///void OnCollisionExit2D(Collision2D col)
-    ///{
-    ///if (col.gameObject.tag == "Player")
-    ///{
-    ///    isRunning = false;
-    ///  }
-    ///}
-    ///void Damage()
-    ///{
-    ///pm.health = -5;
-    ///  isRunning = false;
-    ///}
-    /// 
-    /// 
-    /// </summary>
 
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player")
-        {
-            /*if (!isRunning)
-            {
-                StartCoroutine(Damage());
-            }*/
-            if (Time.time > timeToAttack)
-            {
-                timeToAttack = Time.time + 1 / attackSpeed;
-                Attack();
-            }
-
-        }
         if (col.gameObject.tag == "Bullet")
         {
             enemy2Audio.clip = dead;
@@ -133,49 +89,46 @@ public class Enemy2 : MonoBehaviour
     }
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player")
-        {
-            if (Time.time > timeToAttack)
-            {
-                timeToAttack = Time.time + 1 / attackSpeed;
-                Attack();  
-            }
-            /*if (!isRunning)
-            {
-                StartCoroutine(Damage());
-            }*/
-
-        }
-        /*if (col.gameObject.tag !="Player")
-        {
-            StopCoroutine(Damage());
-        }*/
     }
     void OnCollisionExit2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player")
-        {
-            //StopCoroutine(Damage());
-            isRunning = false;
-            //anim.SetBool("Hit", false);
-        }
-    }
-    IEnumerator Damage()
-    {
-        enemy2Audio.clip = punch;
-        enemy2Audio.Play();
-        isRunning = true;
-        pm.health += enemyDamage;
-        yield return new WaitForSeconds(3);
-        isRunning = false;
     }
 
-    void Attack()
+    /*void Attack()
     {
+        rb.AddForce(dir.normalized * 500000, ForceMode2D.Impulse);
         anim.SetBool("Hit", true);
         enemy2Audio.clip = punch;
         enemy2Audio.Play();
         pm.health += enemyDamage;
+    }*/
+
+    IEnumerator Attack()
+    {
+        Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
+        //Debug.Log(enemiestoDamage.Length);
+        if (enemiestoDamage.Length > 0)
+        {
+            for (int i = 0; i < enemiestoDamage.Length; i++)
+            {
+                if (enemiestoDamage[i].GetComponent<Player>() != null)
+                {
+                    enemiestoDamage[i].GetComponent<Player>().health+=enemyDamage;
+                    //enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(dir.normalized * 500000, ForceMode2D.Impulse);
+                    isAttacking = false;
+                    break;
+                }
+            }
+            isAttacking = false;
+        }
+        yield return new WaitForSeconds(0.2f);
+        anim.SetBool("Hit", false);
+        StopCoroutine(Attack());
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
     }
 }
 

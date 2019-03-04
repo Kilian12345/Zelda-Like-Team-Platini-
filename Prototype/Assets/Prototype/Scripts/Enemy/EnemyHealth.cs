@@ -51,7 +51,7 @@ public class EnemyHealth : MonoBehaviour
         if (health > 0)
         {
             ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);
-            Debug.Log("Punch " + (100 - ps.health) / 100);
+            //Debug.Log("Punch " + (100 - ps.health) / 100);
         }
 
     }
