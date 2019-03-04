@@ -21,7 +21,6 @@ public class Enemy2 : MonoBehaviour
     Vector2 dir;
     Rigidbody2D rb;
 
-
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
@@ -47,6 +46,7 @@ public class Enemy2 : MonoBehaviour
                     anim.SetBool("Hit", true);
                     Debug.Log("Attack");
                 }
+                
             }
             else
             {
@@ -55,6 +55,7 @@ public class Enemy2 : MonoBehaviour
             }
             look();
         }
+        
 
     }
 
@@ -75,8 +76,6 @@ public class Enemy2 : MonoBehaviour
         }
     }
 
-
-
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Bullet")
@@ -87,24 +86,10 @@ public class Enemy2 : MonoBehaviour
             Destroy(gameObject, 0.5f);
         }
     }
-    void OnCollisionStay2D(Collision2D col)
-    {
-    }
-    void OnCollisionExit2D(Collision2D col)
-    {
-    }
-
-    /*void Attack()
-    {
-        rb.AddForce(dir.normalized * 500000, ForceMode2D.Impulse);
-        anim.SetBool("Hit", true);
-        enemy2Audio.clip = punch;
-        enemy2Audio.Play();
-        pm.health += enemyDamage;
-    }*/
 
     IEnumerator Attack()
     {
+        
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
         //Debug.Log(enemiestoDamage.Length);
         if (enemiestoDamage.Length > 0)
@@ -125,6 +110,7 @@ public class Enemy2 : MonoBehaviour
         anim.SetBool("Hit", false);
         StopCoroutine(Attack());
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Searching : StateMachineBehaviour
 {
     public Transform playerPos;
-    public float speed,stopingDistance;
+    public float speed, stopingDistance;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -20,7 +20,6 @@ public class Searching : StateMachineBehaviour
         {
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
         }
-            
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
