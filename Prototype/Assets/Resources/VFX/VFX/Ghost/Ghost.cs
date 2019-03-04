@@ -7,15 +7,20 @@ public class Ghost : MonoBehaviour
     List<GameObject> trailParts = new List<GameObject>();
     Player playerScript;
     Vector3 trailPartLocalScale;
+    GameObject trailPart;
 
     bool flip = false;
 
     [SerializeField]
-    float repeat = 1;
+    GameObject parent;
+
+    public float repeat = 1;
+    public float lifetime = 0.5f;
+    public float alpha = 0.5f;
 
     void Start()
     {
-        InvokeRepeating("SpawnTrailPart", 0, repeat); // replace 0.2f with needed repeatRate
+        InvokeRepeating("SpawnTrailPart", 0, repeat); 
         playerScript = GetComponent<Player>();
 
     }
@@ -37,28 +42,32 @@ public class Ghost : MonoBehaviour
             FlipTrail();
         }
 
-        Debug.Log(flip);
+        Debug.Log(trailParts);
+
 
 
     }
 
     void SpawnTrailPart()
     {
-        GameObject trailPart = new GameObject();
+        trailPart = new GameObject();
         SpriteRenderer trailPartRenderer = trailPart.AddComponent<SpriteRenderer>();
         trailPartRenderer.sprite = GetComponent<SpriteRenderer>().sprite;
         trailPart.transform.position = transform.position;
-
+        trailPart.transform.localScale = transform.localScale; 
         trailParts.Add(trailPart);
 
+        trailPart.transform.parent = parent.transform;
+        trailPart.layer = LayerMask.NameToLayer("Player");
+
         StartCoroutine(FadeTrailPart(trailPartRenderer));
-        StartCoroutine(DestroyTrailPart(trailPart, 0.5f)); // replace 0.5f with needed lifeTime
+        Destroy(trailPart, lifetime);
     }
 
     IEnumerator FadeTrailPart(SpriteRenderer trailPartRenderer)
     {
         Color color = trailPartRenderer.color;
-        color.a -= 0.5f; // replace 0.5f with needed alpha decrement
+        color.a -= alpha;
         trailPartRenderer.color = color;
 
         yield return new WaitForEndOfFrame();
@@ -72,22 +81,13 @@ public class Ghost : MonoBehaviour
         Destroy(trailPart);
     }
 
-   /* void Flip()
-    {
-        //facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-
-        FlipTrail();
-    }*/
 
     void FlipTrail()
     {
         foreach (GameObject trailPart in trailParts)
         {
             trailPartLocalScale = trailPart.transform.localScale;
-            trailPartLocalScale.x *= -1;
+            trailPartLocalScale.x = -trailPartLocalScale.x;
             trailPart.transform.localScale = trailPartLocalScale;
         }
     }
