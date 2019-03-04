@@ -170,7 +170,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41316326}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 805ad45c46d529145bf9c928b7333751, type: 3}
   m_Name: 
@@ -626,43 +626,6 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1403824674}
---- !u!1 &654985513 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1478626716, guid: 803d905fd2fb4bb468361ea2eacdc28e,
-    type: 3}
-  m_PrefabInstance: {fileID: 2133114318}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &654985524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654985513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120e9248c06ac28468a3735c6b3f5e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnRate: 10
-  _trailLength: 1
-  _sortingLayer: 10
-  _desiredAlpha: 0.8
-  _effectDuration: 1
-  _desiredColor: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &654985525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654985513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5705791840ddea84199399499dab60e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _desiredColor: {r: 0.8113208, g: 0, b: 0, a: 1}
 --- !u!1001 &960076239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1258,5 +1221,44 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1478626723, guid: 803d905fd2fb4bb468361ea2eacdc28e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478626723, guid: 803d905fd2fb4bb468361ea2eacdc28e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553095196876208491, guid: 803d905fd2fb4bb468361ea2eacdc28e,
+        type: 3}
+      propertyPath: _desiredColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056969866821450308, guid: 803d905fd2fb4bb468361ea2eacdc28e,
+        type: 3}
+      propertyPath: _desiredColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2553095196876208491, guid: 803d905fd2fb4bb468361ea2eacdc28e, type: 3}
+    - {fileID: 3056969866821450308, guid: 803d905fd2fb4bb468361ea2eacdc28e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 803d905fd2fb4bb468361ea2eacdc28e, type: 3}
+--- !u!1 &2133114319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1478626716, guid: 803d905fd2fb4bb468361ea2eacdc28e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2133114318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2133114320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133114319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d689b5cd076ac44b8972a07ac27b8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeat: 0.1

@@ -36,6 +36,8 @@ public class FeedbacksOrder : MonoBehaviour
 
     private void Update()
     {
+
+
         if (valueList != transitionValue)
         {
             different = true;
