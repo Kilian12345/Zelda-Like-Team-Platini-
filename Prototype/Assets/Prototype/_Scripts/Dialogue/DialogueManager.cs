@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Animator animator;
 
+    public bool DialogueCheck = false;
+
     public DialogueActivation activator;
 
     public Queue<string> sentences;
@@ -38,6 +40,8 @@ public class DialogueManager : MonoBehaviour
     // Starts the Dialogue
     public void StartDialogue (Dialogue dialogue)
     {
+        DialogueCheck = true;
+
         Debug.Log("anim true");
         animator.SetBool("IsOpen", true);
 
@@ -70,6 +74,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        DialogueCheck = false;
     }
 
     // Letter appartition effect

@@ -29,7 +29,7 @@ public class DialogueActivation : MonoBehaviour
     //Show "Press Y" int to the screen while in the trigger zone
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "PC")
+        if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
         {
             Debug.Log("ACESS");
             dialogueManager.activator = this;
@@ -39,7 +39,7 @@ public class DialogueActivation : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {   
-        if(collision.gameObject.name == "PC")
+        if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
         {
             Debug.Log("activate canvas");
             canvasIntDialogue.SetActive(true);
