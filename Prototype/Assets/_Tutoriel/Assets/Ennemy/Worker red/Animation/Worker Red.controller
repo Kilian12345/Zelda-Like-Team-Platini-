@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
   speed: 2
-  stopingDistance: 2
+  stopingDistance: 3
 --- !u!1101 &1101496293380689558
 AnimatorStateTransition:
   m_ObjectHideFlags: 3

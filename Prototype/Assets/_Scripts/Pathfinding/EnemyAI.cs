@@ -72,12 +72,6 @@ public class EnemyAI : MonoBehaviour {
         }
        
     }
-	
-	void FixedUpdate ()
-    {
-        Debug.Log(speed);
-
-    }
 
     public void MovePath()
     {
@@ -121,5 +115,6 @@ public class EnemyAI : MonoBehaviour {
 	
 }
 
-        //Debug.Log(speed);
-
+        //Debug.Log(speed);
+
+
