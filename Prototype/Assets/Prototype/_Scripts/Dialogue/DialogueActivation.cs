@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +19,7 @@ public class DialogueActivation : MonoBehaviour
     [SerializeField]
     GameObject canvasIntDialogue;
 
+    public Dialogue dialogue;
 
     public DialogueManager dialogueManager;
 
@@ -24,17 +27,33 @@ public class DialogueActivation : MonoBehaviour
     public bool InsideTriggerZone = false;
 
     //Show "Press Y" int to the screen while in the trigger zone
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("activate canvas");
-        canvasIntDialogue.SetActive(true);
-        InsideTriggerZone = true;
+        if(collision.gameObject.name == "PC")
+        {
+            Debug.Log("ACESS");
+            dialogueManager.activator = this;
+            dialogueManager.sentences = new Queue<string>(dialogue.sentences);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {   
+        if(collision.gameObject.name == "PC")
+        {
+            Debug.Log("activate canvas");
+            canvasIntDialogue.SetActive(true);
+            InsideTriggerZone = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("deactivate canvas");
-        canvasIntDialogue.SetActive(false);
-        InsideTriggerZone = false;
+        if(collision.gameObject.name == "PC")
+        {
+            Debug.Log("deactivate canvas");
+            canvasIntDialogue.SetActive(false);
+            InsideTriggerZone = false;
+        }
     }
 }

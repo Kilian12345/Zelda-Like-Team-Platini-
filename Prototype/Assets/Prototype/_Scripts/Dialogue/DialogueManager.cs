@@ -12,30 +12,23 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Animator animator;
 
-    public DialogueActivation dialogueActivation;
-    public Dialogue dialogue;
+    public DialogueActivation activator;
 
-    private Queue<string> sentences;
-
-    //Stocks the sentences that are going to be displayed
-    void Start()
-    {
-        sentences = new Queue<string>();
-    }
+    public Queue<string> sentences;
 
     void Update()
     {
         //Activate Dialogue combat when pressing Y while in the Trigger Zone and dialogue is not active
-        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.Y)) && (dialogueActivation.InsideTriggerZone == true) && (dialogueActivation.DialogueActive == false))
+        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.Y)) && (activator.InsideTriggerZone == true) && (activator.DialogueActive == false))
         {
             canvasDialogue.SetActive(true);
-            StartDialogue(dialogue);
+            StartDialogue(activator.dialogue);
             Debug.Log("activate dialogue");
-            dialogueActivation.DialogueActive = true;
+            activator.DialogueActive = true;
         }
 
         // Continue to next sentence when dialogue is already active
-        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.Y)) && dialogueActivation.DialogueActive == true)
+        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.Y)) && activator.DialogueActive == true)
         {
             DisplayNextSentence();
             Debug.Log("Next sentence display");
@@ -64,7 +57,7 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             EndDialogue();
-            dialogueActivation.DialogueActive = false;
+            activator.DialogueActive = false;
             return;
         }
 
