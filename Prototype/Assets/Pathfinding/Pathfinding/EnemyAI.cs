@@ -75,7 +75,7 @@ public class EnemyAI : MonoBehaviour {
 	
 	void FixedUpdate ()
     {
-        //Debug.Log(speed);
+        Debug.Log(speed);
 
     }
 
@@ -120,3 +120,6 @@ public class EnemyAI : MonoBehaviour {
     }
 	
 }
+
+        //Debug.Log(speed);
+

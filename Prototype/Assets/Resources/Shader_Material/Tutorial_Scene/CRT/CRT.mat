@@ -20,17 +20,17 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DisplacementTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 51e6074dd42caec4da06a16ab918e34f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2a18baa54b21d72439ad8c9a0e5f1812, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51e6074dd42caec4da06a16ab918e34f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Br: 48
-    - _Contrast: 4.2
-    - _Density: 2
+    - _Contrast: 5.9
+    - _Density: 6
     - _Distort: 0
     - _OnOff: 1
     - _ScanDensity: 1
@@ -41,4 +41,4 @@ Material:
     - _VertsColor: 0.673
     - _VertsColor2: 0.657
     m_Colors:
-    - _ScansColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ScansColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}

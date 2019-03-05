@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    FeedbacksOrder Fb_Order;
     Animator anim;
     AudioSource playerAudio;
     CinemachineImpulseSource source;
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
         source = gameObject.GetComponent<CinemachineImpulseSource>();
+        Fb_Order = FindObjectOfType<FeedbacksOrder>();
         LocalX = transform.localScale.x;
         health = 0;
         curTime = rageTimer;
@@ -49,10 +51,6 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(Input.GetAxis("SwitchLeft"));
-
-
-
         anim.SetInteger("activatedAbility", activatedAbility);
         anim.SetFloat("HorAxis", Mathf.Abs(moveHor));
         anim.SetFloat("VerAxis", moveVer);
@@ -191,15 +189,40 @@ public class Player : MonoBehaviour
         }
         else if (health >= 50 && health < 75)
         {
-            abilityMeters[0].SetActive(true);
-            abilityMeters[1].SetActive(true);
-            abilityMeters[2].SetActive(false);
+            ability1Meter.SetActive(true);
+            ability2Meter.SetActive(true);
+            ability3Meter.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
+            {
+                activatedAbility = 1;
+                curcooldownTime[0] = cooldownTime[0];
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
+            {
+                activatedAbility = 2;
+                curcooldownTime[1] = cooldownTime[1];
+            }
         }
         else if (health >= 75 && health <= 100)
         {
-            abilityMeters[0].SetActive(true);
-            abilityMeters[1].SetActive(true);
-            abilityMeters[2].SetActive(true);
+            ability1Meter.SetActive(true);
+            ability2Meter.SetActive(true);
+            ability3Meter.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
+            {
+                activatedAbility = 1;
+                curcooldownTime[0] = cooldownTime[0];
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
+            {
+                activatedAbility = 2;
+                curcooldownTime[1] = cooldownTime[1];
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                activatedAbility = 3;
+                curcooldownTime[2] = cooldownTime[2];
+            }
         }
     }
 
@@ -406,3 +429,15 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
     }
 }
+
+    {
+        Debug.Log(Input.GetAxis("SwitchLeft"));
+
+
+
+            abilityMeters[0].SetActive(true);
+            abilityMeters[1].SetActive(true);
+            abilityMeters[2].SetActive(false);
+            abilityMeters[0].SetActive(true);
+            abilityMeters[1].SetActive(true);
+            abilityMeters[2].SetActive(true);

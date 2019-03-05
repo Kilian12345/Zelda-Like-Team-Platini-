@@ -1,4 +1,4 @@
-﻿Shader "Custom/Crt pixel"
+﻿Shader "Custom/Camera/Crt pixel"
 {
 	Properties
 	{
