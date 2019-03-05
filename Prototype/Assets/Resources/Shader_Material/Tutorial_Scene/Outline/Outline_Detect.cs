@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Outline_Detect : MonoBehaviour
 {
-
+    [SerializeField]
     Renderer myRenderer;
     [SerializeField] Color color;
 

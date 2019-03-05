@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8878997155992295262}
   - component: {fileID: 3869940661449992855}
   - component: {fileID: 2470943909779111053}
+  - component: {fileID: 7658231849261487193}
+  - component: {fileID: 4451217711701730980}
   m_Layer: 0
   m_Name: "lanc\xE9_Prefab"
   m_TagString: Pickup
@@ -50,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 684aba773aebeee4096da7df8105c87d, type: 2}
+  - {fileID: 2100000, guid: 85a459004cafdf043aeb6695c016b5ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,3 +120,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &7658231849261487193
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962322315635961903}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.047986005}
+  serializedVersion: 2
+  m_Radius: 0.5200109
+--- !u!114 &4451217711701730980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962322315635961903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44dff152b51f0e641b5e8b2a0afa6305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0.89883304, b: 0.9339623, a: 0}

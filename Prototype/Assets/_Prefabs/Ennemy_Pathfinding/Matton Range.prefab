@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 451967457}
   - component: {fileID: 451967456}
   - component: {fileID: 451967455}
+  - component: {fileID: 5649778112218733047}
   m_Layer: 0
   m_Name: hitBox
   m_TagString: Untagged
@@ -94,7 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInside: 0
-  path: {fileID: 0}
 --- !u!58 &451967455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -111,6 +111,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.013959256}
   serializedVersion: 2
   m_Radius: 0.10100676
+--- !u!114 &5649778112218733047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451967454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44dff152b51f0e641b5e8b2a0afa6305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRenderer: {fileID: 1515281259}
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &926705042
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +428,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc8da1d6265fcef4ab50077bdc33557e, type: 2}
+  - {fileID: 2100000, guid: 64b4eecc16ddb2a46aa8e346e006eeb2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
