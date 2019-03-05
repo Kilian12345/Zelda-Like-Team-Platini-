@@ -82,7 +82,7 @@ public class EnemyAiRange : MonoBehaviour
 
         float dist = Vector3.Distance(target.position, transform.position);
         Debug.DrawLine(new Vector3(target.position.x, target.position.y, 0), new Vector3(gameObject.transform.position.x , gameObject.transform.position.y , 0) , Color.red);
-        Debug.Log(dist);
+        //Debug.Log(dist);
         
 
         MovePath();
