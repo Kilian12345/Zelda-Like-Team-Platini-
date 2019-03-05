@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu.unity
     guid: 0a0bfda9e868d7441ae4e6b57422b496
   - enabled: 1
-    path: Assets/_Scenes/Tutorial_scene.unity
+    path: Assets/_Scenes/Tutorial_scene_Anto.unity
     guid: f4d789fe4205b1c46b0479dc4417dd97
   m_configObjects: {}
