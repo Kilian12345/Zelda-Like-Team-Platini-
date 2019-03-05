@@ -1,19 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.TextCore;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
-    public Text scoreDisplay;
+    private TextMeshProUGUI scoreDisplay;
     Player ps;
-
 
 
     void Start()
     {
-        scoreDisplay = gameObject.GetComponent<Text>();
+        scoreDisplay = gameObject.GetComponent<TextMeshProUGUI>();
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
