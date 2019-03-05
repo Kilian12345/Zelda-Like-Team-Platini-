@@ -51,7 +51,7 @@ public class FOW : MonoBehaviour
 
                     visiblePlayer.Add(player);
                     PlayerDetected = true;
-                    Ai.enabled = true;
+                    //Ai.enabled = true;
                 }  
 
 
@@ -63,7 +63,7 @@ public class FOW : MonoBehaviour
         if (PlayerDetected == true)
         {
             
-            Ai.MovePath();
+            //Ai.MovePath();
         }
 
 

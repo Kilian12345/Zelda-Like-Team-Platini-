@@ -16,8 +16,6 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(scoreDisplay);
         scoreDisplay.text = ((int)ps.PlayerScore).ToString();
-
     }
 }

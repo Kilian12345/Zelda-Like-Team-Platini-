@@ -1,23 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
     public AudioSource enemy2Audio;
     public AudioClip dead, punch;
     public GameObject particles;
+    public GameObject HitpointsParentPrefab;
     public float health;
 
     [SerializeField]
     private int scorePerHit;
 
     Player ps;
+    Transform pl;
 
     ThirdAbility ThAb;
     EnemyAI AI;
-
-
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ThAb = FindObjectOfType<ThirdAbility>();
         AI = FindObjectOfType<EnemyAI>();
+        pl= GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -47,14 +49,36 @@ public class EnemyHealth : MonoBehaviour
     {
         enemy2Audio.clip = punch;
         enemy2Audio.Play();
+
         health -= dam;
+
         if (health > 0)
         {
-            ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);
+            /*ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);*/
+            ps.PlayerScore += scorePerHit;
             Debug.Log("Punch " + (100 - ps.health) / 100);
         }
 
+        if (HitpointsParentPrefab)
+        {
+            ShowHitpointsParent();
+        }
     }
+
+    void ShowHitpointsParent()
+    {
+        var go = Instantiate(HitpointsParentPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponentInChildren<Text>().text = scorePerHit.ToString();
+        if (pl.position.x > transform.position.x)
+        {
+            go.GetComponent<RectTransform>().localScale= new Vector3(1, 1, 1);
+        }
+        else
+        {
+            go.GetComponent<RectTransform>().localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
     public void ZoneDamage()
     {
         if (ThAb.visiblePlayer.Contains(this.transform))
