@@ -299,6 +299,7 @@ MonoBehaviour:
   - 0
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   gun: {fileID: 921268231}
+  gunSprite: {fileID: 0}
   shootPoint: {fileID: 1593046803}
   rageSprite: {fileID: 0}
   countDownSprite: {fileID: 0}
@@ -308,6 +309,7 @@ MonoBehaviour:
   moveHor: 0
   moveVer: 0
   countDown: {fileID: 0}
+  activatedAbility: 0
   isDead: 0
   toPunch: 0
   isInRage: 0
@@ -323,6 +325,8 @@ MonoBehaviour:
   slowDownFactor: 0.5
   slowDownLast: 0
   abilityIsToCooldown: 3
+  lastHor: 0
+  lastVer: 0
 --- !u!61 &1478626723
 BoxCollider2D:
   m_ObjectHideFlags: 0

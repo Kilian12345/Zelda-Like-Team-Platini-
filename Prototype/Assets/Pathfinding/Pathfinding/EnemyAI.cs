@@ -120,3 +120,6 @@ public class EnemyAI : MonoBehaviour {
     }
 	
 }
+
+        //Debug.Log(speed);
+
