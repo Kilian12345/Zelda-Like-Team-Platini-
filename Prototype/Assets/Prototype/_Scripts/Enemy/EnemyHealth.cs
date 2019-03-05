@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (health < 0)
         {
@@ -42,6 +42,10 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
+    void OnDestroy()
+    {
+        ps.EnemiesFollowing--;
+    }
 
     public void TakeDamage(float dam)
     {
@@ -51,7 +55,7 @@ public class EnemyHealth : MonoBehaviour
         if (health > 0)
         {
             ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);
-            Debug.Log("Punch " + (100 - ps.health) / 100);
+            //Debug.Log("Punch " + (100 - ps.health) / 100);
         }
 
     }

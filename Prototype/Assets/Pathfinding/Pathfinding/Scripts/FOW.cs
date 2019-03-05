@@ -5,9 +5,12 @@ using UnityEngine;
 public class FOW : MonoBehaviour
 {
     EnemyAI Ai;
+    Player ps;
+    Transform playerPos;
 
     public float viewRadius = 5;
     public float viewAngle = 135;
+    public float stopingDistance;
     public LayerMask obstacleMask;
     Collider2D[] playerInRadius;
     public List<Transform> visiblePlayer = new List<Transform>();
@@ -19,19 +22,22 @@ public class FOW : MonoBehaviour
         Ai = GetComponent<EnemyAI>();
         Ai.enabled = false;
         anim = gameObject.GetComponent<Animator>();
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        playerPos= GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        stopingDistance = 1.5f;
+        viewRadius = 10;
     }
 
     void FixedUpdate()
     {
         anim.SetBool("isSeen", PlayerDetected);
         FindVisiblePlayer();
+        
     }
 
     void FindVisiblePlayer()
     {
-
         playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask("Player"));
-
         visiblePlayer.Clear();
 
         for (int i = 0; i < playerInRadius.Length; i++)
@@ -46,45 +52,39 @@ public class FOW : MonoBehaviour
             {
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
 
-                if(!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
+                if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
                 {
-
                     visiblePlayer.Add(player);
-                    PlayerDetected = true;
-                    Ai.enabled = true;
-                }  
-
-
-                
+                    if (Vector2.Distance(transform.position, playerPos.position) > stopingDistance && Vector2.Distance(transform.position, playerPos.position) < viewRadius)
+                    {
+                        if (ps.EnemiesFollowing < 3)
+                        {
+                            PlayerDetected = true;
+                            Ai.enabled = true;
+                        }
+                    }
+                    else
+                    {
+                        PlayerDetected = false;
+                        Ai.enabled = false;
+                    }
+                }
             }
-
         }
-
         if (PlayerDetected == true)
         {
-            
             Ai.MovePath();
         }
-
-
     }
 
 
-
-    public Vector2 DirFromAngle (float angleDeg, bool global)
+    public Vector2 DirFromAngle(float angleDeg, bool global)
     {
-        if(!global)
+        if (!global)
         {
             angleDeg += transform.eulerAngles.z;
-
         }
         return new Vector2(Mathf.Cos(angleDeg * Mathf.Deg2Rad), Mathf.Sin(angleDeg * Mathf.Deg2Rad));
-
-
-
-
     }
-
-
 
 }

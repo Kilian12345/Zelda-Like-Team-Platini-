@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dash : StateMachineBehaviour
 {
+    private Vector2 finalPos;
     Player ps;
     GameObject player;
     Rigidbody2D rb;
@@ -13,16 +14,15 @@ public class Dash : StateMachineBehaviour
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player = GameObject.FindGameObjectWithTag("Player");
         rb = player.GetComponent<Rigidbody2D>();
+        
         if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) != 0 && Mathf.Abs(Input.GetAxisRaw("Vertical")) != 0)
         {
-            rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal") / 2 * ps.thrust, Input.GetAxisRaw("Vertical") / 2 * ps.thrust), ForceMode2D.Force);
+            finalPos = new Vector2(player.transform.position.x+((ps.dashDistance/2)*ps.moveHor), player.transform.position.y+((ps.dashDistance / 2) * ps.moveVer));
         }
         else
         {
-            rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal") * ps.thrust, Input.GetAxisRaw("Vertical") * ps.thrust), ForceMode2D.Force);
+            finalPos = new Vector2(player.transform.position.x + (ps.dashDistance* ps.moveHor), player.transform.position.y + (ps.dashDistance * ps.moveVer));
         }
-        
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -36,8 +36,17 @@ public class Dash : StateMachineBehaviour
         {
             rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * Mathf.Pow(ps.thrust, 2), Input.GetAxisRaw("Vertical") * Mathf.Pow(ps.thrust, 2));
         }*/
+        if (Vector2.Distance(player.transform.position, finalPos) >= 0)
+        {
+            Charge();
+        }
         
     }
+    void Charge()
+    {
+        player.transform.position = Vector2.MoveTowards(player.transform.position, finalPos, ps.thrust * Time.deltaTime);
+    }
+
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{

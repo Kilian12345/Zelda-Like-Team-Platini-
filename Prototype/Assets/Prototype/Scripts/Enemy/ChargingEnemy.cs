@@ -46,7 +46,7 @@ public class ChargingEnemy : MonoBehaviour
                 {
                     Charge();
                 }
-                if (Vector2.Distance(transform.position, lastPos) <= 1)
+                if (Vector2.Distance(transform.position, lastPos) <=1)
                 {
                     canCharge = false;
                 }

@@ -13,8 +13,8 @@ public class Player : MonoBehaviour
     CinemachineImpulseSource source;
 
     public AudioClip hit, died;
-    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate;
-    public float vel, thrust;
+    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate,EnemiesFollowing;
+    public float vel, thrust,dashDistance;
     public float[] cooldownTime, curcooldownTime;
     public GameObject particles, gun, gunSprite, shootPoint, rageSprite, countDownSprite, selector;
     public GameObject[] abilityMeters;
