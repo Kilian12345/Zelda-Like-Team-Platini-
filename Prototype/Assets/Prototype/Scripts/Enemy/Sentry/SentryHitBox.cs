@@ -5,7 +5,7 @@ using UnityEngine;
 public class SentryHitBox : MonoBehaviour 
 {
 	public bool isInside;
-    [SerializeField]
+    
     EnemyAiRange path;
 
     void Start()

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ChargingEnemy : MonoBehaviour
 {
-    public float chargeDuration, chargeVelocity, chargeCoolDown;
-    public bool canCharge,isCharging;
+    public float chargeDuration, chargeVelocity, chargeCoolDown,range;
+    public bool canCharge,isCharging,isInRange;
     public GameObject weapon, shootPoint, particles;
     public AudioClip dead, punch;
     private float LocalX,angle,timeToCharge;
@@ -26,19 +26,30 @@ public class ChargingEnemy : MonoBehaviour
     {
         if (pl != null)
         {
-            look();
-            if (Time.time > timeToCharge)
+            if (Vector2.Distance(transform.position, pl.position) <= range)
             {
-                timeToCharge = Time.time + 1 / chargeCoolDown;
-                recPos();
+                isInRange = true;
             }
-            if (canCharge)
+            else
             {
-                Charge();
+                isInRange = false;
             }
-            if (Vector2.Distance(transform.position, lastPos) <= 0)
+            if (isInRange)
             {
-                canCharge = false;
+                look();
+                if (Time.time > timeToCharge)
+                {
+                    timeToCharge = Time.time + 1 / chargeCoolDown;
+                    recPos();
+                }
+                if (canCharge)
+                {
+                    Charge();
+                }
+                if (Vector2.Distance(transform.position, lastPos) <= 1)
+                {
+                    canCharge = false;
+                }
             }
 
         }
@@ -74,7 +85,7 @@ public class ChargingEnemy : MonoBehaviour
             weapon.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
         }
     }
-    void OnCollisionEnter2D(Collision2D col)
+    /*void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Bullet")
         {
@@ -83,6 +94,6 @@ public class ChargingEnemy : MonoBehaviour
             Instantiate(particles, transform.position, Quaternion.identity);
             Destroy(gameObject, 0.5f);
         }
-    }
+    }*/
 
 }
