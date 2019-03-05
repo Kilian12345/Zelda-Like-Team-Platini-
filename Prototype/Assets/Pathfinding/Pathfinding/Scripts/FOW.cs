@@ -12,15 +12,18 @@ public class FOW : MonoBehaviour
     Collider2D[] playerInRadius;
     public List<Transform> visiblePlayer = new List<Transform>();
     public bool PlayerDetected = false;
+    public Animator anim;
 
     void Start()
     {
         Ai = GetComponent<EnemyAI>();
         Ai.enabled = false;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
+        anim.SetBool("isSeen", PlayerDetected);
         FindVisiblePlayer();
     }
 
@@ -59,6 +62,7 @@ public class FOW : MonoBehaviour
 
         if (PlayerDetected == true)
         {
+            
             Ai.MovePath();
         }
 
