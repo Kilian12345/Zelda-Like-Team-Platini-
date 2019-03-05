@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 451967457}
   - component: {fileID: 451967456}
   - component: {fileID: 451967455}
-  - component: {fileID: 5649778112218733047}
+  - component: {fileID: 8854130843782900011}
   m_Layer: 0
   m_Name: hitBox
   m_TagString: Untagged
@@ -111,7 +111,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.013959256}
   serializedVersion: 2
   m_Radius: 0.10100676
---- !u!114 &5649778112218733047
+--- !u!114 &8854130843782900011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 451967454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44dff152b51f0e641b5e8b2a0afa6305, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ba51d52a78dfee40a5e90ad41f4273c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myRenderer: {fileID: 1515281259}

@@ -3592,7 +3592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794492802}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 805ad45c46d529145bf9c928b7333751, type: 3}
   m_Name: 
@@ -5446,7 +5446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeDuration: 0.05
-  ShakeAmplitude: 1.2
+  ShakeAmplitude: 4
   ShakeFrequency: 2
   VirtualCamera: {fileID: 11668691}
 --- !u!1 &1002075384
