@@ -10,6 +10,7 @@ public class Ghost : MonoBehaviour
     GameObject trailPart;
 
     bool flip = false;
+    float time = 0f;
 
     [SerializeField]
     GameObject parent;
@@ -61,14 +62,24 @@ public class Ghost : MonoBehaviour
         trailPart.layer = LayerMask.NameToLayer("Player");
 
         StartCoroutine(FadeTrailPart(trailPartRenderer));
+
         Destroy(trailPart, lifetime);
     }
 
     IEnumerator FadeTrailPart(SpriteRenderer trailPartRenderer)
     {
+
         Color color = trailPartRenderer.color;
-        color.a -= alpha;
+        color.a = alpha ;
+
+        //trailParts[].
+
+        //Color rgb = trailPartRenderer.color;
+        time += Time.deltaTime / lifetime;
+        color.a = Mathf.Lerp(color.a, 0, time);
         trailPartRenderer.color = color;
+
+        Debug.Log(color.a);
 
         yield return new WaitForEndOfFrame();
     }

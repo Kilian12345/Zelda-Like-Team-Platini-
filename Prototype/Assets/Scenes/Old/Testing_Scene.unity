@@ -1292,6 +1292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 334400956}
-  repeat: 0.05
-  lifetime: 0.5
-  alpha: 0.5
+  repeat: 0.2
+  lifetime: 3
+  alpha: 0.8
