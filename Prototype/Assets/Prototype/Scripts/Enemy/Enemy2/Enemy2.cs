@@ -94,6 +94,8 @@ public class Enemy2 : MonoBehaviour
         //Debug.Log(enemiestoDamage.Length);
         if (enemiestoDamage.Length > 0)
         {
+
+
             for (int i = 0; i < enemiestoDamage.Length; i++)
             {
                 if (enemiestoDamage[i].GetComponent<Player>() != null)

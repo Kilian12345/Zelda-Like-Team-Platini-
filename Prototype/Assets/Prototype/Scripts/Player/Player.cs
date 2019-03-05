@@ -189,40 +189,18 @@ public class Player : MonoBehaviour
         }
         else if (health >= 50 && health < 75)
         {
-            ability1Meter.SetActive(true);
-            ability2Meter.SetActive(true);
-            ability3Meter.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
-            {
-                activatedAbility = 1;
-                curcooldownTime[0] = cooldownTime[0];
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
-            {
-                activatedAbility = 2;
-                curcooldownTime[1] = cooldownTime[1];
-            }
+
+            abilityMeters[0].SetActive(true);
+            abilityMeters[1].SetActive(true);
+            abilityMeters[2].SetActive(false);
+
         }
         else if (health >= 75 && health <= 100)
         {
-            ability1Meter.SetActive(true);
-            ability2Meter.SetActive(true);
-            ability3Meter.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Alpha1) && curcooldownTime[0] >= cooldownTime[0])
-            {
-                activatedAbility = 1;
-                curcooldownTime[0] = cooldownTime[0];
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && curcooldownTime[1] >= cooldownTime[1])
-            {
-                activatedAbility = 2;
-                curcooldownTime[1] = cooldownTime[1];
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                activatedAbility = 3;
-                curcooldownTime[2] = cooldownTime[2];
-            }
+
+            abilityMeters[0].SetActive(true);
+            abilityMeters[1].SetActive(true);
+            abilityMeters[2].SetActive(true);
         }
     }
 
@@ -429,15 +407,3 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
     }
 }
-
-    {
-        Debug.Log(Input.GetAxis("SwitchLeft"));
-
-
-
-            abilityMeters[0].SetActive(true);
-            abilityMeters[1].SetActive(true);
-            abilityMeters[2].SetActive(false);
-            abilityMeters[0].SetActive(true);
-            abilityMeters[1].SetActive(true);
-            abilityMeters[2].SetActive(true);
