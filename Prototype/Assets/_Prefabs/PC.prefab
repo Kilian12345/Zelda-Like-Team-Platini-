@@ -534,8 +534,10 @@ MonoBehaviour:
   CalciumCapacity: 25
   curDropChanceRate: 0
   DropChanceRate: 30
+  EnemiesFollowing: 0
   vel: 6
-  thrust: 10000
+  thrust: 15
+  dashDistance: 8
   cooldownTime:
   - 5
   - 10
@@ -550,10 +552,11 @@ MonoBehaviour:
   shootPoint: {fileID: 1489773366458406}
   rageSprite: {fileID: 0}
   countDownSprite: {fileID: 0}
-  ability1Meter: {fileID: 0}
-  ability2Meter: {fileID: 0}
-  ability3Meter: {fileID: 0}
   selector: {fileID: 0}
+  abilityMeters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   moveHor: 0
   moveVer: 0
   countDown: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FOWMesh : MonoBehaviour
 {
 
-    FOW fow;
+    /*FOW fow;
     Mesh mesh;
     RaycastHit2D hit;
     [SerializeField]
@@ -85,6 +85,6 @@ public class FOWMesh : MonoBehaviour
         mesh.vertices = vertices;
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
-    }
+    }*/
 
 }

@@ -7,15 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    FeedbacksOrder Fb_Order;
+    /// <summary>
+    /// /////////////////////////////GOOD
+    /// </summary>
 
+    FeedbacksOrder Fb_Order;
     Animator anim;
     AudioSource playerAudio;
     CinemachineImpulseSource source;
 
     public AudioClip hit, died;
-    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate;
-    public float vel, thrust;
+    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate, EnemiesFollowing;
+    public float vel, thrust, dashDistance;
     public float[] cooldownTime, curcooldownTime;
     public GameObject particles, gun, gunSprite, shootPoint, rageSprite, countDownSprite, selector;
     public GameObject[] abilityMeters;
@@ -169,30 +172,6 @@ public class Player : MonoBehaviour
                 {
                     activatedAbility = (selectedAbility + 1);
                     curcooldownTime[selectedAbility] = cooldownTime[selectedAbility];
-                    switch (activatedAbility)
-                    {
-                        case 1:
-                            {
-
-                            }
-                            break;
-                        case 2:
-                            {
-                                Fb_Order.valueList = 1;
-                            }
-                            break;
-                        case 3:
-                            {
-
-                            }
-                            break;
-                        default:
-                            {
-                                Fb_Order.valueList = 0;
-                            }
-                            break;
-                    }
-                    
                 }
             }
         }
@@ -254,7 +233,6 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[0] < 0)
                     {
                         activatedAbility = 0;
-                        Fb_Order.valueList = 0;
                     }
                     else
                     {
@@ -274,10 +252,7 @@ public class Player : MonoBehaviour
                 {
                     if (curcooldownTime[1] < 0)
                     {
-                        ///////////////////////////////////////////// SLOW MOTION
                         activatedAbility = 0;
-                        Fb_Order.valueList = 0;
-
                     }
                     else
                     {
@@ -298,7 +273,6 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[2] < 0)
                     {
                         activatedAbility = 0;
-                        Fb_Order.valueList = 0;
                     }
                     else
                     {
