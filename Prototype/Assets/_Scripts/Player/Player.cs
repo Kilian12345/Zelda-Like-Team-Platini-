@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
                         case 2:
                             {
                                 Fb_Order.valueList = 1;
-                                ghost.repeat = 0.5f;
+                                ghost.repeat = 0.0001f;
                             }
                             break;
                         default:

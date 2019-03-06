@@ -44,7 +44,6 @@ public class Enemy2 : MonoBehaviour
                     timeToAttack = Time.time + 1 / attackSpeed;
                     StartCoroutine(Attack());
                     anim.SetBool("Hit", true);
-                    Debug.Log("Attack");
                 }
                 
             }

@@ -31,6 +31,9 @@ public class Ghost : MonoBehaviour
 
     void Update()
     {
+
+        Debug.Log(trailParts.IndexOf(trailPart));
+
         if (playerScript.moveHor < 0f)
         {
             flip = true;
@@ -56,8 +59,6 @@ public class Ghost : MonoBehaviour
         if ( Fb_Order.valueList == 1)
         {
 
-
-            Debug.Log("kkk");
             trailPart = new GameObject();
             SpriteRenderer trailPartRenderer = trailPart.AddComponent<SpriteRenderer>();
             trailPartRenderer.sprite = GetComponent<SpriteRenderer>().sprite;
@@ -86,7 +87,7 @@ public class Ghost : MonoBehaviour
         color.b = 0;
 
         time += Time.deltaTime / lifetime;
-        color.a = Mathf.Lerp(color.a, 0, time);
+        color.a = Mathf.Lerp(color.a, 1, time);
         color.r = Mathf.Lerp(color.r, 0, time);
         color.g = Mathf.Lerp(color.g, 0, time);
         color.b = Mathf.Lerp(color.b, 0, time);

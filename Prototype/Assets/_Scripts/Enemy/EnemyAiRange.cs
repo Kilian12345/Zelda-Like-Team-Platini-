@@ -125,7 +125,6 @@ public class EnemyAiRange : MonoBehaviour
         if (dist < nextWaypointDistance * 5)
         {
             currentWaypoint++;
-            Debug.Log("p.error");
             return;
         }
     }

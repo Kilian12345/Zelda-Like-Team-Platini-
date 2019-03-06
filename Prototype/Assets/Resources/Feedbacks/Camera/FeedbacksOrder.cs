@@ -63,15 +63,6 @@ public class FeedbacksOrder : MonoBehaviour
             StopAllCoroutines();
          }
 
-
-
-
-
-       Debug.Log(startTime);
-
-
-
-
     }
 
     void Values()
