@@ -9,7 +9,6 @@ public class FeedbacksOrder : MonoBehaviour
     public Feedbacks oldFeedback;
 
     bool different = false;
-    public float bite = 0;
     public float time = 2;
 
     float startTime = 0f;
@@ -31,8 +30,12 @@ public class FeedbacksOrder : MonoBehaviour
 
     private void Start()
     {
-        transitionValue = valueList;
-        oldValue = valueList;
+
+        saturation = 1;
+        contrast = 1;
+        brightness = 1;
+        strength = 0;
+
     }
 
 
@@ -69,33 +72,19 @@ public class FeedbacksOrder : MonoBehaviour
 
 
 
-
-
-        ////////////////////////////////////////////////// VALUES
-       /* saturation = Mathf.Lerp(oldFeedback.G_saturation, currentFeedback.G_saturation, startTime);
-        contrast = Mathf.Lerp(oldFeedback.G_contrast, currentFeedback.G_contrast, startTime);
-        brightness = Mathf.Lerp(oldFeedback.G_brightness, currentFeedback.G_brightness, startTime);
-        strength = Mathf.Lerp(oldFeedback.G_strength, currentFeedback.G_strength, startTime);
-        bite = Mathf.Lerp(bite, 1, startTime);
-
-        friction = currentFeedback.R_friction;
-        maxAmount = currentFeedback.R_maxAmount;
-        ripple = currentFeedback.R_ripple;*/
-
-
     }
 
     void Values()
     {
         currentFeedback = feedbacks[valueList];
         oldFeedback = feedbacks[oldValue];
+
         startTime = startTime + (Time.fixedDeltaTime / time);
 
         saturation = Mathf.Lerp(oldFeedback.G_saturation, currentFeedback.G_saturation, startTime);
         contrast = Mathf.Lerp(oldFeedback.G_contrast, currentFeedback.G_contrast, startTime);
         brightness = Mathf.Lerp(oldFeedback.G_brightness, currentFeedback.G_brightness, startTime);
         strength = Mathf.Lerp(oldFeedback.G_strength, currentFeedback.G_strength, startTime);
-        bite = Mathf.Lerp(bite, 1, startTime);
 
         friction = currentFeedback.R_friction;
         maxAmount = currentFeedback.R_maxAmount;

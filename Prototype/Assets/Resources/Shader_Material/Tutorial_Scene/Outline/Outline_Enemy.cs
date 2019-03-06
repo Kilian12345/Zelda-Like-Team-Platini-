@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Outline_Detect : MonoBehaviour
+public class Outline_Enemy : MonoBehaviour
 {
     [SerializeField]
     Renderer myRenderer;
@@ -11,7 +11,7 @@ public class Outline_Detect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myRenderer = GetComponent<Renderer>();
+       
     }
 
 
@@ -22,7 +22,7 @@ public class Outline_Detect : MonoBehaviour
             color = myRenderer.material.GetColor("_ColorOutline");
             color.a = 255;
             myRenderer.material.SetColor("_ColorOutline", color);
-            
+
         }
     }
 
