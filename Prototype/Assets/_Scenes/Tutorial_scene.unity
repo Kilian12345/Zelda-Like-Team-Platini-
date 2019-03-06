@@ -1023,17 +1023,17 @@ PrefabInstance:
     - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
         type: 3}
       propertyPath: cooldownTime.Array.data[0]
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
         type: 3}
       propertyPath: dashDistance
-      value: 18
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
         type: 3}
       propertyPath: thrust
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 522687464, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: vendingMachinePanel
@@ -3113,13 +3113,13 @@ MonoBehaviour:
   - {fileID: 39075432}
   - {fileID: 2036290030}
   costValue:
-  - 150
   - 500
   - 1000
+  - 1500
   damageValue:
   - 30
-  - 33
-  - 37
+  - 35
+  - 50
   rangeValue:
   - 0.5
   - 0.6
@@ -5307,6 +5307,7 @@ GameObject:
   - component: {fileID: 998334566}
   - component: {fileID: 998334565}
   - component: {fileID: 998334564}
+  - component: {fileID: 998334562}
   m_Layer: 0
   m_Name: Main Camera Ui
   m_TagString: MainCamera
@@ -5356,6 +5357,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &998334562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998334560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a15392d7207332448aa1ead9a130fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: d8e054692864ace469dd76ce6bcaeba1, type: 2}
 --- !u!114 &998334564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14933,6 +14947,11 @@ PrefabInstance:
     - target: {fileID: 1991873080179777534, guid: 01973d6081707e047aa6778a6c3264a4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991873080179777535, guid: 01973d6081707e047aa6778a6c3264a4,
+        type: 3}
+      propertyPath: m_UseAutoMass
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

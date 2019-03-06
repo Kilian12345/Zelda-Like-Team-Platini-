@@ -110,14 +110,14 @@ MonoBehaviour:
   shootPoint: {fileID: 1277167641}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   isInRange: 0
-  range: 3
-  enemyDamage: 1
+  range: 6
+  enemyDamage: 8
   isAttacking: 0
   pl: {fileID: 0}
   angle: 0
   anim: {fileID: 0}
-  attackSpeed: 0.2
-  attackRange: 0.4
+  attackSpeed: 0.3
+  attackRange: 0.5
 --- !u!95 &277052600
 Animator:
   serializedVersion: 3
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -314,6 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewRadius: 5
   viewAngle: 360
+  stopingDistance: 0
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
@@ -600,10 +601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c5327e1992f56438138c3d66af73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRes: 0.2
-  vertices: []
-  triangles: 
-  stepCount: 0
 --- !u!1 &1963826096
 GameObject:
   m_ObjectHideFlags: 0

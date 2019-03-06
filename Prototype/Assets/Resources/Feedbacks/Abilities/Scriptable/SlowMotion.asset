@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f358440c8c79f0149b322e3e5512c604, type: 3}
   m_Name: SlowMotion
   m_EditorClassIdentifier: 
-  G_saturation: 0
-  G_contrast: 1
+  G_saturation: 1
+  G_contrast: -1
   G_brightness: 1
   G_strength: 0
   R_friction: 0.8

@@ -111,12 +111,12 @@ MonoBehaviour:
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   isInRange: 0
   range: 3
-  enemyDamage: 1
+  enemyDamage: 3
   isAttacking: 0
   pl: {fileID: 0}
   angle: 0
   anim: {fileID: 0}
-  attackSpeed: 0.2
+  attackSpeed: 0.25
   attackRange: 0.4
 --- !u!95 &375765678
 Animator:
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0

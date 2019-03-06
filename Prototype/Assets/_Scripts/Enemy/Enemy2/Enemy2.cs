@@ -118,5 +118,10 @@ public class Enemy2 : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
     }
+
+    void OnDestroy()
+    {
+        pm.EnemiesFollowing--;
+    }
 }
 

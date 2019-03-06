@@ -136,6 +136,13 @@ public class Player : MonoBehaviour
         selectAbility();
         checkForAbilityState();
         cooldownUI();
+        updateEnemyFollowing();
+    }
+
+    void updateEnemyFollowing()
+    {
+        if (EnemiesFollowing <= 0)
+            EnemiesFollowing = 0;
     }
 
     IEnumerator refill()
