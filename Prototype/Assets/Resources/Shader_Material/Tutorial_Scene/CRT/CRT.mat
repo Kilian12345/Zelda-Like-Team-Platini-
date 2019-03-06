@@ -34,7 +34,7 @@ Material:
     - _Distort: 0
     - _OnOff: 1
     - _ScanDensity: 1
-    - _ScanPoint: 1220
+    - _ScanPoint: 1060
     - _ScanThikness: 100
     - _Strength: -0
     - _Tiles: 1
