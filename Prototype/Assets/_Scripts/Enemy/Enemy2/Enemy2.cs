@@ -44,7 +44,6 @@ public class Enemy2 : MonoBehaviour
                     timeToAttack = Time.time + 1 / attackSpeed;
                     StartCoroutine(Attack());
                     anim.SetBool("Hit", true);
-                    Debug.Log("Attack");
                 }
                 
             }
@@ -117,6 +116,11 @@ public class Enemy2 : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
+    }
+
+    void OnDestroy()
+    {
+        pm.EnemiesFollowing--;
     }
 }
 

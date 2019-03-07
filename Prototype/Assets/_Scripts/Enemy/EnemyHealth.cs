@@ -32,8 +32,9 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health < 0)
+        if (health <= 0)
         {
+            health = 0;
             enemy2Audio.clip = dead;
             enemy2Audio.Play();
             Instantiate(particles, transform.position, Quaternion.identity);
@@ -52,16 +53,17 @@ public class EnemyHealth : MonoBehaviour
 
         health -= dam;
 
-        if (health > 0)
+        /*if (health > 0)
         {
-            /*ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);*/
-            ps.PlayerScore += scorePerHit;
+            /*ps.PlayerScore += ((100 - ps.health) / 100) * (scorePerHit);
+            
             Debug.Log("Punch " + (100 - ps.health) / 100);
-        }
+        }*/
 
-        if (HitpointsParentPrefab)
+        if (HitpointsParentPrefab && health >= 0)
         {
             ShowHitpointsParent();
+            ps.PlayerScore += scorePerHit;
         }
     }
 

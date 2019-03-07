@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     /// /////////////////////////////GOOD
     /// </summary>
 
+    Ghost ghost;
     FeedbacksOrder Fb_Order;
     Animator anim;
     AudioSource playerAudio;
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        ghost = GetComponent<Ghost>();
         anim = gameObject.GetComponent<Animator>();
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
@@ -134,6 +136,13 @@ public class Player : MonoBehaviour
         selectAbility();
         checkForAbilityState();
         cooldownUI();
+        updateEnemyFollowing();
+    }
+
+    void updateEnemyFollowing()
+    {
+        if (EnemiesFollowing <= 0)
+            EnemiesFollowing = 0;
     }
 
     IEnumerator refill()
@@ -172,6 +181,21 @@ public class Player : MonoBehaviour
                 {
                     activatedAbility = (selectedAbility + 1);
                     curcooldownTime[selectedAbility] = cooldownTime[selectedAbility];
+                    switch (activatedAbility)
+                    {
+                        case 2:
+                            {
+                                Fb_Order.valueList = 1;
+                                ghost.repeat = 0.0001f;
+                            }
+                            break;
+                        default:
+                            {
+                                Fb_Order.valueList = 0;
+                                ghost.repeat = 0f;
+                            }
+                            break;
+                    }
                 }
             }
         }
@@ -233,6 +257,8 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[0] < 0)
                     {
                         activatedAbility = 0;
+                        Fb_Order.valueList = 0;
+                        ghost.repeat = 0f;
                     }
                     else
                     {
@@ -253,6 +279,8 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[1] < 0)
                     {
                         activatedAbility = 0;
+                        Fb_Order.valueList = 0;
+                        ghost.repeat = 0f;
                     }
                     else
                     {
@@ -273,6 +301,8 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[2] < 0)
                     {
                         activatedAbility = 0;
+                        Fb_Order.valueList = 0;
+                        ghost.repeat = 0f;
                     }
                     else
                     {

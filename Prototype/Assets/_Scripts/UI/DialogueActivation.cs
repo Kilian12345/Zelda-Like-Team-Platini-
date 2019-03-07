@@ -31,7 +31,6 @@ public class DialogueActivation : MonoBehaviour
     {
         if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
         {
-            Debug.Log("ACESS");
             dialogueManager.activator = this;
             dialogueManager.sentences = new Queue<string>(dialogue.sentences);
         }
@@ -41,7 +40,6 @@ public class DialogueActivation : MonoBehaviour
     {   
         if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
         {
-            Debug.Log("activate canvas");
             canvasIntDialogue.SetActive(true);
             InsideTriggerZone = true;
         }
@@ -51,7 +49,6 @@ public class DialogueActivation : MonoBehaviour
     {
         if(collision.gameObject.name == "PC")
         {
-            Debug.Log("deactivate canvas");
             canvasIntDialogue.SetActive(false);
             InsideTriggerZone = false;
         }
