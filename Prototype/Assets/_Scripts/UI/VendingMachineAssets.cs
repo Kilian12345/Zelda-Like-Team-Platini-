@@ -1,46 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VendingMachineAssets : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField]
+    GameObject canvasIntVending;
+
     public GameObject vendingMachinePanel;
+    [SerializeField]
+    private bool machineOpen, isInTrigger, timeStop;
 
-    void Start()
+    void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "VendingMachine")
+        if (isInTrigger)
         {
-            vendingMachinePanel.SetActive(true);
+            if ((Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.JoystickButton2)))
+            {
+                machineOpen = !machineOpen;
+                vendingMachinePanel.SetActive(machineOpen);
+            }
         }
-        else
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
         {
+            canvasIntVending.SetActive(true);
+            isInTrigger = true;
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            canvasIntVending.SetActive(true);
+            isInTrigger = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            canvasIntVending.SetActive(false);
             vendingMachinePanel.SetActive(false);
-        }
-    }
-    void OnCollisionStay2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "VendingMachine")
-        {
-            vendingMachinePanel.SetActive(true);
-        }
-    }
-    void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "VendingMachine")
-        {
-            vendingMachinePanel.SetActive(false);
+            isInTrigger = false;
         }
     }
 }
