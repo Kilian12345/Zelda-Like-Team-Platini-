@@ -330,8 +330,6 @@ MonoBehaviour:
   isInRange: 0
   weapon: {fileID: 1991873080297084884}
   shootPoint: {fileID: 1991873079368207572}
-  particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
-  dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
 --- !u!82 &1991873080179777523
 AudioSource:
@@ -441,7 +439,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 150
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -554,6 +552,7 @@ MonoBehaviour:
   bull: {fileID: 6620391157573399382, guid: f973c1e699ba4fc4aafd8ea42804ddec, type: 3}
   shootPoint: {fileID: 1991873079368207573}
   pl: {fileID: 0}
+  anim: {fileID: 0}
   angle: 0
   FireRate: 0.3
   LocalX: 0
