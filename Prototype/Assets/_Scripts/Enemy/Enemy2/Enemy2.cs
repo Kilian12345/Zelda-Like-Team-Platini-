@@ -5,17 +5,17 @@ using UnityEngine;
 public class Enemy2 : MonoBehaviour
 {
     public AudioSource enemy2Audio;
-    public AudioClip dead, punch;
-    public GameObject gun, shootPoint, particles;
+    public AudioClip punch;
+    public GameObject gun, shootPoint;
     Player pm;
     public bool isInRange;
-    public float range, enemyDamage;
+    public float range,combatDistance, enemyDamage;
     public bool isAttacking;
     Transform target;
     public Transform pl;
     public float angle;
     private float LocalX;
-    public Animator anim;
+    public Animator anim,anim2;
     public float attackSpeed,attackRange;
     private float timeToAttack;
     Vector2 dir;
@@ -29,6 +29,7 @@ public class Enemy2 : MonoBehaviour
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         LocalX = transform.localScale.x;
         anim = gun.GetComponentInChildren<Animator>();
+        anim2 = GetComponent<Animator>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
@@ -38,23 +39,33 @@ public class Enemy2 : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, target.position) < range)
             {
-                isInRange = true;
-                if (Time.time > timeToAttack)
+                if (pm.EnemiesFollowing<3)
                 {
-                    timeToAttack = Time.time + 1 / attackSpeed;
-                    StartCoroutine(Attack());
-                    anim.SetBool("Hit", true);
+                    anim2.SetBool("isSeen", true);
                 }
-                
+                if (Vector2.Distance(transform.position, target.position) < combatDistance)
+                {
+                    isInRange = true;
+                    if (Time.time > timeToAttack)
+                    {
+                        timeToAttack = Time.time + 1 / attackSpeed;
+                        StartCoroutine(Attack());
+                        anim.SetBool("Hit", true);
+                    }
+
+                }
+                else
+                {
+                    isInRange = false;
+                    anim.SetBool("Hit", false);
+                }
+                look();
             }
             else
             {
-                isInRange = false;
-                anim.SetBool("Hit", false);
-            }
-            look();
+                anim2.SetBool("isSeen", false);
+            }  
         }
-        
 
     }
 
@@ -79,10 +90,7 @@ public class Enemy2 : MonoBehaviour
     {
         if (col.gameObject.tag == "Bullet")
         {
-            enemy2Audio.clip = dead;
-            enemy2Audio.Play();
-            Instantiate(particles, transform.position, Quaternion.identity);
-            Destroy(gameObject, 0.5f);
+            GetComponent<EnemyHealth>().health = 0;
         }
     }
 

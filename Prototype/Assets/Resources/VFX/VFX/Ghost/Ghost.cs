@@ -82,15 +82,15 @@ public class Ghost : MonoBehaviour
         Color color = trailPartRenderer.color;
         color.a = alpha ;
 
-        color.r = 0;
+        /*color.r = 0;
         color.g = 0;
-        color.b = 0;
+        color.b = 0;*/
 
         time += Time.deltaTime / lifetime;
         color.a = Mathf.Lerp(color.a, 1, time);
-        color.r = Mathf.Lerp(color.r, 0, time);
+       /* color.r = Mathf.Lerp(color.r, 0, time);
         color.g = Mathf.Lerp(color.g, 0, time);
-        color.b = Mathf.Lerp(color.b, 0, time);
+        color.b = Mathf.Lerp(color.b, 0, time);*/
 
         trailPartRenderer.color = color;
 
@@ -112,11 +112,13 @@ public class Ghost : MonoBehaviour
 
     void FlipTrail()
     {
-        foreach (GameObject trailPart in trailParts)
+        /*foreach (GameObject trailPart in trailParts)
         {
             trailPartLocalScale = trailPart.transform.localScale;
             trailPartLocalScale.x = -trailPartLocalScale.x;
             trailPart.transform.localScale = trailPartLocalScale;
-        }
+        }*/
+        /// NEED TO FIX THIS STUFF
+        ///
     }
 }

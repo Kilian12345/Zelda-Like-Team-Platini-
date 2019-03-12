@@ -9,14 +9,14 @@ public class SentryHitBox : MonoBehaviour
     public bool isChargingType;
 
     Transform pl;
-    EnemyAiRange path;
+    //EnemyAiRange path;
 
     void Start()
     {
         if (!isChargingType)
         {
-            path = GetComponentInParent<EnemyAiRange>();
-            path.enabled = false;
+            /*path = GetComponentInParent<EnemyAiRange>();
+            path.enabled = false;*/
         }
         pl = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -30,7 +30,7 @@ public class SentryHitBox : MonoBehaviour
                 isInside = true;
                 if (!isChargingType)
                 {
-                    path.enabled = true;
+                    //path.enabled = true;
                 }
             }
             else
@@ -38,7 +38,7 @@ public class SentryHitBox : MonoBehaviour
                 isInside = false;
                 if (!isChargingType)
                 {
-                    path.enabled = false;
+                    //path.enabled = false;
                 }
             }
                 
@@ -53,7 +53,7 @@ public class SentryHitBox : MonoBehaviour
                 isInside = true;
                 if (!isChargingType)
                 {
-                    path.enabled = true;
+                    //path.enabled = true;
                 }
             }
             else
@@ -61,7 +61,7 @@ public class SentryHitBox : MonoBehaviour
                 isInside = false;
                 if (!isChargingType)
                 {
-                    path.enabled = false;
+                   // path.enabled = false;
                 }
             }
         }
@@ -73,7 +73,7 @@ public class SentryHitBox : MonoBehaviour
 			isInside=false;
             if (!isChargingType)
             {
-                path.enabled = false;
+                //path.enabled = false;
             }
         }
 	}
