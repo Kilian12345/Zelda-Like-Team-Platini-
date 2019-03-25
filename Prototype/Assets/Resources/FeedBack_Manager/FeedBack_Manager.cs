@@ -13,6 +13,7 @@ public class FeedBack_Manager : MonoBehaviour
     public Material TransitionMaterial;
     [SerializeField] Material[] matList;
     public float cutoff;
+    public float transitionTime = 1;
     #endregion
 
     #region ScreenShake
@@ -30,20 +31,22 @@ public class FeedBack_Manager : MonoBehaviour
     #region Camera Shader
     [Header("Camera Shader /////////////////////////////////////")]
 
-    [Header("PostProcess")]
-    PostProcessVolume volume;
-
     [Header("Bloom")]
-    [SerializeField] float time;
-    float timos;
+    [SerializeField] float timeBloom;
+    Bloom bloomLayer = null;
     public float bloom = 0.15f;
     bool doneBloom = false;
-    Bloom bloomLayer = null;
+    float bloomTime;
 
-    [Header("Lens")]
-    LensDistortion lens = null;
-    public float lensOpacity = 0;
-    bool doneLens = false;
+    [NonSerialized] PostProcessVolume volume;
+
+    [Header("Vignette")]
+    [SerializeField] float timeLens;
+    [SerializeField] Color vignetteColor;
+    Vignette vignette = null;
+    public float vignetteOpacity = 0;
+    bool doneVignette = false;
+    float vignetteTime;
 
     #endregion
 
@@ -55,6 +58,8 @@ public class FeedBack_Manager : MonoBehaviour
     public float Friction = .9f;
     public float Amount = 0f;
     public float secondsToWait = 0.2f;
+
+    [Space (10.0f)]
     public Transform target;
     public Camera camera;
 
@@ -76,7 +81,7 @@ public class FeedBack_Manager : MonoBehaviour
         // PostProcess
         volume = GetComponentInChildren<PostProcessVolume>();
         volume.profile.TryGetSettings(out bloomLayer);
-        volume.profile.TryGetSettings(out lens);
+        volume.profile.TryGetSettings(out vignette);
         //renderTexture = cam.activeTexture;
     }
 
@@ -85,18 +90,17 @@ public class FeedBack_Manager : MonoBehaviour
     {
         CameraShake();
         Bloom();
-        LensDistorted();
+        Vignette();
     }
 
     void Bloom()
     {
 
-        bloomLayer.intensity.value = Mathf.Lerp(0, bloom, timos);
+        bloomLayer.intensity.value = Mathf.Lerp(0, bloom, bloomTime);
 
         if (Input.GetKey(KeyCode.Space))
         {
-
-            timos += Time.deltaTime * time;
+            bloomTime += Time.deltaTime * timeBloom;
             doneBloom = false;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
@@ -106,29 +110,36 @@ public class FeedBack_Manager : MonoBehaviour
 
         if (doneBloom)
         {
-            timos = Mathf.Lerp(timos, 0, Time.deltaTime / 0.5f);
+            bloomTime = Mathf.Lerp(bloomTime, 0, Time.deltaTime / bloomTime);
         }
+
+        if (bloomTime > 1) bloomTime = 1;
     }
 
-    void LensDistorted()
+    void Vignette()
     {
-        lens.intensity.value = Mathf.Lerp(0, bloom, timos);
+
+
+
+        vignette.opacity.value = Mathf.Lerp(0, vignetteOpacity, vignetteTime);
+        vignette.color.value = vignetteColor;
 
         if (Input.GetKey(KeyCode.Space))
         {
-
-            timos += Time.deltaTime * time;
-            doneLens = false;
+            vignetteTime += Time.deltaTime * timeLens;
+            doneVignette = false;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            doneLens = true;
+            doneVignette = true;
         }
 
-        if (doneLens)
+        if (doneVignette)
         {
-            timos = Mathf.Lerp(timos, 0, Time.deltaTime / 0.5f);
+            vignetteTime = Mathf.Lerp(vignetteTime, 0, Time.deltaTime / vignetteTime);
         }
+
+        if (vignetteTime > 1) vignetteTime = 1;
     }
 
     void CameraShake()

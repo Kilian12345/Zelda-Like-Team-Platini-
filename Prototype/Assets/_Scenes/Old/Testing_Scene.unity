@@ -145,15 +145,18 @@ MonoBehaviour:
   matList:
   - {fileID: 2100000, guid: 588f9f2d201b1e24fa472c787dbcdb94, type: 2}
   - {fileID: 2100000, guid: 7624d611bd330e44b80ef65275598a16, type: 2}
-  cutoff: 0.4
-  shakeAmplitude: 0.05
+  cutoff: 0
+  transitionTime: 1
+  shakeAmplitude: 0
   shakeDuration: 4
   shakeFrequency: 2
   shakeElapsedTime: 0
   virtualCamera: {fileID: 290785488}
-  time: 0.9
+  timeBloom: 0
   bloom: 20
-  lensOpacity: 0
+  timeLens: 1
+  vignetteColor: {r: 1, g: 0, b: 0, a: 1}
+  vignetteOpacity: 1
   ripple: 0
   MaxAmount: 50
   Friction: 0.9
@@ -230,7 +233,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 1532325888}
   m_Follow: {fileID: 1532325888}
   m_Lens:
     FieldOfView: 40

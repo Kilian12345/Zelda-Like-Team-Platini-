@@ -20,16 +20,21 @@ public class SimpleBlit : MonoBehaviour
 
     private void Update()
     {
+        Cutoff();
+    }
+
+    void Cutoff()
+    {
         TransitionMaterial = Fb_Mana.TransitionMaterial;
 
-        float shininess = Mathf.Lerp(0, Fb_Mana.cutoff, time * 0.35f);
+        float shininess = Mathf.Lerp(0, Fb_Mana.cutoff, time);
         TransitionMaterial.SetFloat("_Cutoff", shininess);
-        
+
 
         if (Input.GetKey(KeyCode.Space))
         {
 
-            time += Time.deltaTime / 0.5f;
+            time += Time.deltaTime / Fb_Mana.transitionTime;
             done = false;
 
         }
@@ -40,15 +45,16 @@ public class SimpleBlit : MonoBehaviour
 
         if (done)
         {
-            time = Mathf.Lerp(time, 0, Time.deltaTime / 2f);
+            time = Mathf.Lerp(time, 0, Time.deltaTime / time);
         }
 
         if (time < 0.05f && done == true)
         {
             time = 0;
         }
-    }
 
+        if (time > Fb_Mana.cutoff) time = Fb_Mana.cutoff;
+    }
 
     void OnRenderImage(RenderTexture src, RenderTexture dst)
     {
