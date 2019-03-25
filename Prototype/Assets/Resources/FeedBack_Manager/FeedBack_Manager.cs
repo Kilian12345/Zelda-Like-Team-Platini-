@@ -70,7 +70,16 @@ public class FeedBack_Manager : MonoBehaviour
     public float strength = 0;
     #endregion
 
+    #region Abilities
+    [Header("Abilities /////////////////////////////////////")]
+    [Header("1st Ability")]
 
+    [Header("2nt Ability")]
+    [SerializeField] float timeSecond;
+
+    [Header("3rd Ability")]
+    [SerializeField] float timeThird;
+    #endregion
 
     void Start()
     {
@@ -91,6 +100,7 @@ public class FeedBack_Manager : MonoBehaviour
         CameraShake();
         Bloom();
         Vignette();
+        if (Input.GetKey(KeyCode.Space)) StartCoroutine(secondAbility());
     }
 
     void Bloom()
@@ -175,5 +185,22 @@ public class FeedBack_Manager : MonoBehaviour
             }
         }
     }
+
+    IEnumerator secondAbility()
+    {
+        while (saturationAmount > 0)
+        {
+            ripple = true;
+            saturationAmount -= 0.00000000000001f;
+        }
+
+
+        yield return new WaitForSeconds(timeSecond);
+
+        saturationAmount = Mathf.Lerp(0, 1, Time.deltaTime);
+        ripple = false;
+
+    }
+
 
 }
