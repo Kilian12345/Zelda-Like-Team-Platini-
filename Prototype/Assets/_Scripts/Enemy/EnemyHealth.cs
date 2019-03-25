@@ -20,14 +20,12 @@ public class EnemyHealth : MonoBehaviour
     Transform pl;
 
     ThirdAbility ThAb;
-    EnemyAI AI;
 
     void Start()
     {
         enemy2Audio = gameObject.GetComponent<AudioSource>();
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ThAb = FindObjectOfType<ThirdAbility>();
-        AI = FindObjectOfType<EnemyAI>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
@@ -95,7 +93,7 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
-            AI.speed = 100;
+
         }
     }
 
@@ -110,7 +108,7 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator Damage()
     {
-        AI.speed = 20;
+
         //yield return new WaitForSeconds(1);
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
         yield return health;

@@ -573,7 +573,7 @@ MonoBehaviour:
   damage: 25
   rageDamage: 20
   rageTimer: 15
-  rageVel: 18
+  rageVel: 12
   curTime: 0
   slowDownFactor: 0.5
   slowDownLast: 0
