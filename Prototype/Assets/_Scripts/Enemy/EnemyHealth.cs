@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private int scorePerHit;
 
+    bool asExploded;
+
     Player ps;
     Transform pl;
 
@@ -26,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ThAb = FindObjectOfType<ThirdAbility>();
         AI = FindObjectOfType<EnemyAI>();
-        pl= GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -37,9 +39,12 @@ public class EnemyHealth : MonoBehaviour
             health = 0;
             enemy2Audio.clip = dead;
             enemy2Audio.Play();
-            Instantiate(particles, transform.position, Quaternion.identity);
+            GetComponent<Collider2D>().enabled = false;
             Destroy(gameObject, 0.5f);
+
+            Blood();
         }
+
 
         ZoneDamage();
 
@@ -73,7 +78,7 @@ public class EnemyHealth : MonoBehaviour
         go.GetComponentInChildren<Text>().text = scorePerHit.ToString();
         if (pl.position.x > transform.position.x)
         {
-            go.GetComponent<RectTransform>().localScale= new Vector3(1, 1, 1);
+            go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         }
         else
         {
@@ -94,6 +99,15 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    void Blood()
+    {
+        if (asExploded == false)
+        {
+            Instantiate(particles, transform.position, Quaternion.identity);
+            asExploded = true;
+        }
+    }
+
     IEnumerator Damage()
     {
         AI.speed = 20;
@@ -101,6 +115,7 @@ public class EnemyHealth : MonoBehaviour
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
         yield return health;
     }
+
 }
 
 
