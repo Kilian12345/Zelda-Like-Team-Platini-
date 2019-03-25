@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
             enemy2Audio.clip = dead;
             enemy2Audio.Play();
             GetComponent<Collider2D>().enabled = false;
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 1f);
 
             Blood();
         }

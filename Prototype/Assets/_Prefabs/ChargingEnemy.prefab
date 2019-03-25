@@ -552,9 +552,13 @@ MonoBehaviour:
   bull: {fileID: 6620391157573399382, guid: f973c1e699ba4fc4aafd8ea42804ddec, type: 3}
   shootPoint: {fileID: 1991873079368207573}
   pl: {fileID: 0}
+  canMove: 0
   anim: {fileID: 0}
   angle: 0
-  FireRate: 0.3
+  FireRate: 0.4
+  coolDownTime: 5
+  bulletsPerBurst: 3
+  ctrBullet: 0
   LocalX: 0
 --- !u!61 &1991873080297084883
 BoxCollider2D:
