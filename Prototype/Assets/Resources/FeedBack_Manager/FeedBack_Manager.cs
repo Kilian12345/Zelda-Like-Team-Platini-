@@ -29,13 +29,22 @@ public class FeedBack_Manager : MonoBehaviour
 
     #region Camera Shader
     [Header("Camera Shader /////////////////////////////////////")]
+
     [Header("PostProcess")]
+    PostProcessVolume volume;
+
+    [Header("Bloom")]
     [SerializeField] float time;
     float timos;
     public float bloom = 0.15f;
-    [SerializeField] bool done = false;
-    PostProcessVolume volume;
+    bool doneBloom = false;
     Bloom bloomLayer = null;
+
+    [Header("Lens")]
+    LensDistortion lens = null;
+    public float lensOpacity = 0;
+    bool doneLens = false;
+
     #endregion
 
     #region Shader Effect
@@ -67,6 +76,7 @@ public class FeedBack_Manager : MonoBehaviour
         // PostProcess
         volume = GetComponentInChildren<PostProcessVolume>();
         volume.profile.TryGetSettings(out bloomLayer);
+        volume.profile.TryGetSettings(out lens);
         //renderTexture = cam.activeTexture;
     }
 
@@ -74,10 +84,11 @@ public class FeedBack_Manager : MonoBehaviour
     void Update()
     {
         CameraShake();
-        PostProcess();
+        Bloom();
+        LensDistorted();
     }
 
-    void PostProcess()
+    void Bloom()
     {
 
         bloomLayer.intensity.value = Mathf.Lerp(0, bloom, timos);
@@ -86,14 +97,35 @@ public class FeedBack_Manager : MonoBehaviour
         {
 
             timos += Time.deltaTime * time;
-            done = false;
+            doneBloom = false;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            done = true;
+            doneBloom = true;
         }
 
-        if (done)
+        if (doneBloom)
+        {
+            timos = Mathf.Lerp(timos, 0, Time.deltaTime / 0.5f);
+        }
+    }
+
+    void LensDistorted()
+    {
+        lens.intensity.value = Mathf.Lerp(0, bloom, timos);
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+
+            timos += Time.deltaTime * time;
+            doneLens = false;
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            doneLens = true;
+        }
+
+        if (doneLens)
         {
             timos = Mathf.Lerp(timos, 0, Time.deltaTime / 0.5f);
         }
