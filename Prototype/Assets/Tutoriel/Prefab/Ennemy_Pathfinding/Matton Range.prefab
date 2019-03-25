@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInside: 0
-  path: {fileID: 0}
+  stopingDistance: 2
 --- !u!58 &451967455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.013959256}
   serializedVersion: 2
-  m_Radius: 0.10100676
+  m_Radius: 0.15277344
 --- !u!1 &926705042
 GameObject:
   m_ObjectHideFlags: 0

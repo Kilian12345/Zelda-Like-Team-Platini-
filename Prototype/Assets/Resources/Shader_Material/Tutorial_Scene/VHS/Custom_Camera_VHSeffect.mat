@@ -31,7 +31,7 @@ Material:
     - _Intensity: 0.64
     - _OffsetColor: 0.01
     - _OffsetDistortion: 480
-    - _OffsetNoiseX: 0.010748935
-    - _OffsetNoiseY: -6.465596
+    - _OffsetNoiseX: 0.19750305
+    - _OffsetNoiseY: 0.25541735
     - _OffsetPosY: 0
     m_Colors: []

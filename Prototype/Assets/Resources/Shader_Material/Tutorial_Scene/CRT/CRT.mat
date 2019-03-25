@@ -30,11 +30,11 @@ Material:
     m_Floats:
     - _Br: 48
     - _Contrast: 5.9
-    - _Density: 6
+    - _Density: 4
     - _Distort: 0
     - _OnOff: 1
     - _ScanDensity: 1
-    - _ScanPoint: 1080
+    - _ScanPoint: 1020
     - _ScanThikness: 100
     - _Strength: -0
     - _Tiles: 1
