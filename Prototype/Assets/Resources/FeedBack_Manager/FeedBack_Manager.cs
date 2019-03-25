@@ -70,7 +70,20 @@ public class FeedBack_Manager : MonoBehaviour
     public float strength = 0;
     #endregion
 
+    #region Abilities
+    [Header("Abilities /////////////////////////////////////")]
+    [Header("1st Ability")]
 
+    [Header("2nt Ability")]
+    [SerializeField] bool doneSecond = false;
+    public bool secondActivated = false;
+    [SerializeField] float timeSecond;
+    [SerializeField] float timeDeltaSecond;
+
+
+    [Header("3rd Ability")]
+    [SerializeField] float timeThird;
+    #endregion
 
     void Start()
     {
@@ -88,9 +101,12 @@ public class FeedBack_Manager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space)) secondActivated = true;
+
         CameraShake();
         Bloom();
         Vignette();
+        if (secondActivated == true) StartCoroutine(secondAbility());
     }
 
     void Bloom()
@@ -175,5 +191,39 @@ public class FeedBack_Manager : MonoBehaviour
             }
         }
     }
+
+
+    IEnumerator secondAbility()
+    {
+        if (saturationAmount > 0 && doneSecond == false)
+        {
+
+            ripple = true;
+            timeDeltaSecond += Time.deltaTime;
+            saturationAmount = Mathf.Lerp(1, 0, timeDeltaSecond); 
+
+        }
+
+        yield return new WaitForSeconds(timeSecond);
+
+
+        if (saturationAmount <= 0)
+        {
+            doneSecond = true;
+
+            saturationAmount = Mathf.Lerp(0, 1, timeDeltaSecond * Time.deltaTime);            
+
+            if (saturationAmount >= 1)
+            {
+                saturationAmount = 1;
+                secondActivated = false;
+                ripple = false;
+            }
+        }
+
+
+
+    }
+
 
 }
