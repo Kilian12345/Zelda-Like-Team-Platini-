@@ -4795,6 +4795,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
         type: 3}
+    - target: {fileID: 375765679, guid: e8de5d5a580f04842ab968ec1101189b, type: 3}
+      propertyPath: range
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8de5d5a580f04842ab968ec1101189b, type: 3}
 --- !u!1 &941548351
@@ -9422,6 +9426,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
         type: 3}
+    - target: {fileID: 277052600, guid: 6cb110cda2d83b640a0b67a53361d904, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 70a59ecc9b33e524eae670fc4933e3e0, type: 2}
+    - target: {fileID: 277052600, guid: 6cb110cda2d83b640a0b67a53361d904, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cb110cda2d83b640a0b67a53361d904, type: 3}
 --- !u!4 &1656118865 stripped
@@ -14673,6 +14685,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UseAutoMass
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991873080297084880, guid: 01973d6081707e047aa6778a6c3264a4,
+        type: 3}
+      propertyPath: coolDownTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991873080297084880, guid: 01973d6081707e047aa6778a6c3264a4,
+        type: 3}
+      propertyPath: bulletsPerBurst
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01973d6081707e047aa6778a6c3264a4, type: 3}

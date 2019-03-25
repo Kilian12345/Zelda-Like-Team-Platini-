@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 451967458}
   - component: {fileID: 451967457}
   - component: {fileID: 451967456}
-  - component: {fileID: 451967455}
   - component: {fileID: 8854130843782900011}
+  - component: {fileID: 2117767356764101678}
   m_Layer: 0
   m_Name: hitBox
   m_TagString: Untagged
@@ -97,22 +97,6 @@ MonoBehaviour:
   isInside: 0
   stopingDistance: 0
   isChargingType: 0
---- !u!58 &451967455
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451967454}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.013959256}
-  serializedVersion: 2
-  m_Radius: 0.10100676
 --- !u!114 &8854130843782900011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +111,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRenderer: {fileID: 1515281259}
   color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!58 &2117767356764101678
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451967454}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!1 &926705042
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,9 +743,13 @@ MonoBehaviour:
   bull: {fileID: 6620391157573399382, guid: f973c1e699ba4fc4aafd8ea42804ddec, type: 3}
   shootPoint: {fileID: 1825557733}
   pl: {fileID: 0}
+  canMove: 0
   anim: {fileID: 0}
   angle: 0
-  FireRate: 1
+  FireRate: 0.5
+  coolDownTime: 10
+  bulletsPerBurst: 5
+  ctrBullet: 0
   LocalX: 0
 --- !u!61 &1777151190
 BoxCollider2D:

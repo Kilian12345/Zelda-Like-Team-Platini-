@@ -13,11 +13,13 @@ public class Sentry : MonoBehaviour
     public GameObject bull;
     public Transform shootPoint;
     public Transform pl;
-
+    public bool canMove;
     public Animator anim;
 
     public float angle;
-    public float FireRate = 0.5f;
+    public float FireRate = 0.5f,coolDownTime,bulletsPerBurst;
+    [SerializeField]
+    private float ctrBullet;
     float timeToFire = 0;
 
     SentryHitBox st;
@@ -39,30 +41,68 @@ public class Sentry : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (pl != null)
         {
             look();
-            if (st.isInside)
+            /*if (st.isInside)
             {
                 if (Time.time > timeToFire)
                 {
                     timeToFire = Time.time + 1 / FireRate;
                     shoot();
                 }
+            }*/
+            if (st.isInside)
+            {
+                if (ctrBullet < bulletsPerBurst)
+                {
+                    if (Time.time > timeToFire)
+                    {
+                        canMove = false;
+                        timeToFire = Time.time + 1 / FireRate;
+                        shoot();
+                        ctrBullet++;
+                        Invoke("switchMoveBool", (1 /FireRate)/2);
+                    }
+                }
+                else
+                {
+                    canMove = false;
+                    Invoke("coolDown", coolDownTime);
+                    Invoke("switchMoveBool", coolDownTime);
+                }
             }
         }
     }
+
+    void switchMoveBool()
+    {
+        canMove = true;
+    }
+
+    void coolDown()
+    {
+        ctrBullet = 0;
+    }
+
     void look()
     {
         if (pl != null)
         {
             if (st.isInside)
             {
-                if (body.GetComponent<ChargingEnemy>() == null && pm.EnemiesFollowing<3)
+                if (body.GetComponent<ChargingEnemy>() == null)
                 {
-                    anim.SetBool("isSeen", true);
+                    if (pm.EnemiesFollowing < 3 && canMove && Vector2.Distance(pl.position,transform.position)>10)
+                    {
+                        anim.SetBool("isSeen", true);
+                    }
+                    else
+                    {
+                        anim.SetBool("isSeen", false);
+                    }  
                 }
                 Vector3 dir = (pl.position - transform.position);
                 angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -93,6 +133,7 @@ public class Sentry : MonoBehaviour
     {
         sentryAudio.Play();
         Instantiate(bull, shootPoint.position, gameObject.transform.rotation);
+        
     }
 
     /*void OnCollisionEnter2D(Collision2D col)

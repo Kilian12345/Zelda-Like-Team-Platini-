@@ -108,7 +108,7 @@ MonoBehaviour:
   gun: {fileID: 1963826096}
   shootPoint: {fileID: 1277167641}
   isInRange: 0
-  range: 8
+  range: 12
   combatDistance: 4
   enemyDamage: 8
   isAttacking: 0
