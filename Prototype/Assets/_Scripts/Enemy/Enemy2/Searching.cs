@@ -6,7 +6,6 @@ public class Searching : StateMachineBehaviour
 {
     public Transform playerPos;
     public float speed, stopingDistance;
-    private float rangeOfMovement;
     Player ps;
     
 
@@ -16,7 +15,6 @@ public class Searching : StateMachineBehaviour
         playerPos= GameObject.FindGameObjectWithTag("Player").transform;
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ps.EnemiesFollowing++;
-        rangeOfMovement = stopingDistance + 2f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
