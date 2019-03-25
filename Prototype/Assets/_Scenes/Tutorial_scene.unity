@@ -3641,9 +3641,7 @@ GameObject:
   - component: {fileID: 794492803}
   - component: {fileID: 794492808}
   - component: {fileID: 794492807}
-  - component: {fileID: 794492806}
   - component: {fileID: 794492805}
-  - component: {fileID: 794492804}
   m_Layer: 0
   m_Name: Enviro Camera
   m_TagString: MainCamera
@@ -3665,25 +3663,6 @@ Transform:
   m_Father: {fileID: 962431527}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &794492804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794492802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cd246d238dd1f4abe03fc2039ebd57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2007903138}
-  RippleMaterial: {fileID: 2100000, guid: 9f00670a7687fee4c8a9fd548dd8d0fe, type: 2}
-  MaxAmount: 40
-  canripple: 1
-  secondsToWait: 0.2
-  Friction: 0.8
-  pos: {x: 0, y: 0, z: 0}
 --- !u!114 &794492805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3700,23 +3679,6 @@ MonoBehaviour:
   smoothRefresh: 0
   smoothDistort: 0
   interval: 0
---- !u!114 &794492806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794492802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 805ad45c46d529145bf9c928b7333751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curShader: {fileID: 4800000, guid: 0e5e970d71dfd124e8a2e5ecd4fa4b2e, type: 3}
-  brightnessAmount: 0
-  saturationAmount: 0
-  contrastAmount: 0
-  strength: 0
 --- !u!114 &794492807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5007,10 +4969,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curShader: {fileID: 4800000, guid: 0e5e970d71dfd124e8a2e5ecd4fa4b2e, type: 3}
-  brightnessAmount: 0
-  saturationAmount: 0
-  contrastAmount: 0
-  strength: 0
+  brightnessAmount_: 0
+  saturationAmount_: 0
+  contrastAmount_: 0
+  strength_: 0
 --- !u!114 &962431531
 MonoBehaviour:
   m_ObjectHideFlags: 0

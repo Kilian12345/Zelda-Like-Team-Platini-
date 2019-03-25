@@ -9,7 +9,6 @@ public class FOW : MonoBehaviour
     /// ///////////////////////GOOD
     /// </summary>
     /// 
-    EnemyAI Ai;
     Player ps;
     Transform playerPos;
 
@@ -24,8 +23,7 @@ public class FOW : MonoBehaviour
 
     void Start()
     {
-        Ai = GetComponent<EnemyAI>();
-        Ai.enabled = false;
+
         anim = gameObject.GetComponent<Animator>();
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -65,21 +63,18 @@ public class FOW : MonoBehaviour
                         if (ps.EnemiesFollowing < 3)
                         {
                             PlayerDetected = true;
-                            Ai.enabled = true;
+
                         }
                     }
                     else
                     {
                         PlayerDetected = false;
-                        Ai.enabled = false;
+
                     }
                 }
             }
         }
-        if (PlayerDetected == true)
-        {
-            Ai.MovePath();
-        }
+
     }
 
 
