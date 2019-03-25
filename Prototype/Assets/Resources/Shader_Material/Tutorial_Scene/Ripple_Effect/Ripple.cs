@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ripple : MonoBehaviour
 {
-    FeedbacksOrder Fb_Order;
+    FeedBack_Manager Fb_Mana;
 
     public Transform player;
     Camera camera;
@@ -12,23 +12,22 @@ public class Ripple : MonoBehaviour
     public float MaxAmount = 50f;
     public bool canripple;
 
-    public float secondsToWait = 0.2f;
 
-    [Range(0, 1)]
-    public float Friction = .9f;
-
-    private float Amount = 0f;
     public Vector3 pos;
 
     private void Start()
     {
-        camera = GetComponent<Camera>();
-        Fb_Order = FindObjectOfType<FeedbacksOrder>();//////////////////////////////////sale
+        Fb_Mana = GetComponentInParent<FeedBack_Manager>();//////////////////////////////////sale
     }
     
     void Update()
     {
+        camera = Fb_Mana.camera;
+        MaxAmount = Fb_Mana.MaxAmount;
+        player = Fb_Mana.target;
         RippleEffect();
+
+
 
     }
 
@@ -39,26 +38,26 @@ public class Ripple : MonoBehaviour
 
     IEnumerator rippleTime()
     {
-        this.Amount = this.MaxAmount;
+        this.Fb_Mana.Amount = this.Fb_Mana.MaxAmount;
         Vector3 pos = camera.WorldToScreenPoint(player.position);
         this.RippleMaterial.SetFloat("_CenterX", pos.x);
         this.RippleMaterial.SetFloat("_CenterY", pos.y);
-        yield return new WaitForSeconds(secondsToWait);
+        yield return new WaitForSeconds(Fb_Mana.secondsToWait);
         canripple = false;
     }
 
     void RippleEffect()
     {
-        if (Fb_Order.ripple == true && canripple == true)
+        if (Fb_Mana.ripple == true && canripple == true)
         {
             StartCoroutine(rippleTime());
         }
-        else if (Fb_Order.ripple == false)
+        else if (Fb_Mana.ripple == false)
         {
             canripple = true;
         }
 
-        this.RippleMaterial.SetFloat("_Amount", this.Amount);
-        this.Amount *= this.Friction;
+        this.RippleMaterial.SetFloat("_Amount", this.Fb_Mana.Amount);
+        this.Fb_Mana.Amount *= this.Fb_Mana.Friction;
     }
 }

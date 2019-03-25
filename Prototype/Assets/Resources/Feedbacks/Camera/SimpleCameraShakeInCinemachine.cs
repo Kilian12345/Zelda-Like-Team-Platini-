@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class SimpleCameraShakeInCinemachine : MonoBehaviour {
 
-    Player player;
+
 
     public float ShakeDuration = 0.3f;          // Time the Camera Shake effect will last
     public float ShakeAmplitude = 1.2f;         // Cinemachine Noise Profile Parameter
@@ -21,7 +21,7 @@ public class SimpleCameraShakeInCinemachine : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        player = GetComponent<Player>();
+
         // Get Virtual Camera Noise Profile
         if (VirtualCamera != null)
             virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
