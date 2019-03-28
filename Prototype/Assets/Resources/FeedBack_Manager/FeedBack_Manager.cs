@@ -101,7 +101,7 @@ public class FeedBack_Manager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)) secondActivated = true;
+        //if (Input.GetKey(KeyCode.Space)) secondActivated = true;
 
         CameraShake();
         Bloom();
