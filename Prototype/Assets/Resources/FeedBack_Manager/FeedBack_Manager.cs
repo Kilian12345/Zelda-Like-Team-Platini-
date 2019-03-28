@@ -195,29 +195,41 @@ public class FeedBack_Manager : MonoBehaviour
 
     IEnumerator secondAbility()
     {
+        float t = Mathf.Clamp(timeDeltaSecond, 0, 1);
+
+        saturationAmount = Mathf.Lerp(1, 0, t);
+        if (saturationAmount <= 0) doneSecond = true;
+
+
         if (saturationAmount > 0 && doneSecond == false)
         {
 
             ripple = true;
             timeDeltaSecond += Time.deltaTime;
-            saturationAmount = Mathf.Lerp(1, 0, timeDeltaSecond); 
+
+            Debug.Log("NOPE");
 
         }
 
-        yield return new WaitForSeconds(timeSecond);
 
 
-        if (saturationAmount <= 0)
+
+
+        if (doneSecond == true)
         {
-            doneSecond = true;
+            yield return new WaitForSeconds(timeSecond);
 
-            saturationAmount = Mathf.Lerp(0, 1, timeDeltaSecond * Time.deltaTime);            
+
+            timeDeltaSecond -= Time.deltaTime;
 
             if (saturationAmount >= 1)
             {
-                saturationAmount = 1;
-                secondActivated = false;
+                Debug.Log("OK");
+                timeDeltaSecond = 0;
+                doneSecond = false;
                 ripple = false;
+                secondActivated = false;
+                saturationAmount = 1;
             }
         }
 
