@@ -16376,6 +16376,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
         type: 3}
+      propertyPath: rageSprite
+      value: 
+      objectReference: {fileID: 778355593}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: selector
+      value: 
+      objectReference: {fileID: 1428780751}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
       propertyPath: abilityMeters.Array.data[0]
       value: 
       objectReference: {fileID: 519460036}

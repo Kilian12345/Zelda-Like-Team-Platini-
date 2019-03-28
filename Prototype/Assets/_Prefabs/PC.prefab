@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStuck: 0
-  throwForce: 1500
+  throwForce: 2
   moveHor: 0
   moveVer: 0
   sprintMultiplier: 2
