@@ -24,7 +24,7 @@ public class Catch : MonoBehaviour
                 }
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveHor, moveVer) * throwForce);
+                    coll.gameObject.GetComponent<Rigidbody2D>().velocity=(new Vector2(moveHor*throwForce, moveVer*throwForce));
                     coll.gameObject.transform.parent = null;
                     Invoke("isNotStuck", 0.05f);
 
