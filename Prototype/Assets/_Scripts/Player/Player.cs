@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("death", isDead);
         move();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Attack"))
         {
             toPunch = true;
         }
