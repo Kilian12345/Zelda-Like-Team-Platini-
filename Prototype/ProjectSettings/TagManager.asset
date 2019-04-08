@@ -10,6 +10,7 @@ TagManager:
   - Calcium
   - VendingMachine
   - FeedBack_Manager
+  - Trigger
   layers:
   - Default
   - TransparentFX

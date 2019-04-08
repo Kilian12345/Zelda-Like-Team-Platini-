@@ -408,6 +408,47 @@ public class Player : MonoBehaviour
         {
             Destroy(col.gameObject, 0f);
         }
+        if (col.gameObject.tag == "Trigger")
+        {
+            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Collision)
+            {
+                col.gameObject.GetComponent<Trigger>().isTriggered = true;
+            }
+            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Button)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    col.gameObject.GetComponent<Trigger>().isTriggered = true;
+                }
+            }
+        }
+    }
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Trigger")
+        {
+            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Collision)
+            {
+                col.gameObject.GetComponent<Trigger>().isTriggered = true;
+            }
+            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Button)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    col.gameObject.GetComponent<Trigger>().isTriggered = true;
+                }
+            }
+        }
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Trigger")
+        {
+            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Collision)
+            {
+                col.gameObject.GetComponent<Trigger>().isTriggered = false;
+            }
+        }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
