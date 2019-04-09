@@ -20,4 +20,43 @@ public class Trigger : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Coll");
+        if (curType == typeOfTrigger.Collision)
+        {
+            isTriggered = true;
+        }
+        if (curType == typeOfTrigger.Button)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                isTriggered = true;
+            }
+        }
+    }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("CollStay");
+        if (curType == typeOfTrigger.Collision)
+        {
+            isTriggered = true;
+        }
+        if (curType == typeOfTrigger.Button)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                isTriggered = true;
+            }
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("CollExit");
+        if (curType == typeOfTrigger.Collision)
+        {
+            isTriggered = false;
+        }
+    }
 }

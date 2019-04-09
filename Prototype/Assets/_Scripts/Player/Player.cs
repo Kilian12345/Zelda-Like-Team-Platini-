@@ -408,7 +408,7 @@ public class Player : MonoBehaviour
         {
             Destroy(col.gameObject, 0f);
         }
-        if (col.gameObject.tag == "Trigger")
+        /*if (col.gameObject.tag == "Trigger")
         {
             if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Collision)
             {
@@ -421,9 +421,9 @@ public class Player : MonoBehaviour
                     col.gameObject.GetComponent<Trigger>().isTriggered = true;
                 }
             }
-        }
+        }*/
     }
-    void OnTriggerStay2D(Collider2D col)
+    /*void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "Trigger")
         {
@@ -449,7 +449,7 @@ public class Player : MonoBehaviour
                 col.gameObject.GetComponent<Trigger>().isTriggered = false;
             }
         }
-    }
+    }*/
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Bullet")
