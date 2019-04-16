@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate, attackSpeed, EnemiesFollowing;
     public float vel, thrust, dashDistance;
     public float[] cooldownTime, curcooldownTime;
-    public GameObject particles, gun, gunSprite, shootPoint, rageSprite, countDownSprite, selector;
+    public GameObject particles, gun, gunSprite, shootPoint,carryPoint, rageSprite, countDownSprite, selector;
     public GameObject[] abilityMeters;
 
     [HideInInspector]
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     public Text countDown;
     public int activatedAbility = 0;
     public bool isDead, toPunch, isInRage;
-    public float health, maxVel, angle, attackRange, damage, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast, abilityIsToCooldown;
+    public float health, maxVel, angle, attackRange, damage, attackPushForce, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast, abilityIsToCooldown;
     public float lastHor, lastVer;
     Rigidbody2D player;
     private float LocalX;
@@ -67,26 +67,31 @@ public class Player : MonoBehaviour
         {
             toPunch = true;
         }
-        if (Time.time > timeToAttack && toPunch)
+        if (Time.time > timeToAttack)
         {
-            timeToAttack = Time.time + 1 / attackSpeed;
-            StartCoroutine(Punch());
-            if (lastHor >= 0f)
+            //player.velocity = Vector3.zero;
+            if (toPunch)
             {
-                Vector3 to = new Vector3(0, 0, -2500);
-                if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
+                timeToAttack = Time.time + 1 / attackSpeed;
+                StartCoroutine(Punch());
+                if (lastHor >= 0f)
                 {
-                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to,Time.deltaTime);
+                    Vector3 to = new Vector3(0, 0, -2500);
+                    if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
+                    {
+                        gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
+                    }
+                }
+                else if (lastHor < 0f)
+                {
+                    Vector3 to = new Vector3(0, 0, 2500);
+                    if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
+                    {
+                        gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
+                    }
                 }
             }
-            else if (lastHor < 0f)
-            {
-                Vector3 to = new Vector3(0, 0, 2500);
-                if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
-                {
-                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to,Time.deltaTime);
-                }
-            }
+            
         }
         /*if (toPunch)
         {
@@ -487,7 +492,10 @@ public class Player : MonoBehaviour
                 if (enemiestoDamage[i].GetComponent<EnemyHealth>() != null)
                 {
                     enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
-                    //enemiestoDamage[i].GetComponent<Rigidbody2D>.Add
+                    //enemiestoDamage[i].GetComponent<Transform>().position= Vector2.MoveTowards(enemiestoDamage[i].GetComponent<Transform>().position, transform.position - new Vector3(moveHor, moveVer, 0)*5, 5 * Time.deltaTime);
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(lastHor, lastVer)* attackPushForce, ForceMode2D.Impulse);
+                    yield return new WaitForSeconds(0.1f);
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     toPunch = false;
                     break;
                 }

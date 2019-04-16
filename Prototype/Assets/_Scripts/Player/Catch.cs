@@ -37,7 +37,7 @@ public class Catch : MonoBehaviour
             if (isStuck)
             {
                 coll.gameObject.transform.position = transform.position;
-                coll.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                //coll.gameObject.GetComponent<CircleCollider2D>().enabled = false;
             }
             else
             {

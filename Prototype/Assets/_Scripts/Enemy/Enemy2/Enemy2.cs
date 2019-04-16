@@ -9,7 +9,7 @@ public class Enemy2 : MonoBehaviour
     public GameObject gun, shootPoint;
     Player pm;
     public bool isInRange;
-    public float range,combatDistance, enemyDamage;
+    public float range,combatDistance, enemyDamage,attackPushForce;
     public bool isAttacking;
     Transform target;
     public Transform pl;
@@ -23,6 +23,7 @@ public class Enemy2 : MonoBehaviour
 
     void Start()
     {
+        attackPushForce = 500f;
         attackCoolDown = 1 / attackSpeed;
         enemy2Audio = gameObject.GetComponent<AudioSource>();
         pm = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -121,6 +122,9 @@ public class Enemy2 : MonoBehaviour
                 {
                     enemiestoDamage[i].GetComponent<Player>().health+=enemyDamage;
                     //enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(dir.normalized * 500000, ForceMode2D.Impulse);
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(dir.normalized.x, dir.normalized.y) * attackPushForce, ForceMode2D.Impulse);
+                    yield return new WaitForSeconds(0.1f);
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     break;
                 }
             }

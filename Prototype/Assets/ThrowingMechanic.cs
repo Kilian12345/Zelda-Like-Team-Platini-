@@ -40,12 +40,15 @@ public class ThrowingMechanic : MonoBehaviour
                     recPos();
                 }
             }
+            Physics2D.IgnoreCollision(bColl, player.GetComponent<CapsuleCollider2D>(),toThrow);
         }
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        //Debug.Log(GetComponent<Rigidbody2D>().velocity);
 
         if (isCaught)
         {
             bColl.enabled = false;
-            transform.position = ps.shootPoint.transform.position;
+            transform.position = ps.carryPoint.transform.position;
         }
         else
         { 
