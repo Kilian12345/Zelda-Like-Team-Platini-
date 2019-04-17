@@ -24,13 +24,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 mov;
     private Vector2 movWithoutSpeed;
 
-    private bool AttackAllowed = true;
-    private bool AbilityAllowed = true;
+    private bool NewActionAllowed = true;
 
     private void Start()
     {
-        health = 0;
-        selectedAbility = 0;
+        health = 3;
     }
 
     private void Update()
@@ -80,19 +78,17 @@ public class PlayerController : MonoBehaviour
     IEnumerator Attack()
     {
 
-        if (Input.GetButtonDown("Attacking") && AbilityAllowed == true && AttackAllowed == true)
+        if (Input.GetButtonDown("Attacking") && NewActionAllowed == true)
         {
-            AbilityAllowed = false;
-            AttackAllowed = false;
+            NewActionAllowed = false;
             animator.SetBool("Attacking", true);
 
             animator.SetFloat("Horizontal", movWithoutSpeed.x);
             animator.SetFloat("Vertical", movWithoutSpeed.y);
 
             speed = speedInCombat;
-            yield return new WaitForSeconds(1f);
-            AbilityAllowed = true;
-            AttackAllowed = true;
+            yield return new WaitForSeconds(0.5f);
+            NewActionAllowed = true;
             animator.SetBool("Attacking", false);
             speed = speedNormal;
         }
@@ -100,37 +96,40 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Abilities()
     {
-
-        if ((Input.GetButtonDown("Ability1") || Input.GetButtonDown("Ability2") || Input.GetButtonDown("Ability3")) && AttackAllowed == true && AbilityAllowed == true)
+        if(Input.GetButtonDown("Ability1") && NewActionAllowed == true)
         {
-            AttackAllowed = false;
-            AbilityAllowed = false;
+            NewActionAllowed = false;
             animator.SetBool("AbilityActive", true);
-
-            if (Input.GetButtonDown("Ability1"))
-            {
-                Vector2 mov = Vector2.right;
-                animator.SetFloat("PosX", mov.x);
-                animator.SetFloat("PosY", mov.y);
-            }
-            if (Input.GetButtonDown("Ability2"))
-            {
-                Vector2 mov = Vector2.up;
-                animator.SetFloat("PosX", mov.x);
-                animator.SetFloat("PosY", mov.y);
-            }
-            if (Input.GetButtonDown("Ability3"))
-            {
-                Vector2 mov = Vector2.left;
-                animator.SetFloat("PosX", mov.x);
-                animator.SetFloat("PosY", mov.y);
-            }
-
+            animator.SetBool("Ability1", true);
             speed = speedInCombat;
             yield return new WaitForSeconds(1.2f);
-            AttackAllowed = true;
-            AbilityAllowed = true;
+            NewActionAllowed = true;
             animator.SetBool("AbilityActive", false);
+            animator.SetBool("Ability1", false);
+            speed = speedNormal;
+        }
+        else if (Input.GetButtonDown("Ability2") && NewActionAllowed == true)
+        {
+            NewActionAllowed = false;
+            animator.SetBool("AbilityActive", true);
+            animator.SetBool("Ability2", true);
+            speed = speedInCombat;
+            yield return new WaitForSeconds(1.2f);
+            NewActionAllowed = true;
+            animator.SetBool("AbilityActive", false);
+            animator.SetBool("Ability2", false);
+            speed = speedNormal;
+        }
+        else if (Input.GetButtonDown("Ability3") && NewActionAllowed == true)
+        {
+            NewActionAllowed = false;
+            animator.SetBool("AbilityActive", true);
+            animator.SetBool("Ability3", true);
+            speed = speedInCombat;
+            yield return new WaitForSeconds(1.2f);
+            NewActionAllowed = true;
+            animator.SetBool("AbilityActive", false);
+            animator.SetBool("Ability3", false);
             speed = speedNormal;
         }
     }

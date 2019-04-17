@@ -155,6 +155,8 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.0001f);
     }
 
+    #region /// ABILITIES
+
     void switchAbilities()
     {
         if (selectedAbility >= 0 && selectedAbility <= (abilityMeters.Length - 1))
@@ -321,11 +323,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    #endregion
 
 
     void death()
     {
         isDead = true;
+        anim.SetBool("Dead", true);
         playerAudio.clip = died;
         playerAudio.Play();
         Instantiate(particles, transform.position, Quaternion.identity);
@@ -333,6 +337,7 @@ public class Player : MonoBehaviour
         vel = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     void move()
     {
         moveHor = Input.GetAxis("Horizontal");
@@ -354,30 +359,6 @@ public class Player : MonoBehaviour
             gun.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
         }
         transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
-        //player.velocity= new Vector2(vel * moveHor*100*Time.deltaTime, vel * moveVer * 100 * Time.deltaTime);
-
-        // These if statements prevent velocity to exceed a given value
-
-        /*if (player.velocity.x > maxVel)
-        {
-            player.velocity = new Vector2(maxVel, player.velocity.y);
-        }
-        if (player.velocity.x < (-maxVel))
-        {
-            player.velocity = new Vector2((maxVel * -1), player.velocity.y);
-        }
-        if (player.velocity.y > maxVel)
-        {
-            player.velocity = new Vector2(player.velocity.x, maxVel);
-        }
-        if (player.velocity.y < (-maxVel))
-        {
-            player.velocity = new Vector2(player.velocity.x, (maxVel * -1));
-        }*/
-        /*//if (moveHor == 0 && moveVer == 0) // Incase input is not recieved, player stops immidiately i.e. no momentum
-        {
-            player.velocity = new Vector2(0, 0);
-        }*/
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -401,33 +382,7 @@ public class Player : MonoBehaviour
             }
         }*/
     }
-    /*void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Trigger")
-        {
-            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Collision)
-            {
-                col.gameObject.GetComponent<Trigger>().isTriggered = true;
-            }
-            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Button)
-            {
-                if (Input.GetButtonDown("Jump"))
-                {
-                    col.gameObject.GetComponent<Trigger>().isTriggered = true;
-                }
-            }
-        }
-    }
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Trigger")
-        {
-            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Collision)
-            {
-                col.gameObject.GetComponent<Trigger>().isTriggered = false;
-            }
-        }
-    }*/
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Bullet")
@@ -454,6 +409,7 @@ public class Player : MonoBehaviour
             Destroy(col.gameObject, 0f);
         }
     }
+
     IEnumerator Punch()
     {
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
