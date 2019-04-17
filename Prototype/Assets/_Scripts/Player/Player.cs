@@ -10,35 +10,122 @@ public class Player : MonoBehaviour
     /// <summary>
     /// /////////////////////////////LES///GD///SONT///STYLÉS
     /// </summary>
+    #region Rage
 
-    Ghost ghost;
-    FeedbacksOrder Fb_Order;
-    Animator anim;
-    AudioSource playerAudio;
-    CinemachineImpulseSource source;
+    [Header("Rage(Health) Properties ///////////////////////////////////")]
 
-    public AudioClip hit, died;
-    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate, attackSpeed, EnemiesFollowing;
-    public float vel, thrust, dashDistance;
-    public float[] cooldownTime, curcooldownTime;
-    public GameObject particles, gun, gunSprite, shootPoint,carryPoint, rageSprite, countDownSprite, selector;
-    public GameObject[] abilityMeters;
+    [Header("Rage Parameters")]
+    public float health;
+    public float CalciumAmount;
+    public float CalciumCapacity;
+    public float curDropChanceRate;
+    public float DropChanceRate;
 
+    [Header("Max Rage Parameters")]
+    public float rageDamage;
+    public float rageTimer;
+    public float rageVel;
+    public float curTime;
+
+    [Header("Rage Booleans")]
+    public bool isDead;
+    public bool isInRage;
+    CalciumBones cb;
+
+    #endregion
+
+
+    #region Movement
+
+    
+
+    [Header("Movement Properties ///////////////////////////////////")]
+
+    [Header("Movement Values")]
     [HideInInspector]
     public float moveHor, moveVer;
-
-    public Text countDown;
-    public int activatedAbility = 0;
-    public bool isDead, toPunch, isInRage;
-    public float health, maxVel, angle, attackRange, damage, attackPushForce, rageDamage, rageTimer, rageVel, curTime, slowDownFactor, slowDownLast, abilityIsToCooldown;
     public float lastHor, lastVer;
-    Rigidbody2D player;
+    public float vel;
+    public float maxVel;
     private float LocalX;
     private Vector2[] abPos;
-    private int selectedAbility;
-    private float timeToAttack;
+    Rigidbody2D player;
 
-    CalciumBones cb;
+    #endregion
+
+
+    #region Combat
+
+    [Header("Combat Properties ///////////////////////////////////")]
+
+    [Header("Combat GameObjects")]
+    public GameObject gun; 
+    public GameObject gunSprite;
+    public GameObject shootPoint;
+    public GameObject carryPoint;
+
+    [Header("Combat Variables")]
+    public float PlayerScore;
+    public float EnemiesFollowing;
+    public bool toPunch;
+    public float damage;
+    public float attackSpeed;
+    public float attackRange;
+    public float attackPushForce;
+    private float timeToAttack;
+    private float angle;
+
+    #endregion
+
+
+    #region Ability
+
+    [Header("Ability Properties ///////////////////////////////////")]
+
+    [Header("Ability Parameters")]
+    public float[] cooldownTime;
+    public float[] curcooldownTime;
+    public float abilityIsToCooldown;
+    public int activatedAbility = 0;
+    private int selectedAbility;
+    [Header("Ability GameObjects")]
+    public GameObject selector;
+    public GameObject[] abilityMeters;
+
+    [Header("Dash Values")]
+    public float dashDistance;
+    public float thrust;
+    Ghost ghost;
+    FeedbacksOrder Fb_Order;
+
+    [Header("Slow Down Values")]
+    public float slowDownFactor;
+    public float slowDownLast;
+
+    #endregion
+
+
+    #region Audio Visuals
+
+    [Header("Audio and Visual Properties ///////////////////////////////////")]
+
+    [Header("Audio")]
+    public AudioClip hit, died;
+    AudioSource playerAudio;
+
+    [Header("Visuals")]
+    Animator anim;
+    public GameObject particles;
+    CinemachineImpulseSource source;
+
+    #endregion
+
+    #region GUI LAYOUT
+
+    [HideInInspector]
+    public int toolbarTab;
+    public string currentTab;
+    #endregion
 
     // Use this for initialization
     void Start()
@@ -63,7 +150,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("death", isDead);
         move();
-        if (Input.GetButtonDown("Attack"))
+        if (Input.GetButtonDown("Attacking"))
         {
             toPunch = true;
         }
@@ -91,7 +178,7 @@ public class Player : MonoBehaviour
                     }
                 }
             }
-            
+
         }
 
         if (health >= 100 && !isDead)
@@ -102,7 +189,6 @@ public class Player : MonoBehaviour
         {
             damage = rageDamage;
             vel = rageVel;
-            rageSprite.SetActive(true);
             if (curTime > 0 && health >= 100)
             {
                 curTime -= Time.deltaTime;
@@ -111,7 +197,6 @@ public class Player : MonoBehaviour
             {
                 curTime = rageTimer;
                 isInRage = false;
-                rageSprite.SetActive(false);
             }
             else if (curTime < 0 && health >= 100)
             {
@@ -332,8 +417,7 @@ public class Player : MonoBehaviour
         anim.SetBool("Dead", true);
         playerAudio.clip = died;
         playerAudio.Play();
-        Instantiate(particles, transform.position, Quaternion.identity);
-        rageSprite.SetActive(true);
+        Instantiate(particles, transform.position, Quaternion.identity);;
         vel = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -422,7 +506,7 @@ public class Player : MonoBehaviour
                 {
                     enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                     //enemiestoDamage[i].GetComponent<Transform>().position= Vector2.MoveTowards(enemiestoDamage[i].GetComponent<Transform>().position, transform.position - new Vector3(moveHor, moveVer, 0)*5, 5 * Time.deltaTime);
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(lastHor, lastVer)* attackPushForce, ForceMode2D.Impulse);
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(lastHor, lastVer) * attackPushForce, ForceMode2D.Impulse);
                     yield return new WaitForSeconds(0.1f);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     toPunch = false;
@@ -433,7 +517,7 @@ public class Player : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         //toPunch = false;
-        
+
         StopCoroutine(Punch());
         gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
 
