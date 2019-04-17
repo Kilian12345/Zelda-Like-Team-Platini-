@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     /// <summary>
-    /// /////////////////////////////GOOD
+    /// /////////////////////////////LES///GD///SONT///STYLÉS
     /// </summary>
 
     Ghost ghost;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("death", isDead);
         move();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Attack"))
         {
             toPunch = true;
         }
@@ -93,34 +93,7 @@ public class Player : MonoBehaviour
             }
             
         }
-        /*if (toPunch)
-        {
-            StartCoroutine(Punch());
-            if (lastHor >= 0f)
-            {
-                Vector3 to = new Vector3(0, 0, -1500);
-                if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
-                {
-                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
-                }
-            }
-            else if (lastHor < 0f)
-            {
-                Vector3 to = new Vector3(0, 0, 1500);
-                if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
-                {
-                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
-                }
-            }
 
-            //gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
-            //gunSprite.SetActive(true);
-        }
-        else
-        {
-            StopCoroutine(Punch());
-            //gunSprite.SetActive(false);
-        }*/
         if (health >= 100 && !isDead)
         {
             isInRage = true;
