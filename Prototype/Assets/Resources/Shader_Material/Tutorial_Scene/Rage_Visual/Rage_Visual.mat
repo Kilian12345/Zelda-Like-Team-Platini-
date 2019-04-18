@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 25f385fef97688d45a8c19f9902ae376, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SecondaryTex:
@@ -28,10 +28,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Intensity: 0.79
+    - _Amount: 25
+    - _CenterX: 385.9
+    - _CenterY: 189.31
+    - _Intensity: 0
     - _OffsetColor: 0.005
-    - _OffsetDistortion: 508.6
+    - _OffsetDistortion: 550.03
     - _OffsetNoiseX: 5.38
     - _OffsetNoiseY: 3.07
-    - _OffsetPosY: 0
+    - _OffsetPosY: 1.2
+    - _WaveAmount: 8.3
+    - _WaveSpeed: 1
     m_Colors: []

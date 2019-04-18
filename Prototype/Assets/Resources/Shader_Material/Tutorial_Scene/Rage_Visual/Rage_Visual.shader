@@ -3,13 +3,8 @@
    Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
-	_SecondaryTex("Secondary Texture", 2D) = "white" {}
-	_OffsetNoiseX("Offset Noise X", float) = 0.0
-		_OffsetNoiseY("Offset Noise Y", float) = 0.0
-		_OffsetPosY("Offset position Y", float) = 0.0
 		_OffsetColor("Offset Color", Range(0.005, 0.1)) = 0
-		_OffsetDistortion("Offset Distortion", float) = 500
-		_Intensity("Mask Intensity", Range(0.0, 1)) = 1.0
+
 	}
 		SubShader
 	{
@@ -24,7 +19,7 @@
 	{
 		float4 pos : SV_POSITION;
 		float2 uv : TEXCOORD0;
-		float2 uv2 : TEXCOORD1;
+        float4 screenPos : TEXCOORD2;
 	};
 
 
@@ -36,32 +31,36 @@
 	{
 		v2f o;
 		o.pos = UnityObjectToClipPos(v.vertex);
+        o.screenPos = o.pos;
 		o.uv = v.texcoord;
-		o.uv2 = v.texcoord + float2(_OffsetNoiseX - 0.2f, _OffsetNoiseY);
 		return o;
 	}
 
 	sampler2D _MainTex;
 	sampler2D _SecondaryTex;
 
-	fixed _Intensity;
 	float _OffsetColor;
 	half _OffsetPosY;
 	half _OffsetDistortion;
 
 	fixed4 frag(v2f i) : SV_Target
 	{
-		i.uv = float2(frac(i.uv.x + cos((i.uv.y + _CosTime.y) * 100) / _OffsetDistortion), frac(i.uv.y + _OffsetPosY));
+        //Screen Wave
+	//i.uv = float2(frac(i.uv.x + cos((i.uv.y + _CosTime.y) * 100) / _OffsetDistortion), frac(i.uv.y + _OffsetPosY));
+
+    float2 screenPos = i.screenPos.xy / i.screenPos.w;
+    screenPos.y *= _ScreenParams.y / _ScreenParams.x;
+    fixed dist = sqrt(dot(screenPos,screenPos));
+    _OffsetColor = _OffsetColor * dist;
 
 	fixed4 col = tex2D(_MainTex, i.uv);
 	col.g = tex2D(_MainTex, i.uv + float2(_OffsetColor, _OffsetColor)).g;
 	col.b = tex2D(_MainTex, i.uv + float2(-_OffsetColor, -_OffsetColor)).b;
 
-	fixed4 col2 = tex2D(_SecondaryTex, i.uv2);
 
-	return lerp(col, col2, ceil(col2.b - _Intensity));
+    return col;
 	}
 		ENDCG
 	}
-	}
+    }
 }

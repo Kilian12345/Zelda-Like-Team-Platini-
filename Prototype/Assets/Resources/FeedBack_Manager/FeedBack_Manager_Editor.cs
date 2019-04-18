@@ -159,7 +159,7 @@ public class FeedBack_Manager_Editor : Editor
         {
             case "Transition":
                 EditorGUILayout.PropertyField(TransitionMaterial);
-                EditorGUILayout.PropertyField(matList);
+                EditorGUILayout.PropertyField(matList , true);
                 EditorGUILayout.PropertyField(cutoff);
                 EditorGUILayout.PropertyField(transitionTime);
                 break;
