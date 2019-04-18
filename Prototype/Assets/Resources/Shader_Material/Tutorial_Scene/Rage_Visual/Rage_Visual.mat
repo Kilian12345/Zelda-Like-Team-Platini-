@@ -32,11 +32,12 @@ Material:
     - _CenterX: 385.9
     - _CenterY: 189.31
     - _Intensity: 0
-    - _OffsetColor: 0.005
+    - _OffsetColor: 0
     - _OffsetDistortion: 550.03
     - _OffsetNoiseX: 5.38
     - _OffsetNoiseY: 3.07
     - _OffsetPosY: 1.2
+    - _Scale: 1
     - _WaveAmount: 8.3
     - _WaveSpeed: 1
     m_Colors: []

@@ -3,7 +3,8 @@
    Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
-		_OffsetColor("Offset Color", Range(0.005, 0.1)) = 0
+		_OffsetColor("Offset Color", Float) = 0
+        _Scale("Scale",Range(0.005, 2)) = 0
 
 	}
 		SubShader
@@ -40,6 +41,7 @@
 	sampler2D _SecondaryTex;
 
 	float _OffsetColor;
+    float _Scale;
 	half _OffsetPosY;
 	half _OffsetDistortion;
 
@@ -51,11 +53,11 @@
     float2 screenPos = i.screenPos.xy / i.screenPos.w;
     screenPos.y *= _ScreenParams.y / _ScreenParams.x;
     fixed dist = sqrt(dot(screenPos,screenPos));
-    _OffsetColor = _OffsetColor * dist;
-
+    
 	fixed4 col = tex2D(_MainTex, i.uv);
-	col.g = tex2D(_MainTex, i.uv + float2(_OffsetColor, _OffsetColor)).g;
-	col.b = tex2D(_MainTex, i.uv + float2(-_OffsetColor, -_OffsetColor)).b;
+	col.r = (tex2D(_MainTex, (i.uv / _Scale) + _OffsetColor )).r;
+    //col.r = (tex2D(_MainTex, i.uv * _Scale)).r ;
+	//col.b = tex2D(_MainTex, i.uv + float2(-_OffsetColor, -_OffsetColor)).b;
 
 
     return col;
