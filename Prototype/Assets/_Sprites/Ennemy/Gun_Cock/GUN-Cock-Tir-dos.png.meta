@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 6bed0710d0307d04fb179a2de38be9ec
+guid: 3615a2a289a2d424592d43c3d70620df
 TextureImporter:
   fileIDToRecycleName:
-    21300000: casse-tete-course-g_0
-    21300002: casse-tete-course-g_1
-    21300004: casse-tete-course-g_2
-    21300006: casse-tete-course-g_3
+    21300000: GUN-Cock-Tir-dos_0
+    21300002: GUN-Cock-Tir-dos_1
+    21300004: GUN-Cock-Tir-dos_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -99,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: casse-tete-course-g_0
+      name: GUN-Cock-Tir-dos_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,13 +112,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fefbf39628456e4eb3def56d5cee3d2
+      spriteID: 2871b0361d840744abf8ac78a6b97ca7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_1
+      name: GUN-Cock-Tir-dos_1
       rect:
         serializedVersion: 2
         x: 32
@@ -133,13 +132,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7102fe8bd988cb4381132b03acf1c51
+      spriteID: 4a4db04bb2cf64d4f84da058d7b4c0b4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_2
+      name: GUN-Cock-Tir-dos_2
       rect:
         serializedVersion: 2
         x: 64
@@ -153,27 +152,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364a302cf1333f04bbc48a915e496987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: casse-tete-course-g_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a2fe1244cbaed1428f50061e198ebce
+      spriteID: 81fe0649dc95f344ca4dc6eb234cb9b1
       vertices: []
       indices: 
       edges: []
@@ -181,7 +160,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6509521595c4d2649a3ec310324438eb
+    spriteID: a160c058a2287b544b45ecf89eb94eb0
     vertices: []
     indices: 
     edges: []

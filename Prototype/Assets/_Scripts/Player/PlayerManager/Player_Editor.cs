@@ -41,6 +41,7 @@ public class Player_Editor : Editor
     private SerializedProperty gunSprite;
     private SerializedProperty shootPoint;
     private SerializedProperty carryPoint;
+    private SerializedProperty centrePoint;
 
     private SerializedProperty PlayerScore;
     private SerializedProperty EnemiesFollowing;
@@ -103,6 +104,7 @@ public class Player_Editor : Editor
         gunSprite = soTarget.FindProperty("gunSprite");
         shootPoint = soTarget.FindProperty("shootPoint");
         carryPoint = soTarget.FindProperty("carryPoint");
+        centrePoint= soTarget.FindProperty("centrePoint");
         PlayerScore = soTarget.FindProperty("PlayerScore");
         EnemiesFollowing = soTarget.FindProperty("EnemiesFollowing");
         toPunch = soTarget.FindProperty("toPunch");
@@ -190,6 +192,7 @@ public class Player_Editor : Editor
                 EditorGUILayout.PropertyField(gunSprite);
                 EditorGUILayout.PropertyField(shootPoint);
                 EditorGUILayout.PropertyField(carryPoint);
+                EditorGUILayout.PropertyField(centrePoint);
                 EditorGUILayout.PropertyField(PlayerScore);
                 EditorGUILayout.PropertyField(EnemiesFollowing);
                 EditorGUILayout.PropertyField(toPunch);

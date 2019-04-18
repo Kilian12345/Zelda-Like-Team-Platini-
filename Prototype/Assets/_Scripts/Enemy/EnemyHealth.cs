@@ -43,7 +43,7 @@ public class EnemyHealth : MonoBehaviour
             Blood();
         }
 
-        if (Vector2.Distance(transform.position, pl.position) > 5)
+        if (Vector2.Distance(transform.position, pl.position) > 0.2)
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }

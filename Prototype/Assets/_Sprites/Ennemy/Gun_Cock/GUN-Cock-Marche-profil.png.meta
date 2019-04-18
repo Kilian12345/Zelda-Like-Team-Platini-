@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 6bed0710d0307d04fb179a2de38be9ec
+guid: 902fd65c16355c0449bdcbefda571184
 TextureImporter:
   fileIDToRecycleName:
-    21300000: casse-tete-course-g_0
-    21300002: casse-tete-course-g_1
-    21300004: casse-tete-course-g_2
-    21300006: casse-tete-course-g_3
+    21300000: GUN-Cock-Marche-profil_0
+    21300002: GUN-Cock-Marche-profil_1
+    21300004: GUN-Cock-Marche-profil_2
+    21300006: GUN-Cock-Marche-profil_3
+    21300008: GUN-Cock-Marche-profil_4
+    21300010: GUN-Cock-Marche-profil_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -99,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: casse-tete-course-g_0
+      name: GUN-Cock-Marche-profil_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,13 +115,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fefbf39628456e4eb3def56d5cee3d2
+      spriteID: 686962a2b450a1741955b59a29a76274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_1
+      name: GUN-Cock-Marche-profil_1
       rect:
         serializedVersion: 2
         x: 32
@@ -133,13 +135,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7102fe8bd988cb4381132b03acf1c51
+      spriteID: d259ec23d4a25854c8462b43de3001cd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_2
+      name: GUN-Cock-Marche-profil_2
       rect:
         serializedVersion: 2
         x: 64
@@ -153,13 +155,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364a302cf1333f04bbc48a915e496987
+      spriteID: 06d761eeb4deab943a5870e519894083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_3
+      name: GUN-Cock-Marche-profil_3
       rect:
         serializedVersion: 2
         x: 96
@@ -173,7 +175,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a2fe1244cbaed1428f50061e198ebce
+      spriteID: 21054a43c4895f240b7983efab0dd6a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUN-Cock-Marche-profil_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51c2a58c862ed944aafbccd7f7c9165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUN-Cock-Marche-profil_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cdc8326ca5c0142b53eacd911fffd7
       vertices: []
       indices: 
       edges: []
@@ -181,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6509521595c4d2649a3ec310324438eb
+    spriteID: 75119448bd9345b418c4d0ecf3a422c7
     vertices: []
     indices: 
     edges: []

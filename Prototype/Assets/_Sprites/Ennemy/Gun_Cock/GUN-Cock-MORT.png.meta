@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 6bed0710d0307d04fb179a2de38be9ec
+guid: 8d3cb3f8f1ba17849a2dce07386c24e1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: casse-tete-course-g_0
-    21300002: casse-tete-course-g_1
-    21300004: casse-tete-course-g_2
-    21300006: casse-tete-course-g_3
+    21300000: GUN-Cock-MORT_0
+    21300002: GUN-Cock-MORT_1
+    21300004: GUN-Cock-MORT_2
+    21300006: GUN-Cock-MORT_3
+    21300008: GUN-Cock-MORT_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -99,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: casse-tete-course-g_0
+      name: GUN-Cock-MORT_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,13 +114,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fefbf39628456e4eb3def56d5cee3d2
+      spriteID: 2b09ea7b385001d48936b39513b07d5a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_1
+      name: GUN-Cock-MORT_1
       rect:
         serializedVersion: 2
         x: 32
@@ -133,13 +134,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7102fe8bd988cb4381132b03acf1c51
+      spriteID: 433d5a71fea4af441b46ec24b63eb8c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_2
+      name: GUN-Cock-MORT_2
       rect:
         serializedVersion: 2
         x: 64
@@ -153,13 +154,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364a302cf1333f04bbc48a915e496987
+      spriteID: 1da3e3d24ec16d94a8205aadada91c95
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: casse-tete-course-g_3
+      name: GUN-Cock-MORT_3
       rect:
         serializedVersion: 2
         x: 96
@@ -173,7 +174,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a2fe1244cbaed1428f50061e198ebce
+      spriteID: c6dca94d90c13184eb482689a30addff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUN-Cock-MORT_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2facb0bd26b45414c912c9e6c72038ec
       vertices: []
       indices: 
       edges: []
@@ -181,7 +202,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6509521595c4d2649a3ec310324438eb
+    spriteID: ab18a5b1f71a8984994c6ec7653c89fa
     vertices: []
     indices: 
     edges: []

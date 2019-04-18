@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
     public GameObject gunSprite;
     public GameObject shootPoint;
     public GameObject carryPoint;
+    public GameObject centrePoint;
 
     [Header("Combat Variables")]
     public float PlayerScore;
@@ -214,10 +215,10 @@ public class Player : MonoBehaviour
         {
             health = 100;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad6) || Input.GetButtonDown("SwitchLeft") || Input.GetButtonDown("SwitchRight"))
+        /*if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad6) || Input.GetButtonDown("SwitchLeft") || Input.GetButtonDown("SwitchRight"))
         {
             switchAbilities();
-        }
+        }*/
         selectAbility();
         checkForAbilityState();
         cooldownUI();
@@ -260,7 +261,7 @@ public class Player : MonoBehaviour
 
     void selectAbility()
     {
-        if (Input.GetButtonDown("AbilitySelect"))
+        /*if (Input.GetButtonDown("AbilitySelect"))
         {
             if (abilityMeters[selectedAbility].activeSelf)
             {
@@ -283,6 +284,40 @@ public class Player : MonoBehaviour
                             }
                             break;
                     }
+                }
+            }
+        }*/
+
+        if (Input.GetButtonDown("Ability1"))
+        {
+            if (abilityMeters[0].activeSelf)
+            {
+                if (curcooldownTime[0] >= cooldownTime[0])
+                {
+                    activatedAbility = 1;
+                    curcooldownTime[0] = cooldownTime[0];
+                }
+            }
+        }
+        if (Input.GetButtonDown("Ability2"))
+        {
+            if (abilityMeters[1].activeSelf)
+            {
+                if (curcooldownTime[1] >= cooldownTime[1])
+                {
+                    activatedAbility = 2;
+                    curcooldownTime[1] = cooldownTime[1];
+                }
+            }
+        }
+        if (Input.GetButtonDown("Ability3"))
+        {
+            if (abilityMeters[2].activeSelf)
+            {
+                if (curcooldownTime[2] >= cooldownTime[2])
+                {
+                    activatedAbility = 3;
+                    curcooldownTime[2] = cooldownTime[2];
                 }
             }
         }
@@ -344,8 +379,8 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[0] < 0)
                     {
                         activatedAbility = 0;
-                        Fb_Order.valueList = 0;
-                        ghost.repeat = 0f;
+                        //Fb_Order.valueList = 0;
+                        //ghost.repeat = 0f;
                     }
                     else
                     {
@@ -366,8 +401,8 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[1] < 0)
                     {
                         activatedAbility = 0;
-                        Fb_Order.valueList = 0;
-                        ghost.repeat = 0f;
+                        //Fb_Order.valueList = 0;
+                        //ghost.repeat = 0f;
                     }
                     else
                     {
@@ -388,8 +423,8 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[2] < 0)
                     {
                         activatedAbility = 0;
-                        Fb_Order.valueList = 0;
-                        ghost.repeat = 0f;
+                        //Fb_Order.valueList = 0;
+                        //ghost.repeat = 0f;
                     }
                     else
                     {
@@ -431,18 +466,19 @@ public class Player : MonoBehaviour
             lastVer = moveVer;
             lastHor = moveHor;
         }
+        gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         angle = Mathf.Atan2(lastVer, lastHor) * Mathf.Rad2Deg;
-        if (lastHor >= 0f)
+        /*if (lastHor >= 0f)
         {
-            transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
+            //transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
             gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
         else if (lastHor < 0f)
         {
-            transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
+            //transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
             gun.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
-        }
-        transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
+        }*/
+        //transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -451,20 +487,6 @@ public class Player : MonoBehaviour
         {
             Destroy(col.gameObject, 0f);
         }
-        /*if (col.gameObject.tag == "Trigger")
-        {
-            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Collision)
-            {
-                col.gameObject.GetComponent<Trigger>().isTriggered = true;
-            }
-            if (col.gameObject.GetComponent<Trigger>().curType == Trigger.typeOfTrigger.Button)
-            {
-                if (Input.GetButtonDown("Jump"))
-                {
-                    col.gameObject.GetComponent<Trigger>().isTriggered = true;
-                }
-            }
-        }*/
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -478,7 +500,6 @@ public class Player : MonoBehaviour
             {
                 health += 10;
             }
-            //Destroy(col.gameObject, 0f);
         }
         if (col.gameObject.tag == "Calcium")
         {

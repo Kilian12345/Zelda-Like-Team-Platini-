@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SentryBullet : MonoBehaviour 
 {
-	public GameObject pl;
+	GameObject pl;
+    Player plScript;
     public float speed;
 	Rigidbody2D rb;
     Collider2D co;
@@ -18,7 +19,8 @@ public class SentryBullet : MonoBehaviour
         pl = GameObject.FindGameObjectWithTag("Player");
 		rb = GetComponent<Rigidbody2D> ();
         co = GetComponent<Collider2D>();
-        rb.velocity = new Vector2 (-transform.position.x + pl.transform.position.x, -transform.position.y + pl.transform.position.y).normalized*speed;
+        plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        rb.velocity = new Vector2 (-transform.position.x + plScript.centrePoint.transform.position.x, -transform.position.y + plScript.centrePoint.transform.position.y).normalized*speed;
 
 
         Destroy(rb.gameObject, 5f);

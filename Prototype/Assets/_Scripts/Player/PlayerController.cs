@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float speedNormal = 1;
     [Header("/// In progress ///")]
-    public int health;
     public int selectedAbility;
 
     public Rigidbody2D player;
@@ -26,16 +25,11 @@ public class PlayerController : MonoBehaviour
 
     private bool NewActionAllowed = true;
 
-    private void Start()
-    {
-        health = 3;
-    }
-
     private void Update()
     {
         Movement();
         StartCoroutine(Attack());
-        StartCoroutine(Abilities());
+        //StartCoroutine(Abilities());
     }
     
     private void Movement()

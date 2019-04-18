@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeadButtEnemy : MonoBehaviour
 {
-    public float chargeDuration, chargeVelocity, chargeCoolDown, range,distX,distY;
+    public float chargeVelocity, chargeCoolDown, range,distX,distY;
     public bool canCharge, isCharging, isInRange,isAttacking,isDead;
     //public AudioClip punch;
     private float LocalX, timeToCharge;
@@ -32,7 +32,7 @@ public class HeadButtEnemy : MonoBehaviour
     {
         if (pl != null)
         {
-            if (Vector2.Distance(transform.position, pl.position) <= range)
+            if (Vector2.Distance(transform.position, ps.centrePoint.transform.position) <= range)
             {
                 isInRange = true;
             }
@@ -52,15 +52,15 @@ public class HeadButtEnemy : MonoBehaviour
                 {
                     Charge();
                 }
-                if (Vector2.Distance(transform.position, lastPos) <= 1)
+                if (Vector2.Distance(transform.position, lastPos) <= 0.05)
                 {
                     isCharging = false;
                     canCharge = false;
                 }
             }
         }
-        distX = transform.position.x - pl.transform.position.x;
-        distY = transform.position.y - pl.transform.position.y;
+        distX = transform.position.x - ps.centrePoint.transform.position.x;
+        distY = transform.position.y - ps.centrePoint.transform.position.y;
         anim.SetFloat("DiffX", distX);
         anim.SetFloat("DiffY", distY);
         anim.SetBool("Attack", isAttacking);
@@ -81,13 +81,13 @@ public class HeadButtEnemy : MonoBehaviour
 
     void recPos()
     {
-        lastPos = pl.position;
+        lastPos = ps.centrePoint.transform.position;
         canCharge = true;
     }
 
     void look()
     {
-        if (pl.position.x > transform.position.x)
+        if (ps.centrePoint.transform.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
         }

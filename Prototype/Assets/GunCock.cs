@@ -2,34 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy4 : MonoBehaviour
+public class GunCock : MonoBehaviour
 {
+
     public Transform[] wayPoints;
     public GameObject bull, shootPoint;
     public float moveSpeed;
+    public float shootingRange;
+    public float chasingRange;
     public float angle;
     public bool pingPong;
-    public bool isInRange;
-    public Transform pl;
+    public bool isInChaseRange;
+    public bool isInShootingRange;
     public float FireRate = 0.5f;
     float timeToFire = 0;
 
     //[HideInInspector]
     public bool reachedEnd;
+    private float LocalX;
 
-    [HideInInspector]
-    public Animator anim;
+    Player plScript;
+    Animator anim;
+    Transform plTransform;
 
     //[HideInInspector]
     public int curPoint;
 
-    // Use this for initialization
     void Start()
     {
         curPoint = 0;
         transform.position = wayPoints[curPoint].transform.position;
+        LocalX = transform.localScale.x;
         anim = gameObject.GetComponent<Animator>();
-        pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -37,8 +42,7 @@ public class Enemy4 : MonoBehaviour
     {
         move();
         look();
-        anim.SetBool("isSeen", isInRange);
-        if (isInRange || anim.GetNextAnimatorStateInfo(0).IsName("Chasing"))
+        if (isInShootingRange && isInChaseRange)
         {
             if (Time.time > timeToFire)
             {
@@ -50,17 +54,16 @@ public class Enemy4 : MonoBehaviour
 
     void look()
     {
-        if (isInRange||anim.GetNextAnimatorStateInfo(0).IsName("Chasing"))
+        if (isInChaseRange)
         {
-            Vector3 dir = pl.position - transform.position;
-            angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
-        else
-        {
-            Vector3 dir = wayPoints[curPoint].position - transform.position;
-            angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            if (plScript.centrePoint.transform.position.x > transform.position.x)
+            {
+                transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
+            }
         }
 
     }
@@ -112,30 +115,4 @@ public class Enemy4 : MonoBehaviour
     {
         Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
     }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            isInRange = true;
-        }
-    }
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            isInRange = true;
-        }
-    }
-    void OnDestroy()
-    {
-        Destroy(transform.parent.gameObject);
-    }
-    /*void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            isInRange = false;
-        }
-    }*/
 }
