@@ -12541,6 +12541,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212226421836691828, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
         type: 3}
       propertyPath: rageSprite
@@ -12610,11 +12615,6 @@ PrefabInstance:
       propertyPath: vendingMachinePanel
       value: 
       objectReference: {fileID: 435550313}
-    - target: {fileID: 212226421836691828, guid: fb3af06246630184b8c80238784844a3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4553618846385858, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -13088,6 +13088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f931213d1b3d8648a466902796a7347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 1
   _material: {fileID: 2100000, guid: 28d96c0ba7da13747a4797abe9fd186d, type: 2}
 --- !u!1 &2051614349
 GameObject:

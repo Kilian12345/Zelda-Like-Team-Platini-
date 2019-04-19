@@ -3,8 +3,12 @@
    Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
-		_OffsetColor("Offset Color", Float) = 0
-        _Scale("Scale",Range(0.005, 2)) = 0
+		_OffsetColor("Offset Color", Range(-0.05, 0.05)) = 0
+        [HideInInspector]_R ("R" , Float) = 0
+        [HideInInspector]_G ("G" , Float) = 0
+        [HideInInspector]_B ("B" , Float) = 0
+            [HideInInspector]_BaseTexture ("Base Tex" , Float) = 0
+            [HideInInspector]_ModifyTexture ("Modify Tex" , Float) = 0
 
 	}
 		SubShader
@@ -23,11 +27,6 @@
         float4 screenPos : TEXCOORD2;
 	};
 
-
-
-	half _OffsetNoiseX;
-	half _OffsetNoiseY;
-
 	v2f vert(appdata_base v)
 	{
 		v2f o;
@@ -45,6 +44,12 @@
 	half _OffsetPosY;
 	half _OffsetDistortion;
 
+    fixed3 _R;
+    fixed3 _G;
+    fixed3 _B;
+    fixed4 _BaseTexture;
+    fixed _ModifyTexture;
+
 	fixed4 frag(v2f i) : SV_Target
 	{
         //Screen Wave
@@ -53,14 +58,21 @@
     float2 screenPos = i.screenPos.xy / i.screenPos.w;
     screenPos.y *= _ScreenParams.y / _ScreenParams.x;
     fixed dist = sqrt(dot(screenPos,screenPos));
+
+    _Scale = 
+    (-0.6037*pow(_OffsetColor,6)) + (84.239*pow(_OffsetColor,5))
+    +(12.985*pow(_OffsetColor,4))+(6.2425*pow(_OffsetColor,3))
+    + (4.0693*pow(_OffsetColor,2)) + (2.0001 * _OffsetColor)
+    + 1.0002;
     
+
 	fixed4 col = tex2D(_MainTex, i.uv);
-	col.r = (tex2D(_MainTex, (i.uv / _Scale) + _OffsetColor )).r;
-    //col.r = (tex2D(_MainTex, i.uv * _Scale)).r ;
-	//col.b = tex2D(_MainTex, i.uv + float2(-_OffsetColor, -_OffsetColor)).b;
+    fixed4 col2 = tex2D(_MainTex, i.uv);
+	col = (tex2D(_MainTex, (i.uv / _Scale) + _OffsetColor ));
+    _BaseTexture = col2;
+    _ModifyTexture = col;
 
-
-    return col;
+    return half4(col.r , col2.g, col2.b, 1);
 	}
 		ENDCG
 	}

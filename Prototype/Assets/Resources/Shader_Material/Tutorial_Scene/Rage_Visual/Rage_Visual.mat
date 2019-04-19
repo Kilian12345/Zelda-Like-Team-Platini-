@@ -29,15 +29,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Amount: 25
+    - _B: 0
+    - _BaseTexture: 0
     - _CenterX: 385.9
     - _CenterY: 189.31
+    - _G: 0
     - _Intensity: 0
-    - _OffsetColor: 0
+    - _ModifyTexture: 0
+    - _OUTPUT: 0
+    - _OffsetColor: 0.004
     - _OffsetDistortion: 550.03
     - _OffsetNoiseX: 5.38
     - _OffsetNoiseY: 3.07
     - _OffsetPosY: 1.2
+    - _R: 0
     - _Scale: 1
+    - _ScanLineJitter: 0.63
+    - _VerticalJump: 0.59
     - _WaveAmount: 8.3
     - _WaveSpeed: 1
     m_Colors: []
