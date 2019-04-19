@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public AudioSource enemy2Audio;
+    AudioSource enemyAudio;
     public AudioClip dead, punch;
     public GameObject particles;
     public GameObject HitpointsParentPrefab;
+    public GameObject parent;
     public float health;
 
     [SerializeField]
@@ -23,7 +24,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
-        enemy2Audio = gameObject.GetComponent<AudioSource>();
+        enemyAudio = gameObject.GetComponent<AudioSource>();
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ThAb = FindObjectOfType<ThirdAbility>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -35,10 +36,10 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            enemy2Audio.clip = dead;
-            enemy2Audio.Play();
+            enemyAudio.clip = dead;
+            enemyAudio.Play();
             GetComponent<Collider2D>().enabled = false;
-            Destroy(gameObject, 1f);
+            Destroy(parent, 1f);
 
             Blood();
         }
@@ -55,8 +56,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float dam)
     {
-        enemy2Audio.clip = punch;
-        enemy2Audio.Play();
+        enemyAudio.clip = punch;
+        enemyAudio.Play();
 
         health -= dam;
 

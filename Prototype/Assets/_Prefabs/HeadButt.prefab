@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8af613467dbcc4182adf2328efd789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeVelocity: 15
+  chargeVelocity: 3
   chargeCoolDown: 0.2
-  range: 3
+  range: 1.5
   distX: 0
   distY: 0
   canCharge: 0
@@ -159,12 +159,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d5cdf09357939479d073d5ef258355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy2Audio: {fileID: 0}
   dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   HitpointsParentPrefab: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
     type: 3}
+  parent: {fileID: 6249049812098786730}
   health: 100
   scorePerHit: 50
 --- !u!82 &6249049812098786721
