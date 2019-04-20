@@ -5,30 +5,32 @@ using UnityEngine;
 public class Enemy2 : MonoBehaviour
 {
     public AudioSource enemy2Audio;
-    public AudioClip dead, punch;
-    public GameObject gun, shootPoint, particles;
+    public AudioClip punch;
+    public GameObject gun, shootPoint;
     Player pm;
     public bool isInRange;
-    public float range, enemyDamage;
+    public float range,combatDistance, enemyDamage;
     public bool isAttacking;
     Transform target;
     public Transform pl;
     public float angle;
     private float LocalX;
-    public Animator anim;
+    public Animator anim,anim2;
     public float attackSpeed,attackRange;
-    private float timeToAttack;
+    private float timeToAttack, attackCoolDown;
     Vector2 dir;
     Rigidbody2D rb;
 
     void Start()
     {
+        attackCoolDown = 1 / attackSpeed;
         enemy2Audio = gameObject.GetComponent<AudioSource>();
         pm = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         LocalX = transform.localScale.x;
         anim = gun.GetComponentInChildren<Animator>();
+        anim2 = GetComponent<Animator>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
@@ -38,24 +40,45 @@ public class Enemy2 : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, target.position) < range)
             {
-                isInRange = true;
-                if (Time.time > timeToAttack)
+                if (pm.EnemiesFollowing < 3 && !isAttacking)
                 {
-                    timeToAttack = Time.time + 1 / attackSpeed;
-                    StartCoroutine(Attack());
-                    anim.SetBool("Hit", true);
+                    anim2.SetBool("isSeen", true);
                 }
-                
+                else
+                {
+                    anim2.SetBool("isSeen", false);
+                }
+                if (Vector2.Distance(transform.position, target.position) < combatDistance)
+                {
+                    isInRange = true;
+                    if (Time.time > timeToAttack)
+                    {
+                        timeToAttack = Time.time + 1 / attackSpeed;
+                        isAttacking = true;
+                        StartCoroutine(Attack());
+                        anim.SetBool("Hit", true);
+                        Invoke("switchAttackBool", attackCoolDown/2);
+                    }
+
+                }
+                else
+                {
+                    isInRange = false;
+                    anim.SetBool("Hit", false);
+                }
+                look();
             }
             else
             {
-                isInRange = false;
-                anim.SetBool("Hit", false);
+                anim2.SetBool("isSeen", false);
             }
-            look();
         }
-        
 
+    }
+
+    void switchAttackBool()
+    {
+        isAttacking = false;
     }
 
     void look()
@@ -75,16 +98,13 @@ public class Enemy2 : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    /*void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Bullet")
         {
-            enemy2Audio.clip = dead;
-            enemy2Audio.Play();
-            Instantiate(particles, transform.position, Quaternion.identity);
-            Destroy(gameObject, 0.5f);
+            GetComponent<EnemyHealth>().health = 0;
         }
-    }
+    }*/
 
     IEnumerator Attack()
     {
@@ -101,11 +121,9 @@ public class Enemy2 : MonoBehaviour
                 {
                     enemiestoDamage[i].GetComponent<Player>().health+=enemyDamage;
                     //enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(dir.normalized * 500000, ForceMode2D.Impulse);
-                    isAttacking = false;
                     break;
                 }
             }
-            isAttacking = false;
         }
         yield return new WaitForSeconds(0.2f);
         anim.SetBool("Hit", false);

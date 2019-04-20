@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     /// <summary>
-    /// /////////////////////////////GOOD
+    /// /////////////////////////////LES///GD///SONT///STYLÉS
     /// </summary>
 
     Ghost ghost;
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     CinemachineImpulseSource source;
 
     public AudioClip hit, died;
-    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate, EnemiesFollowing;
+    public float PlayerScore, CalciumAmount, CalciumCapacity, curDropChanceRate, DropChanceRate, attackSpeed, EnemiesFollowing;
     public float vel, thrust, dashDistance;
     public float[] cooldownTime, curcooldownTime;
     public GameObject particles, gun, gunSprite, shootPoint, rageSprite, countDownSprite, selector;
@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     private float LocalX;
     private Vector2[] abPos;
     private int selectedAbility;
+    private float timeToAttack;
 
     CalciumBones cb;
 
@@ -62,38 +63,32 @@ public class Player : MonoBehaviour
         anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("death", isDead);
         move();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Attack"))
         {
             toPunch = true;
         }
-        if (toPunch)
+        if (Time.time > timeToAttack && toPunch)
         {
+            timeToAttack = Time.time + 1 / attackSpeed;
             StartCoroutine(Punch());
             if (lastHor >= 0f)
             {
-                Vector3 to = new Vector3(0, 0, -1500);
+                Vector3 to = new Vector3(0, 0, -2500);
                 if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
                 {
-                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
+                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to,Time.deltaTime);
                 }
             }
             else if (lastHor < 0f)
             {
-                Vector3 to = new Vector3(0, 0, 1500);
+                Vector3 to = new Vector3(0, 0, 2500);
                 if (Vector3.Distance(gunSprite.transform.eulerAngles, to) > 0.01f)
                 {
-                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
+                    gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to,Time.deltaTime);
                 }
             }
+        }
 
-            //gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
-            //gunSprite.SetActive(true);
-        }
-        else
-        {
-            StopCoroutine(Punch());
-            //gunSprite.SetActive(false);
-        }
         if (health >= 100 && !isDead)
         {
             isInRage = true;
@@ -354,10 +349,11 @@ public class Player : MonoBehaviour
             gun.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
         }
         transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
+        //player.velocity= new Vector2(vel * moveHor*100*Time.deltaTime, vel * moveVer * 100 * Time.deltaTime);
 
         // These if statements prevent velocity to exceed a given value
 
-        if (player.velocity.x > maxVel)
+        /*if (player.velocity.x > maxVel)
         {
             player.velocity = new Vector2(maxVel, player.velocity.y);
         }
@@ -372,11 +368,11 @@ public class Player : MonoBehaviour
         if (player.velocity.y < (-maxVel))
         {
             player.velocity = new Vector2(player.velocity.x, (maxVel * -1));
-        }
-        if (moveHor == 0 && moveVer == 0) // Incase input is not recieved, player stops immidiately i.e. no momentum
+        }*/
+        /*//if (moveHor == 0 && moveVer == 0) // Incase input is not recieved, player stops immidiately i.e. no momentum
         {
             player.velocity = new Vector2(0, 0);
-        }
+        }*/
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -431,6 +427,9 @@ public class Player : MonoBehaviour
             toPunch = false;
         }
         yield return new WaitForSeconds(0.2f);
+        //toPunch = false;
+        
+        StopCoroutine(Punch());
         gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
 
     }

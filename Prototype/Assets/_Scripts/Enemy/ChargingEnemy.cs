@@ -6,8 +6,8 @@ public class ChargingEnemy : MonoBehaviour
 {
     public float chargeDuration, chargeVelocity, chargeCoolDown,range;
     public bool canCharge,isCharging,isInRange;
-    public GameObject weapon, shootPoint, particles;
-    public AudioClip dead, punch;
+    public GameObject weapon, shootPoint;
+    public AudioClip punch;
     private float LocalX,angle,timeToCharge;
     Transform pl;
     Rigidbody2D rb;
@@ -89,10 +89,7 @@ public class ChargingEnemy : MonoBehaviour
     {
         if (col.gameObject.tag == "Bullet")
         {
-            chargingEnemyAud.clip = dead;
-            chargingEnemyAud.Play();
-            Instantiate(particles, transform.position, Quaternion.identity);
-            Destroy(gameObject, 0.5f);
+            GetComponent<EnemyHealth>().health = 0;
         }
     }*/
 

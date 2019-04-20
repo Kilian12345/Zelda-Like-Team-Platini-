@@ -9,15 +9,9 @@ public class SentryHitBox : MonoBehaviour
     public bool isChargingType;
 
     Transform pl;
-    EnemyAiRange path;
 
     void Start()
     {
-        if (!isChargingType)
-        {
-            path = GetComponentInParent<EnemyAiRange>();
-            path.enabled = false;
-        }
         pl = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -28,18 +22,10 @@ public class SentryHitBox : MonoBehaviour
             if (Vector2.Distance(transform.position, pl.position) > stopingDistance)
             {
                 isInside = true;
-                if (!isChargingType)
-                {
-                    path.enabled = true;
-                }
             }
             else
             {
                 isInside = false;
-                if (!isChargingType)
-                {
-                    path.enabled = false;
-                }
             }
                 
 		}
@@ -51,18 +37,10 @@ public class SentryHitBox : MonoBehaviour
             if (Vector2.Distance(transform.position, pl.position) > stopingDistance)
             {
                 isInside = true;
-                if (!isChargingType)
-                {
-                    path.enabled = true;
-                }
             }
             else
             {
                 isInside = false;
-                if (!isChargingType)
-                {
-                    path.enabled = false;
-                }
             }
         }
 	}
@@ -71,10 +49,6 @@ public class SentryHitBox : MonoBehaviour
 		if (col.gameObject.tag == "Player") 
 		{
 			isInside=false;
-            if (!isChargingType)
-            {
-                path.enabled = false;
-            }
         }
 	}
 

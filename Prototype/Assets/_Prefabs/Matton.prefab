@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 277052601}
   - component: {fileID: 277052600}
   - component: {fileID: 277052599}
-  - component: {fileID: 277052598}
   - component: {fileID: 277052597}
   - component: {fileID: 277052596}
   - component: {fileID: 277052595}
   - component: {fileID: 277052594}
   - component: {fileID: 277052593}
   - component: {fileID: 277052592}
+  - component: {fileID: 1033629862819910106}
   m_Layer: 10
   m_Name: Matton
   m_TagString: Untagged
@@ -104,18 +104,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy2Audio: {fileID: 0}
-  dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
   gun: {fileID: 1963826096}
   shootPoint: {fileID: 1277167641}
-  particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   isInRange: 0
-  range: 6
+  range: 12
+  combatDistance: 4
   enemyDamage: 8
   isAttacking: 0
   pl: {fileID: 0}
   angle: 0
   anim: {fileID: 0}
+  anim2: {fileID: 0}
   attackSpeed: 0.3
   attackRange: 0.5
 --- !u!95 &277052600
@@ -158,32 +158,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &277052598
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277052590}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00078874826, y: 0.0059696883}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.68, y: 0.73}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36094064, y: 0.74090385}
-  m_EdgeRadius: 0
 --- !u!82 &277052597
 AudioSource:
   m_ObjectHideFlags: 0
@@ -307,7 +281,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277052590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aed396e39f7c87043bb4e6ad5380c242, type: 3}
   m_Name: 
@@ -382,6 +356,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+--- !u!70 &1033629862819910106
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277052590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.022488024}
+  m_Size: {x: 0.24627505, y: 0.68502396}
+  m_Direction: 0
 --- !u!1 &949530176
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277167641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.322, y: 0, z: 0}
+  m_LocalPosition: {x: 0.394, y: -0, z: 0}
   m_LocalScale: {x: -0.78120023, y: 0.78120023, z: 0.7812001}
   m_Children: []
   m_Father: {fileID: 1963826097}

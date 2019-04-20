@@ -17,8 +17,8 @@ public class Ghost : MonoBehaviour
     [SerializeField]
     GameObject parent;
 
-    public float repeat = 1;
-    public float lifetime = 20;
+    public float repeat;
+    public float lifetime;
     public float alpha = 0.5f;
 
     void Start()
@@ -44,12 +44,6 @@ public class Ghost : MonoBehaviour
         }
 
 
-        if (flip == true)
-        {
-            FlipTrail();
-        }
-
-
 
 
     }
@@ -64,12 +58,13 @@ public class Ghost : MonoBehaviour
             trailPartRenderer.sprite = GetComponent<SpriteRenderer>().sprite;
             trailPart.transform.position = transform.position;
             trailPart.transform.localScale = transform.localScale;
-            trailParts.Add(trailPart);
+
 
             trailPart.transform.parent = parent.transform;
             trailPart.layer = LayerMask.NameToLayer("Player");
 
             StartCoroutine(FadeTrailPart(trailPartRenderer));
+            trailParts.Add(trailPart);
 
             Destroy(trailPart, lifetime);
         }
@@ -82,15 +77,15 @@ public class Ghost : MonoBehaviour
         Color color = trailPartRenderer.color;
         color.a = alpha ;
 
-        color.r = 0;
+        /*color.r = 0;
         color.g = 0;
-        color.b = 0;
+        color.b = 0;*/
 
-        time += Time.deltaTime / lifetime;
-        color.a = Mathf.Lerp(color.a, 1, time);
-        color.r = Mathf.Lerp(color.r, 0, time);
+        time += Time.deltaTime * 10;
+        color.a = Mathf.Lerp(color.a, 0, time  );
+       /* color.r = Mathf.Lerp(color.r, 0, time);
         color.g = Mathf.Lerp(color.g, 0, time);
-        color.b = Mathf.Lerp(color.b, 0, time);
+        color.b = Mathf.Lerp(color.b, 0, time);*/
 
         trailPartRenderer.color = color;
 
@@ -109,14 +104,4 @@ public class Ghost : MonoBehaviour
         Destroy(trailPart);
     }
 
-
-    void FlipTrail()
-    {
-        foreach (GameObject trailPart in trailParts)
-        {
-            trailPartLocalScale = trailPart.transform.localScale;
-            trailPartLocalScale.x = -trailPartLocalScale.x;
-            trailPart.transform.localScale = trailPartLocalScale;
-        }
-    }
 }

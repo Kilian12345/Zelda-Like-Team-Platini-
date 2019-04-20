@@ -25,8 +25,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Amount: 0
+<<<<<<< HEAD
     - _CenterX: 788.5653
     - _CenterY: 606.5667
+=======
+    - _CenterX: 423.97696
+    - _CenterY: 240.4303
+>>>>>>> Kilian-Branch
     - _WaveAmount: 10
     - _WaveSpeed: 20
     m_Colors: []

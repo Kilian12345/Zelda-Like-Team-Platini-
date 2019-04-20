@@ -24,14 +24,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SecondaryTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Intensity: 0.64
     - _OffsetColor: 0.01
     - _OffsetDistortion: 480
-    - _OffsetNoiseX: 0.5514602
-    - _OffsetNoiseY: -1.1544638
+    - _OffsetNoiseX: 0.59861326
+    - _OffsetNoiseY: -1.3342648
     - _OffsetPosY: 0
     m_Colors: []

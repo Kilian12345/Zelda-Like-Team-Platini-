@@ -20,7 +20,7 @@ public class Enemy4 : MonoBehaviour
     [HideInInspector]
     public Animator anim;
 
-    [HideInInspector]
+    //[HideInInspector]
     public int curPoint;
 
     // Use this for initialization

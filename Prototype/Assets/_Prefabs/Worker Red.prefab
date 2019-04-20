@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 375765679}
   - component: {fileID: 375765678}
   - component: {fileID: 375765677}
-  - component: {fileID: 375765676}
   - component: {fileID: 375765675}
   - component: {fileID: 375765674}
   - component: {fileID: 375765673}
   - component: {fileID: 375765672}
   - component: {fileID: 375765671}
   - component: {fileID: 375765670}
+  - component: {fileID: 5854869659441258419}
   m_Layer: 10
   m_Name: Worker Red
   m_TagString: Untagged
@@ -104,18 +104,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy2Audio: {fileID: 0}
-  dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
   gun: {fileID: 1217908535}
   shootPoint: {fileID: 715396708}
-  particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   isInRange: 0
-  range: 3
+  range: 8
+  combatDistance: 3
   enemyDamage: 3
   isAttacking: 0
   pl: {fileID: 0}
   angle: 0
   anim: {fileID: 0}
+  anim2: {fileID: 0}
   attackSpeed: 0.25
   attackRange: 0.4
 --- !u!95 &375765678
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -158,32 +158,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &375765676
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375765669}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.026842117, y: -0.036367178}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.68, y: 0.68}
-    newSize: {x: 0.68, y: 0.68}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1655407, y: 0.60412455}
-  m_EdgeRadius: 0
 --- !u!82 &375765675
 AudioSource:
   m_ObjectHideFlags: 0
@@ -307,7 +281,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375765669}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aed396e39f7c87043bb4e6ad5380c242, type: 3}
   m_Name: 
@@ -382,6 +356,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+--- !u!70 &5854869659441258419
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375765669}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.009498476, y: -0.023495873}
+  m_Size: {x: 0.21252169, y: 0.58571863}
+  m_Direction: 0
 --- !u!1 &465444931
 GameObject:
   m_ObjectHideFlags: 0
