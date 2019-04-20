@@ -69,6 +69,9 @@ public class FeedBack_Manager : MonoBehaviour
     public float saturationAmount = 1;
     public float contrastAmount = 1;
     public float strength = 0;
+
+    [Range(-0.05f, 0.05f)] public float offsetColor;
+
     #endregion
 
     #region Abilities

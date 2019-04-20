@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+public enum Rage_Visual_Enum
+{
+    Normal = 0,
+    Red = 1,
+    Green = 2,
+    Blue = 3,
+    Red_Green = 4,
+    Blue_Green = 5,
+    Red_Blue = 6,
+}
+
 [CustomEditor (typeof(FeedBack_Manager))]
 public class FeedBack_Manager_Editor : Editor
 {
@@ -60,8 +71,12 @@ public class FeedBack_Manager_Editor : Editor
     private SerializedProperty saturationAmount;
     private SerializedProperty contrastAmount;
     private SerializedProperty strength;
+
+    [Header("Rage Visual")]
+    private SerializedProperty offsetColor;
+    public  Rage_Visual_Enum Rage_V_E;
     #endregion
-    
+
     #region Abilities
     [Header("Abilities /////////////////////////////////////")]
     [Header("1st Ability")]
@@ -112,6 +127,7 @@ public class FeedBack_Manager_Editor : Editor
         saturationAmount = soTarget.FindProperty("saturationAmount");
         contrastAmount = soTarget.FindProperty("contrastAmount");
         strength = soTarget.FindProperty("strength");
+        offsetColor = soTarget.FindProperty("offsetColor");
 
         doneSecond = soTarget.FindProperty("doneSecond");
         secondActivated = soTarget.FindProperty("secondActivated");
@@ -190,6 +206,9 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(saturationAmount);
                 EditorGUILayout.PropertyField(contrastAmount);
                 EditorGUILayout.PropertyField(strength);
+
+                EditorGUILayout.PropertyField(offsetColor);
+
                 break;
             case "Abilities":
                 EditorGUILayout.PropertyField(doneSecond);

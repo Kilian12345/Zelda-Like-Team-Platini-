@@ -9758,6 +9758,7 @@ GameObject:
   - component: {fileID: 944187565}
   - component: {fileID: 944187564}
   - component: {fileID: 944187563}
+  - component: {fileID: 944187572}
   m_Layer: 0
   m_Name: Main_Cam
   m_TagString: MainCamera
@@ -10008,6 +10009,20 @@ Transform:
   m_Father: {fileID: 1796326953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944187572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944187561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f931213d1b3d8648a466902796a7347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  _material: {fileID: 2100000, guid: 28d96c0ba7da13747a4797abe9fd186d, type: 2}
 --- !u!1 &996921691
 GameObject:
   m_ObjectHideFlags: 0
@@ -12210,13 +12225,14 @@ MonoBehaviour:
   saturationAmount: 1
   contrastAmount: 1
   strength: 0
+  offsetColor: 0
   doneSecond: 0
   secondActivated: 0
   timeSecond: 0
   timeDeltaSecond: 0
   timeThird: 0
-  toolbarTab: 0
-  currentTab: Transition
+  toolbarTab: 3
+  currentTab: Camera Shade
 --- !u!4 &1796326953
 Transform:
   m_ObjectHideFlags: 0
@@ -13004,7 +13020,6 @@ GameObject:
   - component: {fileID: 2047691881}
   - component: {fileID: 2047691883}
   - component: {fileID: 2047691882}
-  - component: {fileID: 2047691884}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -13076,20 +13091,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &2047691884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047691880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f931213d1b3d8648a466902796a7347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  _material: {fileID: 2100000, guid: 28d96c0ba7da13747a4797abe9fd186d, type: 2}
 --- !u!1 &2051614349
 GameObject:
   m_ObjectHideFlags: 0
