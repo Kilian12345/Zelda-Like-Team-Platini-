@@ -75,9 +75,10 @@ public class FeedBack_Manager : MonoBehaviour
 
     [Space(10.0f)]
     public bool glitchEffect;
-    [Range(0.0001f, 0.001f)] public float glitchSpeed;
+    [HideInInspector] [Range(-0.05f, 0.05f)] public float colorGlitch;
+    [Range(0f, 0.01f)] public float glitchSpeed;
     [Range(0.0001f, 0.001f)] public float colorSwitchSpeed;
-    [Range(-0.05f, 0.05f)] public float glitchPower;
+    [Range(0f, 0.05f)] public float glitchPower;
     public bool colorSwitch;
     public float colorActual;
     [Range(0, 1f)] public float colorMaxTime;
@@ -132,7 +133,6 @@ public class FeedBack_Manager : MonoBehaviour
         Vignette();
         if (secondActivated == true) StartCoroutine(secondAbility());
 
-        Debug.Log(mode);
     }
 
     void Bloom()

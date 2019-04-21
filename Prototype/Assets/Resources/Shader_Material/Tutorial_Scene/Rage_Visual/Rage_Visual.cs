@@ -70,17 +70,17 @@ public class Rage_Visual : MonoBehaviour
         // Glitch Effect
         if (Fb_Mana.glitchEffect == true)
         {
-            if (Fb_Mana.offsetColor < 0)
+            if (Fb_Mana.colorGlitch < -0.001f)
             {
-                _material.SetFloat("_OffsetColor", Fb_Mana.offsetColor + Fb_Mana.glitchSpeed);
+                Fb_Mana.colorGlitch += Fb_Mana.glitchSpeed;
             }
-            else if (Fb_Mana.offsetColor > 0)
+            else if (Fb_Mana.colorGlitch > 0.001f)
             {
-                _material.SetFloat("_OffsetColor", Fb_Mana.offsetColor - Fb_Mana.glitchSpeed);
+                Fb_Mana.colorGlitch -= Fb_Mana.glitchSpeed;
             }
-            else
+            else if (Fb_Mana.colorGlitch >= -0.001f && Fb_Mana.colorGlitch <= 0.001f)
             {
-                _material.SetFloat("_OffsetColor", Random.Range(-Fb_Mana.glitchPower, Fb_Mana.glitchPower));
+                Fb_Mana.colorGlitch = Random.Range(-Fb_Mana.glitchPower, Fb_Mana.glitchPower);
             }
 
             if (Fb_Mana.colorSwitch == true)
@@ -96,11 +96,15 @@ public class Rage_Visual : MonoBehaviour
                 }
 
             }
+
+            _material.SetFloat("_OffsetColor", Fb_Mana.colorGlitch);
         }
         else
         {
             _material.SetFloat("_OffsetColor", offsetColor);
         }
+
+        Debug.Log(Fb_Mana.colorGlitch);
 
         Graphics.Blit(source, destination, _material);
     }

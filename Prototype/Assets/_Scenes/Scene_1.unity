@@ -12216,14 +12216,15 @@ MonoBehaviour:
   saturationAmount: 1
   contrastAmount: 1
   strength: 0
-  offsetColor: -0.0392
-  glitchEffect: 0
-  glitchSpeed: 0.000168
-  colorSwitchSpeed: 0.000156
-  glitchPower: 0
+  offsetColor: -0.0068
+  glitchEffect: 1
+  colorGlitch: 0
+  glitchSpeed: 0.00166
+  colorSwitchSpeed: 0.0001
+  glitchPower: 0.0406
   colorSwitch: 0
   colorActual: 0
-  colorMaxTime: 0.323
+  colorMaxTime: 0
   mode: 0
   previousMode: 1
   doneSecond: 0
