@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public enum Rage_Visual_Enum
+public enum Rage_Visual_Enum
 {
     Normal = 0,
     Red = 1,
@@ -11,14 +11,14 @@ using UnityEngine;
     Red_Green = 4,
     Blue_Green = 5,
     Red_Blue = 6,
-}*/
+}
 
 
 [ExecuteInEditMode]
 public class Rage_Visual : MonoBehaviour
 {
-    public Rage_Visual_Enum mode = Rage_Visual_Enum.Normal;
-    private Rage_Visual_Enum previousMode = Rage_Visual_Enum.Normal;
+    public Rage_Visual_Enum mode;
+    private Rage_Visual_Enum previousMode;
     [SerializeField] Material _material;
     FeedBack_Manager Fb_Mana;
 
@@ -49,22 +49,58 @@ public class Rage_Visual : MonoBehaviour
     }
 
     public void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {        
-        if (mode == Rage_Visual_Enum.Normal)
+    {
+        mode = Fb_Mana.mode;
+        previousMode = Fb_Mana.previousMode;
+        offsetColor = Fb_Mana.offsetColor;
+
+        if (Fb_Mana.mode == Rage_Visual_Enum.Normal)
         {
             Graphics.Blit(source, destination);
             return;
         }
 
         // Change effect
-        if (mode != previousMode)
+        if (Fb_Mana.mode != Fb_Mana.previousMode)
         {   
             _material.SetFloat("_Which", RGB[(int)mode, 0]);
-            previousMode = mode;
+            Fb_Mana.previousMode = Fb_Mana.mode;
         }
 
-        _material.SetFloat("_OffsetColor", offsetColor);
-        offsetColor = Fb_Mana.offsetColor;
+        // Glitch Effect
+        if (Fb_Mana.glitchEffect == true)
+        {
+            if (Fb_Mana.offsetColor < 0)
+            {
+                _material.SetFloat("_OffsetColor", Fb_Mana.offsetColor + Fb_Mana.glitchSpeed);
+            }
+            else if (Fb_Mana.offsetColor > 0)
+            {
+                _material.SetFloat("_OffsetColor", Fb_Mana.offsetColor - Fb_Mana.glitchSpeed);
+            }
+            else
+            {
+                _material.SetFloat("_OffsetColor", Random.Range(-Fb_Mana.glitchPower, Fb_Mana.glitchPower));
+            }
+
+            if (Fb_Mana.colorSwitch == true)
+            {
+                if (Fb_Mana.colorActual > 0)
+                {
+                    Fb_Mana.colorActual -= Fb_Mana.colorSwitchSpeed;
+                }
+                else
+                {
+                    Fb_Mana.colorActual = Random.Range(0, Fb_Mana.colorMaxTime);
+                    _material.SetFloat("_Which", Random.Range(RGB[1,0], RGB[3, 0]));
+                }
+
+            }
+        }
+        else
+        {
+            _material.SetFloat("_OffsetColor", offsetColor);
+        }
 
         Graphics.Blit(source, destination, _material);
     }

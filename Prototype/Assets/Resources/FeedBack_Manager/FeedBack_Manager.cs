@@ -70,7 +70,20 @@ public class FeedBack_Manager : MonoBehaviour
     public float contrastAmount = 1;
     public float strength = 0;
 
+    [Header("Rage Visual")]
     [Range(-0.05f, 0.05f)] public float offsetColor;
+
+    [Space(10.0f)]
+    public bool glitchEffect;
+    [Range(0.0001f, 0.001f)] public float glitchSpeed;
+    [Range(0.0001f, 0.001f)] public float colorSwitchSpeed;
+    [Range(-0.05f, 0.05f)] public float glitchPower;
+    public bool colorSwitch;
+    public float colorActual;
+    [Range(0, 1f)] public float colorMaxTime;
+
+    public Rage_Visual_Enum mode = Rage_Visual_Enum.Normal;
+    [HideInInspector]public Rage_Visual_Enum previousMode = Rage_Visual_Enum.Normal;
 
     #endregion
 
@@ -118,6 +131,8 @@ public class FeedBack_Manager : MonoBehaviour
         Bloom();
         Vignette();
         if (secondActivated == true) StartCoroutine(secondAbility());
+
+        Debug.Log(mode);
     }
 
     void Bloom()

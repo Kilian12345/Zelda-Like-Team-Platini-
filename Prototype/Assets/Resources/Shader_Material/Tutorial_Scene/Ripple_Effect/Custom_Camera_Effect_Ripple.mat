@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ripple
+  m_Name: Custom_Camera_Effect_Ripple
   m_Shader: {fileID: 4800000, guid: 15fb7d88480865e428f9daa05bd3ec27, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -25,13 +25,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Amount: 0
-<<<<<<< HEAD
-    - _CenterX: 788.5653
-    - _CenterY: 606.5667
-=======
-    - _CenterX: 423.97696
-    - _CenterY: 240.4303
->>>>>>> Kilian-Branch
+    - _CenterX: 274
+    - _CenterY: 154
     - _WaveAmount: 10
     - _WaveSpeed: 20
     m_Colors: []

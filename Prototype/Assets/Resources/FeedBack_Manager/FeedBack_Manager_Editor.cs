@@ -3,16 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public enum Rage_Visual_Enum
-{
-    Normal = 0,
-    Red = 1,
-    Green = 2,
-    Blue = 3,
-    Red_Green = 4,
-    Blue_Green = 5,
-    Red_Blue = 6,
-}
 
 [CustomEditor (typeof(FeedBack_Manager))]
 public class FeedBack_Manager_Editor : Editor
@@ -74,7 +64,15 @@ public class FeedBack_Manager_Editor : Editor
 
     [Header("Rage Visual")]
     private SerializedProperty offsetColor;
-    public  Rage_Visual_Enum Rage_V_E;
+    private SerializedProperty mode;
+    private SerializedProperty previousMode;
+
+    private SerializedProperty glitchEffect;
+    private SerializedProperty glitchSpeed;
+    private SerializedProperty colorSwitchSpeed;
+    private SerializedProperty glitchPower;
+    private SerializedProperty colorSwitch;
+    private SerializedProperty colorMaxTime;
     #endregion
 
     #region Abilities
@@ -128,6 +126,14 @@ public class FeedBack_Manager_Editor : Editor
         contrastAmount = soTarget.FindProperty("contrastAmount");
         strength = soTarget.FindProperty("strength");
         offsetColor = soTarget.FindProperty("offsetColor");
+        mode = soTarget.FindProperty("mode");
+        previousMode = soTarget.FindProperty("previousMode");
+        glitchEffect = soTarget.FindProperty("glitchEffect");
+        glitchSpeed = soTarget.FindProperty("glitchSpeed");
+        colorSwitchSpeed = soTarget.FindProperty("colorSwitchSpeed");
+        glitchPower = soTarget.FindProperty("glitchPower");
+        colorSwitch = soTarget.FindProperty("colorSwitch");
+        colorMaxTime = soTarget.FindProperty("colorMaxTime");
 
         doneSecond = soTarget.FindProperty("doneSecond");
         secondActivated = soTarget.FindProperty("secondActivated");
@@ -208,6 +214,17 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(strength);
 
                 EditorGUILayout.PropertyField(offsetColor);
+                EditorGUILayout.PropertyField(mode , true);
+                EditorGUILayout.PropertyField(glitchEffect);
+
+                if (myTarget.glitchEffect == true)
+                {
+                    EditorGUILayout.PropertyField(glitchSpeed);
+                    EditorGUILayout.PropertyField(glitchPower);
+                    EditorGUILayout.PropertyField(colorSwitch);
+                    EditorGUILayout.PropertyField(colorSwitchSpeed);
+                    EditorGUILayout.PropertyField(colorMaxTime);
+                }
 
                 break;
             case "Abilities":
