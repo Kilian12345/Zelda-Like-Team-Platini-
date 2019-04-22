@@ -31,7 +31,6 @@ public class GunCock : MonoBehaviour
     Player plScript;
     Animator anim;
     EnemyHealth healthScript;
-    Transform plTransform;
 
     //[HideInInspector]
     public int curPoint;
@@ -253,5 +252,13 @@ public class GunCock : MonoBehaviour
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
         StopCoroutine(Shoot());
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, shootingRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, chasingRange);
     }
 }

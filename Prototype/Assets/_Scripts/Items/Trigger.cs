@@ -23,7 +23,6 @@ public class Trigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Coll");
         if (curType == typeOfTrigger.Collision)
         {
             isTriggered = true;
@@ -38,7 +37,6 @@ public class Trigger : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("CollStay");
         if (curType == typeOfTrigger.Collision)
         {
             isTriggered = true;
@@ -53,7 +51,6 @@ public class Trigger : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("CollExit");
         if (curType == typeOfTrigger.Collision)
         {
             isTriggered = false;

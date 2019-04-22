@@ -116,16 +116,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8af613467dbcc4182adf2328efd789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeVelocity: 3
+  moveSpeed: 0.5
+  chargeVelocity: 1.5
   chargeCoolDown: 0.2
-  range: 1.5
-  distX: 0
-  distY: 0
+  detectionRange: 1.5
+  chargeRange: 1
+  isInChaseRange: 0
+  isInChargeRange: 0
   canCharge: 0
-  isCharging: 0
-  isInRange: 0
-  isAttacking: 0
-  isDead: 0
 --- !u!50 &6249049812098786720
 Rigidbody2D:
   serializedVersion: 4
@@ -178,7 +176,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
