@@ -117,7 +117,7 @@ public class Kami : MonoBehaviour
                 if (enemiestoDamage[i].GetComponent<Player>() != null)
                 {
                     enemiestoDamage[i].GetComponent<Player>().health += damageValue;
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(dir.x * damagePushForce,dir.y * damagePushForce) , ForceMode2D.Impulse);
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * damagePushForce,dir.y * damagePushForce) , ForceMode2D.Impulse);
                     yield return new WaitForSeconds(0.025f);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     break;

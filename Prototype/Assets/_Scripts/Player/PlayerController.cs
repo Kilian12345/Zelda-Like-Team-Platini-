@@ -59,8 +59,8 @@ public class PlayerController : MonoBehaviour
         moveVertical = vertical * speed;
 
         Vector3 movement = new Vector2(moveHorizontal, moveVertical);
-        transform.position = transform.position + movement * Time.deltaTime; ;
-        //player.velocity = movement * speed;
+        //transform.position = transform.position + movement * Time.deltaTime; ;
+        player.velocity = movement * speed;
 
         //magnitude = sqrt(x*x + y*y + z*z) so whenever the player is moving x,y or z > 1 so magnitude > 1
         animator.SetFloat("Horizontal", movWithoutSpeed.x);
