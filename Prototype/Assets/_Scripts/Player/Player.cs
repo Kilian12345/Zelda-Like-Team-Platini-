@@ -147,9 +147,9 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         anim.SetInteger("activatedAbility", activatedAbility);
-        anim.SetFloat("HorAxis", Mathf.Abs(moveHor));
-        anim.SetFloat("VerAxis", moveVer);
-        anim.SetBool("death", isDead);
+        //anim.SetFloat("HorAxis", Mathf.Abs(moveHor));
+        //anim.SetFloat("VerAxis", moveVer);
+        anim.SetBool("Dead", isDead);
         move();
         if (Input.GetButtonDown("Attacking"))
         {
@@ -452,7 +452,7 @@ public class Player : MonoBehaviour
         anim.SetBool("Dead", true);
         playerAudio.clip = died;
         playerAudio.Play();
-        Instantiate(particles, transform.position, Quaternion.identity);;
+        Instantiate(particles, transform.position, Quaternion.identity);
         vel = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

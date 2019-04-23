@@ -62,7 +62,10 @@ public class Kami : MonoBehaviour
                 move();
             }
         }
-        
+        if (healthScript.health<=0)
+        {
+            isExploding = true;
+        }
         
     }
 
