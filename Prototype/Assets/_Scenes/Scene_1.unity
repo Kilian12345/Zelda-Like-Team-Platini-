@@ -12038,6 +12038,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718383666}
   m_CullTransparentMesh: 0
+--- !u!1 &1759082107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759082108}
+  m_Layer: 0
+  m_Name: Player_Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1759082108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759082107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7729292, y: -3.1363974, z: -1.5000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783386675
 GameObject:
   m_ObjectHideFlags: 0
@@ -12438,15 +12468,15 @@ MonoBehaviour:
   contrastAmount: 1
   strength: 0
   offsetColor: -0.0068
-  glitchEffect: 1
-  colorGlitch: -0.001096646
+  glitchEffect: 0
+  colorGlitch: 0.020517543
   glitchSpeed: 0.00166
   colorSwitchSpeed: 0.001
   glitchPower: 0.0406
-  colorSwitch: 1
-  colorActual: 0.14877331
+  colorSwitch: 0
+  colorActual: 0.08477318
   colorMaxTime: 0.442
-  mode: 2
+  mode: 0
   previousMode: 2
   doneSecond: 0
   secondActivated: 0
@@ -12915,6 +12945,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1778995195, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778995195, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1759082107}
+    - target: {fileID: 1778995195, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: "activ\xE9"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778995195, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: repeat
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778995195, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: lifetime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2031973145347419398, guid: fb3af06246630184b8c80238784844a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb3af06246630184b8c80238784844a3, type: 3}
@@ -13275,7 +13325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f931213d1b3d8648a466902796a7347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 2
+  mode: 0
   _material: {fileID: 2100000, guid: 28d96c0ba7da13747a4797abe9fd186d, type: 2}
 --- !u!20 &2047691883
 Camera:
