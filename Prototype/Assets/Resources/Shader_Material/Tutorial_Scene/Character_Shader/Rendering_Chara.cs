@@ -51,7 +51,7 @@ public class Rendering_Chara : MonoBehaviour
            _propBlock.SetColor("_ColorOutline", OutlineColor);
         }
         else
-        { _propBlock.SetFloat("_OpaqueMode", 0); }
+        { _propBlock.SetFloat("_OutlineMode", 0); }
         // Apply the edited values to the renderer.
         _renderer.SetPropertyBlock(_propBlock);
     }

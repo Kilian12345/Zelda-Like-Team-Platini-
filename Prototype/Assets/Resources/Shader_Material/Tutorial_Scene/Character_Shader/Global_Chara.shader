@@ -31,6 +31,7 @@
 		SubShader
 	{
 
+
 		Tags
 	{
 		"Queue" = "Transparent"
@@ -103,12 +104,12 @@
 		{
 			_ColorOutline.rgb *= _ColorOutline.a;
 
-			fixed alpha_up = c + fixed2(0, _MainTex_TexelSize.y);
-			fixed alpha_down = c - fixed2(0, _MainTex_TexelSize.y);
-			fixed alpha_right = c + fixed2(_MainTex_TexelSize.x, 0);
-			fixed alpha_left = c - fixed2(_MainTex_TexelSize.x, 0);
+			fixed alpha_up = tex2D(_MainTex, IN.uv_MainTex + fixed2(0, _MainTex_TexelSize.y)).a;
+			fixed alpha_down = tex2D(_MainTex, IN.uv_MainTex - fixed2(0, _MainTex_TexelSize.y)).a;
+			fixed alpha_right = tex2D(_MainTex, IN.uv_MainTex + fixed2(_MainTex_TexelSize.x, 0)).a;
+			fixed alpha_left = tex2D(_MainTex, IN.uv_MainTex - fixed2(_MainTex_TexelSize.x, 0)).a;
 
-			c = lerp(c, _ColorOutline, c.a == 0 && alpha_up + alpha_down + alpha_right + alpha_left>0);
+			c = lerp(c, _ColorOutline * 3, c.a == 0 && alpha_up + alpha_down + alpha_right + alpha_left>0);
 		}
 		
 		o.Albedo = c.rgb * c.a;

@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeadButt (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6249049812098786730, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2126,9 +2131,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tint: {r: 1, g: 1, b: 1, a: 1}
   OpaqueColor: {r: 0, g: 1, b: 0.98136926, a: 1}
+  DissolveEmission: {r: 1, g: 1, b: 1, a: 1}
+  OutlineColor: {r: 1, g: 1, b: 1, a: 1}
   isOpaque: 0
   isDissolve: 0
+  isOutline: 0
   dissolveAmout: 0
+  dissolveGrain: 0
 --- !u!1 &834427691
 GameObject:
   m_ObjectHideFlags: 0
@@ -9776,7 +9785,6 @@ GameObject:
   - component: {fileID: 944187565}
   - component: {fileID: 944187564}
   - component: {fileID: 944187563}
-  - component: {fileID: 944187572}
   m_Layer: 0
   m_Name: Main_Cam
   m_TagString: MainCamera
@@ -10027,20 +10035,6 @@ Transform:
   m_Father: {fileID: 1796326953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &944187572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944187561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f931213d1b3d8648a466902796a7347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  _material: {fileID: 2100000, guid: 28d96c0ba7da13747a4797abe9fd186d, type: 2}
 --- !u!1 &996921691
 GameObject:
   m_ObjectHideFlags: 0
@@ -10734,6 +10728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeadButt (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6249049812098786730, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11239,6 +11238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HeadButt (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249049812098786730, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
@@ -11878,6 +11882,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeadButt (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6249049812098786730, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12064,10 +12073,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tint: {r: 1, g: 1, b: 1, a: 1}
-  OpaqueColor: {r: 1, g: 0, b: 0, a: 1}
-  isOpaque: 0
-  isDissolve: 0
-  dissolveAmout: 0
+  OpaqueColor: {r: 0, g: 0, b: 0, a: 1}
+  DissolveEmission: {r: 0.9716981, g: 0.40377396, b: 0, a: 1}
+  OutlineColor: {r: 1, g: 0, b: 0, a: 1}
+  isOpaque: 1
+  isDissolve: 1
+  isOutline: 0
+  dissolveAmout: -0.1
+  dissolveGrain: 0.073
 --- !u!61 &1783386677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12409,7 +12422,7 @@ MonoBehaviour:
   virtualCamera: {fileID: 1789486871}
   virtualCameraNoise: {fileID: 0}
   timeBloom: 10
-  bloom: 60
+  bloom: 20
   timeLens: 10
   vignetteColor: {r: 1, g: 0, b: 0, a: 1}
   vignetteOpacity: 1
@@ -12426,15 +12439,15 @@ MonoBehaviour:
   strength: 0
   offsetColor: -0.0068
   glitchEffect: 1
-  colorGlitch: 0
+  colorGlitch: -0.001096646
   glitchSpeed: 0.00166
-  colorSwitchSpeed: 0.0001
+  colorSwitchSpeed: 0.001
   glitchPower: 0.0406
-  colorSwitch: 0
-  colorActual: 0
-  colorMaxTime: 0
-  mode: 0
-  previousMode: 1
+  colorSwitch: 1
+  colorActual: 0.14877331
+  colorMaxTime: 0.442
+  mode: 2
+  previousMode: 2
   doneSecond: 0
   secondActivated: 0
   timeSecond: 0
@@ -13228,6 +13241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047691881}
   - component: {fileID: 2047691883}
+  - component: {fileID: 2047691882}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -13249,6 +13263,20 @@ Transform:
   m_Father: {fileID: 944187571}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2047691882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047691880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f931213d1b3d8648a466902796a7347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 2
+  _material: {fileID: 2100000, guid: 28d96c0ba7da13747a4797abe9fd186d, type: 2}
 --- !u!20 &2047691883
 Camera:
   m_ObjectHideFlags: 0
@@ -13475,6 +13503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HeadButt (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249049812098786730, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
