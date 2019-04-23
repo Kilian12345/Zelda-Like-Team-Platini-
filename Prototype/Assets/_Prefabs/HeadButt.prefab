@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6249049812098786722}
   - component: {fileID: 6249049812098786721}
   - component: {fileID: 1426911033}
+  - component: {fileID: 6644519146914109262}
   m_Layer: 0
   m_Name: HeadButt
   m_TagString: Untagged
@@ -287,3 +288,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.12115489, y: 0.23681536}
   m_EdgeRadius: 0
+--- !u!114 &6644519146914109262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249049812098786730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151fcf68dd87bb641b3a2e2b5a9f5341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
+    type: 3}

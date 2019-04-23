@@ -478,7 +478,7 @@ public class Player : MonoBehaviour
             //transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
             gun.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
         }*/
-        //transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
+        transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
     }
 
     void OnTriggerEnter2D(Collider2D col)

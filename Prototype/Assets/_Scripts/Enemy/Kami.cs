@@ -104,9 +104,10 @@ public class Kami : MonoBehaviour
     {
         startExplode = true;
         yield return new WaitForSeconds(waitForExplode);
-        Debug.Log("Exploded Boi");
+        
         isExploding = true;
         dir = (plScript.centrePoint.transform.position - transform.position).normalized;
+        Debug.Log("Exploded Boi " + dir);
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(transform.position, damageRange);
         if (enemiestoDamage.Length > 0)
@@ -116,7 +117,7 @@ public class Kami : MonoBehaviour
                 if (enemiestoDamage[i].GetComponent<Player>() != null)
                 {
                     enemiestoDamage[i].GetComponent<Player>().health += damageValue;
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.normalized.x, dir.normalized.y) * damagePushForce, ForceMode2D.Impulse);
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(dir.x * damagePushForce,dir.y * damagePushForce) , ForceMode2D.Impulse);
                     yield return new WaitForSeconds(0.025f);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     break;

@@ -1207,6 +1207,7 @@ GameObject:
   - component: {fileID: 590431229}
   - component: {fileID: 590431228}
   - component: {fileID: 590431235}
+  - component: {fileID: 590431236}
   m_Layer: 0
   m_Name: KamiKaze
   m_TagString: Untagged
@@ -1343,11 +1344,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 1
-  stoppingDistance: 0.3
+  stoppingDistance: 0.5
   moveSpeed: 0.5
   damageRange: 0.5
   damageValue: 30
-  damagePushForce: 450
+  damagePushForce: 75
   waitForExplode: 2
   isInRange: 0
   canExplode: 0
@@ -1453,7 +1454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590431227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.288, y: -1.6, z: 0}
+  m_LocalPosition: {x: 9.388, y: -1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1480,6 +1481,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &590431236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590431227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151fcf68dd87bb641b3a2e2b5a9f5341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
+    type: 3}
 --- !u!1 &648168563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9972,7 +9987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2472312, y: 0.71214664, z: -49.53446}
+  m_LocalPosition: {x: 8.503232, y: 0.71214664, z: -49.53446}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
   - {fileID: 1789486870}
@@ -10416,7 +10431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4523656586312702, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.799
+      value: 11.055
       objectReference: {fileID: 0}
     - target: {fileID: 4523656586312702, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10478,6 +10493,26 @@ PrefabInstance:
       propertyPath: abilityMeters.Array.data[2]
       value: 
       objectReference: {fileID: 2005096231}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: maxVel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: toolbarTab
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: currentTab
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: vel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 522687464, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: vendingMachinePanel
       value: 
@@ -13285,7 +13320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 1558015266}
   yScale: 7.5
-  doorSpeed: 0.05
+  doorSpeed: 0.025
 --- !u!4 &2071312914
 Transform:
   m_ObjectHideFlags: 0
@@ -13401,12 +13436,12 @@ PrefabInstance:
     - target: {fileID: 2803111743261428673, guid: bc3e0f825e6350e4caa871fac8bdc8fe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6745
+      value: 2.269
       objectReference: {fileID: 0}
     - target: {fileID: 2803111743261428673, guid: bc3e0f825e6350e4caa871fac8bdc8fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1822
+      value: -1.594
       objectReference: {fileID: 0}
     - target: {fileID: 2803111743261428673, guid: bc3e0f825e6350e4caa871fac8bdc8fe,
         type: 3}
