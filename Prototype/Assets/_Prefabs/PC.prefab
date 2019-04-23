@@ -605,8 +605,8 @@ MonoBehaviour:
   moveVer: 0
   lastHor: 0
   lastVer: 0
-  vel: 9
-  maxVel: 50
+  vel: 1
+  maxVel: 3
   gun: {fileID: 1875459423507234}
   gunSprite: {fileID: 1468984369528666}
   shootPoint: {fileID: 1489773366458406}
@@ -641,8 +641,8 @@ MonoBehaviour:
   hit: {fileID: 8300000, guid: b384c80250d32b1478004f5f0ca63322, type: 3}
   died: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
-  toolbarTab: 3
-  currentTab: Ability
+  toolbarTab: 0
+  currentTab: Rage
 --- !u!114 &114393622717491364
 MonoBehaviour:
   m_ObjectHideFlags: 0
