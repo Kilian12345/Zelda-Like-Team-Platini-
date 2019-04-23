@@ -11,28 +11,29 @@ public class FeedBack_Manager : MonoBehaviour
     [Header("Transition ///////////////////////////////////")]
     [Header("Blit")]
     public Material TransitionMaterial;
-    [SerializeField] Material[] matList;
+    public Material[] matList;
     public float cutoff;
     public float transitionTime = 1;
     #endregion
 
     #region ScreenShake
     [Header("ScreenShake ///////////////////////////////////")]
-    [SerializeField] private float shakeAmplitude = 0f;
-    [SerializeField] private float shakeDuration = 0f;
-    [SerializeField] private float shakeFrequency = 0f;
-    [SerializeField] private float shakeElapsedTime = 0f;
+    public float shakeAmplitude = 0f;
+    public float shakeDuration = 0f;
+    public float shakeFrequency = 0f;
+    public float shakeElapsedTime = 0f;
 
     [Space (10.0f)]
-    [SerializeField] CinemachineVirtualCamera virtualCamera;
-    [NonSerialized] CinemachineBasicMultiChannelPerlin virtualCameraNoise;
+    public CinemachineVirtualCamera virtualCamera;
+    [HideInInspector]
+    public CinemachineBasicMultiChannelPerlin virtualCameraNoise;
     #endregion
 
     #region Camera Shader
     [Header("Camera Shader /////////////////////////////////////")]
 
     [Header("Bloom")]
-    [SerializeField] float timeBloom;
+    public float timeBloom;
     Bloom bloomLayer = null;
     public float bloom = 0.15f;
     bool doneBloom = false;
@@ -41,8 +42,8 @@ public class FeedBack_Manager : MonoBehaviour
     [NonSerialized] PostProcessVolume volume;
 
     [Header("Vignette")]
-    [SerializeField] float timeLens;
-    [SerializeField] Color vignetteColor;
+    public float timeLens;
+    public Color vignetteColor;
     Vignette vignette = null;
     public float vignetteOpacity = 0;
     bool doneVignette = false;
@@ -75,14 +76,21 @@ public class FeedBack_Manager : MonoBehaviour
     [Header("1st Ability")]
 
     [Header("2nt Ability")]
-    [SerializeField] bool doneSecond = false;
+    public bool doneSecond = false;
     public bool secondActivated = false;
-    [SerializeField] float timeSecond;
-    [SerializeField] float timeDeltaSecond;
+    public float timeSecond;
+    public float timeDeltaSecond;
 
 
     [Header("3rd Ability")]
-    [SerializeField] float timeThird;
+    public float timeThird;
+    #endregion
+
+    #region GUI LAYOUT
+
+    [HideInInspector]
+    public int toolbarTab;
+    public string currentTab;
     #endregion
 
     void Start()
@@ -101,7 +109,7 @@ public class FeedBack_Manager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)) secondActivated = true;
+        //if (Input.GetKey(KeyCode.Space)) secondActivated = true;
 
         CameraShake();
         Bloom();
@@ -195,29 +203,41 @@ public class FeedBack_Manager : MonoBehaviour
 
     IEnumerator secondAbility()
     {
+        float t = Mathf.Clamp(timeDeltaSecond, 0, 1);
+
+        saturationAmount = Mathf.Lerp(1, 0, t);
+        if (saturationAmount <= 0) doneSecond = true;
+
+
         if (saturationAmount > 0 && doneSecond == false)
         {
 
             ripple = true;
             timeDeltaSecond += Time.deltaTime;
-            saturationAmount = Mathf.Lerp(1, 0, timeDeltaSecond); 
+
+            Debug.Log("NOPE");
 
         }
 
-        yield return new WaitForSeconds(timeSecond);
 
 
-        if (saturationAmount <= 0)
+
+
+        if (doneSecond == true)
         {
-            doneSecond = true;
+            yield return new WaitForSeconds(timeSecond);
 
-            saturationAmount = Mathf.Lerp(0, 1, timeDeltaSecond * Time.deltaTime);            
+
+            timeDeltaSecond -= Time.deltaTime;
 
             if (saturationAmount >= 1)
             {
-                saturationAmount = 1;
-                secondActivated = false;
+                Debug.Log("OK");
+                timeDeltaSecond = 0;
+                doneSecond = false;
                 ripple = false;
+                secondActivated = false;
+                saturationAmount = 1;
             }
         }
 

@@ -38,13 +38,17 @@ public class EnemyHealth : MonoBehaviour
             enemy2Audio.clip = dead;
             enemy2Audio.Play();
             GetComponent<Collider2D>().enabled = false;
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 1f);
 
             Blood();
         }
 
+        if (Vector2.Distance(transform.position, pl.position) > 5)
+        {
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
 
-        ZoneDamage();
+            ZoneDamage();
 
     }
 

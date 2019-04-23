@@ -1,0 +1,8 @@
+newGame = NOUVELLE PARTIE
+continue = CONTINUER
+levels = NIVEAUX
+options = OPTIONS
+leave = QUITTER
+back = Retour
+french = Français
+english = Anglais

@@ -15,9 +15,6 @@ GameObject:
   - component: {fileID: 375765677}
   - component: {fileID: 375765675}
   - component: {fileID: 375765674}
-  - component: {fileID: 375765673}
-  - component: {fileID: 375765672}
-  - component: {fileID: 375765671}
   - component: {fileID: 375765670}
   - component: {fileID: 5854869659441258419}
   m_Layer: 10
@@ -111,6 +108,7 @@ MonoBehaviour:
   range: 8
   combatDistance: 3
   enemyDamage: 3
+  attackPushForce: 500
   isAttacking: 0
   pl: {fileID: 0}
   angle: 0
@@ -274,74 +272,6 @@ MonoBehaviour:
     type: 3}
   health: 100
   scorePerHit: 30
---- !u!114 &375765673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375765669}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed396e39f7c87043bb4e6ad5380c242, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewRadius: 5
-  viewAngle: 360
-  stopingDistance: 0
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 512
-  visiblePlayer: []
-  PlayerDetected: 0
-  anim: {fileID: 0}
---- !u!114 &375765672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375765669}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc0cbdcc89cb6e44bb67a6452d2018ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  updateRate: 5
-  fow: {fileID: 0}
-  speed: 100
-  fMode: 0
-  pathIsEnded: 0
-  nextWaypointDistance: 1
---- !u!114 &375765671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375765669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: -1
 --- !u!114 &375765670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,7 +360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a996cd119d454341982f1014e7f296e, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

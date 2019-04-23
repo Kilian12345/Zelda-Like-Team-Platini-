@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Menu.unity
     guid: 0a0bfda9e868d7441ae4e6b57422b496
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Tutorial_scene.unity
     guid: f4d789fe4205b1c46b0479dc4417dd97
+  - enabled: 1
+    path: Assets/_Scenes/AntoninTestingGround.unity
+    guid: 4b2f914cb7290154a984d6bb4b40e7c0
   m_configObjects: {}

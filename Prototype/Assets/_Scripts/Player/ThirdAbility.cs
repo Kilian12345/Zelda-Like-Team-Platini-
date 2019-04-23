@@ -51,18 +51,10 @@ public class ThirdAbility : MonoBehaviour
                 {
 
                     visiblePlayer.Add(player);
-                    PlayerDetected = true;
-                    
+                    PlayerDetected = true;   
                 }
-
-
-
-
             }        
-
         }
-
-
     }
 
     private void Clear(Transform player)
