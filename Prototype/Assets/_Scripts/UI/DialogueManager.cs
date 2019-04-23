@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         //Activate Dialogue combat when pressing Y while in the Trigger Zone and dialogue is not active
-        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.Y)) && (activator.InsideTriggerZone == true) && (activator.DialogueActive == false))
+        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) && (activator.InsideTriggerZone == true) && (activator.DialogueActive == false))
         {
             canvasDialogue.SetActive(true);
             StartDialogue(activator.dialogue);
@@ -30,10 +30,14 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Continue to next sentence when dialogue is already active
-        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.Y)) && activator.DialogueActive == true)
+        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) && activator.DialogueActive == true)
         {
             DisplayNextSentence();
             Debug.Log("Next sentence display");
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            canvasDialogue.SetActive(false);
         }
     }
 
