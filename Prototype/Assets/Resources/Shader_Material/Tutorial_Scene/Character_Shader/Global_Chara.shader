@@ -2,6 +2,7 @@
 {
 	Properties
 	{
+		//Base Diffuse
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
 		[PerRendererData] _Color("Tint", Color) = (1,1,1,1)
 		[MaterialToggle] PixelSnap("Pixel snap", Float) = 0
@@ -10,14 +11,21 @@
 		[PerRendererData] _AlphaTex("External Alpha", 2D) = "white" {}
 		[PerRendererData] _EnableExternalAlpha("Enable External Alpha", Float) = 0
 
+		//Opaque
 		[PerRendererData] _OpaqueMode("Opaque?" , Range(0.0 , 1.0)) = 0
 		[PerRendererData] _OpaqueColor("OpaqueColor" , Color) = (1,1,1,1)
 
+		//Dissolve
 		_DissolveTexture("Dissolve Texutre", 2D) = "white" {}
 		[PerRendererData] _DissolveMode("Dissolve?" , Range(0.0 , 1.0)) = 0
 		[PerRendererData] _DissolveAmount("Dissolve Amount", Range(0.0 , 1.0)) = 0
 		[PerRendererData] _DissolveEmission("Dissolve Emission", Color) = (1,1,1,1)
 		[PerRendererData] _DissolveGrain("Dissolve Grain", Float) = 0
+
+		//Outline
+		[PerRendererData] _OutlineMode("Outline?" , Range(0.0 , 1.0)) = 0
+		[PerRendererData] _ColorOutline("Color_Outline", Color) = (1, 1, 1, 1)
+
 	}
 
 		SubShader
@@ -47,7 +55,6 @@
 		struct Input
 	{
 		float2 uv_MainTex;
-		float _MainTex_ST;
 		fixed4 color;
 	};
 
@@ -72,6 +79,10 @@
 	fixed3 _DissolveEmission;
 	half _DissolveGrain;
 
+	half _OutlineMode;
+	half4 _ColorOutline;
+	float4 _MainTex_TexelSize;
+
 	void surf(Input IN, inout SurfaceOutput o)
 	{
 
@@ -85,7 +96,19 @@
 		{
 			half dissolve_value = tex2D(_DissolveTexture, IN.uv_MainTex);
 			clip(dissolve_value - _DissolveAmount);
-			o.Emission.rgb= _DissolveEmission * step(dissolve_value - _DissolveAmount, _DissolveGrain);
+			o.Emission = _DissolveEmission * step(dissolve_value - _DissolveAmount, _DissolveGrain) * c.a;
+		}
+
+		if (_OutlineMode == 1)
+		{
+			_ColorOutline.rgb *= _ColorOutline.a;
+
+			fixed alpha_up = c + fixed2(0, _MainTex_TexelSize.y);
+			fixed alpha_down = c - fixed2(0, _MainTex_TexelSize.y);
+			fixed alpha_right = c + fixed2(_MainTex_TexelSize.x, 0);
+			fixed alpha_left = c - fixed2(_MainTex_TexelSize.x, 0);
+
+			c = lerp(c, _ColorOutline, c.a == 0 && alpha_up + alpha_down + alpha_right + alpha_left>0);
 		}
 		
 		o.Albedo = c.rgb * c.a;
