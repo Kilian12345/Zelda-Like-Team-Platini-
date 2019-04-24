@@ -10,7 +10,7 @@ public class VHS : MonoBehaviour
     void Awake()
     {
         //_material = new Material(Shader.Find("Custom/VHS"));
-        _material.SetTexture("_SecondaryTex", Resources.Load("Textures/TVnoise") as Texture);
+       // _material.SetTexture("_SecondaryTex", Resources.Load("Textures/TVnoise") as Texture);
         _material.SetFloat("_OffsetPosY", 0f);
         _material.SetFloat("_OffsetColor", 0.01f);
         _material.SetFloat("_OffsetDistortion", 480f);

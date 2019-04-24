@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
 [CustomEditor (typeof(FeedBack_Manager))]
 public class FeedBack_Manager_Editor : Editor
 {
@@ -60,8 +61,20 @@ public class FeedBack_Manager_Editor : Editor
     private SerializedProperty saturationAmount;
     private SerializedProperty contrastAmount;
     private SerializedProperty strength;
+
+    [Header("Rage Visual")]
+    private SerializedProperty offsetColor;
+    private SerializedProperty mode;
+    private SerializedProperty previousMode;
+
+    private SerializedProperty glitchEffect;
+    private SerializedProperty glitchSpeed;
+    private SerializedProperty colorSwitchSpeed;
+    private SerializedProperty glitchPower;
+    private SerializedProperty colorSwitch;
+    private SerializedProperty colorMaxTime;
     #endregion
-    
+
     #region Abilities
     [Header("Abilities /////////////////////////////////////")]
     [Header("1st Ability")]
@@ -75,6 +88,14 @@ public class FeedBack_Manager_Editor : Editor
 
     [Header("3rd Ability")]
     private SerializedProperty timeThird;
+
+    [Header("Player_Shader /////////////////////////////////////")]
+    [Header("Ghost_Effect")]
+    private SerializedProperty ghostFadeSpeed;
+    private SerializedProperty ghostSpawnRate;
+    private SerializedProperty ghostLifetime;
+    private SerializedProperty ghostAcivated;
+
     #endregion
    
 
@@ -112,12 +133,25 @@ public class FeedBack_Manager_Editor : Editor
         saturationAmount = soTarget.FindProperty("saturationAmount");
         contrastAmount = soTarget.FindProperty("contrastAmount");
         strength = soTarget.FindProperty("strength");
+        offsetColor = soTarget.FindProperty("offsetColor");
+        mode = soTarget.FindProperty("mode");
+        previousMode = soTarget.FindProperty("previousMode");
+        glitchEffect = soTarget.FindProperty("glitchEffect");
+        glitchSpeed = soTarget.FindProperty("glitchSpeed");
+        colorSwitchSpeed = soTarget.FindProperty("colorSwitchSpeed");
+        glitchPower = soTarget.FindProperty("glitchPower");
+        colorSwitch = soTarget.FindProperty("colorSwitch");
+        colorMaxTime = soTarget.FindProperty("colorMaxTime");
 
         doneSecond = soTarget.FindProperty("doneSecond");
         secondActivated = soTarget.FindProperty("secondActivated");
         timeSecond = soTarget.FindProperty("timeSecond");
         timeDeltaSecond = soTarget.FindProperty("timeDeltaSecond");
         timeThird = soTarget.FindProperty("timeThird");
+        ghostFadeSpeed = soTarget.FindProperty("ghostFadeSpeed");
+        ghostSpawnRate = soTarget.FindProperty("ghostSpawnRate");
+        ghostLifetime = soTarget.FindProperty("ghostLifetime");
+        ghostAcivated = soTarget.FindProperty("ghostAcivated");
 
     }
 
@@ -159,7 +193,7 @@ public class FeedBack_Manager_Editor : Editor
         {
             case "Transition":
                 EditorGUILayout.PropertyField(TransitionMaterial);
-                EditorGUILayout.PropertyField(matList);
+                EditorGUILayout.PropertyField(matList , true);
                 EditorGUILayout.PropertyField(cutoff);
                 EditorGUILayout.PropertyField(transitionTime);
                 break;
@@ -190,6 +224,20 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(saturationAmount);
                 EditorGUILayout.PropertyField(contrastAmount);
                 EditorGUILayout.PropertyField(strength);
+
+                EditorGUILayout.PropertyField(offsetColor);
+                EditorGUILayout.PropertyField(mode , true);
+                EditorGUILayout.PropertyField(glitchEffect);
+
+                if (myTarget.glitchEffect == true)
+                {
+                    EditorGUILayout.PropertyField(glitchSpeed);
+                    EditorGUILayout.PropertyField(glitchPower);
+                    EditorGUILayout.PropertyField(colorSwitch);
+                    EditorGUILayout.PropertyField(colorSwitchSpeed);
+                    EditorGUILayout.PropertyField(colorMaxTime);
+                }
+
                 break;
             case "Abilities":
                 EditorGUILayout.PropertyField(doneSecond);
@@ -197,6 +245,10 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(timeSecond);
                 EditorGUILayout.PropertyField(timeDeltaSecond);
                 EditorGUILayout.PropertyField(timeThird);
+                EditorGUILayout.PropertyField(ghostAcivated);
+                EditorGUILayout.PropertyField(ghostFadeSpeed);
+                EditorGUILayout.PropertyField(ghostSpawnRate);
+                EditorGUILayout.PropertyField(ghostLifetime);
                 break;
         }
 

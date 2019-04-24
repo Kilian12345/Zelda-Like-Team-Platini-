@@ -69,6 +69,23 @@ public class FeedBack_Manager : MonoBehaviour
     public float saturationAmount = 1;
     public float contrastAmount = 1;
     public float strength = 0;
+
+    [Header("Rage Visual")]
+    [Range(-0.05f, 0.05f)] public float offsetColor;
+
+    [Space(10.0f)]
+    public bool glitchEffect;
+    [HideInInspector] [Range(-0.05f, 0.05f)] public float colorGlitch;
+    [Range(0f, 0.01f)] public float glitchSpeed;
+    [Range(0.0001f, 0.001f)] public float colorSwitchSpeed;
+    [Range(0f, 0.05f)] public float glitchPower;
+    public bool colorSwitch;
+    public float colorActual;
+    [Range(0, 1f)] public float colorMaxTime;
+
+    public Rage_Visual_Enum mode = Rage_Visual_Enum.Normal;
+    [HideInInspector]public Rage_Visual_Enum previousMode = Rage_Visual_Enum.Normal;
+
     #endregion
 
     #region Abilities
@@ -84,7 +101,15 @@ public class FeedBack_Manager : MonoBehaviour
 
     [Header("3rd Ability")]
     public float timeThird;
+
+    [Header("Player_Shader /////////////////////////////////////")]
+    [Header("Ghost_Effect")]
+    public bool ghostAcivated;
+    [Range(0,1)]public float ghostFadeSpeed;
+    public float ghostSpawnRate;
+    public float ghostLifetime;
     #endregion
+
 
     #region GUI LAYOUT
 
@@ -115,6 +140,7 @@ public class FeedBack_Manager : MonoBehaviour
         Bloom();
         Vignette();
         if (secondActivated == true) StartCoroutine(secondAbility());
+
     }
 
     void Bloom()
@@ -211,7 +237,7 @@ public class FeedBack_Manager : MonoBehaviour
 
         if (saturationAmount > 0 && doneSecond == false)
         {
-
+            ghostAcivated = true;
             ripple = true;
             timeDeltaSecond += Time.deltaTime;
 
@@ -236,6 +262,7 @@ public class FeedBack_Manager : MonoBehaviour
                 timeDeltaSecond = 0;
                 doneSecond = false;
                 ripple = false;
+                ghostAcivated = false;
                 secondActivated = false;
                 saturationAmount = 1;
             }
