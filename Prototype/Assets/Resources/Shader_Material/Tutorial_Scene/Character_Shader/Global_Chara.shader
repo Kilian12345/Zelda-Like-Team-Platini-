@@ -43,6 +43,7 @@
 
 		Cull Off
         ZWrite Off
+		ZTest Greater
         Blend One OneMinusSrcAlpha
 
 		Stencil
