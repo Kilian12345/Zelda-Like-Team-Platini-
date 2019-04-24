@@ -96,7 +96,7 @@ public class GunCock : MonoBehaviour
                     StartCoroutine(Shoot());
                     ctrBullet++;
                     Invoke("switchShootBool", (1 / FireRate) / 2);
-                    Invoke("switchMoveBool", (1 / FireRate) / 2);
+                    //Invoke("switchMoveBool", (1 / FireRate) / 2);
                 }
             }
             else
@@ -105,6 +105,10 @@ public class GunCock : MonoBehaviour
                 Invoke("coolDown", coolDownTime);
                 Invoke("switchMoveBool", coolDownTime);
             }
+        }
+        if (!isInShootingRange && isInChaseRange)
+        {
+            canMove = true;
         }
     }
 
@@ -251,6 +255,7 @@ public class GunCock : MonoBehaviour
         bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
+        //canMove = true;
         StopCoroutine(Shoot());
     }
 

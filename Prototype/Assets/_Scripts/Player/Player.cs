@@ -129,6 +129,30 @@ public class Player : MonoBehaviour
     #endregion
 
     // Use this for initialization
+    void Awake()
+    {
+        var foundObjects = FindObjectsOfType<CalciumBones>();
+        for (int i = 0; i < foundObjects.Length; i++)
+        {
+            Destroy(foundObjects[i]);
+            Debug.Log("Destroyed");
+        }
+
+    }
+
+    /*void OnLevelWasLoaded(int level)
+    {
+        if ((SceneManager.GetActiveScene()).name == "Scene_1")
+        {
+            var foundObjects = FindObjectsOfType<CalciumBones>();
+            for (int i = 0; i < foundObjects.Length; i++)
+            {
+                Destroy(foundObjects[i]);
+                Debug.Log("Destroyed");
+            }
+        }
+    }*/
+
     void Start()
     {
         ghost = GetComponent<Ghost>();
@@ -452,6 +476,21 @@ public class Player : MonoBehaviour
         playerAudio.Play();
         Instantiate(particles, transform.position, Quaternion.identity);
         vel = 0;
+        Destroy(gameObject,0.5f);
+    }
+
+    void OnDisable()
+    {
+        var foundObjects = FindObjectsOfType<CalciumBones>();
+        for (int i = 0; i < foundObjects.Length; i++)
+        {
+            Destroy(foundObjects[i]);
+            Debug.Log("Destroyed");
+        }
+    }
+
+    void OnDestroy()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

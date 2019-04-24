@@ -5,9 +5,19 @@ using UnityEngine;
 public class CalciumBones : MonoBehaviour
 {
     public float CalciumRefill;
+    GameObject player;
 
-    void Start()
+    void Awake()
     {
-        Destroy(gameObject, 10f);
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player)
+        {
+            Destroy(gameObject, 10f);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+                
     }
 }

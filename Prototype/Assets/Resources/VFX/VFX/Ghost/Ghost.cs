@@ -38,7 +38,7 @@ public class Ghost : MonoBehaviour
             flip = false;
         }
 
-        Debug.Log(playerScript.moveHor);
+        //Debug.Log(playerScript.moveHor);
 
     }
 

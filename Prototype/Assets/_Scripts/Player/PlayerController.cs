@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
 
     private bool NewActionAllowed = true;
 
+
+    
+
     private void Update()
     {
         Movement();
