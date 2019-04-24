@@ -1,0 +1,8 @@
+newGame = NEW GAME
+continue = CONTINUE
+levels = LEVELS
+options = OPTIONS
+leave = LEAVE
+back = BACK
+french = French
+english = English

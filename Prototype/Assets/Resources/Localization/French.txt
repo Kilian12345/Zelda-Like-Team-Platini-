@@ -1,0 +1,12 @@
+newGame = NOUVELLE PARTIE
+continue = CONTINUER
+levels = NIVEAUX
+options = OPTIONS
+leave = QUITTER
+back = Retour
+french = Francais
+english = Anglais
+resume = REPRENDRE
+backtomenu = RETOUR AU MENU
+volume = VOLUME
+pressX = Presser X
