@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
         selector.transform.position = abilityMeters[selectedAbility].GetComponent<RectTransform>().position;
     }
 
-    void selectAbility()
+    void selectAbility() /////////////////////////////////// Nigga what's that
     {
         if (Input.GetButtonDown("AbilitySelect"))
         {
@@ -180,14 +180,12 @@ public class Player : MonoBehaviour
                     {
                         case 2:
                             {
-                                Fb_Order.valueList = 1;
-                                ghost.repeat = 0.0001f;
+
                             }
                             break;
                         default:
                             {
-                                Fb_Order.valueList = 0;
-                                ghost.repeat = 0f;
+
                             }
                             break;
                     }
@@ -227,7 +225,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void cooldownUI()
+    void cooldownUI() ///////////////////////// Nigga 
     {
         switch (activatedAbility)
         {
@@ -251,9 +249,7 @@ public class Player : MonoBehaviour
                 {
                     if (curcooldownTime[0] < 0)
                     {
-                        activatedAbility = 0;
-                        Fb_Order.valueList = 0;
-                        ghost.repeat = 0f;
+
                     }
                     else
                     {
@@ -273,9 +269,6 @@ public class Player : MonoBehaviour
                 {
                     if (curcooldownTime[1] < 0)
                     {
-                        activatedAbility = 0;
-                        Fb_Order.valueList = 0;
-                        ghost.repeat = 0f;
                     }
                     else
                     {
@@ -295,9 +288,6 @@ public class Player : MonoBehaviour
                 {
                     if (curcooldownTime[2] < 0)
                     {
-                        activatedAbility = 0;
-                        Fb_Order.valueList = 0;
-                        ghost.repeat = 0f;
                     }
                     else
                     {

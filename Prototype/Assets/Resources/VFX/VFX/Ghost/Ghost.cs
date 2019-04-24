@@ -5,27 +5,23 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     Ghost_FadeOut ghFadeOut;
+    [SerializeField] FeedBack_Manager Fb;
 
     List<GameObject> trailParts = new List<GameObject>();
-    Player playerScript;
+    [SerializeField] Player playerScript;
     Vector3 trailPartLocalScale;
     GameObject trailPart;
 
     bool flip = false;
-    float time = 0f;
-    public bool activé;
     
-
     [SerializeField] GameObject parent;
 
-    public float repeat;
-    public float lifetime;
-    public float alpha = 0.5f;
 
     void Start()
     {
-        InvokeRepeating("SpawnTrailPart", 0, repeat); 
-        playerScript = GetComponent<Player>();
+        
+        InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRate); 
+        //playerScript = GetComponent<Player>();
 
     }
 
@@ -42,14 +38,13 @@ public class Ghost : MonoBehaviour
             flip = false;
         }
 
-
-
+        Debug.Log(playerScript.moveHor);
 
     }
 
     void SpawnTrailPart()
     {
-        if (activé == true)
+        if (Fb.ghostAcivated == true)
         {
 
             trailPart = new GameObject();
@@ -65,8 +60,9 @@ public class Ghost : MonoBehaviour
             //StartCoroutine(FadeTrailPart(trailPartRenderer));
             trailPart.AddComponent<Ghost_FadeOut>();
             trailParts.Add(trailPart);
+            trailPart.layer = LayerMask.NameToLayer("Default");
 
-            Destroy(trailPart, lifetime);
+            Destroy(trailPart, Fb.ghostLifetime);
         }
         
     }

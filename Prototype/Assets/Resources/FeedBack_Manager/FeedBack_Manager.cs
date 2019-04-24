@@ -101,7 +101,15 @@ public class FeedBack_Manager : MonoBehaviour
 
     [Header("3rd Ability")]
     public float timeThird;
+
+    [Header("Player_Shader /////////////////////////////////////")]
+    [Header("Ghost_Effect")]
+    public bool ghostAcivated;
+    [Range(0,1)]public float ghostFadeSpeed;
+    public float ghostSpawnRate;
+    public float ghostLifetime;
     #endregion
+
 
     #region GUI LAYOUT
 
@@ -229,7 +237,7 @@ public class FeedBack_Manager : MonoBehaviour
 
         if (saturationAmount > 0 && doneSecond == false)
         {
-
+            ghostAcivated = true;
             ripple = true;
             timeDeltaSecond += Time.deltaTime;
 
@@ -254,6 +262,7 @@ public class FeedBack_Manager : MonoBehaviour
                 timeDeltaSecond = 0;
                 doneSecond = false;
                 ripple = false;
+                ghostAcivated = false;
                 secondActivated = false;
                 saturationAmount = 1;
             }

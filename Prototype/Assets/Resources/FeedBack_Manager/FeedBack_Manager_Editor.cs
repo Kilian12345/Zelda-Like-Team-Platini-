@@ -88,6 +88,14 @@ public class FeedBack_Manager_Editor : Editor
 
     [Header("3rd Ability")]
     private SerializedProperty timeThird;
+
+    [Header("Player_Shader /////////////////////////////////////")]
+    [Header("Ghost_Effect")]
+    private SerializedProperty ghostFadeSpeed;
+    private SerializedProperty ghostSpawnRate;
+    private SerializedProperty ghostLifetime;
+    private SerializedProperty ghostAcivated;
+
     #endregion
    
 
@@ -140,6 +148,10 @@ public class FeedBack_Manager_Editor : Editor
         timeSecond = soTarget.FindProperty("timeSecond");
         timeDeltaSecond = soTarget.FindProperty("timeDeltaSecond");
         timeThird = soTarget.FindProperty("timeThird");
+        ghostFadeSpeed = soTarget.FindProperty("ghostFadeSpeed");
+        ghostSpawnRate = soTarget.FindProperty("ghostSpawnRate");
+        ghostLifetime = soTarget.FindProperty("ghostLifetime");
+        ghostAcivated = soTarget.FindProperty("ghostAcivated");
 
     }
 
@@ -233,6 +245,10 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(timeSecond);
                 EditorGUILayout.PropertyField(timeDeltaSecond);
                 EditorGUILayout.PropertyField(timeThird);
+                EditorGUILayout.PropertyField(ghostAcivated);
+                EditorGUILayout.PropertyField(ghostFadeSpeed);
+                EditorGUILayout.PropertyField(ghostSpawnRate);
+                EditorGUILayout.PropertyField(ghostLifetime);
                 break;
         }
 
