@@ -93,8 +93,8 @@ public class FeedBack_Manager : MonoBehaviour
     [Header("1st Ability")]
 
     [Header("2nt Ability")]
-    public bool doneSecond = false;
     public bool secondActivated = false;
+    private bool doneSecond = false;
     public float timeSecond;
     public float timeDeltaSecond;
 
@@ -148,12 +148,12 @@ public class FeedBack_Manager : MonoBehaviour
 
         bloomLayer.intensity.value = Mathf.Lerp(0, bloom, bloomTime);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             bloomTime += Time.deltaTime * timeBloom;
             doneBloom = false;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetButtonUp("Jump"))
         {
             doneBloom = true;
         }
@@ -174,12 +174,12 @@ public class FeedBack_Manager : MonoBehaviour
         vignette.opacity.value = Mathf.Lerp(0, vignetteOpacity, vignetteTime);
         vignette.color.value = vignetteColor;
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             vignetteTime += Time.deltaTime * timeLens;
             doneVignette = false;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetButtonUp("Jump"))
         {
             doneVignette = true;
         }
@@ -195,7 +195,7 @@ public class FeedBack_Manager : MonoBehaviour
     void CameraShake()
     {
         // TODO: Replace with your trigger
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButton("Jump"))
         {
             shakeElapsedTime = shakeDuration;
         }
@@ -241,13 +241,8 @@ public class FeedBack_Manager : MonoBehaviour
             ripple = true;
             timeDeltaSecond += Time.deltaTime;
 
-            Debug.Log("NOPE");
 
         }
-
-
-
-
 
         if (doneSecond == true)
         {

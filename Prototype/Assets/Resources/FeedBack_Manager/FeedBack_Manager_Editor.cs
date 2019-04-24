@@ -80,7 +80,6 @@ public class FeedBack_Manager_Editor : Editor
     [Header("1st Ability")]
 
     [Header("2nt Ability")]
-    private SerializedProperty doneSecond;
     private SerializedProperty secondActivated;
     private SerializedProperty timeSecond;
     private SerializedProperty timeDeltaSecond;
@@ -143,7 +142,6 @@ public class FeedBack_Manager_Editor : Editor
         colorSwitch = soTarget.FindProperty("colorSwitch");
         colorMaxTime = soTarget.FindProperty("colorMaxTime");
 
-        doneSecond = soTarget.FindProperty("doneSecond");
         secondActivated = soTarget.FindProperty("secondActivated");
         timeSecond = soTarget.FindProperty("timeSecond");
         timeDeltaSecond = soTarget.FindProperty("timeDeltaSecond");
@@ -240,7 +238,6 @@ public class FeedBack_Manager_Editor : Editor
 
                 break;
             case "Abilities":
-                EditorGUILayout.PropertyField(doneSecond);
                 EditorGUILayout.PropertyField(secondActivated);
                 EditorGUILayout.PropertyField(timeSecond);
                 EditorGUILayout.PropertyField(timeDeltaSecond);

@@ -89,6 +89,8 @@ public class Player : MonoBehaviour
     public float abilityIsToCooldown;
     public int activatedAbility = 0;
     private int selectedAbility;
+    FeedBack_Manager Fb_mana;
+
     [Header("Ability GameObjects")]
     public GameObject selector;
     public GameObject[] abilityMeters;
@@ -97,7 +99,6 @@ public class Player : MonoBehaviour
     public float dashDistance;
     public float thrust;
     Ghost ghost;
-    FeedbacksOrder Fb_Order;
 
     [Header("Slow Down Values")]
     public float slowDownFactor;
@@ -160,7 +161,7 @@ public class Player : MonoBehaviour
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
         source = gameObject.GetComponent<CinemachineImpulseSource>();
-        Fb_Order = FindObjectOfType<FeedbacksOrder>();
+        Fb_mana = FindObjectOfType<FeedBack_Manager>();
         LocalX = transform.localScale.x;
         health = 0;
         curTime = rageTimer;
@@ -329,6 +330,8 @@ public class Player : MonoBehaviour
                 {
                     activatedAbility = 2;
                     curcooldownTime[1] = cooldownTime[1];
+                    Fb_mana.secondActivated = true;
+                    Fb_mana.timeSecond = cooldownTime[0];
                 }
             }
         }
@@ -401,8 +404,6 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[0] < 0)
                     {
                         activatedAbility = 0;
-                        //Fb_Order.valueList = 0;
-                        //ghost.repeat = 0f;
                     }
                     else
                     {
@@ -423,8 +424,6 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[1] < 0)
                     {
                         activatedAbility = 0;
-                        //Fb_Order.valueList = 0;
-                        //ghost.repeat = 0f;
                     }
                     else
                     {
@@ -445,8 +444,6 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[2] < 0)
                     {
                         activatedAbility = 0;
-                        //Fb_Order.valueList = 0;
-                        //ghost.repeat = 0f;
                     }
                     else
                     {
