@@ -152,6 +152,7 @@ MonoBehaviour:
   shakeFrequency: 2
   shakeElapsedTime: 0
   virtualCamera: {fileID: 290785488}
+  virtualCameraNoise: {fileID: 0}
   timeBloom: 0
   bloom: 20
   timeLens: 1
@@ -168,6 +169,24 @@ MonoBehaviour:
   saturationAmount: 1
   contrastAmount: 1
   strength: 0
+  offsetColor: 0
+  glitchEffect: 0
+  colorGlitch: 0
+  glitchSpeed: 0
+  colorSwitchSpeed: 0
+  glitchPower: 0
+  colorSwitch: 0
+  colorActual: 0
+  colorMaxTime: 0
+  mode: 0
+  previousMode: 0
+  doneSecond: 0
+  secondActivated: 0
+  timeSecond: 0
+  timeDeltaSecond: 0
+  timeThird: 0
+  toolbarTab: 0
+  currentTab: Transition
 --- !u!4 &162862369
 Transform:
   m_ObjectHideFlags: 0
@@ -270,6 +289,7 @@ GameObject:
   - component: {fileID: 574713736}
   - component: {fileID: 574713735}
   - component: {fileID: 574713737}
+  - component: {fileID: 574713738}
   m_Layer: 0
   m_Name: Main_Cam
   m_TagString: MainCamera
@@ -520,6 +540,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransitionMaterial: {fileID: 2100000, guid: 588f9f2d201b1e24fa472c787dbcdb94, type: 2}
+--- !u!114 &574713738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574713727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23642da8af414d94da1b0e66e414ae57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displacementMap: {fileID: 2800000, guid: 7e094b7951e6dd94bbfbc2bddc2f6962, type: 3}
+  Shader: {fileID: 4800000, guid: 155a8d06024ad084e84ad149444dd82f, type: 3}
+  intensity: 0
+  flipIntensity: 0
+  colorIntensity: 0
 --- !u!1 &1068642577
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Rage_Visual
+  m_Shader: {fileID: 4800000, guid: e7c92889d9619d34da24ec9f26f56275, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondaryTex:
+        m_Texture: {fileID: 2800000, guid: 25f385fef97688d45a8c19f9902ae376, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Amount: 25
+    - _B: 0
+    - _BaseTexture: 0
+    - _CenterX: 385.9
+    - _CenterY: 189.31
+    - _G: 0
+    - _Intensity: 0
+    - _ModifyTexture: 0
+    - _OUTPUT: 0
+    - _OffsetColor: -0.025893087
+    - _OffsetDistortion: 550.03
+    - _OffsetNoiseX: 5.38
+    - _OffsetNoiseY: 3.07
+    - _OffsetPosY: 1.2
+    - _R: 0
+    - _Scale: 1
+    - _ScanLineJitter: 0.63
+    - _VerticalJump: 0.59
+    - _WaveAmount: 8.3
+    - _WaveSpeed: 1
+    m_Colors: []

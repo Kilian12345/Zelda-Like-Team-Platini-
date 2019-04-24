@@ -8,10 +8,17 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
+    [HideInInspector]
+    public string[] sentences;
+
     public string name;
 
     [TextArea(4, 10)]
-    public string[] sentences;
+    public string[] sentencesEN;
+
+    [TextArea(4, 10)]
+    public string[] sentencesFR;
+
 }
 
 public class DialogueActivation : MonoBehaviour
@@ -20,11 +27,25 @@ public class DialogueActivation : MonoBehaviour
     GameObject canvasIntDialogue;
 
     public Dialogue dialogue;
-
+    public MenuManager mn;
     public DialogueManager dialogueManager;
 
     public bool DialogueActive = false;
     public bool InsideTriggerZone = false;
+
+    void FixedUpdate()
+    {
+        if (mn.English)
+        {
+            Debug.Log("EN");
+            dialogue.sentences = dialogue.sentencesEN;
+        }
+        else if (!mn.English)
+        {
+            Debug.Log("FR");
+            dialogue.sentences = dialogue.sentencesFR;
+        }
+    }
 
     //Show "Press Y" int to the screen while in the trigger zone
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +62,11 @@ public class DialogueActivation : MonoBehaviour
         if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
         {
             canvasIntDialogue.SetActive(true);
+            InsideTriggerZone = true;
+        }
+        else if (collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == true)
+        {
+            canvasIntDialogue.SetActive(false);
             InsideTriggerZone = true;
         }
     }

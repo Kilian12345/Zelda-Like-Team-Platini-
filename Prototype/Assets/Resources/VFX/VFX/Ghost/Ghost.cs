@@ -4,35 +4,30 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    FeedbacksOrder Fb_Order;
+    Ghost_FadeOut ghFadeOut;
+    [SerializeField] FeedBack_Manager Fb;
 
     List<GameObject> trailParts = new List<GameObject>();
-    Player playerScript;
+    [SerializeField] Player playerScript;
     Vector3 trailPartLocalScale;
     GameObject trailPart;
 
     bool flip = false;
-    float time = 0f;
+    
+    [SerializeField] GameObject parent;
 
-    [SerializeField]
-    GameObject parent;
-
-    public float repeat;
-    public float lifetime;
-    public float alpha = 0.5f;
 
     void Start()
     {
-        Fb_Order = FindObjectOfType<FeedbacksOrder>();
-        InvokeRepeating("SpawnTrailPart", 0, repeat); 
-        playerScript = GetComponent<Player>();
+        
+        InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRate); 
+        //playerScript = GetComponent<Player>();
 
     }
 
     void Update()
     {
 
-        Debug.Log(trailParts.IndexOf(trailPart));
 
         if (playerScript.moveHor < 0f)
         {
@@ -43,14 +38,13 @@ public class Ghost : MonoBehaviour
             flip = false;
         }
 
-
-
+        Debug.Log(playerScript.moveHor);
 
     }
 
     void SpawnTrailPart()
     {
-        if ( Fb_Order.valueList == 1)
+        if (Fb.ghostAcivated == true)
         {
 
             trailPart = new GameObject();
@@ -63,29 +57,31 @@ public class Ghost : MonoBehaviour
             trailPart.transform.parent = parent.transform;
             trailPart.layer = LayerMask.NameToLayer("Player");
 
-            StartCoroutine(FadeTrailPart(trailPartRenderer));
+            //StartCoroutine(FadeTrailPart(trailPartRenderer));
+            trailPart.AddComponent<Ghost_FadeOut>();
             trailParts.Add(trailPart);
+            trailPart.layer = LayerMask.NameToLayer("Default");
 
-            Destroy(trailPart, lifetime);
+            Destroy(trailPart, Fb.ghostLifetime);
         }
         
     }
 
-    IEnumerator FadeTrailPart(SpriteRenderer trailPartRenderer)
+  /*  IEnumerator FadeTrailPart(SpriteRenderer trailPartRenderer)
     {
 
         Color color = trailPartRenderer.color;
         color.a = alpha ;
 
-        /*color.r = 0;
+        color.r = 0;
         color.g = 0;
-        color.b = 0;*/
+        color.b = 0;
 
         time += Time.deltaTime * 10;
         color.a = Mathf.Lerp(color.a, 0, time  );
-       /* color.r = Mathf.Lerp(color.r, 0, time);
+        color.r = Mathf.Lerp(color.r, 0, time);
         color.g = Mathf.Lerp(color.g, 0, time);
-        color.b = Mathf.Lerp(color.b, 0, time);*/
+        color.b = Mathf.Lerp(color.b, 0, time);
 
         trailPartRenderer.color = color;
 
@@ -94,7 +90,7 @@ public class Ghost : MonoBehaviour
 
 
         yield return new WaitForEndOfFrame();
-    }
+    }*/
 
     IEnumerator DestroyTrailPart(GameObject trailPart, float delay)
     {

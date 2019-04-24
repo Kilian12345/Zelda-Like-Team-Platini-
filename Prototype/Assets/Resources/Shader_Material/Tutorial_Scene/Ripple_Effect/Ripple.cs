@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ripple : MonoBehaviour
 {
-    FeedBack_Manager Fb_Mana;
+    [SerializeField] FeedBack_Manager Fb_Mana;
 
     public Transform player;
     Camera camera;
@@ -17,7 +17,7 @@ public class Ripple : MonoBehaviour
 
     private void Start()
     {
-        Fb_Mana = GetComponentInParent<FeedBack_Manager>();//////////////////////////////////sale
+
     }
     
     void Update()
@@ -26,7 +26,6 @@ public class Ripple : MonoBehaviour
         MaxAmount = Fb_Mana.MaxAmount;
         player = Fb_Mana.target;
         RippleEffect();
-
 
 
     }
