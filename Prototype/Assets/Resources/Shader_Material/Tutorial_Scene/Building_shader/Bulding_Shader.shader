@@ -1,4 +1,4 @@
-﻿Shader "CustomCh/Charater/Global_Chara"
+﻿Shader "CustomCh/Building/Global_Building"
 {
 	Properties
 	{
@@ -10,35 +10,17 @@
 		[HideInInspector] _Flip("Flip", Vector) = (1,1,1,1)
 		[PerRendererData] _AlphaTex("External Alpha", 2D) = "white" {}
 		[PerRendererData] _EnableExternalAlpha("Enable External Alpha", Float) = 0
-
-		//Opaque
-		[PerRendererData] _OpaqueMode("Opaque?" , Range(0.0 , 1.0)) = 0
-		[PerRendererData] _OpaqueColor("OpaqueColor" , Color) = (1,1,1,1)
-
-		//Dissolve
-		_DissolveTexture("Dissolve Texutre", 2D) = "white" {}
-		[PerRendererData] _DissolveMode("Dissolve?" , Range(0.0 , 1.0)) = 0
-		[PerRendererData] _DissolveAmount("Dissolve Amount", Range(0.0 , 1.0)) = 0
-		[PerRendererData] _DissolveEmission("Dissolve Emission", Color) = (1,1,1,1)
-		[PerRendererData] _DissolveGrain("Dissolve Grain", Float) = 0
-
-		//Outline
-		[PerRendererData] _OutlineMode("Outline?" , Range(0.0 , 1.0)) = 0
-		[PerRendererData] _ColorOutline("Color_Outline", Color) = (1, 1, 1, 1)
-
-		//Z Layering
-		[PerRendererData] _ZColor("ZColor",Color) = (1,1,1,1)
-		[PerRendererData] _ZTexture("ZTexture",2D) = "white" {}
+        _AlphaCutoff ("alphaCutoff", Range(0.01, 1.0)) = 0.01
 
 	}
 
 		SubShader
 	{
 
-//
+        //
         Pass
         {
-		Tags {"Queue"="Overlay " }
+		Tags {"Queue"="Opaque " }
         LOD 100
 
 		Cull Off
@@ -48,7 +30,8 @@
 		Stencil
 		{
 			Ref 5
-			Comp Equal
+			Comp Always
+			Pass Replace
 		}
 
             CGPROGRAM
@@ -71,9 +54,7 @@
 
 			sampler2D _MainTex;
             float4 _MainTex_ST;
-
-			sampler2D _ZTexture;
-            float4 _ZColor;
+            fixed _AlphaCutoff;
             
             v2f vert (appdata v)
             {
@@ -87,11 +68,13 @@
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
-                return _ZColor * col.a;
+                clip(col.a - _AlphaCutoff);
+                return col * col.a;
             }
             ENDCG
         }
 //
+
 		Tags
 	{
 		"Queue" = "Transparent"
@@ -104,8 +87,8 @@
 		Cull Off
 		Lighting Off
 		ZWrite Off
-		ZTest On
 		Blend One OneMinusSrcAlpha
+
 
 		CGPROGRAM
 #pragma surface surf Lambert vertex:vert nofog nolightmap nodynlightmap keepalpha noinstancing
@@ -131,46 +114,11 @@
 		o.color = v.color * _Color * _RendererColor;
 	}
 
-	float _OpaqueMode;
-	half4 _OpaqueColor;
-
-	sampler2D _DissolveTexture;
-	half _DissolveAmount;
-	float _DissolveMode;
-	fixed3 _DissolveEmission;
-	half _DissolveGrain;
-
-	half _OutlineMode;
-	half4 _ColorOutline;
-	float4 _MainTex_TexelSize;
-
 	void surf(Input IN, inout SurfaceOutput o)
 	{
 
 		fixed4 c = SampleSpriteTexture(IN.uv_MainTex);
-		if (_OpaqueMode == 0)
-		{c = c * IN.color;}
-		else
-		{c = c * _OpaqueColor * 100.0;}
-
-		if (_DissolveMode == 1)
-		{
-			half dissolve_value = tex2D(_DissolveTexture, IN.uv_MainTex);
-			clip(dissolve_value - _DissolveAmount);
-			o.Emission = _DissolveEmission * step(dissolve_value - _DissolveAmount, _DissolveGrain) * c.a;
-		}
-
-		if (_OutlineMode == 1)
-		{
-			_ColorOutline.rgb *= _ColorOutline.a;
-
-			fixed alpha_up = tex2D(_MainTex, IN.uv_MainTex + fixed2(0, _MainTex_TexelSize.y)).a;
-			fixed alpha_down = tex2D(_MainTex, IN.uv_MainTex - fixed2(0, _MainTex_TexelSize.y)).a;
-			fixed alpha_right = tex2D(_MainTex, IN.uv_MainTex + fixed2(_MainTex_TexelSize.x, 0)).a;
-			fixed alpha_left = tex2D(_MainTex, IN.uv_MainTex - fixed2(_MainTex_TexelSize.x, 0)).a;
-
-			c = lerp(c, _ColorOutline * 3, c.a == 0 && alpha_up + alpha_down + alpha_right + alpha_left>0);
-		}
+		c = c * IN.color;
 		
 		o.Albedo = c.rgb * c.a;
 		o.Alpha = c.a;
