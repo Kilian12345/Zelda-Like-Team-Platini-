@@ -38,11 +38,16 @@
 //
         Pass
         {
-		Tags {"Queue"="Overlay " }
+		Tags {"RenderType"="Opaque"  }
         LOD 100
-
+		ColorMask 0
+		ZWrite off
         Blend One OneMinusSrcAlpha
 
+		Stencil {
+			Ref 1
+			Comp Greater
+		}
 
             CGPROGRAM
             #pragma vertex vert
@@ -95,12 +100,6 @@
 	}
 
 		Blend One OneMinusSrcAlpha
-
-		Stencil
-		{
-			Ref 5
-			Comp Equal
-		}
 
 		CGPROGRAM
 #pragma surface surf Lambert vertex:vert nofog nolightmap nodynlightmap keepalpha noinstancing

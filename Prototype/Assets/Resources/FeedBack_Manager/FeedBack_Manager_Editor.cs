@@ -78,10 +78,14 @@ public class FeedBack_Manager_Editor : Editor
     #region Abilities
     [Header("Abilities /////////////////////////////////////")]
     [Header("1st Ability")]
+    private SerializedProperty playerMat;
+    private SerializedProperty firstActivated;
+    private SerializedProperty firstGhostColor;
+    private SerializedProperty timeFirstAbility;
 
     [Header("2nt Ability")]
     private SerializedProperty secondActivated;
-    private SerializedProperty timeSecond;
+    private SerializedProperty timeSecondAbility;
     private SerializedProperty timeDeltaSecond;
 
 
@@ -142,8 +146,12 @@ public class FeedBack_Manager_Editor : Editor
         colorSwitch = soTarget.FindProperty("colorSwitch");
         colorMaxTime = soTarget.FindProperty("colorMaxTime");
 
+        playerMat = soTarget.FindProperty("playerMat");
+        firstActivated = soTarget.FindProperty("firstActivated");
+        firstGhostColor = soTarget.FindProperty("firstGhostColor");
+        timeFirstAbility = soTarget.FindProperty("timeFirstAbility");
         secondActivated = soTarget.FindProperty("secondActivated");
-        timeSecond = soTarget.FindProperty("timeSecond");
+        timeSecondAbility = soTarget.FindProperty("timeSecondAbility");
         timeDeltaSecond = soTarget.FindProperty("timeDeltaSecond");
         timeThird = soTarget.FindProperty("timeThird");
         ghostFadeSpeed = soTarget.FindProperty("ghostFadeSpeed");
@@ -238,8 +246,12 @@ public class FeedBack_Manager_Editor : Editor
 
                 break;
             case "Abilities":
+                EditorGUILayout.PropertyField(playerMat);
+                EditorGUILayout.PropertyField(firstActivated);
+                EditorGUILayout.PropertyField(firstGhostColor);
+                EditorGUILayout.PropertyField(timeFirstAbility);
                 EditorGUILayout.PropertyField(secondActivated);
-                EditorGUILayout.PropertyField(timeSecond);
+                EditorGUILayout.PropertyField(timeSecondAbility);
                 EditorGUILayout.PropertyField(timeDeltaSecond);
                 EditorGUILayout.PropertyField(timeThird);
                 EditorGUILayout.PropertyField(ghostAcivated);

@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    Ghost_FadeOut ghFadeOut;
     [SerializeField] FeedBack_Manager Fb;
-
     List<GameObject> trailParts = new List<GameObject>();
     [SerializeField] Player playerScript;
     Vector3 trailPartLocalScale;
@@ -59,6 +57,7 @@ public class Ghost : MonoBehaviour
 
             //StartCoroutine(FadeTrailPart(trailPartRenderer));
             trailPart.AddComponent<Ghost_FadeOut>();
+            trailPart.AddComponent<Rendering_Chara>();
             trailParts.Add(trailPart);
             trailPart.layer = LayerMask.NameToLayer("Default");
 

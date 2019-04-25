@@ -318,7 +318,9 @@ public class Player : MonoBehaviour
                 if (curcooldownTime[0] >= cooldownTime[0])
                 {
                     activatedAbility = 1;
+                    Fb_mana.firstActivated = true;
                     curcooldownTime[0] = cooldownTime[0];
+                    Fb_mana.timeFirstAbility = cooldownTime[0];
                 }
             }
         }
@@ -331,7 +333,7 @@ public class Player : MonoBehaviour
                     activatedAbility = 2;
                     curcooldownTime[1] = cooldownTime[1];
                     Fb_mana.secondActivated = true;
-                    Fb_mana.timeSecond = cooldownTime[0];
+                    Fb_mana.timeSecondAbility = cooldownTime[0];
                 }
             }
         }

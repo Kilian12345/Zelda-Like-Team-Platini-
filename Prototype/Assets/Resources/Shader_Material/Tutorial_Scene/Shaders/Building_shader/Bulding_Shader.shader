@@ -17,29 +17,20 @@
 		SubShader
 	{
         
-		Tags
-	{
-		"Queue" = "Transparent"
-		"IgnoreProjector" = "True"
-		"RenderType" = "Transparent"
-		"PreviewType" = "Plane"
-		"CanUseSpriteAtlas" = "True"
-	}
+		Tags { "RenderType"="Opaque" "Queue"="Geometry-100" }
 
-		Cull Off
-		Lighting Off
-		ZWrite Off
 		Blend One OneMinusSrcAlpha
 
         //
 		Pass
 		{
-			Stencil
-			{
-				Ref 5
-				//Comp Greater
-				Pass Replace
-			}
+		Stencil 
+		{
+			Ref 1
+			Pass replace
+		}
+
+		
 
 		CGPROGRAM
 			#pragma vertex vert
@@ -101,11 +92,23 @@
 			}
 		ENDCG
 		}
+				//Fallback "Transparent/VertexLit"
+	}
 //
+		SubShader
+		{
+	Tags
+	{
+		"Queue" = "Transparent"
+		"IgnoreProjector" = "True"
+		"RenderType" = "Transparent"
+		"PreviewType" = "Plane"
+		"CanUseSpriteAtlas" = "True"
+	}
 
+		Blend One OneMinusSrcAlpha
 
-
-		CGPROGRAM
+			CGPROGRAM
 #pragma surface surf Lambert vertex:vert nofog nolightmap nodynlightmap keepalpha noinstancing
 #pragma multi_compile _ PIXELSNAP_ON
 #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
@@ -140,7 +143,10 @@
 	}
 	ENDCG
 	}
-
-		Fallback "Transparent/VertexLit"
 }
+		
+
+
+	
+
 

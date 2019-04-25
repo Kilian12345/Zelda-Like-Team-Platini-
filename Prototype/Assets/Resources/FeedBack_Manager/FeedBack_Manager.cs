@@ -91,15 +91,20 @@ public class FeedBack_Manager : MonoBehaviour
     #region Abilities
     [Header("Abilities /////////////////////////////////////")]
     [Header("1st Ability")]
+    public Material playerMat;
+    public bool firstActivated = false;
+    public Color firstGhostColor;
+    public float timeFirstAbility;
 
     [Header("2nt Ability")]
     public bool secondActivated = false;
-    private bool doneSecond = false;
-    public float timeSecond;
+    bool doneSecond = false;
+    public float timeSecondAbility;
     public float timeDeltaSecond;
 
 
     [Header("3rd Ability")]
+    public bool thirdActivated = false;
     public float timeThird;
 
     [Header("Player_Shader /////////////////////////////////////")]
@@ -139,7 +144,12 @@ public class FeedBack_Manager : MonoBehaviour
         CameraShake();
         Bloom();
         Vignette();
+        if (firstActivated == true) StartCoroutine(firstAbility());
+        else {StopCoroutine(firstAbility());}
         if (secondActivated == true) StartCoroutine(secondAbility());
+        else {StopCoroutine(secondAbility());}
+        if (thirdActivated == true) StartCoroutine(thirdAbility());
+        else {StopCoroutine(thirdAbility());}
 
     }
 
@@ -226,6 +236,15 @@ public class FeedBack_Manager : MonoBehaviour
         }
     }
 
+    IEnumerator firstAbility()
+    {
+            ghostAcivated = true;
+        
+        yield return new WaitForSeconds(timeFirstAbility);
+
+            ghostAcivated = false;
+            firstActivated = false;
+    }
 
     IEnumerator secondAbility()
     {
@@ -246,14 +265,13 @@ public class FeedBack_Manager : MonoBehaviour
 
         if (doneSecond == true)
         {
-            yield return new WaitForSeconds(timeSecond);
+            yield return new WaitForSeconds(timeSecondAbility);
 
 
             timeDeltaSecond -= Time.deltaTime;
 
             if (saturationAmount >= 1)
             {
-                Debug.Log("OK");
                 timeDeltaSecond = 0;
                 doneSecond = false;
                 ripple = false;
@@ -265,6 +283,11 @@ public class FeedBack_Manager : MonoBehaviour
 
 
 
+    }
+
+    IEnumerator thirdAbility()
+    {
+        yield return null;
     }
 
 
