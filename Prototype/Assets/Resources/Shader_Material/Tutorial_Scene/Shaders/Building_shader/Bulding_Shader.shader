@@ -37,7 +37,7 @@
 			Stencil
 			{
 				Ref 5
-				Comp Always
+				//Comp Greater
 				Pass Replace
 			}
 
