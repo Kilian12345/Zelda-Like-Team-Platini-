@@ -5,42 +5,65 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     [SerializeField] FeedBack_Manager Fb;
-    List<GameObject> trailParts = new List<GameObject>();
+    [SerializeField] GameObject parent;    
     [SerializeField] Player playerScript;
+
+    List<GameObject> trailParts = new List<GameObject>();
     Vector3 trailPartLocalScale;
     GameObject trailPart;
 
     bool flip = false;
+    bool firstInvokeDone = false;
+    bool secondInvokeDone = false;
     
-    [SerializeField] GameObject parent;
+
+    [SerializeField] float ghostSpawnRateFirst;
+    [SerializeField] float ghostSpawnRateSecond;
+    private float ghostLifetime;
+
 
 
     void Start()
     {
         
-        InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRate); 
-        //playerScript = GetComponent<Player>();
-
     }
 
     void Update()
     {
-
-
-        if (playerScript.moveHor < 0f)
-        {
-            flip = true;
-        }
-        else
-        {
-            flip = false;
-        }
-
-        //Debug.Log(playerScript.moveHor);
-
+        if (playerScript.moveHor < 0f) {flip = true;}
+        else {flip = false;}
     }
 
-    void SpawnTrailPart()
+    void FixedUpdate()
+    {
+        if (Fb.firstActivated == true)
+        {
+            if(firstInvokeDone == false)
+            {
+            ghostLifetime = Fb.ghostLifetimeFirst;
+            CancelInvoke();
+            InvokeRepeating("SpawnTrailPart", 0, ghostSpawnRateFirst);
+            Debug.Log("1st");
+            firstInvokeDone = true;
+            }
+        }
+        else {firstInvokeDone = false;}
+
+        if (Fb.secondActivated == true)
+        {
+            if(secondInvokeDone == false)
+            {
+            ghostLifetime = Fb.ghostLifetimeSecond;
+            CancelInvoke();
+            InvokeRepeating("SpawnTrailPart", 0, ghostSpawnRateSecond);
+            Debug.Log("2nd");
+            secondInvokeDone = true;
+            }
+        }
+        else {secondInvokeDone = false;}
+    }
+
+    public void SpawnTrailPart()
     {
         if (Fb.ghostAcivated == true)
         {
@@ -61,35 +84,10 @@ public class Ghost : MonoBehaviour
             trailParts.Add(trailPart);
             trailPart.layer = LayerMask.NameToLayer("Default");
 
-            Destroy(trailPart, Fb.ghostLifetime);
+            Destroy(trailPart, ghostLifetime);
         }
         
     }
-
-  /*  IEnumerator FadeTrailPart(SpriteRenderer trailPartRenderer)
-    {
-
-        Color color = trailPartRenderer.color;
-        color.a = alpha ;
-
-        color.r = 0;
-        color.g = 0;
-        color.b = 0;
-
-        time += Time.deltaTime * 10;
-        color.a = Mathf.Lerp(color.a, 0, time  );
-        color.r = Mathf.Lerp(color.r, 0, time);
-        color.g = Mathf.Lerp(color.g, 0, time);
-        color.b = Mathf.Lerp(color.b, 0, time);
-
-        trailPartRenderer.color = color;
-
-    
-
-
-
-        yield return new WaitForEndOfFrame();
-    }*/
 
     IEnumerator DestroyTrailPart(GameObject trailPart, float delay)
     {

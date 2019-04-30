@@ -81,24 +81,23 @@ public class FeedBack_Manager_Editor : Editor
     [Header("1st Ability")]
     private SerializedProperty playerMat;
     private SerializedProperty firstActivated;
-    private SerializedProperty firstGhostColor;
+    private SerializedProperty opaqueColor;
     private SerializedProperty timeFirstAbility;
+    private SerializedProperty ghostFadeSpeedFirst;
+    private SerializedProperty ghostLifetimeFirst;
 
     [Header("2nt Ability")]
     private SerializedProperty secondActivated;
     private SerializedProperty timeSecondAbility;
     private SerializedProperty timeDeltaSecond;
+    private SerializedProperty ghostFadeSpeedSecond;
+    private SerializedProperty ghostLifetimeSecond;
 
 
     [Header("3rd Ability")]
     private SerializedProperty timeThird;
 
-    [Header("Player_Shader /////////////////////////////////////")]
-    [Header("Ghost_Effect")]
-    private SerializedProperty ghostFadeSpeed;
-    private SerializedProperty ghostSpawnRate;
-    private SerializedProperty ghostLifetime;
-    private SerializedProperty ghostAcivated;
+
 
     #endregion
    
@@ -149,16 +148,16 @@ public class FeedBack_Manager_Editor : Editor
 
         playerMat = soTarget.FindProperty("playerMat");
         firstActivated = soTarget.FindProperty("firstActivated");
-        firstGhostColor = soTarget.FindProperty("firstGhostColor");
+        opaqueColor = soTarget.FindProperty("opaqueColor");
         timeFirstAbility = soTarget.FindProperty("timeFirstAbility");
+        ghostFadeSpeedFirst = soTarget.FindProperty("ghostFadeSpeedFirst");
+        ghostLifetimeFirst = soTarget.FindProperty("ghostLifetimeFirst");
         secondActivated = soTarget.FindProperty("secondActivated");
         timeSecondAbility = soTarget.FindProperty("timeSecondAbility");
         timeDeltaSecond = soTarget.FindProperty("timeDeltaSecond");
         timeThird = soTarget.FindProperty("timeThird");
-        ghostFadeSpeed = soTarget.FindProperty("ghostFadeSpeed");
-        ghostSpawnRate = soTarget.FindProperty("ghostSpawnRate");
-        ghostLifetime = soTarget.FindProperty("ghostLifetime");
-        ghostAcivated = soTarget.FindProperty("ghostAcivated");
+        ghostFadeSpeedSecond = soTarget.FindProperty("ghostFadeSpeedSecond");
+        ghostLifetimeSecond = soTarget.FindProperty("ghostLifetimeSecond");
 
     }
 
@@ -249,16 +248,16 @@ public class FeedBack_Manager_Editor : Editor
             case "Abilities":
                 EditorGUILayout.PropertyField(playerMat);
                 EditorGUILayout.PropertyField(firstActivated);
-                EditorGUILayout.PropertyField(firstGhostColor);
+                EditorGUILayout.PropertyField(opaqueColor);
                 EditorGUILayout.PropertyField(timeFirstAbility);
+                EditorGUILayout.PropertyField(ghostFadeSpeedFirst);
+                EditorGUILayout.PropertyField(ghostLifetimeFirst);
                 EditorGUILayout.PropertyField(secondActivated);
                 EditorGUILayout.PropertyField(timeSecondAbility);
                 EditorGUILayout.PropertyField(timeDeltaSecond);
                 EditorGUILayout.PropertyField(timeThird);
-                EditorGUILayout.PropertyField(ghostAcivated);
-                EditorGUILayout.PropertyField(ghostFadeSpeed);
-                EditorGUILayout.PropertyField(ghostSpawnRate);
-                EditorGUILayout.PropertyField(ghostLifetime);
+                EditorGUILayout.PropertyField(ghostFadeSpeedSecond);
+                EditorGUILayout.PropertyField(ghostLifetimeSecond);
                 break;
         }
 

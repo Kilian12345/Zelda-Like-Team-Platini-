@@ -45,7 +45,6 @@ public class Rage_Visual : MonoBehaviour
     {
         Fb_Mana = GetComponentInParent<FeedBack_Manager>();
 
-        _material.SetFloat("_Which", RGB[0,0]);
     }
 
     public void OnRenderImage(RenderTexture source, RenderTexture destination)

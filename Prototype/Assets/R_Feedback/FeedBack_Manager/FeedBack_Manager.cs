@@ -71,7 +71,7 @@ public class FeedBack_Manager : MonoBehaviour
     public float strength = 0;
 
     [Header("Rage Visual")]
-    [Range(-0.05f, 0.05f)] public float offsetColor;
+    [Range(0, 0.05f)] public float offsetColor;
 
     [Space(10.0f)]
     public bool glitchEffect;
@@ -93,7 +93,7 @@ public class FeedBack_Manager : MonoBehaviour
     [Header("1st Ability")]
     public Material playerMat;
     public bool firstActivated = false;
-    public Color firstGhostColor;
+    public Color opaqueColor;
     public float timeFirstAbility;
 
     [Header("2nt Ability")]
@@ -109,10 +109,12 @@ public class FeedBack_Manager : MonoBehaviour
 
     [Header("Player_Shader /////////////////////////////////////")]
     [Header("Ghost_Effect")]
+    Ghost ghostScript;
     public bool ghostAcivated;
-    [Range(0,1)]public float ghostFadeSpeed;
-    public float ghostSpawnRate;
-    public float ghostLifetime;
+    public float ghostLifetimeFirst;
+    [Range(0,1)]public float ghostFadeSpeedFirst;
+    public float ghostLifetimeSecond;
+    [Range(0,1)]public float ghostFadeSpeedSecond;
     #endregion
 
 
@@ -238,12 +240,12 @@ public class FeedBack_Manager : MonoBehaviour
 
     IEnumerator firstAbility()
     {
-            ghostAcivated = true;
+        ghostAcivated = true;
         
         yield return new WaitForSeconds(timeFirstAbility);
 
-            ghostAcivated = false;
-            firstActivated = false;
+        ghostAcivated = false;
+        firstActivated = false;
     }
 
     IEnumerator secondAbility()

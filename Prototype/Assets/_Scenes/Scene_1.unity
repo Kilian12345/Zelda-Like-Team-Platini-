@@ -1333,7 +1333,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -199, y: 104}
-  m_SizeDelta: {x: 563.8, y: 377.7}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &559719287
 MonoBehaviour:
@@ -1386,8 +1386,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 75
-  m_fontSizeBase: 75
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
@@ -12964,10 +12964,10 @@ MonoBehaviour:
   colorActual: 0
   colorMaxTime: 0
   mode: 0
-  previousMode: 0
+  previousMode: 1
   playerMat: {fileID: 2100000, guid: 0440a8124beaa254dbcf3e3c80672cd7, type: 2}
   firstActivated: 0
-  firstGhostColor: {r: 1, g: 0, b: 0, a: 1}
+  opaqueColor: {r: 1, g: 1, b: 1, a: 1}
   timeFirstAbility: 0
   secondActivated: 0
   timeSecondAbility: 0
@@ -12975,9 +12975,10 @@ MonoBehaviour:
   thirdActivated: 0
   timeThird: 0
   ghostAcivated: 0
-  ghostFadeSpeed: 0.12
-  ghostSpawnRate: 0.005
-  ghostLifetime: 3
+  ghostLifetimeFirst: 3
+  ghostFadeSpeedFirst: 0.05
+  ghostLifetimeSecond: 3
+  ghostFadeSpeedSecond: 0.01
   toolbarTab: 4
   currentTab: Abilities
 --- !u!4 &1796326953
@@ -13322,6 +13323,18 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1759082107}
+    - target: {fileID: 271455358, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: ghostSpawnRate
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 271455358, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: ghostSpawnRateFirst
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 271455358, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: ghostSpawnRateSecond
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3af06246630184b8c80238784844a3, type: 3}
 --- !u!1 &1968944467

@@ -17,17 +17,30 @@ public class Ghost_FadeOut : MonoBehaviour
         Fb = FindObjectOfType<FeedBack_Manager>();
         renderC = GetComponent<Rendering_Chara>();
 
-        spriteRend.color = Fb.firstGhostColor;
+        renderC.OpaqueColor = Fb.opaqueColor;
         spriteRend.material = Fb.playerMat;
-        renderC.OpaqueColor = new Color (1,1,1);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Fb.firstActivated == true) PlayerDash();
+        else if (Fb.secondActivated == true)PlayerSlowMo();
+    }
+
+    void PlayerDash()
+    {
         renderC.isOpaque = true;
         color = renderC.OpaqueColor;
-        color.a -= Fb.ghostFadeSpeed * 3f; 
+        color.a -= Fb.ghostFadeSpeedFirst * 2f; 
         renderC.OpaqueColor = color;
+    }
+
+        void PlayerSlowMo()
+    {
+        renderC.isOpaque = false;
+        color = spriteRend.color;
+        color.a -= Fb.ghostFadeSpeedSecond * 2f; 
+        spriteRend.color = color;
     }
 }
