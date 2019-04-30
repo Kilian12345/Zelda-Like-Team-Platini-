@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-
+#if UNITY_EDITOR 
 [CustomEditor (typeof(FeedBack_Manager))]
 public class FeedBack_Manager_Editor : Editor
 {
@@ -271,3 +272,4 @@ public class FeedBack_Manager_Editor : Editor
 
 
 }
+#endif
