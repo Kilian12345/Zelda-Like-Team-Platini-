@@ -8,6 +8,7 @@ public class ThirdAbility : MonoBehaviour
 
     Player ps;
     public float viewRadius = 5;
+    public float radius;
     public float viewAngle = 135;
     public LayerMask obstacleMask;
     Collider2D[] playerInRadius;
@@ -77,11 +78,13 @@ public class ThirdAbility : MonoBehaviour
         if(ps.activatedAbility==3)
         {
             float puissance = (float)1.00001 ;
-            viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, 5);  
+            viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, radius);  
         }
         else if (ps.activatedAbility == 0)
         {
-            viewRadius = 0;
+            viewRadius = Mathf.Lerp( viewRadius, 0, Time.deltaTime*3);
+
+            if(viewRadius <= 0.1f) {viewRadius = 0;}
         }
     }
 

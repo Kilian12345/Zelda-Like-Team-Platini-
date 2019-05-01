@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 28933506}
+  - component: {fileID: 6288707767215949629}
   m_Layer: 8
   m_Name: Center
   m_TagString: Untagged
@@ -26,10 +27,33 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.186, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 698872638}
+  - {fileID: 1935488414}
   m_Father: {fileID: 4523656586312702}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6288707767215949629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28933505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d680a9e826bf684cbb5bcc83676f46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 2
+  radius: 2
+  viewAngle: 360
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 5632
+  visiblePlayer: []
+  PlayerDetected: 0
+  DamageDeal: 1
 --- !u!1 &698872637
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +84,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.127, y: 8.127, z: 8.127}
   m_Children: []
-  m_Father: {fileID: 4523656586312702}
+  m_Father: {fileID: 28933506}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &698872641
@@ -120,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4457a48cd86d94ab653f56ac84ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRes: 0.35
+  meshRes: 0.4
   vertices: []
   triangles: 
   stepCount: 0
@@ -152,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4523656586312702}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1896434730
 GameObject:
@@ -183,7 +207,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4523656586312702}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1896434732
 Light:
@@ -248,11 +272,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935488412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.314, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 10.747, y: 10.747, z: 10.747}
   m_Children: []
-  m_Father: {fileID: 4523656586312702}
-  m_RootOrder: 2
+  m_Father: {fileID: 28933506}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1935488413
 SpriteRenderer:
@@ -271,7 +295,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e4a0c0dac77a3b1449de84564576ca98, type: 2}
+  - {fileID: 2100000, guid: 5434028597de0574b9f2453ccf17b027, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -317,7 +341,6 @@ GameObject:
   - component: {fileID: 82004872805990916}
   - component: {fileID: 114664178312538286}
   - component: {fileID: 82935269521626892}
-  - component: {fileID: 7243009624054846091}
   - component: {fileID: 1199763254}
   - component: {fileID: 2063038619}
   - component: {fileID: 4396268681672764361}
@@ -341,9 +364,7 @@ Transform:
   m_LocalPosition: {x: -0.37043, y: 0, z: 1.7016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 698872638}
   - {fileID: 4553618846385858}
-  - {fileID: 1935488414}
   - {fileID: 1896434731}
   - {fileID: 1533244728}
   - {fileID: 28933506}
@@ -724,26 +745,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7243009624054846091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426647519986904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d680a9e826bf684cbb5bcc83676f46b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewRadius: 5
-  viewAngle: 360
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1536
-  visiblePlayer: []
-  PlayerDetected: 0
-  DamageDeal: 1
 --- !u!95 &1199763254
 Animator:
   serializedVersion: 3
@@ -840,8 +841,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fb: {fileID: 0}
-  playerScript: {fileID: 114448846616350076}
   parent: {fileID: 0}
+  playerScript: {fileID: 114448846616350076}
+  ghostSpawnRateFirst: 0.01
+  ghostSpawnRateSecond: 0.1
 --- !u!1 &1468984369528666
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,5 +984,5 @@ Transform:
   - {fileID: 4520309532650990}
   - {fileID: 4370647527413698}
   m_Father: {fileID: 4523656586312702}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

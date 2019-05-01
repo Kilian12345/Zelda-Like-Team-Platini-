@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Explosion
-  m_Shader: {fileID: 4800000, guid: 74e82c0b1543d1b45a03e82870b02319, type: 3}
+  m_Name: Explosion_Amp
+  m_Shader: {fileID: 4800000, guid: 5c068373e42d444458327bf7c535d2a8, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -19,18 +19,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 7e094b7951e6dd94bbfbc2bddc2f6962, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
+    - _Dissolve: 0.42
+    - _Fractmultiply: 68
+    - _PixelNumberX: 6000
+    - _PixelNumberY: 6000
+    - _Repeat: -0.05
+    - _St_Multiply: 3.553
+    - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.99178326, g: 1, b: 0, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RayColor: {r: 1, g: 0, b: 0, a: 1}
+    - _VectroTest: {r: 0, g: 0, b: 0, a: 0}
