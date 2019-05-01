@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Dissolve: 0.42
-    - _Fractmultiply: 68
+    - _Fractmultiply: 37
     - _PixelNumberX: 6000
     - _PixelNumberY: 6000
     - _Repeat: -0.05
