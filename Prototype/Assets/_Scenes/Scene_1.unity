@@ -1073,7 +1073,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 789.8, y: 295.7}
-  m_SizeDelta: {x: 677.6, y: 377.7}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509367627
 MonoBehaviour:
@@ -1329,7 +1329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -199, y: 104}
+  m_AnchoredPosition: {x: -89, y: 164}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &559719287
@@ -1383,8 +1383,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -10404,7 +10404,6 @@ Transform:
   m_Children:
   - {fileID: 1789486870}
   - {fileID: 2047691881}
-  - {fileID: 1135454151}
   m_Father: {fileID: 1796326953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10876,94 +10875,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1135454150
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1135454151}
-  - component: {fileID: 1135454153}
-  - component: {fileID: 1135454152}
-  m_Layer: 0
-  m_Name: Pixelise Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1135454151
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135454150}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 944187571}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1135454152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135454150}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49794b97191edcf4aad3393dba83e457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  w: 92
-  cam: {fileID: 1135454153}
---- !u!20 &1135454153
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135454150}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 0.78
-  m_Depth: -0.5
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 8192
-  m_RenderingPath: 0
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 0
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &1141677416
 GameObject:
   m_ObjectHideFlags: 0
@@ -13049,8 +12960,8 @@ MonoBehaviour:
   virtualCamera: {fileID: 1789486871}
   virtualCameraNoise: {fileID: 0}
   timeBloom: 10
-  bloom: 20
-  timeLens: 0
+  bloom: 40
+  timeLens: 10
   vignetteColor: {r: 1, g: 0, b: 0, a: 1}
   vignetteOpacity: 1
   ripple: 0
@@ -13089,8 +13000,8 @@ MonoBehaviour:
   ghostFadeSpeedFirst: 0.05
   ghostLifetimeSecond: 3
   ghostFadeSpeedSecond: 0.01
-  toolbarTab: 3
-  currentTab: Camera Shade
+  toolbarTab: 1
+  currentTab: Post-Process
 --- !u!4 &1796326953
 Transform:
   m_ObjectHideFlags: 0
@@ -13474,6 +13385,14 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1759082107}
+    - target: {fileID: 1896434731, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896434731, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.252
+      objectReference: {fileID: 0}
     - target: {fileID: 28933505, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -13492,6 +13411,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1935488412, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896434732, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_Range
+      value: 28.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896434732, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_Intensity
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896434732, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896434732, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896434732, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896434732, guid: fb3af06246630184b8c80238784844a3, type: 3}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935488413, guid: fb3af06246630184b8c80238784844a3, type: 3}
@@ -14684,7 +14627,7 @@ PrefabInstance:
     - target: {fileID: 2803111743261428673, guid: bc3e0f825e6350e4caa871fac8bdc8fe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.068706274
+      value: 1.201
       objectReference: {fileID: 0}
     - target: {fileID: 2803111743261428673, guid: bc3e0f825e6350e4caa871fac8bdc8fe,
         type: 3}

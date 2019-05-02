@@ -19,7 +19,7 @@
         _ValueTwo ("_ValueTwo puissance", Int) = 100.0
         _ValueFour ("_ValueFour etirement", Range(1.0 , 5.0)) = 1.0
         _ValueFive ("_ValueFive frequence", Float) = -30.5
-        _ValueSix ("_ValueSix time", Range(0.0001 , 1.0)) = 0.5
+        _ValueSix ("_ValueSix time", Float) = 0.0001
     }
     SubShader
     {

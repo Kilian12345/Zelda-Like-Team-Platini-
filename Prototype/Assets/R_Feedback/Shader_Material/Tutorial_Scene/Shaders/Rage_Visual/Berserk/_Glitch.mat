@@ -32,8 +32,8 @@ Material:
     - _RThreeSinY: 311.7
     - _ValueFive: -30.5
     - _ValueFour: 1
-    - _ValueOne: 1
+    - _ValueOne: 0
     - _ValueSix: 0.0001
-    - _ValueThree: 5
-    - _ValueTwo: 100
+    - _ValueThree: 2
+    - _ValueTwo: 1
     m_Colors: []
