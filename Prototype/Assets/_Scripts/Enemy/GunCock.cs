@@ -26,6 +26,7 @@ public class GunCock : MonoBehaviour
     public bool reachedEnd, canPatrol;
     private bool isShooting, isMoving, isDead;
     private bool canMove;
+    private bool isFollowing;
     private float LocalX,distX,distY;
 
     Player plScript;
@@ -52,7 +53,7 @@ public class GunCock : MonoBehaviour
     {
         look();
         animate();
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= chasingRange)
+        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= chasingRange && plScript.EnemiesFollowing <= plScript.enemyFollowLimit)
         {
             canPatrol = false;
             if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= shootingRange)
@@ -78,9 +79,17 @@ public class GunCock : MonoBehaviour
             {
                 patrol();
             }
-            else if(canMove)
+            else if (canMove)
             {
                 move();
+            }
+            else
+            {
+                if (isFollowing)
+                {
+                    isFollowing = false;
+                    plScript.EnemiesFollowing--;
+                }
             }
         }
 
@@ -225,6 +234,11 @@ public class GunCock : MonoBehaviour
         if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) > shootingRange)
         {
             transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
+            if (!isFollowing)
+            {
+                plScript.EnemiesFollowing++;
+                isFollowing = true;
+            }
         }
     }
 
@@ -265,5 +279,10 @@ public class GunCock : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, shootingRange);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, chasingRange);
+    }
+
+    void OnDestroy()
+    {
+        plScript.EnemiesFollowing--;
     }
 }

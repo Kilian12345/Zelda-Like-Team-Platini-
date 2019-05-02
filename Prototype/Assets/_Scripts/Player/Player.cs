@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
     [Header("Combat Variables")]
     public float PlayerScore;
     public float EnemiesFollowing;
+    public float enemyFollowLimit;
     public bool toPunch;
     public float damage;
     public float attackSpeed;

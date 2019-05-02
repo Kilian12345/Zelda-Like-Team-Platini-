@@ -126,7 +126,6 @@ public class EnemyHealth : MonoBehaviour
 
 
 
-            //Debug.Log("Punch " + (100 - ps.health) / 100);
         
 
 

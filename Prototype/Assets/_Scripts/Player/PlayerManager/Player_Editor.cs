@@ -46,6 +46,7 @@ public class Player_Editor : Editor
 
     private SerializedProperty PlayerScore;
     private SerializedProperty EnemiesFollowing;
+    private SerializedProperty enemyFollowLimit;
     private SerializedProperty toPunch;
     private SerializedProperty damage;
     private SerializedProperty attackSpeed;
@@ -108,6 +109,7 @@ public class Player_Editor : Editor
         centrePoint= soTarget.FindProperty("centrePoint");
         PlayerScore = soTarget.FindProperty("PlayerScore");
         EnemiesFollowing = soTarget.FindProperty("EnemiesFollowing");
+        enemyFollowLimit = soTarget.FindProperty("enemyFollowLimit");
         toPunch = soTarget.FindProperty("toPunch");
         damage = soTarget.FindProperty("damage");
         attackSpeed = soTarget.FindProperty("attackSpeed");
@@ -196,6 +198,7 @@ public class Player_Editor : Editor
                 EditorGUILayout.PropertyField(centrePoint);
                 EditorGUILayout.PropertyField(PlayerScore);
                 EditorGUILayout.PropertyField(EnemiesFollowing);
+                EditorGUILayout.PropertyField(enemyFollowLimit);
                 EditorGUILayout.PropertyField(toPunch);
                 EditorGUILayout.PropertyField(damage);
                 EditorGUILayout.PropertyField(attackSpeed);

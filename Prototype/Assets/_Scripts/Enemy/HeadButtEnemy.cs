@@ -25,6 +25,7 @@ public class HeadButtEnemy : MonoBehaviour
     private bool isCharging;
     private bool isAttacking;
     private bool isDead;
+    private bool isFollowing;
 
 
     Transform pl;
@@ -54,21 +55,34 @@ public class HeadButtEnemy : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= detectionRange)
             {
-                if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= chargeRange)
+                if (!isFollowing && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
                 {
-                    isInChargeRange = true;
-                    isInChaseRange = true;
+                    plScript.EnemiesFollowing++;
+                    isFollowing = true;
                 }
-                else
+                if (isFollowing)
                 {
-                    isInChargeRange = false;
-                    isInChaseRange = true;
-                }
+                    if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= chargeRange)
+                    {
+                        isInChargeRange = true;
+                        isInChaseRange = true;
+                    }
+                    else
+                    {
+                        isInChargeRange = false;
+                        isInChaseRange = true;
+                    }
+                } 
             }
             else
             {
                 isInChaseRange = false;
                 isInChargeRange = false;
+                if (isFollowing)
+                {
+                    isFollowing = false;
+                    plScript.EnemiesFollowing--;
+                }
             }
 
             if (isInChaseRange)
@@ -205,5 +219,10 @@ public class HeadButtEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, chargeRange);
+    }
+
+    void OnDestroy()
+    {
+        plScript.EnemiesFollowing--;
     }
 }
