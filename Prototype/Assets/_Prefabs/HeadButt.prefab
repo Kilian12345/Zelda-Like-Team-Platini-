@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 6249049812098786721}
   - component: {fileID: 1426911033}
   - component: {fileID: 6644519146914109262}
-  m_Layer: 0
+  - component: {fileID: 5942269374360536665}
+  m_Layer: 10
   m_Name: HeadButt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,3 +303,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+--- !u!114 &5942269374360536665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249049812098786730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd132d073de00dd4389338ac2c906b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tint: {r: 1, g: 1, b: 1, a: 1}
+  HitColor: {r: 1, g: 0, b: 0, a: 1}
+  DissolveColor: {r: 0, g: 0, b: 0, a: 1}
+  DissolveEmission: {r: 0.92933357, g: 1, b: 0, a: 1}
+  OutlineColor: {r: 1, g: 0, b: 0, a: 1}
+  isOpaque: 0
+  isDissolve: 0
+  isOutline: 0
+  timeHitFB: 80
+  dissolveAmout: -0.1
+  dissolveGrain: 0.067

@@ -17,7 +17,7 @@ public class Ghost_FadeOut : MonoBehaviour
         Fb = FindObjectOfType<FeedBack_Manager>();
         renderC = GetComponent<Rendering_Chara>();
 
-        renderC.OpaqueColor = Fb.opaqueColor;
+        renderC.HitColor = Fb.opaqueColor;
         spriteRend.material = Fb.playerMat;
     }
 
@@ -31,9 +31,9 @@ public class Ghost_FadeOut : MonoBehaviour
     void PlayerDash()
     {
         renderC.isOpaque = true;
-        color = renderC.OpaqueColor;
+        color = renderC.HitColor;
         color.a -= Fb.ghostFadeSpeedFirst * 2f; 
-        renderC.OpaqueColor = color;
+        renderC.HitColor = color;
     }
 
         void PlayerSlowMo()
