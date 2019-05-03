@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
     public float PlayerScore;
     public float EnemiesFollowing;
     public float enemyFollowLimit;
+    public float enemyBulletDamage;
     public bool toPunch;
     public float damage;
     public float attackSpeed;
@@ -535,7 +536,7 @@ public class Player : MonoBehaviour
             playerAudio.Play();
             if (health < 100)
             {
-                health += 10;
+                TakeDamage(enemyBulletDamage);
             }
         }
         if (col.gameObject.tag == "Calcium")
@@ -579,6 +580,14 @@ public class Player : MonoBehaviour
         StopCoroutine(Punch());
         gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
 
+    }
+
+    public void TakeDamage(float dam)
+    {
+        playerAudio.clip = hit;
+        playerAudio.Play();
+        Debug.Log("BitchGotHit");
+        health += dam;
     }
 
     private void OnDrawGizmosSelected()

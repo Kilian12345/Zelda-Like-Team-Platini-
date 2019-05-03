@@ -9,6 +9,7 @@ public class HeadButtEnemy : MonoBehaviour
     public float chargeCoolDown;
     public float detectionRange;
     public float chargeRange;
+    public float damageValue;
 
     public bool isInChaseRange;
     public bool isInChargeRange;
@@ -208,7 +209,7 @@ public class HeadButtEnemy : MonoBehaviour
     IEnumerator Damage()
     {
         isAttacking = true;
-        plScript.health += 5f;
+        plScript.TakeDamage(damageValue);
         yield return new WaitForSeconds(1);
         isAttacking = false;
         StopCoroutine(Damage());

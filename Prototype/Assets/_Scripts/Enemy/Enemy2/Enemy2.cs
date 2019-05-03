@@ -136,8 +136,12 @@ public class Enemy2 : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(shootPoint.transform.position, range);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(shootPoint.transform.position, combatDistance);
     }
 
     void OnDestroy()

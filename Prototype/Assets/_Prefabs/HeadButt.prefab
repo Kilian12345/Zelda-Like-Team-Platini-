@@ -122,6 +122,7 @@ MonoBehaviour:
   chargeCoolDown: 0.2
   detectionRange: 1.5
   chargeRange: 1
+  damageValue: 20
   isInChaseRange: 0
   isInChargeRange: 0
   canCharge: 0

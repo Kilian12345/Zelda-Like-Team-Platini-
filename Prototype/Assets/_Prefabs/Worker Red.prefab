@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 375765669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.6100006, y: -11.6, z: -6.2939844}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1217908536}
   - {fileID: 465444932}
@@ -105,9 +105,9 @@ MonoBehaviour:
   gun: {fileID: 1217908535}
   shootPoint: {fileID: 715396708}
   isInRange: 0
-  range: 8
-  combatDistance: 3
-  enemyDamage: 3
+  range: 1
+  combatDistance: 0.5
+  enemyDamage: 5
   attackPushForce: 500
   isAttacking: 0
   pl: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   anim2: {fileID: 0}
   attackSpeed: 0.25
-  attackRange: 0.1
+  attackRange: 0.05
 --- !u!95 &375765678
 Animator:
   serializedVersion: 3
@@ -264,12 +264,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d5cdf09357939479d073d5ef258355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy2Audio: {fileID: 0}
   dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   HitpointsParentPrefab: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
     type: 3}
+  parent: {fileID: 375765669}
   health: 100
   scorePerHit: 30
 --- !u!114 &375765670
@@ -415,12 +415,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715396708}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.239, y: 0, z: 0}
-  m_LocalScale: {x: -0.5000001, y: 0.5000001, z: 0.50000006}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.123, y: -0.176, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1217908536}
-  m_RootOrder: 1
+  m_Father: {fileID: 868986780}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &868986779
 GameObject:
@@ -448,9 +448,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868986779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.225, y: 0.088, z: 0}
+  m_LocalPosition: {x: 0.185, y: 0.088, z: 0}
   m_LocalScale: {x: -0.5, y: 0.5, z: 0.5}
-  m_Children: []
+  m_Children:
+  - {fileID: 715396709}
   m_Father: {fileID: 1217908536}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -549,7 +550,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 868986780}
-  - {fileID: 715396709}
   m_Father: {fileID: 90677456}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.31300002}
