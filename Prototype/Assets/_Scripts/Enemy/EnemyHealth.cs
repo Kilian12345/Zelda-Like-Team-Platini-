@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
     Transform pl;
 
     ThirdAbility ThAb;
+    Rendering_Chara renderChara;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ThAb = FindObjectOfType<ThirdAbility>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        renderChara = GetComponent<Rendering_Chara>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,8 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyAudio.clip = punch;
         enemyAudio.Play();
+        Debug.Log("TakeDamage");
+        renderChara.isOpaque = true;
 
         health -= dam;
 

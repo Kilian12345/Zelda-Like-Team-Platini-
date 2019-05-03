@@ -36,5 +36,5 @@ Material:
     - _St_Multiply: 3.553
     - __dirty: 0
     m_Colors:
-    - _RayColor: {r: 1, g: 0, b: 0, a: 1}
+    - _RayColor: {r: 1, g: 0.5518868, b: 0.5518868, a: 1}
     - _VectroTest: {r: 0, g: 0, b: 0, a: 0}

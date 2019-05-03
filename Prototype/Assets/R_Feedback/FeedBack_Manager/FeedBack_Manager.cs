@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class FeedBack_Manager : MonoBehaviour
 {
+    Player plScript;
     #region Transition
     [Header("Transition ///////////////////////////////////")]
     [Header("Blit")]
@@ -86,6 +87,9 @@ public class FeedBack_Manager : MonoBehaviour
     public Rage_Visual_Enum mode = Rage_Visual_Enum.Normal;
     [HideInInspector]public Rage_Visual_Enum previousMode = Rage_Visual_Enum.Normal;
 
+    [Header("Glitch")]
+    public bool glitchRageEnabled;
+
     #endregion
 
     #region Abilities
@@ -133,6 +137,7 @@ public class FeedBack_Manager : MonoBehaviour
 
         // PostProcess
         volume = GetComponentInChildren<PostProcessVolume>();
+        plScript = FindObjectOfType<Player>();
         volume.profile.TryGetSettings(out bloomLayer);
         volume.profile.TryGetSettings(out vignette);
         //renderTexture = cam.activeTexture;
@@ -152,6 +157,9 @@ public class FeedBack_Manager : MonoBehaviour
         else {StopCoroutine(secondAbility());}
         if (thirdActivated == true) StartCoroutine(thirdAbility());
         else {StopCoroutine(thirdAbility());}
+        
+        if(plScript.health >= 100) {Berserker();}
+        else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
 
     }
 
@@ -183,10 +191,10 @@ public class FeedBack_Manager : MonoBehaviour
 
 
 
-        vignette.opacity.value = Mathf.Lerp(0, vignetteOpacity, vignetteTime);
+        vignette.opacity.value = Mathf.Lerp(0, vignetteOpacity, (plScript.health *0.01f) * 0.75f);
         vignette.color.value = vignetteColor;
 
-        if (Input.GetButton("Jump"))
+        /* if (Input.GetButton("Jump")) ////////////// Vignette Input
         {
             vignetteTime += Time.deltaTime * timeLens;
             doneVignette = false;
@@ -194,7 +202,7 @@ public class FeedBack_Manager : MonoBehaviour
         else if (Input.GetButtonUp("Jump"))
         {
             doneVignette = true;
-        }
+        }*/
 
         if (doneVignette)
         {
@@ -202,6 +210,13 @@ public class FeedBack_Manager : MonoBehaviour
         }
 
         if (vignetteTime > 1) vignetteTime = 1;
+    }
+
+    void Berserker()
+    {
+        vignette.opacity.value = 1;
+        //saturationAmount = (Mathf.Sin(Time.time * 8) * 0.5f) +2;
+        glitchRageEnabled = true;
     }
 
     void CameraShake()

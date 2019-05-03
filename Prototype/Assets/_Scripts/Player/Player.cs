@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
 
     [Header("Audio")]
     public AudioClip hit, died;
-    AudioSource playerAudio;
+    [HideInInspector] public AudioSource playerAudio;
 
     [Header("Visuals")]
     Animator anim;
@@ -129,6 +129,10 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public int toolbarTab;
     public string currentTab;
+    #endregion
+
+    #region Feedbacks
+    public bool takeDamage = false;
     #endregion
 
     // Use this for initialization
@@ -569,8 +573,10 @@ public class Player : MonoBehaviour
                     yield return new WaitForSeconds(0.1f);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     toPunch = false;
+                    takeDamage = true;
                     break;
                 }
+                else{takeDamage = false;}
             }
             toPunch = false;
         }

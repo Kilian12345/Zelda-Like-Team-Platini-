@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_Camera_Effect_Ripple
-  m_Shader: {fileID: 4800000, guid: 15fb7d88480865e428f9daa05bd3ec27, type: 3}
+  m_Name: _Glitch
+  m_Shader: {fileID: 4800000, guid: 91d48097b7954ab46b4fb8e5de60acb8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,9 +24,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amount: 0
-    - _CenterX: 1067.2181
-    - _CenterY: 437.0687
-    - _WaveAmount: 10
-    - _WaveSpeed: 20
+    - _ROneFract: 437.53
+    - _ROneSin: 127.1
+    - _RThreeFract: 437.53
+    - _RThreeSinW: 231.4
+    - _RThreeSinX: 127.1
+    - _RThreeSinY: 311.7
+    - _ValueFive: -30.5
+    - _ValueFour: 1
+    - _ValueOne: 0
+    - _ValueSix: 0.0001
+    - _ValueThree: 2
+    - _ValueTwo: 1
     m_Colors: []

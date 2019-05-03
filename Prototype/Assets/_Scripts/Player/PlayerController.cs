@@ -24,9 +24,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 movWithoutSpeed;
 
     private bool NewActionAllowed = true;
+    public bool inExplosion;
 
 
-    
+
 
     private void Update()
     {
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(Attack());
         //StartCoroutine(Abilities());
     }
-    
+
     private void Movement()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -57,13 +58,20 @@ public class PlayerController : MonoBehaviour
         {
             vertical = -1;
         }
-
+        if (Mathf.Abs(horizontal) == 1 && Mathf.Abs(vertical) == 1)
+        {
+            horizontal = horizontal / 2;
+            vertical = vertical / 2;
+        }
         moveHorizontal = horizontal * speed;
         moveVertical = vertical * speed;
-
         Vector3 movement = new Vector2(moveHorizontal, moveVertical);
         //transform.position = transform.position + movement * Time.deltaTime; ;
-        player.velocity = movement * speed;
+        if (!inExplosion)
+        {
+            player.velocity = movement * speed;
+        }
+
 
         //magnitude = sqrt(x*x + y*y + z*z) so whenever the player is moving x,y or z > 1 so magnitude > 1
         animator.SetFloat("Horizontal", movWithoutSpeed.x);
@@ -94,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Abilities()
     {
-        if(Input.GetButtonDown("Ability1") && NewActionAllowed == true)
+        if (Input.GetButtonDown("Ability1") && NewActionAllowed == true)
         {
             NewActionAllowed = false;
             animator.SetBool("AbilityActive", true);

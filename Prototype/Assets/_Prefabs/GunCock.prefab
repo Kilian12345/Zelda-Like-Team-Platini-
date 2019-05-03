@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2803111742219674382}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: p2
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2803111742453961226}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: shootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2803111742581649722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: p1
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2803111742581649723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.53, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2803111743261428673}
@@ -107,7 +107,8 @@ GameObject:
   - component: {fileID: 2803111742587494293}
   - component: {fileID: 2803111742587494292}
   - component: {fileID: 3985428434597140728}
-  m_Layer: 0
+  - component: {fileID: 857281087}
+  m_Layer: 10
   m_Name: GunCockBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2803111742587494316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.53, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2803111742453961226}
@@ -146,7 +147,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0440a8124beaa254dbcf3e3c80672cd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -240,7 +241,7 @@ MonoBehaviour:
   - {fileID: 2803111743487199444}
   bull: {fileID: 7681654984024996306, guid: be4ac5bbf78817544aca0e53cbbe36a0, type: 3}
   shootPoint: {fileID: 2803111742453961227}
-  moveSpeed: 0.25
+  moveSpeed: 0.2
   bulSpeed: 1
   shootingRange: 0.75
   chasingRange: 1.5
@@ -406,6 +407,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+--- !u!114 &857281087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803111742587494316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd132d073de00dd4389338ac2c906b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tint: {r: 1, g: 1, b: 1, a: 1}
+  HitColor: {r: 1, g: 0, b: 0, a: 1}
+  DissolveColor: {r: 0, g: 0, b: 0, a: 1}
+  DissolveEmission: {r: 0.92933357, g: 1, b: 0, a: 1}
+  OutlineColor: {r: 1, g: 0, b: 0, a: 1}
+  isOpaque: 0
+  isDissolve: 0
+  isOutline: 0
+  timeHitFB: 80
+  dissolveAmout: -0.1
+  dissolveGrain: 0.067
 --- !u!1 &2803111743261428702
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2803111743261428673}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GunCock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2803111743487199444}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: p3
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -464,7 +488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2803111743487199445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.197, y: 0.004, z: 0}
+  m_LocalPosition: {x: 2.42, y: 0.004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2803111743261428673}

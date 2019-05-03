@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwDistance: 2
-  throwVelocity: 1.25
+  throwVelocity: 2
   pickupDistance: 0.25
   isCaught: 0
   toThrow: 0
