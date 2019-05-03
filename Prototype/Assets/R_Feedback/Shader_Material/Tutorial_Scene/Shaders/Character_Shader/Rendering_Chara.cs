@@ -78,8 +78,6 @@ public class Rendering_Chara : MonoBehaviour
         if (Sinus <= 0.0f) {_propBlock.SetColor("_OpaqueColor", HitColor);} 
         else {_propBlock.SetColor("_OpaqueColor", HitColorTransition);}
 
-        Debug.Log(_propBlock.GetColor("_OpaqueColor"));
-
         yield return new WaitForSeconds(0.05f);
         _propBlock.SetFloat("_OpaqueMode", 0); 
         isOpaque = false;

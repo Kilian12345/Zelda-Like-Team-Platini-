@@ -159,6 +159,7 @@ public class FeedBack_Manager : MonoBehaviour
         else {StopCoroutine(thirdAbility());}
         
         if(plScript.health >= 100) {Berserker();}
+        else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
 
     }
 
@@ -190,7 +191,7 @@ public class FeedBack_Manager : MonoBehaviour
 
 
 
-        vignette.opacity.value = Mathf.Lerp(0, vignetteOpacity, plScript.health *0.01f);
+        vignette.opacity.value = Mathf.Lerp(0, vignetteOpacity, (plScript.health *0.01f) * 0.75f);
         vignette.color.value = vignetteColor;
 
         /* if (Input.GetButton("Jump")) ////////////// Vignette Input
@@ -213,7 +214,8 @@ public class FeedBack_Manager : MonoBehaviour
 
     void Berserker()
     {
-        contrastAmount = (Mathf.Sin(Time.time * 8) * 0.5f) +2;
+        vignette.opacity.value = 1;
+        //saturationAmount = (Mathf.Sin(Time.time * 8) * 0.5f) +2;
         glitchRageEnabled = true;
     }
 
