@@ -108,9 +108,10 @@ public class EnemyHealth : MonoBehaviour
     void Laser()
     {
         if (laserZone.visiblePlayer.Contains(this.transform))
-        {
-            ;
-        }
+        {renderChara.isDissolve = true;}
+
+        if(renderChara.dissolveAmout >= 1.0f) 
+        {health = -0.1f;}
     }
 
     void Blood()
@@ -127,6 +128,9 @@ public class EnemyHealth : MonoBehaviour
 
         //yield return new WaitForSeconds(1);
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
+
+        renderChara.isDissolve = true;
+
         yield return health;
     }
 

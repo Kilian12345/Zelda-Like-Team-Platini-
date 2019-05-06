@@ -90,7 +90,7 @@ public class Rendering_Chara : MonoBehaviour
     void Dissolve() //// When the nigga died
     {
         if(transitionDissolve != Color.black)
-        transitionDissolve = new Color(transitionDissolve.r - 0.01f,transitionDissolve.g- 0.01f,transitionDissolve.b- 0.01f);
+        transitionDissolve = new Color(transitionDissolve.r - 0.1f,transitionDissolve.g- 0.1f,transitionDissolve.b- 0.1f);
         
         Tint = transitionDissolve;
 

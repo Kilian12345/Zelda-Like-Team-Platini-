@@ -319,11 +319,13 @@ MonoBehaviour:
   Tint: {r: 1, g: 1, b: 1, a: 1}
   HitColor: {r: 1, g: 0, b: 0, a: 1}
   DissolveColor: {r: 0, g: 0, b: 0, a: 1}
-  DissolveEmission: {r: 0.92933357, g: 1, b: 0, a: 1}
+  DissolveEmission: {r: 1, g: 0, b: 0.44048786, a: 1}
   OutlineColor: {r: 1, g: 0, b: 0, a: 1}
   isOpaque: 0
   isDissolve: 0
   isOutline: 0
+  isPlayer: 0
   timeHitFB: 80
-  dissolveAmout: -0.1
-  dissolveGrain: 0.067
+  hitDuration: 0.05
+  dissolveAmout: -0.5
+  dissolveGrain: 0.4
