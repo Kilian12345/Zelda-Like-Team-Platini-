@@ -110,7 +110,7 @@ public class Kami : MonoBehaviour
         
         isExploding = true;
         dir = (plScript.centrePoint.transform.position - transform.position).normalized;
-        Debug.Log("Exploded Boi " + dir);
+        Debug.Log("Exploded Boi " + new Vector2(/*Mathf.Round*/(dir.x), /*Mathf.Round*/(dir.y)));
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(transform.position, damageRange);
         if (enemiestoDamage.Length > 0)
@@ -121,8 +121,8 @@ public class Kami : MonoBehaviour
                 {
                     enemiestoDamage[i].GetComponent<PlayerController>().inExplosion = true;
                     enemiestoDamage[i].GetComponent<Player>().TakeDamage(damageValue);
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(dir.x*damagePushForce,dir.y*damagePushForce) , ForceMode2D.Impulse);
-                    Debug.Log("Impacted Boi " + new Vector2(dir.x * damagePushForce, dir.y * damagePushForce));
+                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(/*Mathf.Round*/(dir.x) *damagePushForce, /*Mathf.Round*/(dir.y) * damagePushForce) , ForceMode2D.Impulse);
+                    Debug.Log("Impacted Boi " + new Vector2(/*Mathf.Round*/(dir.x) * damagePushForce, /*Mathf.Round*/(dir.y) * damagePushForce));
                     yield return new WaitForSeconds(0.0125f);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     enemiestoDamage[i].GetComponent<PlayerController>().inExplosion = false;
@@ -142,7 +142,7 @@ public class Kami : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, stoppingDistance);
+        Gizmos.DrawWireSphere(transform.position, stoppingDistance);       
     }
 
 }
