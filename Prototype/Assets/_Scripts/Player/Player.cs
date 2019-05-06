@@ -230,7 +230,7 @@ public class Player : MonoBehaviour
                 curTime = rageTimer;
                 isInRage = false;
             }
-            else if (curTime < 0 && health >= 100)
+            else if ((curTime < 0 && health >= 100) && isDead)
             {
                 death();
             }
