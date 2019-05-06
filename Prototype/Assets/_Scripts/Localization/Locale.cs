@@ -28,7 +28,7 @@ namespace DFTGames.Localization
                     currentLocalizationText = Resources.Load(STR_LOCALIZATION_PREFIX + currentLanguage, typeof(TextAsset)) as TextAsset;
                     if (currentLocalizationText == null)
                     {
-                        Debug.LogWarningFormat("Missing locale '{0}', loading English.", currentLanguage);
+                        //Debug.LogWarningFormat("Missing locale '{0}', loading English.", currentLanguage);
                         currentLanguage = SystemLanguage.English.ToString();
                         currentLocalizationText = Resources.Load(STR_LOCALIZATION_PREFIX + currentLanguage, typeof(TextAsset)) as TextAsset;
                     }
@@ -49,7 +49,7 @@ namespace DFTGames.Localization
                     }
                     else
                     {
-                        Debug.LogErrorFormat("Locale Language '{0}' not found!", currentLanguage);
+                        //Debug.LogErrorFormat("Locale Language '{0}' not found!", currentLanguage);
                     }
                 }
             }
