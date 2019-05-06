@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
     Transform pl;
 
     ThirdAbility ThAb;
+    Fow_Parent laserZone;
     Rendering_Chara renderChara;
 
     void Start()
@@ -28,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio = gameObject.GetComponent<AudioSource>();
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ThAb = FindObjectOfType<ThirdAbility>();
+        laserZone = FindObjectOfType<Fow_Parent>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         renderChara = GetComponent<Rendering_Chara>();
     }
@@ -52,6 +54,7 @@ public class EnemyHealth : MonoBehaviour
         }
 
             ZoneDamage();
+            Laser();
 
     }
 
@@ -98,11 +101,15 @@ public class EnemyHealth : MonoBehaviour
         if (ThAb.visiblePlayer.Contains(this.transform))
         {
             StartCoroutine(Damage());
-
         }
-        else
-        {
 
+    }
+
+    void Laser()
+    {
+        if (laserZone.visiblePlayer.Contains(this.transform))
+        {
+            ;
         }
     }
 

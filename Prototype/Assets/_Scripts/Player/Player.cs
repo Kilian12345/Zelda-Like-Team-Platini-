@@ -542,6 +542,7 @@ public class Player : MonoBehaviour
             {
                 TakeDamage(enemyBulletDamage);
             }
+            else{takeDamage = false;}
         }
         if (col.gameObject.tag == "Calcium")
         {
@@ -573,10 +574,8 @@ public class Player : MonoBehaviour
                     yield return new WaitForSeconds(0.1f);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     toPunch = false;
-                    takeDamage = true;
                     break;
                 }
-                else{takeDamage = false;}
             }
             toPunch = false;
         }
@@ -594,6 +593,7 @@ public class Player : MonoBehaviour
         playerAudio.Play();
         Debug.Log("BitchGotHit");
         health += dam;
+        takeDamage = true;
     }
 
     private void OnDrawGizmosSelected()
