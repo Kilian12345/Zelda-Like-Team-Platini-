@@ -16,7 +16,8 @@ public class EnemyHealth : MonoBehaviour
     private int scorePerHit;
 
     bool asExploded;
-
+    bool getDissolve = false;
+    bool zoneDeath = false;
     Player ps;
     Transform pl;
 
@@ -40,12 +41,9 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            enemyAudio.clip = dead;
-            enemyAudio.Play();
-            GetComponent<Collider2D>().enabled = false;
-            Destroy(parent, 0.6f);
 
-            Blood();
+            if (getDissolve == false) {NormalDeath();}
+            else {DissolveDeath();}
         }
 
         if (Vector2.Distance(transform.position, pl.position) > 0.2)
@@ -54,7 +52,7 @@ public class EnemyHealth : MonoBehaviour
         }
 
             ZoneDamage();
-            Laser();
+            Debug.Log(getDissolve);    
 
     }
 
@@ -99,19 +97,12 @@ public class EnemyHealth : MonoBehaviour
     public void ZoneDamage()
     {
         if (ThAb.visiblePlayer.Contains(this.transform))
-        {
-            StartCoroutine(Damage());
-        }
+        {StartCoroutine(ThirdDamage());}
+        else if (laserZone.visiblePlayer.Contains(this.transform))
+        {StartCoroutine(LaserDamage());}
+        else 
+        {getDissolve = false;}
 
-    }
-
-    void Laser()
-    {
-        if (laserZone.visiblePlayer.Contains(this.transform))
-        {renderChara.isDissolve = true;}
-
-        if(renderChara.dissolveAmout >= 1.0f) 
-        {health = -0.1f;}
     }
 
     void Blood()
@@ -123,13 +114,41 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    IEnumerator Damage()
+    void NormalDeath()
     {
+         enemyAudio.clip = dead;
+         enemyAudio.Play();
+         GetComponent<Collider2D>().enabled = false;
+         Destroy(parent, 0.6f);
+         Blood();
+    }
 
-        //yield return new WaitForSeconds(1);
+    void DissolveDeath()
+    {
+        if(zoneDeath == true) {renderChara.DissolveEmission = new Color (0,1,1,1);}
+        else {renderChara.DissolveEmission = new Color (1,0,1,1);}
+        renderChara.isDissolve = true;
+
+        if(renderChara.dissolveAmout >= 1.0f)
+        {
+           Destroy(parent, 0.6f);
+        }
+    }
+
+    IEnumerator ThirdDamage()
+    {
+        zoneDeath = true;
+        getDissolve = true;
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
 
-        renderChara.isDissolve = true;
+        yield return health;
+    }
+
+        IEnumerator LaserDamage()
+    {
+        zoneDeath = false;
+        getDissolve = true;
+        health = Mathf.Clamp(health - laserZone.DamageDeal, -10, 100);
 
         yield return health;
     }

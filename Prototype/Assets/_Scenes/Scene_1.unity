@@ -14151,7 +14151,7 @@ MonoBehaviour:
     m_Bits: 1792
   visiblePlayer: []
   PlayerDetected: 0
-  DamageDeal: 1
+  DamageDeal: 30
 --- !u!1 &2055217949
 GameObject:
   m_ObjectHideFlags: 0
