@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 1426911033}
   - component: {fileID: 6644519146914109262}
   - component: {fileID: 5942269374360536665}
+  - component: {fileID: 1373249910053392568}
   m_Layer: 10
   m_Name: HeadButt
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,3 +328,20 @@ MonoBehaviour:
   timeHitFB: 80
   dissolveAmout: -0.1
   dissolveGrain: 0.067
+--- !u!114 &1373249910053392568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249049812098786730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4980ef825fbbf4b4f91a6d365171c65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwDistance: 2
+  throwVelocity: 2
+  pickupDistance: 0.25
+  isCaught: 0
+  toThrow: 0

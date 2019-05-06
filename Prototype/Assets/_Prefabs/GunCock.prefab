@@ -108,9 +108,10 @@ GameObject:
   - component: {fileID: 2803111742587494292}
   - component: {fileID: 3985428434597140728}
   - component: {fileID: 857281087}
+  - component: {fileID: 888406394505514488}
   m_Layer: 10
   m_Name: GunCockBody
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,6 +431,23 @@ MonoBehaviour:
   timeHitFB: 80
   dissolveAmout: -0.1
   dissolveGrain: 0.067
+--- !u!114 &888406394505514488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803111742587494316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4980ef825fbbf4b4f91a6d365171c65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwDistance: 2
+  throwVelocity: 2
+  pickupDistance: 0.25
+  isCaught: 0
+  toThrow: 0
 --- !u!1 &2803111743261428702
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2803111743487199445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.42, y: 0.004, z: 0}
+  m_LocalPosition: {x: 2.049, y: 0.004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2803111743261428673}
