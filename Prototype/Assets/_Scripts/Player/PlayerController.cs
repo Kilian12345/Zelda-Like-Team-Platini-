@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movWithoutSpeed;
 
     private bool NewActionAllowed = true;
-    public bool inExplosion;
+    public bool isPushed;
 
 
 
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         moveVertical = vertical * speed;
         Vector3 movement = new Vector2(moveHorizontal, moveVertical);
         //transform.position = transform.position + movement * Time.deltaTime; ;
-        if (!inExplosion)
+        if (!isPushed)
         {
             player.velocity = movement * speed;
         }
