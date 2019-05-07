@@ -37,12 +37,12 @@ public class DialogueActivation : MonoBehaviour
     {
         if (mn.English)
         {
-            Debug.Log("EN");
+            //Debug.Log("EN");
             dialogue.sentences = dialogue.sentencesEN;
         }
         else if (!mn.English)
         {
-            Debug.Log("FR");
+            //Debug.Log("FR");
             dialogue.sentences = dialogue.sentencesFR;
         }
     }
