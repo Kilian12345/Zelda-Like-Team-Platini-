@@ -116,7 +116,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (asExploded == false)
         {
-            Instantiate(particlesBlood, transform.position, Quaternion.identity);
+            Vector3 dir = (ps.centrePoint.transform.position - transform.position).normalized;
+            Instantiate(particlesBlood, transform.position, Quaternion.LookRotation( dir * -1 ));
             asExploded = true;
         }
     }
@@ -142,7 +143,7 @@ public class EnemyHealth : MonoBehaviour
 
     void DissolveDeath()
     {
-        if(zoneDeath == true) {renderChara.DissolveEmission = new Color (1,0,1,1);}
+        if(zoneDeath == true) {renderChara.DissolveEmission = new Color (1,1,0,1);}
         else {renderChara.DissolveEmission = new Color (1,0,1,1);}
         renderChara.isDissolve = true;
         Thanosed();
@@ -155,7 +156,7 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator ThirdDamage()
     {
-        whoThanos = pl.transform.position;
+        whoThanos = ps.centrePoint.transform.position;
         zoneDeath = true;
         getDissolve = true;
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);

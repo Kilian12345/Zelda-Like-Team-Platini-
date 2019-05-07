@@ -40,8 +40,8 @@ public class Rendering_Chara : MonoBehaviour
 
          if (isOpaque == true)
          {Sinus = Mathf.Sin(Time.time*timeHitFB) * 1.2; StartCoroutine(HitTime());}
-       //  else if (plScript.takeDamage == true && isPlayer == true)
-       //  {Sinus = Mathf.Sin(Time.time*timeHitFB) * 1.2; StartCoroutine(HitTime());}
+         else if (plScript.takeDamage == true && isPlayer == true)
+         {Sinus = Mathf.Sin(Time.time*timeHitFB) * 1.2; StartCoroutine(HitTime());}
          else
          { _propBlock.SetFloat("_OpaqueMode", 0); }
 
@@ -54,7 +54,7 @@ public class Rendering_Chara : MonoBehaviour
         else
         { 
             _propBlock.SetFloat("_DissolveMode", 0);
-            _propBlock.SetFloat("_OpaqueMode", 0);            
+            //_propBlock.SetFloat("_OpaqueMode", 0);            
             transitionDissolve = Tint;
 
         }
@@ -75,6 +75,7 @@ public class Rendering_Chara : MonoBehaviour
 
     IEnumerator HitTime()
     {
+        isOpaque = true;
         _propBlock.SetFloat("_OpaqueMode", 1); 
         if (Sinus <= 0.0f) {_propBlock.SetColor("_OpaqueColor", HitColor);} 
         else {_propBlock.SetColor("_OpaqueColor", HitColorTransition);}

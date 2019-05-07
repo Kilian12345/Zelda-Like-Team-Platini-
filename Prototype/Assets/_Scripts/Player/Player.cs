@@ -542,7 +542,7 @@ public class Player : MonoBehaviour
             {
                 TakeDamage(enemyBulletDamage);
             }
-            else{takeDamage = false;}
+
         }
         if (col.gameObject.tag == "Calcium")
         {
