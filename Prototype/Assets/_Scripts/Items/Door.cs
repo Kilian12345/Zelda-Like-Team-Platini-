@@ -8,7 +8,9 @@ public class Door : MonoBehaviour
     public GameObject trigger;
     public float yScale;
     [Range(0,1)]
-    public float doorSpeed;
+    public float doorSpeedOpen;
+    [Range(0, 1)]
+    public float doorSpeedClose;
 
     void Start()
     {
@@ -50,14 +52,14 @@ public class Door : MonoBehaviour
 
     IEnumerator Open()
     {
-        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y-doorSpeed, transform.localScale.z);
+        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y- doorSpeedOpen, transform.localScale.z);
         yield return new WaitForSeconds(0.1f);
         StopCoroutine(Open());
     }
 
     IEnumerator Close()
     {
-        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y + doorSpeed, transform.localScale.z);
+        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y + doorSpeedClose, transform.localScale.z);
         yield return new WaitForSeconds(0.1f);
         StopCoroutine(Close());
     }
