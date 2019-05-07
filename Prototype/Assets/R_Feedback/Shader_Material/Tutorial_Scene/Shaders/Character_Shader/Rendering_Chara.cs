@@ -108,9 +108,9 @@ public class Rendering_Chara : MonoBehaviour
         }
         else if (dissolveAmout >= 1.1f)
         {
-            dissolveAmout = -0.5f;
+            //dissolveAmout = -0.5f;
             isDissolve = false;
-            Tint = Color.white;
+            //Tint = Color.white;
         }
 
     }

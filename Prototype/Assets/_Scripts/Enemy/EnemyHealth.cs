@@ -7,19 +7,23 @@ public class EnemyHealth : MonoBehaviour
 {
     AudioSource enemyAudio;
     public AudioClip dead, punch;
-    public GameObject particles;
+    public GameObject particlesBlood;
+    public GameObject particlesThanos;
     public GameObject HitpointsParentPrefab;
     public GameObject parent;
     public float health;
+    public float dissolveAmout;
 
     [SerializeField]
     private int scorePerHit;
 
     bool asExploded;
-    bool getDissolve = false;
+    public bool getDissolve = false;
     bool zoneDeath = false;
     Player ps;
     Transform pl;
+    [SerializeField]Vector3 miniBoss; 
+    Vector3 whoThanos; 
 
     ThirdAbility ThAb;
     Fow_Parent laserZone;
@@ -32,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
         ThAb = FindObjectOfType<ThirdAbility>();
         laserZone = FindObjectOfType<Fow_Parent>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        renderChara = GetComponent<Rendering_Chara>();
+        renderChara = GetComponent<Rendering_Chara>();      
     }
 
     // Update is called once per frame
@@ -52,7 +56,8 @@ public class EnemyHealth : MonoBehaviour
         }
 
             ZoneDamage();
-            Debug.Log(getDissolve);    
+
+            dissolveAmout = renderChara.dissolveAmout; /////// For Export
 
     }
 
@@ -100,8 +105,10 @@ public class EnemyHealth : MonoBehaviour
         {StartCoroutine(ThirdDamage());}
         else if (laserZone.visiblePlayer.Contains(this.transform))
         {StartCoroutine(LaserDamage());}
-        else 
-        {getDissolve = false;}
+
+        if (health <= 0 && getDissolve == true)
+        {getDissolve = true;}
+
 
     }
 
@@ -109,9 +116,19 @@ public class EnemyHealth : MonoBehaviour
     {
         if (asExploded == false)
         {
-            Instantiate(particles, transform.position, Quaternion.identity);
+            Instantiate(particlesBlood, transform.position, Quaternion.identity);
             asExploded = true;
         }
+    }
+
+    void Thanosed()
+    {
+        if (asExploded == false)
+        {           
+            Vector3 dir = (whoThanos - transform.position).normalized;
+            Instantiate(particlesThanos, transform.position,  Quaternion.LookRotation( dir * -1 ));
+            asExploded = true;
+        } 
     }
 
     void NormalDeath()
@@ -125,9 +142,10 @@ public class EnemyHealth : MonoBehaviour
 
     void DissolveDeath()
     {
-        if(zoneDeath == true) {renderChara.DissolveEmission = new Color (0,1,1,1);}
+        if(zoneDeath == true) {renderChara.DissolveEmission = new Color (1,0,1,1);}
         else {renderChara.DissolveEmission = new Color (1,0,1,1);}
         renderChara.isDissolve = true;
+        Thanosed();
 
         if(renderChara.dissolveAmout >= 1.0f)
         {
@@ -137,6 +155,7 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator ThirdDamage()
     {
+        whoThanos = pl.transform.position;
         zoneDeath = true;
         getDissolve = true;
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
@@ -146,6 +165,7 @@ public class EnemyHealth : MonoBehaviour
 
         IEnumerator LaserDamage()
     {
+        whoThanos = miniBoss;
         zoneDeath = false;
         getDissolve = true;
         health = Mathf.Clamp(health - laserZone.DamageDeal, -10, 100);

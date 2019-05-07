@@ -121,7 +121,7 @@ public class HeadButtEnemy : MonoBehaviour
             }
         }
 
-        if (healthScript.health <= 0)
+        if (healthScript.health <= 0 && healthScript.getDissolve == false)
         {
             isDead = true;
         }
