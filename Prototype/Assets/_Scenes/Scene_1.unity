@@ -444,6 +444,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e6373a71ae76e40bd6bd7df746a1c7, type: 3}
+--- !u!4 &297018322 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2203815620499324035, guid: 43e6373a71ae76e40bd6bd7df746a1c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 294419749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &308114837
 GameObject:
   m_ObjectHideFlags: 0
@@ -11599,8 +11605,9 @@ Transform:
   - {fileID: 762856991}
   - {fileID: 548476873}
   - {fileID: 213590012}
-  - {fileID: 1962862203}
+  - {fileID: 297018322}
   - {fileID: 330553374}
+  - {fileID: 1962862203}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13517,7 +13524,17 @@ PrefabInstance:
     - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
         type: 3}
       propertyPath: damage
-      value: 100
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: toolbarTab
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
+        type: 3}
+      propertyPath: currentTab
+      value: Combat
       objectReference: {fileID: 0}
     - target: {fileID: 271455358, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: Fb
@@ -14386,7 +14403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 1558015266}
   yScale: 7.5
-  doorSpeed: 0.025
+  doorSpeedOpen: 0.4
+  doorSpeedClose: 0.01
 --- !u!4 &2071312914
 Transform:
   m_ObjectHideFlags: 0
@@ -14922,5 +14940,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6213787847539697722, guid: ed6f745823107a643ab352648d1d7f45,
+        type: 3}
+      propertyPath: particlesBlood
+      value: 
+      objectReference: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf,
+        type: 3}
+    - target: {fileID: 6213787847539697722, guid: ed6f745823107a643ab352648d1d7f45,
+        type: 3}
+      propertyPath: particlesThanos
+      value: 
+      objectReference: {fileID: 3525380330377394275, guid: 2d219f1605ae3a141ac46f5431304ad4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed6f745823107a643ab352648d1d7f45, type: 3}

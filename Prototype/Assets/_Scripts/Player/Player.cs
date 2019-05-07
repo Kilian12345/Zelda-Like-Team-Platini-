@@ -594,6 +594,7 @@ public class Player : MonoBehaviour
                     {
                         enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(lastHor, lastVer) * attackPushForce, ForceMode2D.Impulse);
                         yield return new WaitForSeconds(0.1f);
+                        if (enemiestoDamage[i]!=null)
                         enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     }
                     toPunch = false;
