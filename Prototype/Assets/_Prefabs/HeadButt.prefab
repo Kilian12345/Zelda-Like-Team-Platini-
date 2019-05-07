@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 1426911033}
   - component: {fileID: 6644519146914109262}
   - component: {fileID: 5942269374360536665}
+  - component: {fileID: 1373249910053392568}
   m_Layer: 10
   m_Name: HeadButt
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

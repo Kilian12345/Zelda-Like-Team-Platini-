@@ -7,7 +7,7 @@ public class CalciumBones : MonoBehaviour
     public float CalciumRefill;
     GameObject player;
 
-    void Awake()
+    void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         if (player)

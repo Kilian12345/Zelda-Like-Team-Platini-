@@ -48,7 +48,10 @@ public class Player : MonoBehaviour
     public float vel;
     public float maxVel;
     private float LocalX;
+    private Vector2 moveToPos;
     private Vector2[] abPos;
+    private Vector2 dir;
+    private bool canCharge;
     Rigidbody2D player;
 
     #endregion
@@ -178,6 +181,8 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         anim.SetInteger("activatedAbility", activatedAbility);
+        anim.SetFloat("lastHor", lastHor);
+        anim.SetFloat("lastVer", lastVer);
         //anim.SetFloat("HorAxis", Mathf.Abs(moveHor));
         //anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("Dead", isDead);
@@ -208,7 +213,7 @@ public class Player : MonoBehaviour
                     {
                         gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
                     }
-                }
+                }    
             }
 
         }
@@ -230,7 +235,7 @@ public class Player : MonoBehaviour
                 curTime = rageTimer;
                 isInRage = false;
             }
-            else if (curTime < 0 && health >= 100)
+            else if ((curTime < 0 && health >= 100) && isDead)
             {
                 death();
             }
@@ -254,6 +259,19 @@ public class Player : MonoBehaviour
         checkForAbilityState();
         cooldownUI();
         updateEnemyFollowing();
+
+        /*if (canCharge)
+        {
+            //Charge();
+            if (Vector2.Distance(player.transform.position, moveToPos) >= 0.7f)
+            {
+                Charge();
+            }
+            else
+            {
+                canCharge = false;
+            }
+        }*/
     }
 
     void updateEnemyFollowing()
@@ -503,6 +521,7 @@ public class Player : MonoBehaviour
     {
         moveHor = Input.GetAxis("Horizontal");
         moveVer = Input.GetAxis("Vertical");
+        dir = new Vector2(moveHor, moveVer);
         if (moveVer != 0 || moveHor != 0)
         {
             lastVer = moveVer;
@@ -510,6 +529,7 @@ public class Player : MonoBehaviour
         }
         gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         angle = Mathf.Atan2(lastVer, lastHor) * Mathf.Rad2Deg;
+        //Debug.Log(lastHor+" "+lastVer);
         /*if (lastHor >= 0f)
         {
             //transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
@@ -560,6 +580,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Punch()
     {
+        //player.AddForce(new Vector2(lastHor, lastVer) * attackPushForce / 5f, ForceMode2D.Impulse);
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
         //Debug.Log(enemiestoDamage.Length);
         if (enemiestoDamage.Length > 0)
@@ -569,10 +590,12 @@ public class Player : MonoBehaviour
                 if (enemiestoDamage[i].GetComponent<EnemyHealth>() != null)
                 {
                     enemiestoDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
-                    //enemiestoDamage[i].GetComponent<Transform>().position= Vector2.MoveTowards(enemiestoDamage[i].GetComponent<Transform>().position, transform.position - new Vector3(moveHor, moveVer, 0)*5, 5 * Time.deltaTime);
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(lastHor, lastVer) * attackPushForce, ForceMode2D.Impulse);
-                    yield return new WaitForSeconds(0.1f);
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                    if (enemiestoDamage[i].GetComponent<Kami>()==null)
+                    {
+                        enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(lastHor, lastVer) * attackPushForce, ForceMode2D.Impulse);
+                        yield return new WaitForSeconds(0.1f);
+                        enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                    }
                     toPunch = false;
                     break;
                 }
@@ -580,12 +603,32 @@ public class Player : MonoBehaviour
             toPunch = false;
         }
         yield return new WaitForSeconds(0.2f);
+        //player.velocity = Vector3.zero;
         //toPunch = false;
-
         StopCoroutine(Punch());
         gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
 
     }
+
+    /*void MovePos()
+    {
+        canCharge = true;
+        if (lastHor != 0 && lastVer != 0)
+        {
+            moveToPos = new Vector2(transform.position.x + (lastHor), transform.position.y + (lastVer));
+        }
+        else
+        {
+            moveToPos = new Vector2(transform.position.x + (lastHor), transform.position.y + (lastVer));
+        }
+    }
+
+    void Charge()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, moveToPos, 2f * Time.deltaTime);
+        Debug.Log("BitchCharged");
+        //canCharge = false;
+    }*/
 
     public void TakeDamage(float dam)
     {
