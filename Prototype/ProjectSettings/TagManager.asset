@@ -52,7 +52,7 @@ TagManager:
   - name: Main_Ground
     uniqueID: 3103702329
     locked: 0
-  - name: Detail
+  - name: Detail / Characters
     uniqueID: 86282249
     locked: 0
   - name: Bottom_Wall
