@@ -2714,7 +2714,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.27
+  m_Intensity: 0.99
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -12132,7 +12132,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 0.78
+  orthographic size: 1.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -22665,7 +22665,7 @@ MonoBehaviour:
   m_Follow: {fileID: 271455345}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 0.78
+    OrthographicSize: 1.6
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -24646,7 +24646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1896434730, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1896434732, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_Range
@@ -25875,7 +25875,7 @@ Camera:
   far clip plane: 1000
   field of view: 0.00001
   orthographic: 1
-  orthographic size: 0.78
+  orthographic size: 1.6
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
