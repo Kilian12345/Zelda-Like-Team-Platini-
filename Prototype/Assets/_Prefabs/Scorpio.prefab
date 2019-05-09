@@ -75,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 86282249
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9679b5ce09d96c7428ce88533da3af16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -170,12 +170,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 92a33c8aa5224584bb3c2c58a663a395, type: 3}
-  particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
+  particlesBlood: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf,
+    type: 3}
+  particlesThanos: {fileID: 3525380330377394275, guid: 2d219f1605ae3a141ac46f5431304ad4,
+    type: 3}
   HitpointsParentPrefab: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
     type: 3}
   parent: {fileID: 6213787849082613900}
   health: 150
+  dissolveAmout: 0
   scorePerHit: 50
+  getDissolve: 0
+  miniBoss: {x: 0, y: 0, z: 0}
 --- !u!61 &6213787847539697723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -222,7 +228,9 @@ MonoBehaviour:
   isOpaque: 0
   isDissolve: 0
   isOutline: 0
+  isPlayer: 0
   timeHitFB: 80
+  hitDuration: 0.05
   dissolveAmout: -0.1
   dissolveGrain: 0.067
 --- !u!114 &6213787847539697721

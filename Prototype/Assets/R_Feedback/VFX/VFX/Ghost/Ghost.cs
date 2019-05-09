@@ -84,6 +84,9 @@ public class Ghost : MonoBehaviour
             trailParts.Add(trailPart);
             trailPart.layer = LayerMask.NameToLayer("Default");
 
+            trailPartRenderer.sortingLayerName = "Detail / Characters";
+            trailPartRenderer.sortingOrder = 1;
+
             Destroy(trailPart, ghostLifetime);
         }
         

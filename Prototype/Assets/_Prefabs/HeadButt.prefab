@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 1426911033}
   - component: {fileID: 6644519146914109262}
   - component: {fileID: 5942269374360536665}
-  - component: {fileID: 1373249910053392568}
   m_Layer: 10
   m_Name: HeadButt
   m_TagString: Pickup
@@ -74,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 86282249
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d75bbe7b3f1d00145843a1072d303e4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -174,6 +173,7 @@ MonoBehaviour:
   dissolveAmout: 0
   scorePerHit: 50
   getDissolve: 0
+  miniBoss: {x: 0, y: 0, z: 0}
 --- !u!82 &6249049812098786721
 AudioSource:
   m_ObjectHideFlags: 0
