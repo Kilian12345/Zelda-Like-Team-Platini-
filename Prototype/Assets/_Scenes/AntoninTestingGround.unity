@@ -6354,14 +6354,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6d6aca5855bcb4690f0896b07903a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numStrike: 5
-  numStrike2: 10
-  numStrike3: 20
   StrikeZone: {fileID: 2695018954807351632, guid: 1b225290fe655724c80be0589b3d2420,
     type: 3}
-  cercleSize: 0.4
-  cercleSize2: 0.6
-  cercleSize3: 0.8
+  numStrike1: 6
+  numStrike2: 12
+  numStrike3: 18
+  rangeAngle1: 20
+  rangeAngle2: 30
+  rangeAngle3: 40
+  Small: 0
+  Medium: 1
+  Big: 0
+  cercleSize: 0.2
 --- !u!212 &1621065812
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6398,7 +6402,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d12729a881dd7c34abba6dbcb1bbf8b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -4,26 +4,19 @@ using UnityEngine;
 
 /*
 
-has 3 behaviours based on his life to get from enemyhealth
->= 70 : rocket style ulti gibraltar
-spawn x missiles gameobjects randomly in a cercle one after the other for 5sec, gets imunity state
-<= 69 && >= 40 : lazerbeam
-<= 39 && >= 1 : jump on player
-
 detects player
-check life state
+check life for behaviour
 select behaviour
 
-private class movetoward with range variables
-private class imunity
-private class die ? check enemyhealth if it exists already
+class movetoward with range variables
+class imunity
+class die ? check enemyhealth if it exists already
 
 */
 
 /*public class SpiderborgBehaviour : MonoBehaviour
 {
     int attackState = 0;
-    bool playerDetected = false;
     public GameObject roamingPoint;
 
     void Update()
@@ -61,17 +54,27 @@ public class SpiderborgBehaviour : MonoBehaviour
 
     public GameObject StrikeZone;
 
-    int numStrike = 9;
-    int numStrike2 = 18;
-    int numStrike3 = 18;
+    [SerializeField] int numStrike1;
+    [SerializeField] int numStrike2;
+    [SerializeField] int numStrike3;
     int i, j, k;
+    [SerializeField] [Range(-190, 190)] float rangeAngle1;
+    [SerializeField] [Range(-190, 190)] float rangeAngle2;
+    [SerializeField] [Range(-190, 190)] float rangeAngle3;
 
-    float[] angle1 = { -190, -150, -110, -70, -30, 10, 50, 90, 130, 170 };
-    float[] angle2 = { -190, -170, -150, -130, -110, -90, -70, -50, -30, -10, 10, 30, 50, 70, 90, 110, 130, 150, 170 };
-    float[] angle3 = { -190, -170, -150, -130, -110, -90, -70, -50, -30, -10, 10, 30, 50, 70, 90, 110, 130, 150, 170 };
-    float cercleSize = 0.2f;
-    float cercleSize2 = 0.4f;
-    float cercleSize3 = 0.6f;
+    [SerializeField] bool Small;
+    [SerializeField] bool Medium;
+    [SerializeField] bool Big;
+
+    [SerializeField] float cercleSize;
+    float cercleSize2, cercleSize3;
+
+    private void Start()
+    {
+        i = numStrike1 - 1;
+        j = numStrike2 - 1;
+        k = numStrike3 - 1;
+    }
 
     void Update()
     {
@@ -80,13 +83,45 @@ public class SpiderborgBehaviour : MonoBehaviour
             Debug.Log("I");
             Attack3();
         }
+        if (Small)
+        {
+            numStrike1 = 6;
+            numStrike2 = 12;
+            numStrike3 = 18;
+            rangeAngle1 = 60;
+            rangeAngle2 = 30;
+            rangeAngle3 = 20;
+            cercleSize = 0.2f;
+        }
+        else if (Medium)
+        {
+            numStrike1 = 9;
+            numStrike2 = 19;
+            numStrike3 = 24;
+            rangeAngle1 = 40;
+            rangeAngle2 = 20;
+            rangeAngle3 = 15;
+            cercleSize = 0.3f;
+        }
+        else if (Big)
+        {
+            numStrike1 = 14;
+            numStrike2 = 25;
+            numStrike3 = 36;
+            rangeAngle1 = 30;
+            rangeAngle2 = 15;
+            rangeAngle3 = 10;
+            cercleSize = 0.4f;
+        }
+        cercleSize2 = cercleSize * 2;
+        cercleSize3 = cercleSize * 3;
     }
 
     #region Attack3
     void Attack3()
     {
         Vector2 center = transform.position;
-        for (i = 0; i < numStrike; i++)
+        for (i = 0; i < numStrike1; i++)
         {
             Vector2 pos = RandomCircle(center, cercleSize);
             Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center - pos);
@@ -110,29 +145,26 @@ public class SpiderborgBehaviour : MonoBehaviour
     
     Vector2 RandomCircle(Vector2 center, float radius)
     {
-        //float ang = Random.value * 360;
-        float ang = angle1[i];
+        float angle1 = i * rangeAngle1;
         Vector2 pos;
-        pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-        pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+        pos.x = center.x + radius * Mathf.Sin(angle1 * Mathf.Deg2Rad);
+        pos.y = center.y + radius * Mathf.Cos(angle1 * Mathf.Deg2Rad);
         return pos;
     }
     Vector2 RandomCircle2(Vector2 center, float radius)
     {
-        //float ang = Random.value * 360;
-        float ang = angle2[j];
+        float angle2 = j * rangeAngle2;
         Vector2 pos;
-        pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-        pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+        pos.x = center.x + radius * Mathf.Sin(angle2 * Mathf.Deg2Rad);
+        pos.y = center.y + radius * Mathf.Cos(angle2 * Mathf.Deg2Rad);
         return pos;
     }
     Vector2 RandomCircle3(Vector2 center, float radius)
     {
-        //float ang = Random.value * 360;
-        float ang = angle3[k];
+        float angle3 = k * rangeAngle3;
         Vector2 pos;
-        pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-        pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+        pos.x = center.x + radius * Mathf.Sin(angle3 * Mathf.Deg2Rad);
+        pos.y = center.y + radius * Mathf.Cos(angle3 * Mathf.Deg2Rad);
         return pos;
     }
     #endregion
