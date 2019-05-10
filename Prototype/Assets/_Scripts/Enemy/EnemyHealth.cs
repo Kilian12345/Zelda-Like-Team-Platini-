@@ -89,6 +89,8 @@ public class EnemyHealth : MonoBehaviour
     {
         var go = Instantiate(HitpointsParentPrefab, transform.position, Quaternion.identity, transform);
         go.GetComponentInChildren<Text>().text = scorePerHit.ToString();
+        go.GetComponent<Canvas>().sortingLayerName = "UI Effect";
+        
         if (pl.position.x > transform.position.x)
         {
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);

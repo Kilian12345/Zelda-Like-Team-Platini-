@@ -58,3 +58,6 @@ TagManager:
   - name: Bottom_Wall
     uniqueID: 223281273
     locked: 0
+  - name: UI Effect
+    uniqueID: 3628577819
+    locked: 0
