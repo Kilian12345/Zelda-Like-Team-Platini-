@@ -90,7 +90,7 @@ public class EnemyHealth : MonoBehaviour
         var go = Instantiate(HitpointsParentPrefab, transform.position, Quaternion.identity, transform);
         go.GetComponentInChildren<Text>().text = scorePerHit.ToString();
         go.GetComponent<Canvas>().sortingLayerName = "UI Effect";
-        
+
         if (pl.position.x > transform.position.x)
         {
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
@@ -145,7 +145,7 @@ public class EnemyHealth : MonoBehaviour
 
     void DissolveDeath()
     {
-        if(zoneDeath == true) {renderChara.DissolveEmission = new Color (1,1,0,1);}
+        if(zoneDeath == true) {renderChara.DissolveEmission = new Color (1,0,0,1);}
         else {renderChara.DissolveEmission = new Color (1,0,1,1);}
         renderChara.isDissolve = true;
         Thanosed();

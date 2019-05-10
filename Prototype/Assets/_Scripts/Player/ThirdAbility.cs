@@ -7,6 +7,7 @@ public class ThirdAbility : MonoBehaviour
 {
 
     Player ps;
+    [SerializeField] Material explosion;
     public float viewRadius = 5;
     public float radius;
     public float viewAngle = 135;
@@ -78,13 +79,17 @@ public class ThirdAbility : MonoBehaviour
         if(ps.activatedAbility==3)
         {
             float puissance = (float)1.00001 ;
-            viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, radius);  
+            viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, radius); 
+            
+            float decrease = explosion.GetFloat("_Fractmultiply");
+            decrease -= 0.4f;
+            explosion.SetFloat("_Fractmultiply", decrease) ;
         }
         else if (ps.activatedAbility == 0)
         {
             viewRadius = Mathf.Lerp( viewRadius, 0, Time.deltaTime*3);
 
-            if(viewRadius <= 0.1f) {viewRadius = 0;}
+            if(viewRadius <= 0.1f) {viewRadius = 0;  explosion.SetFloat("_Fractmultiply", 40);}
         }
     }
 
