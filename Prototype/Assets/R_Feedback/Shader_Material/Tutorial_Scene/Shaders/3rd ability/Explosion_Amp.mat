@@ -29,13 +29,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
-    - _Dissolve: 1.37
-    - _Fractmultiply: 10
+    - _Dissolve: 1.06
+    - _Fractmultiply: 40
     - _PixelNumberX: 6000
     - _PixelNumberY: 6000
-    - _Repeat: -0.08
+    - _Repeat: 0
     - _St_Multiply: 3.553
     - __dirty: 0
     m_Colors:
-    - _RayColor: {r: 0.55050814, g: 1, b: 0, a: 1}
+    - _RayColor: {r: 1, g: 0, b: 0.08989811, a: 1}
     - _VectroTest: {r: 0, g: 0, b: 0, a: 0}
