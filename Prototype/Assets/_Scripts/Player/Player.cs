@@ -502,7 +502,7 @@ public class Player : MonoBehaviour
         Destroy(gameObject,0.5f);
     }
 
-    /* void OnDisable()
+    void OnDisable()
     {
         var foundObjects = FindObjectsOfType<CalciumBones>();
         for (int i = 0; i < foundObjects.Length; i++)
@@ -510,9 +510,9 @@ public class Player : MonoBehaviour
             Destroy(foundObjects[i]);
             Debug.Log("Destroyed");
         }
-    }*/
+    }
 
-    /* void OnDestroy()
+     /*void OnDestroy()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }*/

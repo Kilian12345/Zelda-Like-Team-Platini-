@@ -22,6 +22,7 @@ public class SwordCarrier : MonoBehaviour
     public bool isInChaseRange;
     public bool isInAttackRange;
     public bool canAttack;
+    public bool canMove;
 
     private float timeToAttack;
     private float attackCoolDown;
@@ -94,30 +95,54 @@ public class SwordCarrier : MonoBehaviour
                     isFollowing = false;
                     plScript.EnemiesFollowing--;
                 }
+                else
+                {
+                    isMoving = false;
+                }
             }
 
             if (isInChaseRange)
             {
+                if (!canAttack && isFollowing)
+                {
+                    move();
+                }
                 look();
                 if (isInAttackRange)
                 {
-                    if (Time.time > timeToAttack)
+                    /*if (Time.time > timeToAttack)
                     {
                         timeToAttack = Time.time + 1 / attackSpeed;
+                        canAttack = true;
                         StartCoroutine(Attack());
-                        isMoving = false;
-                        isAttacking = true;
-                        Invoke("switchMoveBool", attackCoolDown / 2);
-                    }
+                        Invoke("switchMoveBool", attackCoolDown/3);
+                    }*/
                 }
                 else
                 {
                     isAttacking = false;
-                    move();
-                } 
+                    //canMove = true;
+                }
             }
+            
         }
 
+    }
+
+    void switchMoveBool()
+    {
+        //isAttacking = false;
+        canAttack = false; ;
+    }
+
+    void delayedAttack()
+    {
+        if (!isAttacking)
+        {
+            StartCoroutine(Attack());
+            Invoke("switchMoveBool", attackCoolDown / 3);
+        }
+        
     }
 
     void look()
@@ -157,13 +182,18 @@ public class SwordCarrier : MonoBehaviour
             isMoving = true;
             transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
         }
+        else
+        {
+            canAttack = true;
+            Invoke("delayedAttack",1f); 
+        }
     }
 
     IEnumerator Attack()
     {
-
+        isAttacking = true;
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         //Debug.Log(enemiestoDamage.Length);
         if (enemiestoDamage.Length > 0)
         {
@@ -182,8 +212,8 @@ public class SwordCarrier : MonoBehaviour
                 }
             }
         }
-        yield return new WaitForSeconds(0.2f);
         isAttacking = false;
+        yield return new WaitForSeconds(0.2f);
         StopCoroutine(Attack());
     }
 

@@ -184,17 +184,18 @@ MonoBehaviour:
   gun: {fileID: 5483544481213362043}
   shootPoint: {fileID: 5483544481285802422}
   moveSpeed: 0.5
-  combatRange: 0.3
-  chasingRange: 1
-  stoppingDistance: 0.15
-  enemyDamage: 25
+  combatRange: 0.75
+  chasingRange: 1.5
+  stoppingDistance: 0.3
+  enemyDamage: 15
   attackSpeed: 0.25
   attackRange: 0.1
-  attackPushForce: 0.1
+  attackPushForce: 10
   angle: 0
   isInChaseRange: 0
   isInAttackRange: 0
   canAttack: 0
+  canMove: 0
 --- !u!61 &5483544482235513987
 BoxCollider2D:
   m_ObjectHideFlags: 0
