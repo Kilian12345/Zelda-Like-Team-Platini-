@@ -9,14 +9,14 @@ public class ThrowingMechanic : MonoBehaviour
     private Vector2 lastPos;
     Player ps;
     GameObject player;
-    BoxCollider2D bColl;
+    Collider2D bColl;
 
 
     void Start()
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player = GameObject.FindGameObjectWithTag("Player");
-        bColl = GetComponent<BoxCollider2D>();
+        bColl = GetComponent<Collider2D>();
     }
 
     void FixedUpdate()
