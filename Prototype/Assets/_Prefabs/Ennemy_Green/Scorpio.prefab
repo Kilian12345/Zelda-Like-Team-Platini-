@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 6213787847539697721}
   - component: {fileID: 6213787847539697718}
   - component: {fileID: 6213787847539697719}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ScorpioBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0440a8124beaa254dbcf3e3c80672cd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -429,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6213787848702675038}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
