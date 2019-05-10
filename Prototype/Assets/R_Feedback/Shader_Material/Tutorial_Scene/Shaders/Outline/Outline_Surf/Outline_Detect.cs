@@ -5,34 +5,26 @@ using UnityEngine;
 public class Outline_Detect : MonoBehaviour
 {
     Renderer myRenderer;
+    ThrowingMechanic throwing;
     private MaterialPropertyBlock _propBlock;
 
     // Start is called before the first frame update
     void Start()
     {
         myRenderer = GetComponent<Renderer>();
+        throwing = GetComponent<ThrowingMechanic>();
         _propBlock = new MaterialPropertyBlock();
     }
-
-
-    void OnCollisionEnter2D(Collision2D collision)
+    void Update()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            myRenderer.GetPropertyBlock(_propBlock);
-            _propBlock.SetFloat("_OutlineMode", 1);
-            myRenderer.SetPropertyBlock(_propBlock);           
-        }
+        myRenderer.GetPropertyBlock(_propBlock);
+
+        if (throwing.canBePicked == true)
+        {_propBlock.SetFloat("_OutlineMode", 1);}
+        else 
+        {_propBlock.SetFloat("_OutlineMode", 0);}
+
+        myRenderer.SetPropertyBlock(_propBlock);
     }
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            myRenderer.GetPropertyBlock(_propBlock);
-            _propBlock.SetFloat("_OutlineMode", 0);
-            myRenderer.SetPropertyBlock(_propBlock);
-
-        }
-    }
 }

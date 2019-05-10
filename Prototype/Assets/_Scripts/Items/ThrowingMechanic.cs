@@ -6,6 +6,7 @@ public class ThrowingMechanic : MonoBehaviour
 {
     public float throwDistance,throwVelocity,pickupDistance;
     public bool isCaught,toThrow;
+    public bool canBePicked;
     private Vector2 lastPos;
     Player ps;
     GameObject player;
@@ -21,8 +22,10 @@ public class ThrowingMechanic : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) <= pickupDistance)
+        if (Vector2.Distance(transform.position, ps.centrePoint.transform.position) <= pickupDistance)
         {
+            canBePicked = true;
+
             if (Input.GetKeyDown(KeyCode.Joystick1Button4))
             {
                 Debug.Log("ASD");
@@ -42,6 +45,7 @@ public class ThrowingMechanic : MonoBehaviour
             }
             Physics2D.IgnoreCollision(bColl, player.GetComponent<CapsuleCollider2D>(),toThrow);
         }
+        else{canBePicked = false;}
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         //Debug.Log(GetComponent<Rigidbody2D>().velocity);
 

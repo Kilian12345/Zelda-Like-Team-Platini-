@@ -112,6 +112,7 @@ MonoBehaviour:
   pickupDistance: 0.25
   isCaught: 0
   toThrow: 0
+  canBePicked: 0
 --- !u!70 &6129395250849588454
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

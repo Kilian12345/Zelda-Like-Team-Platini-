@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 3140893822671797968}
   - component: {fileID: 4029858896549813254}
   - component: {fileID: 6905983964531536884}
+  - component: {fileID: 9101275641463739522}
+  - component: {fileID: 5332962744292652673}
+  - component: {fileID: 6519747947482758014}
   m_Layer: 0
   m_Name: Chariot_Plein
   m_TagString: Untagged
@@ -49,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ce5ad88649b371e4f95cb3ac0f7c7420, type: 2}
+  - {fileID: 2100000, guid: 83a8c271850920842890128473ec1cee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,3 +114,53 @@ PolygonCollider2D:
       - {x: 0.10070896, y: -0.13006878}
       - {x: 0.12031841, y: -0.019749641}
       - {x: 0.12021923, y: 0.13968086}
+--- !u!114 &9101275641463739522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630489075366438270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4980ef825fbbf4b4f91a6d365171c65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwDistance: 2
+  throwVelocity: 1.5
+  pickupDistance: 0.25
+  isCaught: 0
+  toThrow: 0
+--- !u!114 &5332962744292652673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630489075366438270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44dff152b51f0e641b5e8b2a0afa6305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &6519747947482758014
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630489075366438270}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 50
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
