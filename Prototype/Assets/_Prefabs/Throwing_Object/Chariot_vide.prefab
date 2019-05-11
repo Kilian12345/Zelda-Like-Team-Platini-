@@ -131,6 +131,7 @@ MonoBehaviour:
   pickupDistance: 0.25
   isCaught: 0
   toThrow: 0
+  canBePicked: 0
 --- !u!114 &2976883091581127101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
