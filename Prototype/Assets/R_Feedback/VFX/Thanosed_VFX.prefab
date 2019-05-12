@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8879709508074713465}
   - component: {fileID: 7791084001283590238}
   - component: {fileID: 7215467512727527677}
+  - component: {fileID: 4416055876456239954}
   m_Layer: 0
   m_Name: Thanosed_VFX
   m_TagString: Untagged
@@ -4673,7 +4674,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 86282249
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
@@ -4698,3 +4699,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4416055876456239954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3525380330377394275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0092ec9ffd2bf441b333345fbaa08fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeOfDestruction: 5

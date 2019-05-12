@@ -108,10 +108,6 @@ public class EnemyHealth : MonoBehaviour
         else if (laserZone.visiblePlayer.Contains(this.transform))
         {StartCoroutine(LaserDamage());}
 
-        if (health <= 0 && getDissolve == true)
-        {getDissolve = true;}
-
-
     }
 
     void Blood()
@@ -159,9 +155,10 @@ public class EnemyHealth : MonoBehaviour
     IEnumerator ThirdDamage()
     {
         whoThanos = ps.centrePoint.transform.position;
-        zoneDeath = true;
-        getDissolve = true;
+        zoneDeath = true;       
         health = Mathf.Clamp(health - ThAb.DamageDeal, -10, 100);
+
+        if (health <= 0) {getDissolve = true;}
 
         yield return health;
     }
@@ -170,8 +167,9 @@ public class EnemyHealth : MonoBehaviour
     {
         whoThanos = miniBoss;
         zoneDeath = false;
-        getDissolve = true;
         health = Mathf.Clamp(health - laserZone.DamageDeal, -10, 100);
+
+        if (health <= 0) {getDissolve = true;}
 
         yield return health;
     }
