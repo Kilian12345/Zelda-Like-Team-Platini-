@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 8ff5c20080da71e4cb1734e7e6ed1284
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Labyrinth_0
+    21300002: Labyrinth_1
+    21300004: Labyrinth_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,7 +96,67 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Labyrinth_0
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 649
+        width: 268
+        height: 262
+      alignment: 9
+      pivot: {x: 0.5, y: 0.089287445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ce291c16e4a2347bc4d97af31fa759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Labyrinth_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 578
+        width: 266
+        height: 333
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d17aad0c3bd5c24c95c80a1a6c70969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Labyrinth_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 92
+        width: 717
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c685a1b116a1f46a9347113a5314db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
