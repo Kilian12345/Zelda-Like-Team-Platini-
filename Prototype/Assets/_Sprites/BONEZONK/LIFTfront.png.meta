@@ -8,6 +8,12 @@ TextureImporter:
     21300006: 30bonezonk_PORTEface_3
     21300008: 30bonezonk_PORTEface_4
     21300010: 30bonezonk_PORTEface_5
+    21300012: LIFTfront_0
+    21300014: LIFTfront_1
+    21300016: LIFTfront_2
+    21300018: LIFTfront_3
+    21300020: LIFTfront_4
+    21300022: LIFTfront_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -90,121 +96,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_PORTEface_0
+      name: LIFTfront_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1f14138a437eae4cb724079ba55b714
+      spriteID: 4ef58e50fbea0de43a0d437123ed00cd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PORTEface_1
+      name: LIFTfront_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b73503979c97b242a82659eea0666fb
+      spriteID: 365195c6d6cf25e41b9b259e26fcabdf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PORTEface_2
+      name: LIFTfront_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae317c7b8d60ccc42a528cbc9bc96dce
+      spriteID: 6430899336e603e42ae6f133fa2b17df
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PORTEface_3
+      name: LIFTfront_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45c163fd164d7444893aa18c495b7f37
+      spriteID: 518848ccf816d0641a1e56bfe0482d13
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PORTEface_4
+      name: LIFTfront_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bff7fe2b265cb341a2952074244966d
+      spriteID: e9d90586245d9724690bb2fbc1e983e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PORTEface_5
+      name: LIFTfront_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b74459ce65c545649904aaeea7f3f8db
+      spriteID: bf6b9ef8c3aa6204490e6a1c85faa562
       vertices: []
       indices: 
       edges: []

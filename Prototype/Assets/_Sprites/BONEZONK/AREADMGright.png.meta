@@ -15,6 +15,19 @@ TextureImporter:
     21300020: 30bonezonk_ATKSPEv2_10
     21300022: 30bonezonk_ATKSPEv2_11
     21300024: 30bonezonk_ATKSPEv2_12
+    21300026: AREADMGright_0
+    21300028: AREADMGright_1
+    21300030: AREADMGright_2
+    21300032: AREADMGright_3
+    21300034: AREADMGright_4
+    21300036: AREADMGright_5
+    21300038: AREADMGright_6
+    21300040: AREADMGright_7
+    21300042: AREADMGright_8
+    21300044: AREADMGright_9
+    21300046: AREADMGright_10
+    21300048: AREADMGright_11
+    21300050: AREADMGright_12
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -97,261 +110,261 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_0
+      name: AREADMGright_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f58f156b03f0dc4c8a9d6eb56b2103b
+      spriteID: 31866c7e3e783714bb3ec6e4c22e265e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_1
+      name: AREADMGright_1
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0113a935f83d1846b09dbccf0290eee
+      spriteID: 70851991d372ba946a9c5cd26761a856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_2
+      name: AREADMGright_2
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aea5a4bb069bb140a62756e2a5d2ad0
+      spriteID: 9fad0918fd901b24cafae9d4b76a6bf4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_3
+      name: AREADMGright_3
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb756a62847042148a97e6b79bbc3f72
+      spriteID: eeb62146006575b4e8a543a9af7e4211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_4
+      name: AREADMGright_4
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f7f7507d7377fb46aab1ff35c96aa37
+      spriteID: 7557ab890b735b7459d5dad0e1e17236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_5
+      name: AREADMGright_5
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58d39c3a93ad6a4b9db88775a19b3be
+      spriteID: 704ca8cf307452746a93ac6d502a2a52
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_6
+      name: AREADMGright_6
       rect:
         serializedVersion: 2
         x: 768
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a0a6e9a7b1f00d498ee267bc0965f79
+      spriteID: 8a74d35a0f73d024bbf567cf58c0dab0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_7
+      name: AREADMGright_7
       rect:
         serializedVersion: 2
         x: 896
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76504d823d3a16a4999df692636e65de
+      spriteID: d9e36a02726e8434ab3b1c275bbe68d3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_8
+      name: AREADMGright_8
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dc1bb1c5efef3f4c89af195719af098
+      spriteID: 34061f474fe32564ba909a1cb54bb989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_9
+      name: AREADMGright_9
       rect:
         serializedVersion: 2
         x: 1152
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7efded7c39caa5b428aa055b99919d38
+      spriteID: d7bcf88bae1c7c245b820b107b468b6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_10
+      name: AREADMGright_10
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: debdaab230ea58447a06ee5e656adb60
+      spriteID: 20c6dc136a42ed642a4f5e99e0dda480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_11
+      name: AREADMGright_11
       rect:
         serializedVersion: 2
         x: 1408
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9f733c02bfd42b40960efea30bdefcf
+      spriteID: 7a068146eaf7bbe41a1baa31a762365c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_ATKSPEv2_12
+      name: AREADMGright_12
       rect:
         serializedVersion: 2
         x: 1536
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57a62ec416761fa45ab926d649f069b5
+      spriteID: 360dd75ce8dd4b5498bc883fb8df0303
       vertices: []
       indices: 
       edges: []

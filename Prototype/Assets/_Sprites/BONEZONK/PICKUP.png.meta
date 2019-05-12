@@ -9,6 +9,13 @@ TextureImporter:
     21300008: 30bonezonk_PICKUP_4
     21300010: 30bonezonk_PICKUP_5
     21300012: 30bonezonk_PICKUP_6
+    21300014: PICKUP_0
+    21300016: PICKUP_1
+    21300018: PICKUP_2
+    21300020: PICKUP_3
+    21300022: PICKUP_4
+    21300024: PICKUP_5
+    21300026: PICKUP_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -91,141 +98,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_PICKUP_0
+      name: PICKUP_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 757b92e076fc12242a59e95d96b9aa19
+      spriteID: e5290264c9d506f4e8356f1f24314f19
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PICKUP_1
+      name: PICKUP_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb6f325dde8e3c841b56cc026a6abc76
+      spriteID: 72ab81c8ed3583740b29d649445e21ad
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PICKUP_2
+      name: PICKUP_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da921c1d19c50f64f8e72eb45d8a2a71
+      spriteID: d1e9f9a88e5f4e841954453ce78177e4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PICKUP_3
+      name: PICKUP_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5b8264aaa79e3f4f899e7f51d3c3375
+      spriteID: cab719d5fee9cb24ba2d4988da4eb145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PICKUP_4
+      name: PICKUP_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87070b6c8e54200418842fa7fb24d320
+      spriteID: 7c8ebfdcfbfcf6545bb60dc19ba53049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PICKUP_5
+      name: PICKUP_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f7cbed80cc594a48a988fd0da0ff83a
+      spriteID: e4183c9da17ed2c4bb85e2841aa40189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_PICKUP_6
+      name: PICKUP_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97932d447ff88e34783faf730a9086e0
+      spriteID: 24ccd625254c9b9468e89f86bf45b1b2
       vertices: []
       indices: 
       edges: []

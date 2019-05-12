@@ -9,6 +9,13 @@ TextureImporter:
     21300008: 30bonezonk_LANCEdos_4
     21300010: 30bonezonk_LANCEdos_5
     21300012: 30bonezonk_LANCEdos_6
+    21300014: THROWback_0
+    21300016: THROWback_1
+    21300018: THROWback_2
+    21300020: THROWback_3
+    21300022: THROWback_4
+    21300024: THROWback_5
+    21300026: THROWback_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -91,141 +98,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_LANCEdos_0
+      name: THROWback_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1c998016a2df524ebbfff9552b11ba5
+      spriteID: d24e72607d28e1f40b2290dd03d1403e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEdos_1
+      name: THROWback_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3f7e8fb65b55004abe0639ef317a8f5
+      spriteID: eb5fbf4f81742d4479bfe87acbd03e4a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEdos_2
+      name: THROWback_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40fbf19b8c214974493dba91b989848c
+      spriteID: d33f7f29e36fdad4cba4b1e72a1eed74
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEdos_3
+      name: THROWback_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97a553409e9999b498269182c193fd3d
+      spriteID: 461a05e6f27bd8e429360df2c128de6c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEdos_4
+      name: THROWback_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2106f8e4025fd84f95cf282dead9fe8
+      spriteID: 55d28e84f552e6f4db31c09981571d70
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEdos_5
+      name: THROWback_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbe7b4d447f836d4986a6cd3e2b94155
+      spriteID: 3e59ca2b19b05d743824bc75edd56eb1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEdos_6
+      name: THROWback_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6617a9e968061bb43962835decf82b8c
+      spriteID: bd5c291a837877f458c1803ddb682135
       vertices: []
       indices: 
       edges: []

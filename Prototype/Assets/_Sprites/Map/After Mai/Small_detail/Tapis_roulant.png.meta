@@ -102,18 +102,18 @@ TextureImporter:
       name: Tapis_roulant_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 120
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 19
+        y: 12
+        width: 77
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 647b7db9fe4706d4e8a97a8828b91f97
+      spriteID: 90b643b17c19637428a2351449ebd17a
       vertices: []
       indices: 
       edges: []
@@ -122,18 +122,18 @@ TextureImporter:
       name: Tapis_roulant_1
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 120
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 139
+        y: 12
+        width: 77
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 614bfe7eefb78414fa3a81728da490a5
+      spriteID: 8c8e086bbab09654fbcf220dd8f7131a
       vertices: []
       indices: 
       edges: []
@@ -142,18 +142,18 @@ TextureImporter:
       name: Tapis_roulant_2
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 120
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 259
+        y: 12
+        width: 77
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b5fdb0772e2bae4288a4d845f5a585f
+      spriteID: 02752aa8eb259aa4eb7ccebce693103e
       vertices: []
       indices: 
       edges: []
@@ -162,18 +162,18 @@ TextureImporter:
       name: Tapis_roulant_3
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 120
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 379
+        y: 12
+        width: 77
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b308ab829b96b64fae26d9239f4a053
+      spriteID: 555d252dd723a30498d10a335b5fe4c2
       vertices: []
       indices: 
       edges: []

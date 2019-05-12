@@ -46,18 +46,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 114084931
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Main_Ground
-    uniqueID: 3103702329
-    locked: 0
-  - name: Detail / Characters
-    uniqueID: 86282249
-    locked: 0
-  - name: Bottom_Wall
-    uniqueID: 223281273
-    locked: 0
-  - name: UI Effect
-    uniqueID: 3628577819
     locked: 0

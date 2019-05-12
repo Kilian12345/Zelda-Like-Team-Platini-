@@ -10,6 +10,14 @@ TextureImporter:
     21300010: 30bonezonk_dash_5
     21300012: 30bonezonk_dash_6
     21300014: 30bonezonk_dash_7
+    21300016: DASHright_0
+    21300018: DASHright_1
+    21300020: DASHright_2
+    21300022: DASHright_3
+    21300024: DASHright_4
+    21300026: DASHright_5
+    21300028: DASHright_6
+    21300030: DASHright_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -92,161 +100,161 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_dash_0
+      name: DASHright_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22aac85df5dfb26459ffe9f62787b0f0
+      spriteID: 775f02b9d4d5d3b4985e5ea2d8c7a5cb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_dash_1
+      name: DASHright_1
       rect:
         serializedVersion: 2
         x: 68
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7e5f7b8eb3fda34f9be584f60bdc29f
+      spriteID: a1c905ae28e1c9946a5a5eccf2fc54aa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_dash_2
+      name: DASHright_2
       rect:
         serializedVersion: 2
         x: 136
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 204b044c358788d409e70c56a61a13ac
+      spriteID: 7349f3e9ec24d5d45865a81494eda3af
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_dash_3
+      name: DASHright_3
       rect:
         serializedVersion: 2
         x: 204
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f594e995143639f4ea1e0dc355065769
+      spriteID: 8299bb1dc3c4af84098b1cce4b22cf81
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_dash_4
+      name: DASHright_4
       rect:
         serializedVersion: 2
         x: 272
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc19098910aa1414fa97b9f05ef1c48a
+      spriteID: 45366569366e52c46a403b7320e8f76a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_dash_5
+      name: DASHright_5
       rect:
         serializedVersion: 2
         x: 340
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d4cda8d0e4536b4890cd51920eff75f
+      spriteID: c70b2d6d19fe0604db8c07c24197c656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_dash_6
+      name: DASHright_6
       rect:
         serializedVersion: 2
         x: 408
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb79184a78e47854d9b41e5cfe71c719
+      spriteID: 0b5cff27dc814224ab1fc17f7e2a85d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_dash_7
+      name: DASHright_7
       rect:
         serializedVersion: 2
         x: 476
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d7faa5f4a546bc48899eeed23ee60a0
+      spriteID: 3e7e2154f265e3c4c95605e4acca7a5a
       vertices: []
       indices: 
       edges: []

@@ -9,6 +9,13 @@ TextureImporter:
     21300008: 30bonezonk_LANCEprofile_4
     21300010: 30bonezonk_LANCEprofile_5
     21300012: 30bonezonk_LANCEprofile_6
+    21300014: THROWright_0
+    21300016: THROWright_1
+    21300018: THROWright_2
+    21300020: THROWright_3
+    21300022: THROWright_4
+    21300024: THROWright_5
+    21300026: THROWright_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -91,141 +98,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_LANCEprofile_0
+      name: THROWright_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77ff556b169543248bde34d9cba2a63a
+      spriteID: 4aceed044298f084784aacda4f53be7c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEprofile_1
+      name: THROWright_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62024dd1c43ba0244b996e7239e18f5a
+      spriteID: 857bbb0f1d89c2b479dfa15d875cddd0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEprofile_2
+      name: THROWright_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daef43d728c3f9e46bbb758983f6c3e9
+      spriteID: 4d6bf435237c12648984bf0fc4bed4c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEprofile_3
+      name: THROWright_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 573d2ecf844fb25479408cd245d07ec0
+      spriteID: ee2fc6dea044a7d4192949c352157c91
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEprofile_4
+      name: THROWright_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59c9aae4056880b49a10cd6489e4ab83
+      spriteID: 424e450112d67bb42bc7cfec4a6ca7ca
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEprofile_5
+      name: THROWright_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fea86592bac3be4cabd4fb03907679e
+      spriteID: d40341dd16fd16347aaf427b4027e5d2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEprofile_6
+      name: THROWright_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0cc045088d0cd74480d3dc3dd74623b
+      spriteID: c2ede487425b2af4c86297e8189adafa
       vertices: []
       indices: 
       edges: []

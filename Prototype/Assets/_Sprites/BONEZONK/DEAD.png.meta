@@ -11,6 +11,15 @@ TextureImporter:
     21300012: 30bonezonk_DED_6
     21300014: 30bonezonk_DED_7
     21300016: 30bonezonk_DED_8
+    21300018: DEAD_0
+    21300020: DEAD_1
+    21300022: DEAD_2
+    21300024: DEAD_3
+    21300026: DEAD_4
+    21300028: DEAD_5
+    21300030: DEAD_6
+    21300032: DEAD_7
+    21300034: DEAD_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -93,181 +102,181 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_DED_0
+      name: DEAD_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fdf5e27aad79d24eb7d37bd82e43d8b
+      spriteID: 8db987deb95336743a615da15bf65673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_1
+      name: DEAD_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 580a190a160dc4945a7ca3e8583d99b5
+      spriteID: 0247d45a7710dbd499da8d098c58246f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_2
+      name: DEAD_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a71cdba0c75c53342bc1dfbe743143c7
+      spriteID: 8c7c277ce23f2a04a9b043c4bc2f56db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_3
+      name: DEAD_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7977a85616d064da543d50a780b865
+      spriteID: 1a8782072efe1964aa0067961df183d2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_4
+      name: DEAD_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51cdd09d06d3c4f43874ad7541b6fddf
+      spriteID: 2a23976186ad9ad4a82f8f1365e11afe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_5
+      name: DEAD_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c811f90eb738e9d4db8985b33395da34
+      spriteID: 5d0f651177237d2498233514380b5da8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_6
+      name: DEAD_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279fe5bc66d173444b39f7db043370a3
+      spriteID: 8405b88a2ab1eeb48a87c4443ef0c91f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_7
+      name: DEAD_7
       rect:
         serializedVersion: 2
         x: 448
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65bd5d444e0cd334b8595f74a6584767
+      spriteID: 52a0d7d58305a7b4e92d3592bf113439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_DED_8
+      name: DEAD_8
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03ed329c693573b4980ede28e5905cfc
+      spriteID: 7bcdf3e82bf504f4c8069357622b83da
       vertices: []
       indices: 
       edges: []

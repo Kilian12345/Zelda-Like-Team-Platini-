@@ -8,6 +8,12 @@ TextureImporter:
     21300006: 30bonezonk_RUNprofilLeft_3
     21300008: 30bonezonk_RUNprofilLeft_4
     21300010: 30bonezonk_RUNprofilLeft_5
+    21300012: RUNleft_0
+    21300014: RUNleft_1
+    21300016: RUNleft_2
+    21300018: RUNleft_3
+    21300020: RUNleft_4
+    21300022: RUNleft_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -90,121 +96,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_RUNprofilLeft_0
+      name: RUNleft_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d20fcb1f08efbaf44bc20f6cf43703de
+      spriteID: badbd469c05f6a944be073943856c530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNprofilLeft_1
+      name: RUNleft_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f50b4d3eb940e6147b15780d8a71837d
+      spriteID: c198aec4ef113574e8f4785177978048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNprofilLeft_2
+      name: RUNleft_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd2bd488045ba6a408b83dc5ec1a6981
+      spriteID: 0a7a349806bb3194cb4b476dcca47b6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNprofilLeft_3
+      name: RUNleft_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65792b444d2ad8643b3e05f403eb8283
+      spriteID: 077c3e32ccaeb5b4d9ea3968cf3b54c0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNprofilLeft_4
+      name: RUNleft_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c26ef1ab7d95404cb0798aca42a3f77
+      spriteID: c6dc2af9ac12c3c459a01d5d1a66f637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNprofilLeft_5
+      name: RUNleft_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f42164229473470478edab77770d0be4
+      spriteID: 885797c5035f88b4c90ec297a2f0f888
       vertices: []
       indices: 
       edges: []

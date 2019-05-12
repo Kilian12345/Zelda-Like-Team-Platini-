@@ -8,6 +8,12 @@ TextureImporter:
     21300006: 30bonezonk_RUNface_3
     21300008: 30bonezonk_RUNface_4
     21300010: 30bonezonk_RUNface_5
+    21300012: RUNfront_0
+    21300014: RUNfront_1
+    21300016: RUNfront_2
+    21300018: RUNfront_3
+    21300020: RUNfront_4
+    21300022: RUNfront_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -90,121 +96,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_RUNface_0
+      name: RUNfront_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb56dfbe643ef4c4985176bd19228551
+      spriteID: dfc965e8ceb8eb340b2075beff13da13
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNface_1
+      name: RUNfront_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4ecf81820d826949b0e238d11e4355e
+      spriteID: f11e41aa14e0b4c4d87a4be8ddcb54ef
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNface_2
+      name: RUNfront_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc92c8b930a88084d971d4156b8e64fb
+      spriteID: 6e5a6fd8631860d4a9b11d54bfce20b9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNface_3
+      name: RUNfront_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e6b552680d296e4ead112b7df2ecb47
+      spriteID: 77da349a1f17440479e57fa7c1996562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNface_4
+      name: RUNfront_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 039c449dd5192db478df2385e5f8cd36
+      spriteID: 51044d65986c4d94ba08cf85750a5c51
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_RUNface_5
+      name: RUNfront_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cd82f5291e178f4e969b4bc9b3dfa75
+      spriteID: 7961fe2a464d20c4cb64e170ea0cddf7
       vertices: []
       indices: 
       edges: []

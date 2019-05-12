@@ -9,6 +9,13 @@ TextureImporter:
     21300008: 30bonezonk_LANCEface_4
     21300010: 30bonezonk_LANCEface_5
     21300012: 30bonezonk_LANCEface_6
+    21300014: THROWfront_0
+    21300016: THROWfront_1
+    21300018: THROWfront_2
+    21300020: THROWfront_3
+    21300022: THROWfront_4
+    21300024: THROWfront_5
+    21300026: THROWfront_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -91,141 +98,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_LANCEface_0
+      name: THROWfront_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd1308472e238fc4c91b3c3606439d22
+      spriteID: 2e3e10da5369c434ebff3f7abb6caaa9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEface_1
+      name: THROWfront_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8f3796dfa53e6c4c959190fc96f1c9d
+      spriteID: 26b36c10e6f8b994cb158f5d064b3b98
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEface_2
+      name: THROWfront_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe27cc1bd301d8d46a2c693a58c2d60b
+      spriteID: 2d69f393eb2008848b811de75812f008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEface_3
+      name: THROWfront_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c3d6c5c1088ad643ae26ebae39c16cf
+      spriteID: 0162c8e5accef7b428ab2cbafea7a55c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEface_4
+      name: THROWfront_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f216fd0e79baee44391d7eaf25e1cbfe
+      spriteID: 692c1aa08ea48114da095cf444766a9d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEface_5
+      name: THROWfront_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 660c68faf3b30bc4889e05ff489a6ac0
+      spriteID: 39b7ade00debf2b4099253da61725af9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_LANCEface_6
+      name: THROWfront_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ee242aab680b8a48af5df15c90906f0
+      spriteID: e5e56e0cf2056594bab27147421ba019
       vertices: []
       indices: 
       edges: []

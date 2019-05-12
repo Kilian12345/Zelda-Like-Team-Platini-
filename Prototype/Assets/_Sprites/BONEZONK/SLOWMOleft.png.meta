@@ -14,6 +14,18 @@ TextureImporter:
     21300018: 30bonezonk_timestopLeft_9
     21300020: 30bonezonk_timestopLeft_10
     21300022: 30bonezonk_timestopLeft_11
+    21300024: SLOWMOleft_0
+    21300026: SLOWMOleft_1
+    21300028: SLOWMOleft_2
+    21300030: SLOWMOleft_3
+    21300032: SLOWMOleft_4
+    21300034: SLOWMOleft_5
+    21300036: SLOWMOleft_6
+    21300038: SLOWMOleft_7
+    21300040: SLOWMOleft_8
+    21300042: SLOWMOleft_9
+    21300044: SLOWMOleft_10
+    21300046: SLOWMOleft_11
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -96,241 +108,241 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_0
+      name: SLOWMOleft_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ca3886e486634a43a9edcb9182be012
+      spriteID: 43003da1ecbe75049988bb4c75d3fa0d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_1
+      name: SLOWMOleft_1
       rect:
         serializedVersion: 2
         x: 68
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45b27256aea8abe4094b691c2fc7592d
+      spriteID: 623eac9ecc36d25438a75a37402113d8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_2
+      name: SLOWMOleft_2
       rect:
         serializedVersion: 2
         x: 136
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3993ec9d9a4185040862277baf660b34
+      spriteID: 555398dd3a9d8b749972e077898c7c54
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_3
+      name: SLOWMOleft_3
       rect:
         serializedVersion: 2
         x: 204
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da00e31a31e188b4cbb6663a962f578b
+      spriteID: 6d1fd84e270d254459122f73a68a0fd0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_4
+      name: SLOWMOleft_4
       rect:
         serializedVersion: 2
         x: 272
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ee19af2b37f7840912697349f8b671
+      spriteID: ea267dc9bec989843bf3a89c929456f5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_5
+      name: SLOWMOleft_5
       rect:
         serializedVersion: 2
         x: 340
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f52af9f4866504d498651a5a86dacf2a
+      spriteID: 0ba4a24c1780584469c0d71c1eb2da95
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_6
+      name: SLOWMOleft_6
       rect:
         serializedVersion: 2
         x: 408
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3cb299aa32448c4086a93097a3dc20f
+      spriteID: 74dd7f1423f0f164e8103d72a929c2e1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_7
+      name: SLOWMOleft_7
       rect:
         serializedVersion: 2
         x: 476
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 989d9b976d536274780c2b1396cb5267
+      spriteID: d920c78aadb0d3a40a76eea01c52581d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_8
+      name: SLOWMOleft_8
       rect:
         serializedVersion: 2
         x: 544
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc352fd9f30da9a40b4b96fad9fe6dbd
+      spriteID: 27ce9c3f1cae5764dac97adea3228607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_9
+      name: SLOWMOleft_9
       rect:
         serializedVersion: 2
         x: 612
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55b626760ce0cb343b64af84c9d81e6c
+      spriteID: 450803ff4671e4a4b887ee457b9076db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_10
+      name: SLOWMOleft_10
       rect:
         serializedVersion: 2
         x: 680
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de6d5dc587c3e344094d1aed300255f2
+      spriteID: bd6bf08ae281793458e623131521f683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30bonezonk_timestopLeft_11
+      name: SLOWMOleft_11
       rect:
         serializedVersion: 2
         x: 748
         y: 0
         width: 68
         height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad929adabce4604fadf4da8a83d8e1e
+      spriteID: ef455a0d9e775d2409aa5c08d354dd35
       vertices: []
       indices: 
       edges: []

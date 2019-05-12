@@ -108,18 +108,18 @@ TextureImporter:
       name: plein de jsp_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d539763fd758db4d9855501973d748d
+      spriteID: 012576627cad54b48affb4e7ca54fe98
       vertices: []
       indices: 
       edges: []
@@ -128,18 +128,18 @@ TextureImporter:
       name: plein de jsp_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 106
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43341b382a83e6545bcf4aca37f5f9bc
+      spriteID: a045d03d86610cd4aa1f14a6478f7c08
       vertices: []
       indices: 
       edges: []
@@ -148,18 +148,18 @@ TextureImporter:
       name: plein de jsp_2
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 196
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad7c5e714d4184f4995dd32204e19ac1
+      spriteID: 6e87dbedb44a6f34ebba20af94da3d35
       vertices: []
       indices: 
       edges: []
@@ -168,18 +168,18 @@ TextureImporter:
       name: plein de jsp_3
       rect:
         serializedVersion: 2
-        x: 270
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 286
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da7f9e1d5a000394f861f0406c47ad97
+      spriteID: 27c79ca3dca963f41a6df1b60ac1fe79
       vertices: []
       indices: 
       edges: []
@@ -188,18 +188,18 @@ TextureImporter:
       name: plein de jsp_4
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 376
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3495c512ffc9346bd0fce2bf296d75
+      spriteID: c8d5bbedd10ced440881e717def1de27
       vertices: []
       indices: 
       edges: []
@@ -208,18 +208,18 @@ TextureImporter:
       name: plein de jsp_5
       rect:
         serializedVersion: 2
-        x: 450
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 466
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8604aa0ea56c89a46bc2c55591a458bc
+      spriteID: 011876b10420b734ea6bb414b3dd3192
       vertices: []
       indices: 
       edges: []
@@ -228,18 +228,18 @@ TextureImporter:
       name: plein de jsp_6
       rect:
         serializedVersion: 2
-        x: 540
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 556
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc5c79a5e6d8a4941bc33cade8136dff
+      spriteID: b0c1e7c5312f16e49af2cacac16ae07b
       vertices: []
       indices: 
       edges: []
@@ -248,18 +248,18 @@ TextureImporter:
       name: plein de jsp_7
       rect:
         serializedVersion: 2
-        x: 630
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 646
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7696808ab02e3f4f986c874f385a62a
+      spriteID: ffb484db76becd143b241c377e1ee1e7
       vertices: []
       indices: 
       edges: []
@@ -268,18 +268,18 @@ TextureImporter:
       name: plein de jsp_8
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 736
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33128b55d2d7d1843bdff641bc33111b
+      spriteID: bc057472028b42d4790712c0b88d367e
       vertices: []
       indices: 
       edges: []
@@ -288,18 +288,18 @@ TextureImporter:
       name: plein de jsp_9
       rect:
         serializedVersion: 2
-        x: 810
-        y: 0
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 826
+        y: 8
+        width: 57
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fd5982a55755474ea39a8fb58a39079
+      spriteID: 1125e2b43e93a9a4583410708463d3c8
       vertices: []
       indices: 
       edges: []
