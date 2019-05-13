@@ -24,6 +24,7 @@ public class Rendering_Chara : MonoBehaviour
     private Player plScript;
     private MaterialPropertyBlock _propBlock;
 
+
     void Awake()
     {
         plScript = FindObjectOfType<Player>();

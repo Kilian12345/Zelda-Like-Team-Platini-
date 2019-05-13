@@ -18,13 +18,12 @@ public class Ghost : MonoBehaviour
     private float ghostLifetime;
 
 
-
     void Start()
     {
         
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (playerScript.moveHor < 0f) {flip = true;}
         else {flip = false;}
@@ -80,17 +79,8 @@ public class Ghost : MonoBehaviour
             trailPartRenderer.sortingLayerName = "Default";
             trailPartRenderer.sortingOrder = 0;
 
-            Destroy(trailPart, ghostLifetime);
         }
         
-    }
-
-    IEnumerator DestroyTrailPart(GameObject trailPart, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        trailParts.Remove(trailPart);
-        Destroy(trailPart);
     }
 
 }

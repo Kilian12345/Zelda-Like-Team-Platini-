@@ -17027,7 +17027,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: -9.197064e-24, y: -1.2511665e-23, z: -0.00024726614, w: 1}
+  m_LocalRotation: {x: 5.442254e-24, y: -9.146288e-25, z: -0.00031767413, w: 1}
   m_LocalPosition: {x: -8.46, y: 17.663, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -22040,12 +22040,12 @@ PrefabInstance:
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.24
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.76
+      value: 17.15
       objectReference: {fileID: 0}
     - target: {fileID: 6249049812098786726, guid: cacdd1548fe2acd43ad0e18d1baa59bd,
         type: 3}
@@ -25902,12 +25902,12 @@ PrefabInstance:
     - target: {fileID: 5483544482235513982, guid: 9a7c2ebcc0fc89d409680c86cec7d248,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.970047
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 5483544482235513982, guid: 9a7c2ebcc0fc89d409680c86cec7d248,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.115467
+      value: 17.05
       objectReference: {fileID: 0}
     - target: {fileID: 5483544482235513982, guid: 9a7c2ebcc0fc89d409680c86cec7d248,
         type: 3}
@@ -33853,7 +33853,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: -1.272294e-23, y: -3.1618464e-24, z: -0.0000004190951, w: 1}
+  m_LocalRotation: {x: 5.99449e-24, y: -3.1618425e-24, z: -0.0000004190951, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -34298,11 +34298,11 @@ MonoBehaviour:
   thirdActivated: 0
   timeThird: 0
   ghostAcivated: 0
-  ghostLifetimeFirst: 0.1
-  ghostFadeSpeedFirst: 0.022
-  ghostLifetimeSecond: 3
+  ghostLifetimeFirst: 0.05
+  ghostFadeSpeedFirst: 0
+  ghostLifetimeSecond: 0.1
   ghostFadeSpeedSecond: 0.01
-  ghostSpawnRateFirst: 0.15
+  ghostSpawnRateFirst: 0.1
   ghostSpawnRateSecond: 0.1
   toolbarTab: 4
   currentTab: Abilities

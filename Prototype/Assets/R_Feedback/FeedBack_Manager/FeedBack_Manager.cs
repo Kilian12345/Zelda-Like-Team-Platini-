@@ -121,7 +121,7 @@ public class FeedBack_Manager : MonoBehaviour
     [Range(0,1)]public float ghostFadeSpeedSecond;
     public float ghostSpawnRateFirst;
     public float ghostSpawnRateSecond;
-    
+
     #endregion
 
 
@@ -147,9 +147,8 @@ public class FeedBack_Manager : MonoBehaviour
     }
 
 
-    void Update()
+    void LateUpdate()
     {
-        //if (Input.GetKey(KeyCode.Space)) secondActivated = true;
 
         CameraShake();
         Bloom();
@@ -283,7 +282,7 @@ public class FeedBack_Manager : MonoBehaviour
 
         }
 
-        if (doneSecond == true)
+        else if (doneSecond == true)
         {
             yield return new WaitForSeconds(timeSecondAbility);
 
@@ -293,11 +292,11 @@ public class FeedBack_Manager : MonoBehaviour
             if (saturationAmount >= 1)
             {
                 timeDeltaSecond = 0;
-                doneSecond = false;
                 ripple = false;
                 ghostAcivated = false;
-                secondActivated = false;
                 saturationAmount = 1;
+                secondActivated = false;
+                doneSecond = false;
             }
         }
 

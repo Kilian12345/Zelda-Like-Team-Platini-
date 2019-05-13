@@ -9,6 +9,7 @@ public class Ghost_FadeOut : MonoBehaviour
     FeedBack_Manager Fb;
     public Color color;
 
+    bool dash, slowMo;
 
     // Start is called before the first frame update
     void Start()
@@ -19,26 +20,34 @@ public class Ghost_FadeOut : MonoBehaviour
 
         renderC.HitColor = Fb.opaqueColor;
         spriteRend.material = Fb.playerMat;
+
+               
+        if (Fb.firstActivated == true) {dash = true;}
+        else if (Fb.secondActivated == true) {slowMo = true;}
+
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (Fb.firstActivated == true) PlayerDash();
-        else if (Fb.secondActivated == true)PlayerSlowMo();
+    {       
+        if (slowMo == true) PlayerSlowMo();
+        else {PlayerDash();}
+
+        if (spriteRend.color.a <= 0)
+        {Destroy(gameObject);}
+
     }
 
     void PlayerDash()
-    {
-        renderC.isOpaque = true;
-        color = renderC.HitColor;
+    {    
+        color = spriteRend.color;
         color.a -= Fb.ghostFadeSpeedFirst * 2f; 
-        renderC.HitColor = color;
+        color.g -= Fb.ghostFadeSpeedFirst * 2f; 
+        spriteRend.color = color;
     }
 
         void PlayerSlowMo()
     {
-        renderC.isOpaque = false;
         color = spriteRend.color;
         color.a -= Fb.ghostFadeSpeedSecond * 2f; 
         spriteRend.color = color;
