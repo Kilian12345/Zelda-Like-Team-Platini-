@@ -26,14 +26,19 @@ public class PlayerController : MonoBehaviour
     private bool NewActionAllowed = true;
     public bool inExplosion;
 
+    Player plScript;
 
 
+    void Start()
+    {
+        plScript=GetComponent<Player>();
+    }
 
     private void Update()
     {
         Movement();
         StartCoroutine(Attack());
-        //StartCoroutine(Abilities());
+        StartCoroutine(Abilities());
     }
 
     private void Movement()
@@ -102,36 +107,36 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Abilities()
     {
-        if (Input.GetButtonDown("Ability1") && NewActionAllowed == true)
+        if (/*Input.GetButtonDown("Ability1")  &&*/ plScript.activatedAbility==1)
         {
             NewActionAllowed = false;
             animator.SetBool("AbilityActive", true);
             animator.SetBool("Ability1", true);
-            speed = speedInCombat;
-            yield return new WaitForSeconds(1.2f);
+            //speed = speedInCombat;
+            yield return new WaitForSeconds(0.6f);
             NewActionAllowed = true;
             animator.SetBool("AbilityActive", false);
             animator.SetBool("Ability1", false);
             speed = speedNormal;
         }
-        else if (Input.GetButtonDown("Ability2") && NewActionAllowed == true)
+        else if (/*Input.GetButtonDown("Ability2") && */plScript.activatedAbility==2)
         {
             NewActionAllowed = false;
             animator.SetBool("AbilityActive", true);
             animator.SetBool("Ability2", true);
-            speed = speedInCombat;
-            yield return new WaitForSeconds(1.2f);
+            //speed = speedInCombat;
+            yield return new WaitForSeconds(0.5f);
             NewActionAllowed = true;
             animator.SetBool("AbilityActive", false);
             animator.SetBool("Ability2", false);
             speed = speedNormal;
         }
-        else if (Input.GetButtonDown("Ability3") && NewActionAllowed == true)
+        else if (/*Input.GetButtonDown("Ability3") &&*/ plScript.activatedAbility==3)
         {
             NewActionAllowed = false;
             animator.SetBool("AbilityActive", true);
             animator.SetBool("Ability3", true);
-            speed = speedInCombat;
+            //speed = speedInCombat;
             yield return new WaitForSeconds(1.2f);
             NewActionAllowed = true;
             animator.SetBool("AbilityActive", false);
