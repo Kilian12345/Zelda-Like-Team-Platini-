@@ -115,9 +115,7 @@ public class FeedBack_Manager : MonoBehaviour
     [Header("Ghost_Effect")]
     Ghost ghostScript;
     public bool ghostAcivated;
-    public float ghostLifetimeFirst;
     [Range(0,1)]public float ghostFadeSpeedFirst;
-    public float ghostLifetimeSecond;
     [Range(0,1)]public float ghostFadeSpeedSecond;
     public float ghostSpawnRateFirst;
     public float ghostSpawnRateSecond;

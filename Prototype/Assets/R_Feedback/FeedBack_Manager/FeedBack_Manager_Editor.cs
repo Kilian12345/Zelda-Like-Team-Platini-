@@ -84,7 +84,6 @@ public class FeedBack_Manager_Editor : Editor
     private SerializedProperty opaqueColor;
     private SerializedProperty timeFirstAbility;
     private SerializedProperty ghostFadeSpeedFirst;
-    private SerializedProperty ghostLifetimeFirst;
     private SerializedProperty ghostSpawnRateFirst;
 
     [Header("2nt Ability")]
@@ -92,7 +91,6 @@ public class FeedBack_Manager_Editor : Editor
     private SerializedProperty timeSecondAbility;
     private SerializedProperty timeDeltaSecond;
     private SerializedProperty ghostFadeSpeedSecond;
-    private SerializedProperty ghostLifetimeSecond;
     private SerializedProperty ghostSpawnRateSecond;
 
 
@@ -153,13 +151,11 @@ public class FeedBack_Manager_Editor : Editor
         opaqueColor = soTarget.FindProperty("opaqueColor");
         timeFirstAbility = soTarget.FindProperty("timeFirstAbility");
         ghostFadeSpeedFirst = soTarget.FindProperty("ghostFadeSpeedFirst");
-        ghostLifetimeFirst = soTarget.FindProperty("ghostLifetimeFirst");
         secondActivated = soTarget.FindProperty("secondActivated");
         timeSecondAbility = soTarget.FindProperty("timeSecondAbility");
         timeDeltaSecond = soTarget.FindProperty("timeDeltaSecond");
         timeThird = soTarget.FindProperty("timeThird");
         ghostFadeSpeedSecond = soTarget.FindProperty("ghostFadeSpeedSecond");
-        ghostLifetimeSecond = soTarget.FindProperty("ghostLifetimeSecond");
         ghostSpawnRateFirst = soTarget.FindProperty("ghostSpawnRateFirst");
         ghostSpawnRateSecond = soTarget.FindProperty("ghostSpawnRateSecond");
 
@@ -255,14 +251,12 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(opaqueColor);
                 EditorGUILayout.PropertyField(timeFirstAbility);
                 EditorGUILayout.PropertyField(ghostFadeSpeedFirst);
-                EditorGUILayout.PropertyField(ghostLifetimeFirst);
                 EditorGUILayout.PropertyField(ghostSpawnRateFirst);
                 EditorGUILayout.PropertyField(secondActivated);
                 EditorGUILayout.PropertyField(timeSecondAbility);
                 EditorGUILayout.PropertyField(timeDeltaSecond);
                 EditorGUILayout.PropertyField(timeThird);
                 EditorGUILayout.PropertyField(ghostFadeSpeedSecond);
-                EditorGUILayout.PropertyField(ghostLifetimeSecond);
                 EditorGUILayout.PropertyField(ghostSpawnRateSecond);
                 break;
         }
