@@ -76,7 +76,7 @@ public class ThirdAbility : MonoBehaviour
 
     void ZoneIncrease()
     {
-        if(ps.thirdActivated == true)
+        if(ps.activatedAbility == 3)
         {
             float puissance = (float)1.00001 ;
             viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, radius); 
@@ -85,7 +85,7 @@ public class ThirdAbility : MonoBehaviour
             decrease -= 0.4f;
             explosion.SetFloat("_Fractmultiply", decrease) ;
         }
-        else if (ps.thirdActivated == false)
+        else if (ps.activatedAbility == 0)
         { 
             viewRadius = Mathf.Lerp( viewRadius, 0, Time.deltaTime*3);
 
