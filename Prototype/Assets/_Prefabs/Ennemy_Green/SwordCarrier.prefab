@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5483544481213362040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5483544481285802423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: shootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 5483544482235513983}
   - component: {fileID: 5483544482235513981}
   - component: {fileID: 5483544482235513985}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SwordCarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
