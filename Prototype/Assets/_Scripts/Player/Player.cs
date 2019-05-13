@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
     public float abilityIsToCooldown;
     public int activatedAbility = 0;
     private int selectedAbility;
+    public bool thirdActivated;
     FeedBack_Manager Fb_mana;
 
     [Header("Ability GameObjects")]
@@ -353,24 +354,35 @@ public class Player : MonoBehaviour
             if (abilityMeters[1].activeSelf)
             {
                 if (curcooldownTime[1] >= cooldownTime[1])
-                {
-                    activatedAbility = 2;
-                    curcooldownTime[1] = cooldownTime[1];
-                    Fb_mana.secondActivated = true;
-                    Fb_mana.timeSecondAbility = cooldownTime[0];
-                }
+                {activatedAbility = 2;}
             }
+
         }
         if (Input.GetButtonDown("Ability3"))
         {
             if (abilityMeters[2].activeSelf)
             {
                 if (curcooldownTime[2] >= cooldownTime[2])
-                {
-                    activatedAbility = 3;
-                    curcooldownTime[2] = cooldownTime[2];
-                }
+                {activatedAbility = 3;}
             }
+        }
+    }
+
+    void secondAbility()
+    {
+       curcooldownTime[1] = cooldownTime[1];
+       Fb_mana.secondActivated = true;
+       Fb_mana.timeSecondAbility = cooldownTime[0];
+    }
+
+    void thirdAbility()
+    {
+        curcooldownTime[2] = cooldownTime[2];
+        thirdActivated = true;
+        
+        if (activatedAbility == 0)
+        {
+           thirdActivated = false;
         }
     }
 

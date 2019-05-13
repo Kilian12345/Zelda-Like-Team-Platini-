@@ -85,6 +85,7 @@ public class FeedBack_Manager_Editor : Editor
     private SerializedProperty timeFirstAbility;
     private SerializedProperty ghostFadeSpeedFirst;
     private SerializedProperty ghostLifetimeFirst;
+    private SerializedProperty ghostSpawnRateFirst;
 
     [Header("2nt Ability")]
     private SerializedProperty secondActivated;
@@ -92,6 +93,7 @@ public class FeedBack_Manager_Editor : Editor
     private SerializedProperty timeDeltaSecond;
     private SerializedProperty ghostFadeSpeedSecond;
     private SerializedProperty ghostLifetimeSecond;
+    private SerializedProperty ghostSpawnRateSecond;
 
 
     [Header("3rd Ability")]
@@ -158,6 +160,8 @@ public class FeedBack_Manager_Editor : Editor
         timeThird = soTarget.FindProperty("timeThird");
         ghostFadeSpeedSecond = soTarget.FindProperty("ghostFadeSpeedSecond");
         ghostLifetimeSecond = soTarget.FindProperty("ghostLifetimeSecond");
+        ghostSpawnRateFirst = soTarget.FindProperty("ghostSpawnRateFirst");
+        ghostSpawnRateSecond = soTarget.FindProperty("ghostSpawnRateSecond");
 
     }
 
@@ -252,12 +256,14 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(timeFirstAbility);
                 EditorGUILayout.PropertyField(ghostFadeSpeedFirst);
                 EditorGUILayout.PropertyField(ghostLifetimeFirst);
+                EditorGUILayout.PropertyField(ghostSpawnRateFirst);
                 EditorGUILayout.PropertyField(secondActivated);
                 EditorGUILayout.PropertyField(timeSecondAbility);
                 EditorGUILayout.PropertyField(timeDeltaSecond);
                 EditorGUILayout.PropertyField(timeThird);
                 EditorGUILayout.PropertyField(ghostFadeSpeedSecond);
                 EditorGUILayout.PropertyField(ghostLifetimeSecond);
+                EditorGUILayout.PropertyField(ghostSpawnRateSecond);
                 break;
         }
 

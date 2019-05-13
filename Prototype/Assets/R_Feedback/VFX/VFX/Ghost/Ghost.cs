@@ -14,11 +14,7 @@ public class Ghost : MonoBehaviour
 
     bool flip = false;
     bool firstInvokeDone = false;
-    bool secondInvokeDone = false;
-    
-
-    [SerializeField] float ghostSpawnRateFirst;
-    [SerializeField] float ghostSpawnRateSecond;
+    bool secondInvokeDone = false;  
     private float ghostLifetime;
 
 
@@ -32,17 +28,14 @@ public class Ghost : MonoBehaviour
     {
         if (playerScript.moveHor < 0f) {flip = true;}
         else {flip = false;}
-    }
 
-    void FixedUpdate()
-    {
         if (Fb.firstActivated == true)
         {
             if(firstInvokeDone == false)
             {
             ghostLifetime = Fb.ghostLifetimeFirst;
             CancelInvoke();
-            InvokeRepeating("SpawnTrailPart", 0, ghostSpawnRateFirst);
+            InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateFirst);
             Debug.Log("1st");
             firstInvokeDone = true;
             }
@@ -55,7 +48,7 @@ public class Ghost : MonoBehaviour
             {
             ghostLifetime = Fb.ghostLifetimeSecond;
             CancelInvoke();
-            InvokeRepeating("SpawnTrailPart", 0, ghostSpawnRateSecond);
+            InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateSecond);
             Debug.Log("2nd");
             secondInvokeDone = true;
             }
@@ -84,8 +77,8 @@ public class Ghost : MonoBehaviour
             trailParts.Add(trailPart);
             trailPart.layer = LayerMask.NameToLayer("Default");
 
-            trailPartRenderer.sortingLayerName = "Detail / Characters";
-            trailPartRenderer.sortingOrder = 1;
+            trailPartRenderer.sortingLayerName = "Default";
+            trailPartRenderer.sortingOrder = 0;
 
             Destroy(trailPart, ghostLifetime);
         }

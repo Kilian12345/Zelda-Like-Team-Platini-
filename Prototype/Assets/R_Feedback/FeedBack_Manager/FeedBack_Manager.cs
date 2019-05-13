@@ -119,6 +119,9 @@ public class FeedBack_Manager : MonoBehaviour
     [Range(0,1)]public float ghostFadeSpeedFirst;
     public float ghostLifetimeSecond;
     [Range(0,1)]public float ghostFadeSpeedSecond;
+    public float ghostSpawnRateFirst;
+    public float ghostSpawnRateSecond;
+    
     #endregion
 
 
