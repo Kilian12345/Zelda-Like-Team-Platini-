@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
     private int scorePerHit;
 
     bool asExploded;
-    public bool getDissolve = false;
+    public bool getDissolve = false, isPowder;
     bool zoneDeath = false;
     Player ps;
     Transform pl;
@@ -146,10 +146,10 @@ public class EnemyHealth : MonoBehaviour
         renderChara.isDissolve = true;
         Thanosed();
 
+        if (renderChara.dissolveAmout >= 0.2f)
+        {isPowder = true;}
         if(renderChara.dissolveAmout >= 1.0f)
-        {
-           Destroy(parent, 0.6f);
-        }
+        {Destroy(parent, 0.6f);}
     }
 
     IEnumerator ThirdDamage()
