@@ -15,7 +15,6 @@ public class Ghost : MonoBehaviour
     bool flip = false;
     bool firstInvokeDone = false;
     bool secondInvokeDone = false;  
-    private float ghostLifetime;
 
 
     void Start()
@@ -23,7 +22,7 @@ public class Ghost : MonoBehaviour
         
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (playerScript.moveHor < 0f) {flip = true;}
         else {flip = false;}
@@ -32,25 +31,28 @@ public class Ghost : MonoBehaviour
         {
             if(firstInvokeDone == false)
             {
-            ghostLifetime = Fb.ghostLifetimeFirst;
             CancelInvoke();
             InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateFirst);
-            Debug.Log("1st");
             firstInvokeDone = true;
+            Debug.Log("en blanchette jbez t  per");
             }
         }
         else {firstInvokeDone = false;}
 
         if (Fb.secondActivated == true)
         {
-            if(secondInvokeDone == false)
+            if (Input.GetButton("Jump"))
             {
-            ghostLifetime = Fb.ghostLifetimeSecond;
-            CancelInvoke();
-            InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateSecond);
-            Debug.Log("2nd");
-            secondInvokeDone = true;
+                Fb.ghostAcivated = true;
+
+                if(secondInvokeDone == false)
+                {
+                    CancelInvoke();
+                    InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateSecond);
+                    secondInvokeDone = true;
+                }
             }
+            else {Fb.ghostAcivated = false;}
         }
         else {secondInvokeDone = false;}
     }

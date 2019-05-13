@@ -273,7 +273,6 @@ public class FeedBack_Manager : MonoBehaviour
 
         if (saturationAmount > 0 && doneSecond == false)
         {
-            ghostAcivated = true;
             ripple = true;
             timeDeltaSecond += Time.deltaTime;
 
@@ -291,7 +290,6 @@ public class FeedBack_Manager : MonoBehaviour
             {
                 timeDeltaSecond = 0;
                 ripple = false;
-                ghostAcivated = false;
                 saturationAmount = 1;
                 secondActivated = false;
                 doneSecond = false;
