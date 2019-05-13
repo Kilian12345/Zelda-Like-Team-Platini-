@@ -119,13 +119,13 @@ public class Kami : MonoBehaviour
             {
                 if (enemiestoDamage[i].GetComponent<Player>() != null)
                 {
-                    enemiestoDamage[i].GetComponent<PlayerController>().inExplosion = true;
+                    enemiestoDamage[i].GetComponent<PlayerController>().isPushed = true;
                     enemiestoDamage[i].GetComponent<Player>().TakeDamage(damageValue);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(/*Mathf.Round*/(dir.x) *damagePushForce, /*Mathf.Round*/(dir.y) * damagePushForce) , ForceMode2D.Impulse);
                     Debug.Log("Impacted Boi " + new Vector2(/*Mathf.Round*/(dir.x) * damagePushForce, /*Mathf.Round*/(dir.y) * damagePushForce));
                     yield return new WaitForSeconds(0.0125f);
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-                    enemiestoDamage[i].GetComponent<PlayerController>().inExplosion = false;
+                    enemiestoDamage[i].GetComponent<PlayerController>().isPushed = false;
                     break;
                 }
             }

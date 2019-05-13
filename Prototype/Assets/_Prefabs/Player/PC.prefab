@@ -388,7 +388,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc8da1d6265fcef4ab50077bdc33557e, type: 2}
+  - {fileID: 2100000, guid: 0440a8124beaa254dbcf3e3c80672cd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -506,8 +506,8 @@ MonoBehaviour:
   died: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   playerAudio: {fileID: 0}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
-  toolbarTab: 1
-  currentTab: Movement
+  toolbarTab: 2
+  currentTab: Combat
   takeDamage: 0
 --- !u!82 &82004872805990916
 AudioSource:
@@ -837,14 +837,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tint: {r: 1, g: 1, b: 1, a: 1}
-  HitColor: {r: 1, g: 1, b: 1, a: 1}
+  HitColor: {r: 0, g: 1, b: 0.9728527, a: 1}
   DissolveColor: {r: 0, g: 0, b: 0, a: 1}
   DissolveEmission: {r: 1, g: 0.86571336, b: 0, a: 1}
   OutlineColor: {r: 1, g: 1, b: 1, a: 1}
   isOpaque: 0
   isDissolve: 0
   isOutline: 0
+  isPlayer: 1
   timeHitFB: 80
+  hitDuration: 0.107
   dissolveAmout: -0.1
   dissolveGrain: 0.023
 --- !u!1 &1468984369528666
