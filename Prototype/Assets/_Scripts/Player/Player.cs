@@ -614,6 +614,7 @@ public class Player : MonoBehaviour
                 }
             }
             toPunch = false;
+            Fb_mana.ennemyGetHit = false;
         }
         yield return new WaitForSeconds(0.2f);
         //player.velocity = Vector3.zero;

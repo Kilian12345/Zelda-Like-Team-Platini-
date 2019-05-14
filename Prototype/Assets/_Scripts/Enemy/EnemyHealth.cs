@@ -28,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
     ThirdAbility ThAb;
     Fow_Parent laserZone;
     Rendering_Chara renderChara;
+    FeedBack_Manager Fb_Mana;
 
     void Start()
     {
@@ -36,7 +37,8 @@ public class EnemyHealth : MonoBehaviour
         ThAb = FindObjectOfType<ThirdAbility>();
         laserZone = FindObjectOfType<Fow_Parent>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        renderChara = GetComponent<Rendering_Chara>();      
+        renderChara = GetComponent<Rendering_Chara>(); 
+        Fb_Mana = FindObjectOfType<FeedBack_Manager>();     
     }
 
     // Update is called once per frame
@@ -68,6 +70,7 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio.Play();
         Debug.Log("TakeDamage");
         renderChara.isOpaque = true;
+        Fb_Mana.ennemyGetHit = true;
 
         health -= dam;
 

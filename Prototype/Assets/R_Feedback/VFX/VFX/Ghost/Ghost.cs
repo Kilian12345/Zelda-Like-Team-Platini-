@@ -34,7 +34,6 @@ public class Ghost : MonoBehaviour
             CancelInvoke();
             InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateFirst);
             firstInvokeDone = true;
-            Debug.Log("en blanchette jbez t  per");
             }
         }
         else {firstInvokeDone = false;}

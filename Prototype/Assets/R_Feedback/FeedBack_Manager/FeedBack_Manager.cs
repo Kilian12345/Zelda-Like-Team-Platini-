@@ -130,6 +130,9 @@ public class FeedBack_Manager : MonoBehaviour
     public string currentTab;
     #endregion
 
+    ////////////// Feedback Control
+    public bool ennemyGetHit;
+
     void Start()
     {
         // VirtualCam
@@ -148,32 +151,37 @@ public class FeedBack_Manager : MonoBehaviour
     void LateUpdate()
     {
 
-        CameraShake();
-        Bloom();
+        ThirdAbilityVisu();
         Vignette();
         if (firstActivated == true) StartCoroutine(firstAbility());
         else {StopCoroutine(firstAbility());}
         if (secondActivated == true) StartCoroutine(secondAbility());
         else {StopCoroutine(secondAbility());}
-        if (thirdActivated == true) StartCoroutine(thirdAbility());
-        else {StopCoroutine(thirdAbility());}
+        if (ennemyGetHit == true ) {DynamicPunchVisu();}
         
         if(plScript.health >= 100) {Berserker();}
         else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
 
     }
 
-    void Bloom()
+    void ThirdAbilityVisu()
     {
 
         bloomLayer.intensity.value = Mathf.Lerp(0, bloom, bloomTime);
 
-        if (Input.GetButton("Jump"))
+        if (plScript.thirdActivated== true)
         {
+            bloom = 30;
             bloomTime += Time.deltaTime * timeBloom;
+
+            shakeAmplitude = 0.5f;
+            shakeFrequency = 0.7f;
+            shakeDuration = 0.001f;
+            CameraShake();
+
             doneBloom = false;
         }
-        else if (Input.GetButtonUp("Jump"))
+        else 
         {
             doneBloom = true;
         }
@@ -184,6 +192,14 @@ public class FeedBack_Manager : MonoBehaviour
         }
 
         if (bloomTime > 1) bloomTime = 1;
+    }
+
+    void DynamicPunchVisu()
+    {
+            float dynamicShake = Mathf.Clamp((plScript.health * 1) / 100, 0, 1);
+            shakeAmplitude = (dynamicShake - 1) * -1;
+            shakeFrequency = (dynamicShake - 1) * -1;
+            CameraShake();
     }
 
     void Vignette()
@@ -219,17 +235,10 @@ public class FeedBack_Manager : MonoBehaviour
         glitchRageEnabled = true;
     }
 
-    void CameraShake()
+    void CameraShake() 
     {
-        // TODO: Replace with your trigger
-        if (Input.GetButton("Jump"))
-        {
-            shakeElapsedTime = shakeDuration;
-        }
-        else
-        {
 
-        }
+        shakeElapsedTime = shakeDuration;
 
         // If the Cinemachine componet is not set, avoid update
         if (virtualCamera != null && virtualCameraNoise != null)

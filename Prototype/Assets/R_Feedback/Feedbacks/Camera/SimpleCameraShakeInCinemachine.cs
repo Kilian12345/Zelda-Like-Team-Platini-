@@ -30,15 +30,6 @@ public class SimpleCameraShakeInCinemachine : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        // TODO: Replace with your trigger
-        if (Input.GetButtonDown("Jump"))
-        {
-            ShakeElapsedTime = ShakeDuration;
-        }
-        else
-        {
-
-        }
 
         // If the Cinemachine componet is not set, avoid update
         if (VirtualCamera != null && virtualCameraNoise != null)
