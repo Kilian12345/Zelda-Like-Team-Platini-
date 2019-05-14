@@ -24,6 +24,7 @@ public class Scorpio : MonoBehaviour
     Player plScript;
     Animator anim;
     EnemyHealth healthScript;
+    [SerializeField] Transform center;
 
     //[HideInInspector]
     public int curPoint;
@@ -43,7 +44,7 @@ public class Scorpio : MonoBehaviour
     {
         look();
         animate();
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= shootingRange)
+        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= shootingRange)
         {
             if (Time.time > timeToFire)
             {
@@ -110,7 +111,7 @@ public class Scorpio : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, wayPoints[curPoint].transform.position, moveSpeed * Time.deltaTime);
             if (reachedEnd)
             {
-                if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
+                if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
                 {
                     if (curPoint > 0)
                         curPoint -= 1;
@@ -118,7 +119,7 @@ public class Scorpio : MonoBehaviour
             }
             else
             {
-                if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
+                if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
                 {
                     if (curPoint < wayPoints.Length - 1)
                         curPoint += 1;
@@ -136,7 +137,7 @@ public class Scorpio : MonoBehaviour
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, wayPoints[curPoint].transform.position, moveSpeed * Time.deltaTime);
-            if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
+            if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
             {
                 curPoint += 1;
             }
@@ -173,6 +174,6 @@ public class Scorpio : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, shootingRange);
+        Gizmos.DrawWireSphere(center.position, shootingRange);
     }
 }

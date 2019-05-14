@@ -29,6 +29,7 @@ public class Kami : MonoBehaviour
     Player plScript;
     Animator anim;
     EnemyHealth healthScript;
+    [SerializeField] Transform center;
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class Kami : MonoBehaviour
     {
         look();
         animate();
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= detectionRange)
+        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= detectionRange)
         {
             isInRange = true;
         }
@@ -71,7 +72,7 @@ public class Kami : MonoBehaviour
 
     void move()
     {
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) > stoppingDistance)
+        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) > stoppingDistance)
         { 
             transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
             isMoving = true;
@@ -112,7 +113,7 @@ public class Kami : MonoBehaviour
         dir = (plScript.centrePoint.transform.position - transform.position).normalized;
         Debug.Log("Exploded Boi " + new Vector2(/*Mathf.Round*/(dir.x), /*Mathf.Round*/(dir.y)));
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(transform.position, damageRange);
+        Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(center.position, damageRange);
         if (enemiestoDamage.Length > 0)
         {
             for (int i = 0; i < enemiestoDamage.Length; i++)
@@ -138,11 +139,11 @@ public class Kami : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, damageRange);
+        Gizmos.DrawWireSphere(center.position, damageRange);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        Gizmos.DrawWireSphere(center.position, detectionRange);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, stoppingDistance);       
+        Gizmos.DrawWireSphere(center.position, stoppingDistance);       
     }
 
 }

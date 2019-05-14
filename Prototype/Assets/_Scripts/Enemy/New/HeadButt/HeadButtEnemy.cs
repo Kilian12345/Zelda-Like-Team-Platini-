@@ -30,6 +30,7 @@ public class HeadButtEnemy : MonoBehaviour
 
 
     Transform pl;
+    [SerializeField] Transform center;
     Player plScript;
     Rigidbody2D rb;
     Animator anim;
@@ -54,7 +55,7 @@ public class HeadButtEnemy : MonoBehaviour
         animate();
         if (pl != null)
         {
-            if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= detectionRange)
+            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= detectionRange)
             {
                 if (!isFollowing && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
                 {
@@ -63,7 +64,7 @@ public class HeadButtEnemy : MonoBehaviour
                 }
                 if (isFollowing)
                 {
-                    if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= chargeRange)
+                    if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chargeRange)
                     {
                         isInChargeRange = true;
                         isInChaseRange = true;
@@ -217,9 +218,9 @@ public class HeadButtEnemy : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        Gizmos.DrawWireSphere(center.position, detectionRange);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, chargeRange);
+        Gizmos.DrawWireSphere(center.position, chargeRange);
     }
 
     void OnDestroy()

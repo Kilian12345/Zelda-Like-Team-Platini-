@@ -32,6 +32,7 @@ public class GunCock : MonoBehaviour
     Player plScript;
     Animator anim;
     EnemyHealth healthScript;
+    [SerializeField] Transform center;
 
     //[HideInInspector]
     public int curPoint;
@@ -53,10 +54,10 @@ public class GunCock : MonoBehaviour
     {
         look();
         animate();
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= chasingRange && plScript.EnemiesFollowing <= plScript.enemyFollowLimit)
+        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange && plScript.EnemiesFollowing <= plScript.enemyFollowLimit)
         {
             canPatrol = false;
-            if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= shootingRange)
+            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= shootingRange)
             {
                 isInChaseRange = true;
                 isInShootingRange = true;
@@ -192,7 +193,7 @@ public class GunCock : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, wayPoints[curPoint].transform.position, moveSpeed * Time.deltaTime);
             if (reachedEnd)
             {
-                if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
+                if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
                 {
                     if (curPoint > 0)
                         curPoint -= 1;
@@ -200,7 +201,7 @@ public class GunCock : MonoBehaviour
             }
             else
             {
-                if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
+                if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
                 {
                     if (curPoint < wayPoints.Length - 1)
                         curPoint += 1;
@@ -218,7 +219,7 @@ public class GunCock : MonoBehaviour
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, wayPoints[curPoint].transform.position, moveSpeed * Time.deltaTime);
-            if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
+            if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
             {
                 curPoint += 1;
             }
@@ -231,7 +232,7 @@ public class GunCock : MonoBehaviour
 
     void move()
     {
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) > shootingRange)
+        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) > shootingRange)
         {
             transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
             if (!isFollowing)
@@ -276,9 +277,9 @@ public class GunCock : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, shootingRange);
+        Gizmos.DrawWireSphere(center.position, shootingRange);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, chasingRange);
+        Gizmos.DrawWireSphere(center.position, chasingRange);
     }
 
     void OnDestroy()

@@ -128,6 +128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2803111742453961226}
+  - {fileID: 5943391753950244494}
   m_Father: {fileID: 2803111743261428673}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -211,10 +212,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010334134, y: -0.04405643}
+  m_Offset: {x: -0.010334134, y: 0.11763382}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
@@ -222,7 +223,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18184924, y: 0.23188713}
+  m_Size: {x: 0.18184924, y: 0.22178078}
   m_EdgeRadius: 0
 --- !u!114 &2803111742587494291
 MonoBehaviour:
@@ -256,6 +257,7 @@ MonoBehaviour:
   ctrBullet: 0
   reachedEnd: 0
   canPatrol: 0
+  center: {fileID: 5943391753950244494}
   curPoint: 0
 --- !u!50 &2803111742587494290
 Rigidbody2D:
@@ -303,6 +305,7 @@ MonoBehaviour:
   dissolveAmout: 0
   scorePerHit: 30
   getDissolve: 0
+  isPowder: 0
   miniBoss: {x: 0, y: 0, z: 0}
 --- !u!82 &2803111742587494292
 AudioSource:
@@ -520,4 +523,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2803111743261428673}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7239191405898272474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5943391753950244494}
+  m_Layer: 10
+  m_Name: center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5943391753950244494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7239191405898272474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 0.121, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2803111742587494288}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

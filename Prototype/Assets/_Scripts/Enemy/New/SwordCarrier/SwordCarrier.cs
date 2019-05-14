@@ -44,6 +44,8 @@ public class SwordCarrier : MonoBehaviour
 
     Vector2 dir;
 
+    [SerializeField] Transform center;
+
 
 
     void Start()
@@ -64,7 +66,7 @@ public class SwordCarrier : MonoBehaviour
         animate();
         if (target != null)
         {
-            if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= chasingRange)
+            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange)
             {
                 if (!isFollowing && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
                 {
@@ -73,7 +75,7 @@ public class SwordCarrier : MonoBehaviour
                 }
                 if (isFollowing)
                 {
-                    if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= combatRange)
+                    if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange)
                     {
                         isInAttackRange = true;
                         isInChaseRange = true;
@@ -177,7 +179,7 @@ public class SwordCarrier : MonoBehaviour
 
     void move()
     {
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) > stoppingDistance)
+        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) > stoppingDistance)
         {
             isMoving = true;
             transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
@@ -222,11 +224,11 @@ public class SwordCarrier : MonoBehaviour
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
         Gizmos.color = Color.grey;
-        Gizmos.DrawWireSphere(transform.position, stoppingDistance);
+        Gizmos.DrawWireSphere(center.position, stoppingDistance);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, chasingRange);
+        Gizmos.DrawWireSphere(center.position, chasingRange);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, combatRange);
+        Gizmos.DrawWireSphere(center.position, combatRange);
     }
 
     void OnDestroy()
