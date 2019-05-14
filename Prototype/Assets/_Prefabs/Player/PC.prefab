@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28933506}
   - component: {fileID: 6288707767215949629}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28933505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.178, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.133, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 698872638}
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d680a9e826bf684cbb5bcc83676f46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 2100000, guid: 5434028597de0574b9f2453ccf17b027, type: 2}
   viewRadius: 2
   radius: 2
   viewAngle: 360
@@ -67,7 +68,7 @@ GameObject:
   - component: {fileID: 698872641}
   - component: {fileID: 698872640}
   - component: {fileID: 698872639}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FOVMesh (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1533244728}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CarryPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533244727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0101, y: 0.0123, z: 0}
+  m_LocalPosition: {x: 0.0101, y: 0.319, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4523656586312702}
@@ -189,13 +190,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1896434731}
   - component: {fileID: 1896434732}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1896434731
 Transform:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896434730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.252}
+  m_LocalPosition: {x: 0, y: 0, z: -0.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28933506}
@@ -221,8 +222,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.1
-  m_Range: 28.72
+  m_Intensity: 0.5
+  m_Range: 3.26
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -258,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935488414}
   - component: {fileID: 1935488413}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935488412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0001}
   m_LocalScale: {x: 10.747, y: 10.747, z: 10.747}
   m_Children: []
   m_Father: {fileID: 28933506}
@@ -313,9 +314,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 86282249
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7033db7268d10cd45b3bcf8d917981a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -347,7 +348,7 @@ GameObject:
   - component: {fileID: 271455348}
   - component: {fileID: 271455358}
   - component: {fileID: 1010359222}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PC
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -407,18 +408,18 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
-  m_Sprite: {fileID: 21300012, guid: 84b800aec914f234aa9ffdc1efcc7f0c, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300020, guid: 4896fd78a77722c45af5e4020ed5cc31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &50474951112767800
 Rigidbody2D:
   serializedVersion: 4
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0485b26a94a32458ad87265a1e2238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 50
   CalciumAmount: 0
   CalciumCapacity: 25
   curDropChanceRate: 0
@@ -493,6 +494,7 @@ MonoBehaviour:
   - 0
   abilityIsToCooldown: 6
   activatedAbility: 0
+  thirdActivated: 0
   selector: {fileID: 0}
   abilityMeters:
   - {fileID: 0}
@@ -759,7 +761,7 @@ Animator:
   m_GameObject: {fileID: 1426647519986904}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b0c2b07780572e42a3f7a0079e3bb7a, type: 2}
+  m_Controller: {fileID: 9100000, guid: f739423239dc7b84aa807c1412ab2a58, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -790,7 +792,7 @@ MonoBehaviour:
   player: {fileID: 50474951112767800}
   animator: {fileID: 1199763254}
   speedInCombat: 0
-  inExplosion: 0
+  isPushed: 0
 --- !u!70 &271455348
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -804,8 +806,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008869171, y: -0.21313207}
-  m_Size: {x: 0.13596916, y: 0.22071823}
+  m_Offset: {x: 0.011761427, y: 0.10935259}
+  m_Size: {x: 0.13703775, y: 0.18674755}
   m_Direction: 0
 --- !u!114 &271455358
 MonoBehaviour:
@@ -822,8 +824,6 @@ MonoBehaviour:
   Fb: {fileID: 0}
   parent: {fileID: 0}
   playerScript: {fileID: 114448846616350076}
-  ghostSpawnRateFirst: 0.01
-  ghostSpawnRateSecond: 0.1
 --- !u!114 &1010359222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4520309532650990}
   - component: {fileID: 212226421836691828}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4370647527413698}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: shootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4553618846385858}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875459423507234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0102, y: -0.1752, z: -0.5}
+  m_LocalPosition: {x: 0.0102, y: 0.155, z: -0.5}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4520309532650990}

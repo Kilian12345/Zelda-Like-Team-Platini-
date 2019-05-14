@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Spider : MonoBehaviour
 {
+    public bool JumpingEnabled;
+
     public Transform[] cp;
 
     public float jumpSpeed;
@@ -17,6 +19,7 @@ public class Spider : MonoBehaviour
     private Vector2 gizmoPos;
     private Vector2[] points;
 
+    
     public bool canJump;
     public bool isJumping;
 
@@ -34,24 +37,27 @@ public class Spider : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= jumpRange)
+        if (JumpingEnabled)
         {
-            if (Time.time > timeToJump)
+            if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= jumpRange)
             {
-                timeToJump = Time.time + 1 / jumpRate;
-                jumpPos();
+                if (Time.time > timeToJump)
+                {
+                    timeToJump = Time.time + 1 / jumpRate;
+                    jumpPos();
+                }
+                if (canJump)
+                {
+                    StartCoroutine(Jump());
+                }
+                /*if (Vector2.Distance(transform.position, cp[2].position) <= 0.01)
+                {
+                    isJumping = false;
+                    canJump = false;
+                }*/
             }
-            if (canJump)
-            {
-                StartCoroutine(Jump());
-            }
-            /*if (Vector2.Distance(transform.position, cp[2].position) <= 0.01)
-            {
-                isJumping = false;
-                canJump = false;
-            }*/
         }
+        
     }
 
     void OnDrawGizmos()
