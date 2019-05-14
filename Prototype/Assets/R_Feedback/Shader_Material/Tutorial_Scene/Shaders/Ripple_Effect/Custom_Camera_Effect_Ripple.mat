@@ -24,9 +24,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amount: 2.8954876e-14
-    - _CenterX: 803.5425
-    - _CenterY: 461.87872
+    - _Amount: 5.192467e-24
+    - _CenterX: 833.75134
+    - _CenterY: 449.25922
     - _WaveAmount: 10
     - _WaveSpeed: 20
     m_Colors: []

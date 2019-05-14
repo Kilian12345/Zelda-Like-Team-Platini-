@@ -39,10 +39,12 @@ public class Ghost : MonoBehaviour
         }
         else {firstInvokeDone = false;}
 
+    }
+
+void secondAbilityPunch()
+{
         if (Fb.secondActivated == true)
         {
-            if (Input.GetButton("Jump"))
-            {
                 Fb.ghostAcivated = true;
 
                 if(secondInvokeDone == false)
@@ -51,12 +53,10 @@ public class Ghost : MonoBehaviour
                     InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateSecond);
                     secondInvokeDone = true;
                 }
-            }
-            else {Fb.ghostAcivated = false;}
-        }
-        else {secondInvokeDone = false;}
-    }
 
+        }
+        else {secondInvokeDone = false; Fb.ghostAcivated = false;}
+}
     public void SpawnTrailPart()
     {
         if (Fb.ghostAcivated == true)
