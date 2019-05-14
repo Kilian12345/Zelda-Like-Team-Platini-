@@ -111,7 +111,7 @@ public class Scorpio : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, wayPoints[curPoint].transform.position, moveSpeed * Time.deltaTime);
             if (reachedEnd)
             {
-                if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
+                if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
                 {
                     if (curPoint > 0)
                         curPoint -= 1;
@@ -119,7 +119,7 @@ public class Scorpio : MonoBehaviour
             }
             else
             {
-                if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
+                if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
                 {
                     if (curPoint < wayPoints.Length - 1)
                         curPoint += 1;
@@ -137,7 +137,7 @@ public class Scorpio : MonoBehaviour
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, wayPoints[curPoint].transform.position, moveSpeed * Time.deltaTime);
-            if (Vector2.Distance(center.position, wayPoints[curPoint].transform.position) <= 0)
+            if (Vector2.Distance(transform.position, wayPoints[curPoint].transform.position) <= 0)
             {
                 curPoint += 1;
             }
@@ -162,7 +162,7 @@ public class Scorpio : MonoBehaviour
     {
         isShooting = true;
         yield return new WaitForSeconds(0.1f);
-        Vector2 dir = (plScript.centrePoint.transform.position - transform.position).normalized;
+        Vector2 dir = (plScript.centrePoint.transform.position - center.position).normalized;
         GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
@@ -174,6 +174,6 @@ public class Scorpio : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(center.position, shootingRange);
+        Gizmos.DrawWireSphere(transform.position, shootingRange);
     }
 }

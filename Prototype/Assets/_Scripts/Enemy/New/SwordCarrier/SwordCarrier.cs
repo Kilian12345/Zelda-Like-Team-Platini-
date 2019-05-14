@@ -182,7 +182,7 @@ public class SwordCarrier : MonoBehaviour
         if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) > stoppingDistance)
         {
             isMoving = true;
-            transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, plScript.transform.position, moveSpeed * Time.deltaTime);
         }
         else
         {
