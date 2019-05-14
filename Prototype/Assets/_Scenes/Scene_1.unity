@@ -18232,7 +18232,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: 4.816763e-24, y: 4.1160593e-24, z: -0.0018760413, w: 0.9999983}
+  m_LocalRotation: {x: -2.9840397e-24, y: 2.3695405e-24, z: -0.0019553935, w: 0.99999815}
   m_LocalPosition: {x: -9.78, y: 17.782999, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -35594,7 +35594,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: 5.934094e-24, y: 1.5555242e-23, z: -0.00000041769812, w: 1}
+  m_LocalRotation: {x: 5.931614e-24, y: 1.5555245e-23, z: -0.0000004174653, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -36040,11 +36040,11 @@ MonoBehaviour:
   timeThird: 0
   ghostAcivated: 0
   ghostFadeSpeedFirst: 0.025
-  ghostFadeSpeedSecond: 0.01
+  ghostFadeSpeedSecond: 0.05
   ghostSpawnRateFirst: 0.05
   ghostSpawnRateSecond: 0.1
-  toolbarTab: 2
-  currentTab: Screen Shake
+  toolbarTab: 4
+  currentTab: Abilities
   ennemyGetHit: 0
 --- !u!4 &1796326953
 Transform:

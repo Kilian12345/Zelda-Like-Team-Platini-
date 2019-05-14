@@ -205,20 +205,8 @@ public class FeedBack_Manager : MonoBehaviour
     void Vignette()
     {
 
-
-
         vignette.opacity.value = Mathf.Lerp(0, vignetteOpacity, (plScript.health *0.01f) * 0.75f);
         vignette.color.value = vignetteColor;
-
-        /* if (Input.GetButton("Jump")) ////////////// Vignette Input
-        {
-            vignetteTime += Time.deltaTime * timeLens;
-            doneVignette = false;
-        }
-        else if (Input.GetButtonUp("Jump"))
-        {
-            doneVignette = true;
-        }*/
 
         if (doneVignette)
         {
