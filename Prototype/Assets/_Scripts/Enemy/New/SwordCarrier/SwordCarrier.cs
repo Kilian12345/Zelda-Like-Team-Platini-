@@ -28,15 +28,15 @@ public class SwordCarrier : MonoBehaviour
     private float attackCoolDown;
     private float LocalX;
 
-    //private bool isActive;
     private bool isMoving;
     private bool isAttacking;
     private bool isDead;
     private bool isFollowing;
+    private bool isActive;
 
     Player plScript;
     Transform target;
- 
+
     Animator anim;
     Rigidbody2D rb;
     EnemyHealth healthScript;
@@ -57,6 +57,7 @@ public class SwordCarrier : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().centrePoint.transform;
         LocalX = transform.localScale.x;
         attackCoolDown = 1 / attackSpeed;
+
     }
 
     void FixedUpdate()
@@ -69,7 +70,11 @@ public class SwordCarrier : MonoBehaviour
                 if (!isFollowing && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
                 {
                     plScript.EnemiesFollowing++;
-                    isFollowing = true;
+                    isActive = true;
+                }
+                if (isActive)
+                {
+                    Invoke("activate", 1f);
                 }
                 if (isFollowing)
                 {
@@ -87,6 +92,7 @@ public class SwordCarrier : MonoBehaviour
             }
             else
             {
+                isActive = false;
                 isInChaseRange = false;
                 isInAttackRange = false;
                 isMoving = false;
@@ -98,36 +104,55 @@ public class SwordCarrier : MonoBehaviour
                 else
                 {
                     isMoving = false;
+                    isAttacking = false;
                 }
             }
 
             if (isInChaseRange)
             {
+
                 if (!canAttack && isFollowing)
                 {
                     move();
                 }
                 look();
-                if (isInAttackRange)
+
+                /*if (isInAttackRange)
                 {
-                    /*if (Time.time > timeToAttack)
+                    if (Time.time > timeToAttack)
                     {
                         timeToAttack = Time.time + 1 / attackSpeed;
                         canAttack = true;
                         StartCoroutine(Attack());
                         Invoke("switchMoveBool", attackCoolDown/3);
-                    }*/
+                    }
                 }
                 else
                 {
                     isAttacking = false;
                     //canMove = true;
-                }
+                }*/
             }
-            
+
         }
 
     }
+
+    void activate()
+    {
+        isFollowing = true;
+    }
+
+    bool AnimatorIsPlaying(string stateName)
+    {
+        return AnimatorIsPlaying() && anim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
+    }
+
+    bool AnimatorIsPlaying()
+    {
+        return anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1;
+    }
+
 
     void switchMoveBool()
     {
@@ -142,7 +167,7 @@ public class SwordCarrier : MonoBehaviour
             StartCoroutine(Attack());
             Invoke("switchMoveBool", attackCoolDown / 3);
         }
-        
+
     }
 
     void look()
@@ -168,8 +193,7 @@ public class SwordCarrier : MonoBehaviour
         {
             isDead = true;
         }
-        //anim.SetFloat("Ver", distY);
-        anim.SetBool("Active", isFollowing);
+        anim.SetBool("Active", isActive);
         anim.SetBool("Attacking", isAttacking);
         anim.SetBool("Moving", isMoving);
         anim.SetBool("Death", isDead);
@@ -185,7 +209,7 @@ public class SwordCarrier : MonoBehaviour
         else
         {
             canAttack = true;
-            Invoke("delayedAttack",1f); 
+            Invoke("delayedAttack", 1f);
         }
     }
 

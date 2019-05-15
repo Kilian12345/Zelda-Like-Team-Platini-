@@ -110,7 +110,7 @@ public class EnemyHealth : MonoBehaviour
         go.GetComponentInChildren<Text>().text = curScore.ToString();
         go.GetComponent<Canvas>().sortingLayerName = "UI Effect";
 
-        if (pl.position.x > transform.position.x)
+        if (transform.localScale.x==1)
         {
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         }

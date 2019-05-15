@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletHell : MonoBehaviour
 {
-    public bool ShootingEnabled;
+    public bool bulletHellEnabled;
     public int numberOfProjectiles;
     public float projectileSpeed;
     public float shotsPerBurst;
@@ -29,7 +29,7 @@ public class BulletHell : MonoBehaviour
     void FixedUpdate()
     {
         startPoint = transform.position;
-        if (ShootingEnabled)
+        if (bulletHellEnabled)
         {
             if (ctrBullet < shotsPerBurst)
             {
@@ -76,11 +76,10 @@ public class BulletHell : MonoBehaviour
 
             GameObject tmpObj = Instantiate(projectilePrefab, startPoint, Quaternion.identity);
             tmpObj.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileMoveDirection.x, projectileMoveDirection.y);
+            Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), tmpObj.GetComponent<CircleCollider2D>());
 
             angle += angleStep;
 
         }
-
-
     }
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spider : MonoBehaviour
+public class JumpAttack : MonoBehaviour
 {
-    public bool JumpingEnabled;
+    public bool jumpingEnabled;
 
     public Transform[] cp;
 
@@ -12,6 +12,7 @@ public class Spider : MonoBehaviour
     public float jumpHeightModifier;
     public float jumpRate;
     public float jumpRange;
+    public float damageValue;
 
     private Transform playerPos;
 
@@ -21,10 +22,12 @@ public class Spider : MonoBehaviour
 
     
     public bool canJump;
-    public bool isJumping;
 
     private float timeToJump;
     private float timeparam;
+
+    private bool isAttacking;
+    private bool isJumping;
 
     Player plScript;
 
@@ -37,7 +40,7 @@ public class Spider : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (JumpingEnabled)
+        if (jumpingEnabled)
         {
             if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= jumpRange)
             {
@@ -84,7 +87,7 @@ public class Spider : MonoBehaviour
     IEnumerator Jump()
     {
         timeparam = 0;
-        //isJumping = true;
+        isJumping = true;
         canJump = false;
 
         /*for (int i = 0; i < cp.Length; i++)
@@ -101,7 +104,7 @@ public class Spider : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
-
+        isJumping = false;
         //timeparam = 0;
         //canJump = true;
     }
@@ -118,5 +121,49 @@ public class Spider : MonoBehaviour
         canJump = true;
     }
 
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            if (!isAttacking && isJumping)
+            {
+                StartCoroutine(Damage());
+            }
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            if (!isAttacking && isJumping)
+            {
+                StartCoroutine(Damage());
+            }
+        }
+        if (col.gameObject.tag == "!Player")
+        {
+            StopCoroutine(Damage());
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            StopCoroutine(Damage());
+            isAttacking = false;
+        }
+    }
+
+    IEnumerator Damage()
+    {
+        isAttacking = true;
+        plScript.TakeDamage(damageValue);
+        yield return new WaitForSeconds(1);
+        isAttacking = false;
+        StopCoroutine(Damage());
+    }
 
 }
