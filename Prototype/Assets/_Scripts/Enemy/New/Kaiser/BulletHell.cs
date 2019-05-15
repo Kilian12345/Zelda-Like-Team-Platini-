@@ -20,6 +20,7 @@ public class BulletHell : MonoBehaviour
     private float timeToFire = 0;
     [SerializeField]
     private float ctrBullet;
+    private bool pauseFire;
 
     void Start()
     {
@@ -50,7 +51,11 @@ public class BulletHell : MonoBehaviour
             }
             else
             {
-                Invoke("coolDown", coolDownTime);
+                if (!pauseFire)
+                {
+                    pauseFire = true;
+                    Invoke("coolDown", coolDownTime);
+                }
             }
         }
     }
@@ -62,6 +67,7 @@ public class BulletHell : MonoBehaviour
 
     void spawnProjectiles(int numOfProj,float ang)
     {
+        pauseFire = false;
         float angleStep = 360f / numOfProj;
         angle = ang;
 

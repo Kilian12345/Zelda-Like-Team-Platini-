@@ -27,6 +27,7 @@ public class GunCock : MonoBehaviour
     private bool isShooting, isMoving, isDead;
     private bool canMove;
     private bool isFollowing;
+    private bool pauseFire;
     private float LocalX,distX,distY;
 
     Player plScript;
@@ -111,8 +112,12 @@ public class GunCock : MonoBehaviour
             else
             {
                 canMove = false;
-                Invoke("coolDown", coolDownTime);
                 Invoke("switchMoveBool", coolDownTime);
+                if (!pauseFire)
+                {
+                    pauseFire = true;
+                    Invoke("coolDown", coolDownTime);
+                }
             }
         }
         if (!isInShootingRange && isInChaseRange)
@@ -254,6 +259,7 @@ public class GunCock : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        pauseFire = false;
         isShooting = true;
         Vector2 dir = (plScript.centrePoint.transform.position - transform.position).normalized;
         GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
@@ -270,6 +276,7 @@ public class GunCock : MonoBehaviour
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
         //canMove = true;
+        //isShooting = false;
         StopCoroutine(Shoot());
     }
 
