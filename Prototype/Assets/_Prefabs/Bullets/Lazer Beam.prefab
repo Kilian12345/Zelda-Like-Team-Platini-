@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8472511470ec748a6cda0fade18e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &7027439788750534008
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,4 +241,4 @@ MonoBehaviour:
   visiblePlayer: []
   PlayerDetected: 0
   DamageDeal: 30
-  lazerActivated: 0
+  lazerActivated: 1

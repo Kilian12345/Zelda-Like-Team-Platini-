@@ -18387,7 +18387,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: 3.447231e-24, y: -6.370391e-24, z: -0.0008065209, w: 0.99999976}
+  m_LocalRotation: {x: -4.6767643e-26, y: -1.3786015e-24, z: -0.001252939, w: 0.9999993}
   m_LocalPosition: {x: -9.78, y: 17.782999, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -35655,7 +35655,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: 1.3762882e-23, y: -3.1615044e-24, z: -0.0000004174653, w: 1}
+  m_LocalRotation: {x: -1.2704101e-23, y: -3.1614175e-24, z: -0.00000041711604, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -44195,17 +44195,17 @@ PrefabInstance:
     - target: {fileID: 7027439788035292514, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7027439788035292514, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7027439788035292514, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7027439788035292514, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
@@ -44231,6 +44231,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: lazerActivated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e828d0e8f9b4725489a8b3f1efa9cb88, type: 3}

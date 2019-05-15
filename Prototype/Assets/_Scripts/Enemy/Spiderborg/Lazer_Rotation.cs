@@ -27,6 +27,7 @@ public class Lazer_Rotation : MonoBehaviour
 
         if (fow.lazerActivated == true && radiusIsGood == true)
         {
+            StartCoroutine(Sale());
 
             zAxis += Time.deltaTime;
 
@@ -36,9 +37,21 @@ public class Lazer_Rotation : MonoBehaviour
         }
         else
         {
-            transform.Rotate(0, 0, 0);
+            zAxis = 0;
         }
 
+    }
+
+    IEnumerator Sale()
+    {
+        yield return new WaitForSeconds(2f);
+
+        if(transform.localRotation.z < 2 && transform.localRotation.z > -5)
+        {
+            yield return new WaitForSeconds(2f);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            fow.lazerActivated = false;
+        }
     }
 
 }
