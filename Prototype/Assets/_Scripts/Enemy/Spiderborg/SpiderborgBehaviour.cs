@@ -2,62 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-
-detects player
-check life for behaviour
-select behaviour
-
-class movetoward with range variables
-class imunity
-class die ? check enemyhealth if it exists already
-
-*/
-
-/*public class SpiderborgBehaviour : MonoBehaviour
-{
-    int attackState = 0;
-    public GameObject roamingPoint;
-
-    void Update()
-    {
-        if (playerDetected)
-        {
-
-        }
-        //player detected false state0
-        //player detected true
-        //if health >= 70 state1
-        //if health <= 69 && >= 40 state2
-        //if health <= 39 && >= 1 state3
-    }
-
-    void attack0()
-    {
-        //idle stance, doesn't do anything
-    }
-    void attack1()
-    {
-        //rocket barrage
-    }
-    void attack2()
-    {
-        //lazerbeam
-    }
-    void attack3()
-    {
-        //jump on player
-    }
-}*/
 public class SpiderborgBehaviour : MonoBehaviour
 {
-
+    #region Variables
     public GameObject StrikeZone;
+    [SerializeField] Animator anim;
+    [SerializeField] EnemyHealth eh;
+
+    public Rigidbody2D PlayerRb;
+    public Transform target;
+    public Rigidbody2D SpiderborgRb;
+    public GameObject shield;
+    
+    public int SpiderState;
+    public float speed = 2f;
 
     [SerializeField] int numStrike1;
     [SerializeField] int numStrike2;
     [SerializeField] int numStrike3;
-    int i, j, k;
+    int i, j, k, animstate;
     [SerializeField] [Range(-190, 190)] float rangeAngle1;
     [SerializeField] [Range(-190, 190)] float rangeAngle2;
     [SerializeField] [Range(-190, 190)] float rangeAngle3;
@@ -65,56 +28,156 @@ public class SpiderborgBehaviour : MonoBehaviour
     [SerializeField] bool Small;
     [SerializeField] bool Medium;
     [SerializeField] bool Big;
+    bool occupied = false;
+    bool landed = false;
 
     [SerializeField] float cercleSize;
-    float cercleSize2, cercleSize3;
+    [SerializeField] float timebtwatk = 1f;
+    float cercleSize2, cercleSize3, attackdist;
+    Vector2 targetDirection;
+    #endregion
 
-    private void Start()
+    void Start()
     {
+        shield.SetActive(false);
+        anim.SetFloat("AnimX", 1f);
         i = numStrike1 - 1;
         j = numStrike2 - 1;
         k = numStrike3 - 1;
+        PresetAtk3();
+        attackdist = 3f;
+        StartCoroutine("Landing");
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (occupied == false && landed == true)
         {
-            Debug.Log("I");
+            CheckLife();
+            AnimationController();
+            //Debug.Log("je lance plein de fonctions en même temps");
+            StateSwitch();
+        }
+    }
+
+    void CheckLife()
+    {
+        if ((Vector2.Distance(transform.position, PlayerRb.position) > attackdist) && occupied == false)
+        {
+            //Debug.Log("0");
+            SpiderState = 0;
+        }
+        else if (eh.health >= 75 && occupied == false)
+        {
+            //Debug.Log("1");
+            SpiderState = 1;
+            attackdist = 3f;
+        }
+        else if (eh.health < 75 && eh.health >= 45 && occupied == false)
+        {
+            //Debug.Log("2");
+            SpiderState = 2;
+            attackdist = 2f;
+        }
+        else if (eh.health < 45 && eh.health >= 1 && occupied == false)
+        {
+            //Debug.Log("3");
+            SpiderState = 3;
+            attackdist = 0.7f;
+        }
+        else if (eh.health < 1)
+        {
+            SpiderState = 4;
+        }
+    }
+
+    void StateSwitch()
+    {
+        switch (SpiderState)
+        {
+            case 0:
+                Move();
+                break;
+            case 1:
+                StartCoroutine("ATK1");
+                break;
+            case 2:
+                StartCoroutine("ATK2");
+                break;
+            case 3:
+                StartCoroutine("ATK3");
+                break;
+        }
+    }
+
+    void Move()
+    {
+        //Debug.Log("je bouge mon ptit cul de robot");
+        Vector2 targetDirection = (target.position - transform.position).normalized;
+        SpiderborgRb.GetComponent<Rigidbody2D>().velocity = targetDirection * (speed * 0.5f);
+    }
+
+    void AnimationController()
+    {
+        anim.SetInteger("SpiderState", SpiderState);
+        //Debug.Log("animation");
+        /*if (targetDirection.x < 0)
+        {
+            anim.SetFloat("AnimX", 1f);
+        }
+        else if (targetDirection.x > 0)
+        {
+            anim.SetFloat("AnimX", -1f);
+        }*/
+    }
+
+    IEnumerator Landing()
+    {
+        occupied = true;
+        anim.SetInteger("SpiderState", 5);
+        yield return new WaitForSeconds(2f);
+        occupied = false;
+        landed = true;
+        Debug.Log("landing");
+        yield return null;
+    }
+
+    IEnumerator ATK1()
+    {
+        if (occupied == false)
+        {
+            occupied = true;
+            yield return new WaitForSeconds(timebtwatk);
+            occupied = false;
+            yield return null;
+        }
+    }
+
+    IEnumerator ATK2()
+    {
+        if (occupied == false)
+        {
+            occupied = true;
+            yield return new WaitForSeconds(timebtwatk);
+            occupied = false;
+            yield return null;
+        }
+    }
+
+    IEnumerator ATK3()
+    {
+        if(occupied == false)
+        {
+            occupied = true;
+            //Debug.Log("je génère pleins d'attaques");
+            shield.SetActive(true);
+            yield return new WaitForSeconds(0.4f);
             Attack3();
+            yield return new WaitForSeconds(timebtwatk);
+            shield.SetActive(false);
+            occupied = false;
+            yield return null;
         }
-        if (Small)
-        {
-            numStrike1 = 6;
-            numStrike2 = 12;
-            numStrike3 = 18;
-            rangeAngle1 = 60;
-            rangeAngle2 = 30;
-            rangeAngle3 = 20;
-            cercleSize = 0.2f;
-        }
-        else if (Medium)
-        {
-            numStrike1 = 9;
-            numStrike2 = 19;
-            numStrike3 = 24;
-            rangeAngle1 = 40;
-            rangeAngle2 = 20;
-            rangeAngle3 = 15;
-            cercleSize = 0.3f;
-        }
-        else if (Big)
-        {
-            numStrike1 = 14;
-            numStrike2 = 25;
-            numStrike3 = 36;
-            rangeAngle1 = 30;
-            rangeAngle2 = 15;
-            rangeAngle3 = 10;
-            cercleSize = 0.4f;
-        }
-        cercleSize2 = cercleSize * 2;
-        cercleSize3 = cercleSize * 3;
     }
 
     #region Attack3
@@ -142,7 +205,45 @@ public class SpiderborgBehaviour : MonoBehaviour
             Instantiate(StrikeZone, pos3, Quaternion.identity);
         }
     }
-    
+    #endregion
+
+    void PresetAtk3()
+    {
+        if (Small)
+        {
+            numStrike1 = 7;
+            numStrike2 = 0;
+            numStrike3 = 0;
+            rangeAngle1 = 100;
+            rangeAngle2 = 30;
+            rangeAngle3 = 20;
+            cercleSize = 0.8f;
+        }
+        else if (Medium)
+        {
+            numStrike1 = 7;
+            numStrike2 = 12;
+            numStrike3 = 0;
+            rangeAngle1 = 100;
+            rangeAngle2 = 30;
+            rangeAngle3 = 20;
+            cercleSize = 0.8f;
+        }
+        else if (Big)
+        {
+            numStrike1 = 7;
+            numStrike2 = 12;
+            numStrike3 = 20;
+            rangeAngle1 = 100;
+            rangeAngle2 = 30;
+            rangeAngle3 = 20;
+            cercleSize = 0.8f;
+        }
+        cercleSize2 = cercleSize * 2;
+        cercleSize3 = cercleSize * 3;
+    }
+
+    #region Circles State 3
     Vector2 RandomCircle(Vector2 center, float radius)
     {
         float angle1 = i * rangeAngle1;

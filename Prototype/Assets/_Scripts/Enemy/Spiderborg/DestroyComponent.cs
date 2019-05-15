@@ -4,26 +4,21 @@ using UnityEngine;
 
 public class DestroyComponent : MonoBehaviour
 {
-    /*[SerializeField]
-    CircleCollider2D col;*/
+
     [SerializeField]
     Object obj;
-    /*void Start()
-    {
-        col = GetComponent<CircleCollider2D>();
-        Invoke("DisableComponent", 0.5f);
-    }*/
 
-    private void Update()
+
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Destroy(obj);
-        }
+        StartCoroutine(AttackTime());
     }
 
-    /*void DisableComponent()
+    IEnumerator AttackTime()
     {
-        col.enabled = false;
-    }*/
+        yield return new WaitForSeconds(2.4f);
+        Destroy(obj);
+        yield return null;
+    }
+
 }
