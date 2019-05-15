@@ -132,6 +132,7 @@ public class FeedBack_Manager : MonoBehaviour
 
     ////////////// Feedback Control
     public bool ennemyGetHit;
+    public bool Scripted_Scene;
 
     void Start()
     {

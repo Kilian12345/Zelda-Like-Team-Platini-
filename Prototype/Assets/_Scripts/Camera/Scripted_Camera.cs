@@ -7,24 +7,64 @@ public class Scripted_Camera : MonoBehaviour
 {
     FeedBack_Manager Fb_Mana;
     Player plScript;
-    CinemachineVirtualCamera[] vcam; 
+    CinemachineVirtualCamera vcam;
+
+    [SerializeField] bool OnCollision, OnTrigger, OnEvent;
+
+    bool Triggered;
+
+    public bool everyEventDone = false;
 
     void Start()
     {
-        Fb_Mana = GetComponent<FeedBack_Manager>();
+        Fb_Mana = GetComponentInParent<FeedBack_Manager>();
         plScript = FindObjectOfType<Player>();
+        vcam = GetComponent<CinemachineVirtualCamera>();
     }
 
     void Update()
     {
-        CameraSwitch();
+        if (Triggered == true) { StartCoroutine(CameraSwitch()); }
     }
 
-    void CameraSwitch()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        for (int i = 0; i < vcam.Length; i++)
+        if (OnTrigger == true)
         {
-            
+            Debug.Log("Nik");
+
+            if (collision.tag == "Player")
+            {Triggered = true;}
+            else
+            { Triggered = false; }
+
         }
+    }
+
+    void Event()
+    {
+
+    }
+
+    IEnumerator CameraSwitch()
+    {
+        if (everyEventDone == false)
+        {
+            vcam.Priority = 20;
+            Fb_Mana.Scripted_Scene = true;
+        }
+        else
+        {
+            Triggered = false;
+            vcam.Priority = 9;
+            Fb_Mana.Scripted_Scene = false;
+        }
+
+        yield return new WaitForSeconds(5f);
+        everyEventDone = true;
+
+
+
     }
 }

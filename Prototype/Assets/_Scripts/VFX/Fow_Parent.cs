@@ -15,6 +15,8 @@ public class Fow_Parent : MonoBehaviour
 
     public float DamageDeal = 1;
 
+    public bool lazerActivated; /// /// /// This is the bool that Activate and desactivate the Lazer
+
     void Start()
     {
         viewRadius = 0;
@@ -68,17 +70,17 @@ public class Fow_Parent : MonoBehaviour
 
     void ZoneIncrease()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(lazerActivated == true)
         {
             float puissance = (float)1.00001 ;
             viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, radius);  
         }
-        /* else 
+         else 
         {
             viewRadius = Mathf.Lerp( viewRadius, 0, Time.deltaTime*3);
 
             if(viewRadius <= 0.1f) {viewRadius = 0;}
-        }*/
+        }
     }
 
 

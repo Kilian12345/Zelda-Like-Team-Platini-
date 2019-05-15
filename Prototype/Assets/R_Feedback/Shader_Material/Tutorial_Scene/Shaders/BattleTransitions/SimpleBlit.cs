@@ -31,14 +31,14 @@ public class SimpleBlit : MonoBehaviour
         TransitionMaterial.SetFloat("_Cutoff", shininess);
 
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Fb_Mana.Scripted_Scene == true)
         {
 
             time += Time.deltaTime / Fb_Mana.transitionTime;
             done = false;
 
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Fb_Mana.Scripted_Scene == false)
         {
             done = true;
         }
