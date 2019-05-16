@@ -44,9 +44,9 @@ public class Lazer_Rotation : MonoBehaviour
 
     IEnumerator Sale()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
-        if(transform.localRotation.z < 2 && transform.localRotation.z > -5)
+        if(transform.localRotation.z < 2 && transform.localRotation.z > -10)
         {
             yield return new WaitForSeconds(2f);
             transform.rotation = Quaternion.Euler(0, 0, 0);

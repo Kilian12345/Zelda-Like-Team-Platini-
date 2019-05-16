@@ -36,11 +36,13 @@ public class SpiderborgBehaviour : MonoBehaviour
     Vector2 targetDirection;
     Player plScript;
     Transform target;
+    Fow_Parent lazerAtk;
     #endregion
 
     void Start()
     {
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        lazerAtk = GetComponentInChildren<Fow_Parent>();
         target = plScript.centrePoint.transform;
         LocalX = transform.localScale.x;
         shield.SetActive(false);
@@ -75,20 +77,20 @@ public class SpiderborgBehaviour : MonoBehaviour
             Debug.Log("0");
             SpiderState = 0;
         }
-        else if (eh.health >= 75 && occupied == false)
+        else if (eh.health >= 400 && occupied == false)
         {
             Debug.Log("1");
             SpiderState = 1;
             attackdist = 1f;
         }
-        else if (eh.health < 75 && eh.health >= 45 && occupied == false)
+        else if (eh.health < 400 && eh.health >= 200 && occupied == false)
         {
             Debug.Log("2");
             SpiderState = 2;
 
             attackdist = 1f;
         }
-        else if (eh.health < 45 && eh.health >= 1 && occupied == false)
+        else if (eh.health < 200 && eh.health >= 1 && occupied == false)
         {
             Debug.Log("3");
             SpiderState = 3;
@@ -167,6 +169,7 @@ public class SpiderborgBehaviour : MonoBehaviour
         if (occupied == false)
         {
             occupied = true;
+            lazerAtk.lazerActivated = true;
             yield return new WaitForSeconds(timebtwatk);
             occupied = false;
             yield return null;

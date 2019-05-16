@@ -25,9 +25,24 @@ public class DestroyComponent : MonoBehaviour
         yield return null;
     }
 
-    private void OnTriggerStay2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
+        {
+            StartCoroutine(Damage());
+        }
+    }
+
+    /* private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            StartCoroutine(Damage());
+        }
+    }*/
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag != "Player")
         {
             StartCoroutine(Damage());
         }
