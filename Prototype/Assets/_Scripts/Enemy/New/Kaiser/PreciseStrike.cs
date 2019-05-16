@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PreciseStrike : MonoBehaviour
 {
-    public bool preciseShotEnabled;
+    public bool Enabled;
     public float bulSpeed;
     public float shotsPerBurst;
     public float shotRate;
@@ -26,7 +26,7 @@ public class PreciseStrike : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (preciseShotEnabled)
+        if (Enabled)
         {
             if (ctrBullet < shotsPerBurst)
             {

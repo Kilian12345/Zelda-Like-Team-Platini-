@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject HitpointsParentPrefab;
     public GameObject parent;
     public float health;
+    [HideInInspector]
+    public float maxHealth;
     public float dissolveAmout;
 
     [SerializeField]
@@ -40,6 +42,7 @@ public class EnemyHealth : MonoBehaviour
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         renderChara = GetComponent<Rendering_Chara>();
         curScore = scorePerHit;
+        maxHealth = health;
     }
 
     // Update is called once per frame

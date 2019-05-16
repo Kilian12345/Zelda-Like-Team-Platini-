@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletHell : MonoBehaviour
 {
-    public bool bulletHellEnabled;
+    public bool Enabled;
     public int numberOfProjectiles;
     public float projectileSpeed;
     public float shotsPerBurst;
@@ -30,7 +30,7 @@ public class BulletHell : MonoBehaviour
     void FixedUpdate()
     {
         startPoint = transform.position;
-        if (bulletHellEnabled)
+        if (Enabled)
         {
             if (ctrBullet < shotsPerBurst)
             {

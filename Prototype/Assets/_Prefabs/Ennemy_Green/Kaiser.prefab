@@ -104,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 409171903922739089}
   - component: {fileID: 409171903922739094}
+  - component: {fileID: 3199840655699832217}
   - component: {fileID: 409171903922739080}
   - component: {fileID: 409171903922739086}
   - component: {fileID: 409171903922739095}
@@ -184,6 +185,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3199840655699832217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409171903922739092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519762fd9156aaf4a871f435c8a7f91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phase1ExitPercent: 60
+  phase2ExitPercent: 30
+  attackDuration: 15
+  timeToAttack1: 0
+  timeToAttack2: 0
+  timeToAttack3: 0
+  curAttack: 0
 --- !u!114 &409171903922739080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,11 +216,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a640a45af3e27294a8344886c930b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preciseShotEnabled: 0
+  Enabled: 0
   bulSpeed: 1.8
   shotsPerBurst: 3
   shotRate: 0.8
-  coolDownTime: 4
+  coolDownTime: 6
   bull: {fileID: 7681654984024996306, guid: be4ac5bbf78817544aca0e53cbbe36a0, type: 3}
   shootPoint: {fileID: 409171904759768289}
   ctrBullet: 0
@@ -216,10 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57cf57f9d58f564f9a61f6ad051f3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHellEnabled: 0
+  Enabled: 0
   numberOfProjectiles: 9
   projectileSpeed: 0.25
-  shotsPerBurst: 20
+  shotsPerBurst: 15
   shotRate: 2
   coolDownTime: 8
   projectilePrefab: {fileID: 7681654984024996306, guid: be4ac5bbf78817544aca0e53cbbe36a0,
@@ -238,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672167a147046b34ea3448e1cdfdb9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpingEnabled: 0
+  Enabled: 0
   cp:
   - {fileID: 409171903528168824}
   - {fileID: 409171903759150997}
@@ -261,11 +281,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ff587909f3b314d8cfe6d29cd672f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashEnabled: 0
+  Enabled: 0
   dashVelocity: 1.6
-  dashCoolDown: 0.1
+  dashCoolDown: 0.25
   dashRange: 1.5
-  damageValue: 30
+  damageValue: 10
   isInDashRange: 0
   canDash: 0
 --- !u!114 &409171903922739087
@@ -289,7 +309,8 @@ MonoBehaviour:
   HitpointsParentPrefab: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
     type: 3}
   parent: {fileID: 409171903284437116}
-  health: 500
+  health: 1000
+  maxHealth: 0
   dissolveAmout: 0
   scorePerHit: 75
   curScore: 0

@@ -478,9 +478,10 @@ MonoBehaviour:
   PlayerScore: 0
   EnemiesFollowing: 0
   enemyFollowLimit: 3
-  enemyBulletDamage: 10
+  enemyBulletDamage: 5
   toPunch: 0
-  damage: 30
+  damage: 60
+  baseDamage: 0
   attackSpeed: 2
   attackRange: 0.06
   attackPushForce: 500

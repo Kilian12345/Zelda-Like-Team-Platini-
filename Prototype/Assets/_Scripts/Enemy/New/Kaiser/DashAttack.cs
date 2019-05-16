@@ -5,7 +5,7 @@ using UnityEngine;
 public class DashAttack : MonoBehaviour
 {
 
-    public bool dashEnabled;
+    public bool Enabled;
 
     public float dashVelocity;
     public float dashCoolDown;
@@ -42,7 +42,7 @@ public class DashAttack : MonoBehaviour
         }
 
 
-        if (dashEnabled)
+        if (Enabled)
         {
             if (isInDashRange)
             {

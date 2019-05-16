@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpAttack : MonoBehaviour
 {
-    public bool jumpingEnabled;
+    public bool Enabled;
 
     public Transform[] cp;
 
@@ -40,7 +40,7 @@ public class JumpAttack : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (jumpingEnabled)
+        if (Enabled)
         {
             if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= jumpRange)
             {
