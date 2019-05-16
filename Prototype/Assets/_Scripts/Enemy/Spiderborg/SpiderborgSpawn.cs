@@ -16,10 +16,22 @@ public class SpiderborgSpawn : MonoBehaviour
             entity.SetActive(true);
             spawned = true;
         }
-        if (sbs.SpiderState == 4)
+        /*if (sbs.SpiderState == 4)
         {
             Destroy(obj);
+        }*/
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.gameObject.tag == "Player") && spawned == false)
+        {
+            entity.SetActive(true);
+            spawned = true;
         }
+        /*if (sbs.SpiderState == 4)
+        {
+            Destroy(obj);
+        }*/
     }
 
 }

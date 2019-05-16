@@ -10,11 +10,10 @@ public class SpiderborgBehaviour : MonoBehaviour
     [SerializeField] EnemyHealth eh;
 
     public Rigidbody2D PlayerRb;
-    public Transform target;
     public Rigidbody2D SpiderborgRb;
     public GameObject shield;
-    
-    public int SpiderState;
+
+    public int SpiderState=150;
     public float speed = 2f;
 
     [SerializeField] int numStrike1;
@@ -33,55 +32,65 @@ public class SpiderborgBehaviour : MonoBehaviour
 
     [SerializeField] float cercleSize;
     [SerializeField] float timebtwatk = 1f;
-    float cercleSize2, cercleSize3, attackdist;
+    float cercleSize2, cercleSize3, attackdist, LocalX;
     Vector2 targetDirection;
+    Player plScript;
+    Transform target;
     #endregion
 
     void Start()
     {
+        plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        target = plScript.centrePoint.transform;
+        LocalX = transform.localScale.x;
         shield.SetActive(false);
-        anim.SetFloat("AnimX", 1f);
+        anim.SetFloat("AnimX", 0f);
         i = numStrike1 - 1;
         j = numStrike2 - 1;
         k = numStrike3 - 1;
         PresetAtk3();
-        attackdist = 3f;
+        attackdist = 1f;
         StartCoroutine("Landing");
     }
 
     void FixedUpdate()
     {
+        if(landed == true)
+        {
+            AnimationController();
+        }
+
         if (occupied == false && landed == true)
         {
             CheckLife();
-            AnimationController();
-            //Debug.Log("je lance plein de fonctions en même temps");
             StateSwitch();
         }
+        look();
     }
 
     void CheckLife()
     {
-        if ((Vector2.Distance(transform.position, PlayerRb.position) > attackdist) && occupied == false)
+        if ((Vector2.Distance(transform.position, target.position) > attackdist) && occupied == false)
         {
-            //Debug.Log("0");
+            Debug.Log("0");
             SpiderState = 0;
         }
         else if (eh.health >= 75 && occupied == false)
         {
-            //Debug.Log("1");
+            Debug.Log("1");
             SpiderState = 1;
-            attackdist = 3f;
+            attackdist = 1f;
         }
         else if (eh.health < 75 && eh.health >= 45 && occupied == false)
         {
-            //Debug.Log("2");
+            Debug.Log("2");
             SpiderState = 2;
-            attackdist = 2f;
+
+            attackdist = 1f;
         }
         else if (eh.health < 45 && eh.health >= 1 && occupied == false)
         {
-            //Debug.Log("3");
+            Debug.Log("3");
             SpiderState = 3;
             attackdist = 0.7f;
         }
@@ -89,6 +98,7 @@ public class SpiderborgBehaviour : MonoBehaviour
         {
             SpiderState = 4;
         }
+
     }
 
     void StateSwitch()
@@ -112,7 +122,6 @@ public class SpiderborgBehaviour : MonoBehaviour
 
     void Move()
     {
-        //Debug.Log("je bouge mon ptit cul de robot");
         Vector2 targetDirection = (target.position - transform.position).normalized;
         SpiderborgRb.GetComponent<Rigidbody2D>().velocity = targetDirection * (speed * 0.5f);
     }
@@ -120,15 +129,15 @@ public class SpiderborgBehaviour : MonoBehaviour
     void AnimationController()
     {
         anim.SetInteger("SpiderState", SpiderState);
-        //Debug.Log("animation");
-        /*if (targetDirection.x < 0)
+
+        if (target.position.y > transform.position.y)
         {
-            anim.SetFloat("AnimX", 1f);
+            anim.SetFloat("AnimY", 1f);
         }
-        else if (targetDirection.x > 0)
+        else
         {
-            anim.SetFloat("AnimX", -1f);
-        }*/
+            anim.SetFloat("AnimY", -1f);
+        }
     }
 
     IEnumerator Landing()
@@ -269,6 +278,24 @@ public class SpiderborgBehaviour : MonoBehaviour
         return pos;
     }
     #endregion
+
+    void look()
+    {
+        if (plScript.centrePoint.transform.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackdist);
+    }
 }
 
 
