@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
     public float enemyBulletDamage;
     public bool toPunch;
     public float damage;
+    public float baseDamage;
     public float attackSpeed;
     public float attackRange;
     public float attackPushForce;
@@ -177,6 +178,7 @@ public class Player : MonoBehaviour
         curTime = rageTimer;
         curDropChanceRate = DropChanceRate;
         selectedAbility = 0;
+        baseDamage = damage;
     }
 
     void FixedUpdate()
@@ -218,6 +220,7 @@ public class Player : MonoBehaviour
             }
 
         }
+
 
         if (health >= 100 && !isDead)
         {
@@ -390,19 +393,21 @@ public class Player : MonoBehaviour
     {
         if (health >= 0 && health < 25)
         {
+            damage = baseDamage;
             abilityMeters[0].SetActive(false);
             abilityMeters[1].SetActive(false);
             abilityMeters[2].SetActive(false);
         }
         else if (health >= 25 && health < 50)
         {
+            damage = baseDamage * 0.8f;
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(false);
             abilityMeters[2].SetActive(false);
         }
         else if (health >= 50 && health < 75)
         {
-
+            damage = baseDamage * 0.6f;
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(true);
             abilityMeters[2].SetActive(false);
@@ -410,7 +415,7 @@ public class Player : MonoBehaviour
         }
         else if (health >= 75 && health <= 100)
         {
-
+            damage = baseDamage * 0.5f;
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(true);
             abilityMeters[2].SetActive(true);

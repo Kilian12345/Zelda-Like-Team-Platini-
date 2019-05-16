@@ -12,10 +12,14 @@ public class EnemyHealth : MonoBehaviour
     public GameObject HitpointsParentPrefab;
     public GameObject parent;
     public float health;
+    [HideInInspector]
+    public float maxHealth;
     public float dissolveAmout;
 
     [SerializeField]
     private int scorePerHit;
+    [SerializeField]
+    private int curScore;
 
     bool asExploded;
     public bool getDissolve = false, isPowder;
@@ -39,6 +43,9 @@ public class EnemyHealth : MonoBehaviour
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         renderChara = GetComponent<Rendering_Chara>(); 
         Fb_Mana = FindObjectOfType<FeedBack_Manager>();     
+        renderChara = GetComponent<Rendering_Chara>();
+        curScore = scorePerHit;
+        maxHealth = health;
     }
 
     // Update is called once per frame
@@ -82,19 +89,35 @@ public class EnemyHealth : MonoBehaviour
         }*/
 
         if (HitpointsParentPrefab && health >= 0)
-        {
+        { 
+            if (ps.health >= 0 && ps.health < 25)
+            {
+                curScore = scorePerHit;
+            }
+            else if (ps.health >= 25 && ps.health < 50)
+            {
+                curScore = Mathf.RoundToInt(scorePerHit * 0.8f);
+            }
+            else if (ps.health >= 50 && ps.health < 75)
+            {
+                curScore = Mathf.RoundToInt(scorePerHit * 0.6f);
+            }
+            else if (ps.health >= 75 && ps.health <= 100)
+            {
+                curScore = Mathf.RoundToInt(scorePerHit * 0.5f);
+            }
             ShowHitpointsParent();
-            ps.PlayerScore += scorePerHit;
+            ps.PlayerScore += curScore;
         }
     }
 
     void ShowHitpointsParent()
     {
         var go = Instantiate(HitpointsParentPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponentInChildren<Text>().text = scorePerHit.ToString();
+        go.GetComponentInChildren<Text>().text = curScore.ToString();
         go.GetComponent<Canvas>().sortingLayerName = "UI Effect";
 
-        if (pl.position.x > transform.position.x)
+        if (transform.localScale.x==1)
         {
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         }

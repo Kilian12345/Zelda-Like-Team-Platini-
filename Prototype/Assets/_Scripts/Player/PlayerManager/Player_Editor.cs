@@ -50,6 +50,7 @@ public class Player_Editor : Editor
     private SerializedProperty enemyBulletDamage;
     private SerializedProperty toPunch;
     private SerializedProperty damage;
+    private SerializedProperty baseDamage;
     private SerializedProperty attackSpeed;
     private SerializedProperty attackRange;
     private SerializedProperty attackPushForce;
@@ -114,6 +115,7 @@ public class Player_Editor : Editor
         enemyBulletDamage = soTarget.FindProperty("enemyBulletDamage");
         toPunch = soTarget.FindProperty("toPunch");
         damage = soTarget.FindProperty("damage");
+        baseDamage = soTarget.FindProperty("baseDamage");
         attackSpeed = soTarget.FindProperty("attackSpeed");
         attackRange = soTarget.FindProperty("attackRange");
         attackPushForce = soTarget.FindProperty("attackPushForce");
@@ -204,6 +206,7 @@ public class Player_Editor : Editor
                 EditorGUILayout.PropertyField(enemyBulletDamage);
                 EditorGUILayout.PropertyField(toPunch);
                 EditorGUILayout.PropertyField(damage);
+                EditorGUILayout.PropertyField(baseDamage);
                 EditorGUILayout.PropertyField(attackSpeed);
                 EditorGUILayout.PropertyField(attackRange);
                 EditorGUILayout.PropertyField(attackPushForce);

@@ -26,7 +26,7 @@ public class ThrowingMechanic : MonoBehaviour
         {
             canBePicked = true;
 
-            if (Input.GetKeyDown(KeyCode.Joystick1Button4) || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Joystick1Button4)  /*Input.GetKeyDown(KeyCode.Space)*/)
             {
                 Debug.Log("ASD");
                 if (!isCaught)
@@ -34,7 +34,7 @@ public class ThrowingMechanic : MonoBehaviour
                     isCaught = true;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.Joystick1Button5)  /*Input.GetKeyDown(KeyCode.A)*/)
             {
                 Debug.Log("LSD");
                 if (isCaught)
