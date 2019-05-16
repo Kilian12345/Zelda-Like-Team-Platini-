@@ -4,26 +4,43 @@ using UnityEngine;
 
 public class DestroyComponent : MonoBehaviour
 {
-    /*[SerializeField]
-    CircleCollider2D col;*/
-    [SerializeField]
-    Object obj;
-    /*void Start()
-    {
-        col = GetComponent<CircleCollider2D>();
-        Invoke("DisableComponent", 0.5f);
-    }*/
 
-    private void Update()
+    [SerializeField] Object obj;
+    Player plScript;
+    bool striking = false;
+    public float damageValue = 50;
+
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+        plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        StartCoroutine(AttackTime());
+    }
+
+    IEnumerator AttackTime()
+    {
+        yield return new WaitForSeconds(1.4f);
+        striking = true;
+        yield return new WaitForSeconds(0.6f);
+        Destroy(obj);
+        yield return null;
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
         {
-            Destroy(obj);
+            StartCoroutine(Damage());
         }
     }
 
-    /*void DisableComponent()
+    IEnumerator Damage()
     {
-        col.enabled = false;
-    }*/
+        if(striking == true)
+        {
+            striking = false;
+            plScript.TakeDamage(damageValue);
+            yield return new WaitForSeconds(0.05f);
+            StopCoroutine(Damage());
+        }
+    }
 }

@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phase1ExitPercent: 60
   phase2ExitPercent: 30
-  attackDuration: 15
+  attackDuration: 10
   timeToAttack1: 0
   timeToAttack2: 0
   timeToAttack3: 0
@@ -315,6 +315,7 @@ MonoBehaviour:
   scorePerHit: 75
   curScore: 0
   getDissolve: 0
+  isPowder: 0
   miniBoss: {x: 0, y: 0, z: 0}
 --- !u!50 &409171903922739090
 Rigidbody2D:
