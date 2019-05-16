@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lazer_Rotation : MonoBehaviour
 {
     Fow_Parent fow;
+    public GameObject LaserPoint;
 
     bool radiusIsGood;
 
@@ -22,7 +23,7 @@ public class Lazer_Rotation : MonoBehaviour
 
     void Update()
     {
-
+        transform.position=LaserPoint.transform.position;
         if (fow.viewRadius >= fow.radius) { radiusIsGood = true; }
 
         if (fow.lazerActivated == true && radiusIsGood == true)

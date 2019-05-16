@@ -560,13 +560,20 @@ public class Player : MonoBehaviour
         //transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    /*void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Coin")
+        if (col.gameObject.tag == "Strike")
         {
-            Destroy(col.gameObject, 0f);
+            TakeDamage(25f);
         }
     }
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Strike")
+        {
+            TakeDamage(25f);
+        }
+    }*/
 
     void OnCollisionEnter2D(Collision2D col)
     {

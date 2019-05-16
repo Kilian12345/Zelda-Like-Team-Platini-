@@ -12,6 +12,7 @@ TagManager:
   - FeedBack_Manager
   - Trigger
   - MiniBoss
+  - Strike
   layers:
   - Default
   - TransparentFX

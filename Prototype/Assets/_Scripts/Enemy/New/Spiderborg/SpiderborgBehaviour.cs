@@ -42,7 +42,7 @@ public class SpiderborgBehaviour : MonoBehaviour
     void Start()
     {
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        lazerAtk = GetComponentInChildren<Fow_Parent>();
+        lazerAtk = FindObjectOfType<Fow_Parent>();
         target = plScript.centrePoint.transform;
         LocalX = transform.localScale.x;
         shield.SetActive(false);
