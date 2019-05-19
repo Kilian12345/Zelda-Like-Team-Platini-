@@ -5,8 +5,10 @@ using UnityEngine;
 public class ThrowingMechanic : MonoBehaviour
 {
     public float throwDistance,throwVelocity,pickupDistance;
+    public float damage;
     public bool isCaught,toThrow;
     public bool canBePicked;
+    private bool hasBeenThrowed;
     private Vector2 lastPos;
     Player ps;
     GameObject player;

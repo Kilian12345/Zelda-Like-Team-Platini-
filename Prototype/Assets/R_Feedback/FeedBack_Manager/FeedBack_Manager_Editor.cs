@@ -36,6 +36,7 @@ public class FeedBack_Manager_Editor : Editor
     [Header("Bloom")]
     private SerializedProperty timeBloom;
     private SerializedProperty bloom;
+    private SerializedProperty baseBloom;
 
     [Header("Vignette")]
     private SerializedProperty timeLens;
@@ -121,6 +122,7 @@ public class FeedBack_Manager_Editor : Editor
 
         timeBloom = soTarget.FindProperty("timeBloom");
         bloom = soTarget.FindProperty("bloom");
+        baseBloom = soTarget.FindProperty("baseBloom");
         timeLens = soTarget.FindProperty("timeLens");
         vignetteColor = soTarget.FindProperty("vignetteColor");
         vignetteOpacity = soTarget.FindProperty("vignetteOpacity");
@@ -206,6 +208,7 @@ public class FeedBack_Manager_Editor : Editor
             case "Post-Process":
                 EditorGUILayout.PropertyField(timeBloom);
                 EditorGUILayout.PropertyField(bloom);
+                EditorGUILayout.PropertyField(baseBloom);
                 EditorGUILayout.PropertyField(timeLens);
                 EditorGUILayout.PropertyField(vignetteColor);
                 EditorGUILayout.PropertyField(vignetteOpacity);

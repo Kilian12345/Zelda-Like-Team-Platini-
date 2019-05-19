@@ -35,6 +35,7 @@ public class FeedBack_Manager : MonoBehaviour
 
     [Header("Bloom")]
     public float timeBloom;
+    public float baseBloom;
     Bloom bloomLayer = null;
     public float bloom = 0.15f;
     bool doneBloom = false;
@@ -132,6 +133,7 @@ public class FeedBack_Manager : MonoBehaviour
 
     ////////////// Feedback Control
     public bool ennemyGetHit;
+    public bool ennemyDied;
     public bool Scripted_Scene;
 
     void Start()
@@ -159,6 +161,7 @@ public class FeedBack_Manager : MonoBehaviour
         if (secondActivated == true) StartCoroutine(secondAbility());
         else {StopCoroutine(secondAbility());}
         if (ennemyGetHit == true ) {DynamicPunchVisu();}
+        else if (ennemyDied == true) {StartCoroutine(EnnemyDeath());}
         
         if(plScript.health >= 100) {Berserker();}
         else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
@@ -168,7 +171,7 @@ public class FeedBack_Manager : MonoBehaviour
     void ThirdAbilityVisu()
     {
 
-        bloomLayer.intensity.value = Mathf.Lerp(0, bloom, bloomTime);
+        bloomLayer.intensity.value = Mathf.Lerp(baseBloom, bloom, bloomTime);
 
         if (plScript.thirdActivated== true)
         {
@@ -298,9 +301,18 @@ public class FeedBack_Manager : MonoBehaviour
 
     }
 
-    IEnumerator thirdAbility()
+    IEnumerator EnnemyDeath()
     {
-        yield return null;
+        shakeAmplitude = 0.9f;
+        shakeFrequency = 0.9f;
+        CameraShake();
+
+        yield return new WaitForSeconds(0.1f);
+        Debug.Log("Died");
+
+        ennemyDied = false;
+        StopCoroutine(EnnemyDeath());
+
     }
 
 

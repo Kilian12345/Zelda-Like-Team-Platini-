@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         plScript=GetComponent<Player>();
+        speedInCombat = 0.5f;
     }
 
     private void Update()

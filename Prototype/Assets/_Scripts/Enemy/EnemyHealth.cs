@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
     bool asExploded;
     public bool getDissolve = false, isPowder;
     bool zoneDeath = false;
+    bool scrShake = false; // Death ScrennShake
     Player ps;
     Transform pl;
     [SerializeField]Vector3 miniBoss; 
@@ -42,7 +43,7 @@ public class EnemyHealth : MonoBehaviour
         laserZone = FindObjectOfType<Fow_Parent>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         renderChara = GetComponent<Rendering_Chara>(); 
-        Fb_Mana = FindObjectOfType<FeedBack_Manager>();     
+        Fb_Mana = GameObject.FindGameObjectWithTag("FeedBack_Manager").GetComponent<FeedBack_Manager>();     
         renderChara = GetComponent<Rendering_Chara>();
         curScore = scorePerHit;
         maxHealth = health;
@@ -51,12 +52,20 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (health <= 0)
         {
             health = 0;
 
-            if (getDissolve == false) {NormalDeath();}
-            else {DissolveDeath();}
+            if (getDissolve == false) 
+            {             
+                NormalDeath();
+                Blood();
+                if(scrShake == false)
+                {Fb_Mana.ennemyDied = true; scrShake = true;}
+            }
+            else 
+            {DissolveDeath();}
         }
 
         if (Vector2.Distance(transform.position, pl.position) > 0.2)
@@ -75,7 +84,6 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyAudio.clip = punch;
         enemyAudio.Play();
-        Debug.Log("TakeDamage");
         renderChara.isOpaque = true;
         Fb_Mana.ennemyGetHit = true;
 
@@ -140,7 +148,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (asExploded == false)
         {
-            Vector3 dir = (ps.centrePoint.transform.position - transform.position).normalized;
+            Vector3 dir = (pl.position - transform.position).normalized;
             Instantiate(particlesBlood, transform.position, Quaternion.LookRotation( dir * -1 ));
             asExploded = true;
         }
@@ -162,7 +170,6 @@ public class EnemyHealth : MonoBehaviour
          enemyAudio.Play();
          GetComponent<Collider2D>().enabled = false;
          Destroy(parent, 0.6f);
-         Blood();
     }
 
     void DissolveDeath()

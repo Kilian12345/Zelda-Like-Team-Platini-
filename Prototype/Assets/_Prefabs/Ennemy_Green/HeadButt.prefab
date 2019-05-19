@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   punch: {fileID: 8300000, guid: 11c09de7432d6224181639cea8f67135, type: 3}
-  particlesBlood: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf,
+  particlesBlood: {fileID: 7430826996442426230, guid: be06a1c0ea2364e4dbb8e68b7b187c93,
     type: 3}
   particlesThanos: {fileID: 3525380330377394275, guid: 2d219f1605ae3a141ac46f5431304ad4,
     type: 3}
@@ -202,8 +202,10 @@ MonoBehaviour:
     type: 3}
   parent: {fileID: 6249049812098786730}
   health: 100
+  maxHealth: 0
   dissolveAmout: 0
   scorePerHit: 50
+  curScore: 0
   getDissolve: 0
   isPowder: 0
   miniBoss: {x: 0, y: 0, z: 0}
