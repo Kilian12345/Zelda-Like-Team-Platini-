@@ -24,6 +24,8 @@ public class ThrowingMechanic : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log(isCaught);
+        
         if (Vector2.Distance(transform.position, ps.centrePoint.transform.position) <= pickupDistance)
         {
             canBePicked = true;
