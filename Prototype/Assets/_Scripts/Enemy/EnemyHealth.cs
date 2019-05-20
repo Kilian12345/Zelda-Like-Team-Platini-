@@ -68,9 +68,10 @@ public class EnemyHealth : MonoBehaviour
         }
 
         if (Vector2.Distance(transform.position, pl.position) > 0.2)
-        {
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        }
+        {gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;}
+
+        if (health <= 50)
+        {renderChara.Tint = new Color (1,0.5f,0.5f);}
 
             ZoneDamage();
 
