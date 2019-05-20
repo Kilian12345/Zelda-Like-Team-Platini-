@@ -135,7 +135,6 @@ public class FeedBack_Manager : MonoBehaviour
     public bool ennemyGetHit; //// screenSkahe
     public bool ennemyDied;//
     public bool Scripted_Scene;////
-    public bool hasBeenThrowed; ///// throw
     public ParticleSystem boxExpolsion;//
     public bool throwScrShake; //
 

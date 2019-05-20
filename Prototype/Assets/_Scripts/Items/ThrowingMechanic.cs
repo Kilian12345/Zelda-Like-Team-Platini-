@@ -8,7 +8,8 @@ public class ThrowingMechanic : MonoBehaviour
     public float damage;
     public bool isCaught, toThrow;
     public bool canBePicked;
-    private bool hasBeenThrowed;
+    public bool hasBeenThrowed;
+    public bool isThrowing;
     private Vector2 lastPos;
     Player ps;
     GameObject player;
@@ -60,6 +61,7 @@ public class ThrowingMechanic : MonoBehaviour
         }
         else
         {
+            hasBeenThrowed = false;
             bColl.enabled = true;
         }
 
@@ -74,8 +76,8 @@ public class ThrowingMechanic : MonoBehaviour
             {
                 if (!isCaught)
                 {
-                    hasBeenThrowed=true;
-                    Fb_Mana.hasBeenThrowed = hasBeenThrowed;
+                    isThrowing = false;
+                    hasBeenThrowed =true;
                     Fb_Mana.boxExpolsion = boxExpolsion;
                 }
             }
@@ -83,17 +85,18 @@ public class ThrowingMechanic : MonoBehaviour
         }
     }
 
+
     void recPos()
     {
         Vector3 movement = new Vector3(ps.moveHor, ps.moveVer, 0);
         lastPos = player.transform.position + movement * throwDistance;
         hasBeenThrowed=false;
-        Fb_Mana.hasBeenThrowed = hasBeenThrowed;
         toThrow = true;
     }
 
     void Throw()
     {
         transform.position = Vector2.MoveTowards(transform.position, lastPos, throwVelocity * Time.deltaTime);
+        isThrowing = true;
     }
 }

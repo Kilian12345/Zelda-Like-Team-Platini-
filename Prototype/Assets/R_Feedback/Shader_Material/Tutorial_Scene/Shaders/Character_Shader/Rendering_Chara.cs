@@ -9,7 +9,8 @@ public class Rendering_Chara : MonoBehaviour
         , DissolveColor = new Color(0,0,0,1)
         , DissolveEmission = new Color(1, 1, 1, 1)
         , OutlineColor = new Color(1, 1, 1, 1);
-    
+    Color WhiteHit = Color.white;
+    Color FeedBack_Hit;
     Color HitColorTransition = Color.black;
     [HideInInspector] public Color transitionDissolve;
 
@@ -78,7 +79,10 @@ public class Rendering_Chara : MonoBehaviour
     {
         isOpaque = true;
         _propBlock.SetFloat("_OpaqueMode", 1); 
-        if (Sinus <= 0.0f) {_propBlock.SetColor("_OpaqueColor", HitColor);} 
+        if (plScript.damage <= 45 && isPlayer == false) {FeedBack_Hit = WhiteHit;}
+        else {FeedBack_Hit = HitColor;}
+
+        if (Sinus <= 0.0f) {_propBlock.SetColor("_OpaqueColor", FeedBack_Hit);} 
         else {_propBlock.SetColor("_OpaqueColor", HitColorTransition);}
 
         yield return new WaitForSeconds(hitDuration);

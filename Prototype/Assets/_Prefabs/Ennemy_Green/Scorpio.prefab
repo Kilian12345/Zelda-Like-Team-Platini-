@@ -260,12 +260,13 @@ MonoBehaviour:
   DissolveColor: {r: 0, g: 0, b: 0, a: 1}
   DissolveEmission: {r: 0.92933357, g: 1, b: 0, a: 1}
   OutlineColor: {r: 1, g: 0, b: 0, a: 1}
+  transitionDissolve: {r: 0, g: 0, b: 0, a: 0}
   isOpaque: 0
   isDissolve: 0
   isOutline: 0
   isPlayer: 0
   timeHitFB: 80
-  hitDuration: 0.05
+  hitDuration: 0.15
   dissolveAmout: -0.1
   dissolveGrain: 0.067
 --- !u!114 &6213787847539697721
@@ -397,6 +398,9 @@ MonoBehaviour:
   isCaught: 0
   toThrow: 0
   canBePicked: 0
+  hasBeenThrowed: 0
+  isThrowing: 0
+  boxExpolsion: {fileID: 0}
 --- !u!1 &6213787847915288303
 GameObject:
   m_ObjectHideFlags: 0

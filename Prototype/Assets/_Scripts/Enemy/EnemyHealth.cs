@@ -215,9 +215,10 @@ public class EnemyHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-         if (col.gameObject.tag == "Throwing_Object" && Fb_Mana.hasBeenThrowed==false)
+         if (col.gameObject.tag == "Throwing_Object" && col.gameObject.GetComponent<ThrowingMechanic>().isThrowing )
          {
              health -= 50;
+             renderChara.isOpaque = true;
              Instantiate(Fb_Mana.boxExpolsion , col.transform.position, Quaternion.identity );
              Destroy (col.gameObject);
              Fb_Mana.throwScrShake = true;
