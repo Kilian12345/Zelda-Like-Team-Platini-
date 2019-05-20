@@ -207,6 +207,18 @@ public class EnemyHealth : MonoBehaviour
         yield return health;
     }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+         if (col.gameObject.tag == "Throwing_Object" && Fb_Mana.hasBeenThrowed==false)
+         {
+             health -= 50;
+             Instantiate(Fb_Mana.boxExpolsion , col.transform.position, Quaternion.identity );
+             Destroy (col.gameObject);
+             Fb_Mana.throwScrShake = true;
+         }
+
+    }
+
 }
 
 

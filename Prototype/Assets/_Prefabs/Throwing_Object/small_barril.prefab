@@ -114,6 +114,8 @@ MonoBehaviour:
   isCaught: 0
   toThrow: 0
   canBePicked: 0
+  boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
+    type: 3}
 --- !u!70 &6129395250849588454
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

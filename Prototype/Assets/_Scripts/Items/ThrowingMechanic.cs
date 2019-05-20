@@ -13,6 +13,8 @@ public class ThrowingMechanic : MonoBehaviour
     Player ps;
     GameObject player;
     Collider2D bColl;
+    FeedBack_Manager Fb_Mana;
+    public ParticleSystem boxExpolsion;
 
 
     void Start()
@@ -20,6 +22,7 @@ public class ThrowingMechanic : MonoBehaviour
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player = GameObject.FindGameObjectWithTag("Player");
         bColl = GetComponent<Collider2D>();
+        Fb_Mana = GameObject.FindGameObjectWithTag("FeedBack_Manager").GetComponent<FeedBack_Manager>();
     }
 
     void FixedUpdate()
@@ -74,6 +77,8 @@ public class ThrowingMechanic : MonoBehaviour
                 if (!isCaught)
                 {
                     hasBeenThrowed=true;
+                    Fb_Mana.hasBeenThrowed = hasBeenThrowed;
+                    Fb_Mana.boxExpolsion = boxExpolsion;
                 }
             }
 
@@ -85,15 +90,12 @@ public class ThrowingMechanic : MonoBehaviour
         Vector3 movement = new Vector3(ps.moveHor, ps.moveVer, 0);
         lastPos = player.transform.position + movement * throwDistance;
         hasBeenThrowed=false;
+        Fb_Mana.hasBeenThrowed = hasBeenThrowed;
         toThrow = true;
     }
 
     void Throw()
     {
         transform.position = Vector2.MoveTowards(transform.position, lastPos, throwVelocity * Time.deltaTime);
-    }
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("OnCollisionEnter2D");
     }
 }

@@ -132,9 +132,12 @@ public class FeedBack_Manager : MonoBehaviour
     #endregion
 
     ////////////// Feedback Control
-    public bool ennemyGetHit;
-    public bool ennemyDied;
-    public bool Scripted_Scene;
+    public bool ennemyGetHit; //// screenSkahe
+    public bool ennemyDied;//
+    public bool Scripted_Scene;////
+    public bool hasBeenThrowed; ///// throw
+    public ParticleSystem boxExpolsion;//
+    public bool throwScrShake; //
 
     void Start()
     {
@@ -162,6 +165,7 @@ public class FeedBack_Manager : MonoBehaviour
         else {StopCoroutine(secondAbility());}
         if (ennemyGetHit == true ) {DynamicPunchVisu();}
         else if (ennemyDied == true) {StartCoroutine(EnnemyDeath());}
+        if (throwScrShake == true) {StartCoroutine(throwObject());}
         
         if(plScript.health >= 100) {Berserker();}
         else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
@@ -313,6 +317,18 @@ public class FeedBack_Manager : MonoBehaviour
         ennemyDied = false;
         StopCoroutine(EnnemyDeath());
 
+    }
+
+    IEnumerator throwObject()
+    {
+        shakeAmplitude = 0.7f;
+        shakeFrequency = 0.7f;
+        CameraShake();
+
+        yield return new WaitForSeconds(0.1f);
+        throwScrShake = false;
+
+        StopCoroutine(throwObject());
     }
 
 
