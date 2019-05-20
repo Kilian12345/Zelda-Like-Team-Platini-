@@ -131,6 +131,7 @@ public class Kami : MonoBehaviour
                 }
             }
         }
+        healthScript.health = 0;
         yield return new WaitForSeconds(0.5f);
         StopCoroutine(Explode());
         Destroy(gameObject);

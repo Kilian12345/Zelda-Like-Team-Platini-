@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 2100000, guid: 5434028597de0574b9f2453ccf17b027, type: 2}
-  viewRadius: 2
-  radius: 2
+  viewRadius: 1.5
+  radius: 1.5
   viewAngle: 360
   obstacleMask:
     serializedVersion: 2
@@ -205,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896434730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.26}
+  m_LocalPosition: {x: 0, y: 0, z: 0.005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28933506}
@@ -222,8 +222,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
-  m_Range: 3.26
+  m_Intensity: 1.68
+  m_Range: 1.52
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -244,7 +244,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1.24
+  m_BounceIntensity: 1.89
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0485b26a94a32458ad87265a1e2238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 0
   CalciumAmount: 0
   CalciumCapacity: 25
   curDropChanceRate: 0
@@ -509,8 +509,8 @@ MonoBehaviour:
   died: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
   playerAudio: {fileID: 0}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
-  toolbarTab: 2
-  currentTab: Combat
+  toolbarTab: 1
+  currentTab: Movement
   takeDamage: 0
 --- !u!82 &82004872805990916
 AudioSource:
@@ -667,7 +667,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b384c80250d32b1478004f5f0ca63322, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -788,7 +788,7 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   speed: 1
-  speedNormal: 1
+  speedNormal: 1.2
   selectedAbility: 0
   player: {fileID: 50474951112767800}
   animator: {fileID: 1199763254}

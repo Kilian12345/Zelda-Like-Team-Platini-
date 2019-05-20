@@ -8,17 +8,19 @@ public class DropChance : MonoBehaviour
     Player ps;
     GameObject player;
     private bool canSpawn;
+    EnemyHealth healthScript;
     // Start is called before the first frame update
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         ps = player.GetComponent<Player>();
+        healthScript= GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (player)
+        if (!ps.isDead && healthScript.health<=0)
         {
             canSpawn = true;
         }
