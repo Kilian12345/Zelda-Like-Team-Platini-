@@ -25,6 +25,8 @@ public class EnemyHealth : MonoBehaviour
     public bool getDissolve = false, isPowder;
     bool zoneDeath = false;
     bool scrShake = false; // Death ScrennShake
+    bool tintBloodDone = false; //// tint ennemy bellow 50%
+    bool tintBloodDoneTwo = false; //
     Player ps;
     Transform pl;
     [SerializeField]Vector3 miniBoss; 
@@ -70,12 +72,15 @@ public class EnemyHealth : MonoBehaviour
         if (Vector2.Distance(transform.position, pl.position) > 0.2)
         {gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;}
 
-        if (health <= 50)
-        {renderChara.Tint = new Color (1,0.5f,0.5f);}
+        if (health <= 50 && tintBloodDone == false)
+        {
+            renderChara.Tint = new Color (1,0.5f,0.5f);
+            tintBloodDone = true;
+        }
 
             ZoneDamage();
 
-            //dissolveAmout = renderChara.dissolveAmout; /////// For Export
+            dissolveAmout = renderChara.dissolveAmout; /////// For Export
 
     }
 
@@ -183,7 +188,7 @@ public class EnemyHealth : MonoBehaviour
         {isPowder = true;}
         if(renderChara.dissolveAmout >= 1.0f)
         dissolveAmout = renderChara.dissolveAmout;
-        {Destroy(parent, 0.6f);}
+        {Destroy(parent, 1f);}
     }
 
     IEnumerator ThirdDamage()

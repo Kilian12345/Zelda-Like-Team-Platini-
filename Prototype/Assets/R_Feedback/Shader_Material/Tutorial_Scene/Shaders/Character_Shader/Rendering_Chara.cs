@@ -11,7 +11,7 @@ public class Rendering_Chara : MonoBehaviour
         , OutlineColor = new Color(1, 1, 1, 1);
     
     Color HitColorTransition = Color.black;
-    Color transitionDissolve;
+    [HideInInspector] public Color transitionDissolve;
 
     public bool isOpaque, isDissolve, isOutline, isPlayer;
     [Range(40 , 80)] public float timeHitFB;
@@ -32,7 +32,7 @@ public class Rendering_Chara : MonoBehaviour
         _renderer = GetComponent<Renderer>();        
     }
 
-    void Update()
+    void LateUpdate()
     {
 
         _renderer.GetPropertyBlock(_propBlock);
@@ -92,12 +92,15 @@ public class Rendering_Chara : MonoBehaviour
     void Dissolve() //// When the nigga died
     {
         if(transitionDissolve != Color.black)
-        transitionDissolve = new Color(transitionDissolve.r - 0.1f,transitionDissolve.g- 0.1f,transitionDissolve.b- 0.1f);
+        {
+            transitionDissolve = new Color(transitionDissolve.r - 0.033f,transitionDissolve.g- 0.033f,transitionDissolve.b- 0.033f);
+        }
         
         Tint = transitionDissolve;
 
-        if (transitionDissolve == Color.black && dissolveAmout < 1.1f)
+        if (transitionDissolve.r <= 0 && dissolveAmout < 1.1f)
         {
+           Debug.Log("thanos");
           _propBlock.SetFloat("_DissolveMode", 1);
           _propBlock.SetFloat("_DissolveAmount", dissolveAmout);
           _propBlock.SetFloat("_DissolveGrain", dissolveGrain);
@@ -105,7 +108,7 @@ public class Rendering_Chara : MonoBehaviour
           _propBlock.SetFloat("_OpaqueMode", 1);
           _propBlock.SetColor("_OpaqueColor", DissolveColor);
 
-            dissolveAmout += 0.01f;
+            dissolveAmout += 0.02f;
 
         }
         else if (dissolveAmout >= 1.1f)
