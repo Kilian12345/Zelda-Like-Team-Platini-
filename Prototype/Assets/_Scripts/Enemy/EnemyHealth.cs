@@ -210,7 +210,7 @@ public class EnemyHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-         if (col.gameObject.tag == "Throwing_Object" && Fb_Mana.hasBeenThrowed==false)
+         if (col.gameObject.tag == "Throwing_Object" && col.gameObject.GetComponent<ThrowingMechanic>().isThrowing /*Fb_Mana.hasBeenThrowed==false*/)
          {
              health -= 50;
              Instantiate(Fb_Mana.boxExpolsion , col.transform.position, Quaternion.identity );
