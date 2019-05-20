@@ -149,7 +149,6 @@ public class SpiderborgBehaviour : MonoBehaviour
         yield return new WaitForSeconds(2f);
         occupied = false;
         landed = true;
-        Debug.Log("landing");
         yield return null;
     }
 

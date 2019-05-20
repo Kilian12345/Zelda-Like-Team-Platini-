@@ -24,7 +24,7 @@ public class DestroyComponent : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         Destroy(obj);
         yield return null;
-        StopCoroutine(AttackTime());
+        //StopCoroutine(AttackTime());
     }
 
      private void OnTriggerEnter2D(Collider2D col)

@@ -32,7 +32,6 @@ public class Scripted_Camera : MonoBehaviour
     {
         if (OnTrigger == true)
         {
-            Debug.Log("Nik");
 
             if (collision.tag == "Player")
             {Triggered = true;}

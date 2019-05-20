@@ -312,7 +312,6 @@ public class FeedBack_Manager : MonoBehaviour
         CameraShake();
 
         yield return new WaitForSeconds(0.1f);
-        Debug.Log("Died");
 
         ennemyDied = false;
         StopCoroutine(EnnemyDeath());

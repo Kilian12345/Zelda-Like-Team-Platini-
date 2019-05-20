@@ -525,7 +525,6 @@ public class Player : MonoBehaviour
         for (int i = 0; i < foundObjects.Length; i++)
         {
             Destroy(foundObjects[i]);
-            Debug.Log("Destroyed");
         }
     }
 
@@ -660,7 +659,6 @@ public class Player : MonoBehaviour
     {
         playerAudio.clip = hit;
         playerAudio.Play();
-        Debug.Log("BitchGotHit");
         health += dam;
         takeDamage = true;
     }

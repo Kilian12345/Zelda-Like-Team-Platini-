@@ -34,7 +34,6 @@ public class ThrowingMechanic : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Joystick1Button4)  /*Input.GetKeyDown(KeyCode.Space)*/)
             {
-                Debug.Log("ASD");
                 if (!isCaught)
                 {
                     isCaught = true;
@@ -42,7 +41,6 @@ public class ThrowingMechanic : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Joystick1Button5)  /*Input.GetKeyDown(KeyCode.A)*/)
             {
-                Debug.Log("LSD");
                 if (isCaught)
                 {
                     isCaught = false;

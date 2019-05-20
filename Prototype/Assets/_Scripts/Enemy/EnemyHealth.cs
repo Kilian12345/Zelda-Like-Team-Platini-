@@ -44,7 +44,6 @@ public class EnemyHealth : MonoBehaviour
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         renderChara = GetComponent<Rendering_Chara>(); 
         Fb_Mana = GameObject.FindGameObjectWithTag("FeedBack_Manager").GetComponent<FeedBack_Manager>();     
-        renderChara = GetComponent<Rendering_Chara>();
         curScore = scorePerHit;
         maxHealth = health;
     }
@@ -75,7 +74,7 @@ public class EnemyHealth : MonoBehaviour
 
             ZoneDamage();
 
-            dissolveAmout = renderChara.dissolveAmout; /////// For Export
+            //dissolveAmout = renderChara.dissolveAmout; /////// For Export
 
     }
 
@@ -182,6 +181,7 @@ public class EnemyHealth : MonoBehaviour
         if (renderChara.dissolveAmout >= 0.2f)
         {isPowder = true;}
         if(renderChara.dissolveAmout >= 1.0f)
+        dissolveAmout = renderChara.dissolveAmout;
         {Destroy(parent, 0.6f);}
     }
 

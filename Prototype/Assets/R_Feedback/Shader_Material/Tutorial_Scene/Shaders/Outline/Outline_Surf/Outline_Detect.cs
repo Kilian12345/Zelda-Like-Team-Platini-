@@ -15,16 +15,23 @@ public class Outline_Detect : MonoBehaviour
         throwing = GetComponent<ThrowingMechanic>();
         _propBlock = new MaterialPropertyBlock();
     }
-    void Update()
+    void LateUpdate()
     {
-        myRenderer.GetPropertyBlock(_propBlock);
 
         if (throwing.canBePicked == true)
-        {_propBlock.SetFloat("_OutlineMode", 1);}
+        {
+            myRenderer.GetPropertyBlock(_propBlock);
+            _propBlock.SetFloat("_OutlineMode", 1);
+            myRenderer.SetPropertyBlock(_propBlock);
+        }
         else 
-        {_propBlock.SetFloat("_OutlineMode", 0);}
+        {
+            myRenderer.GetPropertyBlock(_propBlock);
+            _propBlock.SetFloat("_OutlineMode", 0);
+            myRenderer.SetPropertyBlock(_propBlock);
+        }
 
-        myRenderer.SetPropertyBlock(_propBlock);
+
     }
 
 }
