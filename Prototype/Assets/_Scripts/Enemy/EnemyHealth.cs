@@ -139,8 +139,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (ThAb.visiblePlayer.Contains(this.transform))
         {StartCoroutine(ThirdDamage());}
-        else if (laserZone.visiblePlayer.Contains(this.transform))
-        {StartCoroutine(LaserDamage());}
+        /*else if (laserZone.visiblePlayer.Contains(this.transform))
+        {StartCoroutine(LaserDamage());}*/
 
     }
 

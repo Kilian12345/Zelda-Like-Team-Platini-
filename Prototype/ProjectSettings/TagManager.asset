@@ -13,6 +13,8 @@ TagManager:
   - Trigger
   - MiniBoss
   - Strike
+  - Throwing_Object
+  - LevelEnd
   layers:
   - Default
   - TransparentFX

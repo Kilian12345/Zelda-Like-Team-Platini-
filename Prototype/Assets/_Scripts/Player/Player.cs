@@ -140,6 +140,12 @@ public class Player : MonoBehaviour
     public bool takeDamage = false;
     #endregion
 
+    #region Level
+
+    private bool levelEnd=false;
+
+    #endregion
+
     // Use this for initialization
     void Awake()
     {
@@ -244,6 +250,12 @@ public class Player : MonoBehaviour
                 death();
             }
         }
+
+        if (levelEnd)
+        { 
+            Invoke("nextLevel", 1f);
+        }
+
         if (Input.GetButton("Refill"))
         {
             StartCoroutine(refill());
@@ -516,7 +528,28 @@ public class Player : MonoBehaviour
         playerAudio.Play();
         Instantiate(particles, transform.position, Quaternion.identity);
         vel = 0;
-        Destroy(gameObject,0.5f);
+        Invoke("restart", 0.7f);
+        //Destroy(gameObject,0.5f);
+    }
+
+    void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void nextLevel()
+    {
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex)+1);
+    }
+
+    void OnApplicationQuit()
+    {
+        var foundObjects = FindObjectsOfType<CalciumBones>();
+        for (int i = 0; i < foundObjects.Length; i++)
+        {
+            Destroy(foundObjects[i]);
+            Debug.Log("Quit Destroyed");
+        }
     }
 
     void OnDisable()
@@ -525,7 +558,7 @@ public class Player : MonoBehaviour
         for (int i = 0; i < foundObjects.Length; i++)
         {
             Destroy(foundObjects[i]);
-            Debug.Log("Destroyed");
+            Debug.Log("Disable Destroyed ");
         }
     }
 
@@ -560,20 +593,26 @@ public class Player : MonoBehaviour
         //transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
     }
 
-    /*void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Strike")
+        if (col.gameObject.tag == "LevelEnd")
         {
-            TakeDamage(25f);
+            if (!levelEnd)
+            {
+                levelEnd = true;
+            }
         }
     }
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Strike")
+        if (col.gameObject.tag == "LevelEnd")
         {
-            TakeDamage(25f);
+            if (!levelEnd)
+            {
+                levelEnd = true;
+            }
         }
-    }*/
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
