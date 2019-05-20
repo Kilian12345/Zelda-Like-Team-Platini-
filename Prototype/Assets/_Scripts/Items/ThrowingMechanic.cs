@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ThrowingMechanic : MonoBehaviour
 {
-    public float throwDistance,throwVelocity,pickupDistance;
+    public float throwDistance, throwVelocity, pickupDistance;
     public float damage;
-    public bool isCaught,toThrow;
+    public bool isCaught, toThrow;
     public bool canBePicked;
     private bool hasBeenThrowed;
     private Vector2 lastPos;
@@ -24,8 +24,7 @@ public class ThrowingMechanic : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(isCaught);
-        
+
         if (Vector2.Distance(transform.position, ps.centrePoint.transform.position) <= pickupDistance)
         {
             canBePicked = true;
@@ -47,9 +46,9 @@ public class ThrowingMechanic : MonoBehaviour
                     recPos();
                 }
             }
-            Physics2D.IgnoreCollision(bColl, player.GetComponent<CapsuleCollider2D>(),toThrow);
+            Physics2D.IgnoreCollision(bColl, player.GetComponent<CapsuleCollider2D>(), toThrow);
         }
-        else{canBePicked = false;}
+        else { canBePicked = false; }
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         //Debug.Log(GetComponent<Rigidbody2D>().velocity);
 
@@ -59,7 +58,7 @@ public class ThrowingMechanic : MonoBehaviour
             transform.position = ps.carryPoint.transform.position;
         }
         else
-        { 
+        {
             bColl.enabled = true;
         }
 
@@ -70,18 +69,31 @@ public class ThrowingMechanic : MonoBehaviour
         if (Vector2.Distance(transform.position, lastPos) <= 1)
         {
             toThrow = false;
+            if (!hasBeenThrowed)
+            {
+                if (!isCaught)
+                {
+                    hasBeenThrowed=true;
+                }
+            }
+
         }
     }
 
     void recPos()
     {
-        Vector3 movement = new Vector3(ps.moveHor, ps.moveVer,0);
-        lastPos = player.transform.position+movement*throwDistance;
+        Vector3 movement = new Vector3(ps.moveHor, ps.moveVer, 0);
+        lastPos = player.transform.position + movement * throwDistance;
+        hasBeenThrowed=false;
         toThrow = true;
     }
 
     void Throw()
     {
         transform.position = Vector2.MoveTowards(transform.position, lastPos, throwVelocity * Time.deltaTime);
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionEnter2D");
     }
 }

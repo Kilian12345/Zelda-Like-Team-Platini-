@@ -393,6 +393,7 @@ MonoBehaviour:
   throwDistance: 2
   throwVelocity: 2
   pickupDistance: 0.25
+  damage: 0
   isCaught: 0
   toThrow: 0
   canBePicked: 0
@@ -405,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6213787847915288302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: p1
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -435,7 +436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6213787848423542598}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: p2
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -495,7 +496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6213787849082613903}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Scorpio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6213787849137195211}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: p3
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
