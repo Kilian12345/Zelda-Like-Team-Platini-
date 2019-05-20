@@ -93,14 +93,16 @@ public class Rendering_Chara : MonoBehaviour
     {
         if(transitionDissolve != Color.black)
         {
-            transitionDissolve = new Color(transitionDissolve.r - 0.033f,transitionDissolve.g- 0.033f,transitionDissolve.b- 0.033f);
+            transitionDissolve = new Color
+            (transitionDissolve.r - 0.033f,
+             transitionDissolve.g - 0.033f,
+             transitionDissolve.b - 0.033f);
         }
         
         Tint = transitionDissolve;
 
         if (transitionDissolve.r <= 0 && dissolveAmout < 1.1f)
         {
-           Debug.Log("thanos");
           _propBlock.SetFloat("_DissolveMode", 1);
           _propBlock.SetFloat("_DissolveAmount", dissolveAmout);
           _propBlock.SetFloat("_DissolveGrain", dissolveGrain);
