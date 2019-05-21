@@ -6,7 +6,7 @@ public class MenuManager : MonoBehaviour
     #region Public Methods
     public bool English;
 
-    private void Start()
+    private void Awake()
     {
         English = true;
         Debug.Log("EN");
