@@ -154,6 +154,7 @@ MonoBehaviour:
   virtualCamera: {fileID: 290785488}
   virtualCameraNoise: {fileID: 0}
   timeBloom: 0
+  baseBloom: 0
   bloom: 20
   timeLens: 1
   vignetteColor: {r: 1, g: 0, b: 0, a: 1}
@@ -180,13 +181,28 @@ MonoBehaviour:
   colorMaxTime: 0
   mode: 0
   previousMode: 0
-  doneSecond: 0
+  glitchRageEnabled: 0
+  playerMat: {fileID: 0}
+  firstActivated: 0
+  opaqueColor: {r: 0, g: 0, b: 0, a: 0}
+  timeFirstAbility: 0
   secondActivated: 0
-  timeSecond: 0
+  timeSecondAbility: 0
   timeDeltaSecond: 0
+  thirdActivated: 0
   timeThird: 0
+  ghostAcivated: 0
+  ghostFadeSpeedFirst: 0
+  ghostFadeSpeedSecond: 0
+  ghostSpawnRateFirst: 0
+  ghostSpawnRateSecond: 0
   toolbarTab: 0
   currentTab: Transition
+  ennemyGetHit: 0
+  ennemyDied: 0
+  Scripted_Scene: 0
+  boxExpolsion: {fileID: 0}
+  throwScrShake: 0
 --- !u!4 &162862369
 Transform:
   m_ObjectHideFlags: 0
@@ -391,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cd246d238dd1f4abe03fc2039ebd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fb_Mana: {fileID: 0}
   player: {fileID: 1532325888}
   RippleMaterial: {fileID: 2100000, guid: 9f00670a7687fee4c8a9fd548dd8d0fe, type: 2}
   MaxAmount: 50

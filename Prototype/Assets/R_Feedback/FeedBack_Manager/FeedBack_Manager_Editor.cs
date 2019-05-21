@@ -101,6 +101,12 @@ public class FeedBack_Manager_Editor : Editor
 
 
     #endregion
+
+    #region Vibration
+    private SerializedProperty bigVibration;
+    private SerializedProperty smallVibration;
+    private SerializedProperty vibrateTime;
+    #endregion
    
 
     private void OnEnable()
@@ -160,6 +166,10 @@ public class FeedBack_Manager_Editor : Editor
         ghostFadeSpeedSecond = soTarget.FindProperty("ghostFadeSpeedSecond");
         ghostSpawnRateFirst = soTarget.FindProperty("ghostSpawnRateFirst");
         ghostSpawnRateSecond = soTarget.FindProperty("ghostSpawnRateSecond");
+        
+        bigVibration = soTarget.FindProperty("bigVibration");
+        smallVibration = soTarget.FindProperty("smallVibration");
+        vibrateTime = soTarget.FindProperty("vibrateTime");
 
     }
 
@@ -168,7 +178,7 @@ public class FeedBack_Manager_Editor : Editor
         soTarget.Update();
         EditorGUI.BeginChangeCheck();
 
-        myTarget.toolbarTab = GUILayout.Toolbar(myTarget.toolbarTab, new string[] { "Transition", "Post-Process", "Screen Shake", "Camera Shader", "Abilities"});
+        myTarget.toolbarTab = GUILayout.Toolbar(myTarget.toolbarTab, new string[] { "Transition", "Post-Process", "Screen Shake", "Camera Shader", "Abilities", "Vibration"});
 
         switch (myTarget.toolbarTab)
         {
@@ -186,6 +196,9 @@ public class FeedBack_Manager_Editor : Editor
                 break;
             case 4:
                 myTarget.currentTab = "Abilities";
+                break;
+            case 5:
+                myTarget.currentTab = "Vibration";
                 break;
         }
 
@@ -261,6 +274,12 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(timeThird);
                 EditorGUILayout.PropertyField(ghostFadeSpeedSecond);
                 EditorGUILayout.PropertyField(ghostSpawnRateSecond);
+                break;
+                
+            case "Vibration":
+                EditorGUILayout.PropertyField(bigVibration);
+                EditorGUILayout.PropertyField(smallVibration);
+                EditorGUILayout.PropertyField(vibrateTime);
                 break;
         }
 

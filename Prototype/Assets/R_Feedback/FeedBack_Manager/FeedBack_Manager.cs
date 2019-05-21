@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.Rendering.PostProcessing;
 using Cinemachine;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class FeedBack_Manager : MonoBehaviour
 {
@@ -122,7 +123,11 @@ public class FeedBack_Manager : MonoBehaviour
     public float ghostSpawnRateSecond;
 
     #endregion
-
+    #region Vibration
+    public float bigVibration;
+    public float smallVibration;
+    public float vibrateTime;
+    #endregion
 
     #region GUI LAYOUT
 
@@ -255,6 +260,12 @@ public class FeedBack_Manager : MonoBehaviour
                 shakeElapsedTime = 0f;
             }
         }
+    }
+
+    public void Vibrate()
+    {
+         GamePad.SetVibration(0,bigVibration,bigVibration);
+         GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration);  
     }
 
     IEnumerator firstAbility()
