@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && GameIsPaused == false)
+        if (Input.GetButtonDown("Cancel") && GameIsPaused == false)
         {
             Debug.Log("activate canvas");
             canvas.SetActive(true);
@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
             StartCoroutine("Pause");
         }
 
-        else if(Input.GetKeyDown(KeyCode.Escape) && GameIsPaused == true)
+        else if(Input.GetButtonDown("Cancel") && GameIsPaused == true)
         {
             Debug.Log("deactivate canvas");
             canvas.SetActive(false);
