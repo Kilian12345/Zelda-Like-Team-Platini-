@@ -42,7 +42,7 @@ public class Scripted_Camera : MonoBehaviour
         {
 
             if (collision.tag == "Player")
-            {Triggered = true; Debug.Log("sex");}
+            {Triggered = true;}
             else
             { Triggered = false; }
 

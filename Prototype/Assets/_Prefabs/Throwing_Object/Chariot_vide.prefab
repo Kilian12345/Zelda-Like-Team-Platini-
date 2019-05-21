@@ -127,12 +127,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwDistance: 2
-  throwVelocity: 1.5
+  throwVelocity: 2
   pickupDistance: 0.25
   damage: 0
   isCaught: 0
   toThrow: 0
   canBePicked: 0
+  hasBeenThrowed: 0
+  isThrowing: 0
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
 --- !u!114 &2976883091581127101

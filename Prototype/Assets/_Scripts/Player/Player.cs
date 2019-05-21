@@ -669,6 +669,13 @@ public class Player : MonoBehaviour
                     toPunch = false;
                     break;
                 }
+
+                if (enemiestoDamage[i].GetComponent<ThrowingMechanic>() != null)///////////// in Progress
+                {
+                    enemiestoDamage[i].GetComponent<ThrowingMechanic>().Destroy();
+                    toPunch = false;
+                    break;
+                }
             }
             toPunch = false;
             Fb_mana.ennemyGetHit = false;
