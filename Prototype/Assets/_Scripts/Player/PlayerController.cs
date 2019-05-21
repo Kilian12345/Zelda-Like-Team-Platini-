@@ -22,8 +22,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Vector2 mov;
     private Vector2 movWithoutSpeed;
-
-    private bool NewActionAllowed = true;
+    [HideInInspector]
+    public float baseMultiplier;
+    private float multiplier;
+    [HideInInspector]
+    public bool NewActionAllowed = true;
     public bool isPushed;
 
     Player plScript;
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour
     {
         plScript = GetComponent<Player>();
         speedInCombat = 0.5f;
+        baseMultiplier = 1f;
+        multiplier = baseMultiplier;
     }
 
     private void Update()
@@ -64,21 +69,29 @@ public class PlayerController : MonoBehaviour
         {
             vertical = -1;
         }
-        if (Mathf.Abs(horizontal) == 1 && Mathf.Abs(vertical) == 1)
+        /*if (Mathf.Abs(horizontal) == 1 && Mathf.Abs(vertical) == 1)
         {
             horizontal = horizontal / 2;
             vertical = vertical / 2;
-        }
+        }*/
         moveHorizontal = horizontal * speed;
         moveVertical = vertical * speed;
         Vector3 movement = new Vector2(moveHorizontal, moveVertical);
         //transform.position = transform.position + movement * Time.deltaTime; ;
         if (!isPushed)
         {
-            player.velocity = movement * speed;
+            
+            if (NewActionAllowed)
+            {
+                player.velocity = movement * speed * baseMultiplier;
+                Debug.Log("Base Mul " + baseMultiplier);
+            }
+            else
+            {
+                player.velocity = movement * speed*multiplier;
+                Debug.Log("Mul " + multiplier);
+            }
         }
-
-
         //magnitude = sqrt(x*x + y*y + z*z) so whenever the player is moving x,y or z > 1 so magnitude > 1
         animator.SetFloat("Horizontal", movWithoutSpeed.x);
         animator.SetFloat("Vertical", movWithoutSpeed.y);
@@ -94,7 +107,7 @@ public class PlayerController : MonoBehaviour
         {
             NewActionAllowed = false;
             animator.SetBool("Attacking", true);
-
+            multiplier = 1f;
             animator.SetFloat("Horizontal", movWithoutSpeed.x);
             animator.SetFloat("Vertical", movWithoutSpeed.y);
 
@@ -103,6 +116,7 @@ public class PlayerController : MonoBehaviour
             NewActionAllowed = true;
             animator.SetBool("Attacking", false);
             speed = speedNormal;
+            multiplier = baseMultiplier;
         }
     }
 
@@ -119,6 +133,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("AbilityActive", false);
             animator.SetBool("Ability1", false);
             speed = speedNormal;
+            multiplier = baseMultiplier;
         }
         else if (/*Input.GetButtonDown("Ability2") && */plScript.activatedAbility==2)
         {
@@ -131,6 +146,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("AbilityActive", false);
             animator.SetBool("Ability2", false);
             speed = speedNormal;
+            multiplier = baseMultiplier;
         }
         else if (/*Input.GetButtonDown("Ability3") &&*/ plScript.activatedAbility==3)
         {
@@ -143,6 +159,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("AbilityActive", false);
             animator.SetBool("Ability3", false);
             speed = speedNormal;
+            multiplier = baseMultiplier;
         }
     }
     #endregion

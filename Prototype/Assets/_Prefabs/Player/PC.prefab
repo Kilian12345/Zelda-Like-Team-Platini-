@@ -789,7 +789,7 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   speed: 1
-  speedNormal: 1.2
+  speedNormal: 1
   selectedAbility: 0
   player: {fileID: 50474951112767800}
   animator: {fileID: 1199763254}
