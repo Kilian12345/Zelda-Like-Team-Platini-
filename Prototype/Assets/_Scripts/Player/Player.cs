@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     private Vector2 dir;
     private bool canCharge;
     Rigidbody2D player;
+    PlayerController plControl;
 
     #endregion
 
@@ -178,6 +179,7 @@ public class Player : MonoBehaviour
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
         source = gameObject.GetComponent<CinemachineImpulseSource>();
+        plControl = gameObject.GetComponent<PlayerController>();
         Fb_mana = FindObjectOfType<FeedBack_Manager>();
         LocalX = transform.localScale.x;
         health = 0;
@@ -406,6 +408,7 @@ public class Player : MonoBehaviour
         if (health >= 0 && health < 25)
         {
             damage = baseDamage;
+            plControl.baseMultiplier = 1f;
             abilityMeters[0].SetActive(false);
             abilityMeters[1].SetActive(false);
             abilityMeters[2].SetActive(false);
@@ -413,6 +416,7 @@ public class Player : MonoBehaviour
         else if (health >= 25 && health < 50)
         {
             damage = baseDamage * 0.8f;
+            plControl.baseMultiplier = 1.04f;
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(false);
             abilityMeters[2].SetActive(false);
@@ -420,6 +424,7 @@ public class Player : MonoBehaviour
         else if (health >= 50 && health < 75)
         {
             damage = baseDamage * 0.6f;
+            plControl.baseMultiplier = 1.08f;
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(true);
             abilityMeters[2].SetActive(false);
@@ -428,6 +433,7 @@ public class Player : MonoBehaviour
         else if (health >= 75 && health <= 100)
         {
             damage = baseDamage * 0.5f;
+            plControl.baseMultiplier = 1.12f;
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(true);
             abilityMeters[2].SetActive(true);
@@ -669,7 +675,7 @@ public class Player : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         //player.velocity = Vector3.zero;
-        //toPunch = false;
+        toPunch = false;
         StopCoroutine(Punch());
         gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
 
