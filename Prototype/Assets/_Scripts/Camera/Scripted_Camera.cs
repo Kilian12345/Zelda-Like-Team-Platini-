@@ -9,7 +9,7 @@ public class Scripted_Camera : MonoBehaviour
     PlayerController plScript;
     CinemachineVirtualCamera vcam;
 
-    [SerializeField] bool OnCollision, OnTrigger, OnEvent ,playerStopMouv;
+    [SerializeField] bool OnCollision, OnTrigger, OnEvent ,playerStopMouv, camFollow;
 
     bool Triggered;
 
@@ -55,9 +55,19 @@ public class Scripted_Camera : MonoBehaviour
 
             if (playerStopMouv == true)
             {plScript.speed = 0;}
+
+            if (camFollow == true)
+            {
+                vcam.Follow = plScript.GetComponent<Player>().centrePoint.transform;
+                vcam.LookAt = plScript.GetComponent<Player>().centrePoint.transform;
+            }
         }
         else
         {
+            
+            vcam.Follow = null;
+            vcam.LookAt = null;
+
             Triggered = false;
             vcam.Priority = 9;
             Fb_Mana.Scripted_Scene = false;
