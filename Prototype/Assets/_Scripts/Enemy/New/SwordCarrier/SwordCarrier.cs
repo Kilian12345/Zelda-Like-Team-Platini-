@@ -69,7 +69,7 @@ public class SwordCarrier : MonoBehaviour
         {
             if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange)
             {
-                if (!isFollowing && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
+                if (!isActive && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
                 {
                     plScript.EnemiesFollowing++;
                     isActive = true;

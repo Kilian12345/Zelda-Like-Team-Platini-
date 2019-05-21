@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: 9ec293cc68e3197479ad3e6ea08f8991
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: KAIZER_DEATH_0
+    21300002: KAIZER_DEATH_1
+    21300004: KAIZER_DEATH_2
+    21300006: KAIZER_DEATH_3
+    21300008: KAIZER_DEATH_4
+    21300010: KAIZER_DEATH_5
+    21300012: KAIZER_DEATH_6
+    21300014: KAIZER_DEATH_7
+    21300016: KAIZER_DEATH_8
+    21300018: KAIZER_DEATH_9
+    21300020: KAIZER_DEATH_10
+    21300022: KAIZER_DEATH_11
+    21300024: KAIZER_DEATH_12
+    21300026: KAIZER_DEATH_13
+    21300028: KAIZER_DEATH_14
+    21300030: KAIZER_DEATH_15
+    21300032: KAIZER_DEATH_16
+    21300034: KAIZER_DEATH_17
+    21300036: KAIZER_DEATH_18
+    21300038: KAIZER_DEATH_19
+    21300040: KAIZER_DEATH_20
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KAIZER_DEATH_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3570ec2a1b78045bf3f5d0fc25795c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657ef29c396187d4da7ac63a9786cf59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_2
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53e1b31c4a49724ba3ec3232b395484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_3
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8586c7ad0c8a89458b022f91e2935af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_4
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdf17fa8f06aeb47ae6e52859839989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_5
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994095fef85b4444991b792086454874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_6
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3ff8fb2652f0f448e49a2b471f8297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_7
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57d4b9a86a8336478b0390530b82d24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_8
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b26e4e902714e4a96e48593e3d6a5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_9
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bb18728907dbe4e90873749c8414c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_10
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fc278b3d100d849aa04200d9f6e5a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_11
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a326d2bc096228c4984ff5efdc275d97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_12
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b580a573b122545bc80be6423d55dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_13
+      rect:
+        serializedVersion: 2
+        x: 3224
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9828d92ada098f41a6c6b6678d1b120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_14
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f6788484239ac419a287e5ce0f9923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_15
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49bb56cc0102ab438cc2c4bbb2d5c6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_16
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5715532dffcd54596c5d099f8168f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_17
+      rect:
+        serializedVersion: 2
+        x: 4216
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dc25cafcc801443bca22e9e0128c92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_18
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23dbb8248ea48ee4aad03474af386154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_19
+      rect:
+        serializedVersion: 2
+        x: 4712
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6385bdf362a1a354d976b975916676a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KAIZER_DEATH_20
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 0
+        width: 248
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ccf3409cd390448b74e5f786be2a90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fd9dc520e824ad249a8ee643edf294f0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
