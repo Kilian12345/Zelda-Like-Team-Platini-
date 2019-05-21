@@ -75,11 +75,11 @@ public class Scripted_Camera : MonoBehaviour
             plScript.speed = oldSpeed;
         }
 
-        if (dialogue.DialogueCheck == true)
-                    everyEventDone = true;
 
+        yield return new WaitForSeconds(5f);
 
-        yield return new WaitForEndOfFrame();
+       // if (dialogue.DialogueCheck == true)
+             everyEventDone = true;
 
 
 
