@@ -4,7 +4,13 @@ using DFTGames.Localization;
 public class MenuManager : MonoBehaviour
 {
     #region Public Methods
-    public bool English = true;
+    public bool English;
+
+    private void Start()
+    {
+        English = true;
+        Debug.Log("EN");
+    }
 
     public void SetEnglish()
     {

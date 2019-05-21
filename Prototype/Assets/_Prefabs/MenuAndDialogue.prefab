@@ -2343,7 +2343,7 @@ MonoBehaviour:
     - If you want me to open this door, you'll have to pay me !
     - Go get some score in the arena. You'll find it in the canteen.
     sentencesFR:
-    - SI tu veux que j'ouvre cette porte il va faloir que tu me paies !
+    - Si tu veux que j'ouvre cette porte il va faloir que tu me paies !
     - "Va r\xE9colter du score dans l'ar\xE8ne. tu la trouveras dans la cantine."
   mn: {fileID: 0}
   dialogueManager: {fileID: 7391703499571724410}
