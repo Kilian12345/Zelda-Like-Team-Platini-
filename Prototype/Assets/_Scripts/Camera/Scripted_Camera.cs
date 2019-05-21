@@ -31,6 +31,8 @@ public class Scripted_Camera : MonoBehaviour
     void Update()
     {
         if (Triggered == true) { StartCoroutine(CameraSwitch()); }
+
+
     }
 
 
@@ -76,11 +78,9 @@ public class Scripted_Camera : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
 
-        if (dialogue.DialogueActive == false)
-             {everyEventDone = true;}
-
+        if (dialogue.DialogueActive == false) {everyEventDone = true;}
 
 
     }
