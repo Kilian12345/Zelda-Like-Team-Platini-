@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
             Debug.Log("activate canvas");
             canvas.SetActive(true);
             GameIsPaused = true;
-            Time.timeScale = 0f;
+            StartCoroutine("Pause");
         }
 
         else if(Input.GetKeyDown(KeyCode.Escape) && GameIsPaused == true)
@@ -44,4 +44,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    IEnumerator Pause()
+    {
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0f;
+        yield return null;
+    }
 }

@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            canvasDialogue.SetActive(false);
+            animator.SetBool("IsOpen", false);
         }
     }
 

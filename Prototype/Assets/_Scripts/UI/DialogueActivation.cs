@@ -43,12 +43,12 @@ public class DialogueActivation : MonoBehaviour
     {
         StateSwitch();
 
-        if (mn.English)
+        if (mn.English == true)
         {
             //Debug.Log("EN");
             dialogue.sentences = dialogue.sentencesEN;
         }
-        else if (!mn.English)
+        else if (mn.English == false)
         {
             //Debug.Log("FR");
             dialogue.sentences = dialogue.sentencesFR;
