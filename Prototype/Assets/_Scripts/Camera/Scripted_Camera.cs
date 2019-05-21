@@ -8,7 +8,7 @@ public class Scripted_Camera : MonoBehaviour
     FeedBack_Manager Fb_Mana;
     PlayerController plScript;
     CinemachineVirtualCamera vcam;
-    DialogueManager dialogue;
+    DialogueActivation dialogue;
 
     [SerializeField] bool OnCollision, OnTrigger, OnEvent ,playerStopMouv, camFollow;
 
@@ -24,7 +24,7 @@ public class Scripted_Camera : MonoBehaviour
         Fb_Mana = GetComponentInParent<FeedBack_Manager>();
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         vcam = GetComponent<CinemachineVirtualCamera>();
-        dialogue = FindObjectOfType<DialogueManager>();
+        dialogue = GetComponentInChildren<DialogueActivation>();
         oldSpeed = plScript.speed;
     }
 
@@ -76,10 +76,10 @@ public class Scripted_Camera : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(0.1f);
 
-       // if (dialogue.DialogueCheck == true)
-             everyEventDone = true;
+        if (dialogue.DialogueActive == false)
+             {everyEventDone = true;}
 
 
 

@@ -84,12 +84,12 @@ public class PlayerController : MonoBehaviour
             if (NewActionAllowed)
             {
                 player.velocity = movement * speed * baseMultiplier;
-                Debug.Log("Base Mul " + baseMultiplier);
+               // Debug.Log("Base Mul " + baseMultiplier);
             }
             else
             {
                 player.velocity = movement * speed*multiplier;
-                Debug.Log("Mul " + multiplier);
+               // Debug.Log("Mul " + multiplier);
             }
         }
         //magnitude = sqrt(x*x + y*y + z*z) so whenever the player is moving x,y or z > 1 so magnitude > 1

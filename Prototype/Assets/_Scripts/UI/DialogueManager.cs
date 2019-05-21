@@ -13,19 +13,22 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
 
     public bool DialogueCheck = false;
+    [HideInInspector] public bool dialogueOpened;
 
     public DialogueActivation activator;
 
     public Queue<string> sentences;
 
-    void Update()
+    void LateUpdate()
     {
         //Activate Dialogue combat when pressing Y while in the Trigger Zone and dialogue is not active
-        if (/* (Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) &&*/ (activator.DialogueActive == true))
+        if (/* (Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) &&*/ (activator.DialogueActive == true) && dialogueOpened == false)
         {
             canvasDialogue.SetActive(true);
             StartDialogue(activator.dialogue);
             Debug.Log("activate dialogue");
+            DisplayNextSentence();
+            dialogueOpened = true;
         }
 
         // Continue to next sentence when dialogue is already active

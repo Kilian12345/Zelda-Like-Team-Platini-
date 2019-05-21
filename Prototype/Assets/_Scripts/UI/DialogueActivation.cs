@@ -34,6 +34,7 @@ public class DialogueActivation : MonoBehaviour
 
     public bool DialogueActive = false;
     public bool InsideTriggerZone = false;
+    bool activateOnce;
 
     private void Start()
     {
@@ -59,15 +60,18 @@ public class DialogueActivation : MonoBehaviour
 
     void Effect()
     {
-        if (camScript.Triggered == true)
+        if (camScript.Triggered == true && activateOnce == false)
         {   
             dialogueManager.activator = this;
             dialogueManager.sentences = new Queue<string>(dialogue.sentences);
             DialogueActive = true;
+            activateOnce = true;
         }
-        else if (camScript.Triggered == false && dialogueManager.DialogueCheck == false)
+        else if (dialogueManager.DialogueCheck == false)
         {
             DialogueActive = false;
+            dialogueManager.dialogueOpened = false;
+            activateOnce = false;
         }
     }
 
