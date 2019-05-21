@@ -42,7 +42,7 @@ public class Scripted_Camera : MonoBehaviour
         {
 
             if (collision.tag == "Player")
-            {Triggered = true;}
+            {Triggered = true; Debug.Log("sex");}
             else
             { Triggered = false; }
 
@@ -62,7 +62,7 @@ public class Scripted_Camera : MonoBehaviour
 
             if (camFollow == true)
             {
-                vcam.Follow = plScript.GetComponent<Player>().centrePoint.transform;
+                //vcam.Follow = plScript.GetComponent<Player>().centrePoint.transform;
                 vcam.LookAt = plScript.GetComponent<Player>().centrePoint.transform;
             }
         }

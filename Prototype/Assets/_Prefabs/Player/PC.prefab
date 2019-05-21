@@ -794,6 +794,8 @@ MonoBehaviour:
   player: {fileID: 50474951112767800}
   animator: {fileID: 1199763254}
   speedInCombat: 0
+  baseMultiplier: 0
+  NewActionAllowed: 1
   isPushed: 0
 --- !u!70 &271455348
 CapsuleCollider2D:
