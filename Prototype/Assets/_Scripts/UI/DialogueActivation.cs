@@ -23,9 +23,10 @@ public class Dialogue
 
 public class DialogueActivation : MonoBehaviour
 {
-    [SerializeField]
-    GameObject canvasIntDialogue;
+    [SerializeField] GameObject canvasIntDialogue;
+    public Animator anim;
 
+    public int ChooseCharacter;
     public Dialogue dialogue;
     public MenuManager mn;
     public DialogueManager dialogueManager;
@@ -33,8 +34,15 @@ public class DialogueActivation : MonoBehaviour
     public bool DialogueActive = false;
     public bool InsideTriggerZone = false;
 
+    private void Start()
+    {
+        //StateSwitch();
+    }
+
     void FixedUpdate()
     {
+        StateSwitch();
+
         if (mn.English)
         {
             //Debug.Log("EN");
@@ -77,6 +85,28 @@ public class DialogueActivation : MonoBehaviour
         {
             canvasIntDialogue.SetActive(false);
             InsideTriggerZone = false;
+        }
+    }
+
+    void StateSwitch()
+    {
+        switch (ChooseCharacter)
+        {
+            case 0:
+                anim.SetInteger("AnimChara", 0);
+                break;
+            case 1:
+                anim.SetInteger("AnimChara", 1);
+                break;
+            case 2:
+                anim.SetInteger("AnimChara", 2);
+                break;
+            case 3:
+                anim.SetInteger("AnimChara", 3);
+                break;
+            case 4:
+                anim.SetInteger("AnimChara", 4);
+                break;
         }
     }
 }
