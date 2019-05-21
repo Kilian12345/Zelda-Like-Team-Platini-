@@ -16,6 +16,7 @@ public class ThrowingMechanic : MonoBehaviour
     Collider2D bColl;
     FeedBack_Manager Fb_Mana;
     public ParticleSystem boxExpolsion;
+    Animator anim;
 
 
     void Start()
@@ -24,6 +25,7 @@ public class ThrowingMechanic : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         bColl = GetComponent<Collider2D>();
         Fb_Mana = GameObject.FindGameObjectWithTag("FeedBack_Manager").GetComponent<FeedBack_Manager>();
+        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -33,19 +35,18 @@ public class ThrowingMechanic : MonoBehaviour
         {
             canBePicked = true;
 
-            if (Input.GetKeyDown(KeyCode.Joystick1Button4)  /*Input.GetKeyDown(KeyCode.Space)*/)
+            if (Input.GetKeyDown(KeyCode.Joystick1Button4) && isCaught == false  /*Input.GetKeyDown(KeyCode.Space)*/)
             {
                 if (!isCaught)
                 {
-                    isCaught = true;
+                    StartCoroutine("PickupTime");
                 }
             }
             if (Input.GetKeyDown(KeyCode.Joystick1Button5)  /*Input.GetKeyDown(KeyCode.A)*/)
             {
                 if (isCaught)
                 {
-                    isCaught = false;
-                    recPos();
+                    StartCoroutine("ThrowingTime");
                 }
             }
             Physics2D.IgnoreCollision(bColl, player.GetComponent<CapsuleCollider2D>(), toThrow);
@@ -98,5 +99,20 @@ public class ThrowingMechanic : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, lastPos, throwVelocity * Time.deltaTime);
         isThrowing = true;
+    }
+
+    IEnumerator PickupTime()
+    {
+        anim.SetBool("PickUp", true);
+        yield return new WaitForSeconds(0.2f);
+        isCaught = true;
+    }
+
+    IEnumerator ThrowingTime()
+    {
+        anim.SetBool("PickUp", false);
+        yield return new WaitForSeconds(0.2f);
+        isCaught = false;
+        recPos();
     }
 }
