@@ -6,27 +6,29 @@ using Cinemachine;
 public class Scripted_Camera : MonoBehaviour
 {
     FeedBack_Manager Fb_Mana;
-    Player plScript;
+    PlayerController plScript;
     CinemachineVirtualCamera vcam;
 
-    [SerializeField] bool OnCollision, OnTrigger, OnEvent;
+    [SerializeField] bool OnCollision, OnTrigger, OnEvent ,playerStopMouv;
 
     bool Triggered;
 
     public bool everyEventDone = false;
     public float waitTime;
+    float oldSpeed;
+
 
     void Start()
     {
         Fb_Mana = GetComponentInParent<FeedBack_Manager>();
-        plScript = FindObjectOfType<Player>();
+        plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         vcam = GetComponent<CinemachineVirtualCamera>();
+        oldSpeed = plScript.speed;
     }
 
     void Update()
     {
         if (Triggered == true) { StartCoroutine(CameraSwitch()); }
-        Debug.Log (Triggered);
     }
 
 
@@ -50,12 +52,16 @@ public class Scripted_Camera : MonoBehaviour
         {
             vcam.Priority = 20;
             Fb_Mana.Scripted_Scene = true;
+
+            if (playerStopMouv == true)
+            {plScript.speed = 0;}
         }
         else
         {
             Triggered = false;
             vcam.Priority = 9;
             Fb_Mana.Scripted_Scene = false;
+            plScript.speed = oldSpeed;
         }
 
         yield return new WaitForSeconds(waitTime);
