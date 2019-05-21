@@ -82,6 +82,8 @@ public class Player : MonoBehaviour
     private float timeToAttack;
     private float angle;
 
+    public bool Carry = false;
+
     #endregion
 
 
@@ -97,7 +99,6 @@ public class Player : MonoBehaviour
     private int selectedAbility;
     public bool thirdActivated;
     FeedBack_Manager Fb_mana;
-    ThrowingMechanic Pick;
 
     [Header("Ability GameObjects")]
     public GameObject selector;
@@ -175,7 +176,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         ghost = GetComponent<Ghost>();
-        Pick = GetComponent<ThrowingMechanic>();
         anim = gameObject.GetComponent<Animator>();
         playerAudio = gameObject.GetComponent<AudioSource>();
         player = gameObject.GetComponent<Rigidbody2D>();
@@ -198,7 +198,7 @@ public class Player : MonoBehaviour
         //anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("Dead", isDead);
         move();
-        if (Input.GetButtonDown("Attacking") && Pick.isCaught == false)
+        if (Input.GetButtonDown("Attacking") && Carry == false)
         {
             toPunch = true;
         }
@@ -353,7 +353,7 @@ public class Player : MonoBehaviour
             }
         }*/
 
-        if (Input.GetButtonDown("Ability1") && Pick.isCaught == false)
+        if (Input.GetButtonDown("Ability1") && Carry == false)
         {
             if (abilityMeters[0].activeSelf)
             {
@@ -366,7 +366,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if (Input.GetButtonDown("Ability2") && Pick.isCaught == false)
+        if (Input.GetButtonDown("Ability2") && Carry == false)
         {
             if (abilityMeters[1].activeSelf)
             {
@@ -375,7 +375,7 @@ public class Player : MonoBehaviour
             }
 
         }
-        if (Input.GetButtonDown("Ability3") && Pick.isCaught == false)
+        if (Input.GetButtonDown("Ability3") && Carry == false)
         {
             if (abilityMeters[2].activeSelf)
             {

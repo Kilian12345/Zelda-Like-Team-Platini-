@@ -31,26 +31,28 @@ public class ThrowingMechanic : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (Vector2.Distance(transform.position, ps.centrePoint.transform.position) <= pickupDistance)
+        if ((Vector2.Distance(transform.position, ps.centrePoint.transform.position) <= pickupDistance) && ps.Carry == false)
         {
             canBePicked = true;
 
-            if (Input.GetKeyDown(KeyCode.Joystick1Button4) && isCaught == false  /*Input.GetKeyDown(KeyCode.Space)*/)
+            if (Input.GetKeyDown(KeyCode.Joystick1Button4) && ps.Carry == false  /*Input.GetKeyDown(KeyCode.Space)*/)
             {
                 if (!isCaught)
                 {
                     StartCoroutine("PickupTime");
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Joystick1Button5)  /*Input.GetKeyDown(KeyCode.A)*/)
-            {
-                if (isCaught)
-                {
-                    StartCoroutine("ThrowingTime");
-                }
-            }
             Physics2D.IgnoreCollision(bColl, player.GetComponent<CapsuleCollider2D>(), toThrow);
         }
+
+        else if (Input.GetKeyDown(KeyCode.Joystick1Button5)  /*Input.GetKeyDown(KeyCode.A)*/)
+        {
+            if (isCaught)
+            {
+                StartCoroutine("ThrowingTime");
+            }
+        }
+
         else { canBePicked = false; }
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         //Debug.Log(GetComponent<Rigidbody2D>().velocity);
@@ -106,6 +108,7 @@ public class ThrowingMechanic : MonoBehaviour
         anim.SetBool("PickUp", true);
         yield return new WaitForSeconds(0.2f);
         isCaught = true;
+        ps.Carry = true;
     }
 
     IEnumerator ThrowingTime()
@@ -113,6 +116,7 @@ public class ThrowingMechanic : MonoBehaviour
         anim.SetBool("PickUp", false);
         yield return new WaitForSeconds(0.2f);
         isCaught = false;
+        ps.Carry = false;
         recPos();
     }
 }
