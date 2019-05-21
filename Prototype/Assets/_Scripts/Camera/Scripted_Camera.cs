@@ -14,6 +14,7 @@ public class Scripted_Camera : MonoBehaviour
     bool Triggered;
 
     public bool everyEventDone = false;
+    public float waitTime;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class Scripted_Camera : MonoBehaviour
     void Update()
     {
         if (Triggered == true) { StartCoroutine(CameraSwitch()); }
+        Debug.Log (Triggered);
     }
 
 
@@ -41,10 +43,6 @@ public class Scripted_Camera : MonoBehaviour
         }
     }
 
-    void Event()
-    {
-
-    }
 
     IEnumerator CameraSwitch()
     {
@@ -60,7 +58,7 @@ public class Scripted_Camera : MonoBehaviour
             Fb_Mana.Scripted_Scene = false;
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(waitTime);
         everyEventDone = true;
 
 

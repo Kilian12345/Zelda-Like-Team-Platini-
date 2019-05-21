@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 271455348}
   - component: {fileID: 271455358}
   - component: {fileID: 1010359222}
+  - component: {fileID: 6961524442112416215}
   m_Layer: 0
   m_Name: PC
   m_TagString: Player
@@ -842,6 +843,7 @@ MonoBehaviour:
   DissolveColor: {r: 0, g: 0, b: 0, a: 1}
   DissolveEmission: {r: 1, g: 0.86571336, b: 0, a: 1}
   OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+  transitionDissolve: {r: 0, g: 0, b: 0, a: 0}
   isOpaque: 0
   isDissolve: 0
   isOutline: 0
@@ -850,6 +852,22 @@ MonoBehaviour:
   hitDuration: 0.107
   dissolveAmout: -0.1
   dissolveGrain: 0.023
+--- !u!58 &6961524442112416215
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426647519986904}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.011891127, y: 0.112183094}
+  serializedVersion: 2
+  m_Radius: 0.06588793
 --- !u!1 &1468984369528666
 GameObject:
   m_ObjectHideFlags: 0

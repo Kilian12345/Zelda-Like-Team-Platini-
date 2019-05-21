@@ -15,6 +15,7 @@ public class Rendering_Chara : MonoBehaviour
     [HideInInspector] public Color transitionDissolve;
 
     public bool isOpaque, isDissolve, isOutline, isPlayer;
+    bool outlineDone;
     [Range(40 , 80)] public float timeHitFB;
     [Range(0 , 0.5f)] public float hitDuration = 0.05f;
     double Sinus;
@@ -63,12 +64,14 @@ public class Rendering_Chara : MonoBehaviour
 
         if (isOutline == true)
         {
+            outlineDone = false;
            _propBlock.SetFloat("_OutlineMode", 1);
            _propBlock.SetColor("_ColorOutline", OutlineColor);
         }
-        else
+        else if (isOutline == false && outlineDone == false)
         { _propBlock.SetFloat("_OutlineMode", 0); }
-        // Apply the edited values to the renderer.
+        // Apply the edited values to the renderer
+        outlineDone = true;
         _renderer.SetPropertyBlock(_propBlock);
 
         
