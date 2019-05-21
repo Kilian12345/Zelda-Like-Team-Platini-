@@ -30,18 +30,20 @@ public class DialogueActivation : MonoBehaviour
     public Dialogue dialogue;
     public MenuManager mn;
     public DialogueManager dialogueManager;
+    Scripted_Camera camScript;
 
     public bool DialogueActive = false;
     public bool InsideTriggerZone = false;
 
     private void Start()
     {
-        //StateSwitch();
+        camScript = GetComponentInParent<Scripted_Camera>();
     }
 
     void FixedUpdate()
     {
         StateSwitch();
+        Effect();
 
         if (mn.English == true)
         {
@@ -55,8 +57,22 @@ public class DialogueActivation : MonoBehaviour
         }
     }
 
+    void Effect()
+    {
+        if (camScript.Triggered == true)
+        {   
+            dialogueManager.activator = this;
+            dialogueManager.sentences = new Queue<string>(dialogue.sentences);
+            DialogueActive = true;
+        }
+        else if (camScript.Triggered == false && dialogueManager.DialogueCheck == false)
+        {
+            DialogueActive = false;
+        }
+    }
+
     //Show "Press Y" int to the screen while in the trigger zone
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
         {
@@ -77,16 +93,16 @@ public class DialogueActivation : MonoBehaviour
             canvasIntDialogue.SetActive(false);
             InsideTriggerZone = true;
         }
-    }
+    }*/
 
-    private void OnTriggerExit2D(Collider2D collision)
+    /*private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.name == "PC")
         {
             canvasIntDialogue.SetActive(false);
             InsideTriggerZone = false;
         }
-    }
+    }*/
 
     void StateSwitch()
     {

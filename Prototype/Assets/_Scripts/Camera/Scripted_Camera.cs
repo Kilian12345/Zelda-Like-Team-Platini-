@@ -8,10 +8,11 @@ public class Scripted_Camera : MonoBehaviour
     FeedBack_Manager Fb_Mana;
     PlayerController plScript;
     CinemachineVirtualCamera vcam;
+    DialogueManager dialogue;
 
     [SerializeField] bool OnCollision, OnTrigger, OnEvent ,playerStopMouv, camFollow;
 
-    bool Triggered;
+    [HideInInspector] public bool Triggered;
 
     public bool everyEventDone = false;
     public float waitTime;
@@ -23,6 +24,7 @@ public class Scripted_Camera : MonoBehaviour
         Fb_Mana = GetComponentInParent<FeedBack_Manager>();
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         vcam = GetComponent<CinemachineVirtualCamera>();
+        dialogue = FindObjectOfType<DialogueManager>();
         oldSpeed = plScript.speed;
     }
 
@@ -32,7 +34,7 @@ public class Scripted_Camera : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (OnTrigger == true)
         {
@@ -48,7 +50,7 @@ public class Scripted_Camera : MonoBehaviour
 
     IEnumerator CameraSwitch()
     {
-        if (everyEventDone == false)
+        if (everyEventDone == false )
         {
             vcam.Priority = 20;
             Fb_Mana.Scripted_Scene = true;
@@ -64,7 +66,6 @@ public class Scripted_Camera : MonoBehaviour
         }
         else
         {
-            
             vcam.Follow = null;
             vcam.LookAt = null;
 
@@ -74,8 +75,11 @@ public class Scripted_Camera : MonoBehaviour
             plScript.speed = oldSpeed;
         }
 
-        yield return new WaitForSeconds(waitTime);
-        everyEventDone = true;
+        if (dialogue.DialogueCheck == true)
+                    everyEventDone = true;
+
+
+        yield return new WaitForEndOfFrame();
 
 
 
