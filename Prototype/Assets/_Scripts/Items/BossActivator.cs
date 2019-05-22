@@ -20,7 +20,11 @@ public class BossActivator : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            boss.SetActive(true);
+            if (boss)
+            {
+                boss.SetActive(true);
+            }
+            
         }
         
     }

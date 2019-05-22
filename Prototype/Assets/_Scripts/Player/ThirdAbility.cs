@@ -28,7 +28,7 @@ public class ThirdAbility : MonoBehaviour
     {
         FindVisiblePlayer();
         ZoneIncrease();
-        Debug.Log (visiblePlayer);
+        //Debug.Log (visiblePlayer);
     }
 
     void FindVisiblePlayer()
