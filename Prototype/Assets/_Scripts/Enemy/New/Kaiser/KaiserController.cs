@@ -11,8 +11,13 @@ public class KaiserController : MonoBehaviour
     BulletHell bulletHell;
 
     EnemyHealth healthScript;
+    SpriteRenderer sR;
+    Animator anim;
 
-    
+    GameObject player;
+    Transform target;
+
+    public bool isActive;
     public float phase1ExitPercent;
     public float phase2ExitPercent;
     public float attackDuration;
@@ -27,20 +32,68 @@ public class KaiserController : MonoBehaviour
     [SerializeField]
     private int curAttack;
     private float coinToss;
+    private float LocalX;
+    private bool activated;
+    private bool start;
     //private float curTime;
+
 
     void Start()
     {
         healthScript = GetComponent<EnemyHealth>();
+        sR = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         jumpAttack = GetComponent<JumpAttack>();
         dashAttack = GetComponent<DashAttack>();
         preciseStrike = GetComponent<PreciseStrike>();
         bulletHell = GetComponent<BulletHell>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().centrePoint.transform;
+        LocalX = transform.localScale.x;
+        sR.enabled = false;
+        isActive = true;
     }
 
     void FixedUpdate()
     {
-        checkForState();
+        if (isActive)
+        {
+            isActive = false;
+            sR.enabled = true;
+            Invoke("entry", 1f);
+        }
+        if (activated)
+        {
+            Invoke("idle", 5f);
+        }
+        if (start)
+        {
+            checkForState();
+        }
+        animate();
+    }
+
+    void animate()
+    {
+
+        anim.SetBool("Active", activated);
+        if (target.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    void entry()
+    {
+        activated = true;
+    }
+
+    void idle()
+    {
+        start = true;
     }
 
     void checkForState()
