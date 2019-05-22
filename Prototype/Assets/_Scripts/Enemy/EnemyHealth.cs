@@ -223,8 +223,9 @@ public class EnemyHealth : MonoBehaviour
          {
              health -= 50;
              renderChara.isOpaque = true;
+             col.gameObject.GetComponent<DropChance>().isDestroy = true;
              Instantiate(Fb_Mana.boxExpolsion , col.transform.position, Quaternion.identity );
-             Destroy (col.gameObject);
+             Destroy (col.gameObject, 0.05f);
              Fb_Mana.throwScrShake = true;
          }
 

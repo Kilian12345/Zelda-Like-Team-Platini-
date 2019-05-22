@@ -87,8 +87,8 @@ public class ThrowingMechanic : MonoBehaviour
 
     public void Destroy()
     {
-             Instantiate(Fb_Mana.boxExpolsion, transform.position, Quaternion.identity );
-             Destroy (gameObject);
+             Instantiate(Fb_Mana.boxExpolsion, transform.position, Quaternion.identity );          
+             Destroy (gameObject, 0.1f);
              Fb_Mana.throwScrShake = true;
     }
 

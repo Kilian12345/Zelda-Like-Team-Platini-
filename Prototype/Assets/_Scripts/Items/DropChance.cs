@@ -8,26 +8,42 @@ public class DropChance : MonoBehaviour
     Player ps;
     GameObject player;
     private bool canSpawn;
+    public bool isDestroy = false;
     EnemyHealth healthScript;
+    ThrowingMechanic throwMecha;
     // Start is called before the first frame update
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         ps = player.GetComponent<Player>();
-        healthScript= GetComponent<EnemyHealth>();
+
+         if (GetComponent<EnemyHealth>() != null)
+             {healthScript= GetComponent<EnemyHealth>();}
+
+         if (GetComponent<ThrowingMechanic>() != null)
+                {throwMecha= GetComponent<ThrowingMechanic>();}
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!ps.isDead && healthScript.health<=0)
+        if (GetComponent<EnemyHealth>() != null)
         {
-            canSpawn = true;
+            if (!ps.isDead && (healthScript.health<=0))
+            {canSpawn = true;}
+            else
+            {canSpawn = false;}
         }
-        else
+
+        if (GetComponent<ThrowingMechanic>() != null)
         {
-            canSpawn = false;
+            if (!ps.isDead && (isDestroy == true))
+            {canSpawn = true;}
+            else
+            {canSpawn = false;}
+
         }
+
     }
 
     /*void OnDestroy()
@@ -49,9 +65,13 @@ public class DropChance : MonoBehaviour
     {
         if (canSpawn)
         {
-            if (Random.Range(0, 100) > ps.curDropChanceRate)
+            if (Random.Range(0, 100) > ps.curDropChanceRate && (GetComponent<EnemyHealth>() != null))
             {
-                ps.curDropChanceRate += 5;
+                ps.curDropChanceRate += 2f;
+            }
+            else if (Random.Range(0, 300) > ps.curDropChanceRate && (GetComponent<ThrowingMechanic>() != null))
+            {
+                ps.curDropChanceRate += 2f;
             }
             else
             {

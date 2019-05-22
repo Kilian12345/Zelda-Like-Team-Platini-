@@ -19631,7 +19631,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: -3.9042793e-24, y: -1.0048508e-23, z: -0.0075934734, w: 0.9999712}
+  m_LocalRotation: {x: 5.9974164e-24, y: -1.0057628e-23, z: -0.0075934734, w: 0.9999712}
   m_LocalPosition: {x: -9.53, y: 17.743, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -38314,7 +38314,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: -1.2767829e-23, y: 1.9248204e-28, z: -0, w: 1}
+  m_LocalRotation: {x: 5.9491657e-24, y: 9.545216e-29, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -38764,8 +38764,8 @@ MonoBehaviour:
   ghostFadeSpeedSecond: 0.05
   ghostSpawnRateFirst: 0.05
   ghostSpawnRateSecond: 0.1
-  bigVibration: 1
-  smallVibration: 1
+  bigVibration: 0.5
+  smallVibration: 0.5
   vibrateTime: 0.15
   toolbarTab: 5
   currentTab: Vibration

@@ -675,6 +675,7 @@ public class Player : MonoBehaviour
 
                 if (enemiestoDamage[i].GetComponent<ThrowingMechanic>() != null)///////////// in Progress
                 {
+                    enemiestoDamage[i].GetComponent<DropChance>().isDestroy = true;
                     enemiestoDamage[i].GetComponent<ThrowingMechanic>().Destroy();
                     toPunch = false;
                     break;

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9138447356025588082}
   - component: {fileID: 9138447356025588084}
   - component: {fileID: 9138447356025588087}
+  - component: {fileID: 2280041551728595486}
   m_Layer: 0
   m_Name: Small_Box-1
   m_TagString: Throwing_Object
@@ -114,6 +115,8 @@ MonoBehaviour:
   isCaught: 0
   toThrow: 0
   canBePicked: 0
+  hasBeenThrowed: 0
+  isThrowing: 0
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
 --- !u!60 &9138447356025588084
@@ -169,3 +172,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &2280041551728595486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138447356025588081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151fcf68dd87bb641b3a2e2b5a9f5341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
+    type: 3}
