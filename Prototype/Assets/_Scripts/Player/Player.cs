@@ -396,11 +396,14 @@ public class Player : MonoBehaviour
     {
         curcooldownTime[2] = cooldownTime[2];
         thirdActivated = true;
+
+        Fb_mana.StartCoroutine(Fb_mana.vibrateBrève(1.5f)); //// what f*** timing
         
         if (activatedAbility == 0)
         {
            thirdActivated = false;
         }
+
     }
 
     void checkForAbilityState()

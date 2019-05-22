@@ -7122,7 +7122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &377166156
 Transform:
   m_ObjectHideFlags: 0
@@ -19631,7 +19631,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: -3.3109896e-24, y: -1.0110261e-23, z: -0.0075934734, w: 0.9999712}
+  m_LocalRotation: {x: -3.2929815e-24, y: -1.0057618e-23, z: -0.0075934734, w: 0.9999712}
   m_LocalPosition: {x: -9.53, y: 17.743, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -38314,7 +38314,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: -1.2767864e-23, y: 1.1438482e-28, z: -0, w: 1}
+  m_LocalRotation: {x: -1.2767832e-23, y: 1.9800406e-28, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -38764,8 +38764,11 @@ MonoBehaviour:
   ghostFadeSpeedSecond: 0.05
   ghostSpawnRateFirst: 0.05
   ghostSpawnRateSecond: 0.1
-  toolbarTab: 0
-  currentTab: Transition
+  bigVibration: 1
+  smallVibration: 1
+  vibrateTime: 0
+  toolbarTab: 5
+  currentTab: Vibration
   ennemyGetHit: 0
   ennemyDied: 0
   Scripted_Scene: 0

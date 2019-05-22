@@ -174,6 +174,7 @@ public class EnemyHealth : MonoBehaviour
          enemyAudio.clip = dead;
          enemyAudio.Play();
          GetComponent<Collider2D>().enabled = false;
+         Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(Fb_Mana.vibrateTime));
          Destroy(parent, 0.6f);
     }
 

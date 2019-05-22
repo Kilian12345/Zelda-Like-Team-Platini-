@@ -262,12 +262,6 @@ public class FeedBack_Manager : MonoBehaviour
         }
     }
 
-    public void Vibrate()
-    {
-         GamePad.SetVibration(0,bigVibration,bigVibration);
-         GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration);  
-    }
-
     IEnumerator firstAbility()
     {
         ghostAcivated = true;
@@ -338,6 +332,19 @@ public class FeedBack_Manager : MonoBehaviour
         throwScrShake = false;
 
         StopCoroutine(throwObject());
+    }
+
+    public IEnumerator vibrateBrève(float time)
+    {
+        GamePad.SetVibration(0,bigVibration,bigVibration);
+        GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration); 
+
+        yield return new WaitForSeconds(time);
+        
+        GamePad.SetVibration(0,0,0);
+        GamePad.SetVibration(PlayerIndex.One,0, 0);
+
+        StopCoroutine(vibrateBrève(time));
     }
 
 
