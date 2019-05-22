@@ -157,6 +157,7 @@ public class EnemyHealth : MonoBehaviour
             enemyAudio.Play();
             Vector3 dir = (pl.position - transform.position).normalized;
             Instantiate(particlesBlood, transform.position, Quaternion.LookRotation( dir * -1 ));
+            Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(Fb_Mana.vibrateTime));
             asExploded = true;
         }
     }
@@ -177,7 +178,6 @@ public class EnemyHealth : MonoBehaviour
     {
          
          GetComponent<Collider2D>().enabled = false;
-         Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(Fb_Mana.vibrateTime));
          Destroy(parent, 0.6f);
     }
 
