@@ -27,7 +27,7 @@ public class Third_FOW : MonoBehaviour
 
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         MakeMesh();
 

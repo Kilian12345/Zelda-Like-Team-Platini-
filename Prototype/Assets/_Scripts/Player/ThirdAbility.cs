@@ -28,6 +28,7 @@ public class ThirdAbility : MonoBehaviour
     {
         FindVisiblePlayer();
         ZoneIncrease();
+        Debug.Log (visiblePlayer);
     }
 
     void FindVisiblePlayer()
@@ -49,7 +50,7 @@ public class ThirdAbility : MonoBehaviour
             {
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
 
-                if (Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
+                if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
                 {
 
                     visiblePlayer.Add(player);

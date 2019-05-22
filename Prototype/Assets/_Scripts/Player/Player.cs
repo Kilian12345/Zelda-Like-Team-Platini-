@@ -361,10 +361,7 @@ public class Player : MonoBehaviour
             {
                 if (curcooldownTime[0] >= cooldownTime[0])
                 {
-                    activatedAbility = 1;
-                    Fb_mana.firstActivated = true;
-                    curcooldownTime[0] = cooldownTime[0];
-                    Fb_mana.timeFirstAbility = cooldownTime[0];
+                    StartCoroutine(firstAbilityWait());
                 }
             }
         }
@@ -726,5 +723,14 @@ public class Player : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(shootPoint.transform.position, attackRange);
+    }
+
+    IEnumerator firstAbilityWait()
+    {
+        yield return new WaitForSeconds(0.1f);
+        activatedAbility = 1;
+        Fb_mana.firstActivated = true;
+        curcooldownTime[0] = cooldownTime[0];
+        Fb_mana.timeFirstAbility = cooldownTime[0];
     }
 }

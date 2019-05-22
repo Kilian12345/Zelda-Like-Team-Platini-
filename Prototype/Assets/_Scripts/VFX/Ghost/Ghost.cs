@@ -22,21 +22,17 @@ public class Ghost : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (playerScript.moveHor < 0f) {flip = true;}
         else {flip = false;}
 
         if (Fb.firstActivated == true)
         {
-            if(firstInvokeDone == false)
-            {
-            CancelInvoke();
-            InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateFirst);
-            firstInvokeDone = true;
-            }
+                dashGhost();
         }
-        else {firstInvokeDone = false;}
+        else if (playerScript.activatedAbility != 1)
+        {firstInvokeDone = false; CancelInvoke("SpawnTrailPart");}
 
     }
 
@@ -48,8 +44,8 @@ void secondAbilityPunch()
 
                 if(secondInvokeDone == false)
                 {
-                    CancelInvoke();
-                    InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateSecond);
+                    //CancelInvoke();
+                    //InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateSecond);
                     secondInvokeDone = true;
                 }
 
@@ -58,8 +54,9 @@ void secondAbilityPunch()
 }
     public void SpawnTrailPart()
     {
-        if (Fb.ghostAcivated == true)
-        {
+            Debug.Log("salop salop salop");
+        //if (Fb.ghostAcivated == true)
+       // {
 
             trailPart = new GameObject();
             SpriteRenderer trailPartRenderer = trailPart.AddComponent<SpriteRenderer>();
@@ -80,8 +77,17 @@ void secondAbilityPunch()
             trailPartRenderer.sortingLayerName = "Default";
             trailPartRenderer.sortingOrder = 0;
 
-        }
+      //  }
         
+    }
+
+    public void dashGhost()
+    {
+        if(firstInvokeDone == false)
+        {
+            InvokeRepeating("SpawnTrailPart", 0, Fb.ghostSpawnRateFirst);
+            firstInvokeDone = true;
+        }
     }
 
 }

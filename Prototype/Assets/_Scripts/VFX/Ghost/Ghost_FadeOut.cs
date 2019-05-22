@@ -28,7 +28,7 @@ public class Ghost_FadeOut : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {       
         if (slowMo == true) PlayerSlowMo();
         else {PlayerDash();}
