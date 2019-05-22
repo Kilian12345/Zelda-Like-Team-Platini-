@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordCarrier : MonoBehaviour
 {
-
+    public int difficultyLevel; ///////// difficulty
     public AudioClip punch;
     public GameObject gun;
     public GameObject shootPoint;

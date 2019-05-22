@@ -2089,6 +2089,8 @@ MonoBehaviour:
   - {fileID: 8034150086353026568, guid: fa409bca02ea64041afb3360e3a0086c, type: 3}
   - {fileID: 9138447356025588081, guid: 26fbe1030d48bd94ab0bcadb9518a7a1, type: 3}
   ennemiesInArena: []
+  difficulty: 6
+  difficultyLeft: 0
   everyoneHasSpawn: 0
 --- !u!4 &1425575067
 Transform:

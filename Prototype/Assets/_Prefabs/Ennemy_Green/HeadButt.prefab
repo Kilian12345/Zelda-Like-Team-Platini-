@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8af613467dbcc4182adf2328efd789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyLevel: 2
   moveSpeed: 0.5
   chargeVelocity: 1.5
   chargeCoolDown: 0.2
@@ -345,6 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+  isDestroy: 0
 --- !u!114 &5942269374360536665
 MonoBehaviour:
   m_ObjectHideFlags: 0

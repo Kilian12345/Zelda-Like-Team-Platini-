@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HeadButtEnemy : MonoBehaviour
 {
+    public int difficultyLevel; ///////// difficulty
     public float moveSpeed;
     public float chargeVelocity;
     public float chargeCoolDown;

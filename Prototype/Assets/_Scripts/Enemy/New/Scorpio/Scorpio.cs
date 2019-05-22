@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scorpio : MonoBehaviour
 {
-
+    public int difficultyLevel; ///////// difficulty
     public Transform[] wayPoints;
     public GameObject bull, shootPoint;
     public float moveSpeed;

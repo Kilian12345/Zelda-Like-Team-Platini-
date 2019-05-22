@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686fa9ba83be6c24d9c1193b590c7273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyLevel: 10
   punch: {fileID: 0}
   gun: {fileID: 5483544481213362043}
   shootPoint: {fileID: 5483544481285802422}
@@ -259,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+  isDestroy: 0
 --- !u!82 &5483544482235513983
 AudioSource:
   m_ObjectHideFlags: 0

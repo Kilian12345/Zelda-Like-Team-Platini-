@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cb8d465e0703f4fa9b9b1d9eb312e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyLevel: 4
   wayPoints:
   - {fileID: 6213787847915288302}
   - {fileID: 6213787848423542598}

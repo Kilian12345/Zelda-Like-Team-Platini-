@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Kami : MonoBehaviour
 {
-
+    public int difficultyLevel; ///////// difficulty
     public float detectionRange;
     public float stoppingDistance;
     public float moveSpeed;
