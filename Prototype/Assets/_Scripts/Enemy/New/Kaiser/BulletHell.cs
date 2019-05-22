@@ -21,10 +21,13 @@ public class BulletHell : MonoBehaviour
     [SerializeField]
     private float ctrBullet;
     private bool pauseFire;
+    private bool isShooting;
+
+    Animator anim;
 
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -56,6 +59,14 @@ public class BulletHell : MonoBehaviour
                     pauseFire = true;
                     Invoke("coolDown", coolDownTime);
                 }
+            }
+            if (!pauseFire)
+            {
+                anim.SetInteger("AttackType", 4);
+            }
+            else
+            {
+                anim.SetInteger("AttackType", 0);
             }
         }
     }

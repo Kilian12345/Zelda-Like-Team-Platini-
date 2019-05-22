@@ -22,48 +22,45 @@ public class DashAttack : MonoBehaviour
 
     Vector2 lastPos;
     Player plScript;
+    Animator anim;
 
 
     void Start()
     {
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= dashRange)
-        {
-            isInDashRange = true;
-        }
-        else
-        {
-            isInDashRange = false;
-        }
-
-
         if (Enabled)
         {
-            if (isInDashRange)
+            if (Time.time > timeToDash)
             {
-                if (Time.time > timeToDash)
-                {
-                    timeToDash = Time.time + 1 / dashCoolDown;
-                    recPos();
-                }
-                if (canDash)
-                {
-                    dash();
-                }
-                else
-                {
-                    isDashing = false;
-                }
-                if (Vector2.Distance(transform.position, lastPos) <= 0.05)
-                {
-                    isDashing = false;
-                    canDash = false;
-                }
+                timeToDash = Time.time + 1 / dashCoolDown;
+                recPos();
+            }
+            if (canDash)
+            {
+                dash();
+            }
+            else
+            {
+                isDashing = false;
+            }
+            if (Vector2.Distance(transform.position, lastPos) <= 0.05)
+            {
+                isDashing = false;
+                canDash = false;
+            }
+            if (isDashing)
+            {
+                anim.SetInteger("AttackType", 1);
+            }
+            else
+            {
+                anim.SetInteger("AttackType", 0);
             }
         }
     }

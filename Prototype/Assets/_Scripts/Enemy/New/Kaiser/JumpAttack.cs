@@ -30,37 +30,48 @@ public class JumpAttack : MonoBehaviour
     private bool isJumping;
 
     Player plScript;
+    Animator anim;
 
     void Start()
     {
         cp[0].position = transform.position;
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerPos = plScript.centrePoint.transform;
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
         if (Enabled)
         {
-            if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= jumpRange)
+            /*if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) <= jumpRange)
             {
-                if (Time.time > timeToJump)
-                {
-                    timeToJump = Time.time + 1 / jumpRate;
-                    jumpPos();
-                }
-                if (canJump)
-                {
-                    StartCoroutine(Jump());
-                }
+                
                 /*if (Vector2.Distance(transform.position, cp[2].position) <= 0.01)
                 {
                     isJumping = false;
                     canJump = false;
-                }*/
+                }
+            }*/
+            if (Time.time > timeToJump)
+            {
+                timeToJump = Time.time + 1 / jumpRate;
+                jumpPos();
             }
-        }
-        
+            if (canJump)
+            {
+                StartCoroutine(Jump());
+            }
+
+            if (isJumping)
+            {
+                anim.SetInteger("AttackType", 3);
+            }
+            else
+            {
+                anim.SetInteger("AttackType", 0);
+            }
+        }  
     }
 
     void OnDrawGizmos()

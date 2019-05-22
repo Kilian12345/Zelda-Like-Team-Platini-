@@ -16,12 +16,15 @@ public class PreciseStrike : MonoBehaviour
     [SerializeField]
     private float ctrBullet;
     private bool pauseFire;
+    private bool isShooting;
 
     Player plScript;
+    Animator anim;
 
     void Start()
     {
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -46,7 +49,16 @@ public class PreciseStrike : MonoBehaviour
                 }
                 
             }
+            if (isShooting)
+            {
+                anim.SetInteger("AttackType", 2);
+            }
+            else
+            {
+                anim.SetInteger("AttackType", 0);
+            }
         }
+        
     }
 
     void coolDown()
@@ -56,12 +68,14 @@ public class PreciseStrike : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        isShooting = true;
         pauseFire = false;
         Vector2 dir = (plScript.centrePoint.transform.position - transform.position).normalized;
         GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
         Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
         yield return new WaitForEndOfFrame();
+        isShooting = false;
         StopCoroutine(Shoot());
     }
 
