@@ -50,116 +50,120 @@ public class WAVE_SYSTEM : MonoBehaviour
             }*/
 
 
-           /* */ for (int i = 0; i < points.Length; i++)
-            {
+
                  List<GameObject> goodDifficultyEnnemy = new List<GameObject>();
 
-                 for (int x = 0; x < ennemyPrefab.Length; x++)
-                 {
 
-                    #region THE IF REGION
-                    if (ennemyPrefab[x].GetComponent<HeadButtEnemy>() != null) 
+                    for (int x = 0; x < ennemyPrefab.Length; x++)
                     {
-                        if (ennemyPrefab[x].GetComponent<HeadButtEnemy>().difficultyLevel < difficultyLeft)
+
+                        #region THE IF REGION
+                        if (ennemyPrefab[x].GetComponent<HeadButtEnemy>() != null && difficulty < 24) 
                         {
-                            //difficultyLeft = ennemyPrefab[i].GetComponent<HeadButtEnemy>().difficultyLevel - difficultyLeft;
-                            goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            if (ennemyPrefab[x].GetComponent<HeadButtEnemy>().difficultyLevel <= difficultyLeft)
+                            {
+                                //difficultyLeft = ennemyPrefab[i].GetComponent<HeadButtEnemy>().difficultyLevel - difficultyLeft;
+                                goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            }
                         }
-                    }
 
-                    else if (ennemyPrefab[x].GetComponent<Kami>() != null) 
-                    {
-                        if (ennemyPrefab[x].GetComponent<Kami>().difficultyLevel < difficultyLeft)
+                        else if (ennemyPrefab[x].GetComponent<Kami>() != null && difficulty < 24) 
                         {
-                            //difficultyLeft = ennemyPrefab[i].GetComponent<Kami>().difficultyLevel - difficultyLeft;
-                            goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            if (ennemyPrefab[x].GetComponent<Kami>().difficultyLevel <= difficultyLeft)
+                            {
+                                //difficultyLeft = ennemyPrefab[i].GetComponent<Kami>().difficultyLevel - difficultyLeft;
+                                goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            }
                         }
-                    }
 
-                    else if (ennemyPrefab[x].GetComponent<SwordCarrier>() != null) 
-                    {
-                        if (ennemyPrefab[x].GetComponent<SwordCarrier>().difficultyLevel < difficultyLeft)
+                        else if (ennemyPrefab[x].GetComponent<SwordCarrier>() != null) 
                         {
-                            //difficultyLeft = ennemyPrefab[i].GetComponent<SwordCarrier>().difficultyLevel - difficultyLeft;
-                            goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            if (ennemyPrefab[x].GetComponent<SwordCarrier>().difficultyLevel <= difficultyLeft)
+                            {
+                                //difficultyLeft = ennemyPrefab[i].GetComponent<SwordCarrier>().difficultyLevel - difficultyLeft;
+                                goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            }
                         }
-                    }
 
-                    else if (ennemyPrefab[x].GetComponent<GunCock>() != null) 
-                    {
-                        if (ennemyPrefab[x].GetComponent<GunCock>().difficultyLevel < difficultyLeft)
+                        else if (ennemyPrefab[x].GetComponentInChildren<GunCock>() != null) 
                         {
-                            //difficultyLeft = ennemyPrefab[i].GetComponent<GunCock>().difficultyLevel - difficultyLeft;
-                            goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            if (ennemyPrefab[x].GetComponentInChildren<GunCock>().difficultyLevel <= difficultyLeft)
+                            {
+                                //difficultyLeft = ennemyPrefab[i].GetComponent<GunCock>().difficultyLevel - difficultyLeft;
+                                goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            }
                         }
-                    }
 
-                    else if (ennemyPrefab[x].GetComponent<Scorpio>() != null) 
-                    {
-                        if (ennemyPrefab[x].GetComponent<Scorpio>().difficultyLevel < difficultyLeft)
+                        else if (ennemyPrefab[x].GetComponentInChildren<Scorpio>() != null && difficulty < 24) 
                         {
-                            //difficultyLeft = ennemyPrefab[i].GetComponent<Scorpio>().difficultyLevel - difficultyLeft;
-                            goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            if (ennemyPrefab[x].GetComponentInChildren<Scorpio>().difficultyLevel <= difficultyLeft)
+                            {
+                                //difficultyLeft = ennemyPrefab[i].GetComponent<Scorpio>().difficultyLevel - difficultyLeft;
+                                goodDifficultyEnnemy.Add(ennemyPrefab[x]);
+                            }
                         }
-                    }
-                    #endregion
-                 }
-
-                int spawn = Random.Range(0,2);
-                Debug.Log (goodDifficultyEnnemy.Count);
-                int rightGameObject = Random.Range(0, goodDifficultyEnnemy.Count);
-                GameObject rightPrefab = goodDifficultyEnnemy[rightGameObject];
-                GameObject ennemyGO;
-
-                 if (spawn == 0 && difficultyLeft > 2)
-                {
-                    #region THE IF REGION 2 // 
-                    if (rightPrefab.GetComponent<HeadButtEnemy>() != null) 
-                    {
-                        difficultyLeft = rightPrefab.GetComponent<HeadButtEnemy>().difficultyLevel - difficultyLeft;
-                        ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
-                        ennemiesInArena.Add(ennemyGO.transform);
+                        #endregion
                     }
 
-                    else if (rightPrefab.GetComponent<Kami>() != null) 
-                    {
-                        difficultyLeft = rightPrefab.GetComponent<Kami>().difficultyLevel - difficultyLeft;
-                        ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
-                        ennemiesInArena.Add(ennemyGO.transform);
+                        Debug.Log(goodDifficultyEnnemy.Count);
+
+                    for (int i = 0; i < points.Length; i++)
+                    {                         
+                        int spawn = Random.Range(0,1);
+                                 
+                        if (spawn == 0 && difficultyLeft > 2)
+                        {
+                            int rightGameObject = Random.Range(0, goodDifficultyEnnemy.Count);
+                            GameObject rightPrefab = goodDifficultyEnnemy[rightGameObject];
+                            GameObject ennemyGO;  
+
+                            #region THE IF REGION 2 // 
+                            if (rightPrefab.GetComponent<HeadButtEnemy>() != null) 
+                            {
+                                difficultyLeft = difficultyLeft - rightPrefab.GetComponent<HeadButtEnemy>().difficultyLevel;
+                                ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
+                                ennemiesInArena.Add(ennemyGO.transform);
+                            }
+
+                            else if (rightPrefab.GetComponent<Kami>() != null) 
+                            {
+                                difficultyLeft = difficultyLeft - rightPrefab.GetComponent<Kami>().difficultyLevel;
+                                ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
+                                ennemiesInArena.Add(ennemyGO.transform);
+                            }
+
+                            else if (rightPrefab.GetComponent<SwordCarrier>() != null) 
+                            {
+                                difficultyLeft = difficultyLeft - rightPrefab.GetComponent<SwordCarrier>().difficultyLevel;
+                                ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
+                                ennemiesInArena.Add(ennemyGO.transform);
+                            }
+
+                            else if (rightPrefab.GetComponentInChildren<GunCock>() != null) 
+                            {
+                                difficultyLeft = difficultyLeft - rightPrefab.GetComponentInChildren<GunCock>().difficultyLevel;
+                                ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
+                                ennemiesInArena.Add(ennemyGO.transform);
+                            }
+
+                            else if (rightPrefab.GetComponentInChildren<Scorpio>() != null) 
+                            {
+                                difficultyLeft = difficultyLeft -rightPrefab.GetComponentInChildren<Scorpio>().difficultyLevel;
+                                ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
+                                ennemiesInArena.Add(ennemyGO.transform);
+                            }
+                            
+
+                            #endregion
+                        }
+                        else
+                        {
+                            Instantiate(throwableObjects[Random.Range(0, throwableObjects.Length)], points[i].position, Quaternion.identity, objectParent);              
+                        }
+
+
                     }
 
-                    else if (rightPrefab.GetComponent<SwordCarrier>() != null) 
-                    {
-                        difficultyLeft = rightPrefab.GetComponent<SwordCarrier>().difficultyLevel - difficultyLeft;
-                        ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
-                        ennemiesInArena.Add(ennemyGO.transform);
-                    }
-
-                    else if (rightPrefab.GetComponent<GunCock>() != null) 
-                    {
-                        difficultyLeft = rightPrefab.GetComponent<GunCock>().difficultyLevel - difficultyLeft;
-                        ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
-                        ennemiesInArena.Add(ennemyGO.transform);
-                    }
-
-                    else if (rightPrefab.GetComponent<Scorpio>() != null) 
-                    {
-                        difficultyLeft = rightPrefab.GetComponent<Scorpio>().difficultyLevel - difficultyLeft;
-                        ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
-                        ennemiesInArena.Add(ennemyGO.transform);
-                    }
-                    #endregion
-
-
-                }
-                else if (difficultyLeft < 2)
-                {difficultyLeft = 0;}
-                else
-                {
-                    Instantiate(throwableObjects[Random.Range(0, throwableObjects.Length)], points[i].position, Quaternion.identity, objectParent);
-                    
-                }
-            }
 
             newWave = false;
             everyoneHasSpawn = true;
@@ -171,7 +175,6 @@ public class WAVE_SYSTEM : MonoBehaviour
         }
         else if (ennemiesInArena.Count == 0)
         {
-            Debug.Log("wtf");
             newWave = true;
             waveAppear = false;
             everyoneHasSpawn = false;
