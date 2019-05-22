@@ -83,6 +83,8 @@ public class Player : MonoBehaviour
     private float timeToAttack;
     private float angle;
 
+    public bool Carry = false;
+
     #endregion
 
 
@@ -198,7 +200,7 @@ public class Player : MonoBehaviour
         //anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("Dead", isDead);
         move();
-        if (Input.GetButtonDown("Attacking"))
+        if (Input.GetButtonDown("Attacking") && Carry == false)
         {
             toPunch = true;
         }
@@ -353,7 +355,7 @@ public class Player : MonoBehaviour
             }
         }*/
 
-        if (Input.GetButtonDown("Ability1"))
+        if (Input.GetButtonDown("Ability1") && Carry == false)
         {
             if (abilityMeters[0].activeSelf)
             {
@@ -366,7 +368,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if (Input.GetButtonDown("Ability2"))
+        if (Input.GetButtonDown("Ability2") && Carry == false)
         {
             if (abilityMeters[1].activeSelf)
             {
@@ -375,7 +377,7 @@ public class Player : MonoBehaviour
             }
 
         }
-        if (Input.GetButtonDown("Ability3"))
+        if (Input.GetButtonDown("Ability3") && Carry == false)
         {
             if (abilityMeters[2].activeSelf)
             {

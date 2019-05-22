@@ -3477,6 +3477,11 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9138447356025588082, guid: 26fbe1030d48bd94ab0bcadb9518a7a1,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1977589843}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26fbe1030d48bd94ab0bcadb9518a7a1, type: 3}
 --- !u!1 &152079081
@@ -23319,6 +23324,11 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6129395250849588449, guid: 37343789fba086945b45767c003f196a,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1977589843}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37343789fba086945b45767c003f196a, type: 3}
 --- !u!4 &1099706494 stripped
@@ -23800,6 +23810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+        type: 3}
+      propertyPath: English
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029574, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23853,11 +23868,6 @@ PrefabInstance:
     - target: {fileID: 8459077313225029574, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
-        type: 3}
-      propertyPath: English
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -32002,12 +32012,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6213787849082613903, guid: ed6f745823107a643ab352648d1d7f45,
     type: 3}
   m_PrefabInstance: {fileID: 1509518921}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1514361016 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7391703500512753274, guid: a01673ff5f12398478f827675c3196cb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1759043899}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1518599470
 GameObject:
@@ -42111,6 +42115,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968944467}
   m_CullTransparentMesh: 0
+--- !u!95 &1977589843 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1199763254, guid: fb3af06246630184b8c80238784844a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956345814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1977767242
 GameObject:
   m_ObjectHideFlags: 0
