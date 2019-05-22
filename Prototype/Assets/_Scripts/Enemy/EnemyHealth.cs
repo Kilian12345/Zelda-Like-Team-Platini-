@@ -153,6 +153,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (asExploded == false)
         {
+            enemyAudio.clip = dead;
+            enemyAudio.Play();
             Vector3 dir = (pl.position - transform.position).normalized;
             Instantiate(particlesBlood, transform.position, Quaternion.LookRotation( dir * -1 ));
             asExploded = true;
@@ -162,7 +164,9 @@ public class EnemyHealth : MonoBehaviour
     void Thanosed()
     {
         if (asExploded == false)
-        {           
+        {
+            enemyAudio.clip = dead;
+            enemyAudio.Play();
             Vector3 dir = (whoThanos - transform.position).normalized;
             Instantiate(particlesThanos, transform.position,  Quaternion.LookRotation( dir * -1 ));
             asExploded = true;
@@ -171,8 +175,7 @@ public class EnemyHealth : MonoBehaviour
 
     void NormalDeath()
     {
-         enemyAudio.clip = dead;
-         enemyAudio.Play();
+         
          GetComponent<Collider2D>().enabled = false;
          Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(Fb_Mana.vibrateTime));
          Destroy(parent, 0.6f);

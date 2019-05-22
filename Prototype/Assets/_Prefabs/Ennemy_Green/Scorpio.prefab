@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
-  punch: {fileID: 8300000, guid: 92a33c8aa5224584bb3c2c58a663a395, type: 3}
+  punch: {fileID: 8300000, guid: b384c80250d32b1478004f5f0ca63322, type: 3}
   particlesBlood: {fileID: 7430826996442426230, guid: be06a1c0ea2364e4dbb8e68b7b187c93,
     type: 3}
   particlesThanos: {fileID: 3525380330377394275, guid: 2d219f1605ae3a141ac46f5431304ad4,
