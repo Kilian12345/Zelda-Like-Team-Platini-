@@ -28,8 +28,11 @@ public class JumpAttack : MonoBehaviour
 
     private bool isAttacking;
     private bool isJumping;
+    [SerializeField]
+    private bool canDamage;
 
     Player plScript;
+    Collider2D coll;
     Animator anim;
 
     void Start()
@@ -38,6 +41,7 @@ public class JumpAttack : MonoBehaviour
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerPos = plScript.centrePoint.transform;
         anim = GetComponent<Animator>();
+        coll = GetComponent<Collider2D>();
     }
 
     void FixedUpdate()
@@ -100,6 +104,7 @@ public class JumpAttack : MonoBehaviour
         timeparam = 0;
         isJumping = true;
         canJump = false;
+        coll.enabled = false;
 
         /*for (int i = 0; i < cp.Length; i++)
         {
@@ -116,12 +121,21 @@ public class JumpAttack : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         isJumping = false;
+        canDamage = true;
+        coll.enabled = true;
+        Invoke("switchDamageBool",0.5f);
         //timeparam = 0;
         //canJump = true;
     }
 
+    void switchDamageBool()
+    {
+        canDamage = false;
+    }
+
     void jumpPos()
     {
+        canDamage = false;
         cp[0].position = transform.position;
         cp[2].position = playerPos.position;
         cp[1].position = new Vector2((cp[0].position.x + cp[2].position.x) / 2, ((cp[0].position.y + cp[2].position.y) / 2) + jumpHeightModifier * (Vector2.Distance(cp[0].position, cp[2].position) / jumpRange));
@@ -137,7 +151,7 @@ public class JumpAttack : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (!isAttacking && isJumping)
+            if (!isAttacking && canDamage)
             {
                 StartCoroutine(Damage());
             }
@@ -148,7 +162,7 @@ public class JumpAttack : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (!isAttacking && isJumping)
+            if (!isAttacking && canDamage)
             {
                 StartCoroutine(Damage());
             }
