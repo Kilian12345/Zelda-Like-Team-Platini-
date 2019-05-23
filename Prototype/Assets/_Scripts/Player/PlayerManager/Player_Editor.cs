@@ -81,6 +81,15 @@ public class Player_Editor : Editor
 
     #endregion
 
+    #region Fade Scene
+
+    private SerializedProperty sceneIndex;
+    private SerializedProperty fadeAnim;
+    private SerializedProperty fadeImage;
+    private SerializedProperty elevatorMouv;
+    private SerializedProperty elevator; 
+    private SerializedProperty usingElevator;
+    #endregion
 
     private void OnEnable()
     {
@@ -135,6 +144,12 @@ public class Player_Editor : Editor
         died = soTarget.FindProperty("died");
         particles = soTarget.FindProperty("particles");
 
+        sceneIndex = soTarget.FindProperty("sceneIndex");
+        fadeAnim = soTarget.FindProperty("fadeAnim");
+        fadeImage = soTarget.FindProperty("fadeImage");
+        elevatorMouv = soTarget.FindProperty("elevatorMouv");
+        elevator = soTarget.FindProperty("elevator");
+        usingElevator = soTarget.FindProperty("usingElevator");
 
     }
 
@@ -144,7 +159,7 @@ public class Player_Editor : Editor
         soTarget.Update();
         EditorGUI.BeginChangeCheck();
 
-        myTarget.toolbarTab = GUILayout.Toolbar(myTarget.toolbarTab, new string[] { "Rage", "Movement", "Combat", "Ability", "Audio Visuals" });
+        myTarget.toolbarTab = GUILayout.Toolbar(myTarget.toolbarTab, new string[] { "Rage", "Movement", "Combat", "Ability", "Audio Visuals", "SceneFade" });
 
         switch (myTarget.toolbarTab)
         {
@@ -162,6 +177,9 @@ public class Player_Editor : Editor
                 break;
             case 4:
                 myTarget.currentTab = "Audio Visuals";
+                break;
+            case 5:
+                myTarget.currentTab = "SceneFade";
                 break;
         }
 
@@ -227,6 +245,14 @@ public class Player_Editor : Editor
                 EditorGUILayout.PropertyField(hit);
                 EditorGUILayout.PropertyField(died);
                 EditorGUILayout.PropertyField(particles);
+                break;
+            case "SceneFade":
+                EditorGUILayout.PropertyField(sceneIndex);
+                EditorGUILayout.PropertyField(fadeAnim);
+                EditorGUILayout.PropertyField(fadeImage);
+                EditorGUILayout.PropertyField(usingElevator);
+                EditorGUILayout.PropertyField(elevatorMouv);
+                EditorGUILayout.PropertyField(elevator);
                 break;
         }
 

@@ -148,6 +148,14 @@ public class Player : MonoBehaviour
     #region Level
 
     private bool levelEnd=false;
+    public int sceneIndex;
+    public Animator fadeAnim;
+    public Image fadeImage;
+    public Animator elevatorMouv;
+    public GameObject elevator;
+    public bool usingElevator;
+    bool doneOneFade;
+    bool fadeOut;
 
     #endregion
 
@@ -191,6 +199,12 @@ public class Player : MonoBehaviour
         curDropChanceRate = DropChanceRate;
         selectedAbility = 0;
         baseDamage = damage;
+        fadeOut = true;
+
+        if (fadeOut == true)
+        { fadeAnim.SetBool("FadeOut", true); }
+
+
     }
 
     void FixedUpdate()
@@ -257,9 +271,10 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (levelEnd)
-        { 
-            Invoke("nextLevel", 1f);
+        if (levelEnd && doneOneFade == false)
+        {
+            StartCoroutine(FadingNextScene());
+            doneOneFade = true;
         }
 
         if (Input.GetButton("Refill"))
@@ -547,9 +562,19 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void nextLevel()
+    IEnumerator FadingNextScene()
     {
-        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex)+1);
+        fadeAnim.SetBool("Fade", true);
+
+        if (usingElevator == true)
+        {
+            elevatorMouv.SetBool("Mouv", true);
+            transform.parent = elevator.transform;
+        }
+
+        yield return new WaitForSeconds(4f);
+
+        SceneManager.LoadScene(sceneIndex);
     }
 
     void OnApplicationQuit()
@@ -693,6 +718,12 @@ public class Player : MonoBehaviour
                 {
                     enemiestoDamage[i].GetComponent<DropChance>().isDestroy = true;
                     enemiestoDamage[i].GetComponent<ThrowingMechanic>().Destroy();
+                    toPunch = false;
+                    break;
+                }
+                else if (enemiestoDamage[i].GetComponent<Door_Break>() != null)///////////// in Progress
+                {
+                    enemiestoDamage[i].GetComponent<Door_Break>().Destroy();
                     toPunch = false;
                     break;
                 }

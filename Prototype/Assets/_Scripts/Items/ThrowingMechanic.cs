@@ -18,7 +18,6 @@ public class ThrowingMechanic : MonoBehaviour
     public ParticleSystem boxExpolsion;
     Animator anim;
 
-
     void Start()
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();

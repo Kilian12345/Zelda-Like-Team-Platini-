@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1953940736993694214}
   m_Layer: 0
   m_Name: small_barril orange
-  m_TagString: Untagged
+  m_TagString: Throwing_Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,3 +170,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+  isDestroy: 0
