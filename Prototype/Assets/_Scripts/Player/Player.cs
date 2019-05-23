@@ -396,7 +396,7 @@ public class Player : MonoBehaviour
         curcooldownTime[2] = cooldownTime[2];
         thirdActivated = true;
 
-        Fb_mana.StartCoroutine(Fb_mana.vibrateBrève(1.5f)); //// what f*** timing
+        Fb_mana.StartCoroutine(Fb_mana.vibrateBrève(1.5f, 0.5f, 0.5f)); //// what f*** timing
         
         if (activatedAbility == 0)
         {
@@ -713,6 +713,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(float dam)
     {
+        Fb_mana.StartCoroutine(Fb_mana.vibrateBrève(0.15f, 0, 0.35f));
         playerAudio.clip = hit;
         playerAudio.Play();
         health += dam;

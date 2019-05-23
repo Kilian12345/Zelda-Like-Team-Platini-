@@ -41,6 +41,7 @@ public class SwordCarrier : MonoBehaviour
     Rigidbody2D rb;
     EnemyHealth healthScript;
     AudioSource enemyAudio;
+    FeedBack_Manager fb_mana;
 
     Vector2 dir;
 
@@ -54,6 +55,7 @@ public class SwordCarrier : MonoBehaviour
         healthScript = GetComponent<EnemyHealth>();
         enemyAudio = gameObject.GetComponent<AudioSource>();
 
+        fb_mana = FindObjectOfType<FeedBack_Manager>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().centrePoint.transform;
@@ -227,6 +229,7 @@ public class SwordCarrier : MonoBehaviour
             {
                 if (enemiestoDamage[i].GetComponent<Player>() != null)
                 {
+                    fb_mana.StartCoroutine(fb_mana.vibrateBrève(0.15f, 0, 0.35f));
                     enemiestoDamage[i].GetComponent<PlayerController>().isPushed = true;
                     enemiestoDamage[i].GetComponent<Player>().health += enemyDamage;
                     enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.normalized.x, dir.normalized.y) * attackPushForce, ForceMode2D.Impulse);

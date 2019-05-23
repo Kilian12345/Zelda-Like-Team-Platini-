@@ -32,7 +32,6 @@ public class Scripted_Camera : MonoBehaviour
     {
         if (Triggered == true) { StartCoroutine(CameraSwitch()); }
 
-
     }
 
 
@@ -52,6 +51,7 @@ public class Scripted_Camera : MonoBehaviour
 
     IEnumerator CameraSwitch()
     {
+            
         if (everyEventDone == false )
         {
             vcam.Priority = 20;
@@ -68,10 +68,6 @@ public class Scripted_Camera : MonoBehaviour
         }
         else
         {
-            /////////// Disable
-            OnTrigger = false;
-            OnCollision = false;
-            OnEvent = false;
 
             vcam.Follow = null;
             vcam.LookAt = null;
@@ -86,7 +82,6 @@ public class Scripted_Camera : MonoBehaviour
         yield return new WaitForSeconds(0.00f);
 
         if (dialogue.DialogueActive == false) {everyEventDone = true;}
-
         StopCoroutine(CameraSwitch());
 
 

@@ -334,7 +334,7 @@ public class FeedBack_Manager : MonoBehaviour
         StopCoroutine(throwObject());
     }
 
-    public IEnumerator vibrateBrève(float time)
+    public IEnumerator vibrateBrève(float time, float bigVibration, float smallVibration)
     {
         GamePad.SetVibration(0,bigVibration,bigVibration);
         GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration); 
@@ -344,7 +344,7 @@ public class FeedBack_Manager : MonoBehaviour
         GamePad.SetVibration(0,0,0);
         GamePad.SetVibration(PlayerIndex.One,0, 0);
 
-        StopCoroutine(vibrateBrève(time));
+        StopCoroutine(vibrateBrève(time, bigVibration, smallVibration));
     }
 
 

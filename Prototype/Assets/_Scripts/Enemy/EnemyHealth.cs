@@ -157,7 +157,7 @@ public class EnemyHealth : MonoBehaviour
             enemyAudio.Play();
             Vector3 dir = (pl.position - transform.position).normalized;
             Instantiate(particlesBlood, transform.position, Quaternion.LookRotation( dir * -1 ));
-            Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(Fb_Mana.vibrateTime));
+            Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(Fb_Mana.vibrateTime, 0.5f, 0.5f));
             asExploded = true;
         }
     }

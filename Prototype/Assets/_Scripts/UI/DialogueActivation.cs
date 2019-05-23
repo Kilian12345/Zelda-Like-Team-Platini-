@@ -60,8 +60,9 @@ public class DialogueActivation : MonoBehaviour
 
     void Effect()
     {
-        if (camScript.Triggered == true && activateOnce == false)
+        if (camScript.Triggered == true && activateOnce == false && camScript.everyEventDone == false)
         {   
+            Debug.Log ("pute");
             dialogueManager.activator = this;
             dialogueManager.sentences = new Queue<string>(dialogue.sentences);
             DialogueActive = true;
