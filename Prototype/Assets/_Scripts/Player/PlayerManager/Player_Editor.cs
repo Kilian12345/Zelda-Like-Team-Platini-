@@ -86,9 +86,16 @@ public class Player_Editor : Editor
     private SerializedProperty sceneIndex;
     private SerializedProperty fadeAnim;
     private SerializedProperty fadeImage;
+
     private SerializedProperty elevatorMouv;
     private SerializedProperty elevator; 
     private SerializedProperty usingElevator;
+
+    private SerializedProperty elevatorMouvEntrance;
+    private SerializedProperty elevatorEntrance; 
+    private SerializedProperty iseElevatorEntrance;
+    private SerializedProperty originParent;
+
     #endregion
 
     private void OnEnable()
@@ -150,6 +157,10 @@ public class Player_Editor : Editor
         elevatorMouv = soTarget.FindProperty("elevatorMouv");
         elevator = soTarget.FindProperty("elevator");
         usingElevator = soTarget.FindProperty("usingElevator");
+        elevatorMouvEntrance = soTarget.FindProperty("elevatorMouvEntrance");
+        elevatorEntrance = soTarget.FindProperty("elevatorEntrance");
+        iseElevatorEntrance = soTarget.FindProperty("iseElevatorEntrance");
+        originParent = soTarget.FindProperty("originParent");
 
     }
 
@@ -253,6 +264,10 @@ public class Player_Editor : Editor
                 EditorGUILayout.PropertyField(usingElevator);
                 EditorGUILayout.PropertyField(elevatorMouv);
                 EditorGUILayout.PropertyField(elevator);
+                EditorGUILayout.PropertyField(iseElevatorEntrance);
+                EditorGUILayout.PropertyField(elevatorEntrance);
+                EditorGUILayout.PropertyField(elevatorMouvEntrance);
+                EditorGUILayout.PropertyField(originParent);
                 break;
         }
 

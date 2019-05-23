@@ -719,7 +719,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183837174}
-  m_LocalRotation: {x: -8.484475e-24, y: 5.5187077e-25, z: -0, w: 1}
+  m_LocalRotation: {x: 2.1773476e-24, y: 5.543699e-25, z: -0, w: 1}
   m_LocalPosition: {x: 2.1299999, y: -0.8269999, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -5356,6 +5356,7 @@ MonoBehaviour:
   difficulty: 2
   difficultyLeft: 0
   everyoneHasSpawn: 0
+  TransitionScene: 1
 --- !u!4 &1400970864
 Transform:
   m_ObjectHideFlags: 0
@@ -6633,7 +6634,7 @@ PrefabInstance:
     - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
         type: 3}
       propertyPath: sceneIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 271455358, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: Fb
@@ -7443,7 +7444,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934134253}
-  m_LocalRotation: {x: -5.014871e-24, y: 1.0412964e-28, z: -0, w: 1}
+  m_LocalRotation: {x: 1.370209e-23, y: 1.0412964e-28, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

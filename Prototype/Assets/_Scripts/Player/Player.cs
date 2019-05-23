@@ -147,10 +147,17 @@ public class Player : MonoBehaviour
 
     #region Level
 
-    private bool levelEnd=false;
+    public bool levelEnd=false;
     public int sceneIndex;
     public Animator fadeAnim;
     public Image fadeImage;
+
+    public Animator elevatorMouvEntrance;
+    public GameObject elevatorEntrance;
+    public Transform originParent;
+    public bool iseElevatorEntrance;
+    bool entranceOnce;
+
     public Animator elevatorMouv;
     public GameObject elevator;
     public bool usingElevator;
@@ -205,10 +212,17 @@ public class Player : MonoBehaviour
         { fadeAnim.SetBool("FadeOut", true); }
 
 
+
     }
 
     void FixedUpdate()
     {
+        if (iseElevatorEntrance == true && entranceOnce == false) /// entrance
+        {
+            StartCoroutine(FadingNewScene());
+            entranceOnce = true;
+        }
+
         anim.SetInteger("activatedAbility", activatedAbility);
         anim.SetFloat("lastHor", lastHor);
         anim.SetFloat("lastVer", lastVer);
@@ -562,7 +576,18 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    IEnumerator FadingNextScene()
+    IEnumerator FadingNewScene()///////////////////////////////////////////////////////
+    {
+
+        elevatorMouvEntrance.SetBool("Entrance", true);
+        transform.parent = elevatorEntrance.transform;
+
+        yield return new WaitForSeconds(4f);
+
+        transform.parent = originParent;
+    }
+
+    IEnumerator FadingNextScene()///////////////////////////////////////////////////
     {
         fadeAnim.SetBool("Fade", true);
 
