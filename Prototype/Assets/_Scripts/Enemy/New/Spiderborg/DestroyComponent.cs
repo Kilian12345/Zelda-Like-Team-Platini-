@@ -27,7 +27,7 @@ public class DestroyComponent : MonoBehaviour
         //StopCoroutine(AttackTime());
     }
 
-     private void OnTriggerEnter2D(Collider2D col)
+     /*private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag != "Player")
         {
@@ -38,7 +38,7 @@ public class DestroyComponent : MonoBehaviour
         {
             StartCoroutine(Damage());
         }
-    }
+    }*/
 
      /* private void OnTriggerStay2D(Collider2D col)
     {
@@ -66,14 +66,10 @@ public class DestroyComponent : MonoBehaviour
 
     IEnumerator Damage()
     {
-        if(striking == true)
+        if(striking && plScript.inStrike)
         {
             striking = false;
-            if(dontdoshit == false)
-            {
             plScript.TakeDamage(damageValue);
-            }
-
             yield return new WaitForSeconds(0.05f);
             StopCoroutine(Damage());
         }
