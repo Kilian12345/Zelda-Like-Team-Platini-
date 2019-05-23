@@ -12,9 +12,9 @@ public class BulletHell : MonoBehaviour
     public float coolDownTime;
     public GameObject shootPoint;
     public GameObject projectilePrefab;
-    
+
     private Vector3 startPoint;
-    private const float radius =1f;
+    private const float radius = 1f;
     [SerializeField]
     private float curAngle;
     private float angle;
@@ -22,7 +22,7 @@ public class BulletHell : MonoBehaviour
     [SerializeField]
     private float ctrBullet;
     private bool pauseFire;
-    private bool isShooting;
+    private bool firstShot;
 
     Animator anim;
 
@@ -58,6 +58,7 @@ public class BulletHell : MonoBehaviour
                 if (!pauseFire)
                 {
                     pauseFire = true;
+                    firstShot = false;
                     Invoke("coolDown", coolDownTime);
                 }
             }
@@ -70,6 +71,11 @@ public class BulletHell : MonoBehaviour
                 anim.SetInteger("AttackType", 0);
             }
         }
+        else
+        {
+            ctrBullet = 0;
+            timeToFire = 0;
+        }
     }
 
     void coolDown()
@@ -77,12 +83,11 @@ public class BulletHell : MonoBehaviour
         ctrBullet = 0;
     }
 
-    void spawnProjectiles(int numOfProj,float ang)
+    void spawnProjectiles(int numOfProj, float ang)
     {
         pauseFire = false;
         float angleStep = 360f / numOfProj;
         angle = ang;
-
         for (int i = 0; i < numOfProj; i++)
         {
             Debug.Log("Shot");

@@ -3998,7 +3998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.26758, y: -449.15674}
+  m_AnchoredPosition: {x: 87.265625, y: -449.15625}
   m_SizeDelta: {x: 68.12, y: 221.9}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &370422406
@@ -14572,7 +14572,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346902216}
-  m_LocalRotation: {x: 6.0017287e-24, y: 1.0868008e-23, z: 0.0000003636814, w: 1}
+  m_LocalRotation: {x: 1.3661383e-23, y: -7.848905e-24, z: 0.00000036158593, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17518,7 +17518,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663300194}
-  m_LocalRotation: {x: 6.369745e-24, y: 9.685136e-24, z: 0.0023737038, w: 0.99999726}
+  m_LocalRotation: {x: 3.4496304e-24, y: 3.1333652e-24, z: 0.0026465738, w: 0.99999654}
   m_LocalPosition: {x: 13.37, y: 6.3429995, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -18203,6 +18203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kaiser
       objectReference: {fileID: 0}
+    - target: {fileID: 409171903284437116, guid: 608f0aa5157e18744b44b7f5e095a288,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 409171903284437119, guid: 608f0aa5157e18744b44b7f5e095a288,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18257,6 +18262,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409171903922739092, guid: 608f0aa5157e18744b44b7f5e095a288,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409171903922739094, guid: 608f0aa5157e18744b44b7f5e095a288,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0440a8124beaa254dbcf3e3c80672cd7, type: 2}
+    - target: {fileID: 3199840655699832217, guid: 608f0aa5157e18744b44b7f5e095a288,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199840655699832217, guid: 608f0aa5157e18744b44b7f5e095a288,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 409171903922739087, guid: 608f0aa5157e18744b44b7f5e095a288,
         type: 3}

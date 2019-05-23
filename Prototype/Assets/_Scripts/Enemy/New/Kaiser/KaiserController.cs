@@ -21,6 +21,7 @@ public class KaiserController : MonoBehaviour
     public float phase1ExitPercent;
     public float phase2ExitPercent;
     public float attackDuration;
+    public float timeBetweenAttacks;
 
     private float healthPercent;
     [SerializeField]
@@ -102,19 +103,22 @@ public class KaiserController : MonoBehaviour
         healthPercent = (healthScript.health / healthScript.maxHealth) * 100;
         if (healthPercent >= phase1ExitPercent)
         {
-            Phase1();
+            //Phase1();
+            StartCoroutine(Phase1());
         }
         else if (healthPercent < phase1ExitPercent && healthPercent >= phase2ExitPercent)
         {
-            Phase2();
+            //Phase2();
+            StartCoroutine(Phase2());
         }
         else if (healthPercent < phase2ExitPercent && healthPercent >= 0)
         {
-            Phase3();
+            //Phase3();
+            StartCoroutine(Phase3());
         }
     }
 
-    void Phase1()
+    /*void Phase1()
     {
         jumpAttack.Enabled = false;
         bulletHell.Enabled = false;
@@ -151,9 +155,59 @@ public class KaiserController : MonoBehaviour
                 curAttack = 0;
             }
         }
+    }*/
+
+    IEnumerator Phase1()
+    {
+        jumpAttack.Enabled = false;
+        bulletHell.Enabled = false;
+        if (Time.time > timeToAttack1)
+        {
+            timeToAttack1 = Time.time + attackDuration + timeBetweenAttacks;
+            if (curAttack <= 1)
+            {
+                switch (curAttack)
+                {
+                    case 0:
+                        {
+                            dashAttack.Enabled = true;
+                            preciseStrike.Enabled = false;
+                            yield return new WaitForSeconds(attackDuration);
+                            dashAttack.Enabled = false;
+                            yield return new WaitForSeconds(timeBetweenAttacks);
+                        }
+                        break;
+                    case 1:
+                        {
+                            dashAttack.Enabled = false;
+                            preciseStrike.Enabled = true;
+                            yield return new WaitForSeconds(attackDuration);
+                            preciseStrike.Enabled = false;
+                            yield return new WaitForSeconds(timeBetweenAttacks);
+                        }
+                        break;
+                    default:
+                        {
+                            dashAttack.Enabled = true;
+                            preciseStrike.Enabled = false;
+                            yield return new WaitForSeconds(attackDuration);
+                            dashAttack.Enabled = false;
+                            yield return new WaitForSeconds(timeBetweenAttacks);
+                        }
+                        break;
+                }
+                curAttack++;
+                yield return new WaitForFixedUpdate();
+            }
+            else
+            {
+                curAttack = 0;
+            }
+        }
+        StopCoroutine(Phase1());
     }
 
-    void Phase2()
+    /*void Phase2()
     {
         dashAttack.Enabled = false;
         preciseStrike.Enabled = false;
@@ -190,9 +244,58 @@ public class KaiserController : MonoBehaviour
                 curAttack = 0;
             }
         }
+    }*/
+    IEnumerator Phase2()
+    {
+        dashAttack.Enabled = false;
+        preciseStrike.Enabled = false;
+        if (Time.time > timeToAttack2)
+        {
+            timeToAttack2 = Time.time + attackDuration + timeBetweenAttacks;
+            if (curAttack <= 1)
+            {
+                switch (curAttack)
+                {
+                    case 0:
+                        {
+                            jumpAttack.Enabled = true;
+                            bulletHell.Enabled = false;
+                            yield return new WaitForSeconds(attackDuration);
+                            jumpAttack.Enabled = false;
+                            yield return new WaitForSeconds(timeBetweenAttacks);
+                        }
+                        break;
+                    case 1:
+                        {
+                            jumpAttack.Enabled = false;
+                            bulletHell.Enabled = true;
+                            yield return new WaitForSeconds(attackDuration);
+                            bulletHell.Enabled = false;
+                            yield return new WaitForSeconds(timeBetweenAttacks);
+                        }
+                        break;
+                    default:
+                        {
+                            jumpAttack.Enabled = true;
+                            bulletHell.Enabled = false;
+                            yield return new WaitForSeconds(attackDuration);
+                            jumpAttack.Enabled = false;
+                            yield return new WaitForSeconds(timeBetweenAttacks);
+                        }
+                        break;
+                }
+                curAttack++;
+                yield return new WaitForFixedUpdate();
+            }
+            else
+            {
+                curAttack = 0;
+            }
+        }
+        StopCoroutine(Phase2());
     }
 
-    void Phase3()
+    /*void Phase3()
     {
         if (Time.time > timeToAttack3)
         {
@@ -255,6 +358,85 @@ public class KaiserController : MonoBehaviour
                 curAttack = 0;
             }
         }
+    }*/
+
+    IEnumerator Phase3()
+    {
+        if (Time.time > timeToAttack3)
+        {
+            timeToAttack3 = Time.time + attackDuration + timeBetweenAttacks;
+            if (curAttack <= 1)
+            {
+                switch (curAttack)
+                {
+                    case 0:
+                        {
+                            preciseStrike.Enabled = false;
+                            bulletHell.Enabled = false;
+                            coinToss = Random.Range(0, 1);
+                            switch (Mathf.RoundToInt(coinToss))
+                            {
+                                case 0:
+                                    {
+                                        dashAttack.Enabled = true;
+                                        jumpAttack.Enabled = false;
+                                        yield return new WaitForSeconds(attackDuration);
+                                        dashAttack.Enabled = false;
+                                        yield return new WaitForSeconds(timeBetweenAttacks);
+
+                                    }
+                                    break;
+                                case 1:
+                                    {
+                                        dashAttack.Enabled = false;
+                                        jumpAttack.Enabled = true;
+                                        yield return new WaitForSeconds(attackDuration);
+                                        jumpAttack.Enabled = false;
+                                        yield return new WaitForSeconds(timeBetweenAttacks);
+                                    }
+                                    break;
+                            }
+                        }
+                        break;
+                    case 1:
+                        {
+                            dashAttack.Enabled = false;
+                            jumpAttack.Enabled = false;
+                            coinToss = Random.Range(0, 1);
+                            switch (Mathf.RoundToInt(coinToss))
+                            {
+                                case 0:
+                                    {
+                                        preciseStrike.Enabled = true;
+                                        bulletHell.Enabled = false;
+                                        yield return new WaitForSeconds(attackDuration);
+                                        preciseStrike.Enabled = false;
+                                        yield return new WaitForSeconds(timeBetweenAttacks);
+
+                                    }
+                                    break;
+                                case 1:
+                                    {
+                                        preciseStrike.Enabled = false;
+                                        bulletHell.Enabled = true;
+                                        yield return new WaitForSeconds(attackDuration);
+                                        bulletHell.Enabled = false;
+                                        yield return new WaitForSeconds(timeBetweenAttacks);
+                                    }
+                                    break;
+                            }
+                        }
+                        break;
+                }
+                curAttack++;
+                yield return new WaitForFixedUpdate();
+            }
+            else
+            {
+                curAttack = 0;
+            }
+        }
+        StopCoroutine(Phase3());
     }
 
 }
