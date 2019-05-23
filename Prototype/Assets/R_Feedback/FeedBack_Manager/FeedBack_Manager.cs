@@ -131,6 +131,7 @@ public class FeedBack_Manager : MonoBehaviour
     public bool elevatorVibration;/////////// elevator
     public float elevatorVibrationTime;
     bool loopElevator;
+    int elevatorScreen = -1;
     #endregion
 
     #region GUI LAYOUT
@@ -176,8 +177,11 @@ public class FeedBack_Manager : MonoBehaviour
 
         if(elevatorVibration == true && loopElevator == false) 
         {
-            StartCoroutine(waitShakeElevator());
+            StartCoroutine(elevatorShake());
+            loopElevator = true;
         }
+
+        waitShakeElevator();
         
         if(plScript.health >= 100) {Berserker();}
         else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
@@ -317,15 +321,15 @@ public class FeedBack_Manager : MonoBehaviour
 
     }
 
-    IEnumerator waitShakeElevator()
+    void waitShakeElevator()
     {
-        yield return new WaitForSeconds(15f);
-        StartCoroutine(elevatorShake());
-        yield return new WaitForSeconds(elevatorVibrationTime);
-        Debug.Log("ppp");
-        StopCoroutine(waitShakeElevator());
-        StopCoroutine(elevatorShake());
-        loopElevator = true;
+        while (elevatorScreen > 1)
+        {
+            shakeAmplitude = 0.5f;
+            shakeFrequency = 0.5f;
+            CameraShake();
+        }
+
     }
 
     IEnumerator EnnemyDeath()
@@ -356,11 +360,17 @@ public class FeedBack_Manager : MonoBehaviour
 
     IEnumerator elevatorShake()
     {
-        shakeAmplitude = 0.5f;
-        shakeFrequency = 0.5f;
-        CameraShake();
-        StartCoroutine(vibrateBrève(elevatorVibrationTime, 0.5f ,0.5f));
-        yield return new WaitForSeconds(0.0f);
+        yield return new WaitForSeconds(15f);
+        elevatorScreen = 2;
+        GamePad.SetVibration(0,bigVibration,bigVibration);
+        GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration);
+
+        yield return new WaitForSeconds(elevatorVibrationTime);
+
+        elevatorScreen = 0;
+        GamePad.SetVibration(0,0,0);
+        GamePad.SetVibration(PlayerIndex.One,0, 0);
+        loopElevator = true;
         StopCoroutine(elevatorShake());
     }
 
