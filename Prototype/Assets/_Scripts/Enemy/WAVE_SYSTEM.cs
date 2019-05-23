@@ -10,6 +10,7 @@ public class WAVE_SYSTEM : MonoBehaviour
     [SerializeField] GameObject[] ennemyPrefab;
     [SerializeField] GameObject[] throwableObjects;
     [SerializeField] List<Transform> ennemiesInArena = new List<Transform>();
+    [SerializeField] List<Transform> objectInArena = new List<Transform>();
     [SerializeField] int difficulty;
     [SerializeField] int difficultyLeft;
     public bool everyoneHasSpawn;
@@ -105,17 +106,16 @@ public class WAVE_SYSTEM : MonoBehaviour
                         #endregion
                     }
 
-                        Debug.Log(goodDifficultyEnnemy.Count);
-
                     for (int i = 0; i < points.Length; i++)
                     {                         
                         int spawn = Random.Range(0,1);
+                        GameObject objectGO; 
                                  
                         if (spawn == 0 && difficultyLeft > 2)
                         {
                             int rightGameObject = Random.Range(0, goodDifficultyEnnemy.Count);
                             GameObject rightPrefab = goodDifficultyEnnemy[rightGameObject];
-                            GameObject ennemyGO;  
+                            GameObject ennemyGO; 
 
                             #region THE IF REGION 2 // 
                             if (rightPrefab.GetComponent<HeadButtEnemy>() != null) 
@@ -156,9 +156,10 @@ public class WAVE_SYSTEM : MonoBehaviour
 
                             #endregion
                         }
-                        else
+                        else if (objectInArena.Count <= 20)
                         {
-                            Instantiate(throwableObjects[Random.Range(0, throwableObjects.Length)], points[i].position, Quaternion.identity, objectParent);              
+                            objectGO = Instantiate(throwableObjects[Random.Range(0, throwableObjects.Length)], points[i].position, Quaternion.identity, objectParent);
+                            objectInArena.Add(objectGO.transform);            
                         }
 
 

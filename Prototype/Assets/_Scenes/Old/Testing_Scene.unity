@@ -1859,7 +1859,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1389252957}
   - component: {fileID: 1389252959}
-  - component: {fileID: 1389252958}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -1881,14 +1880,6 @@ Transform:
   m_Father: {fileID: 574713731}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1389252958
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389252956}
-  m_Enabled: 1
 --- !u!20 &1389252959
 Camera:
   m_ObjectHideFlags: 0
@@ -2089,6 +2080,7 @@ MonoBehaviour:
   - {fileID: 8034150086353026568, guid: fa409bca02ea64041afb3360e3a0086c, type: 3}
   - {fileID: 9138447356025588081, guid: 26fbe1030d48bd94ab0bcadb9518a7a1, type: 3}
   ennemiesInArena: []
+  objectInArena: []
   difficulty: 2
   difficultyLeft: 0
   everyoneHasSpawn: 0
