@@ -3698,7 +3698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 1677290282}
-  anim: {fileID: 0}
+  anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
     sentences: []
@@ -7127,7 +7127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &377166156
 Transform:
   m_ObjectHideFlags: 0
@@ -11587,7 +11587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 1212947829}
-  anim: {fileID: 0}
+  anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
     sentences: []
@@ -15513,7 +15513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 240565698}
-  anim: {fileID: 0}
+  anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
     sentences: []
@@ -16187,6 +16187,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26fbe1030d48bd94ab0bcadb9518a7a1, type: 3}
+--- !u!95 &804747250 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7391703500512753274, guid: a01673ff5f12398478f827675c3196cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1759043899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &807976449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19636,7 +19642,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: 1.1177361e-24, y: -9.979917e-24, z: -0.0075934734, w: 0.9999712}
+  m_LocalRotation: {x: 4.581476e-25, y: -9.949937e-24, z: -0.0075934734, w: 0.9999712}
   m_LocalPosition: {x: -9.4, y: 17.823, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -23810,6 +23816,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+        type: 3}
+      propertyPath: English
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029574, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23863,11 +23874,6 @@ PrefabInstance:
     - target: {fileID: 8459077313225029574, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
-        type: 3}
-      propertyPath: English
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -32454,7 +32460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 1222614769}
-  anim: {fileID: 0}
+  anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
     sentences: []
@@ -36487,7 +36493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 2070354122}
-  anim: {fileID: 0}
+  anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
     sentences: []
@@ -37603,6 +37609,11 @@ PrefabInstance:
       propertyPath: activator
       value: 
       objectReference: {fileID: 1712866516}
+    - target: {fileID: 7391703499571724410, guid: a01673ff5f12398478f827675c3196cb,
+        type: 3}
+      propertyPath: activator
+      value: 
+      objectReference: {fileID: 1712866516}
     - target: {fileID: 7391703500472006587, guid: a01673ff5f12398478f827675c3196cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37770,11 +37781,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
-    - target: {fileID: 7391703499571724410, guid: a01673ff5f12398478f827675c3196cb,
-        type: 3}
-      propertyPath: activator
-      value: 
-      objectReference: {fileID: 1712866516}
     - target: {fileID: 1170209579, guid: a01673ff5f12398478f827675c3196cb, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
@@ -38341,7 +38347,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: 5.9492048e-24, y: 1.309509e-28, z: -0, w: 1}
+  m_LocalRotation: {x: -5.014924e-24, y: 1.8222685e-28, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

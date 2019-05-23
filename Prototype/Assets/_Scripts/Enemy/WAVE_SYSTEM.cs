@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WAVE_SYSTEM : MonoBehaviour
 {
@@ -18,41 +19,32 @@ public class WAVE_SYSTEM : MonoBehaviour
     bool listDone;
     bool spawnMob;
     bool spawnObj;
+    int spawnChance = 1;
+
+    Text waveInfo; //////// Waves
+    string waveWrite;
+    float numberOFWave;
 
 
     void Start()
     {
         difficultyLeft = difficulty;
+        waveInfo = GetComponentInChildren<Text>();
+        waveWrite = "WAVE : ";
+        waveInfo.text = waveWrite + 0.ToString();
     }
 
     void FixedUpdate()
     {
         if (everyoneHasSpawn==false)
         {
-            /* for (int i = 0; i < points.Length; i++)
-            {
-                float spawn = Random.Range(0,2);
-                GameObject ennemyGO;
-
-                if (spawn == 0 && difficultyLeft > 2)
-                {
-                    ennemyGO = Instantiate(ennemyPrefab[Random.Range(0, ennemyPrefab.Length)], points[i].position, Quaternion.identity, ennemyParent);
-                    ennemiesInArena.Add(ennemyGO.transform);
-
-
-                }
-                else if (difficultyLeft < 2)
-                {difficultyLeft = 0;}
-                else
-                {
-                    Instantiate(throwableObjects[Random.Range(0, throwableObjects.Length)], points[i].position, Quaternion.identity, objectParent);
-                    
-                }
-            }*/
-
-
 
                  List<GameObject> goodDifficultyEnnemy = new List<GameObject>();
+                 
+                if (difficulty > 8 && difficulty <= 20)
+                {spawnChance = Random.Range(1,2) ;}
+                else if (difficulty > 20)
+                {spawnChance = Random.Range(1,Random.Range(1,2));}
 
 
                     for (int x = 0; x < ennemyPrefab.Length; x++)
@@ -108,7 +100,7 @@ public class WAVE_SYSTEM : MonoBehaviour
 
                     for (int i = 0; i < points.Length; i++)
                     {                         
-                        int spawn = Random.Range(0,1);
+                        int spawn = Random.Range(0,spawnChance);
                         GameObject objectGO; 
                                  
                         if (spawn == 0 && difficultyLeft > 2)
@@ -156,11 +148,17 @@ public class WAVE_SYSTEM : MonoBehaviour
 
                             #endregion
                         }
+                        else if (difficultyLeft > 6)
+                        {
+                            difficultyLeft = 0;
+                        }
                         else if (objectInArena.Count <= 20)
                         {
                             objectGO = Instantiate(throwableObjects[Random.Range(0, throwableObjects.Length)], points[i].position, Quaternion.identity, objectParent);
                             objectInArena.Add(objectGO.transform);            
                         }
+
+                        Debug.Log(spawn);
 
 
                     }
@@ -171,17 +169,22 @@ public class WAVE_SYSTEM : MonoBehaviour
         }
 
         if (ennemiesInArena.Contains(null))
-        {
-            ennemiesInArena.Remove(null);
-        }
+        {ennemiesInArena.Remove(null);}
+
+        if (objectInArena.Contains(null))
+        {objectInArena.Remove(null);}
+
+
         else if (ennemiesInArena.Count == 0)
         {
             newWave = true;
             waveAppear = false;
             everyoneHasSpawn = false;
+            waveDifficulty();
         }
 
-        waveDifficulty();
+        if (waveInfo.rectTransform.localScale.y >= 3)
+        {WaveChill();}
 
     }
 
@@ -189,9 +192,21 @@ public class WAVE_SYSTEM : MonoBehaviour
     {
         if (newWave == true && waveAppear == false)
         {
+            waveInfo.rectTransform.localScale = new Vector3 (6,6,6);
+            waveInfo.color = new Color (1,0,0);
+
+            numberOFWave += 1;
+            waveInfo.text = waveWrite + numberOFWave.ToString();
             difficulty += 2;
             difficultyLeft = difficulty;
             waveAppear = true;
         }
+    }
+
+    void WaveChill()
+    {
+        Debug.Log("argent");
+        waveInfo.rectTransform.localScale = new Vector3 (Mathf.Clamp(waveInfo.rectTransform.localScale.x - 0.05f,4,6),Mathf.Clamp(waveInfo.rectTransform.localScale.y - 0.05f,4,6),Mathf.Clamp(waveInfo.rectTransform.localScale.z - 0.05f,4,6));
+        waveInfo.color = new Color (1, Mathf.Clamp(waveInfo.color.g + 0.01f,0,1), Mathf.Clamp(waveInfo.color.b + 0.01f,0,1));
     }
 }

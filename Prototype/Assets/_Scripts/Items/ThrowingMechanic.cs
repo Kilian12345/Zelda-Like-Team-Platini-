@@ -6,7 +6,7 @@ public class ThrowingMechanic : MonoBehaviour
 {
     public float throwDistance, throwVelocity, pickupDistance;
     public float damage;
-    public bool isCaught, toThrow;
+    public bool isCaught, toThrow = false;
     public bool canBePicked;
     public bool hasBeenThrowed;
     public bool isThrowing;
@@ -26,6 +26,8 @@ public class ThrowingMechanic : MonoBehaviour
         bColl = GetComponent<Collider2D>();
         Fb_Mana = GameObject.FindGameObjectWithTag("FeedBack_Manager").GetComponent<FeedBack_Manager>();
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+
+        Fb_Mana.boxExpolsion = boxExpolsion;
     }
 
     void FixedUpdate()

@@ -28,7 +28,7 @@ public class Scripted_Camera : MonoBehaviour
         oldSpeed = plScript.speed;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Triggered == true) { StartCoroutine(CameraSwitch()); }
 
@@ -68,6 +68,11 @@ public class Scripted_Camera : MonoBehaviour
         }
         else
         {
+            /////////// Disable
+            OnTrigger = false;
+            OnCollision = false;
+            OnEvent = false;
+
             vcam.Follow = null;
             vcam.LookAt = null;
 
@@ -78,9 +83,11 @@ public class Scripted_Camera : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.00f);
 
         if (dialogue.DialogueActive == false) {everyEventDone = true;}
+
+        StopCoroutine(CameraSwitch());
 
 
     }

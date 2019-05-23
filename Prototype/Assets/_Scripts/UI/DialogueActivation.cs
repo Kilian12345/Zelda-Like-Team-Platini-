@@ -75,38 +75,6 @@ public class DialogueActivation : MonoBehaviour
         }
     }
 
-    //Show "Press Y" int to the screen while in the trigger zone
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
-        {
-            dialogueManager.activator = this;
-            dialogueManager.sentences = new Queue<string>(dialogue.sentences);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {   
-        if(collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == false)
-        {
-            canvasIntDialogue.SetActive(true);
-            InsideTriggerZone = true;
-        }
-        else if (collision.gameObject.name == "PC" && dialogueManager.DialogueCheck == true)
-        {
-            canvasIntDialogue.SetActive(false);
-            InsideTriggerZone = true;
-        }
-    }*/
-
-    /*private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.gameObject.name == "PC")
-        {
-            canvasIntDialogue.SetActive(false);
-            InsideTriggerZone = false;
-        }
-    }*/
 
     void StateSwitch()
     {
