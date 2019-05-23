@@ -131,7 +131,7 @@ public class FeedBack_Manager : MonoBehaviour
     public bool elevatorVibration;/////////// elevator
     public float elevatorVibrationTime;
     bool loopElevator;
-    int elevatorScreen = -1;
+    bool elevatorScreen = false;
     #endregion
 
     #region GUI LAYOUT
@@ -323,11 +323,14 @@ public class FeedBack_Manager : MonoBehaviour
 
     void waitShakeElevator()
     {
-        while (elevatorScreen > 1)
+        if (elevatorScreen == true)
         {
-            shakeAmplitude = 0.5f;
-            shakeFrequency = 0.5f;
-            CameraShake();
+            for (int i = 0; i < 100000; i++)
+            {
+                shakeAmplitude = 0.3f;
+                shakeFrequency = 0.5f;
+                CameraShake();
+            }
         }
 
     }
@@ -360,17 +363,17 @@ public class FeedBack_Manager : MonoBehaviour
 
     IEnumerator elevatorShake()
     {
-        yield return new WaitForSeconds(15f);
-        elevatorScreen = 2;
-        GamePad.SetVibration(0,bigVibration,bigVibration);
-        GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration);
+        yield return new WaitForSeconds(UnityEngine.Random.Range(10, 20));
+        elevatorScreen = true;
+        GamePad.SetVibration(0,0.3f, 0.3f);
+        GamePad.SetVibration(PlayerIndex.One, 0.3f, 0.3f);
 
         yield return new WaitForSeconds(elevatorVibrationTime);
 
-        elevatorScreen = 0;
+        elevatorScreen = false;
         GamePad.SetVibration(0,0,0);
         GamePad.SetVibration(PlayerIndex.One,0, 0);
-        loopElevator = true;
+        loopElevator = false;
         StopCoroutine(elevatorShake());
     }
 
