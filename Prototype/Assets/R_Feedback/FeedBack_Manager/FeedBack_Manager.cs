@@ -127,6 +127,10 @@ public class FeedBack_Manager : MonoBehaviour
     public float bigVibration;
     public float smallVibration;
     public float vibrateTime;
+
+    public bool elevatorVibration;/////////// elevator
+    public float elevatorVibrationTime;
+    bool loopElevator;
     #endregion
 
     #region GUI LAYOUT
@@ -170,6 +174,11 @@ public class FeedBack_Manager : MonoBehaviour
         if (ennemyGetHit == true ) {DynamicPunchVisu();}
         else if (ennemyDied == true) {StartCoroutine(EnnemyDeath());}
         if (throwScrShake == true) {StartCoroutine(throwObject());}
+
+        if(elevatorVibration == true && loopElevator == false) 
+        {
+            StartCoroutine(waitShakeElevator());
+        }
         
         if(plScript.health >= 100) {Berserker();}
         else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
@@ -309,6 +318,16 @@ public class FeedBack_Manager : MonoBehaviour
 
     }
 
+    IEnumerator waitShakeElevator()
+    {
+        yield return new WaitForSeconds(15f);
+        StartCoroutine(elevatorShake());
+        yield return new WaitForSeconds(3f);
+        loopElevator = true;
+        Debug.Log("ppp");
+        StopCoroutine(elevatorShake());
+    }
+
     IEnumerator EnnemyDeath()
     {
         shakeAmplitude = 0.9f;
@@ -322,6 +341,7 @@ public class FeedBack_Manager : MonoBehaviour
 
     }
 
+
     IEnumerator throwObject()
     {
         shakeAmplitude = 0.7f;
@@ -334,16 +354,26 @@ public class FeedBack_Manager : MonoBehaviour
         StopCoroutine(throwObject());
     }
 
+    IEnumerator elevatorShake()
+    {
+        shakeAmplitude = 0.5f;
+        shakeFrequency = 0.5f;
+        CameraShake();
+        StartCoroutine(vibrateBrève(elevatorVibrationTime, 0.5f ,0.5f));
+        yield return new WaitForSeconds(elevatorVibrationTime);
+        StopCoroutine(elevatorShake());
+    }
+
     public IEnumerator vibrateBrève(float time, float bigVibration, float smallVibration)
     {
         GamePad.SetVibration(0,bigVibration,bigVibration);
-        GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration); 
+        GamePad.SetVibration(PlayerIndex.One,smallVibration, smallVibration);
+
 
         yield return new WaitForSeconds(time);
-        
+
         GamePad.SetVibration(0,0,0);
         GamePad.SetVibration(PlayerIndex.One,0, 0);
-
         StopCoroutine(vibrateBrève(time, bigVibration, smallVibration));
     }
 

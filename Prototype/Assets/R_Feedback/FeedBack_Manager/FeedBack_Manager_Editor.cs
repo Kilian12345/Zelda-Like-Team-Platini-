@@ -106,6 +106,9 @@ public class FeedBack_Manager_Editor : Editor
     private SerializedProperty bigVibration;
     private SerializedProperty smallVibration;
     private SerializedProperty vibrateTime;
+    [Header ("Elevator shake")]
+    private SerializedProperty elevatorVibration;
+    private SerializedProperty elevatorVibrationTime;
     #endregion
    
 
@@ -170,6 +173,8 @@ public class FeedBack_Manager_Editor : Editor
         bigVibration = soTarget.FindProperty("bigVibration");
         smallVibration = soTarget.FindProperty("smallVibration");
         vibrateTime = soTarget.FindProperty("vibrateTime");
+        elevatorVibration = soTarget.FindProperty("elevatorVibration");
+        elevatorVibrationTime = soTarget.FindProperty("elevatorVibrationTime");
 
     }
 
@@ -280,6 +285,8 @@ public class FeedBack_Manager_Editor : Editor
                 EditorGUILayout.PropertyField(bigVibration);
                 EditorGUILayout.PropertyField(smallVibration);
                 EditorGUILayout.PropertyField(vibrateTime);
+                EditorGUILayout.PropertyField(elevatorVibration);
+                EditorGUILayout.PropertyField(elevatorVibrationTime);
                 break;
         }
 
