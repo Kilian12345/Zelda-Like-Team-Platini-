@@ -164,7 +164,6 @@ public class FeedBack_Manager : MonoBehaviour
 
     void LateUpdate()
     {
-
         ThirdAbilityVisu();
         Vignette();
         if (firstActivated == true) StartCoroutine(firstAbility());
@@ -322,10 +321,11 @@ public class FeedBack_Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(15f);
         StartCoroutine(elevatorShake());
-        yield return new WaitForSeconds(3f);
-        loopElevator = true;
+        yield return new WaitForSeconds(elevatorVibrationTime);
         Debug.Log("ppp");
+        StopCoroutine(waitShakeElevator());
         StopCoroutine(elevatorShake());
+        loopElevator = true;
     }
 
     IEnumerator EnnemyDeath()
@@ -360,7 +360,7 @@ public class FeedBack_Manager : MonoBehaviour
         shakeFrequency = 0.5f;
         CameraShake();
         StartCoroutine(vibrateBrève(elevatorVibrationTime, 0.5f ,0.5f));
-        yield return new WaitForSeconds(elevatorVibrationTime);
+        yield return new WaitForSeconds(0.0f);
         StopCoroutine(elevatorShake());
     }
 
