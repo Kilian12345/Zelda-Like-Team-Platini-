@@ -54,7 +54,7 @@ void secondAbilityPunch()
 }
     public void SpawnTrailPart()
     {
-            Debug.Log("salop salop salop");
+            //Debug.Log("salop salop salop");
         //if (Fb.ghostAcivated == true)
        // {
 

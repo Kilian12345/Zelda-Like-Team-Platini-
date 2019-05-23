@@ -98,7 +98,7 @@ public class KaiserController : MonoBehaviour
 
     void checkForState()
     {
-        Debug.Log("Time " + Time.time);
+        //Debug.Log("Time " + Time.time);
         healthPercent = (healthScript.health / healthScript.maxHealth) * 100;
         if (healthPercent >= phase1ExitPercent)
         {
