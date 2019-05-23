@@ -262,17 +262,17 @@ public class GunCock : MonoBehaviour
     {
         pauseFire = false;
         isShooting = true;
-        Vector2 dir = (plScript.centrePoint.transform.position - transform.position).normalized;
+        Vector2 dir = (plScript.centrePoint.transform.position - shootPoint.transform.position).normalized;
         GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
         yield return new WaitForSeconds(0.25f);
-        dir = (plScript.centrePoint.transform.position - transform.position).normalized;
+        dir = (plScript.centrePoint.transform.position - shootPoint.transform.position).normalized;
         bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
         yield return new WaitForSeconds(0.25f);
-        dir = (plScript.centrePoint.transform.position - transform.position).normalized;
+        dir = (plScript.centrePoint.transform.position - shootPoint.transform.position).normalized;
         bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;

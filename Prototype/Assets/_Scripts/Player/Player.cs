@@ -84,6 +84,8 @@ public class Player : MonoBehaviour
     private float angle;
 
     public bool Carry = false;
+    [HideInInspector]
+    public bool inStrike;
 
     #endregion
 
@@ -610,6 +612,10 @@ public class Player : MonoBehaviour
                 levelEnd = true;
             }
         }
+        if (col.gameObject.tag == "Strike")
+        {
+            inStrike = true;
+        }
     }
     void OnTriggerStay2D(Collider2D col)
     {
@@ -619,6 +625,17 @@ public class Player : MonoBehaviour
             {
                 levelEnd = true;
             }
+        }
+        if (col.gameObject.tag == "Strike")
+        {
+            inStrike = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Strike")
+        {
+            inStrike = false;
         }
     }
 

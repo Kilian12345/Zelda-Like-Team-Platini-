@@ -10,6 +10,7 @@ public class BulletHell : MonoBehaviour
     public float shotsPerBurst;
     public float shotRate;
     public float coolDownTime;
+    public GameObject shootPoint;
     public GameObject projectilePrefab;
     
     private Vector3 startPoint;
@@ -32,7 +33,7 @@ public class BulletHell : MonoBehaviour
 
     void FixedUpdate()
     {
-        startPoint = transform.position;
+        startPoint = shootPoint.transform.position;
         if (Enabled)
         {
             if (ctrBullet < shotsPerBurst)

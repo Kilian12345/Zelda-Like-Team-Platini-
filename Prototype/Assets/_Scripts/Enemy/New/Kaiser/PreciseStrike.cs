@@ -70,11 +70,13 @@ public class PreciseStrike : MonoBehaviour
     {
         isShooting = true;
         pauseFire = false;
-        Vector2 dir = (plScript.centrePoint.transform.position - transform.position).normalized;
+        yield return new WaitForSeconds(1f);
+        Vector2 dir = (plScript.centrePoint.transform.position - shootPoint.transform.position).normalized;
         GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
         Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
-        yield return new WaitForEndOfFrame();
+        //yield return new WaitForSeconds(1f);
+        //yield return new WaitForEndOfFrame();
         isShooting = false;
         StopCoroutine(Shoot());
     }
