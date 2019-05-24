@@ -228,6 +228,8 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(refill());
         }
+
+        selectAbility();
     }
 
     void FixedUpdate()
@@ -322,7 +324,6 @@ public class Player : MonoBehaviour
         {
             switchAbilities();
         }*/
-        selectAbility();
         checkForAbilityState();
         cooldownUI();
         updateEnemyFollowing();
