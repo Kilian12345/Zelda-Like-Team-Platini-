@@ -161,6 +161,7 @@ public class Player : MonoBehaviour
     public Animator elevatorMouv;
     public GameObject elevator;
     public bool usingElevator;
+    public bool usingElevatorTwo;
     bool doneOneFade;
     bool fadeOut;
 
@@ -594,6 +595,11 @@ public class Player : MonoBehaviour
         if (usingElevator == true)
         {
             elevatorMouv.SetBool("Mouv", true);
+            transform.parent = elevator.transform;
+        }
+        else if (usingElevatorTwo == true)
+        {
+            elevatorMouv.SetBool("Mouv2", true);
             transform.parent = elevator.transform;
         }
 
