@@ -216,6 +216,20 @@ public class Player : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Attacking") && Carry == false)
+        {
+            toPunch = true;
+            Debug.Log("punch");
+        }
+
+        if (Input.GetButton("Refill"))
+        {
+            StartCoroutine(refill());
+        }
+    }
+
     void FixedUpdate()
     {
         if (iseElevatorEntrance == true && entranceOnce == false) /// entrance
@@ -231,10 +245,11 @@ public class Player : MonoBehaviour
         //anim.SetFloat("VerAxis", moveVer);
         anim.SetBool("Dead", isDead);
         move();
-        if (Input.GetButtonDown("Attacking") && Carry == false)
+        /*if (Input.GetButtonDown("Attacking") && Carry == false) /////////////////////////// Void Update
         {
             toPunch = true;
-        }
+            Debug.Log("punch");
+        }*/
         if (Time.time > timeToAttack)
         {
             //player.velocity = Vector3.zero;
@@ -292,10 +307,10 @@ public class Player : MonoBehaviour
             doneOneFade = true;
         }
 
-        if (Input.GetButton("Refill"))
+        /*if (Input.GetButton("Refill")) /////////////////// void Update
         {
             StartCoroutine(refill());
-        }
+        }*/
         abilityMeters[0].GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
         abilityMeters[1].GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
         abilityMeters[2].GetComponent<Image>().fillAmount = curcooldownTime[2] / cooldownTime[2];
