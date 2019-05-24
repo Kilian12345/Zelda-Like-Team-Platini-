@@ -22,7 +22,7 @@ public class Ghost : MonoBehaviour
         
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (playerScript.moveHor < 0f) {flip = true;}
         else {flip = false;}

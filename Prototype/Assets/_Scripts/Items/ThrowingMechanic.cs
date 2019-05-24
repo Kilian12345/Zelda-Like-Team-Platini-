@@ -29,9 +29,8 @@ public class ThrowingMechanic : MonoBehaviour
         Fb_Mana.boxExpolsion = boxExpolsion;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-
         if ((Vector2.Distance(transform.position, ps.centrePoint.transform.position) <= pickupDistance) && ps.Carry == false)
         {
             canBePicked = true;
@@ -57,6 +56,12 @@ public class ThrowingMechanic : MonoBehaviour
         else { canBePicked = false; }
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         //Debug.Log(GetComponent<Rigidbody2D>().velocity);
+    }
+
+    void FixedUpdate()
+    {
+
+ 
 
         if (isCaught)
         {

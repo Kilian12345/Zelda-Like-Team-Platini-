@@ -30,8 +30,7 @@ public class Ghost_FadeOut : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {       
-        if (slowMo == true) PlayerSlowMo();
-        else {PlayerDash();}
+        PlayerDash();
 
         if (spriteRend.color.a <= 0)
         {Destroy(gameObject);}
