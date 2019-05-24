@@ -7,19 +7,16 @@ public class Kaiser : MonoBehaviour
 
     #region Global Values
 
+
     public bool isActive;
     public float phase1ExitPercent;
     public float phase2ExitPercent;
     public int curPhase;
-    public int jumpCtr;
-    public int preciseStrikeCtr;
-    public int dashCtr;
-    public int bulletHellCtr;
+    public int curSubPhase;
     public int attackCtr;
 
     private float damageValue;
     [SerializeField]
-    private int attackType;
     private float healthPercent;
     [SerializeField]
     private int curAttack;
@@ -36,12 +33,14 @@ public class Kaiser : MonoBehaviour
     public float dashCoolDown;
     public float dashDamageValue;
 
+    public float dashCtr;
     public bool canDash;
 
     private float timeToDash;
 
     private bool isDashing;
     private bool isAttacking;
+    private bool pauseDash;
 
     #endregion
 
@@ -61,7 +60,7 @@ public class Kaiser : MonoBehaviour
     private Vector2 gizmoPos;
     private Vector2[] points;
 
-
+    public float jumpCtr;
     public bool canJump;
 
     private float timeToJump;
@@ -70,6 +69,7 @@ public class Kaiser : MonoBehaviour
     private bool isJumping;
     [SerializeField]
     private bool canDamage;
+    private bool pauseJump;
 
     #endregion
 
@@ -135,7 +135,7 @@ public class Kaiser : MonoBehaviour
         cp[0].position = transform.position;
         playerPos = plScript.centrePoint.transform;
         coll = GetComponent<Collider2D>();
-        
+
     }
 
     void FixedUpdate()
@@ -153,14 +153,114 @@ public class Kaiser : MonoBehaviour
         }
         if (start)
         {
-            healthPercent = (healthScript.health / healthScript.maxHealth) * 100;
+            SwitchPhases();
         }
         animate();
         attacks();
-        
-        
-        
-        
+    }
+
+    void SwitchPhases()
+    {
+        healthPercent = (healthScript.health / healthScript.maxHealth) * 100;
+        if (healthPercent >= phase1ExitPercent)
+        {
+            StartCoroutine(Phase1());
+        }
+        else if (healthPercent < phase1ExitPercent && healthPercent >= phase2ExitPercent)
+        {
+            StartCoroutine(Phase2());
+        }
+        else if (healthPercent < phase2ExitPercent && healthPercent >= 0)
+        {
+            StartCoroutine(Phase3());
+        }
+    }
+
+    IEnumerator Phase1()
+    {
+        if (curSubPhase <= 2)
+        {
+            switch (curSubPhase)
+            {
+                case 1:
+                    {
+                        curAttack = 1;
+                    }
+                    break;
+                case 2:
+                    {
+                        curAttack = 2;
+                    }
+                    break;
+            }
+        }
+        else
+        {
+            yield return new WaitForSeconds(5f);
+            curSubPhase = 1;
+        }
+        StopCoroutine(Phase1());
+    }
+    IEnumerator Phase2()
+    {
+        if (curSubPhase <= 2)
+        {
+            switch (curSubPhase)
+            {
+                case 1:
+                    {
+                        curAttack = 3;
+                    }
+                    break;
+                case 2:
+                    {
+                        curAttack = 4;
+                    }
+                    break;
+            }
+        }
+        else
+        {
+            yield return new WaitForSeconds(5f);
+            curSubPhase = 1;
+        }
+        StopCoroutine(Phase2());
+    }
+
+    IEnumerator Phase3()
+    {
+        if (curSubPhase <= 4)
+        {
+            switch (curSubPhase)
+            {
+                case 1:
+                    {
+                        curAttack = 3;
+                    }
+                    break;
+                case 2:
+                    {
+                        curAttack = 2;
+                    }
+                    break;
+                case 3:
+                    {
+                        curAttack = 3;
+                    }
+                    break;
+                case 4:
+                    {
+                        curAttack = 4;
+                    }
+                    break;
+            }
+        }
+        else
+        {
+            yield return new WaitForSeconds(5f);
+            curSubPhase = 1;
+        }
+        StopCoroutine(Phase3());
     }
 
     void attacks()
@@ -170,11 +270,25 @@ public class Kaiser : MonoBehaviour
             case 1:
                 {
                     StartJump();
-                    if (Time.time > timeToJump)
+                    if (attackCtr < jumpCtr)
                     {
-                        timeToJump = Time.time + 1 / jumpRate;
-                        jumpPos();
+                        if (Time.time > timeToJump)
+                        {
+                            attackCtr++;
+                            timeToJump = Time.time + 1 / jumpRate;
+                            jumpPos();
+                        }
                     }
+                    else
+                    {
+                        if (!pauseJump)
+                        {
+                            pauseJump = true;
+                            Invoke("coolDown", coolDownTime);
+                        }
+                    }
+
+
                 }
                 break;
             case 2:
@@ -203,11 +317,24 @@ public class Kaiser : MonoBehaviour
             case 3:
                 {
                     StartDash();
-                    if (Time.time > timeToDash)
+                    if (attackCtr < dashCtr)
                     {
-                        timeToDash = Time.time + 1 / dashCoolDown;
-                        recPos();
+                        if (Time.time > timeToDash)
+                        {
+                            attackCtr++;
+                            timeToDash = Time.time + 1 / dashCoolDown;
+                            recPos();
+                        }
                     }
+                    else
+                    {
+                        if (!pauseDash)
+                        {
+                            pauseDash = true;
+                            Invoke("coolDown", coolDownTime);
+                        }
+                    }
+
                 }
                 break;
             case 4:
@@ -236,7 +363,7 @@ public class Kaiser : MonoBehaviour
                         {
                             pauseFireBH = true;
                             firstShot = false;
-                            Invoke("coolDown", coolDownTimeBH);
+                            Invoke("coolDown", coolDownTime);
                         }
                     }
                 }
@@ -298,6 +425,7 @@ public class Kaiser : MonoBehaviour
 
     void dash()
     {
+        pauseDash = false;
         isDashing = true;
         transform.position = Vector2.MoveTowards(transform.position, lastPos, dashVelocity * Time.deltaTime);
     }
@@ -347,6 +475,7 @@ public class Kaiser : MonoBehaviour
 
     IEnumerator Jump()
     {
+        pauseJump = false;
         timeparam = 0;
         isJumping = true;
         canJump = false;
@@ -410,6 +539,8 @@ public class Kaiser : MonoBehaviour
     {
         ctrBullet = 0;
         ctrBulletBH = 0;
+        attackCtr = 0;
+        curSubPhase++;
     }
 
     IEnumerator Shoot()
