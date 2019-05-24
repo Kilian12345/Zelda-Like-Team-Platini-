@@ -19,11 +19,7 @@ public class Ghost_FadeOut : MonoBehaviour
         renderC = GetComponent<Rendering_Chara>();
 
         renderC.HitColor = Fb.opaqueColor;
-        spriteRend.material = Fb.playerMat;
-
-               
-        if (Fb.firstActivated == true) {dash = true;}
-        else if (Fb.secondActivated == true) {slowMo = true;}
+        spriteRend.material = Fb.playerMat;          
 
     }
 

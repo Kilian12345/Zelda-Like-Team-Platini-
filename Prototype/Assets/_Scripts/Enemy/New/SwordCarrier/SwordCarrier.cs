@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwordCarrier : MonoBehaviour
 {
     public int difficultyLevel; ///////// difficulty
-    public AudioClip punch;
+    public AudioClip swordatk;
     public GameObject gun;
     public GameObject shootPoint;
 
@@ -40,7 +40,7 @@ public class SwordCarrier : MonoBehaviour
     Animator anim;
     Rigidbody2D rb;
     EnemyHealth healthScript;
-    AudioSource enemyAudio;
+    [SerializeField] AudioSource enemyAudio;
     FeedBack_Manager fb_mana;
 
     Vector2 dir;
@@ -53,7 +53,6 @@ public class SwordCarrier : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         healthScript = GetComponent<EnemyHealth>();
-        enemyAudio = gameObject.GetComponent<AudioSource>();
 
         fb_mana = FindObjectOfType<FeedBack_Manager>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
@@ -222,6 +221,10 @@ public class SwordCarrier : MonoBehaviour
         isAttacking = true;
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
         yield return new WaitForSeconds(0.5f);
+
+        enemyAudio.clip = swordatk;
+        enemyAudio.Play();
+
         //Debug.Log(enemiestoDamage.Length);
         if (enemiestoDamage.Length > 0)
         {

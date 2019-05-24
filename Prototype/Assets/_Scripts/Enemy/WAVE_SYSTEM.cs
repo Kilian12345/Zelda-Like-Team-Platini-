@@ -11,11 +11,15 @@ public class WAVE_SYSTEM : MonoBehaviour
     [SerializeField] Transform ennemyParent;
     [SerializeField] Transform[] points;
     [SerializeField] GameObject[] ennemyPrefab;
+    [SerializeField] GameObject teleportation;
     [SerializeField] GameObject[] throwableObjects;
     [SerializeField] List<Transform> ennemiesInArena = new List<Transform>();
     [SerializeField] List<Transform> objectInArena = new List<Transform>();
     [SerializeField] int difficulty;
     [SerializeField] int difficultyLeft;
+    [Header("Loading")]
+    [SerializeField] Image loadingImage;
+    [SerializeField] Text loadingText;
     public bool everyoneHasSpawn;
 
     public bool TransitionScene;
@@ -40,6 +44,12 @@ public class WAVE_SYSTEM : MonoBehaviour
         waveInfo = GetComponentInChildren<Text>();
         waveWrite = "WAVE : ";
         waveInfo.text = waveWrite + 0.ToString();
+
+        if(TransitionScene == false)
+        {
+            loadingImage.enabled = false;
+            loadingText.enabled = false;
+        }
     }
 
     void FixedUpdate()
@@ -128,6 +138,7 @@ public class WAVE_SYSTEM : MonoBehaviour
                     if (rightPrefab.GetComponent<HeadButtEnemy>() != null)
                     {
                         difficultyLeft = difficultyLeft - rightPrefab.GetComponent<HeadButtEnemy>().difficultyLevel;
+                        StartCoroutine(Teleportation(points[i]));
                         ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
                         ennemiesInArena.Add(ennemyGO.transform);
                     }
@@ -135,6 +146,7 @@ public class WAVE_SYSTEM : MonoBehaviour
                     else if (rightPrefab.GetComponent<Kami>() != null)
                     {
                         difficultyLeft = difficultyLeft - rightPrefab.GetComponent<Kami>().difficultyLevel;
+                        StartCoroutine(Teleportation(points[i]));
                         ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
                         ennemiesInArena.Add(ennemyGO.transform);
                     }
@@ -142,6 +154,7 @@ public class WAVE_SYSTEM : MonoBehaviour
                     else if (rightPrefab.GetComponent<SwordCarrier>() != null)
                     {
                         difficultyLeft = difficultyLeft - rightPrefab.GetComponent<SwordCarrier>().difficultyLevel;
+                        StartCoroutine(Teleportation(points[i]));
                         ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
                         ennemiesInArena.Add(ennemyGO.transform);
                     }
@@ -149,6 +162,7 @@ public class WAVE_SYSTEM : MonoBehaviour
                     else if (rightPrefab.GetComponentInChildren<GunCock>() != null)
                     {
                         difficultyLeft = difficultyLeft - rightPrefab.GetComponentInChildren<GunCock>().difficultyLevel;
+                        StartCoroutine(Teleportation(points[i]));
                         ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
                         ennemiesInArena.Add(ennemyGO.transform);
                     }
@@ -156,6 +170,7 @@ public class WAVE_SYSTEM : MonoBehaviour
                     else if (rightPrefab.GetComponentInChildren<Scorpio>() != null)
                     {
                         difficultyLeft = difficultyLeft - rightPrefab.GetComponentInChildren<Scorpio>().difficultyLevel;
+                        StartCoroutine(Teleportation(points[i]));
                         ennemyGO = Instantiate(rightPrefab, points[i].position, Quaternion.identity, ennemyParent);
                         ennemiesInArena.Add(ennemyGO.transform);
                     }
@@ -229,5 +244,14 @@ public class WAVE_SYSTEM : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToNextScene);
         plScript.levelEnd = true;
+    }
+
+    IEnumerator Teleportation(Transform Ennemyposition)
+    {
+        GameObject justTeleport;
+        justTeleport = Instantiate(teleportation, Ennemyposition.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(justTeleport);
+        StopCoroutine(Teleportation(Ennemyposition));
     }
 }

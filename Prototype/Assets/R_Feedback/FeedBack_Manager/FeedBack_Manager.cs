@@ -165,6 +165,8 @@ public class FeedBack_Manager : MonoBehaviour
 
     void LateUpdate()
     {
+        Debug.Log(firstActivated);
+
         ThirdAbilityVisu();
         Vignette();
         if (firstActivated == true) StartCoroutine(firstAbility());
@@ -280,8 +282,8 @@ public class FeedBack_Manager : MonoBehaviour
         
         yield return new WaitForSeconds(timeFirstAbility);
 
-        ghostAcivated = false;
         firstActivated = false;
+        ghostAcivated = false;
     }
 
     IEnumerator secondAbility()

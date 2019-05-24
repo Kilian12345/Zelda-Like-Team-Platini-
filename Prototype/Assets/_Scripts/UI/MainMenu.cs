@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-   public void PlayGame(string scene)
+
+    public AudioClip butonclick;
+    public AudioSource playerAudio;
+
+    public void PlayGame(string scene)
    {
         SceneManager.LoadScene(scene);
    }
@@ -14,5 +18,11 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("QUIT");
         Application.Quit();
+    }
+
+    public void Sound()
+    {
+        playerAudio.clip = butonclick;
+        playerAudio.Play();
     }
 }

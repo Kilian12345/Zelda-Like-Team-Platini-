@@ -14,7 +14,7 @@ public class Ghost : MonoBehaviour
 
     bool flip = false;
     bool firstInvokeDone = false;
-    bool secondInvokeDone = false;  
+    bool secondInvokeDone = false;
 
 
     void Start()
@@ -22,17 +22,20 @@ public class Ghost : MonoBehaviour
         
     }
 
-    void Update()
+
+    void FixedUpdate()
     {
         if (playerScript.moveHor < 0f) {flip = true;}
         else {flip = false;}
 
         if (Fb.firstActivated == true)
         {
-                dashGhost();
+            dashGhost();
         }
-        else if (playerScript.activatedAbility != 1)
-        {firstInvokeDone = false; CancelInvoke("SpawnTrailPart");}
+
+
+        if (Fb.firstActivated == false && playerScript.activatedAbility != 1)
+        { CancelInvoke("SpawnTrailPart"); firstInvokeDone = false;}
 
     }
 

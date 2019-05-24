@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
     [Header("Audio and Visual Properties ///////////////////////////////////")]
 
     [Header("Audio")]
-    public AudioClip hit, died;
+    public AudioClip hit, died, punch, calcium, dash, slowmo, atk3;
     [HideInInspector] public AudioSource playerAudio;
 
     [Header("Visuals")]
@@ -221,12 +221,13 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Attacking") && Carry == false)
         {
             toPunch = true;
-            Debug.Log("punch");
         }
 
         if (Input.GetButton("Refill"))
         {
             StartCoroutine(refill());
+            playerAudio.clip = calcium;
+            playerAudio.Play();
         }
 
         selectAbility();
@@ -250,7 +251,8 @@ public class Player : MonoBehaviour
         /*if (Input.GetButtonDown("Attacking") && Carry == false) /////////////////////////// Void Update
         {
             toPunch = true;
-            Debug.Log("punch");
+            playerAudio.clip = punch;
+            playerAudio.Play();
         }*/
         if (Time.time > timeToAttack)
         {
@@ -312,7 +314,9 @@ public class Player : MonoBehaviour
         /*if (Input.GetButton("Refill")) /////////////////// void Update
         {
             StartCoroutine(refill());
-        }*/
+            playerAudio.clip = calcium;
+            playerAudio.Play();
+        }
         abilityMeters[0].GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
         abilityMeters[1].GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
         abilityMeters[2].GetComponent<Image>().fillAmount = curcooldownTime[2] / cooldownTime[2];
@@ -407,16 +411,23 @@ public class Player : MonoBehaviour
         {
             if (abilityMeters[0].activeSelf)
             {
+                playerAudio.clip = dash;
+                playerAudio.Play();
+
                 if (curcooldownTime[0] >= cooldownTime[0])
                 {
                     StartCoroutine(firstAbilityWait());
                 }
+
             }
         }
         if (Input.GetButtonDown("Ability2") && Carry == false)
         {
             if (abilityMeters[1].activeSelf)
             {
+                playerAudio.clip = slowmo;
+                playerAudio.Play();
+
                 if (curcooldownTime[1] >= cooldownTime[1])
                 {activatedAbility = 2;}
             }
@@ -426,6 +437,9 @@ public class Player : MonoBehaviour
         {
             if (abilityMeters[2].activeSelf)
             {
+                playerAudio.clip = atk3;
+                playerAudio.Play();
+
                 if (curcooldownTime[2] >= cooldownTime[2])
                 {activatedAbility = 3;}
             }
@@ -756,6 +770,8 @@ public class Player : MonoBehaviour
                         yield return new WaitForSeconds(0.1f);
                         if (enemiestoDamage[i]!=null)
                         enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                        playerAudio.clip = punch;
+                        playerAudio.Play();
                     }
                     toPunch = false;
                     break;
@@ -823,10 +839,10 @@ public class Player : MonoBehaviour
 
     IEnumerator firstAbilityWait()
     {
-        yield return new WaitForSeconds(0.0f);
+        yield return new WaitForSeconds(0.25f);
         activatedAbility = 1;
-        Fb_mana.firstActivated = true;
         curcooldownTime[0] = cooldownTime[0];
         Fb_mana.timeFirstAbility = cooldownTime[0];
+        Fb_mana.firstActivated = true;
     }
 }
