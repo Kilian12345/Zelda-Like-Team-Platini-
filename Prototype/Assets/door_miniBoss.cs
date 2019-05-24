@@ -13,4 +13,8 @@ public class door_miniBoss : MonoBehaviour
             anim.SetTrigger("Trigger");
         }
     }
+    private void Update()
+    {
+        gameObject.SetActive(true);
+    }
 }
