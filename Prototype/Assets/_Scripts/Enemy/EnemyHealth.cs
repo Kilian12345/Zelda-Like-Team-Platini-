@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    AudioSource enemyAudio;
+    [SerializeField] AudioSource enemyAudio;
     public AudioClip dead, punch;
     public GameObject particlesBlood;
     public GameObject particlesThanos;
@@ -39,7 +39,6 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
-        enemyAudio = gameObject.GetComponent<AudioSource>();
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ThAb = FindObjectOfType<ThirdAbility>();
         laserZone = FindObjectOfType<Fow_Parent>();

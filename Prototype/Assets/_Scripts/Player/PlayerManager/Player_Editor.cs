@@ -76,7 +76,7 @@ public class Player_Editor : Editor
 
     #region Audio Visuals
 
-    private SerializedProperty hit, died;
+    private SerializedProperty hit, died, punch, calcium, dash, slowmo, atk3;
     private SerializedProperty particles;
 
     #endregion
@@ -150,6 +150,11 @@ public class Player_Editor : Editor
 
         hit = soTarget.FindProperty("hit");
         died = soTarget.FindProperty("died");
+        punch = soTarget.FindProperty("punch");
+        calcium = soTarget.FindProperty("calcium");
+        dash = soTarget.FindProperty("dash");
+        slowmo = soTarget.FindProperty("slowmo");
+        atk3 = soTarget.FindProperty("atk3");
         particles = soTarget.FindProperty("particles");
 
         sceneIndex = soTarget.FindProperty("sceneIndex");
@@ -257,6 +262,11 @@ public class Player_Editor : Editor
             case "Audio Visuals":
                 EditorGUILayout.PropertyField(hit);
                 EditorGUILayout.PropertyField(died);
+                EditorGUILayout.PropertyField(punch);
+                EditorGUILayout.PropertyField(calcium);
+                EditorGUILayout.PropertyField(dash);
+                EditorGUILayout.PropertyField(slowmo);
+                EditorGUILayout.PropertyField(atk3);
                 EditorGUILayout.PropertyField(particles);
                 break;
             case "SceneFade":

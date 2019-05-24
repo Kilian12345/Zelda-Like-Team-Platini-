@@ -15,6 +15,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject btnoption;
     private int check = 0;
 
+    public AudioClip butonclick;
+    public AudioSource playerAudio;
+
     void Update()
     {
         if (Input.GetButtonDown("Cancel") && GameIsPaused == false)
@@ -67,6 +70,12 @@ public class PauseMenu : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(btnoption);
+    }
+
+    public void Sound()
+    {
+        playerAudio.clip = butonclick;
+        playerAudio.Play();
     }
 
     /*IEnumerator Pause()
