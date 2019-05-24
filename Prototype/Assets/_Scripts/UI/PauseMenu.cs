@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-    [SerializeField]
-    GameObject canvas;
+    [SerializeField] GameObject canvas;
+    [SerializeField] GameObject menu;
+    [SerializeField] GameObject option;
+    [SerializeField] GameObject btnmenu;
+    [SerializeField] GameObject btnoption;
+    private int check = 0;
 
     void Update()
     {
@@ -18,17 +22,21 @@ public class PauseMenu : MonoBehaviour
             Debug.Log("activate canvas");
             canvas.SetActive(true);
             GameIsPaused = true;
-            StartCoroutine("Pause");
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(btnmenu);
+            //StartCoroutine("Pause");
+            Pause();
         }
 
         else if(Input.GetButtonDown("Cancel") && GameIsPaused == true)
         {
             Debug.Log("deactivate canvas");
             canvas.SetActive(false);
+            menu.SetActive(true);
+            option.SetActive(false);
             GameIsPaused = false;
             Time.timeScale = 1f;
         }
-
     }
 
     public void ResumeGame()
@@ -44,10 +52,27 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    IEnumerator Pause()
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void EnableMenu()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(btnmenu);
+    }
+
+    public void EnableOption()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(btnoption);
+    }
+
+    /*IEnumerator Pause()
     {
         yield return new WaitForSeconds(1f);
         Time.timeScale = 0f;
         yield return null;
-    }
+    }*/
 }
