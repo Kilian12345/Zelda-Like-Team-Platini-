@@ -75,7 +75,8 @@ public class JumpAttack : MonoBehaviour
             {
                 anim.SetInteger("AttackType", 0);
             }
-        }  
+        }
+        
     }
 
     void OnDrawGizmos()

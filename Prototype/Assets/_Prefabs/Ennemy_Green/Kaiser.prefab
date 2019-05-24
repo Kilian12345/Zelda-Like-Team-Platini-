@@ -104,11 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 409171903922739089}
   - component: {fileID: 409171903922739094}
-  - component: {fileID: 3199840655699832217}
-  - component: {fileID: 409171903922739080}
-  - component: {fileID: 409171903922739086}
-  - component: {fileID: 409171903922739095}
-  - component: {fileID: 409171903922739088}
+  - component: {fileID: 2264828089329138272}
   - component: {fileID: 409171903922739087}
   - component: {fileID: 409171903922739090}
   - component: {fileID: 409171903922739091}
@@ -155,7 +151,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0440a8124beaa254dbcf3e3c80672cd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -186,7 +182,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3199840655699832217
+--- !u!114 &2264828089329138272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,103 +191,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 409171903922739092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519762fd9156aaf4a871f435c8a7f91b, type: 3}
+  m_Script: {fileID: 11500000, guid: 35f166d44e218cd498bee5595b6bacc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
   phase1ExitPercent: 60
-  phase2ExitPercent: 30
-  attackDuration: 10
-  timeToAttack1: 0
-  timeToAttack2: 0
-  timeToAttack3: 0
+  phase2ExitPercent: 40
+  curPhase: 0
+  curSubPhase: 1
+  attackCtr: 1
+  healthPercent: 0
   curAttack: 0
---- !u!114 &409171903922739080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409171903922739092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a640a45af3e27294a8344886c930b0ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enabled: 0
+  dashVelocity: 2.5
+  dashCoolDown: 0.3
+  dashDamageValue: 20
+  dashCtr: 3
+  canDash: 0
+  cp:
+  - {fileID: 409171903528168824}
+  - {fileID: 409171903759150997}
+  - {fileID: 409171904648286657}
+  jumpSpeed: 2.5
+  jumpHeightModifier: 1.5
+  jumpRate: 0.3
+  jumpRange: 1.5
+  jumpDamageValue: 20
+  jumpCtr: 3
+  canJump: 0
+  canDamage: 0
   bulSpeed: 3
-  shotsPerBurst: 5
+  shotsPerBurst: 3
   shotRate: 0.8
   coolDownTime: 4
   bull: {fileID: 7681654984024996306, guid: be4ac5bbf78817544aca0e53cbbe36a0, type: 3}
   shootPoint: {fileID: 409171904759768289}
   ctrBullet: 0
---- !u!114 &409171903922739086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409171903922739092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57cf57f9d58f564f9a61f6ad051f3dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enabled: 0
-  numberOfProjectiles: 12
-  projectileSpeed: 0.6
-  shotsPerBurst: 15
-  shotRate: 2
-  coolDownTime: 8
-  shootPoint: {fileID: 409171904759768289}
+  numberOfProjectiles: 9
+  projectileSpeed: 0.4
+  shotsPerBurstBH: 15
+  shotRateBH: 2
+  coolDownTimeBH: 6
   projectilePrefab: {fileID: 7681654984024996306, guid: be4ac5bbf78817544aca0e53cbbe36a0,
     type: 3}
   curAngle: 0
-  ctrBullet: 0
---- !u!114 &409171903922739095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409171903922739092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 672167a147046b34ea3448e1cdfdb9a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enabled: 0
-  cp:
-  - {fileID: 409171903528168824}
-  - {fileID: 409171903759150997}
-  - {fileID: 409171904648286657}
-  jumpSpeed: 1.5
-  jumpHeightModifier: 1.5
-  jumpRate: 0.3
-  jumpRange: 1.5
-  damageValue: 20
-  canJump: 0
-  canDamage: 0
---- !u!114 &409171903922739088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409171903922739092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ff587909f3b314d8cfe6d29cd672f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enabled: 0
-  dashVelocity: 4
-  dashCoolDown: 0.3
-  dashRange: 1.5
-  damageValue: 20
-  isInDashRange: 0
-  canDash: 0
+  ctrBulletBH: 0
 --- !u!114 &409171903922739087
 MonoBehaviour:
   m_ObjectHideFlags: 0

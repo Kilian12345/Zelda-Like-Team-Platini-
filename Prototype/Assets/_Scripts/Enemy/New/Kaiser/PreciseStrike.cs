@@ -58,7 +58,12 @@ public class PreciseStrike : MonoBehaviour
                 anim.SetInteger("AttackType", 0);
             }
         }
-        
+        else
+        {
+            ctrBullet = 0;
+            timeToFire = 0;
+        }
+
     }
 
     void coolDown()
