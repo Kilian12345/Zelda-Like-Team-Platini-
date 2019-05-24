@@ -823,7 +823,7 @@ public class Player : MonoBehaviour
 
     IEnumerator firstAbilityWait()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.0f);
         activatedAbility = 1;
         Fb_mana.firstActivated = true;
         curcooldownTime[0] = cooldownTime[0];
