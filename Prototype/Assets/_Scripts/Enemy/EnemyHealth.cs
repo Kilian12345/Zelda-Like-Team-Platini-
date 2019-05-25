@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     [HideInInspector]
     public float maxHealth;
     public float dissolveAmout;
+    public float destroyTime;
 
     [SerializeField]
     private int scorePerHit;
@@ -176,9 +177,16 @@ public class EnemyHealth : MonoBehaviour
 
     void NormalDeath()
     {
-         
          GetComponent<Collider2D>().enabled = false;
-         Destroy(parent, 0.6f);
+        if (destroyTime > 0)
+        {
+            Destroy(parent, destroyTime);
+        }
+        else
+        {
+            Destroy(parent, 0.6f);
+        }
+         
     }
 
     void DissolveDeath()
