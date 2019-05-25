@@ -18,10 +18,10 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
 
-    void LateUpdate()
+    void Update()
     {
         //Activate Dialogue combat when pressing Y while in the Trigger Zone and dialogue is not active
-        if (/* (Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) &&*/ (activator.DialogueActive == true) && dialogueOpened == false)
+        if (/* (Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) &&*/ (activator.DialogueActive == true) && (dialogueOpened == false))
         {
             canvasDialogue.SetActive(true);
             StartDialogue(activator.dialogue);

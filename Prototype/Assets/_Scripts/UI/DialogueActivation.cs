@@ -44,12 +44,11 @@ public class DialogueActivation : MonoBehaviour
         camScript = GetComponentInParent<Scripted_Camera>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        StateSwitch();
         Effect();
 
-        if (mn.English == true)
+        /*if (mn.English == true)
         {
             //Debug.Log("EN");
             dialogue.sentences = dialogue.sentencesEN;
@@ -58,14 +57,27 @@ public class DialogueActivation : MonoBehaviour
         {
             //Debug.Log("FR");
             dialogue.sentences = dialogue.sentencesFR;
-        }
+        }*/
     }
 
     void Effect()
     {
-        if ((camScript.Triggered == true || launch == true) && activateOnce == false && camScript.everyEventDone == false)
-        {   
-            Debug.Log ("pute");
+        if ((camScript.Triggered == true) && (activateOnce == false) && (camScript.everyEventDone == false))
+        {
+            StateSwitch();
+            
+
+            Debug.Log(anim.GetInteger("AnimChara"));
+            if (MenuManager.English == true)
+            {
+                Debug.Log("EN");
+                dialogue.sentences = dialogue.sentencesEN;
+            }
+            if (MenuManager.English == false)
+            {
+                Debug.Log("FR");
+                dialogue.sentences = dialogue.sentencesFR;
+            }
             dialogueManager.activator = this;
             dialogueManager.sentences = new Queue<string>(dialogue.sentences);
             DialogueActive = true;
@@ -76,6 +88,7 @@ public class DialogueActivation : MonoBehaviour
             DialogueActive = false;
             dialogueManager.dialogueOpened = false;
             activateOnce = false;
+            //StartCoroutine("Waitaaa");
         }
     }
 
@@ -106,4 +119,10 @@ public class DialogueActivation : MonoBehaviour
                 break;
         }
     }
+
+    /*IEnumerator Waitaaa()
+    {
+        yield return new WaitForSeconds(2f);
+        activateOnce = false;
+    }*/
 }

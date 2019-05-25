@@ -3697,26 +3697,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 1677290282}
-  dialogueAudio: {fileID: 0}
-  kuru: {fileID: 0}
-  kaiser: {fileID: 0}
-  spiderborg: {fileID: 0}
-  pnj1: {fileID: 0}
-  pnj2: {fileID: 0}
-  bonezonk: {fileID: 0}
-  holokaiser: {fileID: 0}
+  canvasIntDialogue: {fileID: 240565698}
+  dialogueAudio: {fileID: 1796666323}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 1
+  ChooseCharacter: 0
   dialogue:
     sentences: []
-    name: Kuru
+    name: HoloKaiser
     sentencesEN:
-    - testen1
-    - testen2
+    - '*sizzles*'
+    - "You seem to destroy \u2026*sizzles*\u2026"
+    - "\u2026*sizzles* everything you see. That is impressive."
+    - "I will help you to \u2026*sizzles*\u2026 reach your destination."
+    - "\u2026.*sizzles*\u2026 At the other end of the warehouse you will locate an
+      elevator."
+    - "Use it to access the next floor. \u2026.*Transmission ends*\u2026"
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - '*sizzles*'
+    - "Vous semblez detruire \u2026*sizzles*\u2026"
+    - "\u2026*sizzles*\u2026 tout ce que vous rencontrez sur votre passage. C est
+      impressionnant."
+    - "Je vais vous aider \u2026*sizzles*\u2026 \xE0 atteindre votre destination."
+    - "\u2026*sizzles*\u2026 A l autre bout de l entrepot vous localiserez un ascenseur."
+    - "Utilisez le pour acceder a l etage suivant. \u2026.*Fin de la transmission*\u2026"
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
   launch: 0
@@ -7286,7 +7296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &377166156
 Transform:
   m_ObjectHideFlags: 0
@@ -11925,26 +11935,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 1212947829}
-  dialogueAudio: {fileID: 0}
-  kuru: {fileID: 0}
-  kaiser: {fileID: 0}
-  spiderborg: {fileID: 0}
-  pnj1: {fileID: 0}
-  pnj2: {fileID: 0}
-  bonezonk: {fileID: 0}
-  holokaiser: {fileID: 0}
+  canvasIntDialogue: {fileID: 240565698}
+  dialogueAudio: {fileID: 1796666323}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 1
+  ChooseCharacter: 0
   dialogue:
     sentences: []
-    name: Kuru
+    name: Bjorn
     sentencesEN:
-    - testen1
-    - testen2
+    - They are killing each others, now might be the time to make a move.
+    - Use the mine carts to breach their defences.
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - "Ils s entretuent, le moment est peut-\xEAtre venu d agir."
+    - Utilises les chariots de line pour percer leurs defenses.
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
   launch: 0
@@ -15861,25 +15871,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 240565698}
-  dialogueAudio: {fileID: 0}
-  kuru: {fileID: 0}
-  kaiser: {fileID: 0}
-  spiderborg: {fileID: 0}
-  pnj1: {fileID: 0}
-  pnj2: {fileID: 0}
-  bonezonk: {fileID: 0}
-  holokaiser: {fileID: 0}
+  dialogueAudio: {fileID: 1796666323}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 1
+  ChooseCharacter: 0
   dialogue:
     sentences: []
-    name: Kuru
+    name: Bjorn
     sentencesEN:
-    - testen1
-    - testen2
+    - "After all these years someone has finally found me\u2026"
+    - "My name is Bjorn. I am the greatest warrior the world has ever known. And you,
+      you are nothing but a slave\u2026"
+    - I want to reach Valhalla, and you are going to help me. I might even offer you
+      your freedom if we make it to the end.
+    - "For that I must recover my body. And I already know where it is, I can feel
+      it\u2026"
+    - The combination of my blessed skull with your skeleton greets you with my powers
+      and my fury.
+    - The more hits you will take, the madder you will get, and you will have access
+      to new abilities.
+    - But be careful how much you can handle, you might end up blowing up.
+    - To decrease your rage, use the calcium that you will find.
+    - Now, it is slaughter time!
     sentencesFR:
-    - je suis allemand
-    - et je n'aime pas jay sampat
+    - Enfin, apres tant d annees quelqu un m a trouve.
+    - Mon nom est Bjorn. Je suis le plus grand guerrier que le monde ait connu. Et
+      tu n es qu un esclave.
+    - Je veux rejoindre le Valhalla, et tu vas m aider. Je pourrais meme te rendre
+      ta liberte si nous parvenons a notre but.
+    - "Pour cela il faut que je retrouve le reste de mon corps. Et je sais deja ou
+      le trouver, je peux sentir sa presence\u2026"
+    - L integration de mon crane sacre a ton squelette te confere mes pouvoirs et
+      ma rage.
+    - Ta rage augmentera avec le nombre de coups encaisses. Cette rage debloque de
+      nouvelles habilites.
+    - Mais ne te surestimes pas, tu risques de finir par exploser.
+    - Pour faire baisser ta rage, utilise le calcium que tu trouveras.
+    - Maintenant, c est l heure du carnage !
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
   launch: 0
@@ -20080,8 +20114,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: 8.364236e-25, y: -9.0802844e-24, z: -0.0075934734, w: 0.9999712}
-  m_LocalPosition: {x: -3.7217686, y: 17.664146, z: -49.11243}
+  m_LocalRotation: {x: 2.1855352e-24, y: -8.315068e-24, z: -0.0075934734, w: 0.9999712}
+  m_LocalPosition: {x: -9.931767, y: 18.734146, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
   - {fileID: 1789486870}
@@ -33071,26 +33105,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 1222614769}
-  dialogueAudio: {fileID: 0}
-  kuru: {fileID: 0}
-  kaiser: {fileID: 0}
-  spiderborg: {fileID: 0}
-  pnj1: {fileID: 0}
-  pnj2: {fileID: 0}
-  bonezonk: {fileID: 0}
-  holokaiser: {fileID: 0}
+  canvasIntDialogue: {fileID: 240565698}
+  dialogueAudio: {fileID: 1796666323}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 1
+  ChooseCharacter: 0
   dialogue:
     sentences: []
-    name: Kuru
+    name: Bjorn
     sentencesEN:
-    - testen1
-    - testen2
+    - They seem to have a security backup system.
+    - "If you activate the button you won\u2019t have the time to reach the door."
+    - Use my abilities to counter that.
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - "Il semble qu\u2019il y ait un syst\xE8me de s\xE9curit\xE9 de secours\u2026"
+    - "Si tu actives la commande de la porte, tu n\u2019auras pas le temps de la franchir."
+    - "Utilises mes habilit\xE9s pour contrer cela."
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
   launch: 0
@@ -37113,26 +37149,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 2070354122}
-  dialogueAudio: {fileID: 0}
-  kuru: {fileID: 0}
-  kaiser: {fileID: 0}
-  spiderborg: {fileID: 0}
-  pnj1: {fileID: 0}
-  pnj2: {fileID: 0}
-  bonezonk: {fileID: 0}
-  holokaiser: {fileID: 0}
+  canvasIntDialogue: {fileID: 240565698}
+  dialogueAudio: {fileID: 1796666323}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
     sentences: []
-    name: Kuru
+    name: PNJ
     sentencesEN:
-    - testen1
-    - testen2
+    - Hey! You! I heard that a riot has started south-east of our position. You might
+      get a chance to escape.
+    - "But first you will have to get through the big pile of scrap with the sword
+      guarding us\u2026"
+    - Try to throw some heavy barrels at him, it might hurt him bad!
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - "Hey ! Toi ! J ai entendu dire qu une emeute s est declaree au sud-ouest de
+      notre position. Il y a peut-\xEAtre une chance de s echapper. "
+    - Mais d abord tu devras affronter le gros tas de metal a l epee qui nous sert
+      de gardien.
+    - Essaie de lui jeter des barils dessus, ils sont lourds et pourrais l affaiblir
+      !
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
   launch: 0
@@ -38229,11 +38272,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuAndDialogue
       objectReference: {fileID: 0}
-    - target: {fileID: 7391703499571724410, guid: a01673ff5f12398478f827675c3196cb,
-        type: 3}
-      propertyPath: activator
-      value: 
-      objectReference: {fileID: 1712866516}
     - target: {fileID: 7391703500472006587, guid: a01673ff5f12398478f827675c3196cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38830,7 +38868,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: 5.9495905e-24, y: 6.0742284e-29, z: -0, w: 1}
+  m_LocalRotation: {x: 5.94988e-24, y: 1.5540557e-28, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -39309,6 +39347,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1796666323 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8031390859960097814, guid: a01673ff5f12398478f827675c3196cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1759043899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805509705
 GameObject:
   m_ObjectHideFlags: 0
@@ -42214,11 +42258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4523656586312702, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.88
+      value: 12.67
       objectReference: {fileID: 0}
     - target: {fileID: 4523656586312702, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.44
+      value: 6.51
       objectReference: {fileID: 0}
     - target: {fileID: 4523656586312702, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: m_LocalPosition.z
