@@ -82,10 +82,12 @@ public class Player : MonoBehaviour
     public float attackPushForce;
     private float timeToAttack;
     private float angle;
-
+    
     public bool Carry = false;
     [HideInInspector]
     public bool inStrike;
+    [HideInInspector]
+    public bool canPunch;
 
     #endregion
 
@@ -98,9 +100,12 @@ public class Player : MonoBehaviour
     public float[] cooldownTime;
     public float[] curcooldownTime;
     public float abilityIsToCooldown;
+    [HideInInspector]
+    public float timeScaleModifier;
     public int activatedAbility = 0;
     private int selectedAbility;
     public bool thirdActivated;
+    
     FeedBack_Manager Fb_mana;
 
     [Header("Ability GameObjects")]
@@ -179,18 +184,6 @@ public class Player : MonoBehaviour
 
     }
 
-    /*void OnLevelWasLoaded(int level)
-    {
-        if ((SceneManager.GetActiveScene()).name == "Scene_1")
-        {
-            var foundObjects = FindObjectsOfType<CalciumBones>();
-            for (int i = 0; i < foundObjects.Length; i++)
-            {
-                Destroy(foundObjects[i]);
-                Debug.Log("Destroyed");
-            }
-        }
-    }*/
 
     void Start()
     {
@@ -212,7 +205,7 @@ public class Player : MonoBehaviour
         if (fadeOut == true)
         { fadeAnim.SetBool("FadeOut", true); }
 
-
+        timeScaleModifier = 1;
 
     }
 
@@ -254,12 +247,14 @@ public class Player : MonoBehaviour
             playerAudio.clip = punch;
             playerAudio.Play();
         }*/
+
         if (Time.time > timeToAttack)
         {
             //player.velocity = Vector3.zero;
             if (toPunch)
             {
-                timeToAttack = Time.time + 1 / attackSpeed;
+                canPunch = true;
+                timeToAttack = Time.time + 1 / (attackSpeed * timeScaleModifier);
                 StartCoroutine(Punch());
                 if (lastHor >= 0f)
                 {
@@ -276,7 +271,7 @@ public class Player : MonoBehaviour
                     {
                         gunSprite.transform.eulerAngles = Vector3.Lerp(gunSprite.transform.rotation.eulerAngles, to, Time.deltaTime);
                     }
-                }    
+                }
             }
 
         }
@@ -311,39 +306,9 @@ public class Player : MonoBehaviour
             doneOneFade = true;
         }
 
-        /*if (Input.GetButton("Refill")) /////////////////// void Update
-        {
-            StartCoroutine(refill());
-            playerAudio.clip = calcium;
-            playerAudio.Play();
-        }
-        abilityMeters[0].GetComponent<Image>().fillAmount = curcooldownTime[0] / cooldownTime[0];
-        abilityMeters[1].GetComponent<Image>().fillAmount = curcooldownTime[1] / cooldownTime[1];
-        abilityMeters[2].GetComponent<Image>().fillAmount = curcooldownTime[2] / cooldownTime[2];
-        if (health > 100)
-        {
-            health = 100;
-        }
-        /*if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad6) || Input.GetButtonDown("SwitchLeft") || Input.GetButtonDown("SwitchRight"))
-        {
-            switchAbilities();
-        }*/
         checkForAbilityState();
         cooldownUI();
         updateEnemyFollowing();
-
-        /*if (canCharge)
-        {
-            //Charge();
-            if (Vector2.Distance(player.transform.position, moveToPos) >= 0.7f)
-            {
-                Charge();
-            }
-            else
-            {
-                canCharge = false;
-            }
-        }*/
     }
 
     void updateEnemyFollowing()
@@ -382,30 +347,6 @@ public class Player : MonoBehaviour
 
     void selectAbility() /////////////////////////////////// Nigga what's that
     {
-        /*if (Input.GetButtonDown("AbilitySelect"))
-        {
-            if (abilityMeters[selectedAbility].activeSelf)
-            {
-                if (curcooldownTime[selectedAbility] >= cooldownTime[selectedAbility])
-                {
-                    activatedAbility = (selectedAbility + 1);
-                    curcooldownTime[selectedAbility] = cooldownTime[selectedAbility];
-                    switch (activatedAbility)
-                    {
-                        case 2:
-                            {
-
-                            }
-                            break;
-                        default:
-                            {
-
-                            }
-                            break;
-                    }
-                }
-            }
-        }*/
 
         if (Input.GetButtonDown("Ability1") && Carry == false)
         {
@@ -658,10 +599,6 @@ public class Player : MonoBehaviour
         }
     }
 
-     /*void OnDestroy()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }*/
 
     void move()
     {
@@ -675,18 +612,6 @@ public class Player : MonoBehaviour
         }
         gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         angle = Mathf.Atan2(lastVer, lastHor) * Mathf.Rad2Deg;
-        //Debug.Log(lastHor+" "+lastVer);
-        /*if (lastHor >= 0f)
-        {
-            //transform.localScale = new Vector3(LocalX, transform.localScale.y, transform.localScale.z);
-            gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
-        else if (lastHor < 0f)
-        {
-            //transform.localScale = new Vector3(-LocalX, transform.localScale.y, transform.localScale.z);
-            gun.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
-        }*/
-        //transform.position = new Vector2(transform.position.x + (moveHor * (vel) * Time.deltaTime), transform.position.y + (moveVer * (vel) * Time.deltaTime));
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -754,9 +679,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Punch()
     {
-        //player.AddForce(new Vector2(lastHor, lastVer) * attackPushForce / 5f, ForceMode2D.Impulse);
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
-        //Debug.Log(enemiestoDamage.Length);
         if (enemiestoDamage.Length > 0)
         {
             for (int i = 0; i < enemiestoDamage.Length; i++)
@@ -795,32 +718,12 @@ public class Player : MonoBehaviour
             Fb_mana.ennemyGetHit = false;
         }
         yield return new WaitForSeconds(0.2f);
-        //player.velocity = Vector3.zero;
         toPunch = false;
+        canPunch = false;
         StopCoroutine(Punch());
         gunSprite.transform.eulerAngles = new Vector3(0, 0, 0);
 
     }
-
-    /*void MovePos()
-    {
-        canCharge = true;
-        if (lastHor != 0 && lastVer != 0)
-        {
-            moveToPos = new Vector2(transform.position.x + (lastHor), transform.position.y + (lastVer));
-        }
-        else
-        {
-            moveToPos = new Vector2(transform.position.x + (lastHor), transform.position.y + (lastVer));
-        }
-    }
-
-    void Charge()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, moveToPos, 2f * Time.deltaTime);
-        Debug.Log("BitchCharged");
-        //canCharge = false;
-    }*/
 
     public void TakeDamage(float dam)
     {

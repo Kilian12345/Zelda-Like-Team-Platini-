@@ -9,7 +9,7 @@ public class SlowMo : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        ps.vel *= (1 / ps.slowDownFactor);
+        ps.timeScaleModifier = (1 / ps.slowDownFactor);
         Time.timeScale = ps.slowDownFactor;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
@@ -23,7 +23,7 @@ public class SlowMo : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Time.timeScale = 1;
-        ps.vel /= (1 / ps.slowDownFactor);
+        ps.timeScaleModifier = 1;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class SpiderborgBehaviour : MonoBehaviour
 {
+
+
     #region Variables
+    [Header("General Variables")]
     public GameObject StrikeZone;
     [SerializeField] Animator anim;
     [SerializeField] EnemyHealth eh;
@@ -39,6 +42,37 @@ public class SpiderborgBehaviour : MonoBehaviour
     Fow_Parent lazerAtk;
     #endregion
 
+    #region Jump Variables
+    [Header("Jump Variables")]
+    public Transform[] cp;
+
+    public float jumpSpeed;
+    public float jumpHeightModifier;
+    public float jumpRate;
+    public float jumpRange;
+    public float damageValue;
+
+    private Transform playerPos;
+
+    private Vector2 curPos;
+    private Vector2 gizmoPos;
+    private Vector2[] points;
+
+
+    public bool canJump;
+
+    private float timeToJump;
+    private float timeparam;
+
+    private bool isAttacking;
+    private bool isJumping;
+    [SerializeField]
+    private bool canDamage;
+
+    Collider2D coll;
+
+    #endregion
+
     void Start()
     {
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -53,6 +87,10 @@ public class SpiderborgBehaviour : MonoBehaviour
         PresetAtk3();
         attackdist = 1f;
         StartCoroutine("Landing");
+
+        cp[0].position = transform.position;
+        playerPos = plScript.centrePoint.transform;
+        coll = GetComponent<Collider2D>();
     }
 
     void FixedUpdate()
@@ -81,7 +119,7 @@ public class SpiderborgBehaviour : MonoBehaviour
         {
             Debug.Log("1");
             SpiderState = 1;
-            attackdist = 1f;
+            attackdist = 1.5f;
         }
         else if (eh.health < 400 && eh.health >= 200 && occupied == false)
         {
@@ -98,6 +136,7 @@ public class SpiderborgBehaviour : MonoBehaviour
         }
         else if (eh.health < 1)
         {
+            Debug.Log("4");
             SpiderState = 4;
         }
 
@@ -111,13 +150,21 @@ public class SpiderborgBehaviour : MonoBehaviour
                 Move();
                 break;
             case 1:
-                StartCoroutine("ATK1");
+                {
+                    jumpUpdate();
+                    StartCoroutine("ATK1");
+                }
                 break;
             case 2:
                 StartCoroutine("ATK2");
                 break;
             case 3:
                 StartCoroutine("ATK3");
+                break;
+            case 4:
+                {
+                    StopAllCoroutines();
+                }
                 break;
         }
     }
@@ -298,6 +345,118 @@ public class SpiderborgBehaviour : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackdist);
     }
+
+    #region Jump Attack
+
+    void jumpUpdate()
+    {
+        if (Time.time > timeToJump)
+        {
+            timeToJump = Time.time + 1 / jumpRate;
+            jumpPos();
+        }
+        if (canJump)
+        {
+            StartCoroutine(Jump());
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        for (float t = 0; t <= 1; t += 0.05f)
+        {
+            gizmoPos = (Mathf.Pow(1 - t, 2) * cp[0].position) + (2 * cp[1].position * (1 - t) * t) + (cp[2].position * Mathf.Pow(t, 2));
+            Gizmos.DrawSphere(gizmoPos, 0.025f);
+        }
+
+        Gizmos.DrawLine(new Vector2(cp[0].position.x, cp[0].position.y), new Vector2(cp[1].position.x, cp[1].position.y));
+        Gizmos.DrawLine(new Vector2(cp[1].position.x, cp[1].position.y), new Vector2(cp[2].position.x, cp[2].position.y));
+
+    }
+
+    IEnumerator Jump()
+    {
+        timeparam = 0;
+        isJumping = true;
+        canJump = false;
+        coll.enabled = false;
+
+
+        while (timeparam < 1)
+        {
+            timeparam += Time.deltaTime * jumpSpeed;
+
+            curPos = (Mathf.Pow(1 - timeparam, 2) * cp[0].position) + (2 * cp[1].position * (1 - timeparam) * timeparam) + (cp[2].position * Mathf.Pow(timeparam, 2));
+            transform.position = curPos;
+
+            yield return new WaitForEndOfFrame();
+        }
+        isJumping = false;
+        canDamage = true;
+        coll.enabled = true;
+        Invoke("switchDamageBool", 0.5f);
+
+    }
+
+    void switchDamageBool()
+    {
+        canDamage = false;
+    }
+
+    void jumpPos()
+    {
+        canDamage = false;
+        cp[0].position = transform.position;
+        cp[2].position = playerPos.position;
+        cp[1].position = new Vector2((cp[0].position.x + cp[2].position.x) / 2, ((cp[0].position.y + cp[2].position.y) / 2) + jumpHeightModifier * (Vector2.Distance(cp[0].position, cp[2].position) / jumpRange));
+
+        canJump = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            if (!isAttacking && canDamage)
+            {
+                StartCoroutine(Damage());
+            }
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            if (!isAttacking && canDamage)
+            {
+                StartCoroutine(Damage());
+            }
+        }
+        if (col.gameObject.tag == "!Player")
+        {
+            StopCoroutine(Damage());
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            StopCoroutine(Damage());
+            isAttacking = false;
+        }
+    }
+
+    IEnumerator Damage()
+    {
+        isAttacking = true;
+        plScript.TakeDamage(damageValue);
+        yield return new WaitForSeconds(1);
+        isAttacking = false;
+        StopCoroutine(Damage());
+    }
+    #endregion
 }
 
 

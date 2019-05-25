@@ -69,30 +69,23 @@ public class PlayerController : MonoBehaviour
         {
             vertical = -1;
         }
-        /*if (Mathf.Abs(horizontal) == 1 && Mathf.Abs(vertical) == 1)
-        {
-            horizontal = horizontal / 2;
-            vertical = vertical / 2;
-        }*/
         moveHorizontal = horizontal * speed;
         moveVertical = vertical * speed;
         Vector3 movement = new Vector2(moveHorizontal, moveVertical);
-        //transform.position = transform.position + movement * Time.deltaTime; ;
         if (!isPushed)
         {
             
             if (NewActionAllowed)
             {
-                player.velocity = movement * speed * baseMultiplier;
+                player.velocity = movement * speed * baseMultiplier*plScript.timeScaleModifier;
                // Debug.Log("Base Mul " + baseMultiplier);
             }
             else
             {
-                player.velocity = movement * speed*multiplier;
+                player.velocity = movement * speed*multiplier * plScript.timeScaleModifier;
                // Debug.Log("Mul " + multiplier);
             }
         }
-        //magnitude = sqrt(x*x + y*y + z*z) so whenever the player is moving x,y or z > 1 so magnitude > 1
         animator.SetFloat("Horizontal", movWithoutSpeed.x);
         animator.SetFloat("Vertical", movWithoutSpeed.y);
         animator.SetFloat("Magnitude", movWithoutSpeed.magnitude);
@@ -103,7 +96,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator Attack()
     {
 
-        if (Input.GetButtonDown("Attacking") && NewActionAllowed == true)
+        if (plScript.canPunch && NewActionAllowed == true)
         {
             NewActionAllowed = false;
             animator.SetBool("Attacking", true);
