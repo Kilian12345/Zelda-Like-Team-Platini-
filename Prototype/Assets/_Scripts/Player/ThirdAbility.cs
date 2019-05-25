@@ -24,7 +24,7 @@ public class ThirdAbility : MonoBehaviour
         viewRadius = 0;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         FindVisiblePlayer();
         ZoneIncrease();
