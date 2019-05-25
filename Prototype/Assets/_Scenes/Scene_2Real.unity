@@ -312,20 +312,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1110962006}
     m_Modifications:
-    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
-        type: 3}
-      propertyPath: English
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
-        type: 3}
-      propertyPath: English
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029568, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
       propertyPath: m_Name
       value: MenuManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+        type: 3}
+      propertyPath: English
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+        type: 3}
+      propertyPath: English
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029574, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
@@ -2422,7 +2422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &188428260
 Transform:
   m_ObjectHideFlags: 0
@@ -2435,10 +2435,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8162663}
+  - {fileID: 698761903}
   - {fileID: 1226883915}
   - {fileID: 256856045}
   - {fileID: 1317138207}
-  - {fileID: 698761903}
   m_Father: {fileID: 127128575}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2867,7 +2867,7 @@ Transform:
   - {fileID: 1553412927}
   - {fileID: 1517615159}
   m_Father: {fileID: 188428260}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &256856046
 BoxCollider2D:
@@ -4833,20 +4833,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 946270048}
-  anim: {fileID: 849343951}
+  canvasIntDialogue: {fileID: 0}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  anim: {fileID: 0}
   ChooseCharacter: 1
   dialogue:
     sentences: []
-    name: Kuru
+    name: PNJ
     sentencesEN:
-    - testen1
-    - testen2
+    - I like to fight.
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - J aime me battre.
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
-  dialogueManager: {fileID: 756203672}
+  dialogueManager: {fileID: 0}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &419459235
@@ -8840,7 +8847,7 @@ Transform:
   - {fileID: 2061412412}
   - {fileID: 418383577}
   m_Father: {fileID: 188428260}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &698761904
 BoxCollider2D:
@@ -9488,18 +9495,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
---- !u!114 &756203672 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7391703499571724410, guid: a01673ff5f12398478f827675c3196cb,
-    type: 3}
-  m_PrefabInstance: {fileID: 857235360}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87569eb7bca2e504e99b176e804dcfa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &763406133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10664,7 +10659,7 @@ PrefabInstance:
         type: 3}
       propertyPath: activator
       value: 
-      objectReference: {fileID: 1368794721}
+      objectReference: {fileID: 0}
     - target: {fileID: 7391703500472006587, guid: a01673ff5f12398478f827675c3196cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14137,20 +14132,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 2063238353}
-  anim: {fileID: 849343951}
-  ChooseCharacter: 1
+  canvasIntDialogue: {fileID: 0}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  anim: {fileID: 0}
+  ChooseCharacter: 3
   dialogue:
     sentences: []
     name: Kuru
     sentencesEN:
-    - testen1
-    - testen2
+    - Ahahahahahaha ! Realy?
+    - You really thought that I would let you through without any kind of bribe?
+    - Give me 200 score points and I will open the door for you.
+    - If you do not have enough score you can fight in the ring in the refectory.
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - Ahahahahahaha ! Serieusement ?
+    - Tu pensais vraiment que je te laisserais passer sans me soudoyer ?
+    - Donne-moi 200 points de ton score et j ouvrirais la porte pour toi.
+    - Si tu n as pas assez de score tu peux te battre dans le ring du refectoire.
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
-  dialogueManager: {fileID: 756203672}
+  dialogueManager: {fileID: 0}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &1107045385
@@ -15650,7 +15658,7 @@ Transform:
   - {fileID: 478770709}
   - {fileID: 1096835694}
   m_Father: {fileID: 188428260}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1226883916
 BoxCollider2D:
@@ -16304,7 +16312,7 @@ Transform:
   - {fileID: 652689057}
   - {fileID: 2125784137}
   m_Father: {fileID: 188428260}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1317138208
 BoxCollider2D:
@@ -17121,7 +17129,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346902216}
-  m_LocalRotation: {x: 6.0829427e-24, y: 1.0865117e-23, z: 0.00000032782552, w: 1}
+  m_LocalRotation: {x: 6.0842897e-24, y: 1.0865048e-23, z: 0.00000032596287, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17267,20 +17275,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 1498021985}
-  anim: {fileID: 849343951}
+  canvasIntDialogue: {fileID: 0}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  anim: {fileID: 0}
   ChooseCharacter: 1
   dialogue:
     sentences: []
-    name: Kuru
+    name: PNJ
     sentencesEN:
-    - testen1
-    - testen2
+    - Oye Mate !
+    - I bet you ain t got the balls to throw this barrel in my face!
     sentencesFR:
-    - je suis allemand
-    - et je n'aime pas jay sampat
+    - Oye Mate!
+    - Je parie que t as pas les couilles de me lancer ce tonneau dans la gueule !
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
-  dialogueManager: {fileID: 756203672}
+  dialogueManager: {fileID: 0}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &1368873482
@@ -18581,20 +18598,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 754506959}
-  anim: {fileID: 849343951}
-  ChooseCharacter: 1
+  canvasIntDialogue: {fileID: 0}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  anim: {fileID: 0}
+  ChooseCharacter: 4
   dialogue:
     sentences: []
-    name: Kuru
+    name: HoloKaiser
     sentencesEN:
-    - testen1
-    - testen2
+    - "\u2026*sizzles*\u2026 It is me again \u2026*sizzles*\u2026"
+    - "Don t worry \u2026*sizzles*\u2026 the hardest part is done."
+    - "\u2026*sizzles*\u2026 You can relax know \u2026*Transmission ends*\u2026"
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - "\u2026*sizzles*\u2026 C est encore moi \u2026*sizzles*\u2026"
+    - "Ne t en fait pas \u2026*sizzles*\u2026 le plus dur est fait."
+    - "\u2026*sizzles*\u2026 Tu peux te detendre maintenant \u2026*Transmission ends*\u2026"
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
-  dialogueManager: {fileID: 756203672}
+  dialogueManager: {fileID: 0}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &1530261233
@@ -18726,7 +18754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1538485176
 Transform:
   m_ObjectHideFlags: 0
@@ -20473,7 +20501,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663300194}
-  m_LocalRotation: {x: 3.0328968e-25, y: -1.837143e-24, z: 0.006120111, w: 0.99998134}
+  m_LocalRotation: {x: 7.1473436e-25, y: -1.0150064e-24, z: 0.006183156, w: 0.9999809}
   m_LocalPosition: {x: -3.85, y: 11.493, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -25499,20 +25527,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f7ccabb2cbf4640a99c8cd2182f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasIntDialogue: {fileID: 968116371}
-  anim: {fileID: 849343951}
-  ChooseCharacter: 1
+  canvasIntDialogue: {fileID: 0}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 8300000, guid: 49bf3cdc1799b36409dc29f1c5e2e1fe, type: 3}
+  kaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  spiderborg: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj1: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  pnj2: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
+  holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
+  anim: {fileID: 0}
+  ChooseCharacter: 4
   dialogue:
     sentences: []
-    name: Kuru
+    name: Spiderborg
     sentencesEN:
-    - testen1
-    - testen2
+    - '*bip* INTRUDER DETECTED *bip*'
+    - '*bip* LETHAL MODE ACTIVATED *bip*'
+    - '*bip* VITAL FUNCTIONS TARGETED: ACQUIRED *bip*'
     sentencesFR:
-    - ANTONIN T'ES UNE ENORME
-    - BONNE PERSONNE
+    - '*bip* INTRUS DETECTE *bip*'
+    - '*bip* MODE LETAL ACTIVE *bip*'
+    - '*bip* FONCTIONS VITALES CIBLEES : ACQUISES *bip*'
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
-  dialogueManager: {fileID: 756203672}
+  dialogueManager: {fileID: 0}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &2126150411

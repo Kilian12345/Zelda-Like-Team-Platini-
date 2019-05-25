@@ -455,9 +455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   CalciumAmount: 0
-  CalciumCapacity: 25
+  CalciumCapacity: 100
   curDropChanceRate: 0
-  DropChanceRate: 30
+  DropChanceRate: 35
   rageDamage: 20
   rageTimer: 15
   rageVel: 12
@@ -508,7 +508,7 @@ MonoBehaviour:
   slowDownFactor: 0.5
   slowDownLast: 0
   hit: {fileID: 8300000, guid: b384c80250d32b1478004f5f0ca63322, type: 3}
-  died: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
+  died: {fileID: 8300000, guid: 3afa0a21432221b4994840f6e6a546c6, type: 3}
   punch: {fileID: 8300000, guid: 769f41d7f8694984ca20fb7139d6957c, type: 3}
   calcium: {fileID: 8300000, guid: f744eef00b7094c4796299e5f1913249, type: 3}
   dash: {fileID: 8300000, guid: 7bdaac34764d57f4889c217d20464087, type: 3}
@@ -520,7 +520,7 @@ MonoBehaviour:
   currentTab: Audio Visuals
   takeDamage: 0
   levelEnd: 0
-  sceneIndex: 1
+  sceneIndex: 2
   fadeAnim: {fileID: 0}
   fadeImage: {fileID: 0}
   elevatorMouvEntrance: {fileID: 0}

@@ -293,8 +293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d5cdf09357939479d073d5ef258355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dead: {fileID: 8300000, guid: be37eeacc927b3a479198cfe83fc8428, type: 3}
-  punch: {fileID: 8300000, guid: b384c80250d32b1478004f5f0ca63322, type: 3}
+  enemyAudio: {fileID: 0}
+  dead: {fileID: 8300000, guid: 8046a10a80aa0754caba0baca72374f7, type: 3}
+  punch: {fileID: 8300000, guid: aa2280dfcf67e344aa12b4f1932889a0, type: 3}
   particlesBlood: {fileID: 7430826996442426230, guid: be06a1c0ea2364e4dbb8e68b7b187c93,
     type: 3}
   particlesThanos: {fileID: 3525380330377394275, guid: 2d219f1605ae3a141ac46f5431304ad4,

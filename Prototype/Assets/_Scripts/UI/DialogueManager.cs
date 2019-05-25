@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject canvasDialogue;
-
+    [SerializeField] GameObject canvasDialogue;
+    [SerializeField] AudioSource dialogueAudio;
     public Text nameText;
     public Text dialogueText;
     public Animator animator;
@@ -19,10 +18,10 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
 
-    void LateUpdate()
+    void Update()
     {
         //Activate Dialogue combat when pressing Y while in the Trigger Zone and dialogue is not active
-        if (/* (Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) &&*/ (activator.DialogueActive == true) && dialogueOpened == false)
+        if (/* (Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) &&*/ (activator.DialogueActive == true) && (dialogueOpened == false))
         {
             canvasDialogue.SetActive(true);
             StartDialogue(activator.dialogue);
@@ -64,6 +63,10 @@ public class DialogueManager : MonoBehaviour
     // Displays the next sentences until their is no more left
     public void DisplayNextSentence()
     {
+        if (sentences.Count > 0)
+        {
+            dialogueAudio.Play();
+        }
         if (sentences.Count == 0)
         {
             EndDialogue();

@@ -24,12 +24,15 @@ public class Dialogue
 public class DialogueActivation : MonoBehaviour
 {
     [SerializeField] GameObject canvasIntDialogue;
+    [SerializeField] AudioSource dialogueAudio;
+    [SerializeField] AudioClip kuru, kaiser, spiderborg, pnj1, pnj2, bonezonk, holokaiser;
     public Animator anim;
 
     public int ChooseCharacter;
     public Dialogue dialogue;
     public MenuManager mn;
     public DialogueManager dialogueManager;
+    public bool launch;
     Scripted_Camera camScript;
 
     public bool DialogueActive = false;
@@ -41,12 +44,11 @@ public class DialogueActivation : MonoBehaviour
         camScript = GetComponentInParent<Scripted_Camera>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        StateSwitch();
         Effect();
 
-        if (mn.English == true)
+        /*if (mn.English == true)
         {
             //Debug.Log("EN");
             dialogue.sentences = dialogue.sentencesEN;
@@ -55,14 +57,27 @@ public class DialogueActivation : MonoBehaviour
         {
             //Debug.Log("FR");
             dialogue.sentences = dialogue.sentencesFR;
-        }
+        }*/
     }
 
     void Effect()
     {
-        if (camScript.Triggered == true && activateOnce == false && camScript.everyEventDone == false)
-        {   
-            Debug.Log ("pute");
+        if ((camScript.Triggered == true) && (activateOnce == false) && (camScript.everyEventDone == false))
+        {
+            StateSwitch();
+            
+
+            Debug.Log(anim.GetInteger("AnimChara"));
+            if (MenuManager.English == true)
+            {
+                Debug.Log("EN");
+                dialogue.sentences = dialogue.sentencesEN;
+            }
+            if (MenuManager.English == false)
+            {
+                Debug.Log("FR");
+                dialogue.sentences = dialogue.sentencesFR;
+            }
             dialogueManager.activator = this;
             dialogueManager.sentences = new Queue<string>(dialogue.sentences);
             DialogueActive = true;
@@ -73,6 +88,7 @@ public class DialogueActivation : MonoBehaviour
             DialogueActive = false;
             dialogueManager.dialogueOpened = false;
             activateOnce = false;
+            //StartCoroutine("Waitaaa");
         }
     }
 
@@ -83,19 +99,30 @@ public class DialogueActivation : MonoBehaviour
         {
             case 0:
                 anim.SetInteger("AnimChara", 0);
+                dialogueAudio.clip = pnj1;
                 break;
             case 1:
                 anim.SetInteger("AnimChara", 1);
+                dialogueAudio.clip = kuru;
                 break;
             case 2:
                 anim.SetInteger("AnimChara", 2);
+                dialogueAudio.clip = bonezonk;
                 break;
             case 3:
                 anim.SetInteger("AnimChara", 3);
+                dialogueAudio.clip = holokaiser;
                 break;
             case 4:
                 anim.SetInteger("AnimChara", 4);
+                dialogueAudio.clip = kaiser;
                 break;
         }
     }
+
+    /*IEnumerator Waitaaa()
+    {
+        yield return new WaitForSeconds(2f);
+        activateOnce = false;
+    }*/
 }

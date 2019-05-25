@@ -165,7 +165,7 @@ public class FeedBack_Manager : MonoBehaviour
 
     void LateUpdate()
     {
-        Debug.Log(firstActivated);
+        //Debug.Log(firstActivated);
 
         ThirdAbilityVisu();
         Vignette();

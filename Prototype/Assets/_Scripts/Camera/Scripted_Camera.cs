@@ -28,7 +28,7 @@ public class Scripted_Camera : MonoBehaviour
         oldSpeed = plScript.speed;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Triggered == true) { StartCoroutine(CameraSwitch()); }
 
