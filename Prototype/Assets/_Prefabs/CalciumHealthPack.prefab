@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc0ff25957e4404ea12acdb76c0c154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CalciumRefill: 5
+  CalciumRefill: 10
 --- !u!95 &6739977496852438850
 Animator:
   serializedVersion: 3

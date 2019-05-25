@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
     [Header("Audio and Visual Properties ///////////////////////////////////")]
 
     [Header("Audio")]
-    public AudioClip hit, died, punch, calcium, dash, slowmo, atk3;
+    public AudioClip hit, died, punch, calcium, dash, slowmo, atk3, walk;
     [HideInInspector] public AudioSource playerAudio;
 
     [Header("Visuals")]
@@ -665,6 +665,7 @@ public class Player : MonoBehaviour
 
     void move()
     {
+
         moveHor = Input.GetAxis("Horizontal");
         moveVer = Input.GetAxis("Vertical");
         dir = new Vector2(moveHor, moveVer);
@@ -672,6 +673,8 @@ public class Player : MonoBehaviour
         {
             lastVer = moveVer;
             lastHor = moveHor;
+            /*playerAudio.clip = walk;
+            playerAudio.Play();*/
         }
         gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         angle = Mathf.Atan2(lastVer, lastHor) * Mathf.Rad2Deg;
@@ -754,6 +757,8 @@ public class Player : MonoBehaviour
 
     IEnumerator Punch()
     {
+        playerAudio.clip = punch;
+        playerAudio.Play();
         //player.AddForce(new Vector2(lastHor, lastVer) * attackPushForce / 5f, ForceMode2D.Impulse);
         Collider2D[] enemiestoDamage = Physics2D.OverlapCircleAll(shootPoint.transform.position, attackRange);
         //Debug.Log(enemiestoDamage.Length);
@@ -770,8 +775,7 @@ public class Player : MonoBehaviour
                         yield return new WaitForSeconds(0.1f);
                         if (enemiestoDamage[i]!=null)
                         enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-                        playerAudio.clip = punch;
-                        playerAudio.Play();
+
                     }
                     toPunch = false;
                     break;

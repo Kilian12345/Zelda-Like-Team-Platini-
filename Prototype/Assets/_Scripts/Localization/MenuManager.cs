@@ -6,11 +6,11 @@ public class MenuManager : MonoBehaviour
     #region Public Methods
     public bool English;
 
-    private void Awake()
+    /*private void Awake()
     {
         English = true;
         Debug.Log("EN");
-    }
+    }*/
 
     public void SetEnglish()
     {

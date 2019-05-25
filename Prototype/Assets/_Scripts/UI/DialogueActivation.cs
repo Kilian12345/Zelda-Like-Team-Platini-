@@ -24,12 +24,15 @@ public class Dialogue
 public class DialogueActivation : MonoBehaviour
 {
     [SerializeField] GameObject canvasIntDialogue;
+    [SerializeField] AudioSource dialogueAudio;
+    [SerializeField] AudioClip kuru, kaiser, spiderborg, pnj1, pnj2, bonezonk, holokaiser;
     public Animator anim;
 
     public int ChooseCharacter;
     public Dialogue dialogue;
     public MenuManager mn;
     public DialogueManager dialogueManager;
+    public bool launch;
     Scripted_Camera camScript;
 
     public bool DialogueActive = false;
@@ -60,7 +63,7 @@ public class DialogueActivation : MonoBehaviour
 
     void Effect()
     {
-        if (camScript.Triggered == true && activateOnce == false && camScript.everyEventDone == false)
+        if ((camScript.Triggered == true || launch == true) && activateOnce == false && camScript.everyEventDone == false)
         {   
             Debug.Log ("pute");
             dialogueManager.activator = this;
@@ -83,18 +86,23 @@ public class DialogueActivation : MonoBehaviour
         {
             case 0:
                 anim.SetInteger("AnimChara", 0);
+                dialogueAudio.clip = pnj1;
                 break;
             case 1:
                 anim.SetInteger("AnimChara", 1);
+                dialogueAudio.clip = kuru;
                 break;
             case 2:
                 anim.SetInteger("AnimChara", 2);
+                dialogueAudio.clip = bonezonk;
                 break;
             case 3:
                 anim.SetInteger("AnimChara", 3);
+                dialogueAudio.clip = holokaiser;
                 break;
             case 4:
                 anim.SetInteger("AnimChara", 4);
+                dialogueAudio.clip = kaiser;
                 break;
         }
     }

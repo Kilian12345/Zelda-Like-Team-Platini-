@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject canvasDialogue;
-
+    [SerializeField] GameObject canvasDialogue;
+    [SerializeField] AudioSource dialogueAudio;
     public Text nameText;
     public Text dialogueText;
     public Animator animator;
@@ -64,6 +63,10 @@ public class DialogueManager : MonoBehaviour
     // Displays the next sentences until their is no more left
     public void DisplayNextSentence()
     {
+        if (sentences.Count > 0)
+        {
+            dialogueAudio.Play();
+        }
         if (sentences.Count == 0)
         {
             EndDialogue();

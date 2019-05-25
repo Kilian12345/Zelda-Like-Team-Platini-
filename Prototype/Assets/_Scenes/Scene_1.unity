@@ -3698,6 +3698,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 1677290282}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 0}
+  kaiser: {fileID: 0}
+  spiderborg: {fileID: 0}
+  pnj1: {fileID: 0}
+  pnj2: {fileID: 0}
+  bonezonk: {fileID: 0}
+  holokaiser: {fileID: 0}
   anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
@@ -3711,6 +3719,7 @@ MonoBehaviour:
     - BONNE PERSONNE
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &174979332
@@ -11917,6 +11926,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 1212947829}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 0}
+  kaiser: {fileID: 0}
+  spiderborg: {fileID: 0}
+  pnj1: {fileID: 0}
+  pnj2: {fileID: 0}
+  bonezonk: {fileID: 0}
+  holokaiser: {fileID: 0}
   anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
@@ -11930,6 +11947,7 @@ MonoBehaviour:
     - BONNE PERSONNE
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &612597308
@@ -15843,6 +15861,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 240565698}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 0}
+  kaiser: {fileID: 0}
+  spiderborg: {fileID: 0}
+  pnj1: {fileID: 0}
+  pnj2: {fileID: 0}
+  bonezonk: {fileID: 0}
+  holokaiser: {fileID: 0}
   anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
@@ -15856,6 +15882,7 @@ MonoBehaviour:
     - et je n'aime pas jay sampat
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &784939707
@@ -17208,6 +17235,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 827274160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &828371009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1133246909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c15f50043b99754192c234960a890b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &828489700
 GameObject:
   m_ObjectHideFlags: 0
@@ -20041,7 +20080,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: 3.711998e-24, y: -9.108459e-24, z: -0.0075934734, w: 0.9999712}
+  m_LocalRotation: {x: 8.364236e-25, y: -9.0802844e-24, z: -0.0075934734, w: 0.9999712}
   m_LocalPosition: {x: -3.7217686, y: 17.664146, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -24210,20 +24249,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 363105060}
     m_Modifications:
-    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
-        type: 3}
-      propertyPath: English
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
-        type: 3}
-      propertyPath: English
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029568, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
       propertyPath: m_Name
       value: MenuManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+        type: 3}
+      propertyPath: English
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+        type: 3}
+      propertyPath: English
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029574, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
@@ -33033,6 +33072,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 1222614769}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 0}
+  kaiser: {fileID: 0}
+  spiderborg: {fileID: 0}
+  pnj1: {fileID: 0}
+  pnj2: {fileID: 0}
+  bonezonk: {fileID: 0}
+  holokaiser: {fileID: 0}
   anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
@@ -33046,6 +33093,7 @@ MonoBehaviour:
     - BONNE PERSONNE
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1001 &1534887130
@@ -37066,6 +37114,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasIntDialogue: {fileID: 2070354122}
+  dialogueAudio: {fileID: 0}
+  kuru: {fileID: 0}
+  kaiser: {fileID: 0}
+  spiderborg: {fileID: 0}
+  pnj1: {fileID: 0}
+  pnj2: {fileID: 0}
+  bonezonk: {fileID: 0}
+  holokaiser: {fileID: 0}
   anim: {fileID: 804747250}
   ChooseCharacter: 1
   dialogue:
@@ -37079,6 +37135,7 @@ MonoBehaviour:
     - BONNE PERSONNE
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 367233917}
+  launch: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &1721475589
@@ -38232,6 +38289,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3850783625924262048, guid: a01673ff5f12398478f827675c3196cb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 828371009}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01673ff5f12398478f827675c3196cb, type: 3}
 --- !u!1 &1759082107
@@ -38768,7 +38830,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: 5.9495945e-24, y: 7.1786336e-29, z: -0, w: 1}
+  m_LocalRotation: {x: 5.9495905e-24, y: 6.0742284e-29, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -42234,31 +42296,6 @@ PrefabInstance:
       propertyPath: elevator
       value: 
       objectReference: {fileID: 339694861}
-    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
-        type: 3}
-      propertyPath: punch
-      value: 
-      objectReference: {fileID: 8300000, guid: aa2280dfcf67e344aa12b4f1932889a0, type: 3}
-    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
-        type: 3}
-      propertyPath: died
-      value: 
-      objectReference: {fileID: 8300000, guid: 3afa0a21432221b4994840f6e6a546c6, type: 3}
-    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
-        type: 3}
-      propertyPath: toolbarTab
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
-        type: 3}
-      propertyPath: currentTab
-      value: SceneFade
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448846616350076, guid: fb3af06246630184b8c80238784844a3,
-        type: 3}
-      propertyPath: sceneIndex
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 271455358, guid: fb3af06246630184b8c80238784844a3, type: 3}
       propertyPath: Fb
       value: 
