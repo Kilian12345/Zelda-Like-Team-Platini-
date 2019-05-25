@@ -157,6 +157,7 @@ public class HeadButtEnemy : MonoBehaviour
 
     void recPos()
     {
+        isAttacking = false;
         lastPos = plScript.centrePoint.transform.position;
         canCharge = true;
     }
@@ -213,7 +214,6 @@ public class HeadButtEnemy : MonoBehaviour
         isAttacking = true;
         plScript.TakeDamage(damageValue);
         yield return new WaitForSeconds(1);
-        isAttacking = false;
         StopCoroutine(Damage());
     }
     private void OnDrawGizmosSelected()

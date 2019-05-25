@@ -3106,6 +3106,8 @@ MonoBehaviour:
   bigVibration: 0
   smallVibration: 0
   vibrateTime: 0
+  elevatorVibration: 0
+  elevatorVibrationTime: 0
   toolbarTab: 1
   currentTab: Post-Process
   ennemyGetHit: 0
@@ -4328,7 +4330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131475277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0101, y: 0.3934, z: 0}
+  m_LocalPosition: {x: 0.0101, y: 0.3817, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1699819454}
@@ -6228,7 +6230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1699819451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15271,7 +15273,7 @@ PrefabInstance:
     - target: {fileID: 7027439788035292514, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.421
+      value: 0.442
       objectReference: {fileID: 0}
     - target: {fileID: 7027439788035292514, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
@@ -15333,6 +15335,11 @@ PrefabInstance:
       propertyPath: LaserPoint
       value: 
       objectReference: {fileID: 1131475277}
+    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: rotationspeed
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e828d0e8f9b4725489a8b3f1efa9cb88, type: 3}
 --- !u!4 &7027439788035292514 stripped
