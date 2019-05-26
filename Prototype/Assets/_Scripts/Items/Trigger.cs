@@ -8,6 +8,7 @@ public class Trigger : MonoBehaviour
     public bool isTriggered;
     public enum typeOfTrigger {Collision,Button,Destruction};
     public typeOfTrigger curType;
+    public ParticleSystem boxExpolsion;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,12 @@ public class Trigger : MonoBehaviour
         {
             isTriggered = true;
         }
-        if (curType == typeOfTrigger.Button)
+        if (curType == typeOfTrigger.Destruction)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && !isTriggered)
             {
                 isTriggered = true;
+                Instantiate(boxExpolsion, transform.position, Quaternion.identity);
             }
         }
     }
@@ -41,11 +43,12 @@ public class Trigger : MonoBehaviour
         {
             isTriggered = true;
         }
-        if (curType == typeOfTrigger.Button)
+        if (curType == typeOfTrigger.Destruction)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && !isTriggered)
             {
                 isTriggered = true;
+                Instantiate(boxExpolsion, transform.position, Quaternion.identity);
             }
         }
     }

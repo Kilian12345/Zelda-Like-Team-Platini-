@@ -103,6 +103,7 @@ public class FeedBack_Manager_Editor : Editor
     #endregion
 
     #region Vibration
+    private SerializedProperty boxExpolsion;
     private SerializedProperty bigVibration;
     private SerializedProperty smallVibration;
     private SerializedProperty vibrateTime;
@@ -169,7 +170,8 @@ public class FeedBack_Manager_Editor : Editor
         ghostFadeSpeedSecond = soTarget.FindProperty("ghostFadeSpeedSecond");
         ghostSpawnRateFirst = soTarget.FindProperty("ghostSpawnRateFirst");
         ghostSpawnRateSecond = soTarget.FindProperty("ghostSpawnRateSecond");
-        
+
+        boxExpolsion = soTarget.FindProperty("boxExpolsion");
         bigVibration = soTarget.FindProperty("bigVibration");
         smallVibration = soTarget.FindProperty("smallVibration");
         vibrateTime = soTarget.FindProperty("vibrateTime");
@@ -282,6 +284,7 @@ public class FeedBack_Manager_Editor : Editor
                 break;
                 
             case "Vibration":
+                EditorGUILayout.PropertyField(boxExpolsion);
                 EditorGUILayout.PropertyField(bigVibration);
                 EditorGUILayout.PropertyField(smallVibration);
                 EditorGUILayout.PropertyField(vibrateTime);

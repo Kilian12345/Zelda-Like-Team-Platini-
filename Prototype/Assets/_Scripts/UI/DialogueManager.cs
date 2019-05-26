@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue (Dialogue dialogue)
     {
         DialogueCheck = true;
-
+        
         Debug.Log("anim true");
         animator.SetBool("IsOpen", true);
 

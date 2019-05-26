@@ -191,7 +191,7 @@ MonoBehaviour:
   stoppingDistance: 0.375
   enemyDamage: 15
   attackSpeed: 0.25
-  attackRange: 0.15
+  attackRange: 0.2
   attackPushForce: 10
   angle: 0
   isInChaseRange: 0

@@ -18,7 +18,7 @@ AnimatorController:
   - m_Name: AnimChara
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 0
+    m_DefaultInt: -1
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
@@ -45,6 +45,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsOpen
     m_EventTreshold: 0
+  - m_ConditionMode: 7
+    m_ConditionEvent: AnimChara
+    m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102554580685907220}
   m_Solo: 0

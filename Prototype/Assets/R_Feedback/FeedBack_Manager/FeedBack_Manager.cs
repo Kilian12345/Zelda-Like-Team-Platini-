@@ -132,6 +132,7 @@ public class FeedBack_Manager : MonoBehaviour
     public float elevatorVibrationTime;
     bool loopElevator;
     bool elevatorScreen = false;
+    public ParticleSystem boxExpolsion;
     #endregion
 
     #region GUI LAYOUT
@@ -145,7 +146,6 @@ public class FeedBack_Manager : MonoBehaviour
     public bool ennemyGetHit; //// screenSkahe
     public bool ennemyDied;//
     public bool Scripted_Scene;////
-    public ParticleSystem boxExpolsion;//
     public bool throwScrShake; //
 
     void Start()

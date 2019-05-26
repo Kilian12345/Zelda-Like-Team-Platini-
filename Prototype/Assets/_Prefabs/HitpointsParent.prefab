@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8526972538359617713}
   - component: {fileID: 2479941423896815701}
   - component: {fileID: 269140530832013610}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: HitpointsParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 974531910590318179}
   - component: {fileID: 8668987580265795569}
   - component: {fileID: 1514853053423709189}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

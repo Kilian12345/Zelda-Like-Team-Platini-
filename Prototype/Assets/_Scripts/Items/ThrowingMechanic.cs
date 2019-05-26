@@ -25,8 +25,6 @@ public class ThrowingMechanic : MonoBehaviour
         bColl = GetComponent<Collider2D>();
         Fb_Mana = GameObject.FindGameObjectWithTag("FeedBack_Manager").GetComponent<FeedBack_Manager>();
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-
-        Fb_Mana.boxExpolsion = boxExpolsion;
     }
 
     void Update()

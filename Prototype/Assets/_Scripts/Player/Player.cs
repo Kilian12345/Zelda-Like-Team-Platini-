@@ -206,7 +206,6 @@ public class Player : MonoBehaviour
         { fadeAnim.SetBool("FadeOut", true); }
 
         timeScaleModifier = 1;
-        Time.timeScale = 1;
 
     }
 
@@ -280,6 +279,7 @@ public class Player : MonoBehaviour
 
         if (health >= 100 && !isDead)
         {
+            health = 100f;
             isInRage = true;
         }
         if (isInRage)

@@ -15,6 +15,7 @@ TagManager:
   - Strike
   - Throwing_Object
   - LevelEnd
+  - Dialogue_Manager
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,6 @@ TagManager:
   - Pixelize
   - Bullet
   - OnTop
-  - 
   - 
   - 
   - 
