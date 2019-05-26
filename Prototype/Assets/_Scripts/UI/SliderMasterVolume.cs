@@ -17,6 +17,6 @@ public class SliderMasterVolume : MonoBehaviour
     public void Slider_Changed(float SliderVolume)
     {
         AudioListener.volume = SliderVolume;
-        Debug.Log("test son");
+        //Debug.Log("test son");
     }
 }

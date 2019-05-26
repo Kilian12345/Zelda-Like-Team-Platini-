@@ -153,7 +153,7 @@ public class HeadButtEnemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
             isMoving = true;
-            Debug.Log("Walkig");
+            //Debug.Log("Walkig");
         }
         else
         {

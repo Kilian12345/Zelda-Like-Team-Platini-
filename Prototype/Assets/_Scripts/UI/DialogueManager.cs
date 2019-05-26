@@ -25,16 +25,16 @@ public class DialogueManager : MonoBehaviour
         {
             canvasDialogue.SetActive(true);
             StartDialogue(activator.dialogue);
-            Debug.Log("activate dialogue");
+            //Debug.Log("activate dialogue");
             DisplayNextSentence();
             dialogueOpened = true;
         }
 
         // Continue to next sentence when dialogue is already active
-        if ((Input.GetKeyDown(KeyCode.JoystickButton2) || Input.GetKeyDown(KeyCode.X)) && activator.DialogueActive == true)
+        if ((Input.GetKeyDown(KeyCode.JoystickButton6) || Input.GetKeyDown(KeyCode.X)) && activator.DialogueActive == true)
         {
             DisplayNextSentence();
-            Debug.Log("Next sentence display");
+            //Debug.Log("Next sentence display");
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueCheck = true;
         
-        Debug.Log("anim true");
+        //Debug.Log("anim true");
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;

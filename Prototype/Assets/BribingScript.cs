@@ -6,12 +6,17 @@ public class BribingScript : MonoBehaviour
 {
     [SerializeField] GameObject BribeInt;
     [SerializeField] Rigidbody2D Door;
+    [SerializeField] Rigidbody2D BossDoor;
     [SerializeField] Player pl;
+    [SerializeField] SpiderborgBehaviour SB;
     private bool payed = false;
     private float speed = 1.0f;
     private Vector2 currentpos;
+    private Vector2 currentpos2;
     public Transform targetpos;
+    public Transform targetpos2;
     private bool canMove;
+    private bool canMove2 = false;
 
     private void Start()
     {
@@ -20,7 +25,22 @@ public class BribingScript : MonoBehaviour
 
     void Update()
     {
+        if(SB.isEnded == true)
+        {
+            canMove2 = true;
+            Debug.Log("Est-ce que ca marche?");
+        }
         currentpos = Door.transform.position;
+        currentpos2 = BossDoor.transform.position;
+
+        if (canMove2 == true)
+        {
+            BossDoor.transform.position = Vector2.MoveTowards(currentpos2, targetpos2.position, speed * Time.deltaTime);
+        }
+        if(Vector2.Distance(currentpos2, targetpos2.position) <= 0.05f)
+        {
+            canMove2 = false;
+        }
 
         if (payed == false)
         {

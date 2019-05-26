@@ -73,15 +73,15 @@ public class DialogueActivation : MonoBehaviour
 
             StateSwitch();
 
-            Debug.Log(anim.GetInteger("AnimChara"));
+            //Debug.Log(anim.GetInteger("AnimChara"));
             if (MenuManager.English == true)
             {
-                Debug.Log("EN");
+                //Debug.Log("EN");
                 dialogue.sentences = dialogue.sentencesEN;
             }
             if (MenuManager.English == false)
             {
-                Debug.Log("FR");
+                //Debug.Log("FR");
                 dialogue.sentences = dialogue.sentencesFR;
             }
             dialogueManager.activator = this;
@@ -141,7 +141,7 @@ public class DialogueActivation : MonoBehaviour
                 anim.SetInteger("AnimChara", 7);
                 //dialogueAudio.clip = spiderborg;
                 dialogueAudio.clip = kuru;
-                Debug.Log("img");
+                //Debug.Log("img");
                 break;
             case 8:
                 anim.SetInteger("AnimChara", 8);
