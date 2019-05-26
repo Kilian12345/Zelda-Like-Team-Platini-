@@ -112,6 +112,7 @@ public class Player : MonoBehaviour
     [Header("Ability GameObjects")]
     public GameObject selector;
     public GameObject[] abilityMeters;
+    Animator[] abilityMeterAnim;
 
     [Header("Dash Values")]
     public float dashDistance;
@@ -181,6 +182,12 @@ public class Player : MonoBehaviour
         {
             Destroy(foundObjects[i]);
             Debug.Log("Destroyed");
+        }
+
+        for (int i = 0; i < abilityMeters.Length; i++)
+        {
+            Debug.Log("add anim");
+            abilityMeterAnim[i] = abilityMeters[i].GetComponent<Animator>();
         }
 
     }
@@ -353,7 +360,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Ability1") && Carry == false)
         {
-            if (abilityMeters[0].activeSelf)
+            if (abilityMeterAnim[0].GetBool("Unlocked"))
             {
                 playerAudio.clip = dash;
                 playerAudio.Play();
@@ -367,25 +374,31 @@ public class Player : MonoBehaviour
         }
         if (Input.GetButtonDown("Ability2") && Carry == false)
         {
-            if (abilityMeters[1].activeSelf)
+            if (abilityMeterAnim[1].GetBool("Unlocked"))
             {
                 playerAudio.clip = slowmo;
                 playerAudio.Play();
 
                 if (curcooldownTime[1] >= cooldownTime[1])
-                {activatedAbility = 2;}
+                {
+                    activatedAbility = 2;
+                    abilityMeterAnim[1].SetBool("Using", true);
+                }
             }
 
         }
         if (Input.GetButtonDown("Ability3") && Carry == false)
         {
-            if (abilityMeters[2].activeSelf)
+            if (abilityMeterAnim[2].GetBool("Unlocked"))
             {
                 playerAudio.clip = atk3;
                 playerAudio.Play();
 
                 if (curcooldownTime[2] >= cooldownTime[2])
-                {activatedAbility = 3;}
+                {
+                    activatedAbility = 3;
+                    abilityMeterAnim[2].SetBool("Using", true);
+                }
             }
         }
     }
@@ -419,9 +432,9 @@ public class Player : MonoBehaviour
             plControl.baseMultiplier = 1f;
             attackSpeed = baseAttackSpeed;
 
-            abilityMeters[0].SetActive(false);
-            abilityMeters[1].SetActive(false);
-            abilityMeters[2].SetActive(false);
+            abilityMeterAnim[0].SetBool("Unlocked",false);
+            abilityMeterAnim[1].SetBool("Unlocked", false);
+            abilityMeterAnim[2].SetBool("Unlocked", false);
         }
         else if (health >= 25 && health < 50)
         {
@@ -429,9 +442,9 @@ public class Player : MonoBehaviour
             plControl.baseMultiplier = 1.04f;
             attackSpeed = baseAttackSpeed*1.04f;
 
-            abilityMeters[0].SetActive(true);
-            abilityMeters[1].SetActive(false);
-            abilityMeters[2].SetActive(false);
+            abilityMeterAnim[0].SetBool("Unlocked", true);
+            abilityMeterAnim[1].SetBool("Unlocked", false);
+            abilityMeterAnim[2].SetBool("Unlocked", false);
         }
         else if (health >= 50 && health < 75)
         {
@@ -439,9 +452,9 @@ public class Player : MonoBehaviour
             plControl.baseMultiplier = 1.08f;
             attackSpeed = baseAttackSpeed * 1.08f;
 
-            abilityMeters[0].SetActive(true);
-            abilityMeters[1].SetActive(true);
-            abilityMeters[2].SetActive(false);
+            abilityMeterAnim[0].SetBool("Unlocked", true);
+            abilityMeterAnim[1].SetBool("Unlocked", true);
+            abilityMeterAnim[2].SetBool("Unlocked", false);
 
         }
         else if (health >= 75 && health <= 100)
@@ -450,9 +463,9 @@ public class Player : MonoBehaviour
             plControl.baseMultiplier = 1.12f;
             attackSpeed = baseAttackSpeed * 1.5f;
 
-            abilityMeters[0].SetActive(true);
-            abilityMeters[1].SetActive(true);
-            abilityMeters[2].SetActive(true);
+            abilityMeterAnim[0].SetBool("Unlocked", true);
+            abilityMeterAnim[1].SetBool("Unlocked", true);
+            abilityMeterAnim[2].SetBool("Unlocked", true);
         }
     }
 
@@ -462,6 +475,9 @@ public class Player : MonoBehaviour
         {
             case 0:
                 {
+                    abilityMeterAnim[0].SetBool("Using", false);
+                    abilityMeterAnim[1].SetBool("Using", false);
+                    abilityMeterAnim[2].SetBool("Using", false);
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
                         curcooldownTime[0] += Time.deltaTime;
@@ -481,6 +497,7 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[0] < 0)
                     {
                         activatedAbility = 0;
+                        abilityMeterAnim[0].SetBool("Using", false);
                     }
                     else
                     {
@@ -501,6 +518,7 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[1] < 0)
                     {
                         activatedAbility = 0;
+                        abilityMeterAnim[1].SetBool("Using", false);
                     }
                     else
                     {
@@ -521,6 +539,7 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[2] < 0)
                     {
                         activatedAbility = 0;
+                        abilityMeterAnim[2].SetBool("Using", false);
                     }
                     else
                     {
@@ -757,6 +776,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         activatedAbility = 1;
+        abilityMeterAnim[0].SetBool("Using", true);
         curcooldownTime[0] = cooldownTime[0];
         Fb_mana.timeFirstAbility = cooldownTime[0];
         Fb_mana.firstActivated = true;
