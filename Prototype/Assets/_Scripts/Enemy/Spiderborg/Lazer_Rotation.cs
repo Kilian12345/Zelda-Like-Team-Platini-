@@ -5,17 +5,24 @@ using UnityEngine;
 public class Lazer_Rotation : MonoBehaviour
 {
     Fow_Parent fow;
+    Player plScript;
     public GameObject LaserPoint;
     bool radiusIsGood;
 
+    [SerializeField] [Range(0,1f)] float damage;
     [SerializeField] float rotationspeed = 10;
     float rotationleft = 360;
+
+    Collider2D coll;
 
 
 
     void Start()
     {
+        plScript = FindObjectOfType<Player>();
         fow = GetComponentInChildren<Fow_Parent>();
+        coll = GetComponent<Collider2D>();
+        coll.enabled = false;
     }
 
 
@@ -31,6 +38,7 @@ public class Lazer_Rotation : MonoBehaviour
 
         if (fow.lazerActivated == true && radiusIsGood == true)
         {
+            coll.enabled = true;
             // StartCoroutine(Sale());
             if (rotationleft > rotation)
             {
@@ -42,6 +50,7 @@ public class Lazer_Rotation : MonoBehaviour
                 rotationleft = 0;
                 if (fow.lazerActivated == true)
                 {
+                    coll.enabled = false;
                     StartCoroutine(Sale());
                 }
                     
@@ -60,6 +69,14 @@ public class Lazer_Rotation : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
             fow.lazerActivated = false;
             rotationleft = 360f;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            plScript.health += damage;
         }
     }
 

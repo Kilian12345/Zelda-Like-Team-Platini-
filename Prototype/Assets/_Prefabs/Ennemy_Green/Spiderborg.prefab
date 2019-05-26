@@ -639,6 +639,38 @@ Transform:
   m_Father: {fileID: 8103416657331881459}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2429696011480660484
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794275403975742150}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.18419895, y: 2.789503}
+      - {x: -0.002932161, y: -0.0015101433}
+      - {x: 0.13079777, y: 2.735242}
+      - {x: 0.15454999, y: 2.8044515}
+      - {x: 0.032822996, y: 2.794836}
+      - {x: -0.029524416, y: 2.744142}
+      - {x: -0.09034404, y: 2.6805654}
 --- !u!1001 &1985508696622886822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,6 +738,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: viewRadius
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: radius
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: DamageDeal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: lazerActivated
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
       propertyPath: LaserPoint
@@ -713,16 +765,22 @@ PrefabInstance:
       objectReference: {fileID: 4940035293350451001}
     - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
+      propertyPath: damage
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
       propertyPath: rotationspeed
       value: 75
       objectReference: {fileID: 0}
-    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
-        type: 3}
-      propertyPath: lazerActivated
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e828d0e8f9b4725489a8b3f1efa9cb88, type: 3}
+--- !u!1 &8794275403975742150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7027439788035292512, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+    type: 3}
+  m_PrefabInstance: {fileID: 1985508696622886822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8794275403975742148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7027439788035292514, guid: e828d0e8f9b4725489a8b3f1efa9cb88,

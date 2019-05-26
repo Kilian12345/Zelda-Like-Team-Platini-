@@ -3522,7 +3522,7 @@ PrefabInstance:
     - target: {fileID: 6598259539890916406, guid: 73a2893d08eea5844a22b081070d5f7e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6598259539890916406, guid: 73a2893d08eea5844a22b081070d5f7e,
         type: 3}
@@ -10160,7 +10160,7 @@ PrefabInstance:
     - target: {fileID: 3175326351732072736, guid: 65409d9ae5c5fb24dbc73a2a4acab541,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3175326351732072736, guid: 65409d9ae5c5fb24dbc73a2a4acab541,
         type: 3}
@@ -17094,7 +17094,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346902216}
-  m_LocalRotation: {x: -1.2931939e-23, y: -7.852878e-24, z: 0.00000023003665, w: 1}
+  m_LocalRotation: {x: 1.3771987e-23, y: 3.1085332e-24, z: 0.0000002440065, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20299,7 +20299,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663300194}
-  m_LocalRotation: {x: -5.989839e-24, y: -1.2767183e-23, z: 0.010488576, w: 0.99994504}
+  m_LocalRotation: {x: 1.2871807e-24, y: 1.3484142e-24, z: 0.011179206, w: 0.9999376}
   m_LocalPosition: {x: -3.85, y: 11.493, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -25502,7 +25502,7 @@ PrefabInstance:
     - target: {fileID: 3754253562088110009, guid: f8a7e07e5400b724c93d4a74803765ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3754253562088110009, guid: f8a7e07e5400b724c93d4a74803765ce,
         type: 3}
@@ -25571,7 +25571,7 @@ PrefabInstance:
     - target: {fileID: 4205041364981524439, guid: c890d098a01d9234ab377262cfa7fa28,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4205041364981524439, guid: c890d098a01d9234ab377262cfa7fa28,
         type: 3}
@@ -25677,5 +25677,10 @@ PrefabInstance:
       propertyPath: bossUI
       value: 
       objectReference: {fileID: 932694329}
+    - target: {fileID: 8794275403059174083, guid: 5532fadac703ab747a7a9f335c9bc7d9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fda1a73400359f947b06304ad0129932, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5532fadac703ab747a7a9f335c9bc7d9, type: 3}
