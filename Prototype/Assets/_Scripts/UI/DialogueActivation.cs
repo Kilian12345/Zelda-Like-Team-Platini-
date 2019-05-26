@@ -33,15 +33,21 @@ public class DialogueActivation : MonoBehaviour
     public MenuManager mn;
     public DialogueManager dialogueManager;
     public bool launch;
+    [SerializeField] bool Priority = false;
     Scripted_Camera camScript;
 
     public bool DialogueActive = false;
     public bool InsideTriggerZone = false;
     bool activateOnce;
 
-    private void Start()
+    private void Awake()
     {
         camScript = GetComponentInParent<Scripted_Camera>();
+        if(Priority == true)
+        {
+            StateSwitch();
+        }
+        
     }
 
     void Update()
@@ -64,8 +70,8 @@ public class DialogueActivation : MonoBehaviour
     {
         if ((camScript.Triggered == true) && (activateOnce == false) && (camScript.everyEventDone == false))
         {
+
             StateSwitch();
-            
 
             Debug.Log(anim.GetInteger("AnimChara"));
             if (MenuManager.English == true)
@@ -99,22 +105,27 @@ public class DialogueActivation : MonoBehaviour
         {
             case 0:
                 anim.SetInteger("AnimChara", 0);
-                dialogueAudio.clip = pnj1;
+                dialogueAudio.clip = bonezonk;
                 break;
             case 1:
                 anim.SetInteger("AnimChara", 1);
-                dialogueAudio.clip = kuru;
+                dialogueAudio.clip = pnj1;
+                Debug.Log("img");
                 break;
             case 2:
                 anim.SetInteger("AnimChara", 2);
-                dialogueAudio.clip = bonezonk;
+                dialogueAudio.clip = kuru;
                 break;
             case 3:
                 anim.SetInteger("AnimChara", 3);
-                dialogueAudio.clip = holokaiser;
+                dialogueAudio.clip = spiderborg;
                 break;
             case 4:
                 anim.SetInteger("AnimChara", 4);
+                dialogueAudio.clip = holokaiser;
+                break;
+            case 5:
+                anim.SetInteger("AnimChara", 5);
                 dialogueAudio.clip = kaiser;
                 break;
         }
