@@ -225,7 +225,7 @@ MonoBehaviour:
   shotsPerBurst: 3
   shotRate: 0.8
   coolDownTime: 4
-  bull: {fileID: 7681654984024996306, guid: be4ac5bbf78817544aca0e53cbbe36a0, type: 3}
+  bull: {fileID: 1739591013767703798, guid: 2ae815160ba376247a7bc97c8b9eafc2, type: 3}
   shootPoint: {fileID: 409171904759768289}
   ctrBullet: 0
   numberOfProjectiles: 9

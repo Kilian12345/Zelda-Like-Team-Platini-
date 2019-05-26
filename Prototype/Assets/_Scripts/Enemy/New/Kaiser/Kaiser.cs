@@ -133,6 +133,9 @@ public class Kaiser : MonoBehaviour
 
     #endregion
 
+    // Scripted Camera
+    public GameObject scriptedCamera;
+
     void Start()
     {
         healthScript = GetComponent<EnemyHealth>();
@@ -232,9 +235,11 @@ public class Kaiser : MonoBehaviour
         }
         else
         {
+
             isEnded = true;
             StopCoroutine(Phase3());
             anim.SetBool("Death", true);
+
 
         }
     }

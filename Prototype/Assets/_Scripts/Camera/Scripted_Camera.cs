@@ -10,7 +10,8 @@ public class Scripted_Camera : MonoBehaviour
     CinemachineVirtualCamera vcam;
     DialogueActivation dialogue;
 
-    [SerializeField] bool OnCollision, OnTrigger, OnEvent ,playerStopMouv, camFollow;
+    [SerializeField] bool OnCollision, OnTrigger ,playerStopMouv, camFollow;
+    public bool OnEvent;
 
     [HideInInspector] public bool Triggered;
 
@@ -30,7 +31,8 @@ public class Scripted_Camera : MonoBehaviour
 
     void Update()
     {
-        if (Triggered == true) { StartCoroutine(CameraSwitch()); }
+        if (Triggered == true) { StartCoroutine(CameraSwitch(0)); }
+        if (OnEvent == true) { StartCoroutine(CameraSwitch(1000)); }
 
     }
 
@@ -49,7 +51,7 @@ public class Scripted_Camera : MonoBehaviour
     }
 
 
-    IEnumerator CameraSwitch()
+    IEnumerator CameraSwitch(float time)
     {
             
         if (everyEventDone == false )
@@ -79,10 +81,10 @@ public class Scripted_Camera : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(0.00f);
+        yield return new WaitForSeconds(time);
 
         if (dialogue.DialogueActive == false) {everyEventDone = true;}
-        StopCoroutine(CameraSwitch());
+        StopCoroutine(CameraSwitch(time));
 
 
     }
