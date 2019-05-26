@@ -683,12 +683,12 @@ MonoBehaviour:
   vibrateTime: 0.15
   elevatorVibration: 1
   elevatorVibrationTime: 3
+  boxExpolsion: {fileID: 0}
   toolbarTab: 5
   currentTab: Vibration
   ennemyGetHit: 0
   ennemyDied: 0
   Scripted_Scene: 0
-  boxExpolsion: {fileID: 0}
   throwScrShake: 0
 --- !u!1 &183837174
 GameObject:
@@ -719,7 +719,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183837174}
-  m_LocalRotation: {x: 3.71837e-24, y: 5.6405394e-25, z: -0, w: 1}
+  m_LocalRotation: {x: -4.6919885e-24, y: 5.68115e-25, z: -0, w: 1}
   m_LocalPosition: {x: 2.1299999, y: -0.8269999, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -2206,7 +2206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -0.000022411346}
+  m_AnchoredPosition: {x: 0, y: -0.000022411346}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &457252497
@@ -5479,7 +5479,8 @@ MonoBehaviour:
   - {fileID: 2203815620499323770, guid: 43e6373a71ae76e40bd6bd7df746a1c7, type: 3}
   - {fileID: 6213787849082613900, guid: ed6f745823107a643ab352648d1d7f45, type: 3}
   - {fileID: 5483544482235513979, guid: 9a7c2ebcc0fc89d409680c86cec7d248, type: 3}
-  teleportation: {fileID: 0}
+  teleportation: {fileID: 2948392369625935209, guid: 2fe8ee924c056544799ae8c8ad908343,
+    type: 3}
   throwableObjects:
   - {fileID: 6129395250849588477, guid: 37343789fba086945b45767c003f196a, type: 3}
   - {fileID: 8034150086353026568, guid: fa409bca02ea64041afb3360e3a0086c, type: 3}
@@ -7584,7 +7585,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934134253}
-  m_LocalRotation: {x: 1.370209e-23, y: 1.0412964e-28, z: -0, w: 1}
+  m_LocalRotation: {x: -5.014871e-24, y: 1.0412964e-28, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

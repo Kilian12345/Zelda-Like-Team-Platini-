@@ -56,7 +56,7 @@ public class WAVE_SYSTEM : MonoBehaviour
     {
         if (TransitionScene == true && CoroutineOnce == false)
         {
-            timeToNextScene = Random.Range(30, 40);
+            timeToNextScene = Random.Range(15, 25);
             StartCoroutine(SwitchScene());
             CoroutineOnce = true;
         }

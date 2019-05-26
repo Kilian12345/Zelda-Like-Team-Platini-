@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Scene_3.unity
     guid: 1f5e4ea4eb95a7440b807ac79f58837d
+  - enabled: 1
+    path: Assets/_Scenes/Infinite_Wave.unity
+    guid: 3b2ee555bfc57284f85b13b5f2cfc2af
   m_configObjects: {}

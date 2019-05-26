@@ -3957,6 +3957,7 @@ MonoBehaviour:
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 937285214}
   launch: 0
+  Priority: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &639857569
@@ -4704,12 +4705,12 @@ MonoBehaviour:
   vibrateTime: 0
   elevatorVibration: 0
   elevatorVibrationTime: 0
+  boxExpolsion: {fileID: 0}
   toolbarTab: 5
   currentTab: Vibration
   ennemyGetHit: 0
   ennemyDied: 0
   Scripted_Scene: 0
-  boxExpolsion: {fileID: 0}
   throwScrShake: 0
 --- !u!4 &773241851
 Transform:
@@ -4794,6 +4795,7 @@ MonoBehaviour:
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 937285214}
   launch: 0
+  Priority: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &799969020
@@ -5054,15 +5056,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 688790288}
     m_Modifications:
-    - target: {fileID: 8459077313225029568, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
-        type: 3}
-      propertyPath: m_Name
-      value: MenuManager
-      objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
       propertyPath: English
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459077313225029568, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuManager
       objectReference: {fileID: 0}
     - target: {fileID: 8459077313225029574, guid: 02addea0e2a482b4aa7cdd363f8db5c7,
         type: 3}
@@ -5731,7 +5733,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962828474}
-  m_LocalRotation: {x: 5.215566e-24, y: 7.0965917e-25, z: 0.008584068, w: 0.9999632}
+  m_LocalRotation: {x: -3.4572508e-24, y: -6.146306e-24, z: 0.008593657, w: 0.9999631}
   m_LocalPosition: {x: -3.8, y: 11.523001, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -5868,7 +5870,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 1.23
+  orthographic size: 1.85
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8224,6 +8226,7 @@ MonoBehaviour:
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 937285214}
   launch: 0
+  Priority: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &1435113292
@@ -8928,7 +8931,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540442575}
-  m_LocalRotation: {x: 6.1363975e-24, y: 1.0862707e-23, z: 0.00000024586913, w: 1}
+  m_LocalRotation: {x: -1.2902047e-23, y: -7.8514995e-24, z: 0.00000024586916, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8958,7 +8961,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1938964810}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 1.23
+    OrthographicSize: 1.85
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -9308,6 +9311,7 @@ MonoBehaviour:
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 937285214}
   launch: 0
+  Priority: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!1 &1599479408
@@ -9543,7 +9547,7 @@ Camera:
   far clip plane: 1000
   field of view: 0.00001
   orthographic: 1
-  orthographic size: 1.23
+  orthographic size: 1.85
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -11118,6 +11122,7 @@ MonoBehaviour:
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 937285214}
   launch: 0
+  Priority: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!4 &1955503712
