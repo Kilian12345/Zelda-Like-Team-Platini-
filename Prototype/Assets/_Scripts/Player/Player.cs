@@ -82,6 +82,7 @@ public class Player : MonoBehaviour
     public float attackPushForce;
     private float timeToAttack;
     private float angle;
+    private float baseAttackSpeed;
     
     public bool Carry = false;
     [HideInInspector]
@@ -206,6 +207,7 @@ public class Player : MonoBehaviour
         { fadeAnim.SetBool("FadeOut", true); }
 
         timeScaleModifier = 1;
+        baseAttackSpeed = attackSpeed;
 
     }
 
@@ -415,6 +417,8 @@ public class Player : MonoBehaviour
         {
             damage = baseDamage;
             plControl.baseMultiplier = 1f;
+            attackSpeed = baseAttackSpeed;
+
             abilityMeters[0].SetActive(false);
             abilityMeters[1].SetActive(false);
             abilityMeters[2].SetActive(false);
@@ -423,6 +427,8 @@ public class Player : MonoBehaviour
         {
             damage = baseDamage * 0.8f;
             plControl.baseMultiplier = 1.04f;
+            attackSpeed = baseAttackSpeed*1.04f;
+
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(false);
             abilityMeters[2].SetActive(false);
@@ -431,6 +437,8 @@ public class Player : MonoBehaviour
         {
             damage = baseDamage * 0.6f;
             plControl.baseMultiplier = 1.08f;
+            attackSpeed = baseAttackSpeed * 1.08f;
+
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(true);
             abilityMeters[2].SetActive(false);
@@ -440,6 +448,8 @@ public class Player : MonoBehaviour
         {
             damage = baseDamage * 0.5f;
             plControl.baseMultiplier = 1.12f;
+            attackSpeed = baseAttackSpeed * 1.5f;
+
             abilityMeters[0].SetActive(true);
             abilityMeters[1].SetActive(true);
             abilityMeters[2].SetActive(true);
