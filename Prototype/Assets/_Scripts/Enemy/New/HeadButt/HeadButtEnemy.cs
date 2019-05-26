@@ -28,6 +28,7 @@ public class HeadButtEnemy : MonoBehaviour
     private bool isAttacking;
     private bool isDead;
     private bool isFollowing;
+    private bool isMoving;
 
 
     Transform pl;
@@ -50,10 +51,12 @@ public class HeadButtEnemy : MonoBehaviour
         healthScript = GetComponent<EnemyHealth>();
         isDead = false;
     }
-
-    void FixedUpdate()
+    void Update()
     {
         animate();
+    }
+    void FixedUpdate()
+    {
         if (pl != null)
         {
             if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= detectionRange)
@@ -79,6 +82,7 @@ public class HeadButtEnemy : MonoBehaviour
             }
             else
             {
+                isMoving = false;
                 isInChaseRange = false;
                 isInChargeRange = false;
                 if (isFollowing)
@@ -93,6 +97,7 @@ public class HeadButtEnemy : MonoBehaviour
                 look();
                 if (isInChargeRange)
                 {
+                    isMoving = false;
                     if (Time.time > timeToCharge)
                     {
                         timeToCharge = Time.time + 1 / chargeCoolDown;
@@ -138,6 +143,7 @@ public class HeadButtEnemy : MonoBehaviour
         anim.SetBool("Attack", isAttacking);
         anim.SetBool("Charging", isCharging);
         anim.SetBool("Dead", isDead);
+        anim.SetBool("Walking", isMoving);
     }
 
     void move()
@@ -145,7 +151,7 @@ public class HeadButtEnemy : MonoBehaviour
         if (Vector2.Distance(transform.position, plScript.centrePoint.transform.position) > chargeRange)
         {
             transform.position = Vector2.MoveTowards(transform.position, plScript.centrePoint.transform.position, moveSpeed * Time.deltaTime);
-            isCharging = true;
+            isMoving = true;
         }
     }
 
@@ -157,6 +163,7 @@ public class HeadButtEnemy : MonoBehaviour
 
     void recPos()
     {
+        isMoving = false;
         isAttacking = false;
         lastPos = plScript.centrePoint.transform.position;
         canCharge = true;
@@ -202,20 +209,21 @@ public class HeadButtEnemy : MonoBehaviour
         }
     }
 
-    /*void OnCollisionExit2D(Collision2D col)
+    void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             StopCoroutine(Damage());
             isAttacking = false;
         }
-    }*/
+    }
 
     IEnumerator Damage()
     {
         isAttacking = true;
         plScript.TakeDamage(damageValue);
         yield return new WaitForSeconds(1);
+        //isAttacking = false;
         StopCoroutine(Damage());
     }
     private void OnDrawGizmosSelected()
