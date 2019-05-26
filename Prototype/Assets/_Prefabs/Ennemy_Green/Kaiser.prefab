@@ -196,14 +196,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   phase1ExitPercent: 60
-  phase2ExitPercent: 40
+  phase2ExitPercent: 30
   curPhase: 0
   curSubPhase: 1
-  attackCtr: 1
+  attackCtr: 0
   healthPercent: 0
   curAttack: 0
   dashVelocity: 2.5
-  dashCoolDown: 0.3
+  dashCoolDown: 0.25
   dashDamageValue: 20
   dashCtr: 3
   canDash: 0
@@ -257,9 +257,10 @@ MonoBehaviour:
   HitpointsParentPrefab: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
     type: 3}
   parent: {fileID: 409171903284437116}
-  health: 1000
+  health: 2000
   maxHealth: 0
   dissolveAmout: 0
+  destroyTime: 0
   scorePerHit: 75
   curScore: 0
   getDissolve: 0

@@ -7,7 +7,7 @@ public class Kaiser : MonoBehaviour
 
     #region Global Values
 
-
+    [Header("Global Values")]
     public bool isActive;
     public float phase1ExitPercent;
     public float phase2ExitPercent;
@@ -29,10 +29,12 @@ public class Kaiser : MonoBehaviour
     private bool enterPhase3;
     private bool startPhase2;
     private bool startPhase3;
+    private bool isCooling;
     #endregion
 
     #region Dash Variables
 
+    [Header("Dash Values")]
     public float dashVelocity;
     public float dashCoolDown;
     public float dashDamageValue;
@@ -50,6 +52,7 @@ public class Kaiser : MonoBehaviour
 
     #region Jump Variables
 
+    [Header("Jump Values")]
     public Transform[] cp;
 
     public float jumpSpeed;
@@ -78,6 +81,8 @@ public class Kaiser : MonoBehaviour
     #endregion
 
     #region Precise Strike
+
+    [Header("Precise Strike Values")]
     public float bulSpeed;
     public float shotsPerBurst;
     public float shotRate;
@@ -94,6 +99,7 @@ public class Kaiser : MonoBehaviour
 
     #region Bullet Hell
 
+    [Header("Bullet Hell")]
     public int numberOfProjectiles;
     public float projectileSpeed;
     public float shotsPerBurstBH;
@@ -147,6 +153,7 @@ public class Kaiser : MonoBehaviour
         startPoint = shootPoint.transform.position;
         if (isActive)
         {
+            curPhase = 1;
             isActive = false;
             sR.enabled = true;
             Invoke("entry", 1f);
@@ -160,9 +167,8 @@ public class Kaiser : MonoBehaviour
             SwitchPhases();
         }
         animate();
-        attacks();
 
-        if (pauseDash && pauseFire && pauseFireBH && pauseJump)
+        if (pauseDash || pauseFire || pauseFireBH || pauseJump)
         {
             pause = true;
         }
@@ -178,11 +184,13 @@ public class Kaiser : MonoBehaviour
         if (healthPercent >= phase1ExitPercent)
         {
             StartCoroutine(Phase1());
+            //attacks();
         }
         else if (healthPercent < phase1ExitPercent && healthPercent >= phase2ExitPercent)
         {
             if (!enterPhase2)
             {
+                curPhase = 2;
                 curSubPhase = 0;
                 StopCoroutine(Phase1());
                 if (!startPhase2)
@@ -190,10 +198,11 @@ public class Kaiser : MonoBehaviour
                     startPhase2 = true;
                     Invoke("transitionTo2", 5f);
                 }
-                
+                //attacks();
             }
             else
             {
+                //attacks();
                 StartCoroutine(Phase2());
             }
         }
@@ -201,6 +210,7 @@ public class Kaiser : MonoBehaviour
         {
             if (!enterPhase3)
             {
+                curPhase = 3;
                 curSubPhase = 0;
                 StopCoroutine(Phase2());
                 if (!startPhase3)
@@ -208,10 +218,11 @@ public class Kaiser : MonoBehaviour
                     startPhase3 = true;
                     Invoke("transitionTo3", 5f);
                 }
-                
+                //attacks();
             }
             else
             {
+                //attacks();
                 StartCoroutine(Phase3());
             }
         }
@@ -224,8 +235,6 @@ public class Kaiser : MonoBehaviour
         timeToDash = 0;
         timeToFire = 0;
         timeToFireBH = 0;
-        ctrBullet = 0;
-        ctrBulletBH = 0;
         attackCtr = 0;
         curSubPhase = 1;
         Debug.Log("Phase2");
@@ -238,8 +247,6 @@ public class Kaiser : MonoBehaviour
         timeToDash = 0;
         timeToFire = 0;
         timeToFireBH = 0;
-        ctrBullet = 0;
-        ctrBulletBH = 0;
         attackCtr = 0;
         curSubPhase = 1;
         Debug.Log("Phase3");
@@ -247,18 +254,20 @@ public class Kaiser : MonoBehaviour
 
     IEnumerator Phase1()
     {
-        if (curSubPhase <= 2)
+        if (curSubPhase <= 2 && curPhase == 1)
         {
             switch (curSubPhase)
             {
                 case 1:
                     {
                         curAttack = 1;
+                        attacks();
                     }
                     break;
                 case 2:
                     {
                         curAttack = 2;
+                        attacks();
                     }
                     break;
             }
@@ -272,18 +281,20 @@ public class Kaiser : MonoBehaviour
     }
     IEnumerator Phase2()
     {
-        if (curSubPhase <= 2)
+        if (curSubPhase <= 2 && curPhase == 2)
         {
             switch (curSubPhase)
             {
                 case 1:
                     {
                         curAttack = 3;
+                        attacks();
                     }
                     break;
                 case 2:
                     {
                         curAttack = 4;
+                        attacks();
                     }
                     break;
             }
@@ -298,28 +309,32 @@ public class Kaiser : MonoBehaviour
 
     IEnumerator Phase3()
     {
-        if (curSubPhase <= 4)
+        if (curSubPhase <= 4 && curPhase == 3)
         {
             switch (curSubPhase)
             {
                 case 1:
                     {
                         curAttack = 3;
+                        attacks();
                     }
                     break;
                 case 2:
                     {
                         curAttack = 2;
+                        attacks();
                     }
                     break;
                 case 3:
                     {
                         curAttack = 3;
+                        attacks();
                     }
                     break;
                 case 4:
                     {
                         curAttack = 4;
+                        attacks();
                     }
                     break;
             }
@@ -334,116 +349,120 @@ public class Kaiser : MonoBehaviour
 
     void attacks()
     {
-        if (!pause)
+        switch (curAttack)
         {
-            switch (curAttack)
-            {
-                case 1:
+            case 1:
+                {
+                    damageValue = jumpDamageValue;
+                    StartJump();
+                    if (attackCtr < jumpCtr)
                     {
-                        damageValue = jumpDamageValue;
-                        StartJump();
-                        if (attackCtr < jumpCtr)
+                        if (Time.time > timeToJump)
                         {
-                            if (Time.time > timeToJump)
-                            {
-                                attackCtr++;
-                                timeToJump = Time.time + 1 / jumpRate;
-                                jumpPos();
-                            }
-                        }
-                        else
-                        {
-                            if (!pauseJump)
-                            {
-                                pauseJump = true;
-                                Invoke("coolDown", 3f);
-                            }
-                        }
-
-
-                    }
-                    break;
-                case 2:
-                    {
-                        StartPreciseStrike();
-                        if (ctrBullet < shotsPerBurst)
-                        {
-                            if (Time.time > timeToFire)
-                            {
-                                ctrBullet++;
-                                timeToFire = Time.time + 1 / shotRate;
-                                StartCoroutine(Shoot());
-                            }
-                        }
-                        else
-                        {
-                            if (!pauseFire)
-                            {
-                                pauseFire = true;
-                                Invoke("coolDown", 3f);
-                            }
-
+                            attackCtr++;
+                            timeToJump = Time.time + 1 / jumpRate;
+                            jumpPos();
                         }
                     }
-                    break;
-                case 3:
+                    else
                     {
-                        damageValue = dashDamageValue;
-                        StartDash();
-                        if (attackCtr < dashCtr)
+                        if (!pauseJump)
                         {
-                            if (Time.time > timeToDash)
-                            {
-                                attackCtr++;
-                                timeToDash = Time.time + 1 / dashCoolDown;
-                                recPos();
-                            }
+                            pauseJump = true;
+                            isCooling = true;
+                            Debug.Log("Reseting COOl jump");
+                            Invoke("coolDown", 3f);
                         }
-                        else
+                    }
+
+
+                }
+                break;
+            case 2:
+                {
+                    StartPreciseStrike();
+                    if (ctrBullet < shotsPerBurst)
+                    {
+                        if (Time.time > timeToFire)
                         {
-                            if (!pauseDash)
-                            {
-                                pauseDash = true;
-                                Invoke("coolDown", 3f);
-                            }
+                            ctrBullet++;
+                            timeToFire = Time.time + 1 / shotRate;
+                            StartCoroutine(Shoot());
+                        }
+                    }
+                    else
+                    {
+                        if (!pauseFire)
+                        {
+                            pauseFire = true;
+                            Debug.Log("Reseting COOl precise");
+                            Invoke("coolDown", 3f);
+
                         }
 
                     }
-                    break;
-                case 4:
+                }
+                break;
+            case 3:
+                {
+                    damageValue = dashDamageValue;
+                    StartDash();
+                    if (attackCtr < dashCtr)
                     {
-                        StartBulletHell();
-                        if (ctrBulletBH < shotsPerBurstBH)
+                        if (Time.time > timeToDash)
                         {
-                            if (Time.time > timeToFireBH)
-                            {
-                                timeToFireBH = Time.time + 1 / shotRateBH;
-                                if (curAngle < 45)
-                                {
-                                    curAngle += 4.3f;
-                                }
-                                else
-                                {
-                                    curAngle = 0f;
-                                }
-                                spawnProjectiles(numberOfProjectiles, curAngle);
-                                ctrBulletBH++;
-                            }
-                        }
-                        else
-                        {
-                            if (!pauseFireBH)
-                            {
-                                pauseFireBH = true;
-                                firstShot = false;
-                                Invoke("coolDown", 3f);
-                            }
+                            attackCtr++;
+                            timeToDash = Time.time + 1 / dashCoolDown;
+                            recPos();
                         }
                     }
-                    break;
-            }
+                    else
+                    {
+                        if (!pauseDash)
+                        {
+                            pauseDash = true;
+                            Debug.Log("Reseting COOl dash");
+                            Invoke("coolDown", 3f);
+                        }
+                    }
+
+                }
+                break;
+            case 4:
+                {
+                    StartBulletHell();
+                    if (ctrBulletBH < shotsPerBurstBH)
+                    {
+                        if (Time.time > timeToFireBH)
+                        {
+                            ctrBulletBH++;
+                            timeToFireBH = Time.time + 1 / shotRateBH;
+                            if (curAngle < 45)
+                            {
+                                curAngle += 4.3f;
+                            }
+                            else
+                            {
+                                curAngle = 0f;
+                            }
+                            spawnProjectiles(numberOfProjectiles, curAngle);
+
+                        }
+                    }
+                    else
+                    {
+                        if (!pauseFireBH)
+                        {
+                            pauseFireBH = true;
+                            firstShot = false;
+                            Debug.Log("Reseting COOl bh");
+                            Invoke("coolDown", 3f);
+                        }
+                    }
+                }
+                break;
         }
-        
+
     }
 
     void animate()
@@ -483,7 +502,7 @@ public class Kaiser : MonoBehaviour
         {
             isDashing = false;
         }
-        if (Vector2.Distance(transform.position, lastPos) <= 0.05)
+        if (Vector2.Distance(transform.position, lastPos) <= 0.1)
         {
             isDashing = false;
             canDash = false;
@@ -500,13 +519,13 @@ public class Kaiser : MonoBehaviour
 
     void dash()
     {
-        pauseDash = false;
         isDashing = true;
         transform.position = Vector2.MoveTowards(transform.position, lastPos, dashVelocity * Time.deltaTime);
     }
 
     void recPos()
     {
+        pauseDash = false;
         lastPos = plScript.centrePoint.transform.position;
         canDash = true;
     }
@@ -616,10 +635,12 @@ public class Kaiser : MonoBehaviour
         ctrBulletBH = 0;
         attackCtr = 0;
         curSubPhase++;
+        Debug.Log("Reseting COOl");
     }
 
     IEnumerator Shoot()
     {
+        isCooling = false;
         isShooting = true;
         pauseFire = false;
         yield return new WaitForSeconds(1f);
@@ -655,6 +676,7 @@ public class Kaiser : MonoBehaviour
 
     void spawnProjectiles(int numOfProj, float ang)
     {
+        isCooling = false;
         pauseFireBH = false;
         float angleStep = 360f / numOfProj;
         angle = ang;
