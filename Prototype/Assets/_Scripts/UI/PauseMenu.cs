@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel") && GameIsPaused == false)
         {
-            Debug.Log("activate canvas");
+            //Debug.Log("activate canvas");
             canvas.SetActive(true);
             GameIsPaused = true;
             EventSystem.current.SetSelectedGameObject(null);

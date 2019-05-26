@@ -118,32 +118,33 @@ public class SpiderborgBehaviour : MonoBehaviour
         healthPercent = (eh.health / eh.maxHealth) * 100;
         if ((Vector2.Distance(transform.position, target.position) > attackdist) && occupied == false)
         {
-            Debug.Log("0");
+            //Debug.Log("0");
             SpiderState = 0;
         }
         else if (healthPercent >= 70 && occupied == false)
         {
-            Debug.Log("1");
+            //Debug.Log("1");
             SpiderState = 1;
             attackdist = 1.5f;
         }
         else if (healthPercent < 70 && healthPercent >= 35 && occupied == false)
         {
-            Debug.Log("2");
+            //Debug.Log("2");
             SpiderState = 2;
 
             attackdist = 1f;
         }
         else if (healthPercent < 35 && healthPercent > 0 && occupied == false)
         {
-            Debug.Log("3");
+            //Debug.Log("3");
             SpiderState = 3;
             attackdist = 0.7f;
         }
         else if (eh.health <= 0)
         {
-            Debug.Log("4");
+            //Debug.Log("4");
             SpiderState = 4;
+
             isEnded = true;
         }
 
