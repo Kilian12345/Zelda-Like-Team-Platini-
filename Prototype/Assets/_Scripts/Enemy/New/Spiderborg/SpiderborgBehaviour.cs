@@ -8,6 +8,8 @@ public class SpiderborgBehaviour : MonoBehaviour
 
     #region Variables
     [Header("General Variables")]
+    public bool isStarted;
+    public bool isEnded;
     public GameObject StrikeZone;
     [SerializeField] Animator anim;
     [SerializeField] EnemyHealth eh;
@@ -26,6 +28,7 @@ public class SpiderborgBehaviour : MonoBehaviour
     [SerializeField] [Range(-190, 190)] float rangeAngle1;
     [SerializeField] [Range(-190, 190)] float rangeAngle2;
     [SerializeField] [Range(-190, 190)] float rangeAngle3;
+    float healthPercent;
 
     [SerializeField] bool Small;
     [SerializeField] bool Medium;
@@ -91,6 +94,8 @@ public class SpiderborgBehaviour : MonoBehaviour
         cp[0].position = transform.position;
         playerPos = plScript.centrePoint.transform;
         coll = GetComponent<Collider2D>();
+
+        isStarted = true;
     }
 
     void FixedUpdate()
@@ -110,34 +115,36 @@ public class SpiderborgBehaviour : MonoBehaviour
 
     void CheckLife()
     {
+        healthPercent = (eh.health / eh.maxHealth) * 100;
         if ((Vector2.Distance(transform.position, target.position) > attackdist) && occupied == false)
         {
             Debug.Log("0");
             SpiderState = 0;
         }
-        else if (eh.health >= 400 && occupied == false)
+        else if (healthPercent >= 70 && occupied == false)
         {
             Debug.Log("1");
             SpiderState = 1;
             attackdist = 1.5f;
         }
-        else if (eh.health < 400 && eh.health >= 200 && occupied == false)
+        else if (healthPercent < 70 && healthPercent >= 35 && occupied == false)
         {
             Debug.Log("2");
             SpiderState = 2;
 
             attackdist = 1f;
         }
-        else if (eh.health < 200 && eh.health >= 1 && occupied == false)
+        else if (healthPercent < 35 && healthPercent > 0 && occupied == false)
         {
             Debug.Log("3");
             SpiderState = 3;
             attackdist = 0.7f;
         }
-        else if (eh.health < 1)
+        else if (eh.health <= 0)
         {
             Debug.Log("4");
             SpiderState = 4;
+            isEnded = true;
         }
 
     }
