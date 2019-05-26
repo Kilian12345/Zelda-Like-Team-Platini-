@@ -2027,15 +2027,15 @@ RectTransform:
   m_GameObject: {fileID: 7391703500099230819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.9125, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 7391703500512753275}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.8, y: -32.7}
-  m_SizeDelta: {x: 230, y: 20}
+  m_AnchoredPosition: {x: 1.08, y: -34.61}
+  m_SizeDelta: {x: 4795.22, y: 448.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7391703500099230817
 CanvasRenderer:
@@ -2066,17 +2066,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 29821db8324231f4481e730bf6288b9c, type: 2}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: a713128a38357094db1f77fca14d9be3, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 15
+    m_MaxSize: 150
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!1 &7391703500119966982
@@ -2171,7 +2171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7391703500186180059
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2835,7 +2835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -35}
+  m_AnchoredPosition: {x: 190, y: -87}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7391703500512753272
@@ -3041,6 +3041,7 @@ MonoBehaviour:
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 7391703499571724410}
   launch: 0
+  Priority: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!58 &7391703500557943562
@@ -4182,6 +4183,7 @@ MonoBehaviour:
   mn: {fileID: 8459077313225029575, guid: 02addea0e2a482b4aa7cdd363f8db5c7, type: 3}
   dialogueManager: {fileID: 7391703499571724410}
   launch: 0
+  Priority: 0
   DialogueActive: 0
   InsideTriggerZone: 0
 --- !u!58 &7391703501590427410
