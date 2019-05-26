@@ -206,7 +206,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9f114c44dba01924aac031a50495b40f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dad32c6f4c5fcc54dbe9139cc2dd2866, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -483,85 +483,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4231676435965438689, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676435965438689, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676434814993978, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676434814993978, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676435211672431, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676435211672431, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676435921687698, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676435921687698, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4231676435633169406, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1326880572}
-    - target: {fileID: 4231676436243890831, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676436243890831, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4231676435090998250, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1326880572}
-    - target: {fileID: 4231676435585178784, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676435585178784, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676435240784824, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Infinite_Wave
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231676436458878097, guid: 0fcff5ff853c7f34b8b5b6029ed9438b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Scene_3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fcff5ff853c7f34b8b5b6029ed9438b, type: 3}

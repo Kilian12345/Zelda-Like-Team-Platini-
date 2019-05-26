@@ -102,7 +102,7 @@ public class EnemyHealth : MonoBehaviour
             Debug.Log("Punch " + (100 - ps.health) / 100);
         }*/
 
-        if (HitpointsParentPrefab && health >= 0)
+        if (HitpointsParentPrefab && asExploded == false)
         { 
             if (ps.health >= 0 && ps.health < 25)
             {

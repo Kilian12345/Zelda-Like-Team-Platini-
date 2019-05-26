@@ -14,3 +14,4 @@ level1 = LEVEL 1 : MINE
 level2 = LEVEL 2 : PRISON
 levelboss = LEVEL 3 : BOSS
 levelendless = LEVEL ENDLESS
+score = Final Score
