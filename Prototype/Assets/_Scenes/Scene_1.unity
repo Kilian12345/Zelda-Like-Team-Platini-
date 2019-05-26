@@ -3786,10 +3786,10 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 4
+  ChooseCharacter: 8
   dialogue:
     sentences: []
-    name: HoloKaiser
+    name: IntroHoloKaiser
     sentencesEN:
     - '*sizzles*'
     - "You seem to destroy \u2026*sizzles*\u2026"
@@ -12055,10 +12055,10 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 0
+  ChooseCharacter: 1
   dialogue:
     sentences: []
-    name: Bjorn
+    name: Bonezonk
     sentencesEN:
     - They are killing each others, now might be the time to make a move.
     - Use the mine carts to breach their defences.
@@ -16128,7 +16128,7 @@ MonoBehaviour:
   ChooseCharacter: 0
   dialogue:
     sentences: []
-    name: Bjorn
+    name: IntroBonezonk
     sentencesEN:
     - "After all these years someone has finally found me\u2026"
     - "My name is Bjorn. I am the greatest warrior the world has ever known. And you,
@@ -20360,7 +20360,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: 9.475957e-24, y: -8.183349e-24, z: -0.0075934734, w: 0.9999712}
+  m_LocalRotation: {x: 7.465877e-24, y: -8.6075824e-24, z: -0.0075934734, w: 0.9999712}
   m_LocalPosition: {x: -9.521768, y: 17.794147, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -33499,10 +33499,10 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 0
+  ChooseCharacter: 1
   dialogue:
     sentences: []
-    name: Bjorn
+    name: Bonezonk
     sentencesEN:
     - They seem to have a security backup system.
     - "If you activate the button you won\u2019t have the time to reach the door."
@@ -37654,10 +37654,10 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 804747250}
-  ChooseCharacter: 1
+  ChooseCharacter: 2
   dialogue:
     sentences: []
-    name: PNJ
+    name: IntroTrash
     sentencesEN:
     - Hey! You! I heard that a riot has started south-east of our position. You might
       get a chance to escape.
@@ -38828,6 +38828,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7391703500512753275, guid: a01673ff5f12398478f827675c3196cb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -87
+      objectReference: {fileID: 0}
     - target: {fileID: 3850783625924262048, guid: a01673ff5f12398478f827675c3196cb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -39369,7 +39374,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: 5.9502914e-24, y: -5.916456e-29, z: -0, w: 1}
+  m_LocalRotation: {x: 1.3703227e-23, y: -1.6566077e-28, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

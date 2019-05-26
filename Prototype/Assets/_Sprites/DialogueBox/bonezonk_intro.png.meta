@@ -1,27 +1,19 @@
 fileFormatVersion: 2
-guid: 312d056ce4e7f5a4f89e0247ada621fb
+guid: 5f5a839c979a45142946c32ac7833421
 TextureImporter:
   fileIDToRecycleName:
-    21300000: lord of skulls intro 1_0
-    21300002: lord of skulls intro 1_1
-    21300004: lord of skulls intro 1_2
-    21300006: lord of skulls intro 1_3
-    21300008: lord of skulls intro 1_4
-    21300010: lord of skulls intro 1_5
-    21300012: lord of skulls intro 1_6
-    21300014: lord of skulls intro 1_7
-    21300016: lord of skulls intro 1_8
-    21300018: lord of skulls intro 1_9
-    21300020: lord of skulls intro 1_10
-    21300022: lord of skulls intro 1_11
-    21300024: lord of skulls intro 1_12
-    21300026: lord of skulls intro 1_13
-    21300028: lord of skulls intro 1_14
-    21300030: lord of skulls intro 1_15
-    21300032: lord of skulls intro 1_16
-    21300034: lord of skulls intro 1_17
-    21300036: lord of skulls intro 1_18
-    21300038: lord of skulls intro 1_19
+    21300000: bonezonk_intro 1_0
+    21300002: bonezonk_intro 1_1
+    21300004: bonezonk_intro 1_2
+    21300006: bonezonk_intro 1_3
+    21300008: bonezonk_intro 1_4
+    21300010: bonezonk_intro 1_5
+    21300012: bonezonk_intro 1_6
+    21300014: bonezonk_intro 1_7
+    21300016: bonezonk_intro 1_8
+    21300018: bonezonk_intro 1_9
+    21300020: bonezonk_intro 1_10
+    21300022: bonezonk_intro 1_11
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -104,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lord of skulls intro 1_0
+      name: bonezonk_intro 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,19 +110,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b599583c32583e47a7731e857e6c60d
+      spriteID: 9bc5f25ff1b277049a2e2c562b937f15
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_1
+      name: bonezonk_intro 1_1
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,19 +130,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7f3e0c5d764d8e48a7ef25f634fd9cd
+      spriteID: ea9cdd68de04cc5498d3762287132003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_2
+      name: bonezonk_intro 1_2
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,19 +150,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e340a03cfa1c5ee43b3bfa60e0e8f2ae
+      spriteID: 7bca12400bd9a8348aba486416ca97c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_3
+      name: bonezonk_intro 1_3
       rect:
         serializedVersion: 2
         x: 600
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,19 +170,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98dc3355b28fe0345b0599f8bde82fc7
+      spriteID: 21a5f9566c20c6e45bec7bdb91e5d90e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_4
+      name: bonezonk_intro 1_4
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,19 +190,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34f30f80713873441b27af56c4e246fc
+      spriteID: df5f108369ceff6469f5c082156b7a1c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_5
+      name: bonezonk_intro 1_5
       rect:
         serializedVersion: 2
         x: 1000
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,19 +210,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae12655e0572dc846a09cf635e599c95
+      spriteID: 086ee9bd646d44c4a99a141a5428671a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_6
+      name: bonezonk_intro 1_6
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,19 +230,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c56170657012e34a95bc50134cd2d86
+      spriteID: a01426b65fc45eb4a991bc242a367810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_7
+      name: bonezonk_intro 1_7
       rect:
         serializedVersion: 2
         x: 1400
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 664f8fbf82fa3d646a4f640ae55f6159
+      spriteID: 3550ece55effbda44a94d764718e7994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_8
+      name: bonezonk_intro 1_8
       rect:
         serializedVersion: 2
         x: 1600
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,19 +270,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 916e09a2a41d5b941999ad43b0d6ae0d
+      spriteID: bc1a4ddaa3fa9c74c864965b16c9a1c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_9
+      name: bonezonk_intro 1_9
       rect:
         serializedVersion: 2
         x: 1800
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,19 +290,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3350636b519ee2a40b8265265866e6ab
+      spriteID: 9004f0aebd1ceb2498318d220c03021e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_10
+      name: bonezonk_intro 1_10
       rect:
         serializedVersion: 2
         x: 2000
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,19 +310,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbdadba227d73ce458887713b4ca51f6
+      spriteID: 1f03d85ecb9d1564a8cc20fb0699ad9a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_11
+      name: bonezonk_intro 1_11
       rect:
         serializedVersion: 2
         x: 2200
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,167 +330,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a03b016c9d18649a858b8153ec2866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_12
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e6560a301291804b93fdc0621f2674f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_13
-      rect:
-        serializedVersion: 2
-        x: 2600
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b13a4b1792cff24489a53f24890c7f9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_14
-      rect:
-        serializedVersion: 2
-        x: 2800
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bfd20504c4da2d469b0e0e89b44b55a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_15
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b88072e4508ceb43895bebd0836eb74
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_16
-      rect:
-        serializedVersion: 2
-        x: 3200
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cebd67bff138f9649b97b4f01dd770a1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_17
-      rect:
-        serializedVersion: 2
-        x: 3400
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b461748433c7b6f46bbfc3de3696bc38
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_18
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e2aaa56a4c837245ab605d9cae9efef
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_19
-      rect:
-        serializedVersion: 2
-        x: 3800
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce9b53d6167a7dd4e803fdd340259c03
+      spriteID: f8310de26ce52f64b85dfdcce8c67f85
       vertices: []
       indices: 
       edges: []
@@ -506,7 +338,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6c8dd7ec6e5c793429a2f59fe368a868
+    spriteID: fdcef639cb065fe4cba671c742af6328
     vertices: []
     indices: 
     edges: []

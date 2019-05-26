@@ -5011,10 +5011,10 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 849343951}
-  ChooseCharacter: 1
+  ChooseCharacter: 2
   dialogue:
     sentences: []
-    name: PNJ
+    name: IntroTrash
     sentencesEN:
     - I like to fight.
     sentencesFR:
@@ -14428,10 +14428,10 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 849343951}
-  ChooseCharacter: 2
+  ChooseCharacter: 4
   dialogue:
     sentences: []
-    name: Kuru
+    name: IntroKuru
     sentencesEN:
     - Ahahahahahaha ! Realy?
     - You really thought that I would let you through without any kind of bribe?
@@ -17416,7 +17416,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346902216}
-  m_LocalRotation: {x: 5.838179e-24, y: -7.8509165e-24, z: 0.00000028917563, w: 1}
+  m_LocalRotation: {x: 5.837965e-24, y: -7.850918e-24, z: 0.00000028777865, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17572,10 +17572,10 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 849343951}
-  ChooseCharacter: 1
+  ChooseCharacter: 6
   dialogue:
     sentences: []
-    name: PNJ
+    name: Introcrabe
     sentencesEN:
     - Oye Mate !
     - I bet you ain t got the balls to throw this barrel in my face!
@@ -18965,7 +18965,7 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 849343951}
-  ChooseCharacter: 4
+  ChooseCharacter: 9
   dialogue:
     sentences: []
     name: HoloKaiser
@@ -20859,7 +20859,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663300194}
-  m_LocalRotation: {x: 4.152387e-24, y: -4.483592e-24, z: 0.0071136034, w: 0.9999748}
+  m_LocalRotation: {x: 1.1061332e-23, y: 8.73893e-25, z: 0.007127171, w: 0.99997467}
   m_LocalPosition: {x: -3.85, y: 11.493, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -25895,7 +25895,7 @@ MonoBehaviour:
   bonezonk: {fileID: 8300000, guid: 3c924bb3951c7844ca3429ffea254704, type: 3}
   holokaiser: {fileID: 8300000, guid: b5d76402205e8d842a7ed421e8caeb99, type: 3}
   anim: {fileID: 849343951}
-  ChooseCharacter: 3
+  ChooseCharacter: 7
   dialogue:
     sentences: []
     name: Spiderborg

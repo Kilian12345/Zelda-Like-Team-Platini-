@@ -1,27 +1,26 @@
 fileFormatVersion: 2
-guid: 312d056ce4e7f5a4f89e0247ada621fb
+guid: c4c1f35403c756541aea766aae13a376
 TextureImporter:
   fileIDToRecycleName:
-    21300000: lord of skulls intro 1_0
-    21300002: lord of skulls intro 1_1
-    21300004: lord of skulls intro 1_2
-    21300006: lord of skulls intro 1_3
-    21300008: lord of skulls intro 1_4
-    21300010: lord of skulls intro 1_5
-    21300012: lord of skulls intro 1_6
-    21300014: lord of skulls intro 1_7
-    21300016: lord of skulls intro 1_8
-    21300018: lord of skulls intro 1_9
-    21300020: lord of skulls intro 1_10
-    21300022: lord of skulls intro 1_11
-    21300024: lord of skulls intro 1_12
-    21300026: lord of skulls intro 1_13
-    21300028: lord of skulls intro 1_14
-    21300030: lord of skulls intro 1_15
-    21300032: lord of skulls intro 1_16
-    21300034: lord of skulls intro 1_17
-    21300036: lord of skulls intro 1_18
-    21300038: lord of skulls intro 1_19
+    21300000: kaiser intro_0
+    21300002: kaiser intro_1
+    21300004: kaiser intro_2
+    21300006: kaiser intro_3
+    21300008: kaiser intro_4
+    21300010: kaiser intro_5
+    21300012: kaiser intro_6
+    21300014: kaiser intro_7
+    21300016: kaiser intro_8
+    21300018: kaiser intro_9
+    21300020: kaiser intro_10
+    21300022: kaiser intro_11
+    21300024: kaiser intro_12
+    21300026: kaiser intro_13
+    21300028: kaiser intro_14
+    21300030: kaiser intro_15
+    21300032: kaiser intro_16
+    21300034: kaiser intro_17
+    21300036: kaiser intro_18
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -104,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lord of skulls intro 1_0
+      name: kaiser intro_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,19 +117,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b599583c32583e47a7731e857e6c60d
+      spriteID: 0ba8f2797b31db64e931aff4e8876a86
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_1
+      name: kaiser intro_1
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7f3e0c5d764d8e48a7ef25f634fd9cd
+      spriteID: 4704088ee0b8087468974a6d1bc95cfa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_2
+      name: kaiser intro_2
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,19 +157,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e340a03cfa1c5ee43b3bfa60e0e8f2ae
+      spriteID: 67c80e30d83d1cd4ea7fd652f2268423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_3
+      name: kaiser intro_3
       rect:
         serializedVersion: 2
         x: 600
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,19 +177,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98dc3355b28fe0345b0599f8bde82fc7
+      spriteID: bc9b935c327f96242afbf6b724bc474c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_4
+      name: kaiser intro_4
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,19 +197,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34f30f80713873441b27af56c4e246fc
+      spriteID: e7d62819c87a7984cb0abc2d654cc782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_5
+      name: kaiser intro_5
       rect:
         serializedVersion: 2
         x: 1000
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,19 +217,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae12655e0572dc846a09cf635e599c95
+      spriteID: d8806cc43229bcd499f7e69d021a5bec
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_6
+      name: kaiser intro_6
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,19 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c56170657012e34a95bc50134cd2d86
+      spriteID: 740b2757bc2909840aeb1158e01c720c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_7
+      name: kaiser intro_7
       rect:
         serializedVersion: 2
         x: 1400
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,19 +257,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 664f8fbf82fa3d646a4f640ae55f6159
+      spriteID: 806f369257fdd59498a9a26c4cabeda2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_8
+      name: kaiser intro_8
       rect:
         serializedVersion: 2
         x: 1600
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,19 +277,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 916e09a2a41d5b941999ad43b0d6ae0d
+      spriteID: f0290f2efc426ce4fa4d9212e86e4357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_9
+      name: kaiser intro_9
       rect:
         serializedVersion: 2
         x: 1800
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,19 +297,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3350636b519ee2a40b8265265866e6ab
+      spriteID: 010e8681bd3d1bf4ab6fb5395753168d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_10
+      name: kaiser intro_10
       rect:
         serializedVersion: 2
         x: 2000
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,19 +317,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbdadba227d73ce458887713b4ca51f6
+      spriteID: 8e974d721ab54914cabbbd0dd1e2a262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_11
+      name: kaiser intro_11
       rect:
         serializedVersion: 2
         x: 2200
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,19 +337,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a03b016c9d18649a858b8153ec2866
+      spriteID: 5affac9046827fe4c827fcbc206e1e17
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_12
+      name: kaiser intro_12
       rect:
         serializedVersion: 2
         x: 2400
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,19 +357,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e6560a301291804b93fdc0621f2674f
+      spriteID: 4b723d4a2207a1b47aeea467cc2ec333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_13
+      name: kaiser intro_13
       rect:
         serializedVersion: 2
         x: 2600
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,19 +377,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b13a4b1792cff24489a53f24890c7f9
+      spriteID: 1edf41698e9fbfb45a2cb6e4fc9d9e75
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_14
+      name: kaiser intro_14
       rect:
         serializedVersion: 2
         x: 2800
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,19 +397,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bfd20504c4da2d469b0e0e89b44b55a
+      spriteID: 1bc63b2bf63e3ed43b7657fed927943f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_15
+      name: kaiser intro_15
       rect:
         serializedVersion: 2
         x: 3000
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,19 +417,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b88072e4508ceb43895bebd0836eb74
+      spriteID: 9887d73f53a790e4a9a88b790995cd20
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_16
+      name: kaiser intro_16
       rect:
         serializedVersion: 2
         x: 3200
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,19 +437,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cebd67bff138f9649b97b4f01dd770a1
+      spriteID: 1d63bc41e125bb641856b98ec42e361e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_17
+      name: kaiser intro_17
       rect:
         serializedVersion: 2
         x: 3400
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,19 +457,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b461748433c7b6f46bbfc3de3696bc38
+      spriteID: ac066ec28e4b66c4bb535f912151054b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lord of skulls intro 1_18
+      name: kaiser intro_18
       rect:
         serializedVersion: 2
         x: 3600
         y: 0
         width: 200
-        height: 100
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,27 +477,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e2aaa56a4c837245ab605d9cae9efef
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lord of skulls intro 1_19
-      rect:
-        serializedVersion: 2
-        x: 3800
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce9b53d6167a7dd4e803fdd340259c03
+      spriteID: 4679bab044f59e24faa15e4cba808d31
       vertices: []
       indices: 
       edges: []
@@ -506,7 +485,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6c8dd7ec6e5c793429a2f59fe368a868
+    spriteID: 41c7b8944e8c0814c9aa318736bfa301
     vertices: []
     indices: 
     edges: []
