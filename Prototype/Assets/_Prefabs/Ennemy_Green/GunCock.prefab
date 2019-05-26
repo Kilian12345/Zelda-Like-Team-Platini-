@@ -242,7 +242,7 @@ MonoBehaviour:
   - {fileID: 2803111742581649722}
   - {fileID: 2803111742219674382}
   - {fileID: 2803111743487199444}
-  bull: {fileID: 7681654984024996306, guid: be4ac5bbf78817544aca0e53cbbe36a0, type: 3}
+  bull: {fileID: 1739591013767703798, guid: 2ae815160ba376247a7bc97c8b9eafc2, type: 3}
   shootPoint: {fileID: 2803111742453961227}
   moveSpeed: 0.2
   bulSpeed: 1
@@ -306,6 +306,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 0
   dissolveAmout: 0
+  destroyTime: 0
   scorePerHit: 30
   curScore: 0
   getDissolve: 0

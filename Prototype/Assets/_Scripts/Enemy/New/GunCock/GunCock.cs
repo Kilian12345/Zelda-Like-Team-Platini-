@@ -253,7 +253,7 @@ public class GunCock : MonoBehaviour
         //Debug.Log("Shoot Bitch!");
         isShooting = true;
         Vector2 dir = (plScript.centrePoint.transform.position - transform.position).normalized;
-        GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.LookRotation(dir));
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
     }
@@ -262,18 +262,27 @@ public class GunCock : MonoBehaviour
     {
         pauseFire = false;
         isShooting = true;
+
         Vector2 dir = (plScript.centrePoint.transform.position - shootPoint.transform.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         GameObject bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
+        bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
+
         yield return new WaitForSeconds(0.25f);
         dir = (plScript.centrePoint.transform.position - shootPoint.transform.position).normalized;
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
+        bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
+
         yield return new WaitForSeconds(0.25f);
         dir = (plScript.centrePoint.transform.position - shootPoint.transform.position).normalized;
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         bullet = Instantiate(bull, shootPoint.transform.position, Quaternion.identity);
+        bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), bullet.GetComponent<CircleCollider2D>());
         bullet.GetComponent<Rigidbody2D>().velocity = dir * bulSpeed;
         //canMove = true;
