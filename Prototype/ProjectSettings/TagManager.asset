@@ -16,6 +16,7 @@ TagManager:
   - Throwing_Object
   - LevelEnd
   - Dialogue_Manager
+  - Throwing_BIG
   layers:
   - Default
   - TransparentFX

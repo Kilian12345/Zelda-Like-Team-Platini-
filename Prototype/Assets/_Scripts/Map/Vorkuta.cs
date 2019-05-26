@@ -22,12 +22,18 @@ public class Vorkuta : MonoBehaviour
     {
         if (col.gameObject.tag == "Throwing_Object" && col.gameObject.GetComponent<ThrowingMechanic>().isThrowing)
         {
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "Throwing_BIG" && col.gameObject.GetComponent<ThrowingMechanic>().isThrowing)
+        {
             anim.SetBool("DestroyTower", true);
             coll.enabled = false;
             Fb_Mana.throwScrShake = true;
-            Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(10, 0.7f, 0.8f));
+            Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(1.5f, 0.7f, 0.5f));
             StartCoroutine(Shake());
             Instantiate(Fb_Mana.boxExpolsion, col.transform.position, Quaternion.identity);
+            Destroy(col.gameObject);
         }
 
     }
@@ -36,8 +42,8 @@ public class Vorkuta : MonoBehaviour
     {
         if (shake == false)
         {
-            Fb_Mana.shakeAmplitude = 0.3f;
-            Fb_Mana.shakeFrequency = 0.5f;
+            Fb_Mana.shakeAmplitude = 0.5f;
+            Fb_Mana.shakeFrequency = 0.3f;
             Fb_Mana.CameraShake();
         }
     }
@@ -45,14 +51,13 @@ public class Vorkuta : MonoBehaviour
     IEnumerator Shake()
     {
         shake = false;
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(1.5f);
         shake = true;
     }
 
     void Layer()
     {
         rend.sortingOrder = 0;
-        Fb_Mana.StopCoroutine(Fb_Mana.vibrateBrève(6, 0.7f, 0.8f));
-        StopCoroutine(Shake());
+        Fb_Mana.StopCoroutine(Fb_Mana.vibrateBrève(2, 0.7f, 0.0f));
     }
 }
