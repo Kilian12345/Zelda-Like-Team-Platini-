@@ -204,7 +204,7 @@ MonoBehaviour:
   isEnded: 0
   healthPercent: 0
   curAttack: 0
-  dashVelocity: 2.75
+  dashVelocity: 3.25
   dashCoolDown: 0.25
   dashDamageValue: 20
   dashCtr: 3
@@ -213,7 +213,7 @@ MonoBehaviour:
   - {fileID: 409171903528168824}
   - {fileID: 409171903759150997}
   - {fileID: 409171904648286657}
-  jumpSpeed: 2.5
+  jumpSpeed: 3
   jumpHeightModifier: 1.5
   jumpRate: 0.3
   jumpRange: 1.5
