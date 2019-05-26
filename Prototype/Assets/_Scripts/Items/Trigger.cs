@@ -9,12 +9,8 @@ public class Trigger : MonoBehaviour
     public enum typeOfTrigger {Collision,Button,Destruction};
     public typeOfTrigger curType;
     public ParticleSystem boxExpolsion;
+    public Light light;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -49,6 +45,7 @@ public class Trigger : MonoBehaviour
             {
                 isTriggered = true;
                 Instantiate(boxExpolsion, transform.position, Quaternion.identity);
+                light.color = new Color(0, 1, 0);
             }
         }
     }

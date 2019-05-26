@@ -249,7 +249,7 @@ public class FeedBack_Manager : MonoBehaviour
         glitchRageEnabled = true;
     }
 
-    void CameraShake() 
+    public void CameraShake() 
     {
 
         shakeElapsedTime = shakeDuration;
