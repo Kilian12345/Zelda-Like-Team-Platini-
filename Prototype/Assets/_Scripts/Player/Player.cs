@@ -206,6 +206,7 @@ public class Player : MonoBehaviour
         { fadeAnim.SetBool("FadeOut", true); }
 
         timeScaleModifier = 1;
+        Time.timeScale = 1;
 
     }
 
