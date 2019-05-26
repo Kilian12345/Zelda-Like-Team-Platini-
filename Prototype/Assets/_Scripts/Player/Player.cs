@@ -111,8 +111,7 @@ public class Player : MonoBehaviour
 
     [Header("Ability GameObjects")]
     public GameObject selector;
-    public GameObject[] abilityMeters;
-    Animator[] abilityMeterAnim;
+    public Animator[] abilityMeterAnim;
 
     [Header("Dash Values")]
     public float dashDistance;
@@ -182,12 +181,6 @@ public class Player : MonoBehaviour
         {
             Destroy(foundObjects[i]);
             Debug.Log("Destroyed");
-        }
-
-        for (int i = 0; i < abilityMeters.Length; i++)
-        {
-            Debug.Log("add anim");
-            abilityMeterAnim[i] = abilityMeters[i].GetComponent<Animator>();
         }
 
     }
@@ -339,7 +332,7 @@ public class Player : MonoBehaviour
 
     #region /// ABILITIES
 
-    void switchAbilities()
+    /*void switchAbilities()
     {
         if (selectedAbility >= 0 && selectedAbility <= (abilityMeters.Length - 1))
         {
@@ -353,7 +346,7 @@ public class Player : MonoBehaviour
             }
         }
         selector.transform.position = abilityMeters[selectedAbility].GetComponent<RectTransform>().position;
-    }
+    }*/
 
     void selectAbility() /////////////////////////////////// Nigga what's that
     {

@@ -64,7 +64,7 @@ public class Player_Editor : Editor
     private SerializedProperty abilityIsToCooldown;
     private SerializedProperty activatedAbility;
     private SerializedProperty selector;
-    private SerializedProperty abilityMeters;
+    private SerializedProperty abilityMeterAnim;
 
     private SerializedProperty dashDistance;
     private SerializedProperty thrust;
@@ -142,11 +142,11 @@ public class Player_Editor : Editor
         abilityIsToCooldown = soTarget.FindProperty("abilityIsToCooldown");
         activatedAbility = soTarget.FindProperty("activatedAbility");
         selector = soTarget.FindProperty("selector");
-        abilityMeters = soTarget.FindProperty("abilityMeters");
         dashDistance = soTarget.FindProperty("dashDistance");
         thrust = soTarget.FindProperty("thrust");
         slowDownFactor = soTarget.FindProperty("slowDownFactor");
         slowDownLast = soTarget.FindProperty("slowDownLast");
+        abilityMeterAnim = soTarget.FindProperty("abilityMeterAnim");
 
         hit = soTarget.FindProperty("hit");
         died = soTarget.FindProperty("died");
@@ -254,11 +254,11 @@ public class Player_Editor : Editor
                 EditorGUILayout.PropertyField(abilityIsToCooldown);
                 EditorGUILayout.PropertyField(activatedAbility);
                 EditorGUILayout.PropertyField(selector);
-                EditorGUILayout.PropertyField(abilityMeters, true);
                 EditorGUILayout.PropertyField(dashDistance);
                 EditorGUILayout.PropertyField(thrust);
                 EditorGUILayout.PropertyField(slowDownFactor);
                 EditorGUILayout.PropertyField(slowDownLast);
+                EditorGUILayout.PropertyField(abilityMeterAnim, true);
                 break;
             case "Audio Visuals":
                 EditorGUILayout.PropertyField(hit);
