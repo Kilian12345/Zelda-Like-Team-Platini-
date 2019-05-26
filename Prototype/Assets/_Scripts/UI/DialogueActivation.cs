@@ -105,20 +105,24 @@ public class DialogueActivation : MonoBehaviour
         {
             case 0:
                 anim.SetInteger("AnimChara", 0);
-                dialogueAudio.clip = bonezonk;
+                //dialogueAudio.clip = bonezonk;
+                dialogueAudio.clip = kuru;
                 break;
             case 1:
                 anim.SetInteger("AnimChara", 1);
-                dialogueAudio.clip = bonezonk;
+                //dialogueAudio.clip = bonezonk;
+                dialogueAudio.clip = kuru;
                 Debug.Log("img");
                 break;
             case 2:
                 anim.SetInteger("AnimChara", 2);
-                dialogueAudio.clip = pnj1;
+                //dialogueAudio.clip = pnj1;
+                dialogueAudio.clip = kuru;
                 break;
             case 3:
                 anim.SetInteger("AnimChara", 3);
-                dialogueAudio.clip = pnj1;
+                //dialogueAudio.clip = pnj1;
+                dialogueAudio.clip = kuru;
                 break;
             case 4:
                 anim.SetInteger("AnimChara", 4);
@@ -130,20 +134,24 @@ public class DialogueActivation : MonoBehaviour
                 break;
             case 6:
                 anim.SetInteger("AnimChara", 6);
-                dialogueAudio.clip = pnj1;
+                //dialogueAudio.clip = pnj1;
+                dialogueAudio.clip = kuru;
                 break;
             case 7:
                 anim.SetInteger("AnimChara", 7);
-                dialogueAudio.clip = spiderborg;
+                //dialogueAudio.clip = spiderborg;
+                dialogueAudio.clip = kuru;
                 Debug.Log("img");
                 break;
             case 8:
                 anim.SetInteger("AnimChara", 8);
-                dialogueAudio.clip = holokaiser;
+                //dialogueAudio.clip = holokaiser;
+                dialogueAudio.clip = kaiser;
                 break;
             case 9:
                 anim.SetInteger("AnimChara", 9);
-                dialogueAudio.clip = holokaiser;
+                //dialogueAudio.clip = holokaiser;
+                dialogueAudio.clip = kaiser;
                 break;
             case 10:
                 anim.SetInteger("AnimChara", 10);
