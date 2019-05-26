@@ -50,7 +50,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4, y: -0.54}
+  m_Offset: {x: 0.66828585, y: -1.517168}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -61,7 +61,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7919855, y: 2.7919855}
+  m_Size: {x: 3.328557, y: 0.83764935}
   m_EdgeRadius: 0
 --- !u!114 &6172592985349921862
 MonoBehaviour:
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 5740057231266146381}
+  bossUI: {fileID: 0}
   obj: {fileID: 5740057231266146381}
 --- !u!1 &2273155107390578769
 GameObject:
@@ -160,7 +161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6526949290322558324
 Transform:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5740057231266146381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: -0.62, z: 0}
+  m_LocalPosition: {x: 0.64, y: -2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4208353788382240345}
@@ -256,6 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6d6aca5855bcb4690f0896b07903a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStarted: 0
+  isEnded: 0
   StrikeZone: {fileID: 2695018954807351632, guid: 1b225290fe655724c80be0589b3d2420,
     type: 3}
   anim: {fileID: 6298563263633946670}
@@ -271,7 +274,7 @@ MonoBehaviour:
   rangeAngle1: 100
   rangeAngle2: 30
   rangeAngle3: 20
-  Small: 0
+  Small: 1
   Medium: 0
   Big: 0
   cercleSize: 1
@@ -309,7 +312,7 @@ MonoBehaviour:
   HitpointsParentPrefab: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
     type: 3}
   parent: {fileID: 599604898757207886}
-  health: 400
+  health: 1000
   maxHealth: 0
   dissolveAmout: 0
   destroyTime: 1.2
@@ -703,11 +706,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
-        type: 3}
-      propertyPath: lazerActivated
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
       propertyPath: LaserPoint
@@ -717,6 +715,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rotationspeed
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: lazerActivated
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e828d0e8f9b4725489a8b3f1efa9cb88, type: 3}

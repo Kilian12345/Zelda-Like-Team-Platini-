@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossActivator : MonoBehaviour
 {
     public GameObject boss;
+    public GameObject bossUI;
     void Start()
     {
         
@@ -23,6 +24,7 @@ public class BossActivator : MonoBehaviour
             if (boss)
             {
                 boss.SetActive(true);
+                bossUI.SetActive(true);
             }
             
         }

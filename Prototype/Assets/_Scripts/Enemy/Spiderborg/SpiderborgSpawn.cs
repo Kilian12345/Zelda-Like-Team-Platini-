@@ -6,6 +6,7 @@ public class SpiderborgSpawn : MonoBehaviour
 {
     SpiderborgBehaviour sbs;
     public GameObject entity;
+    public GameObject bossUI;
     bool spawned = false;
     public GameObject obj;
 
@@ -14,6 +15,7 @@ public class SpiderborgSpawn : MonoBehaviour
         if ((collision.gameObject.tag == "Player") && spawned == false)
         {
             entity.SetActive(true);
+            bossUI.SetActive(true);
             spawned = true;
         }
         /*if (sbs.SpiderState == 4)
@@ -26,6 +28,7 @@ public class SpiderborgSpawn : MonoBehaviour
         if ((collision.gameObject.tag == "Player") && spawned == false)
         {
             entity.SetActive(true);
+            bossUI.SetActive(true);
             spawned = true;
         }
         /*if (sbs.SpiderState == 4)

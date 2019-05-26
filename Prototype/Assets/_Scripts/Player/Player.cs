@@ -629,7 +629,7 @@ public class Player : MonoBehaviour
         }
         if (col.gameObject.tag == "Strike")
         {
-            inStrike = true;
+            col.gameObject.GetComponent<DestroyComponent>().isInStrike = true;
         }
     }
     void OnTriggerStay2D(Collider2D col)
@@ -643,14 +643,14 @@ public class Player : MonoBehaviour
         }
         if (col.gameObject.tag == "Strike")
         {
-            inStrike = true;
+            col.gameObject.GetComponent<DestroyComponent>().isInStrike = true;
         }
     }
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "Strike")
         {
-            inStrike = false;
+            col.gameObject.GetComponent<DestroyComponent>().isInStrike = false;
         }
     }
 

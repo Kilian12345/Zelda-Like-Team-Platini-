@@ -200,9 +200,11 @@ MonoBehaviour:
   curPhase: 0
   curSubPhase: 1
   attackCtr: 0
+  isStarted: 0
+  isEnded: 0
   healthPercent: 0
   curAttack: 0
-  dashVelocity: 2.5
+  dashVelocity: 3.25
   dashCoolDown: 0.25
   dashDamageValue: 20
   dashCtr: 3
@@ -211,7 +213,7 @@ MonoBehaviour:
   - {fileID: 409171903528168824}
   - {fileID: 409171903759150997}
   - {fileID: 409171904648286657}
-  jumpSpeed: 2.5
+  jumpSpeed: 3
   jumpHeightModifier: 1.5
   jumpRate: 0.3
   jumpRange: 1.5
@@ -227,7 +229,7 @@ MonoBehaviour:
   shootPoint: {fileID: 409171904759768289}
   ctrBullet: 0
   numberOfProjectiles: 9
-  projectileSpeed: 0.4
+  projectileSpeed: 0.6
   shotsPerBurstBH: 15
   shotRateBH: 2
   coolDownTimeBH: 6
@@ -260,7 +262,7 @@ MonoBehaviour:
   health: 2000
   maxHealth: 0
   dissolveAmout: 0
-  destroyTime: 0
+  destroyTime: 2
   scorePerHit: 75
   curScore: 0
   getDissolve: 0

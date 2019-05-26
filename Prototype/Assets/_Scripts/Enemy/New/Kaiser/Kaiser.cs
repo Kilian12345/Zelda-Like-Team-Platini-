@@ -14,6 +14,8 @@ public class Kaiser : MonoBehaviour
     public int curPhase;
     public int curSubPhase;
     public int attackCtr;
+    public bool isStarted;
+    public bool isEnded;
 
     private float damageValue;
     [SerializeField]
@@ -143,8 +145,10 @@ public class Kaiser : MonoBehaviour
         anim = GetComponent<Animator>();
 
         cp[0].position = transform.position;
-        playerPos = plScript.centrePoint.transform;
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         coll = GetComponent<Collider2D>();
+
+        isStarted = true;
 
     }
 
@@ -196,7 +200,7 @@ public class Kaiser : MonoBehaviour
                 if (!startPhase2)
                 {
                     startPhase2 = true;
-                    Invoke("transitionTo2", 5f);
+                    Invoke("transitionTo2", 3f);
                 }
                 //attacks();
             }
@@ -206,7 +210,7 @@ public class Kaiser : MonoBehaviour
                 StartCoroutine(Phase2());
             }
         }
-        else if (healthPercent < phase2ExitPercent && healthPercent >= 0)
+        else if (healthPercent < phase2ExitPercent && healthPercent > 0)
         {
             if (!enterPhase3)
             {
@@ -216,7 +220,7 @@ public class Kaiser : MonoBehaviour
                 if (!startPhase3)
                 {
                     startPhase3 = true;
-                    Invoke("transitionTo3", 5f);
+                    Invoke("transitionTo3", 3f);
                 }
                 //attacks();
             }
@@ -225,6 +229,13 @@ public class Kaiser : MonoBehaviour
                 //attacks();
                 StartCoroutine(Phase3());
             }
+        }
+        else
+        {
+            isEnded = true;
+            StopCoroutine(Phase3());
+            anim.SetBool("Death", true);
+
         }
     }
 
@@ -242,6 +253,9 @@ public class Kaiser : MonoBehaviour
 
     void transitionTo3()
     {
+        projectileSpeed = 0.8f;
+        dashCoolDown = 0.3f;
+        numberOfProjectiles = 12;
         enterPhase3 = true;
         timeToJump = 0;
         timeToDash = 0;
@@ -274,7 +288,7 @@ public class Kaiser : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             curSubPhase = 1;
         }
         StopCoroutine(Phase1());
@@ -301,7 +315,7 @@ public class Kaiser : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             curSubPhase = 1;
         }
         StopCoroutine(Phase2());
@@ -341,7 +355,7 @@ public class Kaiser : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             curSubPhase = 1;
         }
         StopCoroutine(Phase3());
@@ -371,7 +385,7 @@ public class Kaiser : MonoBehaviour
                             pauseJump = true;
                             isCooling = true;
                             Debug.Log("Reseting COOl jump");
-                            Invoke("coolDown", 3f);
+                            Invoke("coolDown", 2f);
                         }
                     }
 
@@ -396,7 +410,7 @@ public class Kaiser : MonoBehaviour
                         {
                             pauseFire = true;
                             Debug.Log("Reseting COOl precise");
-                            Invoke("coolDown", 3f);
+                            Invoke("coolDown", 2f);
 
                         }
 
@@ -422,7 +436,7 @@ public class Kaiser : MonoBehaviour
                         {
                             pauseDash = true;
                             Debug.Log("Reseting COOl dash");
-                            Invoke("coolDown", 3f);
+                            Invoke("coolDown", 2f);
                         }
                     }
 
@@ -456,7 +470,7 @@ public class Kaiser : MonoBehaviour
                             pauseFireBH = true;
                             firstShot = false;
                             Debug.Log("Reseting COOl bh");
-                            Invoke("coolDown", 3f);
+                            Invoke("coolDown", 2f);
                         }
                     }
                 }
@@ -607,7 +621,8 @@ public class Kaiser : MonoBehaviour
         canDamage = false;
         cp[0].position = transform.position;
         cp[2].position = playerPos.position;
-        cp[1].position = new Vector2((cp[0].position.x + cp[2].position.x) / 2, ((cp[0].position.y + cp[2].position.y) / 2) + jumpHeightModifier * (Vector2.Distance(cp[0].position, cp[2].position) / jumpRange));
+        cp[1].position = new Vector2((cp[0].position.x + cp[2].position.x) / 2, ((cp[0].position.y + cp[2].position.y) / 2 + jumpHeightModifier));
+        //cp[1].position = new Vector2((cp[0].position.x + cp[2].position.x) / 2, ((cp[0].position.y + cp[2].position.y) / 2) + jumpHeightModifier * (Vector2.Distance(cp[0].position, cp[2].position) / jumpRange));
 
         canJump = true;
     }

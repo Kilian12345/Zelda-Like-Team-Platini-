@@ -7,9 +7,9 @@ public class DestroyComponent : MonoBehaviour
 
     [SerializeField] Object obj;
     Player plScript;
-    bool striking;
-    bool dontdoshit = false;
-    public float damageValue = 50;
+    public bool striking;
+    public bool isInStrike;
+    public float damageValue;
 
     void Start()
     {
@@ -21,55 +21,20 @@ public class DestroyComponent : MonoBehaviour
     {
         yield return new WaitForSeconds(1.4f);
         striking = true;
+        StartCoroutine(Damage());
         yield return new WaitForSeconds(0.6f);
         Destroy(obj);
         yield return null;
         //StopCoroutine(AttackTime());
     }
 
-     /*private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag != "Player")
-        {
-            dontdoshit = true;
-            StopCoroutine(Damage());
-        }
-        if (col.gameObject.tag == "Player")
-        {
-            StartCoroutine(Damage());
-        }
-    }*/
-
-     /* private void OnTriggerStay2D(Collider2D col)
-    {
-         if (col.gameObject.tag != "Player")
-        {
-            StopCoroutine(Damage());
-        }
-        if (col.gameObject.tag == "Player")
-        {
-            StartCoroutine(Damage());
-        }
-    }*/
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.tag != "Player")
-        {
-            StartCoroutine(Damage());
-        }
-        if (col.gameObject.tag == "Player")
-        {
-            dontdoshit = true;
-            StopCoroutine(Damage());
-        }
-    }
-
     IEnumerator Damage()
     {
-        if(striking && plScript.inStrike)
+        if(striking && isInStrike)
         {
             striking = false;
             plScript.TakeDamage(damageValue);
+            Debug.Log("dAMAGE" + damageValue);
             yield return new WaitForSeconds(0.05f);
             StopCoroutine(Damage());
         }
