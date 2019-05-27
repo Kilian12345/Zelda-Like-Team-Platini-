@@ -215,14 +215,14 @@ public class HeadButtEnemy : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)
+    /*void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             StopCoroutine(Damage());
             isAttacking = false;
         }
-    }
+    }*/
 
     IEnumerator Damage()
     {
