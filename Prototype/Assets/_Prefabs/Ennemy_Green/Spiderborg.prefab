@@ -738,6 +738,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: LaserPoint
+      value: 
+      objectReference: {fileID: 4940035293350451001}
+    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: damage
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+        type: 3}
+      propertyPath: rotationspeed
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 7027439789782140584, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
       propertyPath: viewRadius
@@ -758,21 +773,11 @@ PrefabInstance:
       propertyPath: lazerActivated
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
+    - target: {fileID: 7027439788750533989, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
         type: 3}
-      propertyPath: LaserPoint
+      propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 4940035293350451001}
-    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
-        type: 3}
-      propertyPath: damage
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5880086997658335658, guid: e828d0e8f9b4725489a8b3f1efa9cb88,
-        type: 3}
-      propertyPath: rotationspeed
-      value: 75
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: fda1a73400359f947b06304ad0129932, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e828d0e8f9b4725489a8b3f1efa9cb88, type: 3}
 --- !u!1 &8794275403975742150 stripped
