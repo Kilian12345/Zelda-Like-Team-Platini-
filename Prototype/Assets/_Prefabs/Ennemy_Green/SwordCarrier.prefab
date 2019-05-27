@@ -373,6 +373,7 @@ MonoBehaviour:
   enemyAudio: {fileID: 5483544482235513983}
   dead: {fileID: 8300000, guid: 8046a10a80aa0754caba0baca72374f7, type: 3}
   punch: {fileID: 8300000, guid: aa2280dfcf67e344aa12b4f1932889a0, type: 3}
+  objectdestroy: {fileID: 8300000, guid: 4a01fb2facd2d8a4db06ad66b0d347b2, type: 3}
   particlesBlood: {fileID: 7430826996442426230, guid: be06a1c0ea2364e4dbb8e68b7b187c93,
     type: 3}
   particlesThanos: {fileID: 3525380330377394275, guid: 2d219f1605ae3a141ac46f5431304ad4,
