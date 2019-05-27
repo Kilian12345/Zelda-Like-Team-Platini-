@@ -174,7 +174,7 @@ MonoBehaviour:
   HitpointsParentPrefab: {fileID: 2784115405593025117, guid: c8380741d1d23bf428fd66efee024671,
     type: 3}
   parent: {fileID: 1841418027761176491}
-  health: 100
+  health: 1000
   maxHealth: 0
   dissolveAmout: 0
   destroyTime: 0
