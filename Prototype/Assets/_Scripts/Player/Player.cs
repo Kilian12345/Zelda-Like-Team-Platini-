@@ -585,7 +585,7 @@ public class Player : MonoBehaviour
         playerAudio.Play();
         Instantiate(particles, transform.position, Quaternion.identity);
         vel = 0;
-        Invoke("restart", 0.7f);
+        Invoke("restart", 2f);
         //Destroy(gameObject,0.5f);
     }
 
