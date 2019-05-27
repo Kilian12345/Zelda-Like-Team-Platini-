@@ -147,6 +147,7 @@ public class FeedBack_Manager : MonoBehaviour
     public bool ennemyDied;//
     public bool Scripted_Scene;////
     public bool throwScrShake; //
+    public bool elevatorShakeDone = false;
 
     void Start()
     {
@@ -177,17 +178,20 @@ public class FeedBack_Manager : MonoBehaviour
         else if (ennemyDied == true) {StartCoroutine(EnnemyDeath());}
         if (throwScrShake == true) {StartCoroutine(throwObject());}
 
-        if(elevatorVibration == true && loopElevator == false) 
-        {
-            StartCoroutine(elevatorShake());
-            loopElevator = true;
-        }
-
         waitShakeElevator();
         
         if(plScript.health >= 100) {Berserker();}
         else {/*saturationAmount = 1;*/ glitchRageEnabled = false;}
 
+    }
+
+    private void Update()
+    {
+        if (elevatorVibration == true && loopElevator == false)
+        {
+            StartCoroutine(elevatorShake());
+            loopElevator = true;
+        }
     }
 
     void ThirdAbilityVisu()
@@ -327,12 +331,10 @@ public class FeedBack_Manager : MonoBehaviour
     {
         if (elevatorScreen == true)
         {
-            for (int i = 0; i < 100000; i++)
-            {
                 shakeAmplitude = 0.3f;
                 shakeFrequency = 0.5f;
                 CameraShake();
-            }
+                Debug.Log("salop");          
         }
 
     }
@@ -367,8 +369,13 @@ public class FeedBack_Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(UnityEngine.Random.Range(10, 20));
         elevatorScreen = true;
-        GamePad.SetVibration(0,0.3f, 0.3f);
-        GamePad.SetVibration(PlayerIndex.One, 0.3f, 0.3f);
+
+        if (elevatorShakeDone == false)
+        {
+            GamePad.SetVibration(0, 0.3f, 0.3f);
+            GamePad.SetVibration(PlayerIndex.One, 0.3f, 0.3f);
+            elevatorShakeDone = true;
+        }
 
         yield return new WaitForSeconds(elevatorVibrationTime);
 
@@ -389,6 +396,7 @@ public class FeedBack_Manager : MonoBehaviour
 
         GamePad.SetVibration(0,0,0);
         GamePad.SetVibration(PlayerIndex.One,0, 0);
+        elevatorShakeDone = false;
         StopCoroutine(vibrateBrève(time, bigVibration, smallVibration));
     }
 

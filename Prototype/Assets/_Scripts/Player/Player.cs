@@ -375,7 +375,6 @@ public class Player : MonoBehaviour
                 if (curcooldownTime[1] >= cooldownTime[1])
                 {
                     activatedAbility = 2;
-                    abilityMeterAnim[1].SetBool("Using", true);
                 }
             }
 
@@ -390,7 +389,6 @@ public class Player : MonoBehaviour
                 if (curcooldownTime[2] >= cooldownTime[2])
                 {
                     activatedAbility = 3;
-                    abilityMeterAnim[2].SetBool("Using", true);
                 }
             }
         }
@@ -474,14 +472,29 @@ public class Player : MonoBehaviour
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
                         curcooldownTime[0] += Time.deltaTime;
+                        abilityMeterAnim[0].SetBool("Active", false);
+                    }
+                    else
+                    {
+                        abilityMeterAnim[0].SetBool("Active", true);
                     }
                     if (curcooldownTime[1] < cooldownTime[1])
                     {
                         curcooldownTime[1] += Time.deltaTime;
+                        abilityMeterAnim[1].SetBool("Active", false);
+                    }
+                    else
+                    {
+                        abilityMeterAnim[1].SetBool("Active", true);
                     }
                     if (curcooldownTime[2] < cooldownTime[2])
                     {
                         curcooldownTime[2] += Time.deltaTime;
+                        abilityMeterAnim[2].SetBool("Active", false);
+                    }
+                    else
+                    {
+                        abilityMeterAnim[2].SetBool("Active", true);
                     }
                 }
                 break;
@@ -495,14 +508,17 @@ public class Player : MonoBehaviour
                     else
                     {
                         curcooldownTime[0] -= (Time.deltaTime * abilityIsToCooldown);
+                        abilityMeterAnim[0].SetBool("Using", true);
                     }
                     if (curcooldownTime[1] < cooldownTime[1])
                     {
                         curcooldownTime[1] += Time.deltaTime;
+                        abilityMeterAnim[1].SetBool("Active", false);
                     }
                     if (curcooldownTime[2] < cooldownTime[2])
                     {
                         curcooldownTime[2] += Time.deltaTime;
+                        abilityMeterAnim[2].SetBool("Active", false);
                     }
                 }
                 break;
@@ -515,15 +531,18 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[1] -= (Time.deltaTime / slowDownFactor * abilityIsToCooldown);
+                        curcooldownTime[1] -= (Time.deltaTime /*/ slowDownFactor*/ * abilityIsToCooldown);
+                        abilityMeterAnim[1].SetBool("Using", true);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
                         curcooldownTime[0] += Time.deltaTime;
+                        abilityMeterAnim[0].SetBool("Active", false);
                     }
                     if (curcooldownTime[2] < cooldownTime[2])
                     {
                         curcooldownTime[2] += Time.deltaTime;
+                        abilityMeterAnim[2].SetBool("Active", false);
                     }
                 }
                 break;
@@ -537,14 +556,17 @@ public class Player : MonoBehaviour
                     else
                     {
                         curcooldownTime[2] -= (Time.deltaTime * abilityIsToCooldown);
+                        abilityMeterAnim[2].SetBool("Using", true);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
                     {
                         curcooldownTime[0] += Time.deltaTime;
+                        abilityMeterAnim[0].SetBool("Active", false);
                     }
                     if (curcooldownTime[1] < cooldownTime[1])
                     {
                         curcooldownTime[1] += Time.deltaTime;
+                        abilityMeterAnim[1].SetBool("Active", false);
                     }
                 }
                 break;
@@ -769,7 +791,6 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         activatedAbility = 1;
-        abilityMeterAnim[0].SetBool("Using", true);
         curcooldownTime[0] = cooldownTime[0];
         Fb_mana.timeFirstAbility = cooldownTime[0];
         Fb_mana.firstActivated = true;
