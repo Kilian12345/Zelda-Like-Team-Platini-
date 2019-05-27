@@ -226,6 +226,7 @@ public class Player : MonoBehaviour
         }
 
         selectAbility();
+        checkForAbilityState();
     }
 
     void FixedUpdate()
@@ -309,7 +310,7 @@ public class Player : MonoBehaviour
             doneOneFade = true;
         }
 
-        checkForAbilityState();
+        //checkForAbilityState();
         cooldownUI();
         updateEnemyFollowing();
     }
