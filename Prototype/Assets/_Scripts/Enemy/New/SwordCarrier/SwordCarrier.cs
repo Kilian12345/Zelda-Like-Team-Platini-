@@ -64,9 +64,15 @@ public class SwordCarrier : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+
+    void Update()
     {
         animate();
+    }
+
+    void FixedUpdate()
+    {
+        
         if (target != null)
         {
             if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange)
@@ -195,6 +201,13 @@ public class SwordCarrier : MonoBehaviour
     {
         if (healthScript.health <= 0)
         {
+            if (plControl)
+            {
+                if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange && plControl.isPushed)
+                {
+                    plControl.isPushed = false;
+                }
+            }
             isDead = true;
         }
         anim.SetBool("Active", isActive);
@@ -264,7 +277,6 @@ public class SwordCarrier : MonoBehaviour
 
     void OnDestroy()
     {
-        plScript.EnemiesFollowing--;
         if (plControl)
         {
             if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange && plControl.isPushed)
@@ -272,6 +284,8 @@ public class SwordCarrier : MonoBehaviour
                 plControl.isPushed = false;
             }
         }
+        plScript.EnemiesFollowing--;
+        
         
     }
 }
