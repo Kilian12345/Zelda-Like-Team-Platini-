@@ -25,6 +25,7 @@ public class WAVE_SYSTEM : MonoBehaviour
     public bool TransitionScene;
     bool CoroutineOnce;
     float timeToNextScene;
+    public bool justInfiniteFight;
 
     bool newWave = false, waveAppear;
     bool listDone;
@@ -41,14 +42,18 @@ public class WAVE_SYSTEM : MonoBehaviour
     {
         plScript = FindObjectOfType<Player>();
         difficultyLeft = difficulty;
-        waveInfo = GetComponentInChildren<Text>();
-        waveWrite = "WAVE : ";
-        waveInfo.text = waveWrite + 0.ToString();
-
-        if(TransitionScene == false)
+        if (justInfiniteFight == false)
         {
-            loadingImage.enabled = false;
-            loadingText.enabled = false;
+            waveInfo = GetComponentInChildren<Text>();
+            waveWrite = "WAVE : ";
+            waveInfo.text = waveWrite + 0.ToString();
+
+
+            if (TransitionScene == false)
+            {
+                loadingImage.enabled = false;
+                loadingText.enabled = false;
+            }
         }
     }
 
@@ -59,6 +64,12 @@ public class WAVE_SYSTEM : MonoBehaviour
             timeToNextScene = Random.Range(15, 25);
             StartCoroutine(SwitchScene());
             CoroutineOnce = true;
+        }
+
+        if (justInfiniteFight == true)
+        {
+            if (difficulty >= 20)
+            { difficulty = 0;}
         }
 
         if (everyoneHasSpawn == false)
@@ -182,7 +193,7 @@ public class WAVE_SYSTEM : MonoBehaviour
                 {
                     difficultyLeft = 0;
                 }
-                else if (objectInArena.Count <= 20)
+                else if (objectInArena.Count <= 20 && justInfiniteFight == false)
                 {
                     objectGO = Instantiate(throwableObjects[Random.Range(0, throwableObjects.Length)], points[i].position, Quaternion.identity, objectParent);
                     objectInArena.Add(objectGO.transform);
@@ -213,8 +224,11 @@ public class WAVE_SYSTEM : MonoBehaviour
             waveDifficulty();
         }
 
-        if (waveInfo.rectTransform.localScale.y >= 3)
-        { WaveChill(); }
+        if (justInfiniteFight == false)
+        {
+            if (waveInfo.rectTransform.localScale.y >= 3)
+            { WaveChill(); }
+        }
 
     }
 
@@ -222,11 +236,14 @@ public class WAVE_SYSTEM : MonoBehaviour
     {
         if (newWave == true && waveAppear == false)
         {
-            waveInfo.rectTransform.localScale = new Vector3(6, 6, 6);
-            waveInfo.color = new Color(1, 0, 0);
+            if (justInfiniteFight == false)
+            {
+                waveInfo.rectTransform.localScale = new Vector3(6, 6, 6);
+                waveInfo.color = new Color(1, 0, 0);
+                numberOFWave += 1;
+                waveInfo.text = waveWrite + numberOFWave.ToString();
+            }
 
-            numberOFWave += 1;
-            waveInfo.text = waveWrite + numberOFWave.ToString();
             difficulty += 2;
             difficultyLeft = difficulty;
             waveAppear = true;
