@@ -819,6 +819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 1256440897}
 --- !u!4 &35463022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7391703500472006587, guid: a01673ff5f12398478f827675c3196cb,
@@ -1973,6 +1974,7 @@ GameObject:
   - component: {fileID: 146239891}
   - component: {fileID: 146239894}
   - component: {fileID: 146239893}
+  - component: {fileID: 146239895}
   m_Layer: 0
   m_Name: Big_Door
   m_TagString: Untagged
@@ -2074,7 +2076,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.1911452}
+  m_Offset: {x: 0, y: 0.52462256}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.10677238}
@@ -2085,7 +2087,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.58, y: 0.29148626}
+  m_Size: {x: 1.58, y: 1.6245315}
   m_EdgeRadius: 0
 --- !u!114 &146239894
 MonoBehaviour:
@@ -2100,6 +2102,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 146239891}
+  collider2DBarrier: {fileID: 146239895}
+--- !u!61 &146239895
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146239889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.3524412}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.10677238}
+    oldSize: {x: 1.58, y: 1.06}
+    newSize: {x: 1.58, y: 1.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 0.70401645}
+  m_EdgeRadius: 0
 --- !u!1 &155034446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2458,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8333185107516102930, guid: c983c122dd1c4644e9a17b95165e38d7,
+        type: 3}
+      propertyPath: Expl
+      value: 
+      objectReference: {fileID: 1256440897}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c983c122dd1c4644e9a17b95165e38d7, type: 3}
 --- !u!1 &188428259
@@ -3633,6 +3667,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6598259539884621185, guid: 73a2893d08eea5844a22b081070d5f7e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598259539884621210, guid: 73a2893d08eea5844a22b081070d5f7e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598259541213195323, guid: 73a2893d08eea5844a22b081070d5f7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -42.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598259540004356442, guid: 73a2893d08eea5844a22b081070d5f7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -65.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598259541084350016, guid: 73a2893d08eea5844a22b081070d5f7e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300038, guid: e183bff7b44cf944fadfcc0f7212fa6d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73a2893d08eea5844a22b081070d5f7e, type: 3}
 --- !u!1001 &332892449
@@ -4615,6 +4675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 0}
 --- !u!61 &371375815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6415,6 +6476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 0}
 --- !u!61 &517645686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7881,6 +7943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 1256440897}
 --- !u!1 &646989624
 GameObject:
   m_ObjectHideFlags: 0
@@ -8904,6 +8967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 1256440897}
 --- !u!1 &716552945
 GameObject:
   m_ObjectHideFlags: 0
@@ -9927,6 +9991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 0}
 --- !u!61 &834396141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15572,6 +15637,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &1256440897 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1876622003741506849, guid: a01673ff5f12398478f827675c3196cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 857235360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1257629826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5740057231266146381, guid: 5532fadac703ab747a7a9f335c9bc7d9,
@@ -16710,7 +16781,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346902216}
-  m_LocalRotation: {x: 6.0192615e-24, y: 3.1085198e-24, z: 0.00000024680045, w: 1}
+  m_LocalRotation: {x: 1.3783473e-23, y: 3.1070162e-24, z: 0.000000014901159, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17157,6 +17228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 0}
 --- !u!61 &1451339805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17498,6 +17570,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8333185107516102930, guid: c983c122dd1c4644e9a17b95165e38d7,
+        type: 3}
+      propertyPath: Expl
+      value: 
+      objectReference: {fileID: 1256440897}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c983c122dd1c4644e9a17b95165e38d7, type: 3}
 --- !u!4 &1476380813 stripped
@@ -18728,6 +18805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 1256440897}
 --- !u!1 &1576418789
 GameObject:
   m_ObjectHideFlags: 0
@@ -19841,7 +19919,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663300194}
-  m_LocalRotation: {x: 7.340799e-24, y: 3.8525142e-24, z: 0.011195673, w: 0.9999374}
+  m_LocalRotation: {x: 2.1031503e-24, y: 4.8421943e-24, z: 0.01320016, w: 0.9999129}
   m_LocalPosition: {x: -3.85, y: 11.493, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -25459,11 +25537,16 @@ PrefabInstance:
       propertyPath: bossUI
       value: 
       objectReference: {fileID: 932694329}
-    - target: {fileID: 8794275403059174083, guid: 5532fadac703ab747a7a9f335c9bc7d9,
+    - target: {fileID: 6441983919231729076, guid: 5532fadac703ab747a7a9f335c9bc7d9,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fda1a73400359f947b06304ad0129932, type: 2}
+      propertyPath: health
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441983919231729076, guid: 5532fadac703ab747a7a9f335c9bc7d9,
+        type: 3}
+      propertyPath: scorePerHit
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5532fadac703ab747a7a9f335c9bc7d9, type: 3}
 --- !u!114 &5042673632354139515 stripped

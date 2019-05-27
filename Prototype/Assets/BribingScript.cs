@@ -28,7 +28,6 @@ public class BribingScript : MonoBehaviour
         if(SB.isEnded == true)
         {
             canMove2 = true;
-            Debug.Log("Est-ce que ca marche?");
         }
         currentpos = Door.transform.position;
         currentpos2 = BossDoor.transform.position;

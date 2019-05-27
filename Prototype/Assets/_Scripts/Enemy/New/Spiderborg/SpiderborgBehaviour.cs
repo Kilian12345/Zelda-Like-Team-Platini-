@@ -9,7 +9,7 @@ public class SpiderborgBehaviour : MonoBehaviour
     #region Variables
     [Header("General Variables")]
     public bool isStarted;
-    public bool isEnded;
+    public bool isEnded = false;
     public GameObject StrikeZone;
     [SerializeField] Animator anim;
     [SerializeField] EnemyHealth eh;
@@ -142,7 +142,7 @@ public class SpiderborgBehaviour : MonoBehaviour
         }
         else if (eh.health <= 0)
         {
-            //Debug.Log("4");
+            
             SpiderState = 4;
 
             isEnded = true;

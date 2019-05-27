@@ -18,6 +18,8 @@ public class ThrowingMechanic : MonoBehaviour
     public ParticleSystem boxExpolsion;
     Animator anim;
 
+    [SerializeField] AudioSource Expl;
+
     void Start()
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -58,9 +60,6 @@ public class ThrowingMechanic : MonoBehaviour
 
     void FixedUpdate()
     {
-
- 
-
         if (isCaught)
         {
             bColl.enabled = false;
@@ -94,8 +93,10 @@ public class ThrowingMechanic : MonoBehaviour
 
     public void Destroy()
     {
+             Expl.Play();
              Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(0.15f, 0.25f, 0.25f));
-             Instantiate(Fb_Mana.boxExpolsion, transform.position, Quaternion.identity );          
+             Instantiate(Fb_Mana.boxExpolsion, transform.position, Quaternion.identity );
+             
              Destroy (gameObject, 0.1f);
              Fb_Mana.throwScrShake = true;
     }

@@ -119,6 +119,7 @@ MonoBehaviour:
   isThrowing: 0
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 0}
 --- !u!60 &9138447356025588084
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -186,3 +187,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
     type: 3}
+  isDestroy: 0

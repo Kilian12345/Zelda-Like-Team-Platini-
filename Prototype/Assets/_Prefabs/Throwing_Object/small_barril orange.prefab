@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8333185107516102928}
   - component: {fileID: 8333185107516102929}
   - component: {fileID: 8333185107516102930}
+  - component: {fileID: 1953940736993694214}
   - component: {fileID: 8333185107516102933}
   - component: {fileID: 8333185107516102932}
-  - component: {fileID: 1953940736993694214}
   m_Layer: 0
   m_Name: small_barril orange
   m_TagString: Throwing_Object
@@ -119,6 +119,22 @@ MonoBehaviour:
   isThrowing: 0
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
+  Expl: {fileID: 0}
+--- !u!114 &1953940736993694214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333185107516102926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151fcf68dd87bb641b3a2e2b5a9f5341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
+    type: 3}
+  isDestroy: 0
 --- !u!70 &8333185107516102933
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -156,18 +172,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1953940736993694214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8333185107516102926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 151fcf68dd87bb641b3a2e2b5a9f5341, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CalciumPack: {fileID: 6767951610015472479, guid: 0ae54f025f19d6d41a4d268d3f3bdcd6,
-    type: 3}
-  isDestroy: 0
