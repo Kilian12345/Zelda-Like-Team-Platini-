@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] AudioSource enemyAudio;
-    public AudioClip dead, punch;
+    public AudioClip dead, punch, objectdestroy;
     public GameObject particlesBlood;
     public GameObject particlesThanos;
     public GameObject HitpointsParentPrefab;
@@ -229,7 +229,9 @@ public class EnemyHealth : MonoBehaviour
     {
          if (col.gameObject.tag == "Throwing_Object" && col.gameObject.GetComponent<ThrowingMechanic>().isThrowing )
          {
-             health -= 50;
+            enemyAudio.clip = objectdestroy;
+            enemyAudio.Play();
+            health -= 50;
              renderChara.isOpaque = true;
              col.gameObject.GetComponent<DropChance>().isDestroy = true;
              Instantiate(Fb_Mana.boxExpolsion , col.transform.position, Quaternion.identity );
