@@ -10,7 +10,7 @@ public class SlowMo : StateMachineBehaviour
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         ps.timeScaleModifier = (1 / ps.slowDownFactor);
-        Time.timeScale = ps.slowDownFactor;
+        Time.timeScale = ps.slowDownFactor/2f;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
 
@@ -18,7 +18,6 @@ public class SlowMo : StateMachineBehaviour
     //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
     //
     //}
-
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

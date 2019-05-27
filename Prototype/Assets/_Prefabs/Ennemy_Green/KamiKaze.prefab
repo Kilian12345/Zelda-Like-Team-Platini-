@@ -153,7 +153,7 @@ MonoBehaviour:
   damageRange: 0.5
   damageValue: 30
   damagePushForce: 250
-  waitForExplode: 2
+  waitForExplode: 1
   isInRange: 0
   canExplode: 0
   startExplode: 0

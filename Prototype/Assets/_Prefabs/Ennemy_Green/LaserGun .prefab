@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5850482773054914826}
   - component: {fileID: 5850482773054914825}
   - component: {fileID: 5850482773054914829}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: 'LaserGun '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a13a18b82a4fb4d9bd671e7fbbb543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireRate: 0.75
-  bulSpeed: 2
+  FireRate: 1.5
+  bulSpeed: 3
+  shootingRange: 9
   shootPoint: {fileID: 5850482773858486553}
   bull: {fileID: 1739591013767703798, guid: 2ae815160ba376247a7bc97c8b9eafc2, type: 3}
 --- !u!61 &5850482773054914829
@@ -153,7 +154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5850482773858486553}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: shootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

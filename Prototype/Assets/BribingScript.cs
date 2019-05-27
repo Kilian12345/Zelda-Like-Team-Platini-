@@ -25,10 +25,14 @@ public class BribingScript : MonoBehaviour
 
     void Update()
     {
-        if(SB.isEnded == true)
+        if (SB)
         {
-            canMove2 = true;
+            if (SB.isEnded == true)
+            {
+                canMove2 = true;
+            }
         }
+        
         currentpos = Door.transform.position;
         currentpos2 = BossDoor.transform.position;
 

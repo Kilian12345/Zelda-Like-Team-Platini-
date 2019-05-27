@@ -501,7 +501,7 @@ MonoBehaviour:
   activatedAbility: 0
   thirdActivated: 0
   selector: {fileID: 0}
-  abilityMeters:
+  abilityMeterAnim:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -519,8 +519,8 @@ MonoBehaviour:
   walk: {fileID: 0}
   playerAudio: {fileID: 0}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
-  toolbarTab: 4
-  currentTab: Audio Visuals
+  toolbarTab: 3
+  currentTab: Ability
   takeDamage: 0
   levelEnd: 0
   sceneIndex: 2

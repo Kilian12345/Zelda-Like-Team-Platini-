@@ -800,6 +800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kaiser
       objectReference: {fileID: 0}
+    - target: {fileID: 409171903284437116, guid: 608f0aa5157e18744b44b7f5e095a288,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 409171903284437119, guid: 608f0aa5157e18744b44b7f5e095a288,
         type: 3}
       propertyPath: m_LocalPosition.x
