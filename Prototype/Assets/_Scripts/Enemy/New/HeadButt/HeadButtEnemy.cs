@@ -228,10 +228,11 @@ public class HeadButtEnemy : MonoBehaviour
     {
         isAttacking = true;
         plScript.TakeDamage(damageValue);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
         if (isAttacking)
         {
             isAttacking = false;
+            isCharging = false;
         }
         StopCoroutine(Damage());
     }

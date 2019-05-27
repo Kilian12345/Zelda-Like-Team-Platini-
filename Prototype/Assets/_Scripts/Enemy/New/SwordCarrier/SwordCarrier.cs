@@ -35,6 +35,7 @@ public class SwordCarrier : MonoBehaviour
     private bool isActive;
 
     Player plScript;
+    PlayerController plControl;
     Transform target;
 
     Animator anim;
@@ -264,5 +265,13 @@ public class SwordCarrier : MonoBehaviour
     void OnDestroy()
     {
         plScript.EnemiesFollowing--;
+        if (plControl)
+        {
+            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange && plControl.isPushed)
+            {
+                plControl.isPushed = false;
+            }
+        }
+        
     }
 }

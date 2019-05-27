@@ -153,7 +153,7 @@ MonoBehaviour:
   damageRange: 0.5
   damageValue: 30
   damagePushForce: 250
-  waitForExplode: 2
+  waitForExplode: 1
   isInRange: 0
   canExplode: 0
   startExplode: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   health: 25
   maxHealth: 0
   dissolveAmout: 0
+  destroyTime: 0
   scorePerHit: 50
   curScore: 0
   getDissolve: 0
@@ -368,6 +369,7 @@ MonoBehaviour:
   hasBeenThrowed: 0
   isThrowing: 0
   boxExpolsion: {fileID: 0}
+  Expl: {fileID: 0}
 --- !u!1 &8709260627951750021
 GameObject:
   m_ObjectHideFlags: 0

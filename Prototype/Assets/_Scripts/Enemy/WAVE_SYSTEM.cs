@@ -199,7 +199,7 @@ public class WAVE_SYSTEM : MonoBehaviour
                     objectInArena.Add(objectGO.transform);
                 }
 
-                Debug.Log(spawn);
+                //Debug.Log(spawn);
 
 
             }

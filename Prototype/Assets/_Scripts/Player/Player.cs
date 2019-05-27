@@ -351,7 +351,7 @@ public class Player : MonoBehaviour
     void selectAbility() /////////////////////////////////// Nigga what's that
     {
 
-        if (Input.GetButtonDown("Ability1") && Carry == false)
+        if (Input.GetButtonDown("Ability1") && Carry == false && plControl.NewActionAllowed)
         {
             if (abilityMeterAnim[0].GetBool("Unlocked"))
             {
@@ -365,7 +365,7 @@ public class Player : MonoBehaviour
 
             }
         }
-        if (Input.GetButtonDown("Ability2") && Carry == false)
+        if (Input.GetButtonDown("Ability2") && Carry == false && plControl.NewActionAllowed)
         {
             if (abilityMeterAnim[1].GetBool("Unlocked"))
             {
@@ -379,7 +379,7 @@ public class Player : MonoBehaviour
             }
 
         }
-        if (Input.GetButtonDown("Ability3") && Carry == false)
+        if (Input.GetButtonDown("Ability3") && Carry == false && plControl.NewActionAllowed)
         {
             if (abilityMeterAnim[2].GetBool("Unlocked"))
             {
