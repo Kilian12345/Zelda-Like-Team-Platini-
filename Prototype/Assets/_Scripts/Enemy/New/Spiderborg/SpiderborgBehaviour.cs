@@ -134,18 +134,16 @@ public class SpiderborgBehaviour : MonoBehaviour
 
             attackdist = 1f;
         }
-        else if (healthPercent < 35 && healthPercent > 0 && occupied == false)
+        else if (healthPercent < 35 && healthPercent > 10 && occupied == false)
         {
             //Debug.Log("3");
             SpiderState = 3;
             attackdist = 0.7f;
         }
-        else if (eh.health <= 0)
+        else if (healthPercent < 10 && healthPercent >= 0 && occupied == false)
         {
-            
-            SpiderState = 4;
-
             isEnded = true;
+            SpiderState = 4;    
         }
 
     }
