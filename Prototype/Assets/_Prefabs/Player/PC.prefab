@@ -487,6 +487,7 @@ MonoBehaviour:
   attackPushForce: 500
   Carry: 0
   inStrike: 0
+  canPunch: 0
   cooldownTime:
   - 0.6
   - 10
@@ -496,6 +497,7 @@ MonoBehaviour:
   - 0
   - 0
   abilityIsToCooldown: 6
+  timeScaleModifier: 0
   activatedAbility: 0
   thirdActivated: 0
   selector: {fileID: 0}
@@ -514,6 +516,7 @@ MonoBehaviour:
   dash: {fileID: 8300000, guid: 7bdaac34764d57f4889c217d20464087, type: 3}
   slowmo: {fileID: 8300000, guid: 21eb2228a5aff1b46a6ab89e81e639ba, type: 3}
   atk3: {fileID: 8300000, guid: d565b51fd31402d45a527019ef0e4ce7, type: 3}
+  walk: {fileID: 0}
   playerAudio: {fileID: 0}
   particles: {fileID: 1162241089445012, guid: 14bb0f6048793a547bc661f5a8b8fadf, type: 3}
   toolbarTab: 4

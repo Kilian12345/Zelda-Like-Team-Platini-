@@ -113,12 +113,6 @@ public class SpiderborgBehaviour : MonoBehaviour
         look();
     }
 
-    private void Update()
-    {
-        Debug.Log(isEnded);
-        Debug.Log(isStarted);
-    }
-
     void CheckLife()
     {
         healthPercent = (eh.health / eh.maxHealth) * 100;
