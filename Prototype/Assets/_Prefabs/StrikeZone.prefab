@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 2695018954807351632}
+  striking: 0
+  isInStrike: 0
   damageValue: 10
 --- !u!95 &2760543524261061232
 Animator:
@@ -131,7 +133,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.38259026
+  m_Radius: 0.5
 --- !u!50 &6714707246894143488
 Rigidbody2D:
   serializedVersion: 4
