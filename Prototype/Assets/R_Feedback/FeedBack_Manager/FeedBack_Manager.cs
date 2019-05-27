@@ -178,6 +178,12 @@ public class FeedBack_Manager : MonoBehaviour
         else if (ennemyDied == true) {StartCoroutine(EnnemyDeath());}
         if (throwScrShake == true) {StartCoroutine(throwObject());}
 
+        if (elevatorVibration == true && loopElevator == false)
+        {
+            StartCoroutine(elevatorShake());
+            loopElevator = true;
+        }
+
         waitShakeElevator();
         
         if(plScript.health >= 100) {Berserker();}
@@ -185,14 +191,6 @@ public class FeedBack_Manager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (elevatorVibration == true && loopElevator == false)
-        {
-            StartCoroutine(elevatorShake());
-            loopElevator = true;
-        }
-    }
 
     void ThirdAbilityVisu()
     {
