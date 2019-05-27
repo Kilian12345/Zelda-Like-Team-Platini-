@@ -32,7 +32,7 @@ public class Scripted_Camera : MonoBehaviour
     void Update()
     {
         if (Triggered == true) { StartCoroutine(CameraSwitch(0)); }
-        if (OnEvent == true) { StartCoroutine(CameraSwitch(1000)); }
+        if (OnEvent == true) { StartCoroutine(CameraSwitch(0)); }
 
     }
 

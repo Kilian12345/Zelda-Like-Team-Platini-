@@ -68,7 +68,7 @@ public class DialogueActivation : MonoBehaviour
 
     void Effect()
     {
-        if ((camScript.Triggered == true) && (activateOnce == false) && (camScript.everyEventDone == false))
+        if (((camScript.Triggered == true) || (camScript.OnEvent == true)) && (activateOnce == false) && (camScript.everyEventDone == false))
         {
 
             StateSwitch();
