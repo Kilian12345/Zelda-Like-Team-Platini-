@@ -7,6 +7,7 @@ public class Door_Break : MonoBehaviour
     FeedBack_Manager Fb_Mana;
     Player plScript;
     public ParticleSystem boxExpolsion;
+    [SerializeField] AudioSource Expl;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class Door_Break : MonoBehaviour
 
     public void Destroy()
     {
+        Expl.Play();
         Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(0.15f, 0.25f, 0.25f));
         Instantiate(boxExpolsion, transform.position, Quaternion.identity);
         Destroy(gameObject, 0.1f);
