@@ -248,13 +248,13 @@ public class SwordCarrier : MonoBehaviour
                 if (enemiestoDamage[i].GetComponent<Player>() != null)
                 {
                     fb_mana.StartCoroutine(fb_mana.vibrateBrève(0.15f, 0, 0.35f));
-                    enemiestoDamage[i].GetComponent<PlayerController>().isPushed = true;
+                    //enemiestoDamage[i].GetComponent<PlayerController>().isPushed = true;
                     enemiestoDamage[i].GetComponent<Player>().health += enemyDamage;
                     //enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.normalized.x, dir.normalized.y) * attackPushForce, ForceMode2D.Impulse);
                     Debug.Log("Impacted Boi " + new Vector2(/*Mathf.Round*/(dir.normalized.x) * attackPushForce, /*Mathf.Round*/(dir.normalized.y) * attackPushForce));
                     yield return new WaitForSeconds(0.1f);
                     //enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-                    enemiestoDamage[i].GetComponent<PlayerController>().isPushed = false;
+                    //enemiestoDamage[i].GetComponent<PlayerController>().isPushed = false;
                     break;
                 }
             }
