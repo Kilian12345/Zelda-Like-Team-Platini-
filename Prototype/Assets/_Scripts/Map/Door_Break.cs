@@ -7,12 +7,13 @@ public class Door_Break : MonoBehaviour
     FeedBack_Manager Fb_Mana;
     Player plScript;
     public ParticleSystem boxExpolsion;
-    [SerializeField] AudioSource Expl;
+    AudioSource Expl;
 
     private void Start()
     {
         Fb_Mana = FindObjectOfType<FeedBack_Manager>();
         plScript = FindObjectOfType<Player>();
+        Expl = GameObject.FindGameObjectWithTag("DestructionAudio").GetComponent<AudioSource>();
 
     }
 

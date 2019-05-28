@@ -28,12 +28,15 @@ public class GunCock : MonoBehaviour
     private bool canMove;
     private bool isFollowing;
     private bool pauseFire;
+    private bool dialogue;
     private float LocalX,distX,distY;
 
     Player plScript;
     Animator anim;
     EnemyHealth healthScript;
     [SerializeField] Transform center;
+    DialogueManager dm;
+
 
     //[HideInInspector]
     public int curPoint;
@@ -48,83 +51,100 @@ public class GunCock : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         healthScript = GetComponent<EnemyHealth>();
+        dm = GameObject.FindGameObjectWithTag("Dialogue_Manager").GetComponent<DialogueManager>();
+    }
+
+    void Update()
+    {
+        dialogue = dm.DialogueCheck;
+        if (!dialogue)
+        {
+            animate();
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        look();
-        animate();
-        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange && plScript.EnemiesFollowing <= plScript.enemyFollowLimit)
+        if (!dialogue)
         {
-            canPatrol = false;
-            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= shootingRange)
+            look();
+            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange && plScript.EnemiesFollowing <= plScript.enemyFollowLimit)
             {
-                isInChaseRange = true;
-                isInShootingRange = true;
-            }
-            else
-            {
-                isInChaseRange = true;
-                isInShootingRange = false;
-                if (canMove)
+                canPatrol = false;
+                if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= shootingRange)
                 {
-                    move();
+                    isInChaseRange = true;
+                    isInShootingRange = true;
                 }
-            }
-        }
-        else
-        {
-            isInShootingRange = false;
-            isInChaseRange = false;
-            if (canPatrol)
-            {
-                patrol();
-            }
-            else if (canMove)
-            {
-                move();
+                else
+                {
+                    isInChaseRange = true;
+                    isInShootingRange = false;
+                    if (canMove)
+                    {
+                        move();
+                    }
+                }
             }
             else
             {
                 if (isFollowing)
                 {
-                    isFollowing = false;
                     plScript.EnemiesFollowing--;
                 }
+                isInShootingRange = false;
+                isInChaseRange = false;
+                if (canPatrol)
+                {
+                    patrol();
+                }
+                else if (canMove && Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= (chasingRange * 1.5f))
+                {
+                    move();
+                }
+                else
+                {
+                    if (isFollowing)
+                    {
+                        isFollowing = false;
+                        plScript.EnemiesFollowing--;
+                    }
+                }
             }
-        }
 
-        if (isInShootingRange && isInChaseRange)
-        {
-            if (ctrBullet < bulletsPerBurst)
+            if (isInShootingRange && isInChaseRange)
             {
-                if (Time.time > timeToFire)
+                if (ctrBullet < bulletsPerBurst)
+                {
+                    if (Time.time > timeToFire)
+                    {
+                        canMove = false;
+                        timeToFire = Time.time + 1 / FireRate;
+                        //shoot();
+                        StartCoroutine(Shoot());
+                        ctrBullet++;
+                        Invoke("switchShootBool", (1 / FireRate) / 2);
+                        //Invoke("switchMoveBool", (1 / FireRate) / 2);
+                    }
+                }
+                else
                 {
                     canMove = false;
-                    timeToFire = Time.time + 1 / FireRate;
-                    //shoot();
-                    StartCoroutine(Shoot());
-                    ctrBullet++;
-                    Invoke("switchShootBool", (1 / FireRate) / 2);
-                    //Invoke("switchMoveBool", (1 / FireRate) / 2);
+                    Invoke("switchMoveBool", coolDownTime);
+                    if (!pauseFire)
+                    {
+                        pauseFire = true;
+                        Invoke("coolDown", coolDownTime);
+                    }
                 }
             }
-            else
+            if (!isInShootingRange && isInChaseRange)
             {
-                canMove = false;
-                Invoke("switchMoveBool", coolDownTime);
-                if (!pauseFire)
-                {
-                    pauseFire = true;
-                    Invoke("coolDown", coolDownTime);
-                }
+                canMove = true;
             }
         }
-        if (!isInShootingRange && isInChaseRange)
-        {
-            canMove = true;
-        }
+            
     }
 
     void animate()
@@ -300,6 +320,9 @@ public class GunCock : MonoBehaviour
 
     void OnDestroy()
     {
-        plScript.EnemiesFollowing--;
+        if (isFollowing)
+        {
+            plScript.EnemiesFollowing--;
+        }
     }
 }

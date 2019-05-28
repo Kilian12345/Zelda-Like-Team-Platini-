@@ -194,6 +194,7 @@ public class Player : MonoBehaviour
         player = gameObject.GetComponent<Rigidbody2D>();
         source = gameObject.GetComponent<CinemachineImpulseSource>();
         plControl = gameObject.GetComponent<PlayerController>();
+        plControl.enabled = true;
         Fb_mana = FindObjectOfType<FeedBack_Manager>();
         LocalX = transform.localScale.x;
         health = 0;
@@ -532,7 +533,7 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
-                        curcooldownTime[1] -= (Time.deltaTime /*/ slowDownFactor*/ * abilityIsToCooldown);
+                        curcooldownTime[1] -= (Time.deltaTime * (slowDownFactor*1.5f) * abilityIsToCooldown);
                         abilityMeterAnim[1].SetBool("Using", true);
                     }
                     if (curcooldownTime[0] < cooldownTime[0])
@@ -584,6 +585,7 @@ public class Player : MonoBehaviour
         playerAudio.clip = died;
         playerAudio.Play();
         Instantiate(particles, transform.position, Quaternion.identity);
+        plControl.enabled = false;
         vel = 0;
         Invoke("restart", 2f);
         //Destroy(gameObject,0.5f);

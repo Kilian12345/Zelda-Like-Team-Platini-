@@ -16,6 +16,7 @@ public class Kami : MonoBehaviour
     public bool isInRange;
     public bool canExplode;
     public bool startExplode;
+    private bool dialogue;
 
 
     private float LocalX;
@@ -30,6 +31,7 @@ public class Kami : MonoBehaviour
     Animator anim;
     EnemyHealth healthScript;
     [SerializeField] Transform center;
+    DialogueManager dm;
 
     void Start()
     {
@@ -37,36 +39,49 @@ public class Kami : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         healthScript = GetComponent<EnemyHealth>();
+        dm = GameObject.FindGameObjectWithTag("Dialogue_Manager").GetComponent<DialogueManager>();
     }
 
+    void Update()
+    {
+        dialogue = dm.DialogueCheck;
+        if (!dialogue)
+        {
+            animate();
+        }
+    }
 
     void FixedUpdate()
     {
-        look();
-        animate();
-        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= detectionRange)
+        if (!dialogue)
         {
-            isInRange = true;
-        }
+            look();
+            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= detectionRange)
+            {
+                isInRange = true;
+            }
 
-        if (canExplode)
-        {
-            if (!startExplode)
+            if (canExplode)
             {
-                StartCoroutine(Explode());
-            }   
-        }
-        else
-        {
-            if (isInRange)
+                if (!startExplode)
+                {
+                    StartCoroutine(Explode());
+                }
+            }
+            else
             {
-                move();
+                if (isInRange)
+                {
+                    move();
+                }
+            }
+            if (healthScript.health <= 0)
+            {
+                canExplode = false;
+                isExploding = true;
             }
         }
-        if (healthScript.health<=0)
-        {
-            isExploding = true;
-        }
+            
         
     }
 

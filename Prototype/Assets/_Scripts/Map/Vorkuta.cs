@@ -9,6 +9,7 @@ public class Vorkuta : MonoBehaviour
     Collider2D coll;
     SpriteRenderer rend;
     bool shake = true;
+    public GameObject towerlight;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class Vorkuta : MonoBehaviour
         {
             anim.SetBool("DestroyTower", true);
             coll.enabled = false;
+            towerlight.SetActive(false);
             Fb_Mana.throwScrShake = true;
             Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(1.5f, 0.7f, 0.5f));
             StartCoroutine(Shake());

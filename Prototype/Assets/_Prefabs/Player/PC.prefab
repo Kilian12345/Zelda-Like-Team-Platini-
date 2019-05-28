@@ -455,9 +455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   CalciumAmount: 0
-  CalciumCapacity: 100
+  CalciumCapacity: 125
   curDropChanceRate: 0
-  DropChanceRate: 35
+  DropChanceRate: 40
   rageDamage: 20
   rageTimer: 15
   rageVel: 12

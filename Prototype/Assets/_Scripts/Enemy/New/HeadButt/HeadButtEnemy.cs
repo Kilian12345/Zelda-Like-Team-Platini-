@@ -29,6 +29,7 @@ public class HeadButtEnemy : MonoBehaviour
     private bool isDead;
     private bool isFollowing;
     private bool isMoving;
+    private bool dialogue;
 
 
     Transform pl;
@@ -39,6 +40,7 @@ public class HeadButtEnemy : MonoBehaviour
     AudioSource chargingEnemyAud;
     Vector2 dir, lastPos;
     EnemyHealth healthScript;
+    DialogueManager dm;
 
     void Start()
     {
@@ -50,89 +52,102 @@ public class HeadButtEnemy : MonoBehaviour
         anim = GetComponent<Animator>();
         healthScript = GetComponent<EnemyHealth>();
         isDead = false;
+        dm = GameObject.FindGameObjectWithTag("Dialogue_Manager").GetComponent<DialogueManager>();
     }
     void Update()
     {
-        animate();
+        dialogue = dm.DialogueCheck;
+        if (!dialogue)
+        {
+            animate();
+        }
     }
     void FixedUpdate()
     {
-        if (pl != null)
+        if (!dialogue)
         {
-            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= detectionRange)
+            if (pl != null)
             {
-                if (!isFollowing && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
+                if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= detectionRange)
                 {
-                    plScript.EnemiesFollowing++;
-                    isFollowing = true;
-                }
-                if (isFollowing)
-                {
-                    if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chargeRange)
+                    if (!isFollowing && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
                     {
-                        isInChargeRange = true;
-                        isInChaseRange = true;
+                        plScript.EnemiesFollowing++;
+                        isFollowing = true;
                     }
-                    else
+                    if (isFollowing)
                     {
-                        isInChargeRange = false;
-                        isInChaseRange = true;
-                    }
-                } 
-            }
-            else
-            {
-                isMoving = false;
-                isInChaseRange = false;
-                isInChargeRange = false;
-                if (isFollowing)
-                {
-                    isFollowing = false;
-                    plScript.EnemiesFollowing--;
-                }
-            }
-
-            if (isInChaseRange)
-            {
-                look();
-                if (isInChargeRange)
-                {
-                    isMoving = false;
-                    if (Time.time > timeToCharge)
-                    {
-                        timeToCharge = Time.time + 1 / chargeCoolDown;
-                        recPos();
-                    }
-                    if (canCharge)
-                    {
-                        charge();
-                    }
-                    else
-                    {
-                        isCharging = false;
-                    }
-                    if (Vector2.Distance(transform.position, lastPos) <= 0.05)
-                    {
-                        isCharging = false;
-                        canCharge = false;
+                        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chargeRange)
+                        {
+                            isInChargeRange = true;
+                            isInChaseRange = true;
+                        }
+                        else
+                        {
+                            isInChargeRange = false;
+                            isInChaseRange = true;
+                        }
                     }
                 }
                 else
                 {
-                    move();
+                    isMoving = false;
+                    isInChaseRange = false;
+                    isInChargeRange = false;
+                    if (isFollowing)
+                    {
+                        isFollowing = false;
+                        plScript.EnemiesFollowing--;
+                    }
+                }
+
+                if (isInChaseRange)
+                {
+                    look();
+                    if (isInChargeRange)
+                    {
+                        isMoving = false;
+                        if (Time.time > timeToCharge)
+                        {
+                            timeToCharge = Time.time + 1 / chargeCoolDown;
+                            recPos();
+                        }
+                        if (canCharge)
+                        {
+                            charge();
+                        }
+                        else
+                        {
+                            isCharging = false;
+                        }
+                        if (Vector2.Distance(transform.position, lastPos) <= 0.05)
+                        {
+                            isCharging = false;
+                            canCharge = false;
+                        }
+                    }
+                    else
+                    {
+                        move();
+                    }
+                }
+                else
+                {
+                    isMoving = false;
+                    isCharging = false;
                 }
             }
-            else
+
+            if ((healthScript.health <= 0 && healthScript.getDissolve == false) || healthScript.isPowder == true)
             {
-                isMoving = false;
-                isCharging = false;
+                if (isFollowing)
+                {
+                    plScript.EnemiesFollowing--;
+                }
+                isDead = true;
             }
         }
-
-        if ((healthScript.health <= 0 && healthScript.getDissolve == false)|| healthScript.isPowder == true)
-        {
-            isDead = true;
-        }
+        
     }
 
     void animate()
@@ -244,8 +259,8 @@ public class HeadButtEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(center.position, chargeRange);
     }
 
-    void OnDestroy()
+    /*void OnDestroy()
     {
         plScript.EnemiesFollowing--;
-    }
+    }*/
 }

@@ -19,12 +19,14 @@ public class Scorpio : MonoBehaviour
     [HideInInspector]
     public bool reachedEnd;
     private bool isShooting, isDead,isMoving;
+    private bool dialogue;
     private float LocalX, distX, distY;
 
     Player plScript;
     Animator anim;
     EnemyHealth healthScript;
     [SerializeField] Transform center;
+    DialogueManager dm;
 
     //[HideInInspector]
     public int curPoint;
@@ -37,26 +39,38 @@ public class Scorpio : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         plScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         healthScript = GetComponent<EnemyHealth>();
+        dm= GameObject.FindGameObjectWithTag("Dialogue_Manager").GetComponent<DialogueManager>();
+    }
+
+    void Update()
+    {
+        dialogue = dm.DialogueCheck;
+        if (!dialogue)
+        {
+            animate();
+        }
     }
 
 
     void FixedUpdate()
     {
-        look();
-        animate();
-        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= shootingRange)
+        if (!dialogue)
         {
-            if (Time.time > timeToFire)
+            look();
+            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= shootingRange)
             {
-                timeToFire = Time.time + 1 / FireRate;
-                StartCoroutine(Shoot());
+                if (Time.time > timeToFire)
+                {
+                    timeToFire = Time.time + 1 / FireRate;
+                    StartCoroutine(Shoot());
+                }
+                isMoving = false;
             }
-            isMoving = false;
-        }
-        else
-        {
-            patrol();
-            isMoving = true;
+            else
+            {
+                patrol();
+                isMoving = true;
+            }
         }
     }
 

@@ -33,6 +33,7 @@ public class SwordCarrier : MonoBehaviour
     private bool isDead;
     private bool isFollowing;
     private bool isActive;
+    private bool dialogue;
 
     Player plScript;
     PlayerController plControl;
@@ -47,6 +48,7 @@ public class SwordCarrier : MonoBehaviour
     Vector2 dir;
 
     [SerializeField] Transform center;
+    DialogueManager dm;
 
 
 
@@ -61,90 +63,96 @@ public class SwordCarrier : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().centrePoint.transform;
         LocalX = transform.localScale.x;
         attackCoolDown = 1 / attackSpeed;
-
+        dm = GameObject.FindGameObjectWithTag("Dialogue_Manager").GetComponent<DialogueManager>();
     }
-
 
     void Update()
     {
-        animate();
+        dialogue = dm.DialogueCheck;
+        if (!dialogue)
+        {
+            animate();
+        }
     }
 
     void FixedUpdate()
     {
-        
-        if (target != null)
+        if (!dialogue)
         {
-            if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange)
+            if (target != null)
             {
-                if (!isActive && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
+                if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange)
                 {
-                    plScript.EnemiesFollowing++;
-                    isActive = true;
-                }
-                if (isActive)
-                {
-                    Invoke("activate", 1f);
-                }
-                if (isFollowing)
-                {
-                    if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange)
+                    if (!isActive && plScript.EnemiesFollowing < plScript.enemyFollowLimit)
                     {
-                        isInAttackRange = true;
-                        isInChaseRange = true;
+                        plScript.EnemiesFollowing++;
+                        isActive = true;
+                    }
+                    if (isActive)
+                    {
+                        Invoke("activate", 1f);
+                    }
+                    if (isFollowing)
+                    {
+                        if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange)
+                        {
+                            isInAttackRange = true;
+                            isInChaseRange = true;
+                        }
+                        else
+                        {
+                            isInAttackRange = false;
+                            isInChaseRange = true;
+                        }
+                    }
+                }
+                else
+                {
+                    isActive = false;
+                    isInChaseRange = false;
+                    isInAttackRange = false;
+                    isMoving = false;
+                    if (isFollowing)
+                    {
+                        isFollowing = false;
+                        plScript.EnemiesFollowing--;
                     }
                     else
                     {
-                        isInAttackRange = false;
-                        isInChaseRange = true;
+                        isMoving = false;
+                        isAttacking = false;
                     }
                 }
-            }
-            else
-            {
-                isActive = false;
-                isInChaseRange = false;
-                isInAttackRange = false;
-                isMoving = false;
-                if (isFollowing)
-                {
-                    isFollowing = false;
-                    plScript.EnemiesFollowing--;
-                }
-                else
-                {
-                    isMoving = false;
-                    isAttacking = false;
-                }
-            }
 
-            if (isInChaseRange)
-            {
-
-                if (!canAttack && isFollowing)
+                if (isInChaseRange)
                 {
-                    move();
-                }
-                look();
 
-                /*if (isInAttackRange)
-                {
-                    if (Time.time > timeToAttack)
+                    if (!canAttack && isFollowing)
                     {
-                        timeToAttack = Time.time + 1 / attackSpeed;
-                        canAttack = true;
-                        StartCoroutine(Attack());
-                        Invoke("switchMoveBool", attackCoolDown/3);
+                        move();
                     }
-                }
-                else
-                {
-                    isAttacking = false;
-                    //canMove = true;
-                }*/
-            }
+                    look();
 
+                    /*if (isInAttackRange)
+                    {
+                        if (Time.time > timeToAttack)
+                        {
+                            timeToAttack = Time.time + 1 / attackSpeed;
+                            canAttack = true;
+                            StartCoroutine(Attack());
+                            Invoke("switchMoveBool", attackCoolDown/3);
+                        }
+                    }
+                    else
+                    {
+                        isAttacking = false;
+                        //canMove = true;
+                    }*/
+                }
+
+            }
         }
+            
 
     }
 
@@ -278,6 +286,11 @@ public class SwordCarrier : MonoBehaviour
 
     void OnDestroy()
     {
+        if (isFollowing)
+        {
+            plScript.EnemiesFollowing--;
+        }
+        
         if (plControl)
         {
             if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange && plControl.isPushed)
@@ -285,7 +298,6 @@ public class SwordCarrier : MonoBehaviour
                 plControl.isPushed = false;
             }
         }
-        plScript.EnemiesFollowing--;
         
         
     }
