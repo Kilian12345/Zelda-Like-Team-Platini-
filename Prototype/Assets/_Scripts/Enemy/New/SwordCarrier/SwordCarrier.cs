@@ -64,9 +64,15 @@ public class SwordCarrier : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+
+    void Update()
     {
         animate();
+    }
+
+    void FixedUpdate()
+    {
+        
         if (target != null)
         {
             if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= chasingRange)
@@ -195,6 +201,14 @@ public class SwordCarrier : MonoBehaviour
     {
         if (healthScript.health <= 0)
         {
+            if (plControl)
+            {
+                if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange && plControl.isPushed)
+                {
+                    Debug.Log("Impacted Boi fixed");
+                    plControl.isPushed = false;
+                }
+            }
             isDead = true;
         }
         anim.SetBool("Active", isActive);
@@ -234,13 +248,13 @@ public class SwordCarrier : MonoBehaviour
                 if (enemiestoDamage[i].GetComponent<Player>() != null)
                 {
                     fb_mana.StartCoroutine(fb_mana.vibrateBrève(0.15f, 0, 0.35f));
-                    enemiestoDamage[i].GetComponent<PlayerController>().isPushed = true;
+                    //enemiestoDamage[i].GetComponent<PlayerController>().isPushed = true;
                     enemiestoDamage[i].GetComponent<Player>().health += enemyDamage;
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.normalized.x, dir.normalized.y) * attackPushForce, ForceMode2D.Impulse);
+                    //enemiestoDamage[i].GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.normalized.x, dir.normalized.y) * attackPushForce, ForceMode2D.Impulse);
                     Debug.Log("Impacted Boi " + new Vector2(/*Mathf.Round*/(dir.normalized.x) * attackPushForce, /*Mathf.Round*/(dir.normalized.y) * attackPushForce));
                     yield return new WaitForSeconds(0.1f);
-                    enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-                    enemiestoDamage[i].GetComponent<PlayerController>().isPushed = false;
+                    //enemiestoDamage[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                    //enemiestoDamage[i].GetComponent<PlayerController>().isPushed = false;
                     break;
                 }
             }
@@ -264,7 +278,6 @@ public class SwordCarrier : MonoBehaviour
 
     void OnDestroy()
     {
-        plScript.EnemiesFollowing--;
         if (plControl)
         {
             if (Vector2.Distance(center.position, plScript.centrePoint.transform.position) <= combatRange && plControl.isPushed)
@@ -272,6 +285,8 @@ public class SwordCarrier : MonoBehaviour
                 plControl.isPushed = false;
             }
         }
+        plScript.EnemiesFollowing--;
+        
         
     }
 }

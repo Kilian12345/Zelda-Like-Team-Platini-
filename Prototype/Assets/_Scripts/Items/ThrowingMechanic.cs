@@ -18,7 +18,7 @@ public class ThrowingMechanic : MonoBehaviour
     public ParticleSystem boxExpolsion;
     Animator anim;
 
-    [SerializeField] AudioSource Expl;
+    AudioSource Expl;
 
     void Start()
     {
@@ -27,6 +27,7 @@ public class ThrowingMechanic : MonoBehaviour
         bColl = GetComponent<Collider2D>();
         Fb_Mana = GameObject.FindGameObjectWithTag("FeedBack_Manager").GetComponent<FeedBack_Manager>();
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        Expl= GameObject.FindGameObjectWithTag("DestructionAudio").GetComponent<AudioSource>();
     }
 
     void Update()

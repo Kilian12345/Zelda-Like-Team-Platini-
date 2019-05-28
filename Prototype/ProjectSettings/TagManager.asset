@@ -17,6 +17,7 @@ TagManager:
   - LevelEnd
   - Dialogue_Manager
   - Throwing_BIG
+  - DestructionAudio
   layers:
   - Default
   - TransparentFX

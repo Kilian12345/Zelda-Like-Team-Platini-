@@ -5216,7 +5216,6 @@ MonoBehaviour:
   isThrowing: 0
   boxExpolsion: {fileID: 7616220295485332629, guid: e6abea0881c13db4cb24f3012483d473,
     type: 3}
-  Expl: {fileID: 0}
 --- !u!1001 &270719763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21127,7 +21126,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944187561}
-  m_LocalRotation: {x: -5.9710972e-24, y: -6.0847958e-24, z: -0.0075934734, w: 0.9999712}
+  m_LocalRotation: {x: 3.994122e-24, y: -1.0491999e-23, z: -0.0075934734, w: 0.9999712}
   m_LocalPosition: {x: -9.451768, y: 17.714146, z: -49.11243}
   m_LocalScale: {x: 0.66395, y: 0.66395, z: 0.66395}
   m_Children:
@@ -34634,7 +34633,7 @@ MonoBehaviour:
     name: Bonezonk
     sentencesEN:
     - They seem to have a security backup system.
-    - If you destroy it it should do it.
+    - If you destroy it it should work.
     - It's the way we do it !
     sentencesFR:
     - "Il semble qu\u2019il y ait un syst\xE8me de s\xE9curit\xE9 de secours\u2026"
@@ -36192,15 +36191,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.096
       objectReference: {fileID: 0}
-    - target: {fileID: 6213787848423542598, guid: ed6f745823107a643ab352648d1d7f45,
+    - target: {fileID: 6213787849137195211, guid: ed6f745823107a643ab352648d1d7f45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.36199975
+      value: -0.85199976
       objectReference: {fileID: 0}
-    - target: {fileID: 6213787848423542598, guid: ed6f745823107a643ab352648d1d7f45,
+    - target: {fileID: 6213787849137195211, guid: ed6f745823107a643ab352648d1d7f45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.116
+      value: 0.106
       objectReference: {fileID: 0}
     - target: {fileID: 6213787849137195211, guid: ed6f745823107a643ab352648d1d7f45,
         type: 3}
@@ -40613,6 +40612,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4475624917402591652, guid: a01673ff5f12398478f827675c3196cb,
+        type: 3}
+      propertyPath: m_TagString
+      value: DestructionAudio
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01673ff5f12398478f827675c3196cb, type: 3}
 --- !u!1 &1759082107
@@ -41154,7 +41158,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789486869}
-  m_LocalRotation: {x: -9.1028025e-24, y: -3.2093698e-24, z: -0, w: 1}
+  m_LocalRotation: {x: 9.61415e-24, y: -3.2093737e-24, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
