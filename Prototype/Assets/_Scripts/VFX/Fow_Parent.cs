@@ -31,7 +31,7 @@ public class Fow_Parent : MonoBehaviour
     void FindVisiblePlayer()
     {
 
-        playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask("Ennemy", "Player"));
+        playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, LayerMask.GetMask("Player"));
         visiblePlayer.Clear();
 
         for (int i = 0; i < playerInRadius.Length; i++)
