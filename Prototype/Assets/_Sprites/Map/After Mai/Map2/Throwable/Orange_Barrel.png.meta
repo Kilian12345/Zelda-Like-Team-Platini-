@@ -99,10 +99,10 @@ TextureImporter:
       name: Orange_Barrel_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 14
-        width: 14
-        height: 22
+        x: 16
+        y: 13
+        width: 16
+        height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
