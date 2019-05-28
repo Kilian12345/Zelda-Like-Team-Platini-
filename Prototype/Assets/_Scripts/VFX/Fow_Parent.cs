@@ -72,7 +72,7 @@ public class Fow_Parent : MonoBehaviour
         if(lazerActivated == true)
         {
             float puissance = (float)1.00001 ;
-            viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, radius);  
+            viewRadius = Mathf.Clamp( ((viewRadius * puissance)* (float)1.1)  , (float)0.1, radius);
         }
          else 
         {

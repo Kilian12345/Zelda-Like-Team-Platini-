@@ -60,6 +60,7 @@ public class Fow_Rectangle : MonoBehaviour
 
             }
 
+
         }
 
         int vertexCount = viewVertex.Count + 1;
