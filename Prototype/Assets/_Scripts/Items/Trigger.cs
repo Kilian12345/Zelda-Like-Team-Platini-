@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-
+    public GameObject obj;
     public bool isTriggered;
     public enum typeOfTrigger {Collision,Button,Destruction};
     public typeOfTrigger curType;
@@ -28,6 +28,7 @@ public class Trigger : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && !isTriggered)
             {
+                Destroy(obj);
                 isTriggered = true;
                 Instantiate(boxExpolsion, transform.position, Quaternion.identity);
             }
@@ -43,6 +44,7 @@ public class Trigger : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && !isTriggered)
             {
+                Destroy(obj);
                 isTriggered = true;
                 Instantiate(boxExpolsion, transform.position, Quaternion.identity);
                 light.color = new Color(0, 1, 0);

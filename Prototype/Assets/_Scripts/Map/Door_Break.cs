@@ -6,6 +6,7 @@ public class Door_Break : MonoBehaviour
 {
     FeedBack_Manager Fb_Mana;
     Player plScript;
+    public AudioClip doorOpen;
     public ParticleSystem boxExpolsion;
     AudioSource Expl;
 
@@ -19,7 +20,15 @@ public class Door_Break : MonoBehaviour
 
     public void Destroy()
     {
-        Expl.Play();
+        if (doorOpen)
+        {
+            Expl.clip = doorOpen;
+            Expl.Play();
+        }
+        else
+        {
+            Expl.Play();
+        }
         Fb_Mana.StartCoroutine(Fb_Mana.vibrateBrève(0.15f, 0.25f, 0.25f));
         Instantiate(boxExpolsion, transform.position, Quaternion.identity);
         Destroy(gameObject, 0.1f);
