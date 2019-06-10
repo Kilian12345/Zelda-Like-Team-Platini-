@@ -36,7 +36,7 @@ public class ThrowingMechanic : MonoBehaviour
         {
             canBePicked = true;
 
-            if (Input.GetKeyDown(KeyCode.Joystick1Button4) && ps.Carry == false  /*Input.GetKeyDown(KeyCode.Space)*/)
+            if ((Input.GetKeyDown(KeyCode.Joystick1Button4) || Input.GetKeyDown(KeyCode.I)) && ps.Carry == false)
             {
                 if (!isCaught)
                 {
@@ -46,7 +46,7 @@ public class ThrowingMechanic : MonoBehaviour
             Physics2D.IgnoreCollision(bColl, player.GetComponent<CapsuleCollider2D>(), toThrow);
         }
 
-        else if (Input.GetKeyDown(KeyCode.Joystick1Button5)  /*Input.GetKeyDown(KeyCode.A)*/)
+        else if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetKeyDown(KeyCode.O)  /*Input.GetKeyDown(KeyCode.A)*/)
         {
             if (isCaught)
             {

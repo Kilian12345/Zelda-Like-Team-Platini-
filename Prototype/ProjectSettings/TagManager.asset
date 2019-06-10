@@ -18,6 +18,7 @@ TagManager:
   - Dialogue_Manager
   - Throwing_BIG
   - DestructionAudio
+  - Slider
   layers:
   - Default
   - TransparentFX
